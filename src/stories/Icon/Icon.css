@@ -1,0 +1,8 @@
+.icon-wrapper {
+  color: var(--color);
+}
+
+.icon-wrapper .icon {
+  width: var(--s6);
+  height: auto;
+}

@@ -1,0 +1,61 @@
+html {
+  --font-size: 18px;
+  --line-height: var(--s3);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size, var(--s0));
+  line-height: var(--line-height, var(--s3));
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  letter-spacing: .01rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  margin-bottom: .4em;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--heading-color, inherit);
+}
+
+h1 {
+  font-size: var(--s4);
+  line-height: var(--s5);
+}
+
+h2 {
+  font-size: var(--s3);
+  line-height: var(--s4);
+}
+
+h3 {
+  font-size: var(--s2);
+  line-height: var(--s3);
+}
+
+h4 {
+  font-size: var(--s1);
+  line-height: var(--s2);
+}
+
+h5 {
+  font-size: var(--s0);
+  line-height: var(--s1);
+}
+
+a {
+  color: var(--color-primary-light-x);
+}
+
+p {
+  color: var(--color);
+}
+
+.caption {
+  --font-size: var(--s-1);
+  --line-height: var(--s1);
+  padding: 0 var(--s0);
+}
+
+.accent {
+  color: var(--accent-color);
+}

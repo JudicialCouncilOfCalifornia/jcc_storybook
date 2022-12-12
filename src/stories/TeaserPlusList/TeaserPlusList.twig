@@ -1,0 +1,40 @@
+{# Set up variant classes. #}
+
+{# Create class array #}
+{% set classes = [
+  'teaser-list',
+  'grid',
+  'center',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="teaser-list__teaser stack">
+    {{ teaser.brow }}
+    <div class="teaser-list__teaser-heading">
+      <h3>
+        {% if teaser.href %}
+          {{ link(teaser.heading, teaser.href) }}
+        {% else %}
+          {{ teaser.heading }}
+        {% endif %}
+      </h3>
+    </div>
+    <div class="teaser-list__teaser-text">
+      {{ teaser.text }}
+    </div>
+  </div>
+  <div class="teaser-list__list">
+    <ul class="stack">
+      {% for item in listItems %}
+        <li>
+          <div class="teaser-list__link">
+            <h5>{{ link(item.link.label, item.link.href)}}</h5>
+          </div>
+          <div class="teaser-list__footer">
+            {{ item.footer }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

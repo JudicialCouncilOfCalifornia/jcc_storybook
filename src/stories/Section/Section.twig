@@ -1,0 +1,50 @@
+{# Set brow and heading tags based on if they're first component or not. #}
+{# Subordinate heading to brow if present. #}
+{% if first_component %}
+  {% set h = brow ? 'h2' : 'h1' %}
+{% else %}
+  {% set h = brow ? 'h3' : 'h2' %}
+{% endif %}
+
+{% set variant_justify = content_justify
+  ? 'section--justify-' ~ content_justify
+  : 'section--justify-center' %}
+
+{% set variant_align = content_align
+  ? 'section--align-' ~ content_align
+  : 'section--align-center' %}
+
+{% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
+
+{# Create class array #}
+{% set classes = [
+  'section',
+  'box',
+  variant_justify,
+  variant_align,
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="section__content center">
+    <div class="section__header">
+      {% if brow %}
+        {{ brow }}
+      {% endif %}
+      {% if heading %}
+        <{{h}}>{{ heading }}</{{h}}>
+      {% endif %}
+      {% if text %}
+        {{ text }}
+      {% endif %}
+    </div>
+    <div class="section__main">
+      {{ main }}
+    </div>
+    {% if button %}
+      <div class="section__button">
+        {{ button }}
+      </div>
+    {% endif %}
+  </div>
+</div>

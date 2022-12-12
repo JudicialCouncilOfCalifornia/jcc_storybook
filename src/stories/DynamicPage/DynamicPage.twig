@@ -1,0 +1,21 @@
+{# Set up variant classes for high components. Low level ones are "dumb". #}
+
+{# Create class array #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'homepage',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {# Use composable layout classes as needed. #}
+  {# Use BEM syntax if needed for styling classes. #}
+  {{ section_1 }}
+  {{ section_2 }}
+  {{ section_3 }}
+  {{ section_4 }}
+  {{ section_5 }}
+  {{ section_6 }}
+  {{ section_7 }}
+  {{ section_8 }}
+</div>

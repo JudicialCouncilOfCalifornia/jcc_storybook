@@ -1,0 +1,81 @@
+.cards {
+  --gap: var(--s2);
+}
+
+/* Striped Cards */
+.cards .card.card--striped {
+  --color: var(--color-white);
+  --heading-color: var(--color-white);
+
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: gray;
+  padding: var(--s2) var(--s5);
+  font-size: var(--s3);
+  line-height: var(--s4);
+  text-align: center;
+}
+
+/* Striped Card Variants */
+.cards .card--striped:nth-of-type(6n + 1) {
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-primary-dark-x),
+    var(--color-primary-dark-x) 1px,
+    var(--color-primary-dark-xx) 2px,
+    var(--color-primary-dark-xx) 8px
+  );
+}
+
+.cards .card--striped:nth-of-type(6n + 2) {
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-primary),
+    var(--color-primary) 1px,
+    var(--color-primary-dark-x) 2px,
+    var(--color-primary-dark-x) 8px
+  )
+}
+
+.cards .card--striped:nth-of-type(6n + 3) {
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-secondary-light-5),
+    var(--color-secondary-light-5) 1px,
+    var(--color-secondary) 2px,
+    var(--color-secondary) 8px
+  )
+}
+
+.cards .card--striped:nth-of-type(6n + 4) {
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-accent-warm-dark-5),
+    var(--color-accent-warm-dark-5) 1px,
+    var(--color-accent-warm-dark-x) 1px,
+    var(--color-accent-warm-dark-x) 8px
+  )
+}
+
+.cards .card--striped:nth-of-type(6n + 5) {
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-secondary-dark-x),
+    var(--color-secondary-dark-x) 1px,
+    var(--color-secondary-dark-xx) 1px,
+    var(--color-secondary-dark-xx) 8px
+  )
+}
+
+.cards .card--striped:nth-of-type(6n + 6) {
+  background: repeating-linear-gradient(
+    125deg,
+    #2fBfEf,
+    #2fBfEf 1px,
+    var(--color-primary-light-xx) 1px,
+    var(--color-primary-light-xx) 8px
+  )
+}

@@ -1,0 +1,56 @@
+{# Set up variant classes. #}
+{% set variant_type = type ? 'hero--' ~ type : 'hero--banner' %}
+{% set variant_color = color ? color : 'primary-dark-xx' %}
+{% set variant_styles = [] %}
+
+{# Set heading and button colors the same. #}
+{% if color %}
+  {% set variant_styles = variant_styles|merge([
+    '--heading-color: var(--color-' ~ color ~ ');',
+    '--button-color: var(--color-' ~ color ~ ');',
+    '--button-border-color: var(--color-' ~ color ~ ');',
+  ]) %}
+{% endif %}
+
+{# Banners also set the text the same color as heading and button. #}
+{% if type == 'banner' %}
+  {%set variant_styles = variant_styles|merge([
+    '--color: var(--color-' ~ color ~ ');',
+  ]) %}
+{% endif %}
+
+{# Left to right content positioning. #}
+{% set variant_justify = content_justify
+  ? 'hero--justify-' ~ content_justify
+  : 'hero--justify-left' %}
+
+{# Top to bottom content positioning. #}
+{% set variant_align = content_align
+  ? 'hero--align-' ~ content_align
+  : 'hero--align-center' %}
+
+{# Tint for the background image. #}
+{% set variant_bg_tint = bg_tint ? 'hero--color-' ~ bg_tint : 'hero--color-secondary' %}
+
+{# Create class array #}
+{% set classes = [
+  'hero',
+  variant_type,
+  variant_justify,
+  variant_align,
+  variant_bg_tint,
+] %}
+
+<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', variant_styles|join) }}>
+  <div class="hero__image">
+    <img src={{ background_image_url }} />
+  </div>
+  <div class="hero__tint"></div>
+  <div class="hero__content">
+    <div class="center">
+      <div class="hero__content-inner box">
+        {{ main }}
+      </div>
+    </div>
+  </div>
+</div>

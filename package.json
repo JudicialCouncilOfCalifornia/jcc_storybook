@@ -1,0 +1,31 @@
+{
+  "name": "jcc_storybook",
+  "version": "1.0.0",
+  "description": "Storybook driven drupal theme JCC Storybook",
+  "main": "index.js",
+  "preinstall": "mkdir node_modules; touch node_modules/.metadata_never_index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "sprite": "svg-sprite -s --symbol-dest src/assets/ --symbol-sprite icons.svg src/assets/icons/*.svg",
+    "plop": "plop"
+  },
+  "author": "Calvin Tyndall",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack4": "^6.5.13",
+    "@storybook/html": "^6.1.21",
+    "@storybook/manager-webpack4": "^6.5.13",
+    "@storybook/testing-library": "0.0.13",
+    "babel-loader": "^8.3.0",
+    "drupal-attribute": "^1.0.2",
+    "plop": "^3.1.1",
+    "svg-sprite": "^2.0.2",
+    "twig": "^1.15.4",
+    "twig-drupal-filters": "^3.2.0",
+    "twig-loader": "^0.5.5"
+  }
+}

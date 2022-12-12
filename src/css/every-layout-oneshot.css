@@ -1,0 +1,377 @@
+/* Every Layout One Shot */
+
+/*
+This is a single page stylesheet that tries to capture the essential primatives
+for composable algorightmic layout. Use it as is, or edit for your needs.
+Better yet, build it into the component system appropriate for your project.
+
+Learn it: https://every-layout.dev
+
+Ask your developers to build algroithmic layouts.
+Ask your designers to read the Rudiments section to understand why.
+*/
+
+/* Variables. */
+
+:root {
+  /* Scale */
+  --measure: 60ch;
+  --max-width: 122ch;
+  --min-width: 30rem;
+  --ratio: 1.26;
+  --s-6: calc(var(--s-5) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 0.84rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+  --s7: calc(var(--s6) * var(--ratio));
+
+  --border-thin: 1px;
+  --border-normal: 2px;
+}
+
+/* The only media query used simply bumps the base size of our modular scale for larger screens. */
+@media screen and (min-width: 720px) {
+  :root {
+    --s0: 1rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Box. */
+
+.box {
+  /* ↓ Padding set to the first point on the modular scale */
+  padding: var(--s5);
+}
+
+/* Center. */
+
+.center {
+  /* ↓ Remove padding from the width calculation */
+  box-sizing: content-box;
+  /* ↓ The maximum width is the maximum measure */
+  width: 100%;
+  max-width: var(--max-width);
+  /* ↓ Only affect horizontal margins */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cluster. */
+
+.cluster {
+  /* ↓ Establish the flex context and allow wrapping */
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Horizontal alignment */
+  justify-content: flex-start;
+  /* ↓ Vertical alignment */
+  align-items: center;
+  gap: var(--gap, var(--s0));
+}
+
+
+/* Cover. */
+
+.cover {
+  --space: var(--s1);
+  /* ↓ Establish a columnal flex context */
+  display: flex;
+  flex-direction: column;
+  /* ↓ Set a minimum height to match the viewport height
+  (any minimum would be fine) */
+  min-height: 100vh;
+  /* Set a padding value */
+  padding: var(--space);
+}
+
+.cover > * {
+  /* ↓ Give each child a top and bottom margin */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cover > :first-child:not(.principal) {
+  /* ↓ Remove the top margin from the first-child
+  if it _doesn't_ match the centered element */
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.principal) {
+  /* ↓ Remove the bottom margin from the last-child
+  if it _doesn't_ match the centered element */
+  margin-bottom: 0;
+}
+
+.cover > .principal {
+  /* ↓ Center the centered element.
+  in the available vertical space */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Frame. */
+
+.frame {
+  /* You can override the h/w values in your template/preprocess or JS */
+  /* to set the aspect ratio of fame in situ. Otherwise it defaults to 16:9. */
+  --h: 9; /* width */
+  --w: 16; /* height */
+  padding-bottom: calc(var(--h) / var(--w) * 100%);
+  position: relative;
+}
+
+.frame > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Grid. */
+
+.grid {
+  display: grid;
+  grid-gap: var(--gap, 1rem);
+  --min-width: 20ch;
+}
+
+@supports (width: min(var(--min-width), 100%)) {
+  .grid {
+    /* ↓ Enhance with the min() function
+    into multiple columns */
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
+  }
+}
+
+/* Icon. */
+
+.icon {
+  height: 0.75em;
+  /* ↓ Override the em value with `1cap`
+  where `cap` is supported */
+  height: 1cap;
+  width: 0.75em;
+  width: 1cap;
+}
+
+.with-icon {
+  /* ↓ Set the `inline-flex` context,
+  which eliminates the word space */
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.with-icon .icon {
+  /* ↓ Use the logical margin property
+  and a --space variable with a fallback */
+  margin-inline-end: var(--space, 0.5em);
+}
+
+/* Imposter. */
+
+.imposter {
+  /* ↓ Choose the positioning element */
+  position: var(--positioning, absolute);
+  /* ↓ Position the top left corner in the center */
+  top: 50%;
+  left: 50%;
+  /* ↓ Reposition so the center of the element
+  is the center of the container */
+  transform: translate(-50%, -50%);
+}
+
+.imposter.contain {
+  /* ↓ Include a unit, or the calc function will be invalid */
+  --margin: var(--s0);
+  /* ↓ Provide scrollbars so content is not obscured */
+  overflow: auto;
+  /* ↓ Restrict the height and width, including optional
+  spacing/margin between the element and positioning container */
+  max-width: calc(100% - (var(--margin) * 2));
+  max-height: calc(100% - (var(--margin) * 2));
+}
+
+/* Reel. */
+
+.reel {
+  /* ↓ Custom properties for ease of adjustment */
+  --space: 1rem;
+  --color-light: var(--box-color-light);
+  --color-dark: var(--box-color-dark);
+  --reel-height: auto;
+  --item-width: 25ch;
+  display: flex;
+  height: var(--reel-height);
+  padding-top: var(--s-2);
+  padding-bottom: var(--s-2);
+  /* ↓ Overflow */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* ↓ For Firefox */
+  scrollbar-color: var(--color-light) var(--color-dark);
+  /* Affordance */
+	background:
+		/* Shadow covers */
+		linear-gradient(90deg, white 20%, rgba(255,255,255,0)),
+		linear-gradient(90deg, rgba(255,255,255,0), white 80%) 0 100%,
+		/* Shadows */
+		radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+		radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+  background-position: left, right;
+	background-size: 75px 200%, 75px 200%, 40px 200%, 40px 200%;
+	background-attachment: local, local, scroll, scroll;
+}
+
+.reel::-webkit-scrollbar {
+  /*
+  ↓ Instead, you could make the scrollbar height
+  a variable too. This is left as an exercise
+  (be mindful of the linear-gradient!)
+  */
+  height: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: var(--color-dark);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  /* ↓ Linear gradient ‘insets’ the white thumb within the black bar */
+  background-image: linear-gradient(var(--color-dark) 0, var(--color-dark) 0.25rem, var(--color-light) 0.25rem, var(--color-light) 0.75rem, var(--color-dark) 0.75rem);
+}
+
+.reel > * {
+  /*
+  ↓ Just a `width` wouldn’t work because
+  `flex-shrink: 1` (default) still applies
+   */
+  flex: 0 0 var(--item-width);
+}
+
+.reel > img {
+  /* ↓ Reset for images */
+  height: 100%;
+  flex-basis: auto;
+  width: auto;
+}
+
+.reel > * + * {
+  margin-left: var(--space);
+}
+
+.reel.overflowing {
+  /* ↓ Only apply if there is a scrollbar (see the JavaScript) */
+  padding-bottom: var(--space);
+}
+
+/* ↓ Hide scrollbar with `no-bar` class */
+.reel.no-bar {
+  scrollbar-width: none;
+}
+
+.reel.no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sidebar. */
+
+.with-sidebar {
+  /* ↓ Suppresses scrolling sometimes caused
+  by the overflow */
+  overflow: hidden;
+}
+
+.with-sidebar > * {
+  /* ↓ The space value; the first point on the modular scale */
+  --space: var(--s1);
+  /* ↓ Establish the flex context and allow wrapping */
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Negate the margin to follow
+  (`* -1` makes the value negative) */
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.with-sidebar > * > * {
+  /* ↓ Half margins meet to make the whole space value together */
+  margin: calc(var(--space) / 2);
+  /* ↓ Allow growing (needed for the vertical configuration) */
+  flex-grow: 1;
+}
+
+.with-sidebar > * > .non-sidebar {
+  /* ↓ Grow from nothing */
+  flex-basis: 0;
+  /* ↓ Ensure all the available space is taken */
+  flex-grow: 999;
+  /* ↓ The value at which the configuration changes
+  between horizontal and vertical */
+  min-width: calc(50% - var(--space));
+}
+
+/* Stack. */
+
+.stack {
+  /* ↓ The space is set as a custom property */
+  --space: var(--s1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  /* ↓ Any extant vertical margins are removed */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  /* ↓ Top margin is only applied to successive elements */
+  margin-top: var(--space);
+}
+
+/* Switcher. */
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(( var(--min-width) - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n+ 3),
+.switcher > :nth-last-child(n+ 3) ~ * {
+  flex-basis: 100%;
+}

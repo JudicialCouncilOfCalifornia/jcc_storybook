@@ -1,0 +1,21 @@
+{# Atomic templates should be as "dumb" as possible. #}
+
+{# Set up variant classes. #}
+{% set variant = variant ? 'cards--' ~ variant : 'cards--default' %}
+{% set styles = cardWidth ? '--min-width: ' ~ cardWidth ~ ';' : '--min-width: 30ch;' %}
+{# Create class array. #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'cards',
+  'grid',
+  variant,
+] %}
+
+<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', styles) }}>
+  {# Use composable layout classes as needed. #}
+  {# Use BEM syntax if needed for styling classes. #}
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
+</div>

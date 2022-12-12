@@ -1,0 +1,19 @@
+{# Atomic templates should be as "dumb" as possible. #}
+
+{% set variant_styles = [] %}
+{% set variant_styles = color ? variant_styles|merge(['--color: var(--color-' ~ color ~ ');']) : variant_styles %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'icon-wrapper',
+] %}
+
+<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', variant_styles|join) }}>
+  {# Use composable layout classes as needed. #}
+  {# Use BEM syntax if needed for styling classes. #}
+  <svg viewBox="0 0 100 100" class="icon shape-codepen">
+    <use xlink:href="/icons.svg#{{ icon }}"></use>
+  </svg>
+</div>

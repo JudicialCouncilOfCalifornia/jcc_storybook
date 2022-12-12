@@ -1,0 +1,108 @@
+.section {
+  --color: var(--color-black);
+  --heading-color: var(--color-primary-dark-x);
+  color: var(--color);
+  padding-top: var(--s7);
+}
+
+.section .section__main > * {
+  width: 100%;
+}
+
+.section .section__content,
+.section .section__content > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section .section__header h1,
+.section .section__header h2 {
+  color: var(--heading-color);
+  text-align: center;
+}
+
+.section .section__header h1.brow,
+.section .section__header h2.brow {
+  color: var(--accent-color);
+  border-color: var(--color);
+}
+
+.section > * > * + * {
+  margin-top: var(--s4);
+}
+
+/* Variants */
+.section--justify-left {
+  justify-content: flex-start;
+}
+
+.section--justify-center {
+  justify-content: center;
+}
+
+/* .section--justify-center .section__header {
+  text-align: center;
+} */
+
+.section--justify-right {
+  justify-content: flex-end;
+}
+
+.section--align-top {
+  align-items: flex-start;
+}
+
+.section--align-center {
+  align-items: center;
+}
+
+.section--align-bottom {
+  align-items: flex-end;
+}
+
+/* Variant Colors */
+.section--color-primary-dark-xx {
+  --color: var(--color-white);
+  --accent-color: var(--color-accent-warm);
+  --heading-color: var(--color-white);
+
+  background: var(--color-primary-dark-xx);
+}
+
+.section--color-primary-dark-xx-stripe {
+  --color: var(--color-white);
+  --accent-color: var(--color-accent-warm);
+  --heading-color: var(--color-white);
+
+  background: repeating-linear-gradient(
+    125deg,
+    #2F505E,
+    #2F404E 1px,
+    var(--color-primary-dark-xx) 2px,
+    var(--color-primary-dark-xx) 8px
+  )
+}
+
+.section--color-warm-dark-xx {
+  --color: var(--color-white);
+  --accent-color: var(--color-white);
+  background: var(--color-accent-warm-dark-xx);
+}
+
+.section--color-warm-dark-x {
+  --color: var(--color-black);
+  --accent-color: var(--color-accent-warm-dark-x);
+  background: var(--color-accent-warm-light-x);
+}
+
+/* Drop padding when two sections of the same background are touching. */
+.section--color-default + .section--color-default,
+.section--color-warm-dark-x + .section--color-warm-dark-x,
+.section--color-warm-dark-xx + .section--color-warm-dark-xx,
+.section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
+.section--color-primary-dark-xx + .section--color-primary-dark-xx {
+  padding-top: var(--s2);
+}
