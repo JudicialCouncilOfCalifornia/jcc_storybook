@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Variables. */
+:root {
+  /* Scale */
+  --ratio: 1.26;
+  --s-6: calc(var(--s-5) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 0.84rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+  --s7: calc(var(--s6) * var(--ratio));
+  
+  /* Content spacing. */
+  --measure: 60ch;
+  --max-width: 122ch;
+  --min-width: 30rem;
+
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+  
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  --color-base-dark-xxx: #2E2E2E;
+  --color-base-dark-xx: #454545;
+  --color-base-dark-x: #5C5C5C;
+  --color-base: #919191;
+  --color-base-light-x: #C9C9C9;
+  --color-base-light-xx: #F3F3F3;
+  --color-base-light-xxx: #F9F9F9;
+  
+  --color-accent-warm-dark-xxx: #775540;
+  --color-accent-warm-dark-xx: #655A3DB2;
+  --color-accent-warm-dark-x: #C05600;
+  --color-accent-warm-dark-5: #d57513;
+  --color-accent-warm: #FF8B2D;
+  --color-accent-warm-light-x: #FEF2E4;
+  
+  --color-primary-dark-xx: #1F303E;
+  --color-primary-dark-x: #0B4778;
+  --color-primary: #005EA2;
+  --color-primary-light-x: #2378C3;
+  --color-primary-light-xx: #25B6E2;
+  --color-primary-light-xxx: #EFF6FB;
+  
+  --color-secondary-dark-xx: #204E34;
+  --color-secondary-dark-x: #286846;
+  --color-secondary: #34A37E;
+  --color-secondary-light-5: #3db37e;
+  --color-secondary-light-x: #4BD6A7;
+  
+  /* Contextual variable: can be overridden at the component level to affect accent elements within. */
+  --heading-color: var(--color-primary-dark-xx);
+  --accent-color: var(--color-accent-warm-dark-x);
+  --color: var(--color-black);
+  --button-fg: var(--accent-color);
+  --border-thin: 1px;
+  --border-normal: 2px;
+  
+}
+
+/* The only media query used simply bumps the base size of our modular scale for larger screens. */
+@media screen and (min-width: 720px) {
+  :root {
+    --s0: 1rem;
+  }
+}
+

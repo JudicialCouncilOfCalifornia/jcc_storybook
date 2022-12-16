@@ -1,6 +1,7 @@
 import drupalAttribute from 'drupal-attribute'
 import {{pascalCase name}} from './{{pascalCase name}}.twig';
 import './{{pascalCase name}}.css';
+import {{pascalCase name}}Doc from './{{pascalCase name}}.md';
 // import './{{pascalCase name}}.js';
 
 // Import any other components needed for building this component. i.e.
@@ -16,7 +17,12 @@ import './{{pascalCase name}}.css';
 
 export default {
   title: '{{pascalCase type}}/{{pascalCase name}}',
-  component: {{pascalCase name}}
+  component: {{pascalCase name}},
+  paramters: {
+    docs: {
+      description: {{pascalCase name}}Doc
+    }
+  }
 };
 
 // Create Template for variant templates to bind to.

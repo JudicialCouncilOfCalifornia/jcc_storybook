@@ -12,4 +12,10 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'fullscreen',
+  options: {
+    storySort: {
+      order: ['Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+    },
+  },
 }

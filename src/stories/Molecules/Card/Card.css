@@ -1,0 +1,103 @@
+/* Card styles are dictated by the parent Cards component. */
+.card {
+  --measure: 100rem;
+  gap: 0;
+  align-items: center;
+}
+
+.card .card__media .frame iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Variants */
+/* Center */
+.card.card--bordered-center {
+  border: 1px dashed var(--color-base);
+  outline: 12px solid var(--color-accent-warm-light-x);
+}
+
+.card.card--bordered-center .card__main {
+  text-align: center;
+  /* padding: 0 var(--s5) var(--s5); */
+}
+
+/* Media Left */
+.card.card--media-left {
+  --measure: 40rem;
+}
+
+/* Media Right */
+.card.card--media-right {
+  --measure: 40rem;
+  flex-direction: row-reverse;
+}
+
+/* Overlay */
+.card.card--overlay {
+  --color: var(--color-white);
+  --heading-color: var(--color);
+  --button-color: var(--color);
+  --button-border-color: var(--color);
+  display: grid;
+  grid-template-areas: "card";
+  place-items: center;
+  background-color: var(--color-black);
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.card.card--overlay > * {
+  grid-area: card;
+}
+
+.card.card--overlay .card__media {
+  opacity: .6;
+  overflow: hidden;
+  max-height: 50ch;
+}
+
+.card.card--overlay .card__media img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  mix-blend-mode: multiply;
+
+}
+
+.card.card--overlay .card__main {
+  padding: var(--s6);
+  z-index: 1;
+}
+
+/* Striped */
+.card.card--striped {
+  --color: var(--color-white);
+  --heading-color: var(--color-white);
+
+  gap: var(--s0);
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: gray;
+  padding: var(--s2) var(--s5);
+  font-size: var(--s3);
+  line-height: var(--s4);
+  text-align: center;
+  text-decoration: none;
+
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-primary-dark-x),
+    var(--color-primary-dark-x) 1px,
+    var(--color-primary-dark-xx) 2px,
+    var(--color-primary-dark-xx) 8px
+  );
+}
+
+.card.card--striped .box {
+  padding: 0;
+}

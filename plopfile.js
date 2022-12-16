@@ -23,31 +23,36 @@ module.exports = plop => {
       actions: [
         {
           type: "add",
-          path: "src/stories/{{pascalCase name}}/{{pascalCase name}}.twig",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.twig",
           templateFile: "plop-templates/Component/template.twig"
         },
         {
           type: "add",
-          path: "src/stories/{{pascalCase name}}/{{pascalCase name}}.stories.js",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
           templateFile: "plop-templates/Component/template.stories.js",
           data: { folder: "stories" }
         },
         {
           type: "modify",
-          path: "src/stories/{{pascalCase name}}/{{pascalCase name}}.stories.js",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
           pattern: "Other",
           template: "{{pascalCase typeOther}}",
           abortOnFail: false
         },
         {
           type: "add",
-          path: "src/stories/{{pascalCase name}}/{{pascalCase name}}.css",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.css",
           templateFile: "plop-templates/Component/template.css"
         },
         {
           type: "add",
-          path: "src/stories/{{pascalCase name}}/{{pascalCase name}}.js",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.js",
           templateFile: "plop-templates/Component/template.js"
+        },
+        {
+          type: "add",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.md",
+          templateFile: "plop-templates/Component/template.md"
         }
       ]
   });

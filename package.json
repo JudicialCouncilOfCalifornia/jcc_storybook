@@ -14,6 +14,7 @@
   "author": "Calvin Tyndall",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.5.14",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.5.13",
     "@storybook/builder-webpack4": "^6.5.13",

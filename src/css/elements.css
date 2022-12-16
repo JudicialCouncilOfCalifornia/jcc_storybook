@@ -47,7 +47,16 @@ a {
 }
 
 p {
+  margin-top: 0;
   color: var(--color);
+}
+
+p + p {
+  margin-top: var(--s0);
+}
+
+img {
+  max-inline-size: 100%;
 }
 
 .caption {

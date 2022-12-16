@@ -1,0 +1,249 @@
+/*
+  Learn it: https://every-layout.dev
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Box. */
+.box { 
+  padding: var(--s1);
+}
+
+.box * {
+  color: inherit;
+}
+  
+/* Center. */
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--max-width);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cluster. */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
+  justify-content: flex-start;
+  align-items: center;
+}
+  
+/* Cover. */
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  padding: 1rem;
+}
+
+.cover > * {
+  margin-block: 1rem;
+}
+
+.cover > :first-child:not(.principal) {
+  margin-block-start: 0;
+}
+
+.cover > :last-child:not(.principal) {
+  margin-block-end: 0;
+}
+
+.cover > .principal {
+  margin-block: auto;
+}
+
+/* Frame. */
+.frame {
+  --n: 16;
+  --d: 9;
+  aspect-ratio: var(--n) / var(--d);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+  
+/* Grid. */
+.grid {
+  --min-width: 20ch;
+  display: grid;
+  grid-gap: var(--gap, 1rem);
+}
+
+@supports (width: min(var(--min-width), 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
+  }
+}
+
+/* Icon. */
+.icon {
+  height: 0.75em;
+  height: 1cap;
+  width: 0.75em;
+  width: 1cap;
+}
+
+.with-icon {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.with-icon .icon {
+  margin-inline-end: var(--space, 1rem);
+}
+
+/* Imposter. */
+.imposter {
+  position: var(--positioning, absolute);
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imposter.contain {
+  --margin: 0px;
+  overflow: auto;
+  max-inline-size: calc(100% - (var(--margin) * 2));
+  max-block-size: calc(100% - (var(--margin) * 2));
+}
+
+/* Reel. */
+.reel {
+  --space: 1rem;
+  --color-light: var(--box-color-light);
+  --color-dark: var(--box-color-dark);
+  --reel-height: auto;
+  --item-width: 25ch;
+  display: flex;
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: #fff #000;
+  /* Affordance */
+  background:
+    /* Shadow covers */
+    linear-gradient(90deg, white 20%, rgba(255,255,255,0)),
+    linear-gradient(90deg, rgba(255,255,255,0), white 80%) 0 100%,
+    /* Shadows */
+    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: left, right;
+  background-size: 75px 200%, 75px 200%, 40px 200%, 40px 200%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.reel::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: #000;
+  background-image: linear-gradient(#000 0, #000 0.25rem, #fff 0.25rem, #fff 0.75rem, #000 0.75rem);
+}
+
+.reel > * {
+  flex: 0 0 auto;
+}
+
+.reel > img {
+  block-size: 100%;
+  flex-basis: auto;
+  width: auto;
+}
+
+.reel > * + * {
+  margin-inline-start: var(--space, 1rem);
+}
+
+.reel.overflowing {
+  padding-bottom: var(--space);
+}
+
+/* ↓ Hide scrollbar with `no-bar` class */
+.reel.no-bar {
+  scrollbar-width: none;
+}
+
+.reel.no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Sidebar. */
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.with-sidebar > :first-child {
+  flex-basis: var(--sidebar-width, 20ch);
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+  
+
+/* Stack. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+} 
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+
+/* Switcher. */
+.switcher {
+  --measure: 80ch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--s1));
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--measure) - 100%) * 999);
+}
+
+.switcher.switcher--3 > :nth-last-child(n + 4),
+.switcher.swithcer--3 > :nth-last-child(n + 4) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher.switcher--4 > :nth-last-child(n + 5),
+.switcher.swithcer--4 > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+  

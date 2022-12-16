@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    "../src/css/variables.css",
-    "../src/css/every-layout-oneshot.css",
+    "../src/css/scheme-default.css",
+    "../src/css/layout-primitives.css",
     "../src/css/elements.css",
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
@@ -9,8 +9,9 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@storybook/addon-a11y"
   ],
   framework: "@storybook/html",
-  staticDirs: ['../src/assets']
+  staticDirs: ['../src/assets'],
 }
