@@ -1,4 +1,5 @@
 import { configure } from '@storybook/html';
+import { Doc } from './docs.mdx';
 import Twig from 'twig';
 import twigDrupal from 'twig-drupal-filters';
 // Add the filters to Twig instance.
@@ -12,10 +13,19 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  docs: {
+    extractComponentDescription: (_component, { notes }) => {
+      if (notes) {
+        return typeof notes === 'string' ? notes : notes.markdown || notes.text;
+      }
+      return null;
+    },
+    page: Doc,
+  },
   layout: 'fullscreen',
   options: {
     storySort: {
-      order: ['Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+      order: ['Docs', 'Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
     },
   },
 }

@@ -1,11 +1,10 @@
 .hero {
-  --heading-color: var(--color-white);
-  --accent-color: var(--color-white);
   --color: var(--color-white);
+  --heading-color: var(--color);
+  --accent-color: var(--color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "hero";
-  min-height: 25ch;
   overflow: hidden;
 }
 
@@ -14,15 +13,14 @@
   height: 100%;
 }
 
-.hero > * > img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+.hero__image {
+  background-image: var(--background-image);
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero__tint {
+  background-color: var(--bg);
   mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
@@ -35,6 +33,7 @@
 
 .hero__content > * {
   display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100%;
 }
@@ -42,50 +41,43 @@
 .hero__content-inner {
   color: var(--color);
   max-width: 50%;
+  width: 100%;
 }
 
-/* Variants */
-.hero.hero--justify-left .hero__content > * {
+/* Alignment */
+.hero--justify-left .hero__content > * {
   justify-content: flex-start;
 }
 
-.hero.hero--justify-center .hero__content > * {
+.hero--justify-center .hero__content > * {
   justify-content: center;
 }
 
-.hero.hero--justify-right .hero__content > * {
+.hero--justify-right .hero__content > * {
   justify-content: flex-end;
 }
 
-.hero.hero--align-top .hero__content > * {
+.hero--align-top .hero__content > * {
   align-items: flex-start;
 }
 
-.hero.hero--align-center .hero__content > * {
+.hero--align-center .hero__content > * {
   align-items: center;
 }
 
-.hero.hero--align-bottom .hero__content > * {
+.hero--align-bottom .hero__content > * {
   align-items: flex-end;
 }
 
-.hero.hero--color-warm-dark-xx .hero__tint {
-  background: var(--color-accent-warm-dark-xx);
-}
-
-.hero.hero--color-primary .hero__tint {
-  background: var(--color-primary);
-}
-
-.hero.hero--content-bg {
+.hero--content-bg {
   --color: var(--color-black);
   --button-color: var(--color-black);
 }
 
-.hero.hero--content-bg .hero__content-inner {
+.hero--content-bg .hero__content-inner {
+  padding: var(--s4);
   background: var(--color-white);
   height: 100%;
   max-width: 60ch;
-  /* margin-left: 7ch; */
   color: var(--color);
 }

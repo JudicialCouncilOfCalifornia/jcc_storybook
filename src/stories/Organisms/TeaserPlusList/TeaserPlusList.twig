@@ -8,7 +8,7 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="teaser-list__teaser stack">
+  <div class="teaser-list__teaser stack box">
     {{ teaser.brow }}
     <div class="teaser-list__teaser-heading">
       <h3>
@@ -23,7 +23,7 @@
       {{ teaser.text }}
     </div>
   </div>
-  <div class="teaser-list__list">
+  <div class="teaser-list__list box">
     <ul class="stack">
       {% for item in listItems %}
         <li>

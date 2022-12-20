@@ -1,6 +1,6 @@
 import drupalAttribute from 'drupal-attribute'
 import Brow from './Brow.twig';
-import BrowDoc from './Brow.md';
+import readme from './readme.md';
 import './Brow.css';
 
 export default {
@@ -13,11 +13,7 @@ export default {
     },
   },
   parameters: {
-    docs: {
-      description: {
-        component: BrowDoc,
-      },
-    },
+    notes: readme,
   },
 };
 

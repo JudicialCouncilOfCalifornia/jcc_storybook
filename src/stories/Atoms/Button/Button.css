@@ -1,7 +1,7 @@
 a.button {
   --button-border: var(--button-fg);
   --button-bg: transparent;
-  display: inline-flex;
+  display: inline-block;
   width: auto;
   background-color: var(--button-bg);
   padding: var(--s-1) var(--s2);

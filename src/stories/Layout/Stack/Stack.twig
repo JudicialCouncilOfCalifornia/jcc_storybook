@@ -2,11 +2,10 @@
   Do not use this template directly. #}
 
 {% set styles = [] %}
-{% set styles = gap ? styles|merge(['--gap: var(' ~ gap ~ ');']) : styles %}
-{% set styles = measure ? styles|merge(['--measure: ' ~ measure ~ ';']) : styles %}
+{% set styles = space ? styles|merge(['--space: var(' ~ space ~ ');']) : styles %}
 
 {% set classes = [
-  'switcher',
+  'stack',
 ] %}
 
 <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>

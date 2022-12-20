@@ -1,6 +1,5 @@
 {# Set up variant classes. #}
-{% set variant_type = type ? 'hero--' ~ type : 'hero--banner' %}
-{% set variant_color = color ? color : 'primary-dark-xx' %}
+{% set variant_type = variant ? 'hero--' ~ variant : 'hero--banner' %}
 {% set variant_styles = [] %}
 
 {# Set heading and button colors the same. #}
@@ -9,6 +8,12 @@
     '--heading-color: var(--color-' ~ color ~ ');',
     '--button-color: var(--color-' ~ color ~ ');',
     '--button-border-color: var(--color-' ~ color ~ ');',
+  ]) %}
+{% endif %}
+
+{% if bg_tint %}
+  {% set variant_styles = variant_styles|merge([
+    '--bg: var(--color-' ~ bg_tint ~ ');',
   ]) %}
 {% endif %}
 
@@ -41,14 +46,13 @@
   variant_bg_tint,
 ] %}
 
-<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', variant_styles|join) }}>
-  <div class="hero__image">
-    <img src={{ background_image_url }} />
-  </div>
+{# The Markup #}
+<div {{ attributes.addClass(classes).setAttribute('style', variant_styles|join) }}>
+  <div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
   <div class="hero__tint"></div>
   <div class="hero__content">
     <div class="center">
-      <div class="hero__content-inner box">
+      <div class="hero__content-inner">
         {{ main }}
       </div>
     </div>

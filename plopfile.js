@@ -51,7 +51,7 @@ module.exports = plop => {
         },
         {
           type: "add",
-          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.md",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/readme.md",
           templateFile: "plop-templates/Component/template.md"
         }
       ]

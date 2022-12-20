@@ -1,6 +1,6 @@
 import drupalAttribute from 'drupal-attribute'
 import Button from './Button.twig';
-import ButtonDoc from './Button.md';
+import readme from './readme.md';
 
 import './Button.css';
 
@@ -18,11 +18,7 @@ export default {
     },
   },
   parameters: {
-    docs: {
-      description: {
-        component: ButtonDoc,
-      },
-    },
+    notes: readme,
   }
 };
 

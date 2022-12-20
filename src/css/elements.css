@@ -60,9 +60,9 @@ img {
 }
 
 .caption {
-  --font-size: var(--s-1);
-  --line-height: var(--s1);
-  padding: 0 var(--s0);
+  font-size: var(--s-1);
+  line-height: var(--s0);
+  padding: var(--s0) var(--s1);
 }
 
 .accent {

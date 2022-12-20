@@ -21,8 +21,8 @@
   
   /* Content spacing. */
   --measure: 60ch;
-  --max-width: 122ch;
-  --min-width: 30rem;
+  --max-width: 126ch;
+  --min-width: 40ch;
 
   /* Fonts */
   --font-primary: 'Inter', sans-serif;
@@ -59,15 +59,65 @@
   --color-secondary: #34A37E;
   --color-secondary-light-5: #3db37e;
   --color-secondary-light-x: #4BD6A7;
-  
+
+  /* Striped Backgrounds */
+
+  --striped-primary-dark-xx: repeating-linear-gradient(
+    125deg,
+    var(--color-primary-dark-x),
+    var(--color-primary-dark-x) 1px,
+    var(--color-primary-dark-xx) 2px,
+    var(--color-primary-dark-xx) 8px
+  );
+
+  --striped-primary-dark-x: repeating-linear-gradient(
+    125deg,
+    var(--color-primary),
+    var(--color-primary) 1px,
+    var(--color-primary-dark-x) 2px,
+    var(--color-primary-dark-x) 8px
+  );
+
+  --striped-secondary: repeating-linear-gradient(
+    125deg,
+    var(--color-secondary-light-5),
+    var(--color-secondary-light-5) 1px,
+    var(--color-secondary) 2px,
+    var(--color-secondary) 8px
+  );
+
+  --striped-accent-warm-dark-x: repeating-linear-gradient(
+    125deg,
+    var(--color-accent-warm-dark-5),
+    var(--color-accent-warm-dark-5) 1px,
+    var(--color-accent-warm-dark-x) 1px,
+    var(--color-accent-warm-dark-x) 8px
+  );
+
+  --striped-secondary-dark-xx: repeating-linear-gradient(
+    125deg,
+    var(--color-secondary-dark-x),
+    var(--color-secondary-dark-x) 1px,
+    var(--color-secondary-dark-xx) 1px,
+    var(--color-secondary-dark-xx) 8px
+  );
+
+  --striped-primary-light-xx: repeating-linear-gradient(
+    125deg,
+    #2fBfEf,
+    #2fBfEf 1px,
+    var(--color-primary-light-xx) 1px,
+    var(--color-primary-light-xx) 8px
+  );
+
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
+  --bg: transparent;
   --heading-color: var(--color-primary-dark-xx);
   --accent-color: var(--color-accent-warm-dark-x);
   --color: var(--color-black);
   --button-fg: var(--accent-color);
   --border-thin: 1px;
   --border-normal: 2px;
-  
 }
 
 /* The only media query used simply bumps the base size of our modular scale for larger screens. */

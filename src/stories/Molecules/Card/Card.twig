@@ -13,33 +13,32 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'card',
-  'switcher',
   type,
 ] %}
 
 <{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
-  {# Use composable layout classes as needed. #}
-  {# Use BEM syntax if needed for styling classes. #}
-  {% if media %}
-    <div class="card__media">
-      {{ media }}
+  <div class="switcher">
+    {% if media %}
+      <div class="card__media">
+        {{ media }}
+      </div>
+    {% endif %}
+    <div class="card__main box stack">
+      {% if heading %}
+        <div class="card__heading">
+          <{{h}}>{{ heading }}</{{h}}>
+        </div>
+      {% endif %}
+      {% if text %}
+        <div class="card__text">
+          {{ text }}
+        </div>
+      {% endif %}
+      {% if button.href and tag == 'div' %}
+        <div class="card__button">
+          {{ link(button.label, button.href, {class: ['button', 'button--' ~ button.variant, 'button--' ~ button.size ]}) }}
+        </div>
+      {% endif %}
     </div>
-  {% endif %}
-  <div class="card__main box stack">
-    {% if heading %}
-      <div class="card__heading">
-        <{{h}}>{{ heading }}</{{h}}>
-      </div>
-    {% endif %}
-    {% if text %}
-      <div class="card__text">
-        {{ text }}
-      </div>
-    {% endif %}
-    {% if button.href and tag == 'div' %}
-      <div class="card__button">
-        {{ link(button.label, button.href, {class: ['button', 'button--' ~ button.variant, 'button--' ~ button.size ]}) }}
-      </div>
-    {% endif %}
   </div>
 </{{tag}}>

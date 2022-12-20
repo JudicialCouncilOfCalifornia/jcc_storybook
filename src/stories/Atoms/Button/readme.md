@@ -1,3 +1,5 @@
+# Button
+
 Button border, text and background colors can be inherited from ancestor components via CSS variables:
 
   - `--button-fg`

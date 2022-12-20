@@ -1,0 +1,41 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+{# {% set styles = [] %}
+{% set styles = styles|merge(['height: 50%; width: 80%; background: black;']) %} #}
+
+{% set classes = [
+  'center',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="imposter-demo">
+    <div class="box">
+      <h2>Demo 1</h2>
+      {{ main }}
+    </div>
+    <div class="imposter imposter-demo__inner">
+      <div class="box">
+        {{ imposter }}
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="imposter-demo">
+      <div class="box">
+        {{ main }}
+      </div>
+    </div>
+    <div class="imposter-demo">
+      <div class="box">
+        <h2>Demo 2</h2>
+        {{ main }}
+      </div>
+      <div class="imposter imposter-demo__inner" style="--positioning: {{ positioning }}">
+        <div class="box">
+          {{ imposter }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.imposter-demo {
+  --color: #fff;
+  background: #000;
+  margin-top: var(--s1);
+  position: relative;
+}
+
+.imposter-demo__inner {
+  --color: #000;
+  background: #999;
+}

@@ -26,37 +26,37 @@ const Template = ({ ...args }) => {
 export const HomePage = Template.bind({});
 HomePage.args = {
   section_1: Hero({
-    background_image_url: '/hero-bg-2.png',
+    variant: 'content-bg',
+    content_justify: 'left',
+    bg_tint: false,
+    background_image_url: 'https://source.unsplash.com/random/900×500/?images',
+    first_component: true,
     main: Card({
+      variant: "default",
       first_component: true,
       media: false,
       heading: "Language Access",
       subheading: false,
       text: "<p>Mission statement or explanation of physical and people resources. Lorem ipsum dolor sit amet lorem ips consectetur adipisciue accumsan metus.</p>",
       button: false,
-      // A variant type that contols the layout and style of the component.
-      variant: "default",
-      // drupalAttribute allows us to mock drupal attributes in storybook.
       attributes: new drupalAttribute(),
     }),
-    type: 'content-bg',
-    content_bg_color: 'white',
-    color: 'primary-dark-x',
-    bg_tint: false,
-    content_justify: 'left',
-    content_align: 'top',
-    first_component: true,
     attributes: new drupalAttribute()
   }),
   section_2: Section({
+    variant: 'primary-dark-xx-stripe',
     brow: Brow({
-      part_one: "About",
+      part_one: "Introduction",
       part_two: false,
       variant: 'heading',
       attributes: new drupalAttribute(),
     }),
     heading: false,
     text: false,
+    first_component: false,
+    button: false,
+    content_justify: 'center',
+    content_align: 'top',
     main: Card({
       media: '<div class="frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="caption"><p>Video text. Could be video title and video desription. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p></div> ',
       heading: "About Language Access",
@@ -67,11 +67,6 @@ HomePage.args = {
       // drupalAttribute allows us to mock drupal attributes in storybook.
       attributes: new drupalAttribute(),
     }),
-    button: false,
-    content_justify: 'center',
-    content_align: 'top',
-    variant: 'primary-dark-xx-stripe',
-    first_component: false,
     attributes: new drupalAttribute(),
   }),
   section_3: Section({

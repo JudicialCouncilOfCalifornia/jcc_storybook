@@ -10,10 +10,6 @@
 .box { 
   padding: var(--s1);
 }
-
-.box * {
-  color: inherit;
-}
   
 /* Center. */
 .center {

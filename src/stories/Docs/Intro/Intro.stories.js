@@ -1,17 +1,12 @@
 import drupalAttribute from 'drupal-attribute'
 import Intro from './Intro.twig';
-import IntroDoc from './Intro.md';
+import readme from './readme.md';
 
 export default {
-  title: 'Intro',
-  description: 'This is a description of this component.',
+  title: 'Docs/Intro',
   component: Intro,
   parameters: {
-    docs: {
-      description: {
-        component: IntroDoc,
-      },
-    },
+    notes: readme,
   },
 };
 

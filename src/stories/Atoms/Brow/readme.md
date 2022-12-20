@@ -1,4 +1,4 @@
-<!-- Markdown description for Brow -->
+# Brow
 
 The Brow is often placed above headings. There are two possible parts, which are styled differently. The colors of each part of the brow can be inherited from an ancestor component (i.e. Section) via CSS variables.
 

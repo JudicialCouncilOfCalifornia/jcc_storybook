@@ -1,7 +1,7 @@
+import readme from './readme.md';
 import drupalAttribute from 'drupal-attribute'
 import {{pascalCase name}} from './{{pascalCase name}}.twig';
 import './{{pascalCase name}}.css';
-import {{pascalCase name}}Doc from './{{pascalCase name}}.md';
 // import './{{pascalCase name}}.js';
 
 // Import any other components needed for building this component. i.e.
@@ -18,10 +18,8 @@ import {{pascalCase name}}Doc from './{{pascalCase name}}.md';
 export default {
   title: '{{pascalCase type}}/{{pascalCase name}}',
   component: {{pascalCase name}},
-  paramters: {
-    docs: {
-      description: {{pascalCase name}}Doc
-    }
+  parameters: {
+    notes: readme,
   }
 };
 
@@ -35,7 +33,7 @@ export const Default = Template.bind({});
 Default.args = {
   // Create any variables to pass to the Twig template. Keep it flat.
   main: "Content goes here.",
-  // A variant type that contols the layout and style of the component.
+  // A variant type that controls the layout and style of the component.
   variant: "default",
   // drupalAttribute allows us to mock drupal attributes in storybook.
   attributes: new drupalAttribute(),
@@ -44,10 +42,10 @@ Default.args = {
 // // Bind additional component variants like this.
 // export const [VariantName] = Template.bind({});
 // [VariantName].args = {
+//   // A variant type that controls the layout and style of the component.
+//   variant: "default",
 //   // Create any variables to pass to the Twig template.
 //   content: "Content goes here.",
-//   // A variant type that contols the layout and style of the component.
-//   variant: "default",
 //   // drupalAttribute allows us to mock drupal attributes in storybook.
 //   attributes: new drupalAttribute(),
 // };
