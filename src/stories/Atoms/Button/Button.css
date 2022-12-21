@@ -1,6 +1,5 @@
 a.button {
   --button-border: var(--button-fg);
-  --button-bg: transparent;
   display: inline-block;
   width: auto;
   background-color: var(--button-bg);

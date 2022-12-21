@@ -15,21 +15,29 @@ export default {
   },
   argTypes: {
     variant: {
+      description: "Hero variant.",
+      table: {defaultValue: {summary: 'banner'}},
       control: { type: 'radio' },
       options: ['banner', 'content-bg'],
     },
     content_justify: {
+      description: "Justify the content container left, center or right.",
+      table: {defaultValue: {summary: 'left'}},
       control: { type: 'radio' },
       options: ['left', 'center', 'right'],
     },
-    color: {
-      control: { type: 'select' },
-      options: ['white', 'primary-dark-x', 'warm-dark-x']
-    },
     bg_tint: {
+      description: "The tint applied to darken the background.",
+      table: { defaultValue: { summary: 'accent-warm-dark-xx' }},
       control: { type: 'select' },
-      options: ['accent-warm-dark-xx', 'primary-dark-x']
-    }
+      options: [ false, 'accent-warm-dark-xx', 'primary-dark-x' ]
+    },
+    background_image_url: {
+      description: "The background image for the Hero. `false` to use the tint color as a solid background.",
+      table: { defaultValue: { summary: false }},
+    },
+    main: {table: {disable: true}},
+    attributes: {table: {disable: true}},
   },
 };
 
@@ -43,8 +51,7 @@ Banner.args = {
   variant: 'banner',
   content_justify: 'left',
   bg_tint: 'accent-warm-dark-xx',
-  background_image_url: '/courthouse.png',
-  first_component: true,
+  background_image_url: 'https://source.unsplash.com/random/900×700/?courthouse',
   main: Card({
     variant: "default",
     first_component: true,
@@ -61,10 +68,10 @@ export const BannerContentBGWhite = Template.bind({});
 BannerContentBGWhite.args = {
   variant: 'content-bg',
   content_justify: 'left',
-  color: 'primary-dark-x',
+  accent_color: 'primary-dark-x',
   content_bg_color: 'white',
-  bg_tint: 'primary-dark-x',
-  background_image_url: '/alfons-morales-books-unsplash.jpg',
+  bg_tint: false,
+  background_image_url: 'https://source.unsplash.com/random/900×700/?books',
   first_component: true,
   main: Card({
     first_component: true,

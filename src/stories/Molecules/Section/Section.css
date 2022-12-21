@@ -27,31 +27,6 @@
 }
 
 /* Variants */
-.section--justify-left {
-  justify-content: flex-start;
-}
-
-.section--justify-center {
-  justify-content: center;
-}
-
-.section--justify-right {
-  justify-content: flex-end;
-}
-
-.section--align-top {
-  align-items: flex-start;
-}
-
-.section--align-center {
-  align-items: center;
-}
-
-.section--align-bottom {
-  align-items: flex-end;
-}
-
-/* Variant Colors */
 .section--color-primary-dark-xx {
   --color: var(--color-white);
   --accent-color: var(--color-accent-warm);

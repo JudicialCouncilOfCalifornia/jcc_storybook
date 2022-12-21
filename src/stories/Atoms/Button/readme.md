@@ -1,12 +1,14 @@
 # Button
 
-Button border, text and background colors can be inherited from ancestor components via CSS variables:
+Button border, text and background colors can be inherited from ancestor components via CSS variables.
+
+### Inherited CSS Variables
 
   - `--button-fg`
   - `--button-bg`
   - `--button-border` usually set to `--button-fg`.
 
-Controlling Variables: 
+### Modifier Variables: 
 
-  - variant: [primary | secondary | text]
-  - size: [small | normal | large]
+  - **variant**: [primary | secondary | text]
+  - **size**: [small | normal | large]

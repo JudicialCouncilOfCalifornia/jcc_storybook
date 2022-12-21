@@ -8,6 +8,12 @@ import Brow from '../../Atoms/Brow/Brow.twig';
 export default {
   title: 'Organisms/TeaserPlusList',
   component: TeaserPlusList,
+  argTypes: {
+    brow: {table: {disable: true}},
+    teaser: {table: {disable: true}},
+    listItems: {table: {disable: true}},
+    attributes: {table: {disable: true}},
+  }
 };
 
 const Template = ({ ...args }) => {

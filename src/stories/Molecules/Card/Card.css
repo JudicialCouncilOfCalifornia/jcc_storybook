@@ -4,14 +4,25 @@
   gap: 0;
 }
 
+.card__media .frame {
+  --n: 16;
+  --d: 9;
+}
+
 .card__media .frame iframe {
   width: 100%;
   height: 100%;
 }
 
 /* Variants */
-/* Center */
-.card--bordered-center {
+
+/* Card modifier class can be used on the .cards wrapper or on the card. */
+/* So we use both types of selector orders for each variant. */
+/* @todo: determine if we can omit the .card level and always expect the card modifier class on the .cards component. */
+
+/* Bordered Center */
+.card--bordered-center .card,
+.card.card--bordered-center {
   border: var(--s-2) solid var(--color-accent-warm-light-x);
 }
 
@@ -39,7 +50,8 @@
 }
 
 /* Overlay */
-.card--overlay > * {
+.card--overlay .card > *,
+.card.card--overlay > * {
   --color: var(--color-white);
   --heading-color: var(--color);
   --button-fg: var(--color);
@@ -53,14 +65,20 @@
   mix-blend-mode: multiply;
 }
 
-.card--overlay > * > * {
+.card--overlay .card > * > *,
+.card.card--overlay > * > * {
   grid-area: card;
 }
 
 .card--overlay .card__media {
-  opacity: .6;
+  opacity: .5;
   overflow: hidden;
   max-height: 50ch;
+}
+
+.card--overlay .frame {
+  --n: 1;
+  --d: 2;
 }
 
 .card--overlay .card__media img {
@@ -70,12 +88,13 @@
   mix-blend-mode: multiply;
 }
 
-.card.card--overlay .card__main {
+.card--overlay .card__main {
   padding: var(--s4);
   z-index: 1;
 }
 
 /* Striped */
+.card--striped .card,
 .card.card--striped {
   --color: var(--color-white);
   --heading-color: var(--color-white);
@@ -103,6 +122,7 @@
   );
 }
 
+.card--striped .card .box,
 .card.card--striped .box {
   padding: 0;
 }
