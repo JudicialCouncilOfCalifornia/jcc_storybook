@@ -1,4 +1,3 @@
-import { configure } from '@storybook/html';
 import { Doc } from './docs.mdx';
 import Twig from 'twig';
 import twigDrupal from 'twig-drupal-filters';
@@ -22,7 +21,6 @@ export const parameters = {
     },
     page: Doc,
   },
-  layout: 'fullscreen',
   options: {
     storySort: {
       order: ['Docs', 'Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],

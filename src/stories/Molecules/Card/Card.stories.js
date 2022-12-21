@@ -88,7 +88,7 @@ MediaRight.args = {
 export const Overlay = Template.bind({});
 Overlay.args = {
   // Create any variables to pass to the Twig template.
-  media: '<img src="https://source.unsplash.com/random/900×700/?books" />',
+  media: '<div class="frame" style="--n: 1; --d: 2;"><img src="https://source.unsplash.com/random/400×400/?books" /></div>',
   heading: "Heading For A Card",
   text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
   button: {
