@@ -9,13 +9,23 @@ export default {
   component: Button,
   argTypes: {
     variant: {
-      control: { type: 'radio' },
+      description: "The button variant name.",
+      table: { defaultValue: { summary: "primary" }},
+      control: { type: 'select' },
       options: ['primary', 'secondary', 'text'],
     },
     size: {
-      control: { type: 'radio' },
+      description: "The button size.",
+      table: { defaultValue: { summary: "normal" }},
+      control: { type: 'select' },
       options: ['small', 'normal', 'large'],
     },
+    label: {
+      description: "The button text.",
+      table: { defaultValue: { summary: false }},
+    },
+    href: { table: { disable: true }},
+    attributes: { table: { disable: true }},
   },
   parameters: {
     notes: readme,

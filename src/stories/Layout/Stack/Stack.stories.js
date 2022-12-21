@@ -7,9 +7,16 @@ export default {
   component: Stack,
   argTypes: {
     space: {
+      description: "The space between elements;",
+      table: { defaultValue: { summary: '1.5rem' }},
       control: { type: 'select' },
       options: ['--s0', '--s1', '--s2', '--s3', '--s4', '--s5'],
     },
+    num_items: {
+      description: "Add or remove items for exploring this layout.",
+      table: { defaultValue: { summary: "--s1" }},
+    },
+    attributes: { table: { disable: true }},
   },
   parameters: {
     notes: readme,

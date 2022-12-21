@@ -11,9 +11,14 @@ export default {
   },
   argTypes: {
     positioning: {
+      description: "Sets the impostor positioning relative to its containing element, or the page.",
+      table: { defaultValue: { summary: "absolute (the containing element)" }},
       control: { type: 'radio' },
       options: [ 'absolute', 'fixed' ],
-    }
+    },
+    main: {table: { disable: true }},
+    imposter: {table: { disable: true }},
+    attributes: {table: { disable: true }},
   },
 };
 

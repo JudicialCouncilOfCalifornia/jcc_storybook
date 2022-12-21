@@ -8,9 +8,20 @@ export default {
   component: Brow,
   argTypes: {
     variant: {
+      description: "The component variant.",
+      table: { defaultValue: { summary: 'default' }},
       control: { type: 'radio' },
       options: ['default', 'heading'],
     },
+    part_one: {
+      description: "The first part of the Brow, usually colored by `--accent-color` value.",
+      table: { defaultValue: { summary: false }},
+    },
+    part_two: {
+      description: "The second part of the Brow, usually colored by `--color` value. Appears after a `|`.",
+      table: { defaultValue: { summary: false }},
+    },
+    attributes: { table: { disable: true }}
   },
   parameters: {
     notes: readme,
