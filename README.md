@@ -33,10 +33,14 @@ External References:
 ## Pattern Library Development
   **For development of the pattern library only. Not required to use this as a base theme.**
 
+### Requirements
+
+  - Node 18
+
 ### Installation
 
   - Clone this repo and cd to the directory
-  - `nvm use`: to use the specified version of node. (If using nvm to manage node. You may need to install the appropriate version.)
+  - `nvm use`: to use the specified version of Node. (If using nvm to manage node. You may need to install the appropriate version.)
   - `npm install`: to install the required development packages. 
   - `npm run storybook`: to start storybook. It will open a new browser window.
 
