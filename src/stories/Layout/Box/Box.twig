@@ -1,0 +1,27 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+{% set styles = [] %}
+{% set styles = padding ? styles|merge(['padding: var(' ~ padding ~ ');']) : styles %}
+
+{% set classes = [
+  'stack',
+] %}
+
+<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+  <p>Just a box</p>
+  <div class="box" style="border: 1px solid;">
+    <p>Box</p>
+  </div>
+  <p>A composition of 3 boxes in a simple card like pattern.</p>
+  <div class="box" style="border: 1px solid; padding: 0;">
+    <div class="box" style="border: 0spx solid; background: #aaa; --heading-color: #fff;">
+      <h3>Box With Background</h3>
+    </div>
+    <div class="box" style="border: 0px solid;">
+      <p>Box with no border, with padding.</p>
+      <p><em>Both inner boxes wrapped in a box with border and no padding.</em></p>
+    </div>
+  </div>
+
+</div>
