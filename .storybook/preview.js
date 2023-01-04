@@ -23,7 +23,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Docs', 'Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+      order: ['Documentation', ['Intro'], 'Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
     },
   },
 }

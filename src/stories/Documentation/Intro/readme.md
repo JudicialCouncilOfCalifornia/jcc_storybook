@@ -44,16 +44,16 @@ This is achieved by thoughtful use of modern CSS, the Layout System, and Atomic 
 
 ## Scheme
 
-At the `:root` of our CSS is a set of variables that captures all the key values that define our [modular scale](https://every-layout.dev/rudiments/modular-scale/), color pallette, font families and more. (`scheme-default.css`)
+At the `:root` of our CSS is a set of **custom properties** *(aka: variables)* that capture all the key values that define our [modular scale](https://every-layout.dev/rudiments/modular-scale/), color pallette, font families and more. (`scheme-default.css`)
 
-Components utilize these CSS variables to enable ancestor components to affect the look and feel of descendent elements. For example, the heading color of a Card might be inherited from a variable set on the Section component that contains it, or it may be overridden on the Card variant itself.
+Components can utilize these CSS variables to enable ancestor components to affect the look and feel of descendent elements. For example, the heading color of a Card might be inherited from a variable set on the Section component that contains it, or it may be overridden on the Card variant itself.
 
 By replacing or altering the scheme CSS file to change the variable values, we can dramatically alter the look and feel of the entire component library.
 
 
 ## Not Sassy
 
-This library does not have the overhead of Sass/SCSS. It uses plain old CSS. Most of the benefits of SCSS are eliminated with the use of modern CSS and Atomic components. Individual component CSS files can be very small and well structured for maximum flexibility and maintainability. Atomic Design, by it's nature, gives us component reusability.
+This library does not have the overhead of Sass/SCSS. It uses plain but **modern CSS**. Most of the benefits of SCSS are eliminated with the use of modern CSS and Atomic components. Individual component CSS files can be very small and well structured for maximum flexibility and maintainability. Atomic Design, by it's nature, gives us component reusability.
 
 
 ## Drupal Integration

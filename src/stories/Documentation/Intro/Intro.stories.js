@@ -3,7 +3,7 @@ import Intro from './Intro.twig';
 import readme from './readme.md';
 
 export default {
-  title: 'Docs/Intro',
+  title: 'Documentation/Intro',
   component: Intro,
   parameters: {
     notes: readme,
