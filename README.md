@@ -62,8 +62,8 @@ For more information about how to develop components for this library, see the "
 
 
 ## Links
-* Project Page:   
-* Documentation:  
+* Project Page:   https://jcc-storybook.netlify.app/?path=/docs/documentation-intro--default
+* Documentation:  https://jcc-storybook.netlify.app/?path=/docs/documentation-intro--default
 * Support:        https://www.courts.ca.gov/policyadmin-jc.htm
 
 ## License
