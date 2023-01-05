@@ -58,6 +58,13 @@ img {
   max-inline-size: 100%;
 }
 
+code {
+  border: 1px solid #aaa;
+  background: #eee;
+  padding: var(--s-5);
+  color: #000;
+}
+
 .caption {
   font-size: var(--s-1);
   line-height: var(--s0);

@@ -3,7 +3,7 @@
 {% set variant = variant ? 'cards--' ~ variant : 'cards--default' %}
 {% set card_variant = card_variant ? 'card--' ~ card_variant : 'card--default' %}
 
-{% set styles = card_width ? '--min-width: ' ~ card_width ~ ';' : '--min-width: 30ch;' %}
+{% set styles = cardWidth ? '--min-width: ' ~ cardWidth ~ ';' : '--min-width: 30ch;' %}
 
 {% set classes = [
   'cards',

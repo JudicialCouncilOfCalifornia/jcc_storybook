@@ -21,11 +21,9 @@
 <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
   <div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
   <div class="hero__tint"></div>
-  <div class="hero__content">
-    <div class="center">
-      <div class="hero__content-inner">
-        {{ main }}
-      </div>
+  <div class="hero__content container">
+    <div class="hero__content-inner">
+      {{ main }}
     </div>
   </div>
 </div>

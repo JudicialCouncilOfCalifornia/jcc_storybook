@@ -6,6 +6,10 @@
   padding-bottom: var(--s5);
 }
 
+.section > * > .center {
+  --align-items: center;
+}
+
 .section .section__main > * {
   width: 100%;
 }
@@ -13,7 +17,6 @@
 .section .section__header h1,
 .section .section__header h2 {
   color: var(--heading-color);
-  text-align: center;
 }
 
 .section .section__header h1.brow,

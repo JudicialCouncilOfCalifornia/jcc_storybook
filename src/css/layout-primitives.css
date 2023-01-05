@@ -15,10 +15,10 @@
 .center {
   box-sizing: content-box;
   margin-inline: auto;
-  max-inline-size: var(--max-width);
+  max-inline-size: var(--measure);
   display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items: var(--align-items, flex-start);
 }
 
 /* Cluster. */
@@ -29,7 +29,15 @@
   justify-content: flex-start;
   align-items: center;
 }
-  
+
+/* Container */
+.container {
+  box-sizing: content-box;
+  margin-inline: auto;
+  inline-size: 100%;
+  max-inline-size: var(--max-width);
+}
+
 /* Cover. */
 .cover {
   display: flex;
@@ -209,6 +217,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: var(--align-items, flex-start);
 }
 
 .stack > * {

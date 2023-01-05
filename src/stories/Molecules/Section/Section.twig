@@ -25,8 +25,8 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="section__content">
-    <div class="section__header center">
+  <div class="section__content container">
+    <div class="section__header center stack" style="--space: var(--s0):">
       {% if brow %}
         {{ brow }}
       {% endif %}
@@ -37,7 +37,7 @@
         {{ text }}
       {% endif %}
     </div>
-    <div class="section__main center">
+    <div class="section__main">
       {{ main }}
     </div>
     {% if button %}

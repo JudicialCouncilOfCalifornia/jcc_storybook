@@ -34,6 +34,8 @@
 
 .card--bordered-center .card__main {
   text-align: center;
+  /* Because this is also wrapped in '.center' we can cause intrinsic center. */
+  --align-items: center;
 }
 
 /* Media Left */
@@ -98,6 +100,7 @@
 .card.card--striped {
   --color: var(--color-white);
   --heading-color: var(--color-white);
+  --align-items: center;
 
   gap: var(--s0);
   color: var(--color);
