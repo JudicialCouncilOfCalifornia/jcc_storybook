@@ -2,6 +2,7 @@ name: JCC Storybook
 type: theme
 description: 'Drupal theme with Storybook, using algorithmic layout.'
 core_version_requirement: ^8 || ^9 || ^10
+base theme: false
 
 libraries:
   - jcc_storybook/global
