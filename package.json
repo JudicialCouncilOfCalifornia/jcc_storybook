@@ -8,12 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "storybook-build": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "storybook-lib": "npx babel src/stories -d lib --ignore 'src/stories/**/*.stories.js' --presets=@babel/preset-env,babel-preset-minify --plugins=babel-plugin-drupal-behavior && export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./lib/webpack.config.js",
     "sprite": "svg-sprite -s --symbol-dest src/assets/ --symbol-sprite icons.svg src/assets/icons/*.svg",
     "plop": "plop"
   },
   "author": "Calvin Tyndall",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
     "@storybook/addon-a11y": "^6.5.14",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.5.13",
@@ -22,11 +24,18 @@
     "@storybook/manager-webpack4": "^6.5.13",
     "@storybook/testing-library": "0.0.13",
     "babel-loader": "^8.3.0",
+    "babel-plugin-drupal-behaviors": "^0.1.1",
+    "babel-preset-minify": "^0.5.2",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "drupal-attribute": "^1.0.2",
+    "mini-css-extract-plugin": "^1.6.2",
     "plop": "^3.1.1",
     "svg-sprite": "^2.0.2",
     "twig": "^1.15.4",
     "twig-drupal-filters": "^3.2.0",
-    "twig-loader": "^0.5.5"
+    "twig-loader": "^0.5.5",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-fix-style-only-entries": "^0.6.1"
   }
 }

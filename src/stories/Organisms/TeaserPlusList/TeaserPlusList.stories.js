@@ -1,7 +1,6 @@
 import TeaserPlusList from './TeaserPlusList.twig';
 import drupalAttribute from 'drupal-attribute'
 import './TeaserPlusList.css';
-import './TeaserPlusList.js';
 
 import Brow from '../../Atoms/Brow/Brow.twig';
 

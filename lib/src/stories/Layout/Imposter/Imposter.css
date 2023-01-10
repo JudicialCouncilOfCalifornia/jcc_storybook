@@ -1,0 +1,14 @@
+.imposter-demo {
+  --color: #fff;
+  --heading-color: var(--color);
+  background: #000;
+  margin-top: var(--s1);
+  position: relative;
+}
+
+.imposter-demo__inner {
+  --color: #000;
+  --heading-color: var(--color);
+  background: #999;
+}
+

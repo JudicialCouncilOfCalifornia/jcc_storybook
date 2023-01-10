@@ -1,7 +1,6 @@
 import drupalAttribute from 'drupal-attribute'
 import DynamicPage from './DynamicPage.twig';
 import './DynamicPage.css';
-import './DynamicPage.js';
 
 import Brow from '../../Atoms/Brow/Brow.twig';
 import Button from '../../Atoms/Button/Button.twig';

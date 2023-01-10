@@ -3,7 +3,6 @@ import drupalAttribute from 'drupal-attribute'
 import Icon from './Icon.twig';
 import readme from './readme.md';
 import './Icon.css';
-import './Icon.js';
 
 export default {
   title: 'Atoms/Icon',

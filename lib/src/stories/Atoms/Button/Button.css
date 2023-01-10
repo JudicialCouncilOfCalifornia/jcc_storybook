@@ -1,0 +1,54 @@
+button,
+a.button {
+  --button-border: var(--button-fg);
+  display: inline-block;
+  width: auto;
+  background-color: var(--button-bg);
+  padding: var(--s-1) var(--s2);
+  border: 2px solid var(--button-border);
+  border-radius: var(--s-5);
+  color: var(--button-fg);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: var(--s1);
+  line-height: var(--s1);
+  font-weight: 300;
+  letter-spacing: .01rem;
+}
+
+button::after,
+a.button::after {
+  margin-left: var(--s-5);
+  content: "\2192";
+  align-self: flex-end;
+}
+
+/* Button Variants */
+/* Size */
+button.button--small,
+a.button.button--small {
+  font-size: var(--s0);
+  padding: var(--s-1) var(--s2);
+}
+
+button.button--large,
+a.button.button--large {
+  font-size: var(--s2);
+  padding: var(--s0) var(--s2);
+}
+
+/* Type */
+button.button--secondary,
+a.button.button--secondary {
+  --button-bg: var(--color-accent-warm-dark-x);
+  --button-fg: var(--color-white);
+  --button-border: var(--color-white);
+}
+
+button.button--text,
+a.button.button--text {
+  padding-left: 0;
+  border: 0;
+  background: transparent;
+}
+
