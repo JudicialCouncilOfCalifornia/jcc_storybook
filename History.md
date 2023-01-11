@@ -1,4 +1,9 @@
 
+0.18.0 / 2023-01-11
+===================
+
+  * feat: Refactor hero so the component is responsible for it's sub components. Update plop templates.
+
 0.17.0 / 2023-01-10
 ===================
 
