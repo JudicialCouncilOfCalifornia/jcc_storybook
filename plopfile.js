@@ -33,6 +33,12 @@ module.exports = plop => {
           data: { folder: "stories" }
         },
         {
+          type: "add",
+          path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.data.js",
+          templateFile: "plop-templates/Component/template.data.js",
+          data: { folder: "stories" }
+        },
+        {
           type: "modify",
           path: "src/stories/{{pascalCase type}}/{{pascalCase name}}/{{pascalCase name}}.stories.js",
           pattern: "Other",

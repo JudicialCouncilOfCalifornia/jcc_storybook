@@ -9,6 +9,10 @@ html {
   letter-spacing: .01rem;
 }
 
+body {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5 {
   margin: 0;
   font-family: var(--font-primary);

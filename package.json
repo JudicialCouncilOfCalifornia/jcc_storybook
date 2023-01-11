@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "storybook-build": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
-    "storybook-lib": "npx babel src/stories -d lib/stories --ignore 'src/stories/**/*.stories.js' --presets=@babel/preset-env,babel-preset-minify --plugins=babel-plugin-drupal-behaviors && export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./lib/webpack.config.js",
+    "storybook-lib": "rm -rf lib/stories && npx babel src/stories -d lib/stories --ignore 'src/stories/**/*.stories.js,src/stories/**/*.data.js' --presets=@babel/preset-env,babel-preset-minify --plugins=babel-plugin-drupal-behaviors && export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./lib/webpack.config.js",
     "sprite": "svg-sprite -s --symbol-dest src/assets/ --symbol-sprite icons.svg src/assets/icons/*.svg",
     "plop": "plop"
   },
@@ -33,7 +33,7 @@
     "svg-sprite": "^2.0.2",
     "twig": "^1.15.4",
     "twig-drupal-filters": "^3.2.0",
-    "twig-loader": "^0.5.5",
+    "twigjs-loader": "^1.0.3",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.10.0",
     "webpack-fix-style-only-entries": "^0.6.1"

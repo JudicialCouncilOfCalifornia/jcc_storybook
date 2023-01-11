@@ -1,11 +1,7 @@
-import drupalAttribute from 'drupal-attribute'
-import Hero from './Hero.twig';
 import readme from './readme.md';
+import data from './Hero.data';
+import Hero from './Hero.twig';
 import './Hero.css';
-
-import Button from '../../Atoms/Button/Button.twig';
-import Card from '../../Molecules/Card/Card.twig';
-import { Primary as ButtonPrimary } from '../../Atoms/Button/Button.stories';
 
 export default {
   title: 'Molecules/Hero',
@@ -14,6 +10,7 @@ export default {
     notes: readme,
   },
   argTypes: {
+    attributes: {table: {disable: true}},
     variant: {
       description: "Hero variant.",
       table: {defaultValue: {summary: 'banner'}},
@@ -26,6 +23,18 @@ export default {
       control: { type: 'radio' },
       options: ['left', 'center', 'right'],
     },
+    accent_color: {
+      description: "The accent color applied to the card. (variants: content-bg)",
+      table: { defaultValue: { summary: false }},
+      control: { type: 'select' },
+      options: [ false, 'accent-warm-dark-xx', 'primary-dark-x' ]
+    },
+    content_bg_color: {
+      description: "The color applied to the content card background. (variants: content-bg)",
+      table: { defaultValue: { summary: 'white' }},
+      control: { type: 'select' },
+      options: [ false, 'white', 'accent-warm-dark-xx' ]
+    },
     bg_tint: {
       description: "The tint applied to darken the background.",
       table: { defaultValue: { summary: 'accent-warm-dark-xx' }},
@@ -36,8 +45,6 @@ export default {
       description: "The background image for the Hero. `false` to use the tint color as a solid background.",
       table: { defaultValue: { summary: false }},
     },
-    main: {table: {disable: true}},
-    attributes: {table: {disable: true}},
   },
 };
 
@@ -47,41 +54,7 @@ const Template = ({ ...args }) => {
 };
 
 export const Banner = Template.bind({});
-Banner.args = {
-  variant: 'banner',
-  content_justify: 'left',
-  bg_tint: 'accent-warm-dark-xx',
-  background_image_url: 'https://source.unsplash.com/random/900×700/?courthouse',
-  main: Card({
-    variant: "default",
-    first_component: true,
-    media: false,
-    heading: "About the 2nd Distrcit",
-    text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p>",
-    button: Button({ ...ButtonPrimary.args }),
-    attributes: new drupalAttribute(),
-  }),
-  attributes: new drupalAttribute()
-};
+Banner.args = data.banner;
 
 export const BannerContentBGWhite = Template.bind({});
-BannerContentBGWhite.args = {
-  variant: 'content-bg',
-  content_justify: 'left',
-  accent_color: 'primary-dark-x',
-  content_bg_color: 'white',
-  bg_tint: false,
-  background_image_url: 'https://source.unsplash.com/random/900×700/?books',
-  first_component: true,
-  main: Card({
-    first_component: true,
-    media: false,
-    heading: "Language Access",
-    subheading: false,
-    text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p>",
-    button: false,
-    variant: "default",
-    attributes: new drupalAttribute(),
-  }),
-  attributes: new drupalAttribute()
-};
+BannerContentBGWhite.args = data.content_bg;

@@ -3,10 +3,19 @@
 
 Description of the {{titleCase name}} in markdown.
 
-### Inherited CSS Variables:
-
+<details>
+  <summary>Inherited CSS Variables:</summary>
   - `--name`: description...
+</details>
 
-### Modifier Variables: 
-
-  - **name**: description...
+<details>
+  <summary>Twig Variables:</summary>
+  ```
+  variant: "default",
+  ...,
+  sub_component_data: {
+    variant: "default",
+    ...
+  }
+  ```
+</details>

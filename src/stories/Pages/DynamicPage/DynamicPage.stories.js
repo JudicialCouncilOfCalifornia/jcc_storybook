@@ -8,7 +8,7 @@ import Card from '../../Molecules/Card/Card.twig';
 import Cards from '../../Organisms/Cards/Cards.twig';
 import Hero from '../../Molecules/Hero/Hero.twig';
 import Icon from '../../Atoms/Icon/Icon.twig';
-import Section from '../../Molecules/Section/Section.twig';
+import Section from '../../Organisms/Section/Section.twig';
 import TPL from '../../Organisms/TeaserPlusList/TeaserPlusList.twig';
 
 export default {

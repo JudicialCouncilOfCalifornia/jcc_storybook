@@ -10,7 +10,7 @@ import Button from '../../Atoms/Button/Button.twig';
 import { Primary as ButtonPrimary } from '../../Atoms/Button/Button.stories';
 
 export default {
-  title: 'Molecules/Section',
+  title: 'Organisms/Section',
   component: Section,
   parameters: {
     notes: readme,
