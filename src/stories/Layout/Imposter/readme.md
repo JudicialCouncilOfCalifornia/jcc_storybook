@@ -7,8 +7,9 @@ You can use fixed positioning on the imposter to create a full screen modal.
 
 A note about flow: If using position fixed, its best to place your imposter element at the end of the document so it appears above other elements without requiring z-index.
 
-### Inherited CSS Variables:
-
+<details>
+  <summary>Inherited CSS Variables:</summary>
   - `--positioning`:
     - **absolute**: (default): positions the imposter relative to its containing element.
     - **fixed**: positions the imposter relative to the page.
+</details>

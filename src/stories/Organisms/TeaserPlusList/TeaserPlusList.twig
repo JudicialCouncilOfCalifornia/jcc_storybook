@@ -8,7 +8,9 @@
 
 <div {{ attributes.addClass(classes) }}>
   <div class="teaser-list__teaser stack box">
-    {{ teaser.brow }}
+    {% if teaser.brow_data %}
+      {% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
+    {% endif %}
     <div class="teaser-list__teaser-heading">
       <h3>
         {% if teaser.href %}
@@ -24,7 +26,7 @@
   </div>
   <div class="teaser-list__list box">
     <ul class="stack">
-      {% for item in listItems %}
+      {% for item in list_items %}
         <li>
           <div class="teaser-list__link">
             <h4>{{ link(item.link.label, item.link.href)}}</h4>

@@ -6,6 +6,7 @@ export default {
   title: 'Layout/Center',
   component: Center,
   parameters: {
+    layout: 'centered',
     notes: readme,
   }
 };

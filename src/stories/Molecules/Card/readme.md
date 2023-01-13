@@ -4,11 +4,29 @@
 Card components consist of a few sub components that can be displayed in multiple layouts.
 
 
-### Inherited CSS Variables:
-
-  - `--color`
+<details>
+  <summary>Inherited CSS Variables:</summary>  - `--color`
   - `--heading-color`
   - `--button-border`
   - `--button-bg`
   - `--button-fg`
+</details>
 
+<details>
+  <summary>Twig Variables:</summary>
+  ```
+  variant: "default",
+  media: '...',
+  icon_data: {
+    icon: "speaker",
+    color: false,
+  },
+  heading: "Heading For A Card",
+  text: "<p>...</p>",
+  button: {
+    label: "Button",
+    href: "#",
+    variant: "primary",
+  },
+  ```
+</details>

@@ -1,13 +1,7 @@
-import Section from './Section.twig';
-import drupalAttribute from 'drupal-attribute'
 import readme from './readme.md';
+import data from './Section.data';
+import Section from './Section.twig';
 import './Section.css';
-
-import Brow from '../../Atoms/Brow/Brow.twig';
-import { Heading as BrowHeading } from '../../Atoms/Brow/Brow.stories';
-
-import Button from '../../Atoms/Button/Button.twig';
-import { Primary as ButtonPrimary } from '../../Atoms/Button/Button.stories';
 
 export default {
   title: 'Organisms/Section',
@@ -26,30 +20,32 @@ export default {
       description: "If true, sets the section heading to H1",
       table: {defaultValue: {summary: false}},
     },
-    brow: {
-      table: {
-        disable: true,
-      }
+    brow_data: { 
+      description: "Populates the Brow template.",
+      table: {defaultValue: {summary: false}},
     },
-    heading: {
-      table: {
-        disable: true,
-      }
+    heading: { 
+      description: "Populates the Brow template.",
+      table: {defaultValue: {summary: false}},
     },
-    text: {
-      table: {
-        disable: true,
-      }
+    text: { 
+      description: "Populates the Brow template.",
+      table: {defaultValue: {summary: false}},
     },
-    main: {
-      table: {
-        disable: true,
-      }
+    sub_component_template: { 
+      description: "Sets the template to use for the sub component.",
+      table: {defaultValue: {summary: false}},
+      control: { type: 'select' },
+      options: [false, 'Card', 'TeaserPlusList'],
     },
-    button: {
-      table: {
-        disable: true,
-      }
+    sub_component_data: { 
+      description: "Populates the template specified in sub_component_template.",
+      table: {defaultValue: {summary: false}},
+      control: { type: 'object' },
+    },
+    button_data: { 
+      description: "Populates the Button template.",
+      table: {defaultValue: {summary: false}},
     },
     attributes: {
       table: {
@@ -64,61 +60,16 @@ const Template = ({ ...args }) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  variant: 'default',
-  first_component: false,
-  brow: Brow({ ...BrowHeading.args }),
-  heading: 'Heading Example',
-  text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
-  main: "<div class='box' style='background: #ccc; width: 100%;'>Other components go here.</div>",
-  button: Button({ ...ButtonPrimary.args }),
-  attributes: new drupalAttribute(),
-};
+Default.args = data.default;
 
 export const PrimaryDarkXX = Template.bind({});
-PrimaryDarkXX.args = {
-  variant: 'primary-dark-xx',
-  first_component: false,
-  brow: Brow({ ...BrowHeading.args }),
-  heading: 'Heading Example',
-  text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
-  main: "<div class='box' style='background: #ccc; width: 100%;'>Other components go here.</div>",
-  button: Button({ ...ButtonPrimary.args }),
-  attributes: new drupalAttribute(),
-};
+PrimaryDarkXX.args = data.primary_dark_xx;
 
 export const PrimaryDarkXXStripe = Template.bind({});
-PrimaryDarkXXStripe.args = {
-  variant: 'primary-dark-xx-stripe',
-  first_component: false,
-  brow: Brow({ ...BrowHeading.args }),
-  heading: 'Heading Example',
-  text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
-  main: "<div class='box' style='background: #ccc; width: 100%;'>Other components go here.</div>",
-  button: Button({ ...ButtonPrimary.args }),
-  attributes: new drupalAttribute(),
-};
+PrimaryDarkXXStripe.args = data.primary_dark_xx_stripe;
 
 export const WarmDarkX = Template.bind({});
-WarmDarkX.args = {
-  variant: 'warm-dark-x',
-  first_component: false,
-  brow: Brow({ ...BrowHeading.args }),
-  heading: 'Heading Example',
-  text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
-  main: "<div class='box' style='background: #ccc; width: 100%;'>Other components go here.</div>",
-  button: Button({ ...ButtonPrimary.args }),
-  attributes: new drupalAttribute(),
-};
+WarmDarkX.args = data.warm_dark_x;
 
 export const White = Template.bind({});
-White.args = {
-  variant: 'white',
-  first_component: false,
-  brow: Brow({ ...BrowHeading.args }),
-  heading: 'Heading Example',
-  text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
-  main: "<div class='box' style='background: #ccc; width: 100%;'>Other components go here.</div>",
-  button: Button({ ...ButtonPrimary.args }),
-  attributes: new drupalAttribute(),
-};
+White.args = data.white;

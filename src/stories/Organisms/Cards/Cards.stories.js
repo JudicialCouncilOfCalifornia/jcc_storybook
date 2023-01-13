@@ -1,16 +1,7 @@
-import drupalAttribute from 'drupal-attribute'
-
-import Cards from './Cards.twig';
 import readme from './readme.md';
+import data from './Cards.data';
+import Cards from './Cards.twig';
 import './Cards.css';
-
-import Card from '../../Molecules/Card/Card.twig';
-import {
-  Default as CardDefault,
-  MediaLeft as CardMediaLeft,
-  MediaRight as CardMediaRight,
-  Striped as CardStriped,
-} from '../../Molecules/Card/Card.stories';
 
 export default {
   title: 'Organisms/Cards',
@@ -19,6 +10,7 @@ export default {
     notes: readme,
   },
   argTypes: {
+    attributes: {table: {disable: true}},
     variant: {
       description: "COMING SOON: See `Section` component for variant values.",
       table: {defaultValue: {summary: "default"}},
@@ -31,20 +23,14 @@ export default {
       description: "We can set the `Card` variant at the `Cards` wrapper level for consistency within a group of cards.",
       table: {defaultValue: {summary: "default"}},
       control: { type: 'select' },
-      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay'],
+      options: ['default', 'bordered-center', 'media-left', 'media-right', 'striped', 'overlay'],
     },  
     items: {
       table: {
         disable: true,
       }
     },
-    attributes: {
-      table: {
-        disable: true,
-      }
-    }
   }
-
 };
 
 const Template = ({ ...args }) => {
@@ -52,73 +38,13 @@ const Template = ({ ...args }) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  variant: "default",
-  card_width: "30ch",
-  card_variant: "default",
-  items: [
-    Card({ ...CardDefault.args }),
-    Card({ ...CardDefault.args }),
-    Card({ ...CardDefault.args }),
-    Card({ ...CardDefault.args }),
-  ],
-  attributes: new drupalAttribute(),
-};
+Default.args = data.default;
 
 export const MediaLeft = Template.bind({});
-MediaLeft.args = {
-  variant: "",
-  card_width: "",
-  card_variant: "",
-  items: [
-    Card({ ...CardMediaLeft.args }),
-  ],
-  attributes: new drupalAttribute(),
-};
+MediaLeft.args = data.media_left;
 
 export const MediaRight = Template.bind({});
-MediaRight.args = {
-  variant: "",
-  card_width: "",
-  card_variant: "",
-  items: [
-    Card({ ...CardMediaRight.args }),
-  ],
-  attributes: new drupalAttribute(),
-};
+MediaRight.args = data.media_right;
 
 export const Striped = Template.bind({});
-Striped.args = {
-  variant: "",
-  card_width: "45ch",
-  card_variant: "",
-  items: [
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-  ],
-  attributes: new drupalAttribute(),
-};
-
-export const Striped4 = Template.bind({});
-Striped4.args = {
-  variant: "",
-  card_width: "45ch",
-  card_variant: "",
-  items: [
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-    Card({ ...CardStriped.args }),
-  ],
-  attributes: new drupalAttribute(),
-};
+Striped.args = data.striped;

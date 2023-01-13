@@ -6,6 +6,7 @@ export default {
   title: 'Layout/Box',
   component: Box,
   parameters: {
+    layout: 'centered',
     notes: readme,
   }
 };

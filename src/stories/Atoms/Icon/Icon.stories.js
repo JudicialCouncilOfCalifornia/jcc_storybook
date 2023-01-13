@@ -1,12 +1,15 @@
-import drupalAttribute from 'drupal-attribute'
-
-import Icon from './Icon.twig';
 import readme from './readme.md';
+import data from './Icon.data';
+import Icon from './Icon.twig';
 import './Icon.css';
 
 export default {
   title: 'Atoms/Icon',
   component: Icon,
+  parameters: {
+    layout: 'centered',
+    notes: readme,
+  },
   argTypes: {
     icon: {
       description: 'Available icons are in an svg "sprite" file built from the icons in `assets/icons`. i.e. `documents`, `speaker`, `toolkit`',
@@ -22,9 +25,6 @@ export default {
     },
     attributes: { table: { disable: true }},
   },
-  parameters: {
-    notes: readme,
-  }
 };
 
 // Create Template for variant templates to bind to.
@@ -34,11 +34,4 @@ const Template = ({ ...args }) => {
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
-Default.args = {
-  // Create any variables to pass to the Twig template.
-  icon: "speaker",
-  // A variant type that contols the layout and style of the component.
-  color: false,
-  // drupalAttribute allows us to mock drupal attributes in storybook.
-  attributes: new drupalAttribute(),
-};
+Default.args = data.default;

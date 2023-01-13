@@ -10,8 +10,8 @@ You may want to combine `.center` with `.stack` in some cases.
 
 In the Center example, `.stack` is responsible for the margins between the sub elements, `<h1>, <p>, <a>`.
 
-### Inherited CSS Variables:
-
+<details>
+  <summary>Inherited CSS Variables:</summary>
   - `--measure`: characters per line. Set at the root, and although it could be overridden, it should be avoided to maintain consistency and readability.
   - `--align-items`: for "intrinsic" centering of sub elements inside the "Center" element. It's best to set this in the CSS for the element that requires it.  
   ```
@@ -26,5 +26,4 @@ In the Center example, `.stack` is responsible for the margins between the sub e
       ...
   }
   ```
-
-
+</details>

@@ -4,7 +4,7 @@
 {# Usually the card heading witll be (h3). #}
 {% set h = first_component ? 'h1' : 'h2' %}
 {% set tag = variant == 'striped' ? 'a' : 'div' %}
-{% set tag_href = tag == 'a' ? attributes.setAttribute('href', button.href) : '' %}
+{% set tag_href = tag == 'a' ? attributes.setAttribute('href', button_data.href) : '' %}
 
 {% set type = variant ? 'card--' ~ variant : 'card--default' %}
 
@@ -18,9 +18,13 @@
 
 <{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
   <div class="switcher">
-    {% if media %}
+    {% if icon_data and variant == 'striped' %}
+      {% include "@atoms/Icon/Icon.twig" with icon_data %}
+    {% elseif media %}
       <div class="card__media">
-        {{ media }}
+        <div class="frame">
+          {{ media }}
+        </div>
       </div>
     {% endif %}
     <div class="card__main box stack center">
@@ -34,9 +38,9 @@
           {{ text }}
         </div>
       {% endif %}
-      {% if button.href and tag == 'div' %}
+      {% if button_data.href and tag == 'div' %}
         <div class="card__button">
-          {{ link(button.label, button.href, {class: ['button', 'button--' ~ button.variant, 'button--' ~ button.size ]}) }}
+          {% include "@atoms/Button/Button.twig" with button_data %}
         </div>
       {% endif %}
     </div>

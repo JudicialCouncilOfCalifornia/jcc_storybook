@@ -1,12 +1,17 @@
-import drupalAttribute from 'drupal-attribute'
-import Brow from './Brow.twig';
 import readme from './readme.md';
+import data from './Brow.data';
+import Brow from './Brow.twig';
 import './Brow.css';
 
 export default {
   title: 'Atoms/Brow',
   component: Brow,
+  parameters: {
+    layout: 'centered',
+    notes: readme,
+  },
   argTypes: {
+    attributes: { table: { disable: true }},
     variant: {
       description: "The component variant.",
       table: { defaultValue: { summary: 'default' }},
@@ -21,10 +26,6 @@ export default {
       description: "The second part of the Brow, usually colored by `--color` value. Appears after a `|`.",
       table: { defaultValue: { summary: false }},
     },
-    attributes: { table: { disable: true }}
-  },
-  parameters: {
-    notes: readme,
   },
 };
 
@@ -35,25 +36,10 @@ const Template = ({ ...args }) => {
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
-Default.args = {
-  variant: "default",
-  part_one: "Brow Example",
-  part_two: "",
-  attributes: new drupalAttribute(),
-};
+Default.args = data.default;
 
 export const DafaultWithDate = Template.bind({});
-DafaultWithDate.args = {
-  variant: "default",
-  part_one: "Brow Example",
-  part_two: "Jan 05, 2023",
-  attributes: new drupalAttribute(),
-};
+DafaultWithDate.args = data.default_with_date;
 
 export const Heading = Template.bind({});
-Heading.args = {
-  variant: "heading",
-  part_one: "Brow Example",
-  part_two: "",
-  attributes: new drupalAttribute(),
-};
+Heading.args = data.heading;

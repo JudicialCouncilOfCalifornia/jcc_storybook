@@ -7,6 +7,7 @@ export default {
   title: 'Layout/Imposter',
   component: Imposter,
   parameters: {
+    layout: "centered",
     notes: readme,
   },
   argTypes: {

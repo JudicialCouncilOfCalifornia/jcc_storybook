@@ -5,6 +5,10 @@ import Stack from './Stack.twig';
 export default {
   title: 'Layout/Stack',
   component: Stack,
+  parameters: {
+    layout: "centered",
+    notes: readme,
+  },
   argTypes: {
     space: {
       description: "The space between elements;",
@@ -18,9 +22,6 @@ export default {
     },
     attributes: { table: { disable: true }},
   },
-  parameters: {
-    notes: readme,
-  }
   
 };
 

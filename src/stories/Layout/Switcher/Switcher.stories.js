@@ -6,6 +6,10 @@ export default {
   title: 'Layout/Switcher',
   description: 'This is a description of this component.',
   component: Switcher,
+  parameters: {
+    layout: "padded",
+    notes: readme,
+  },
   argTypes: {
     measure: {
       description: "The width of the containing `.switcher` element that triggers the switch.",
@@ -24,9 +28,6 @@ export default {
       table: { defaultValue: { summary: "--s1" }},
     },
     attributes: { table: { disable: true }},
-  },
-  parameters: {
-    notes: readme,
   },
 };
 

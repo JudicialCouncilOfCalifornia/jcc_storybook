@@ -1,12 +1,15 @@
-import drupalAttribute from 'drupal-attribute'
-import Button from './Button.twig';
 import readme from './readme.md';
-
+import data from './Button.data';
+import Button from './Button.twig';
 import './Button.css';
 
 export default {
   title: 'Atoms/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+    notes: readme,
+  },
   argTypes: {
     variant: {
       description: "The button variant name.",
@@ -27,9 +30,6 @@ export default {
     href: { table: { disable: true }},
     attributes: { table: { disable: true }},
   },
-  parameters: {
-    notes: readme,
-  }
 };
 
 // Create Template for variant templates to bind to.
@@ -39,28 +39,10 @@ const Template = ({ ...args }) => {
 
 // Bind the Primary variant for this component.
 export const Primary = Template.bind({});
-Primary.args = {
-  variant: 'primary',
-  size: 'normal',
-  label: "Button",
-  href: "#",
-  attributes: new drupalAttribute(),
-};
+Primary.args = data.primary;
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: 'secondary',
-  size: 'normal',
-  label: "Button",
-  href: "#",
-  attributes: new drupalAttribute(),
-};
+Secondary.args = data.secondary;
 
 export const Text = Template.bind({});
-Text.args = {
-  variant: 'text',
-  size: 'normal',
-  label: "Button",
-  href: "#",
-  attributes: new drupalAttribute(),
-};
+Text.args = data.text;
