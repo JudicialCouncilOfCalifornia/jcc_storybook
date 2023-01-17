@@ -1,4 +1,9 @@
 
+0.20.0 / 2023-01-17
+===================
+
+  * feat: Added Scheme: Colors and updated some tooling for dynamic stories.
+
 0.19.0 / 2023-01-12
 ===================
 
