@@ -11,7 +11,7 @@ export default {
     },
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",
@@ -23,7 +23,7 @@ export default {
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Interested in becoming a court interpreter?",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",
@@ -35,7 +35,7 @@ export default {
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",
@@ -47,7 +47,7 @@ export default {
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",
@@ -59,7 +59,7 @@ export default {
     media: '<img src="https://source.unsplash.com/random/400×400/?books" />',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",
@@ -76,7 +76,7 @@ export default {
     },
     heading: "Heading For A Card",
     text: false,
-    button: {
+    button_data: {
       label: "Button",
       href: "#",
       variant: "primary",

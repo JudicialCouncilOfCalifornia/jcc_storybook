@@ -32,7 +32,7 @@
 /* Variants */
 .section--color-primary-dark-xx {
   --color: var(--color-white);
-  --accent-color: var(--color-accent-warm);
+  --accent-color: var(--color-accent-warm-light-x);
   --heading-color: var(--color-white);
   --button-fg: var(--accent-color);
 
@@ -41,7 +41,7 @@
 
 .section--color-primary-dark-xx-stripe {
   --color: var(--color-white);
-  --accent-color: var(--color-accent-warm);
+  --accent-color: var(--color-accent-warm-light-x);
   --heading-color: var(--color-white);
   --button-fg: var(--accent-color);
 
@@ -63,7 +63,7 @@
 .section--color-warm-dark-x {
   --color: var(--color-black);
   --accent-color: var(--color-accent-warm-dark-x);
-  background: var(--color-accent-warm-light-x);
+  background: var(--color-accent-warm-light-xx);
 }
 
 /* Drop padding when two sections of the same background are touching. */

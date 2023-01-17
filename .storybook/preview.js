@@ -24,7 +24,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Intro'], 'Colors', 'Fonts', 'Layout', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+      order: ['Documentation', ['Intro'], 'Layout', 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Pages'],
     },
   },
 }

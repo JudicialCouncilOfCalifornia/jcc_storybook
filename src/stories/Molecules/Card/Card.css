@@ -23,7 +23,7 @@
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid var(--color-accent-warm-light-x);
+  border: var(--s-2) solid var(--color-accent-warm-light-xx);
 }
 
 .card--bordered-center > div {

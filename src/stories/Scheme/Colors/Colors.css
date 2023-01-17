@@ -1,0 +1,20 @@
+.color__group + .color__group {
+  margin-top: var(--s5);
+}
+
+.color__group h2 {
+  text-transform: capitalize;
+}
+
+.color__swatch {
+  width: 100%;
+  height: 10ch;
+  border: 1px solid #000;
+}
+
+.color__label {
+  border: 1px solid #000;
+  border-top: 0;
+  background-color: #fff;
+  padding-inline: var(--s-4);
+}

@@ -38,7 +38,7 @@ export default {
         media_caption: '<div class="caption"><p>Video text. Could be video title and video desription. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p></div>',
         heading: "About Language Access",
         text: "<p>Describes Language Access at the courts as both physical and *human* translation resources available. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre</p><a href='#' class='button button--text'>See Language Resources</a><a href='#' class='button button--text'>Learn About Court Interpreters</a>",
-        button: false,
+        button_data: false,
         attributes: new drupalAttribute(),
       },
       attributes: new drupalAttribute(),
@@ -178,7 +178,7 @@ export default {
             media: '<img src="https://source.unsplash.com/random/900×700/?office" />',
             heading: "Interested in becoming a court interpreter?",
             text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-            button: {
+            button_data: {
               label: "Become a Court Interpreter",
               href: "#",
               variant: "primary",
@@ -193,7 +193,7 @@ export default {
             media: '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?building,old" /></div>',
             heading: "LEP Court Users",
             text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet.</p>",
-            button: {
+            button_data: {
               label: "Self-Help for LEP Court Users",
               href: "#",
               variant: "primary",

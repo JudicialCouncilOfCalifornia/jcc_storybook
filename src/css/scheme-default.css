@@ -43,9 +43,9 @@
   --color-accent-warm-dark-xxx: #775540;
   --color-accent-warm-dark-xx: #655A3DB2;
   --color-accent-warm-dark-x: #C05600;
-  --color-accent-warm-dark-5: #d57513;
-  --color-accent-warm: #FF8B2D;
-  --color-accent-warm-light-x: #FEF2E4;
+  --color-accent-warm: #d57513;
+  --color-accent-warm-light-x: #FF8B2D;
+  --color-accent-warm-light-xx: #FEF2E4;
   
   --color-primary-dark-xx: #1F303E;
   --color-primary-dark-x: #0B4778;
@@ -57,8 +57,8 @@
   --color-secondary-dark-xx: #204E34;
   --color-secondary-dark-x: #286846;
   --color-secondary: #34A37E;
-  --color-secondary-light-5: #3db37e;
-  --color-secondary-light-x: #4BD6A7;
+  --color-secondary-light-x: #3db37e;
+  --color-secondary-light-xx: #4BD6A7;
 
   /* Striped Backgrounds */
 
@@ -80,16 +80,16 @@
 
   --striped-secondary: repeating-linear-gradient(
     125deg,
-    var(--color-secondary-light-5),
-    var(--color-secondary-light-5) 1px,
+    var(--color-secondary-light-x),
+    var(--color-secondary-light-x) 1px,
     var(--color-secondary) 2px,
     var(--color-secondary) 8px
   );
 
   --striped-accent-warm-dark-x: repeating-linear-gradient(
     125deg,
-    var(--color-accent-warm-dark-5),
-    var(--color-accent-warm-dark-5) 1px,
+    var(--color-accent-warm),
+    var(--color-accent-warm) 1px,
     var(--color-accent-warm-dark-x) 1px,
     var(--color-accent-warm-dark-x) 8px
   );
