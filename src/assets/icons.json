@@ -1,10 +1,16 @@
 [
+  "certificate",
+  "chat",
   "documents",
+  "error",
   "exam",
   "heart-money",
-  "resources",
-  "settings",
-  "speaker",
+  "info-gear",
+  "megaphone",
+  "notes",
+  "search-people",
+  "search",
+  "sliders",
   "toolkit",
   "translation"
 ]
