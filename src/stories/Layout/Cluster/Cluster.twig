@@ -1,0 +1,29 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+<div class="cluster-demo">
+  <h2>Single Cluster</h2>
+  <div class="box">
+    <div class="cluster">
+      {% for i in range(1, num_items) %}
+        <div style="background: #000; text-align: center; color: #000; font-weight: bold;">{{ random(['xxx', 'xxxxx', 'xxxxxxxx', 'xxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx']) }}</div>
+      {% endfor %}
+    </div>
+  </div>
+  <h2>Nested Clusters</h2>
+  <p>Header with Logo and Nav example.</p>
+  <ul>
+    <li>The outer cluster contains the Icon and the Nav. The whole nav will wrap below the icon when necessary. This cluster has `justify-content: space between` to move the Nav to the right. And `align-content: center:` to vertically align everything to the center.</li>
+    <li>The inner cluster contains the nav items. The nav items will wrap themselves when necessary.</p>
+  </ul>
+  <div class="box">
+    <div class="cluster" style="justify-content: space-between; align-items: center;">
+      <div class="cluster-demo__logo"></div>
+      <div class="cluster">
+        {% for i in range(1, num_items) %}
+          <div style="background: #000; text-align: center; color: #000; font-weight: bold;">{{ random(['xxx', 'xxxxx', 'xxxxxxxx', 'xxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxx']) }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
