@@ -1,0 +1,9 @@
+.cover-demo > * {
+  --heading-color: var(--color-white);
+  --color: var(--color-white);
+  background: #000;
+}
+
+.cover-demo .principal .center {
+  align-items: center;
+}
