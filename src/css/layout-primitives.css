@@ -82,14 +82,13 @@
   
 /* Grid. */
 .grid {
-  --min-width: 20ch;
   display: grid;
-  grid-gap: var(--gap, 1rem);
+  grid-gap: var(--gap, var(--s0));
 }
 
-@supports (width: min(var(--min-width), 100%)) {
+@supports (width: min(var(--grid-min-width, 20ch), 100%)) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-width, 20ch), 100%), 1fr));
   }
 }
 
