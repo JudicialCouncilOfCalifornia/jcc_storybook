@@ -1,0 +1,19 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+{% set scroll = scroll ? '' : 'no-bar' %}
+
+{% set classes = [
+  'reel',
+  'reel-demo',
+  scroll,
+] %}
+
+<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+  {% for i in range(1, num_items) %}
+    <div class="box">{{ i }}</div>
+  {% endfor %}
+</div>
+{% if hint %}
+  <div class="reel-hint"><div>&rarr;</div><div>&larr;</div></div>
+{% endif %}

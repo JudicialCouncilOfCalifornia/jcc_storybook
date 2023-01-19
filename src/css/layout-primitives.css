@@ -124,11 +124,6 @@
 
 /* Reel. */
 .reel {
-  --space: 1rem;
-  --color-light: var(--box-color-light);
-  --color-dark: var(--box-color-dark);
-  --reel-height: auto;
-  --item-width: 25ch;
   display: flex;
   block-size: auto;
   overflow-x: auto;
@@ -137,11 +132,11 @@
   /* Affordance */
   background:
     /* Shadow covers */
-    linear-gradient(90deg, white 20%, rgba(255,255,255,0)),
-    linear-gradient(90deg, rgba(255,255,255,0), white 80%) 0 100%,
+    linear-gradient(90deg, white 50%, rgba(255,255,255,0)),
+    linear-gradient(90deg, rgba(255,255,255,0), white 50%) 0 100%,
     /* Shadows */
-    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.5), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
   background-repeat: no-repeat;
   background-color: white;
   background-position: left, right;
@@ -173,11 +168,19 @@
 }
 
 .reel > * + * {
-  margin-inline-start: var(--space, 1rem);
+  margin-inline-start: var(--gap, 1rem);
 }
 
 .reel.overflowing {
-  padding-bottom: var(--space);
+  padding-block-end: var(--s-3);
+}
+
+.reel + .reel-hint {
+  display: none;
+}
+
+.reel.overflowing + .reel-hint {
+  display: block;
 }
 
 /* ↓ Hide scrollbar with `no-bar` class */
