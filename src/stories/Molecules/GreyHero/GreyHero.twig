@@ -1,0 +1,55 @@
+{% set variant_type = variant ? 'grey-hero--' ~ variant : 'grey-hero--simple-layout' %}
+
+{% set variant_justify = content_justify
+  ? 'hero--justify-' ~ content_justify
+  : 'hero--justify-left' %}
+
+{# Create class array. #}
+{% set classes = [
+  'grey-hero',
+  variant_type,
+  variant_justify
+] %}
+
+{% set card %}
+  {% include "@molecules/Card/Card.twig" with content_data %}
+{% endset %}
+
+{% set brow %}
+  {% include "@atoms/Brow/Brow.twig" with content_data.brow %}
+{% endset %}
+
+<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+  <div class="grey-hero">
+    {% if variant == "simple_layout" %}
+      <div class="grey-hero__content container">
+        <div class="grey-hero__content-inner">
+          {{ card }}
+        </div>
+      </div>
+    {% else %}
+      <div class="grey-hero-inner">
+        <div class="grey-hero-text">
+          <div class="grey-hero-heading container">
+            <div class="grey-hero__content-inner box">
+              <div class="grey-hero_brow">
+                {{ brow }}
+              </div>
+              <h1>{{ content_data.heading }}</h1>
+            </div>
+          </div>
+          <div class="grey-hero__content container">
+            <div class="grey-hero__content-inner box">
+              <div class="grey-hero-content box">
+                {{ content_data.text }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grey-hero-image">
+          <img src="{{ hero_img_url }}" alt="" />
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
