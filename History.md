@@ -1,4 +1,17 @@
 
+0.21.0 / 2023-01-19
+===================
+
+  * chore: Export Reel lib.
+  * feat: Add Container layout.
+  * feat: Add Reel layout.
+  * feat: Add Frame layout.
+  * feat: Add Grid layout.
+  * feat: Add Cover layout.
+  * feat: Add Sidebar layout.
+  * feat: add Cluster layout primitive.
+  * chore: Update Icons.
+
 0.20.0 / 2023-01-17
 ===================
 
