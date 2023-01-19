@@ -22,7 +22,7 @@ export default {
     },
     attributes: { table: { disable: true }},
   },
-  
+
 };
 
 const Template = ({ ...args }) => {

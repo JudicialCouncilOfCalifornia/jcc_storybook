@@ -1,0 +1,17 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+{% set styles = [] %}
+{% set styles = frame_h ? styles|merge(['--frame-h: ' ~ frame_h ~ ';']) : styles %}
+{% set styles = frame_v ? styles|merge(['--frame-v: ' ~ frame_v ~ ';']) : styles %}
+
+{% set classes = [
+  'frame',
+  'frame-demo',
+] %}
+
+<div{{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+{% if frame_item %}
+  {{ frame_item }}
+{% endif %}
+</div>

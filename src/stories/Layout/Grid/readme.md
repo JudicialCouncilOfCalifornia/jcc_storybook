@@ -1,4 +1,3 @@
-<!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
 # Grid
 
 The Grid will give you uniform columns and rows of equal height based on the space required by the grid item content.

@@ -1,0 +1,3 @@
+.frame-demo {
+  max-inline-size: var(--measure);
+}
