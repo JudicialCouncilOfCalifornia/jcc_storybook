@@ -1,0 +1,39 @@
+{#
+  Primitives used:
+    - Container: To limit max content width.
+    - Sidebar: To handle consistend positioning of the top and bottom content with the image in the top sidebar.
+    - Box: For general padding around content to keep it from the edges.
+    - Frame: To ensure aspect ratio of the image.
+
+  There are no additional custom layout elements used. Everything is from the existing layout system with minor tweaks in the CSS file.
+ #}
+
+{% set variant_hide = media_hide_portrait ? 'hangover--media-hide' : '' %}
+
+{% set classes = [
+  'hangover',
+  variant_hide,
+] %}
+
+<div {{ attributes.addClass(classes).setAttribute('style', variant_styles|join) }}>
+  <div class="hangover__top">
+    <div class="with-sidebar container">
+      <div class="hangover__top-media box">
+        <div class="frame">
+          {{ media }}
+        </div>
+      </div>
+      <div class="hangover__top-content box">
+        <h1>{{ heading }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="hangover__bottom">
+    <div class="with-sidebar container">
+      <div></div>
+      <div class="hangover__bottom-content box">
+        {{ bottom_content }}
+      </div>
+    </div>
+  </div>
+</div>

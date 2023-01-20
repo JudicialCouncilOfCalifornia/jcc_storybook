@@ -244,11 +244,11 @@
 }
 
 .switcher.switcher--3 > :nth-last-child(n + 4),
-.switcher.swithcer--3 > :nth-last-child(n + 4) ~ * {
+.switcher.switcher--3 > :nth-last-child(n + 4) ~ * {
   flex-basis: 100%;
 }
 
 .switcher.switcher--4 > :nth-last-child(n + 5),
-.switcher.swithcer--4 > :nth-last-child(n + 5) ~ * {
+.switcher.switcher--4 > :nth-last-child(n + 5) ~ * {
   flex-basis: 100%;
 }

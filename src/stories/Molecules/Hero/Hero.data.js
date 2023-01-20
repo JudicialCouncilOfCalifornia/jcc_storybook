@@ -14,7 +14,7 @@ export default {
       media: false,
       heading: "Hero Heading",
       text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p>",
-      button: { 
+      button_data: {
         label: "Text Button",
         href: "#",
         variant: "text",
@@ -37,7 +37,7 @@ export default {
       media: false,
       heading: "Hero Heading",
       text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p>",
-      button: { 
+      button_data: {
         label: "Text Button",
         href: "#",
         variant: "text",
