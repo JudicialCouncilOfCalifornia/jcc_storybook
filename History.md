@@ -1,4 +1,9 @@
 
+0.22.0 / 2023-01-23
+===================
+
+  * chore: Add github workflow to deploy to github pages.
+
 0.21.1 / 2023-01-23
 ===================
 
