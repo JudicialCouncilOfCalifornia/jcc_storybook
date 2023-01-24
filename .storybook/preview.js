@@ -1,3 +1,5 @@
+import prettier from 'prettier/standalone';
+import prettierBabel from 'prettier/parser-babel';
 import { Doc } from './docs.mdx';
 import Twig from 'twig';
 import twigDrupal from 'twig-drupal-filters';
@@ -14,6 +16,11 @@ export const parameters = {
     },
   },
   docs: {
+    transformSource: input =>
+      prettier.format(input, {
+        parser: 'babel',
+        plugins: [prettierBabel],
+      }),
     extractComponentDescription: (_component, { notes }) => {
       if (notes) {
         return typeof notes === 'string' ? notes : notes.markdown || notes.text;
@@ -24,7 +31,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Intro'], 'Layout', 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Pages', 'Layout'],
     },
   },
 }

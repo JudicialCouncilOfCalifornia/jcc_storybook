@@ -18,31 +18,31 @@
 
 <{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
   <div class="switcher">
-    {% if icon_data and variant == 'striped' %}
-      {% include "@atoms/Icon/Icon.twig" with icon_data %}
-    {% elseif media %}
-      <div class="card__media">
-        <div class="frame">
-          {{ media }}
-        </div>
+  {% if icon_data and variant == 'striped' %}
+    {% include "@atoms/Icon/Icon.twig" with icon_data %}
+  {% elseif media %}
+    <div class="card__media">
+      <div class="frame">
+        {{ media }}
+      </div>
+    </div>
+  {% endif %}
+    <div class="card__main box stack center">
+    {% if heading %}
+      <div class="card__heading">
+        <{{h}}>{{ heading }}</{{h}}>
       </div>
     {% endif %}
-    <div class="card__main box stack center">
-      {% if heading %}
-        <div class="card__heading">
-          <{{h}}>{{ heading }}</{{h}}>
-        </div>
-      {% endif %}
-      {% if text %}
-        <div class="card__text">
-          {{ text }}
-        </div>
-      {% endif %}
-      {% if button_data.href and tag == 'div' %}
-        <div class="card__button">
-          {% include "@atoms/Button/Button.twig" with button_data %}
-        </div>
-      {% endif %}
+    {% if text %}
+      <div class="card__text">
+        {{ text }}
+      </div>
+    {% endif %}
+    {% if button_data.href and tag == 'div' %}
+      <div class="card__button">
+        {% include "@atoms/Button/Button.twig" with button_data %}
+      </div>
+    {% endif %}
     </div>
   </div>
 </{{tag}}>

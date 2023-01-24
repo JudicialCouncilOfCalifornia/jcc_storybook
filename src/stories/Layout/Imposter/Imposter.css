@@ -1,13 +1,19 @@
-.imposter-demo {
+.imposter-demo .grid + .grid {
+  margin-top: var(--s0);
+}
+
+.imposter-demo .box {
   --color: #fff;
-  --heading-color: var(--color);
-  background: #000;
-  margin-top: var(--s1);
+  min-block-size: 50ch;
+  background: #999;
   position: relative;
 }
 
-.imposter-demo__inner {
-  --color: #000;
-  --heading-color: var(--color);
-  background: #999;
+.imposter-demo__inner .box {
+  --color: #fff;
+  min-block-size: 20ch;
+  min-inline-size: 20ch;
+  border: 1px solid #fff;
+  background: #000;
+  box-shadow: 1px 1px 20px #000;
 }

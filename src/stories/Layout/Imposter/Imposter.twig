@@ -8,32 +8,25 @@
   'center',
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  <div class="imposter-demo">
+<div class="imposter-demo">
+  <div class="grid">
     <div class="box">
-      <h2>Demo 1</h2>
-      {{ main }}
-    </div>
-    <div class="imposter imposter-demo__inner">
-      <div class="box">
-        {{ imposter }}
+      <div class="imposter imposter-demo__inner">
+        <div class="box">
+          <p>absolute</p>
+        </div>
       </div>
+    </div>
+    <div class="box">
     </div>
   </div>
   <div class="grid">
-    <div class="imposter-demo">
-      <div class="box">
-        {{ main }}
-      </div>
+    <div class="box">
     </div>
-    <div class="imposter-demo">
-      <div class="box">
-        <h2>Demo 2</h2>
-        {{ main }}
-      </div>
+    <div class="box">
       <div class="imposter imposter-demo__inner" style="--positioning: {{ positioning }}">
         <div class="box">
-          {{ imposter }}
+          <p>{{ positioning }}</p>
         </div>
       </div>
     </div>

@@ -70,7 +70,7 @@ export default {
           },
           {
             icon_data: {
-              icon: "speaker",
+              icon: "megaphone",
               color: false,
               attributes: new drupalAttribute(),
             },
@@ -86,7 +86,7 @@ export default {
           },
           {
             icon_data: {
-              icon: "speaker",
+              icon: "megaphone",
               color: false,
               attributes: new drupalAttribute(),
             },
@@ -174,7 +174,7 @@ export default {
         cardWidth: "30ch",
         attributes: new drupalAttribute(),
         items: [
-          { 
+          {
             media: '<img src="https://source.unsplash.com/random/900×700/?office" />',
             heading: "Interested in becoming a court interpreter?",
             text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -187,9 +187,9 @@ export default {
             // A variant type that contols the layout and style of the component.
             variant: "bordered-center",
             // drupalAttribute allows us to mock drupal attributes in storybook.
-            attributes: new drupalAttribute(),   
+            attributes: new drupalAttribute(),
           },
-          { 
+          {
             media: '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?building,old" /></div>',
             heading: "LEP Court Users",
             text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet.</p>",
@@ -202,9 +202,9 @@ export default {
             // A variant type that contols the layout and style of the component.
             variant: "bordered-center",
             // drupalAttribute allows us to mock drupal attributes in storybook.
-            attributes: new drupalAttribute(),   
+            attributes: new drupalAttribute(),
           },
-        ],    
+        ],
       },
       button_data: false,
       variant: 'white',
@@ -212,5 +212,5 @@ export default {
       attributes: new drupalAttribute(),
     },
     attributes: new drupalAttribute(),
-  }    
+  }
 }

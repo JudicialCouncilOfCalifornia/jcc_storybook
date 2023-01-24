@@ -12,18 +12,19 @@ The top half gets this context by using a "Sidebar" layout, placing the image in
 
 The bottom half needs to mirror the top half so it gets a Sidebar too, in the same configuration, except its sidebar is an empty `div`, just there to hold the space for the media to ... hang out in?
 
-When the Sidebar stacks the breaking of content flow on the image becomes apparent. Because of the negative margin, the image now overlaps the heading section which is now stacked below it. However, because of the order of these things in the HTML, the text is overlaid on top of the image, almost as if we meant to do that. We even have some text shadow to help the heading stand out against the "background" image.
+When the Sidebar stacks, the "broken" content flow on the image becomes apparent. The negative margin causes the image to overlap the heading section which is now stacked below it. However, because of the order of these things in the HTML, the text is overlaid on top of the image, almost as if we meant to do that. We even have some text shadow to help the heading stand out against the "background" image.
 
-Depending on the amount of text in the heading, the image may still even hang over the bottom section a bit. But given the layout of this component at full width, that doesn't seem too unexpected.
+Depending on the amount of text in the heading, the image may still hang over the bottom section a bit. Given the layout of this component at full width, that doesn't seem too unexpected. We could fine-tune our margins to minimize or negate this, but it doesn't seem worth it. The layout still performs its duty.
 
-What's most important is that the text in the heading and in the section below never have their natural flow compromised. They continue fill the space left by the repositioning of the image, they're never obscured, clipped, compressed or broken.
+What's most important is that the text in the heading and in the section below never have their natural flow compromised. They continue to fill the space left by the repositioning of the image, they're never obscured, clipped, compressed or broken.
 
 ### More Polish
 We can take it a bit further. I'm not too happy with the text overlay situation. It's an ok fallback, but not optimal. So maybe I **will** pull out a media query, but **NOT** to respond to an arbitrary breakpoint. Instead I use `@media (orientation: portrait)`. Within this, I can remove the negative margin on the media when the viewport becomes narrower than it is tall. This makes the image stack above the heading as it normally would in a Sidebar layout. No more overlay!
 
-There are still possible situations where the Sidebar will stack before the orientation switches to portrait, causing a bit of heading overlap on the image. In these edge cases, the layout still looks intentional and not broken. It looks a lot nicer than when the text is overlaid in a much narrower space, which is now cleaned up nicely. Again, most importantly, the content is never compromised.
+There are still possible situations where the Sidebar will stack before the orientation switches to portrait, causing a bit of heading overlap on the image. In these edge cases, the layout still looks intentional and not broken. Most importantly, the content flow is never compromised.
 
 --
+
 One more added bonus. By adding a modifier class at the top of the Hangover, `hangover hangover--media-hide`, I've set the media to `display: none` in the portrait orientation. So if that image isn't that important, you can just make it disappear when space is limited.
 
 <details>

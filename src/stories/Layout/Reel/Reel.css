@@ -1,9 +1,9 @@
-.reel-demo + .reel-hint {
+.reel-demo .reel + .reel-hint {
   justify-content: space-between;
   line-height: var(--s-2);
 }
 
-.reel-demo.overflowing + .reel-hint {
+.reel-demo .reel.overflowing + .reel-hint {
   display: flex;
 }
 

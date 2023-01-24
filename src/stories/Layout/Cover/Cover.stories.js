@@ -26,11 +26,16 @@ export const Default = Template.bind({});
 Default.args = data.default;
 
 // Bind the Default component variant for this component.
-export const NoFirst = Template.bind({});
+export const WithTop = Template.bind({});
 // Data comes from the Cover.data.js file.
-NoFirst.args = data.no_first;
+WithTop.args = data.with_top;
 
 // Bind the Default component variant for this component.
-export const NoThird = Template.bind({});
+export const WithBottom = Template.bind({});
 // Data comes from the Cover.data.js file.
-NoThird.args = data.no_third;
+WithBottom.args = data.with_bottom;
+
+// Bind the Default component variant for this component.
+export const WithBoth = Template.bind({});
+// Data comes from the Cover.data.js file.
+WithBoth.args = data.with_both;

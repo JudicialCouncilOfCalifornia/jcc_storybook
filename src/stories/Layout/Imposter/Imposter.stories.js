@@ -7,7 +7,7 @@ export default {
   title: 'Layout/Imposter',
   component: Imposter,
   parameters: {
-    layout: "centered",
+    layout: "padded",
     notes: readme,
   },
   argTypes: {
@@ -30,7 +30,7 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 Default.args = {
   positioning: 'absolute',
-  main: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo et voluptate. Illo delectus voluptatum voluptate, porro maxime iste voluptas, inventore soluta, odit dolorum harum illum doloremque odio veritatis at.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo et voluptate. Illo delectus voluptatum voluptate, porro maxime iste voluptas, inventore soluta, odit dolorum harum illum doloremque odio veritatis at.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo et voluptate. Illo delectus voluptatum voluptate, porro maxime iste voluptas, inventore soluta, odit dolorum harum illum doloremque odio veritatis at.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo et voluptate. Illo delectus voluptatum voluptate, porro maxime iste voluptas, inventore soluta, odit dolorum harum illum doloremque odio veritatis at.</p>",
-  imposter: "<h2>Imposter</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo et voluptate. Illo delectus voluptatum voluptate, porro maxime iste voluptas, inventore soluta, odit dolorum harum illum doloremque odio veritatis at.</p>",
+  main: "",
+  imposter: "",
   attributes: new drupalAttribute(),
 };

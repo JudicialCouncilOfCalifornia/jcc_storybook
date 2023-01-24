@@ -1,6 +1,7 @@
-import drupalAttribute from 'drupal-attribute'
+import drupalAttribute from 'drupal-attribute';
 import Switcher from './Switcher.twig';
 import readme from './readme.md';
+import './Switcher.css';
 
 export default {
   title: 'Layout/Switcher',

@@ -5,15 +5,23 @@
 
 {% set classes = [
   'reel',
-  'reel-demo',
   scroll,
 ] %}
 
-<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
-  {% for i in range(1, num_items) %}
-    <div class="box">{{ i }}</div>
-  {% endfor %}
+{# This reel-demo div needs to wrap the whole thing for storybook, because JSX only allows one top element and the adjacent hint makes two. #}
+<div class="reel-demo">
+  <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+    {% for i in range(1, num_items) %}
+      <div class="box">{{ i }}</div>
+    {% endfor %}
+  </div>
+  {% if hint %}
+    <div class="reel-hint">
+      <div>&rarr;</div>
+      <div>&larr;</div>
+    </div>
+  {% endif %}
+  <div class='caption'>
+    <p><em>NOTE: the reel-demo div needs to wrap the whole thing for Storybook, because JSX only allows one top element and the adjacent hint makes two. Do not include a `.reel-demo` wrapper when implementing a Reel in components.</em></p>
+  </div>
 </div>
-{% if hint %}
-  <div class="reel-hint"><div>&rarr;</div><div>&larr;</div></div>
-{% endif %}

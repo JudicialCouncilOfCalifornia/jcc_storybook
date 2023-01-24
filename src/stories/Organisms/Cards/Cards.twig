@@ -12,8 +12,8 @@
   card_variant,
 ] %}
 
-<div {{ attributes.addClass(classes) }} {{ attributes.setAttribute('style', styles) }}>
-  {% for item in items %}
-    {% include "@molecules/Card/Card.twig" with item %}
-  {% endfor %}
+<div {{ attributes.addClass(classes).setAttribute('style', styles) }}>
+{% for item in items %}
+  {% include "@molecules/Card/Card.twig" with item %}
+{% endfor %}
 </div>

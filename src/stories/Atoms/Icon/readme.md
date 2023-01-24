@@ -10,7 +10,7 @@ An svg icon.
 <details>
   <summary>Twig Variables:</summary>
   ```
-  icon: "speaker",
+  icon: "megaphone",
   color: false,
   ```
 </details>

@@ -1,5 +1,12 @@
 import drupalAttribute from 'drupal-attribute'
 
+// Random icon selector for Striped cards.
+const iconsJSON = require('../../../assets/icons.json');
+const randomIcon = () => {
+  const num = Math.floor(Math.random() * iconsJSON.length);
+  return iconsJSON[num];
+}
+
 export default {
   default: {
     variant: "default",
@@ -10,9 +17,9 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "speaker",
+          icon: "megaphone",
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -27,9 +34,9 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "speaker",
+          icon: "megaphone",
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -44,9 +51,9 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "speaker",
+          icon: "megaphone",
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -61,9 +68,9 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "speaker",
+          icon: "megaphone",
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -92,7 +99,7 @@ export default {
           href: "#",
           variant: "primary",
         },
-        attributes: new drupalAttribute(),    
+        attributes: new drupalAttribute(),
       },
     ],
     attributes: new drupalAttribute(),
@@ -126,9 +133,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,
@@ -143,9 +150,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,
@@ -160,9 +167,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,
@@ -177,9 +184,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,
@@ -194,9 +201,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,
@@ -211,9 +218,9 @@ export default {
         variant: "striped",
         media: false,
         icon_data: {
-          icon: "speaker",
+          icon: randomIcon(),
           color: false,
-          attributes: new drupalAttribute(),  
+          attributes: new drupalAttribute(),
         },
         heading: "Heading For A Card",
         text: false,

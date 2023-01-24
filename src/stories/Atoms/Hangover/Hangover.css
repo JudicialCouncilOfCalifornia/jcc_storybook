@@ -14,7 +14,7 @@
 
 .hangover__top {
   --heading-color: var(--color-white);
-  background-color: var(--color-base-dark-x);
+  background: var(--striped-base-dark-x);
 }
 
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
@@ -34,9 +34,9 @@
 /* Set image width and aspect ratio. */
 /* Use negative bottom margin to pull the image into the bottom sidebar. */
 .hangover__top .frame {
-  --frame-h: 1;
-  --frame-v: 1;
-  max-inline-size: 300px;
+  --frame-h: 4;
+  --frame-v: 3;
+  max-block-size: 300px;
   border: var(--s-1) solid var(--color-accent-warm-light-xx);
   margin-block-end: -175px;
 }

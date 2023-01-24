@@ -10,7 +10,7 @@
   --s-3: calc(var(--s-2) / var(--ratio));
   --s-2: calc(var(--s-1) / var(--ratio));
   --s-1: calc(var(--s0) / var(--ratio));
-  --s0: 0.84rem;
+  --s0: 1rem;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
@@ -18,7 +18,7 @@
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
   --s7: calc(var(--s6) * var(--ratio));
-  
+
   /* Content spacing. */
   --measure: 60ch;
   --max-width: 126ch;
@@ -27,11 +27,11 @@
   /* Fonts */
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Lato', sans-serif;
-  
+
   /* Colors */
   --color-white: #ffffff;
   --color-black: #000000;
-  
+
   --color-base-dark-xxx: #2E2E2E;
   --color-base-dark-xx: #454545;
   --color-base-dark-x: #5C5C5C;
@@ -39,21 +39,21 @@
   --color-base-light-x: #C9C9C9;
   --color-base-light-xx: #F3F3F3;
   --color-base-light-xxx: #F9F9F9;
-  
+
   --color-accent-warm-dark-xxx: #775540;
   --color-accent-warm-dark-xx: #655A3DB2;
   --color-accent-warm-dark-x: #C05600;
   --color-accent-warm: #d57513;
   --color-accent-warm-light-x: #FF8B2D;
   --color-accent-warm-light-xx: #FEF2E4;
-  
+
   --color-primary-dark-xx: #1F303E;
   --color-primary-dark-x: #0B4778;
   --color-primary: #005EA2;
   --color-primary-light-x: #2378C3;
   --color-primary-light-xx: #25B6E2;
   --color-primary-light-xxx: #EFF6FB;
-  
+
   --color-secondary-dark-xx: #204E34;
   --color-secondary-dark-x: #286846;
   --color-secondary: #34A37E;
@@ -110,6 +110,14 @@
     var(--color-primary-light-xx) 8px
   );
 
+  --striped-base-dark-x: repeating-linear-gradient(
+    125deg,
+    #707070,
+    #666666 1px,
+    var(--color-base-dark-x) 2px,
+    var(--color-base-dark-x) 8px
+  );
+
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
   --heading-color: var(--color-primary-dark-xx);
@@ -121,9 +129,9 @@
 }
 
 /* The only media query used simply bumps the base size of our modular scale for larger screens. */
-@media screen and (min-width: 720px) {
+@media screen and (max-width: 430px) {
   :root {
-    --s0: 1rem;
+    --s0: 0.84rem;
   }
 }
 
