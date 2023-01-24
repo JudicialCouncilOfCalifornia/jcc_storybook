@@ -1,4 +1,9 @@
 
+0.22.1 / 2023-01-23
+===================
+
+  * chore: update Readme.md to use github pages for docs instead of netify.
+
 0.22.0 / 2023-01-23
 ===================
 
