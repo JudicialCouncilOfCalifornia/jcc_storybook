@@ -6,15 +6,15 @@ This library uses algorithmic/intrinsic layout techniques and 13 "[Layout Primit
 
 Layout Primitives are composed into Atomic Components, that are used to build templates and pages.
 
-For more details about the methodologies used in this component library see: https://github.com/JudicialCouncilOfCalifornia/jcc_storybook/tree/master/src/stories/Docs/Intro
+For more details about the methodologies used in this component library see: https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
 
 
-External References: 
+External References:
 
   - https://every-layout.dev/rudiments/
   - https://aneventapart.com/news/post/designing-intrinsic-layouts-aea-video
   - https://atomicdesign.bradfrost.com/table-of-contents/
-  
+
 
 ## Installation
 
@@ -27,7 +27,7 @@ External References:
     - COMING SOON
   - Enable the base theme in drupal via the UI or with drush:
     - `drush en jcc_storybook`
-  - Create a new theme with the following line in your `info.yml` file:  `base theme: jcc_storybook` 
+  - Create a new theme with the following line in your `info.yml` file:  `base theme: jcc_storybook`
   - Include twig templates into your theme via `@atoms/button.twig`, etc.  COMING SOON
 
 ## Pattern Library Development
@@ -41,7 +41,7 @@ External References:
 
   - Clone this repo and cd to the directory
   - `nvm use`: to use the specified version of Node. (If using nvm to manage node. You may need to install the appropriate version.)
-  - `npm install`: to install the required development packages. 
+  - `npm install`: to install the required development packages.
   - `npm run storybook`: to start storybook. It will open a new browser window.
 
 ### Creating Components
@@ -62,8 +62,8 @@ For more information about how to develop components for this library, see the "
 
 
 ## Links
-* Project Page:   https://jcc-storybook.netlify.app/?path=/docs/documentation-intro--default
-* Documentation:  https://jcc-storybook.netlify.app/?path=/docs/documentation-intro--default
+* Project Page:   https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
+* Documentation:  https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
 * Support:        https://www.courts.ca.gov/policyadmin-jc.htm
 
 ## License
