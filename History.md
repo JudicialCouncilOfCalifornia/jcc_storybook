@@ -1,4 +1,11 @@
 
+0.21.1 / 2023-01-23
+===================
+
+  * fix: Clean up some code and documentation.
+  * fix: hide the right element on the hangover.
+  * feat: Add Hangover component.
+
 0.21.0 / 2023-01-19
 ===================
 
