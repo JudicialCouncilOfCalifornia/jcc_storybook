@@ -29,6 +29,7 @@ export default {
   },
   argTypes: {
     attributes: {table: {disable: true}},
+    backgrounds: {table: {disable: true}},
   },
 };
 

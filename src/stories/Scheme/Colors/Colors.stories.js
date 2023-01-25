@@ -28,6 +28,7 @@ export default {
   },
   argTypes: {
     attributes: {table: {disable: true}},
+    colors: {table: {disable: true}},
   },
 };
 
