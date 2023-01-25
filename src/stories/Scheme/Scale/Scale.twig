@@ -1,0 +1,18 @@
+{% set classes = [
+  'scale',
+  'stack'
+] %}
+
+{% set cat = '' %}
+
+<div {{ attributes.addClass(classes) }}>
+  <p><strong>ratio: </strong> {{ ratio }}</p>
+  {% for s in scale %}
+    <div class="cluster">
+      <div class="scale__label">
+        <strong>{{ s.name }}</strong>
+      </div>
+      <div class="scale__swatch" style="width: var({{s.name}}); height: var({{s.name}});"></div>
+    </div>
+  {% endfor %}
+</div>

@@ -21,19 +21,19 @@
 
 /* Striped Card Variants */
 .cards .card--striped:nth-of-type(6n + 1) {
-  background: var(--striped-primary-dark-xx);
+  background: var(--background-striped-primary-dark-xx);
 }
 
 .cards .card--striped:nth-of-type(6n + 2) {
-  background: var(--striped-primary-dark-x);
+  background: var(--background-striped-primary-dark-x);
 }
 
 .cards .card--striped:nth-of-type(6n + 3) {
-  background: var(--striped-secondary);
+  background: var(--background-striped-secondary);
 }
 
 .cards .card--striped:nth-of-type(6n + 4) {
-  background: var(--striped-accent-warm-dark-x);
+  background: var(--background-striped-accent-warm-dark-x);
 }
 
 .cards .card--striped:nth-of-type(6n + 5) {

@@ -1,0 +1,40 @@
+{% set classes = [
+  'fonts',
+  'stack'
+] %}
+
+{% set cat = '' %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% for font in fonts %}
+    {% if cat != font.category %}
+      {# Close the previous group. #}
+      {% if cat != '' %}
+        </div>
+      {% endif %}
+
+      {% set cat = font.category %}
+
+      {# Start new group. #}
+      <div class="font__group stack">
+        <div class="box">
+          <h2>--font-{{ font.category }}: {{ font.value }};</h2>
+        </div>
+    {% endif %}
+
+    <div class="font box">
+      <div class="font__swatch" style="font-family: var(--font-{{font.name}}); font-weight: {{ font_weight }}">
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        <p>0123456789</p>
+      </div>
+    </div>
+  {% endfor %}
+  {# Close the final group. #}
+  </div>
+</div>

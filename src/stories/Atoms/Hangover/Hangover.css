@@ -14,7 +14,7 @@
 
 .hangover__top {
   --heading-color: var(--color-white);
-  background: var(--striped-base-dark-x);
+  background: var(--background-striped-base-dark-x);
 }
 
 /* Add text shadow to match the background so it's only seen when overlapping the image. */

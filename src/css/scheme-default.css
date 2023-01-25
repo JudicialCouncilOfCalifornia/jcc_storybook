@@ -17,7 +17,6 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
-  --s7: calc(var(--s6) * var(--ratio));
 
   /* Content spacing. */
   --measure: 60ch;
@@ -62,7 +61,7 @@
 
   /* Striped Backgrounds */
 
-  --striped-primary-dark-xx: repeating-linear-gradient(
+  --background-striped-primary-dark-xx: repeating-linear-gradient(
     125deg,
     var(--color-primary-dark-x),
     var(--color-primary-dark-x) 1px,
@@ -70,7 +69,7 @@
     var(--color-primary-dark-xx) 8px
   );
 
-  --striped-primary-dark-x: repeating-linear-gradient(
+  --background-striped-primary-dark-x: repeating-linear-gradient(
     125deg,
     var(--color-primary),
     var(--color-primary) 1px,
@@ -78,7 +77,7 @@
     var(--color-primary-dark-x) 8px
   );
 
-  --striped-secondary: repeating-linear-gradient(
+  --background-striped-secondary: repeating-linear-gradient(
     125deg,
     var(--color-secondary-light-x),
     var(--color-secondary-light-x) 1px,
@@ -86,7 +85,7 @@
     var(--color-secondary) 8px
   );
 
-  --striped-accent-warm-dark-x: repeating-linear-gradient(
+  --background-striped-accent-warm-dark-x: repeating-linear-gradient(
     125deg,
     var(--color-accent-warm),
     var(--color-accent-warm) 1px,
@@ -94,7 +93,7 @@
     var(--color-accent-warm-dark-x) 8px
   );
 
-  --striped-secondary-dark-xx: repeating-linear-gradient(
+  --background-striped-secondary-dark-xx: repeating-linear-gradient(
     125deg,
     var(--color-secondary-dark-x),
     var(--color-secondary-dark-x) 1px,
@@ -102,7 +101,7 @@
     var(--color-secondary-dark-xx) 8px
   );
 
-  --striped-primary-light-xx: repeating-linear-gradient(
+  --background-striped-primary-light-xx: repeating-linear-gradient(
     125deg,
     #2fBfEf,
     #2fBfEf 1px,
@@ -110,7 +109,7 @@
     var(--color-primary-light-xx) 8px
   );
 
-  --striped-base-dark-x: repeating-linear-gradient(
+  --background-striped-base-dark-x: repeating-linear-gradient(
     125deg,
     #707070,
     #666666 1px,
