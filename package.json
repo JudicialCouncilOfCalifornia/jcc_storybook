@@ -9,7 +9,7 @@
     "scheme-data": "cssjson src/css/scheme-default.css -o src/assets/scheme.json",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "storybook-build": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
-    "storybook-lib": "rm -rf lib/stories && npx babel src/stories -d lib/stories --ignore 'src/stories/**/*.stories.js,src/stories/**/*.data.js' --presets=@babel/preset-env,babel-preset-minify --plugins=babel-plugin-drupal-behaviors && export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./lib/webpack.config.js",
+    "storybook-lib": "rm -rf lib/stories && npx babel src/stories -d lib/stories --ignore 'src/stories/**/*.stories.js,src/stories/**/*.data.js' --presets=@babel/preset-env,babel-preset-minify --plugins=babel-plugin-drupal-behaviors && webpack --config ./lib/webpack.config.js",
     "sprite": "svg-sprite -s --symbol-dest src/assets/ --symbol-sprite icons.svg src/assets/icons/*.svg && node src/assets/iconsJSON.js src/assets/icons",
     "plop": "plop"
   },
