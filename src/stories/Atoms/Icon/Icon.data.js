@@ -2,7 +2,7 @@ import drupalAttribute from 'drupal-attribute'
 
 export default {
   default: {
-    icon: "notes",
+    icon: "education",
     color: false,
     attributes: new drupalAttribute(),
   }

@@ -18,6 +18,7 @@
     "source": "https://github.com/JudicialCouncilOfCalifornia/jcc_storybook"
   },
   "require": {
+    "drupal/components": "^2.0",
     "drupal/core": "^8 || ^9 || ^10"
   }
 }

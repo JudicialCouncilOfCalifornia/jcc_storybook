@@ -14,7 +14,7 @@ export default {
   },
   argTypes: {
     icon: {
-      description: 'Available icons are in an svg "sprite" file built from the icons in `assets/icons`. i.e. `documents`, `megaphone`, `toolkit`',
+      description: 'Available icons are in an svg "sprite" file built from the icons in `assets/icons`. i.e. `documents`, `speaker`, `toolkit`',
       table: { defaultValue: { summary: false }},
       control: { type: 'select' },
       options: iconsJSON,

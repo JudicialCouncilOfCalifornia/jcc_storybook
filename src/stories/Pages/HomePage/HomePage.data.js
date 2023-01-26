@@ -70,7 +70,7 @@ export default {
           },
           {
             icon_data: {
-              icon: "megaphone",
+              icon: "speaker",
               color: false,
               attributes: new drupalAttribute(),
             },
@@ -86,7 +86,7 @@ export default {
           },
           {
             icon_data: {
-              icon: "megaphone",
+              icon: "speaker",
               color: false,
               attributes: new drupalAttribute(),
             },

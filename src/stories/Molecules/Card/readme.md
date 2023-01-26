@@ -18,7 +18,7 @@ Card components consist of a few sub components that can be displayed in multipl
   variant: "default",
   media: '...',
   icon_data: {
-    icon: "megaphone",
+    icon: "speaker",
     color: false,
   },
   heading: "Heading For A Card",

@@ -17,7 +17,7 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "megaphone",
+          icon: "speaker",
           color: false,
           attributes: new drupalAttribute(),
         },
@@ -34,7 +34,7 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "megaphone",
+          icon: "speaker",
           color: false,
           attributes: new drupalAttribute(),
         },
@@ -51,7 +51,7 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "megaphone",
+          icon: "speaker",
           color: false,
           attributes: new drupalAttribute(),
         },
@@ -68,7 +68,7 @@ export default {
         variant: "default",
         media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
         icon_data: {
-          icon: "megaphone",
+          icon: "speaker",
           color: false,
           attributes: new drupalAttribute(),
         },

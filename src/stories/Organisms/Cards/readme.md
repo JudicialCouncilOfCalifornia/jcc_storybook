@@ -23,7 +23,7 @@ When setting the `card_variant` on the Cards component, set the variant in `card
       variant: "default",
       media: '...',
       icon_data: {
-        icon: "megaphone",
+        icon: "speaker",
         color: false,
         attributes: new drupalAttribute(),
       },
