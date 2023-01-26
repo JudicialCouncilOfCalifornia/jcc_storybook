@@ -18,16 +18,15 @@
   variant_justify,
 ] %}
 
-{% set card %}
-  {% include "@molecules/Card/Card.twig" with card_data %}
-{% endset %}
 
 <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
   <div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
   <div class="hero__tint"></div>
   <div class="hero__content container">
     <div class="hero__content-inner">
-      {{ card }}
+      {% if card_data %}
+        {% include "@molecules/Card/Card.twig" with card_data %}
+      {% endif %}
     </div>
   </div>
 </div>
