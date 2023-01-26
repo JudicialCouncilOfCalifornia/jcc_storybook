@@ -1,4 +1,9 @@
 
+0.23.4 / 2023-01-25
+===================
+
+  * fix: Typo in library definition and issue where lib css would not compile except in debug terminal.
+
 0.23.3 / 2023-01-25
 ===================
 
