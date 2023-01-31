@@ -1,4 +1,10 @@
 
+0.23.7 / 2023-01-31
+===================
+
+  * fix: Icon SVG dimensions and striped cards cleanup.
+  * feat: Add Drupal Integration documentation.
+
 0.23.6 / 2023-01-25
 ===================
 
