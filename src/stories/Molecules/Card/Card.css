@@ -98,19 +98,12 @@
 /* Striped */
 .card--striped .card,
 .card.card--striped {
-  --color: var(--color-white);
   --heading-color: var(--color-white);
+  --color: var(--heading-color);
   --align-items: center;
 
-  gap: var(--s0);
-  color: var(--color);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  background: gray;
-  padding: var(--s2) var(--s5);
+  display: block;
+  padding-block-start: var(--s1);
   font-size: var(--s3);
   line-height: var(--s4);
   text-align: center;
@@ -123,9 +116,4 @@
     var(--color-primary-dark-xx) 2px,
     var(--color-primary-dark-xx) 8px
   );
-}
-
-.card--striped .card .box,
-.card.card--striped .box {
-  padding: 0;
 }
