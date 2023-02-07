@@ -5,7 +5,7 @@ import './Hangover.css';
 // import './Hangover.js';
 
 export default {
-  title: 'Atoms/Hangover',
+  title: 'Molecules/Hangover',
   component: Hangover,
   parameters: {
     notes: readme,

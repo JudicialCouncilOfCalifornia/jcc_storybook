@@ -2,7 +2,8 @@
 .hangover .box {
   padding-block: var(--s2);
   display: flex;
-  align-items: center;
+  align-items: start;
+  flex-flow: column;
 }
 
 /* Set sidebar width a approximate horizontal image placement. */
@@ -25,10 +26,22 @@
     -3px 3px 6px var(--color-base-dark-x),
     3px -3px 6px var(--color-base-dark-x)
   ;
+  padding-bottom: var(--s1);
 }
 
 .hangover__top-media {
-  justify-content: center;
+  justify-content: start;
+}
+
+.hangover__top-content_brow{
+  color: var(--color-white);
+}
+
+.hangover__text,
+.hangover__text p{
+  font-size: var(--s0);
+  line-height: var(--s2);
+  color: var(--color-white);
 }
 
 /* Set image width and aspect ratio. */

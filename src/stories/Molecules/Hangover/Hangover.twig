@@ -24,7 +24,17 @@
         </div>
       </div>
       <div class="hangover__top-content box">
+        {% if brow %}
+          <div class="hangover__top-content_brow">
+            {% include "@atoms/Brow/Brow.twig" with brow %}
+          </div>
+        {% endif %}
         <h1>{{ heading }}</h1>
+        {% if text %}
+          <div class="hangover__text">
+            {{ text }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
