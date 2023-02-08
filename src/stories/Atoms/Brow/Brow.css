@@ -1,6 +1,7 @@
 .brow {
   display: flex;
   gap: var(--gap, var(--s0));
+  color: var(--color);
 }
 
 .brow .brow__accent {

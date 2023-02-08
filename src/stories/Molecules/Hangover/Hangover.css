@@ -2,8 +2,14 @@
 .hangover .box {
   padding-block: var(--s2);
   display: flex;
-  align-items: start;
-  flex-flow: column;
+  align-items: center;
+}
+
+/* The brow/heading/text relationship is managed by the Stack. */
+/* It stacks them vertically and manages the space between. */
+/* Nested because space between brow/heading is different than heading/text. */
+.hangover .stack > .stack {
+  --space: 0;
 }
 
 /* Set sidebar width a approximate horizontal image placement. */
@@ -15,10 +21,12 @@
 
 .hangover__top {
   --heading-color: var(--color-white);
+  --color: var(--color-white);
   background: var(--background-striped-base-dark-x);
 }
 
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
+.hangover__top-content-brow,
 .hangover__top-content h1 {
   text-shadow:
     3px 3px 6px var(--color-base-dark-x),
@@ -26,22 +34,10 @@
     -3px 3px 6px var(--color-base-dark-x),
     3px -3px 6px var(--color-base-dark-x)
   ;
-  padding-bottom: var(--s1);
 }
 
 .hangover__top-media {
-  justify-content: start;
-}
-
-.hangover__top-content_brow{
-  color: var(--color-white);
-}
-
-.hangover__text,
-.hangover__text p{
-  font-size: var(--s0);
-  line-height: var(--s2);
-  color: var(--color-white);
+  justify-content: center;
 }
 
 /* Set image width and aspect ratio. */

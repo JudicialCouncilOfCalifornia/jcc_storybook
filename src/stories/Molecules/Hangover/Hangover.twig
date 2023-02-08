@@ -24,17 +24,23 @@
         </div>
       </div>
       <div class="hangover__top-content box">
-        {% if brow %}
-          <div class="hangover__top-content_brow">
-            {% include "@atoms/Brow/Brow.twig" with brow %}
+        <div class="stack">
+          <div class="stack">
+            {% if brow %}
+              <div class="hangover__top-content-brow">
+                {% include "@atoms/Brow/Brow.twig" with brow %}
+              </div>
+            {% endif %}
+            {% if heading %}
+              <h1>{{ heading }}</h1>
+            {% endif %}
           </div>
-        {% endif %}
-        <h1>{{ heading }}</h1>
-        {% if text %}
-          <div class="hangover__text">
-            {{ text }}
-          </div>
-        {% endif %}
+          {% if text %}
+            <div class="hangover__text">
+              {{ text }}
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
