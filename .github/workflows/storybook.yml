@@ -2,7 +2,8 @@ name: Build and Deploy
 on:
   workflow_dispatch:
   push:
-    paths: ["src/stories/**"]
+    branches:
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

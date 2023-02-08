@@ -1,0 +1,50 @@
+name: jcc_storybook
+
+recipe: drupal9
+
+config:
+  webroot: web
+  php: '7.4'
+
+proxy:
+  node:
+    - storybook.lndo.site:6006
+
+services:
+  # Storybook.
+  node:
+    type: compose
+    services:
+      image: node:18
+      # Required. See Below
+      command: docker-php-entrypoint apache2-foreground
+      volumes:
+        - .:/app
+
+# Custom Lando commands
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  lib:
+    service: node
+    cmd: npm run lib
+  plop:
+    service: node
+    cmd: npm run plop
+  scheme:
+    service: node
+    cmd: npm run scheme
+  sprite:
+    service: node
+    cmd: npm run sprite
+  storybook:
+    service: node
+    cmd: npm run storybook
+  storybook-build:
+    service: node
+    cmd: npm run storybook-build
+
+env_file:
+  - .env
