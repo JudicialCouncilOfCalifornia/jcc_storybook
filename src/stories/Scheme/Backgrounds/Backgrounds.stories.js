@@ -5,7 +5,6 @@ import DrupalAttribute from 'drupal-attribute';
 
 const schemeJSON = require('../../../assets/scheme.json');
 const rows = schemeJSON.children[':root'].attributes;
-console.log(rows);
 const backgrounds = [];
 
 for (const key in rows) {
@@ -36,7 +35,7 @@ export default {
 const Template = ({ ...args }) => {
   return Backgrounds({ ...args });
 };
-console.log(backgrounds);
+
 export const Default = Template.bind({});
 Default.args = {
   attributes: new DrupalAttribute(),
