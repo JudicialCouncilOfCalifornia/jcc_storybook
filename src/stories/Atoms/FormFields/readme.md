@@ -1,7 +1,7 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
-# FormFields
+# Form Fields
 
-Description of the FormFields in markdown.
+Description of the Form Fields in markdown.
 
 <details>
   <summary>Inherited CSS Variables:</summary>

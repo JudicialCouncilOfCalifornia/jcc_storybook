@@ -1,5 +1,5 @@
 /**
- * FormFields behavior.
+ * Form Fields behavior.
  *
  * DELETE THIS FILE IF IT'S NOT NEEDED
  * REMEMBER TO ALSO REMOVE THE import FROM FormFields.stories.js
