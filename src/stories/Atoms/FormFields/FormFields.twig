@@ -3,17 +3,17 @@
  #
  #  Styles should be applied as high up the DOM as possible so they can cascade
  #  down to lower elements.
-#}
+ #}
 
 {#
-Available variables:
-  main:
-  variant:
-  attributes: drupalAttribute()
+  Available variables:
+    main:
+    variant:
+    attributes: drupalAttribute()
 #}
 
 {# Set up variant classes. #}
-{% set variant_class = variant ? 'form-fields--' ~ variant : 'form-fields--default' %}
+{% set variant_class = variant ? 'form-feilds--' ~ variant : 'form-feilds--default' %}
 
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
@@ -26,8 +26,17 @@ Available variables:
 <div {{ attributes.addClass(classes) }}>
   {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
   {# Use BEM syntax for styling classes on sub-components. #}
-  <div class="form-fields__...">
-    {{ example }}
-    test
-  </div>
+  <form action="page.php" method="GET" class="stack">
+    <div class="form-type-textfield">
+      <label for="textbox">Text Box</label>
+      <input type="text" name="textbox" />
+    </div>
+
+    <div class="form-type-...">
+      <label for="password">Password Input</label>
+      <input type="password" name="password" />
+    </div>
+
+    {# More form fields here. #}
+  </form>
 </div>
