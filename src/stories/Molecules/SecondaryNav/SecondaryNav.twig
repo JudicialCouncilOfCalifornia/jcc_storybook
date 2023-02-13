@@ -1,0 +1,20 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'secondary-nav--' ~ variant : 'secondary-nav--default' %}
+{% set overflowing_variant_class = overflowing_variant is not empty ? 'secondary-nav--overflowing-' ~ overflowing_variant : '' %}
+
+{% set classes = [
+  'secondary-nav',
+  variant_class,
+  overflowing_variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <ul class="reel no-bar">
+    {% for link in links %}
+      <li>
+        {% set link_class = link.is_current ? 'active' : '' %}
+        {{ link(link.text, link.url, { 'class': link_class }) }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
