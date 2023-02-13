@@ -4,6 +4,9 @@
 
 * {
   box-sizing: border-box;
+  /* Margin and padding are managed by layout primitives. */
+  margin: 0;
+  padding: 0;
 }
 
 /* Box. */
@@ -25,7 +28,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space, 1rem);
+  gap: var(--gap, 1rem);
   justify-content: flex-start;
   align-items: center;
 }
@@ -47,7 +50,7 @@
 }
 
 .cover > * {
-  margin-block: var(--space, var(--s0));
+  margin-block: var(--gap, var(--s0));
 }
 
 .cover > :first-child:not(.principal) {
@@ -104,7 +107,7 @@
 }
 
 .with-icon .icon {
-  margin-inline-end: var(--space, 1rem);
+  margin-inline-end: var(--gap, 1rem);
 }
 
 /* Imposter. */
@@ -135,8 +138,8 @@
     linear-gradient(90deg, white 50%, rgba(255,255,255,0)),
     linear-gradient(90deg, rgba(255,255,255,0), white 50%) 0 100%,
     /* Shadows */
-    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.5), rgba(0,0,0,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.5), rgba(0,0,0,0)) 0 100%;
+    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
   background-repeat: no-repeat;
   background-color: white;
   background-position: left, right;
@@ -198,7 +201,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: var(--sidebar-direction, 'row');
-  gap: var(--space, var(--s1));
+  gap: var(--gap, var(--s1));
 }
 
 .with-sidebar > :first-child {
@@ -226,7 +229,7 @@
 }
 
 .stack > * + * {
-  margin-block-start: var(--space, 1.5rem);
+  margin-block-start: var(--gap, 1.5rem);
 }
 
 

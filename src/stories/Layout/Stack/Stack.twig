@@ -2,7 +2,7 @@
   Do not use this template directly. #}
 
 {% set styles = [] %}
-{% set styles = space ? styles|merge(['--space: var(' ~ space ~ ');']) : styles %}
+{% set styles = space ? styles|merge(['--gap: var(' ~ space ~ ');']) : styles %}
 
 {% set classes = [
   'stack',

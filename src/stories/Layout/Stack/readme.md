@@ -6,9 +6,9 @@ The purpose of the "Stack" is to establish vertical spacing as a property of the
   - body
   - button
 
-Rather than placing margins on headings or buttons directly, we can wrap this collection of elements in a "Stack" to add spacing to the **body** in relation to the **heading** and the **button** in relation to the **body**, with appropriate spacing for this context. 
+Rather than placing margins on headings or buttons directly, we can wrap this collection of elements in a "Stack" to add spacing to the **body** in relation to the **heading** and the **button** in relation to the **body**, with appropriate spacing for this context.
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--space`: The space between elements.
+  - `--gap`: The space between elements.
 </details>

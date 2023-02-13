@@ -20,7 +20,7 @@ While you may not wish to center your Text between the Heading and Button in thi
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--space`: *(--s0)* Sets the gap value between cover sections. Be sure to use the "Modal Scale" variables, `--s*`, though the default should be good for most cases.
+  - `--gap`: *(--s0)* Sets the gap value between cover sections. Be sure to use the "Modal Scale" variables, `--s*`, though the default should be good for most cases.
   - `--cover-height`: *(100vh)* Sets the MINIMUM height of the cover.
   - `--cover-padding`: *(--s0)* By default the Cover layout has padding around the wrapping div. You may wish to have the cover go edge to edge (0), or some other padding value.
 </details>

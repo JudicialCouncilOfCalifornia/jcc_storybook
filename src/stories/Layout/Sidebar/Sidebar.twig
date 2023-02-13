@@ -3,7 +3,7 @@
 
 {% set styles = [] %}
 
-{% set styles = space ? styles|merge(['--space:var(' ~ space ~ ');']) : styles %}
+{% set styles = space ? styles|merge(['--gap:var(' ~ space ~ ');']) : styles %}
 {% set styles = sidebar_width ? styles|merge(['--sidebar-width:' ~ sidebar_width ~ ';']) : styles %}
 {% set styles = sidebar_direction ? styles|merge(['--sidebar-direction:' ~ sidebar_direction ~ ';']) : styles %}
 

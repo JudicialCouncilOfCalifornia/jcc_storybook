@@ -43,7 +43,7 @@
 
 @media (orientation: portrait) {
   .hangover .with-sidebar {
-    --space: 0;
+    --gap: 0;
   }
 
   .hangover .frame {

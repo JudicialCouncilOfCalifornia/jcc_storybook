@@ -24,16 +24,16 @@
   variant_class,
 ] %}
 
-{# 
+{#
  # Due to a lack of support in twigjs-loader, we need to define possible
- # sub components. The maintainer will not support variables for template 
+ # sub components. The maintainer will not support variables for template
  # parameter in include statements.
  #
  # i.e. {% include this_var_breaks_things with this_var_is_fine %}
  #
  # This would NOT break in Drupal, but in order for this to work in Storybook
  # we need to specify the include with if statements. It's better to have
- # this complexity in pattern library, rather than when integrating with 
+ # this complexity in pattern library, rather than when integrating with
  # Drupal.
  #
  # https://github.com/twigjs/twig.js/issues/806
@@ -61,7 +61,7 @@
 {# Section Template #}
 <div {{ attributes.addClass(classes) }}>
   <div class="section__content container">
-    <div class="section__header center stack" style="--space: var(--s0):">
+    <div class="section__header center stack" style="--gap: var(--s0):">
       {% if brow_data %}
         {% include "@atoms/Brow/Brow.twig" with brow_data %}
       {% endif %}

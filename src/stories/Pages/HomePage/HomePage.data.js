@@ -50,7 +50,7 @@ export default {
       sub_component_data: {
         attributes: new drupalAttribute(),
         variant: "",
-        cardWidth: "45ch",
+        card_width: "45ch",
         items: [
           {
             variant: "striped",
