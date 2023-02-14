@@ -1,4 +1,15 @@
 
+0.24.0 / 2023-02-13
+===================
+
+  * chore: A few improvements and variant demos.
+  * Minor tweaks for layout and styles.
+  * hangover - missing responsive
+  * LWR-47: Secondary Nav Component.
+  * chore: Some asset clean up.
+  * chore: remove debug code.
+  * Update wokflow to deploy gh pages on master branch push.
+
 0.23.8 / 2023-01-31
 ===================
 
