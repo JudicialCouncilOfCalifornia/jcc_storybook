@@ -2,7 +2,6 @@ import readme from './readme.md';
 import data from './Hangover.data';
 import Hangover from './Hangover.twig';
 import './Hangover.css';
-// import './Hangover.js';
 
 export default {
   title: 'Molecules/Hangover',
@@ -22,7 +21,21 @@ const Template = ({ ...args }) => {
   return Hangover({ ...args });
 };
 
-// Bind the Default component variant for this component.
 export const Default = Template.bind({});
-// Data comes from the Hangover.data.js file.
 Default.args = data.default;
+
+export const WithBrow = Template.bind({});
+WithBrow.args = data.with_brow;
+
+export const WithMedia = Template.bind({});
+WithMedia.args = data.with_media;
+
+export const WithText = Template.bind({});
+WithText.args = data.with_text;
+
+export const WithBottom = Template.bind({});
+WithBottom.args = data.with_bottom;
+
+export const HideMediaPortrait = Template.bind({});
+HideMediaPortrait.args = data.hide_media_portrait;
+

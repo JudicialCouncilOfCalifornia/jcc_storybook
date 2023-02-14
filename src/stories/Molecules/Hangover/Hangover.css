@@ -1,6 +1,10 @@
+.hangover {
+  --accent-color: var(--color-accent-warm-light-x);
+}
+
 /* Tweak top and bottom padding for space and to make collapsed image placement a little more tolerable. */
 .hangover .box {
-  padding-block: var(--s2);
+  padding-block: var(--s4);
   display: flex;
   align-items: center;
 }
@@ -8,14 +12,14 @@
 /* The brow/heading/text relationship is managed by the Stack. */
 /* It stacks them vertically and manages the space between. */
 /* Nested because space between brow/heading is different than heading/text. */
-.hangover .stack > .stack {
-  --space: 0;
+.hangover .stack > .stack > * + *{
+  margin-block-start: 0;
 }
 
 /* Set sidebar width a approximate horizontal image placement. */
 /* Also set flex direction so sidebar is on the right. */
 .hangover .with-sidebar {
-  --sidebar-width: 40ch;
+  --sidebar-width: 50ch;
   flex-direction: row-reverse;
 }
 
@@ -27,12 +31,13 @@
 
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
 .hangover__top-content-brow,
+.hangover__top .hangover__text,
 .hangover__top-content h1 {
   text-shadow:
-    3px 3px 6px var(--color-base-dark-x),
-    -3px -3px 6px var(--color-base-dark-x),
-    -3px 3px 6px var(--color-base-dark-x),
-    3px -3px 6px var(--color-base-dark-x)
+    3px 3px 8px var(--color-base-dark-x),
+    -3px -3px 8px var(--color-base-dark-x),
+    -3px 3px 8px var(--color-base-dark-x),
+    3px -3px 8px var(--color-base-dark-x)
   ;
 }
 
@@ -41,21 +46,28 @@
 }
 
 /* Set image width and aspect ratio. */
-/* Use negative bottom margin to pull the image into the bottom sidebar. */
 .hangover__top .frame {
   --frame-h: 4;
   --frame-v: 3;
   max-block-size: 300px;
   border: var(--s-1) solid var(--color-accent-warm-light-xx);
-  margin-block-end: -175px;
+}
+
+/* Use negative bottom margin to pull the image into the bottom sidebar. */
+.hangover--with-bottom .hangover__top .frame {
+  margin-block-end: -22ch;
 }
 
 @media (orientation: portrait) {
   .hangover .with-sidebar {
-    --gap: 0;
+    gap: 0;
+  }
+  /* Adjust space when stacked. */
+  .hangover .with-sidebar > *:first-of-type {
+    padding-block-end: 0;
   }
 
-  .hangover .frame {
+  .hangover--with-bottom .hangover__top .frame {
     margin-block-end: 0;
   }
 
@@ -63,3 +75,4 @@
     display: none;
   }
 }
+
