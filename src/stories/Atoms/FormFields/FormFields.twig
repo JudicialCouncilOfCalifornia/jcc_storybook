@@ -1,84 +1,66 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
+<div id="root">
+  <div class="section section--justify-center section--align-center section--color-warm-dark-x">
+    <div class="section__content container">
+      <div class="section__header center stack" style="--space: var(--s0):">
 
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
-{# Set up variant classes. #}
-{% set variant_class = variant ? 'form-feilds--' ~ variant : 'form-feilds--default' %}
-
-{# Create class array. #}
-{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
-{# Include variant classes form above. #}
-{% set classes = [
-  'form-fields',
-  variant_class,
-] %}
-
-<div {{ attributes.addClass(classes) }}>
-  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
-  {# Use BEM syntax for styling classes on sub-components. #}
-  <form action="page.php" method="GET" class="stack">
-    <div class="form-type-textfield">
-      <label for="textbox">Text Box</label>
-      <input type="text" name="textbox" />
-    </div>
-
-    <div class="form-type-textbox">
-      <label for="password">Password Input</label>
-      <input type="password" name="password" />
-    </div>
-    <div class="form-type-textarea">
-      <label class="label" for="#">Message</label>
-      <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Type your message here..."></textarea>
-    </div>
-    <div class="form-type-checkbox">
-      <label class="label" for="#">select checkboxes</label>
-      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-      <label class="label" for="#"> I have a bike</label>
-      <input type="checkbox" id="#" name="vehicle2" value="Car" />
-      <label class="label" for="#"> I have a car</label>
-      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-      <label class="label" for="#"> I have a boat</label>
-    </div>
-    <div class="form-type-radio-button">
-    <label class="label" for="subject">select radio button</label>
-    <p>Please select your age:</p>
-    <input type="radio" id="age1" name="age" value="30" />
-    <label for="age1">0 - 30</label>
-    <input type="radio" id="age2" name="age" value="60" />
-    <label for="age2">31 - 60</label>
-    <input type="radio" id="age3" name="age" value="100" />
-    <label for="age3">61 - 100</label>
-   </div>
-    <div class="container">
-      <div class="row pt-5 pb-5">
-        <div class="col-md-12 col-lg-6">
-          <h2 class="footer-section">Stay Up-to-date</h2>
-          <p>Subscribe with your email address to receive court</p>
+        <h2>Contact Us</h2>
+        <p>For questions or update for language access resources. Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+      </div>
+      <div class="section__main center stack">
+        <div class="cluster">
+          <div class="el-input stack half-stack">
+            <label class="el-input__label" for="txtYourName">Your Name</label>
+            <div class="el-input__field m-t-0">
+              <input type="text" id="txtYourName" name="txtYourName" placeholder="Enter name" />
+            </div>
+          </div>
+          <div class="el-input stack half-stack">
+            <label class="el-input__label" for="txtYourEmail">Your Email</label>
+            <div class="el-input__field m-t-0">
+              <input type="text" id="txtYourEmail" name="txtYourEmail" placeholder="Enter email" />
+            </div>
+          </div>
         </div>
-        <div class="col-md-12 col-lg-6">
-          <div class="form-group">
-            <label class="label" for="email">EMAIL ADDRESS</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="" />
-
-            <input type="submit" value="Send Form" class="buttons" />
+        <div class="form-type-textfield">
+          <label for="txtSubjectLine">Subject Line</label>
+          <input type="text" id="txtSubjectLine" name="txtSubjectLine" placeholder="Enter subject" />
+        </div>
+        <div class="form-type-textbox">
+          <label for="password">Message</label>
+          <textarea id="txtMessage" name="txtMessage" placeholder="Type your messages here.."></textarea>
+        </div>
+        <div class="form-type-checkbox">
+          <label class="label" for="chkremme">Remember me</label>
+          <input type="checkbox" id="chkremme" name="chkremme" checked="checked" />
+        </div>
+        <div class="form-type-radio-button">
+          <label class="label" for="subject">Turn Notifications</label>
+          <label for="radio1">On:</label>
+          <input type="radio" id="radio1" name="radioNotif" checked="checked" />
+          <label for="radio2">Off:</label>
+          <input type="radio" id="radio2" name="radioNotif" />
+        </div>
+      </div>
+      <div class="section__button center">
+        <a href="#" class="button button--secondary button--normal" _keys="class">Send Form</a>
+      </div>
+    </div>
+  </div>
+  <div class="section section--justify-center section--align-center section--color-primary-dark-xx">
+    <div class="section__content container stay-aln">
+      <div class="cluster">
+        <div class="section__header stack half-stack" style="--space: var(--s0):">
+          <h2>Stay Up-to-date</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>
+        </div>
+        <div class="el-input stack half-stack">
+          <label class="el-input__label" for="txtFooterYourName">EMAIL ADDRESS</label>
+          <div class="el-input__field m-t-0">
+            <input type="text" id="txtFooterYourName" name="txtFooterYourName" placeholder="Enter name" />
+            <a href="#" class="button button--secondary button--normal" _keys="class">Join</a>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="form-type-radio-submit">
-      <input type="submit" value="Send Form" class="buttons" />
-    </div>
-    {# More form fields here. #}
-  </form>
+  </div>
 </div>
