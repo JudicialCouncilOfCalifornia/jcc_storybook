@@ -44,11 +44,23 @@
   {% if sub_component_template == 'Card' %}
     {% include "@molecules/Card/Card.twig" with sub_component_data %}
   {% endif %}
-  {% if sub_component_template == 'Cards' %}
+  {% if sub_component_template == 'Cards' and sub_component_bgImg == false %}
     {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
   {% endif %}
   {% if sub_component_template == 'TeaserPlusList' %}
     {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with sub_component_data %}
+  {% endif %}
+  {% if sub_component_template == 'Cards' and sub_component_bgImg == true %}
+    <div class="bg-clr-wht">
+      {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with teaser_plus_list_data %}
+    </div>
+    <div class="hero hero--banner hero--justify-left">
+      <div class="hero__image bg-img"></div>
+      <div class="hero__tint"></div>
+      <div class="hero__content container">
+        {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
+      </div>
+    </div>
   {% endif %}
 {% endset %}
 

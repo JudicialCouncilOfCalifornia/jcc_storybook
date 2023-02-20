@@ -54,6 +54,21 @@
   )
 }
 
+.section--color-striped-base-dark-x {
+  --color: var(--color-white);
+  --accent-color: var(--color-accent-warm-light-x);
+  --heading-color: var(--color-white);
+  --button-fg: var(--accent-color);
+
+  background: repeating-linear-gradient(
+          125deg,
+          #707070,
+          #666666 1px,
+          var(--color-base-dark-x) 2px,
+          var(--color-base-dark-x) 8px
+  )
+}
+
 .section--color-warm-dark-xx {
   --color: var(--color-white);
   --accent-color: var(--color-white);
@@ -73,4 +88,21 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: var(--s2);
+}
+
+.bg-clr-wht {
+  --color: var(--color-black);
+  background: var(--color-white);
+}
+
+.bg-clr-wht h3 {
+  --color: var(--color-primary-dark-xx);
+}
+
+.bg-img {
+  --background-image: url('https://source.unsplash.com/random/900×700/?books');
+}
+
+.hero__content .cards--default {
+  margin: 40px;
 }

@@ -14,7 +14,7 @@ export default {
       description: "Variant name based on background color which also sets complimentary styles.",
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'select' },
-      options: ['default', 'primary-dark-xx', 'primary-dark-xx-stripe', 'warm-dark-xx', 'warm-dark-x', 'white'],
+      options: ['default', 'primary-dark-xx', 'primary-dark-xx-stripe', 'warm-dark-xx', 'warm-dark-x', 'white', 'backgroundImage'],
     },
     first_component: { 
       description: "If true, sets the section heading to H1",
@@ -73,3 +73,6 @@ WarmDarkX.args = data.warm_dark_x;
 
 export const White = Template.bind({});
 White.args = data.white;
+
+export const BackgroundImage = Template.bind({});
+BackgroundImage.args = data.backgroundImage;
