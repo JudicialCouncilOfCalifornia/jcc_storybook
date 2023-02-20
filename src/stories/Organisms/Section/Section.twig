@@ -61,6 +61,23 @@
         {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
       </div>
     </div>
+    <div class="section section--justify-center section--align-center section--color-primary-dark-xx">
+      <div class="section__content container stay-aln">
+        <div class="cluster">
+          <div class="section__header stack half-stack" style="--space: var(--s0):">
+            <h2>Stay Up-to-date</h2>
+            <p>Subscribe with your email address to recieve Court Interpreter Program updates, exam news and resources.</p>
+          </div>
+          <div class="el-input stack half-stack">
+            <label class="el-input__label" for="txtFooterYourName">EMAIL ADDRESS</label>
+            <div class="el-input__field m-t-0">
+              <input type="text" id="txtFooterYourName" name="txtFooterYourName" placeholder="Enter name" />
+              <a href="#" class="button button--secondary button--normal" _keys="class">Join</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   {% endif %}
 {% endset %}
 
@@ -70,10 +87,16 @@
   {% endset %}
 {% endif %}
 
+
+{% if headerAlignClass %}
+{% else %}
+  {% set headerAlignClass = "center" %}
+{% endif %}
+
 {# Section Template #}
 <div {{ attributes.addClass(classes) }}>
   <div class="section__content container">
-    <div class="section__header center stack" style="--gap: var(--s0):">
+    <div class="section__header {{ headerAlignClass }} stack" style="--gap: var(--s0):">
       {% if brow_data %}
         {% include "@atoms/Brow/Brow.twig" with brow_data %}
       {% endif %}
@@ -89,7 +112,7 @@
         {{ sub_component }}
       {% endif %}
     </div>
-    {% if button_data %}
+    {% if button_data and sub_component_template != 'Cards' %}
       <div class="section__button center">
         {% include "@atoms/Button/Button.twig" with button_data %}
       </div>

@@ -211,7 +211,8 @@ export default {
       ],
       attributes: new drupalAttribute()
     },
-    heading: 'Heading Example',
+    heading: 'Court Interpreters',
+    headerAlignClass: "aln-left",
     text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
     button_data: {
       label: "Button",
