@@ -3,7 +3,7 @@
 
 As a general approach to building components for this library.
 
-  - Read all the docs, and the external sources the reference.
+  - Read all the docs, and the external sources they reference.
   - Always be brutally minimalist with the amount of code you use to achieve something.
   - Always build off of existing foundations before creating new things. This means, know the systems and components in this library.
   - Start with all your necessary elements in the order they should appear. i.e. heading, text, image, etc.
