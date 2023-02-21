@@ -10,40 +10,40 @@ export default {
     notes: readme,
   },
   argTypes: {
-    variant: { 
+    variant: {
       description: "Variant name based on background color which also sets complimentary styles.",
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'select' },
       options: ['default', 'primary-dark-xx', 'primary-dark-xx-stripe', 'warm-dark-xx', 'warm-dark-x', 'white'],
     },
-    first_component: { 
+    first_component: {
       description: "If true, sets the section heading to H1",
       table: {defaultValue: {summary: false}},
     },
-    brow_data: { 
+    brow_data: {
       description: "Populates the Brow template.",
       table: {defaultValue: {summary: false}},
     },
-    heading: { 
+    heading: {
       description: "Populates the Brow template.",
       table: {defaultValue: {summary: false}},
     },
-    text: { 
+    text: {
       description: "Populates the Brow template.",
       table: {defaultValue: {summary: false}},
     },
-    sub_component_template: { 
+    sub_component_template: {
       description: "Sets the template to use for the sub component.",
       table: {defaultValue: {summary: false}},
       control: { type: 'select' },
       options: [false, 'Card', 'TeaserPlusList'],
     },
-    sub_component_data: { 
+    sub_component_data: {
       description: "Populates the template specified in sub_component_template.",
       table: {defaultValue: {summary: false}},
       control: { type: 'object' },
     },
-    button_data: { 
+    button_data: {
       description: "Populates the Button template.",
       table: {defaultValue: {summary: false}},
     },
@@ -73,3 +73,6 @@ WarmDarkX.args = data.warm_dark_x;
 
 export const White = Template.bind({});
 White.args = data.white;
+
+export const BGImage = Template.bind({});
+BGImage.args = data.bg_image;

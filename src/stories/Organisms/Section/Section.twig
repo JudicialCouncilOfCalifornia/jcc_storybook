@@ -14,7 +14,35 @@
   ? 'section--align-' ~ content_align
   : 'section--align-center' %}
 
+{% set variant_bg_image = background_image_url is not empty ? 'section--with-bg-image' : '' %}
+
 {% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
+
+{% set styles = [] %}
+
+{% if bg_tint %}
+  {% set styles = styles|merge([
+    '--bg: var(--color-' ~ bg_tint ~ ');',
+  ]) %}
+{% endif %}
+
+{% if color %}
+  {% set styles = styles|merge([
+    '--color: var(--color-' ~ color ~ ');',
+  ]) %}
+{% endif %}
+
+{% if heading_color %}
+  {% set styles = styles|merge([
+    '--heading-color: var(--color-' ~ heading_color ~ ');',
+  ]) %}
+{% endif %}
+
+{% if accent_color %}
+  {% set styles = styles|merge([
+    '--accent-color: var(--color-' ~ accent_color ~ ');',
+  ]) %}
+{% endif %}
 
 {# Create class array #}
 {% set classes = [
@@ -22,6 +50,7 @@
   variant_justify,
   variant_align,
   variant_class,
+  variant_bg_image
 ] %}
 
 {#
@@ -59,8 +88,12 @@
 {% endif %}
 
 {# Section Template #}
-<div {{ attributes.addClass(classes) }}>
-  <div class="section__content container">
+<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
+  {% if background_image_url is not empty %}
+    <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
+    <div class="section__tint"></div>
+  {% endif %}
+  <div class="section__content container box">
     <div class="section__header center stack" style="--gap: var(--s0):">
       {% if brow_data %}
         {% include "@atoms/Brow/Brow.twig" with brow_data %}
