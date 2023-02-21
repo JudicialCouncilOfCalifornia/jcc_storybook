@@ -27,8 +27,9 @@ a.button::after {
 /* Size */
 button.button--small,
 a.button.button--small {
+  border-width: 1px;
+  padding: var(--s-2) var(--s2);
   font-size: var(--s0);
-  padding: var(--s-1) var(--s2);
 }
 
 button.button--large,
@@ -42,7 +43,7 @@ button.button--secondary,
 a.button.button--secondary {
   --button-bg: var(--color-accent-warm-dark-x);
   --button-fg: var(--color-white);
-  --button-border: var(--color-white);
+  --button-border: var(--color-accent-warm-dark-x);
 }
 
 button.button--text,

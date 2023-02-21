@@ -8,6 +8,7 @@ export default {
   title: 'Molecules/EmailSingup',
   component: EmailSingup,
   parameters: {
+    layout: 'padded',
     notes: readme,
   },
   argTypes: {

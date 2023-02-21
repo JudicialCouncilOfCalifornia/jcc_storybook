@@ -1,17 +1,3 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'email-singup--' ~ variant : 'email-singup--default' %}
 
@@ -20,27 +6,25 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'email-singup',
+  'container',
   variant_class,
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
-  {# Use BEM syntax for styling classes on sub-components. #}
-  <div class="section section--justify-center section--align-center section--color-primary-dark-xx">
-    <div class="section__content container stay-aln">
-      <div class="cluster">
-        <div class="section__header stack half-stack" style="--space: var(--s0):">
-          <h2>Stay Up-to-date</h2>
-          <p>Subscribe with your email address to recieve Court Interpreter Program updates, exam news and resources.</p>
-        </div>
-        <div class="el-input stack half-stack">
-          <label class="el-input__label" for="txtFooterYourName">EMAIL ADDRESS</label>
-          <div class="el-input__field m-t-0">
-            <input type="text" id="txtFooterYourName" name="txtFooterYourName" placeholder="Enter name" />
-            <a href="#" class="button button--secondary button--normal" _keys="class">Join</a>
-          </div>
+  {# {% include "@organisms/Section/Section.twig" with section %} #}
+  <div class="switcher">
+    <div class="email-signup__aside stack">
+      <h2>Stay Up-to-date</h2>
+      <p>Subscribe with your email address to recieve Court Interpreter Program updates, exam news and resources.</p>
+    </div>
+    <form class="email-signup__form">
+      <div class="el-input el-input--with-button stack">
+        <label class="el-input__label" for="txtFooterYourName">EMAIL ADDRESS</label>
+        <div class="el-input__field cluster">
+          <input type="email" id="email" name="email" placeholder="Enter Email" />
+          <button onclick='alert("Not a real form.")' class="button button--secondary button--small">Join</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

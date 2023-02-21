@@ -61,6 +61,10 @@
   {% if sub_component_template == 'TeaserPlusList' %}
     {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with sub_component_data %}
   {% endif %}
+  {# If no template just render data as is. #}
+  {% if sub_component_template is empty %}
+    {{ sub_component_data }}
+  {% endif %}
 {% endset %}
 
 {% if sub_component|trim == "" %}
