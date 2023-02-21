@@ -91,6 +91,12 @@
   background: var(--color-accent-warm-light-xx);
 }
 
+.section--with-bg-image {
+  --color: var(--color-white);
+  --heading-color: var(--color-white);
+  --accent-color: var(--color-white);
+}
+
 /* Drop padding when two sections of the same background are touching. */
 .section--color-default + .section--color-default,
 .section--color-warm-dark-x + .section--color-warm-dark-x,

@@ -94,9 +94,6 @@ export default {
   bg_image: {
     variant: 'default',
     first_component: false,
-    color: "white",
-    heading_color: "white",
-    accent_color: "white",
     bg_tint: "accent-warm-dark-xx",
     background_image_url: "https://source.unsplash.com/random/900×700/?office,people",
     brow_data: {

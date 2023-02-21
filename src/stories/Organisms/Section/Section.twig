@@ -26,24 +26,6 @@
   ]) %}
 {% endif %}
 
-{% if color %}
-  {% set styles = styles|merge([
-    '--color: var(--color-' ~ color ~ ');',
-  ]) %}
-{% endif %}
-
-{% if heading_color %}
-  {% set styles = styles|merge([
-    '--heading-color: var(--color-' ~ heading_color ~ ');',
-  ]) %}
-{% endif %}
-
-{% if accent_color %}
-  {% set styles = styles|merge([
-    '--accent-color: var(--color-' ~ accent_color ~ ');',
-  ]) %}
-{% endif %}
-
 {# Create class array #}
 {% set classes = [
   'section',
