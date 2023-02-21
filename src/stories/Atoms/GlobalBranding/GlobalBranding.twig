@@ -1,0 +1,22 @@
+{##
+ #  Atomic templates should be as "dumb" as possible.
+ #
+ #  Styles should be applied as high up the DOM as possible so they can cascade
+ #  down to lower elements.
+ #}
+
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'global-branding--' ~ variant : 'global-branding--default' %}
+
+{% set classes = [
+  'global-branding',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="global-branding__wrapper">
+    <div class="global-branding__inner">
+      <a href="{{ destination }}" target="_blank">{{ text }}</a>
+    </div>
+  </div>
+</div>
