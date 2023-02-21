@@ -1,4 +1,11 @@
 
+0.25.0 / 2023-02-21
+===================
+
+  * chore: Update lib.
+  * fix: LWR32: Changed my mind about configurable text colors. Default to white with CSS.
+  * feat: LWR32: Add background image capability to Section component.
+
 0.24.1 / 2023-02-13
 ===================
 
