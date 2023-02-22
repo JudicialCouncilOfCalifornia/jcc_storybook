@@ -1,0 +1,44 @@
+{##
+ #  Atomic templates should be as "dumb" as possible.
+ #
+ #  Styles should be applied as high up the DOM as possible so they can cascade
+ #  down to lower elements.
+ #}
+
+{#
+  Available variables:
+    main:
+    variant:
+    attributes: drupalAttribute()
+#}
+
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'hat--' ~ variant : 'hat--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'hat',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
+  {# Use BEM syntax for styling classes on sub-components. #}
+  <div class="hat__...">
+    <div class="container">
+      <div class="box">
+        <div class="cluster">
+          <div>{{ left_header_text }}</div>
+          <div class="stack sec-nav-container">
+            {% if secondarynav_data is not empty %}
+              {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondarynav_data %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hat-line"></div>
+  </div>
+</div>
