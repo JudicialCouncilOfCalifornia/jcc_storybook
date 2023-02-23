@@ -1,8 +1,7 @@
 .global-branding a {
-    font-family: --font-global-brand;
+    font-family: var(--font-global-brand);
     font-size: var(--s0);
-    padding: 0 var(--s0);
-    color: var(--color-white);
+    color: var(--color, var(--color-white));
     text-transform: uppercase;
     text-decoration: none;
 }

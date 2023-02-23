@@ -12,12 +12,4 @@ export default {
     },
     attributes: new drupalAttribute()
   },
-  another_variant: {
-    variant: "content-bg",
-    sub_component_data: {
-      variant: "default",
-      attributes: new drupalAttribute(),
-    },
-    attributes: new drupalAttribute()
-  }
 }
