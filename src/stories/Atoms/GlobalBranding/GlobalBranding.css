@@ -8,8 +8,3 @@
 .global-branding a:hover {
     text-decoration: underline;
 }
-
-
-.global-branding.global-branding--inverted a{
-    color: var(--color-primary);
-}

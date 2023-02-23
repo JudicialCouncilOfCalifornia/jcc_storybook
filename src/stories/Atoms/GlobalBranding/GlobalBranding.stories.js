@@ -6,19 +6,12 @@ import './GlobalBranding.css';
 export default {
   title: 'Atoms/GlobalBranding',
   component: GlobalBranding,
+  layout: "centered",
   parameters: {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
     attributes: {table: {disable: true}},
-    // Variant select is a pretty common arg.
-    variant: {
-      description: "GlobalBranding variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'inverted'],
-    },
   },
 };
 
