@@ -62,10 +62,6 @@
   .hangover .with-sidebar {
     gap: 0;
   }
-  /* Adjust space when stacked. */
-  .hangover .with-sidebar > *:first-of-type {
-    padding-block-end: 0;
-  }
 
   .hangover--with-bottom .hangover__top .frame {
     margin-block-end: 0;
