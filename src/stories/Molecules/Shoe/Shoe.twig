@@ -1,0 +1,45 @@
+{##
+ #  Atomic templates should be as "dumb" as possible.
+ #
+ #  Styles should be applied as high up the DOM as possible so they can cascade
+ #  down to lower elements.
+ #}
+
+{#
+  Available variables:
+    main:
+    variant:
+    attributes: drupalAttribute()
+#}
+
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'shoe--' ~ variant : 'shoe--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'shoe',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
+  {# Use BEM syntax for styling classes on sub-components. #}
+  <div class="shoe__...">
+    <div class="shoe-container">
+      <div class="box">
+        <div class="cluster" style="justify-content: space-between; align-items: center;">
+          <div class="cluster">
+            <div style="text-align: center;">{{ shoeTitle }}</div>
+          </div>
+          <div class="cluster sec-nav-container">
+            {% if secondarynav_data is not empty %}
+              {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondarynav_data %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

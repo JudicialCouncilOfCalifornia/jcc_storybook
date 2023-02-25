@@ -1,0 +1,20 @@
+.shoe-container {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.sec-nav-container * {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.secondary-nav > ul > li a {
+    color: var(--color-white);
+}
+
+.shoe-container .box {
+    padding: 0px 0px 0px var(--s1);
+}
