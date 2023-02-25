@@ -1,17 +1,25 @@
-.container {
+.hat-container {
     background-color: var(--color-black);
     color: var(--color-white);
+    position: absolute;
+    top: 0px;
     width: 100%;
-    max-width: 100%;
-}
-.hat-line {
-    width: 100%;
-    height: 10px;
-    background-color: var(--color-accent-warm-light-x);
 }
 
 .sec-nav-container * {
     background-color: var(--color-black);
     color: var(--color-white);
-    --align-items: rigt;
+}
+
+.secondary-nav > ul > li a {
+    color: var(--color-white) !important;
+}
+
+.hat-container .box {
+    padding: 0px 0px 0px var(--s1);
+}
+.hat-line {
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-accent-warm-light-x);
 }

@@ -8,36 +8,31 @@ export default {
       variant: "default",
       attributes: new drupalAttribute(),
     },
-    left_header_text: "JUDICIAL BRANCH OF CALIFORNIA",
+    hatTitle: "JUDICIAL BRANCH OF CALIFORNIA",
     secondarynav_data: {
       variant: "",
       overflowing_variant: "",
       links: [
         {
-          text: "Careers",
+          text: "Supreme Court",
           url: "#",
           is_current: false,
         },
         {
-          text: "Contact Us",
+          text: "Courts of Appeal",
           url: "#",
           is_current: false,
         },
         {
-          text: "Accessibility",
+          text: "Superior Courts",
           url: "#",
           is_current: false,
         },
         {
-          text: "Public Access To Records",
+          text: "Judicial Council",
           url: "#",
           is_current: false,
-        },
-        {
-          text: "Newsroom",
-          url: "#",
-          is_current: false,
-        },
+        }
       ],
       attributes: new drupalAttribute()
     },
