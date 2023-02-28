@@ -6,8 +6,8 @@ import './GlobalBranding.css';
 export default {
   title: 'Atoms/GlobalBranding',
   component: GlobalBranding,
-  layout: "centered",
   parameters: {
+    layout: "centered",
     notes: readme,
   },
   argTypes: {
