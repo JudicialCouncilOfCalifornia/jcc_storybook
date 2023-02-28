@@ -2,8 +2,33 @@
   --color: var(--color-black);
   --heading-color: var(--color-primary-dark-x);
   color: var(--color);
-  padding-top: var(--s5);
-  padding-bottom: var(--s5);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section";
+}
+
+.section > * {
+  grid-area: section;
+}
+
+.section__image {
+  background-image: var(--background-image);
+  background-position: center center;
+  background-size: cover;
+}
+
+.section__tint {
+  mix-blend-mode: multiply;
+  background-color: var(--bg);
+  width: 100%;
+  height: 100%;
+}
+
+.section__content {
+  box-sizing: border-box;
+  padding-block: var(--s5);
+  /* Brings content above tint due to grid. */
+  z-index: 1;
 }
 
 .section > * > .center {
@@ -64,6 +89,12 @@
   --color: var(--color-black);
   --accent-color: var(--color-accent-warm-dark-x);
   background: var(--color-accent-warm-light-xx);
+}
+
+.section--with-bg-image {
+  --color: var(--color-white);
+  --heading-color: var(--color-white);
+  --accent-color: var(--color-white);
 }
 
 /* Drop padding when two sections of the same background are touching. */
