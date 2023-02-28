@@ -1,0 +1,14 @@
+.hat {
+  --color: var(--color-white);
+  border-bottom: 4px solid var(--color-accent-warm-light-x);
+  background: var(--color-black);
+}
+
+.hat .box {
+  padding-block: var(--s-5);
+}
+
+.hat .box > .cluster {
+  row-gap: 0;
+  justify-content: space-between;
+}
