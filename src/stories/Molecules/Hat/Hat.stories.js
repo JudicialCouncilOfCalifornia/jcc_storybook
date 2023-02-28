@@ -2,7 +2,6 @@ import readme from './readme.md';
 import data from './Hat.data';
 import Hat from './Hat.twig';
 import './Hat.css';
-// import './Hat.js';
 
 export default {
   title: 'Molecules/Hat',
