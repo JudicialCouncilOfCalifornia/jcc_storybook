@@ -1,17 +1,3 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'hat--' ~ variant : 'hat--default' %}
 
@@ -24,23 +10,18 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
-  {# Use BEM syntax for styling classes on sub-components. #}
-  <div class="hat__...">
-    <div class="hat-container">
-      <div class="box">
-        <div class="cluster" style="justify-content: space-between; align-items: center;">
-          <div class="cluster">
-            <div style="text-align: center;">{{ hatTitle }}</div>
-          </div>
-          <div class="cluster sec-nav-container">
-            {% if secondarynav_data is not empty %}
-              {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondarynav_data %}
-            {% endif %}
-          </div>
+  <div class="container">
+    <div class="box">
+      <div class="cluster">
+        {% if global_branding_data is not empty %}
+          {% include "@atoms/GlobalBranding/GlobalBranding.twig" with global_branding_data %}
+        {% endif %}
+        <div class="cluster">
+          {% if secondary_nav_data is not empty %}
+            {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+          {% endif %}
         </div>
       </div>
-      <div class="hat-line"></div>
     </div>
   </div>
 </div>

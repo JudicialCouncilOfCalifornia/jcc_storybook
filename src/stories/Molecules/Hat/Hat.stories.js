@@ -20,7 +20,6 @@ export default {
       control: { type: 'radio' },
       options: ['default', 'variant_one'],
     },
-    // More args here.
   },
 };
 
@@ -31,9 +30,4 @@ const Template = ({ ...args }) => {
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
-// Data comes from the Hat.data.js file.
 Default.args = data.default;
-
-// // Bind additional component variants like this.
-// export const [VariantName] = Template.bind({});
-// [VariantName].args = data.[VariantName];

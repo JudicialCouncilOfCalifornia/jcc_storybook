@@ -12,17 +12,29 @@
   padding-block: var(--s-6);
 }
 
+.secondary-nav ul li:first-of-type a {
+  padding-inline-start: 0;
+}
+
+.secondary-nav ul li:last-of-type a {
+  padding-inline-end: 0;
+}
+
 .secondary-nav > ul > li a {
   display: block;
   border-inline-start: 1px solid transparent;
   padding-inline: var(--s1);
   line-height: 1em;
-  color: var(--color-base-dark-x);
+  color: var(--color, var(--color-base-dark-x));
   text-decoration: none;
 }
 
 .secondary-nav > ul > li a:hover {
   opacity: .5;
+}
+
+.secondary-nav .reel {
+  background: none;
 }
 
 .secondary-nav .reel.overflowing {
@@ -64,6 +76,7 @@
 /* Display: none; breaks the JS resize observer so it will not re-appear. */
 /* Reduce the element dimensions to 0 instead. Width remains for observer. */
 .secondary-nav--overflowing-hidden .reel.overflowing {
+  --gap: 0;
   height: 0;
   padding: 0;
   margin: 0;

@@ -4,14 +4,14 @@ import drupalAttribute from 'drupal-attribute'
 export default {
   default: {
     variant: "default",
-    sub_component_data: {
-      variant: "default",
-      attributes: new drupalAttribute(),
+    global_branding_data: {
+      text: "Judicial Branch of California",
+      destination: "https://courts.ca.gov",
+      attributes: new drupalAttribute()
     },
-    hatTitle: "JUDICIAL BRANCH OF CALIFORNIA",
-    secondarynav_data: {
+    secondary_nav_data: {
       variant: "",
-      overflowing_variant: "",
+      overflowing_variant: "hidden",
       links: [
         {
           text: "Supreme Court",
