@@ -11,7 +11,7 @@ export default {
     },
     secondary_nav_data: {
       variant: "",
-      overflowing_variant: "hidden",
+      overflowing_variant: "stack",
       links: [
         {
           text: "Contact Us",
@@ -25,11 +25,6 @@ export default {
         },
         {
           text: "Terms Of Use",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "@ 2022",
           url: "#",
           is_current: false,
         }

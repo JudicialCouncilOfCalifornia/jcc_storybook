@@ -1,16 +1,16 @@
 .shoe {
-    --color: var(--color-white);
-    background: var(--color-black);
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
+  --color: var(--color-white);
+  background: var(--color-primary-dark-xx);
 }
 
 .shoe .box {
-    padding-block: var(--s-5);
+  padding-block: var(--s-5);
 }
 
 .shoe .box > .cluster {
-    row-gap: 0;
-    justify-content: space-between;
+  justify-content: space-between;
+}
+
+.shoe .box > .cluster > .cluster {
+  --gap: var(--s3);
 }

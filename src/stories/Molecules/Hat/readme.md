@@ -3,6 +3,8 @@
 
 The Hat is a global branding element containing the Global Brand word mark and global links to related sites.
 
+The Secondary Nav component is used for the links with "hidden" overflow so the links disappear when there's no room for them.
+
 <details>
   <summary>Inherited CSS Variables:</summary>
   - `--color`: Sets the font color of child elements.

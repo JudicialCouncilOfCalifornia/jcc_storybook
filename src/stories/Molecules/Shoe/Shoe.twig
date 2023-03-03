@@ -20,6 +20,7 @@
           {% if secondary_nav_data is not empty %}
             {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
           {% endif %}
+          <p>&copy; {{ "now"|date("Y") }}</p>
         </div>
       </div>
     </div>
