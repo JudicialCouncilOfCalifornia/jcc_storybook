@@ -1,4 +1,28 @@
 
+0.26.0 / 2023-03-02
+===================
+
+  * chore: update lib and scheme.
+  * LWR-42: clean up shoe.
+  * updated the shoe component as per the instructions
+  * Merge pull request #7 from JudicialCouncilOfCalifornia/feature/LWR-41-hat
+  * chore: remove commented out code.
+  * LWR-41: rewrite exmaple.
+  * fixed the new changes as per the ticket
+  * fixed the hat component as per the ticket
+  * Merge pull request #6 from JudicialCouncilOfCalifornia/feature/global-branding
+  * Merge branch 'master' into feature/global-branding
+  * chore: update CSS formatting.
+  * chore: export lib.
+  * fix: storybook component layout in parameters.
+  * feedback
+  * feedback
+  * Merge pull request #8 from JudicialCouncilOfCalifornia/hangover-margin-responsiveness
+  * css rule
+  * globalbranding story
+  * fix: typo
+  * chore: Update best practices docs.
+
 0.25.0 / 2023-02-21
 ===================
 
