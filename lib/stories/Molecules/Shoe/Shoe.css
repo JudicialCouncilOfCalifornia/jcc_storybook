@@ -1,0 +1,1 @@
+.shoe{--color:var(--color-white);background:var(--color-primary-dark-xx)}.shoe .box{padding-block:var(--s-5)}.shoe .box>.cluster{justify-content:space-between}.shoe .box>.cluster>.cluster{--gap:var(--s3)}
