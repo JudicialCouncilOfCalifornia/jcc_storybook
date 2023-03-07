@@ -1,4 +1,15 @@
 
+0.28.0 / 2023-03-07
+===================
+
+  * feat: LWR-39: initial form fields.
+  * fixed the text
+  * fixed the styling for all the feilds as per the ticket
+  * updated the changes as per the request for the form feilds
+  * added all feilds for the form
+  * First fields to get started.
+  * initial commit for formfields
+
 0.27.0 / 2023-03-07
 ===================
 
