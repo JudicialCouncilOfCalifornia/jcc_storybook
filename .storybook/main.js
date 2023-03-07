@@ -5,6 +5,7 @@ module.exports = {
     "../src/css/scheme-default.css",
     "../src/css/layout-primitives.css",
     "../src/css/elements.css",
+    "../src/stories/Atoms/FormFields/FormFields.css",
     "../src/stories/Layout/Reel/Reel.js",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],

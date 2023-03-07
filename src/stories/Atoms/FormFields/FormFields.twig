@@ -1,66 +1,38 @@
-<div id="root">
-  <div class="section section--justify-center section--align-center section--color-warm-dark-x">
-    <div class="section__content container">
-      <div class="section__header center stack" style="--space: var(--s0):">
+<div class="form-field-demo">
+	<form class="stack" action="/form/sample" method="post" id="form-sample">
 
-        <h2>Contact Us</h2>
-        <p>For questions or update for language access resources. Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-      </div>
-      <div class="section__main center stack">
-        <div class="cluster">
-          <div class="el-input stack half-stack">
-            <label class="el-input__label" for="txtYourName">Your Name</label>
-            <div class="el-input__field m-t-0">
-              <input type="text" id="txtYourName" name="txtYourName" placeholder="Enter name" />
-            </div>
-          </div>
-          <div class="el-input stack half-stack">
-            <label class="el-input__label" for="txtYourEmail">Your Email</label>
-            <div class="el-input__field m-t-0">
-              <input type="text" id="txtYourEmail" name="txtYourEmail" placeholder="Enter email" />
-            </div>
-          </div>
-        </div>
-        <div class="form-type-textfield">
-          <label for="txtSubjectLine">Subject Line</label>
-          <input type="text" id="txtSubjectLine" name="txtSubjectLine" placeholder="Enter subject" />
-        </div>
-        <div class="form-type-textbox">
-          <label for="password">Message</label>
-          <textarea id="txtMessage" name="txtMessage" placeholder="Type your messages here.."></textarea>
-        </div>
-        <div class="form-type-checkbox">
-          <label class="label" for="chkremme">Remember me</label>
-          <input type="checkbox" id="chkremme" name="chkremme" checked="checked" />
-        </div>
-        <div class="form-type-radio-button">
-          <label class="label" for="subject">Turn Notifications</label>
-          <label for="radio1">On:</label>
-          <input type="radio" id="radio1" name="radioNotif" checked="checked" />
-          <label for="radio2">Off:</label>
-          <input type="radio" id="radio2" name="radioNotif" />
-        </div>
-      </div>
-      <div class="section__button center">
-        <a href="#" class="button button--secondary button--normal" _keys="class">Send Form</a>
-      </div>
-    </div>
-  </div>
-  <div class="section section--justify-center section--align-center section--color-primary-dark-xx">
-    <div class="section__content container stay-aln">
-      <div class="cluster">
-        <div class="section__header stack half-stack" style="--space: var(--s0):">
-          <h2>Stay Up-to-date</h2>
-          <p>Subscribe with your email address to recieve Court Interpreter Program updates, exam news and resources.</p>
-        </div>
-        <div class="el-input stack half-stack">
-          <label class="el-input__label" for="txtFooterYourName">EMAIL ADDRESS</label>
-          <div class="el-input__field m-t-0">
-            <input type="text" id="txtFooterYourName" name="txtFooterYourName" placeholder="Enter name" />
-            <a href="#" class="button button--secondary button--normal" _keys="class">Join</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="form-item form-item-text-field-label ">
+			<label for="edit-text-field-label">Text Field Label</label>
+			<input data-drupal-selector="edit-text-field-label" aria-describedby="edit-text-field-label--description" type="text" id="edit-text-field-label" name="text_field_label" value="" size="60" maxlength="255" class="form-text"/>
+
+			<div class="description">
+				<div id="edit-text-field-label--description" class="webform-element-description">
+					Description.
+				</div>
+			</div>
+		</div>
+
+		<div class="form-item form-item-textarea-label">
+			<label for="edit-textarea-label">Textarea Label</label>
+			<div>
+				<textarea data-drupal-selector="edit-textarea-label" aria-describedby="edit-textarea-label--description" id="edit-textarea-label" name="textarea_label" rows="5" cols="60" class="form-textarea"></textarea>
+			</div>
+			<div class="description">
+				<div id="edit-textarea-label--description" class="webform-element-description">Description</div>
+			</div>
+		</div>
+
+		<div class="form-item form-item-textfield--withbutton">
+			<label class="usa-sr-only" for="header-search">Text Field With Button</label>
+			<div class="cluster">
+				<input class="usa-input" id="header-search" type="search" name="search" placeholder="placeholder" />
+				<button class="jcc-button--unstyled" type="submit">
+					<svg class="icon icon-search" width="24" height="24" role="img" aria-label="Search">
+						<use xlink:href="#icon-fa-search"></use>
+					</svg>
+					<span class="usa-sr-only">Button</span>
+				</button>
+			</div>
+		</div>
+	</form>
 </div>

@@ -1,21 +1,6 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
 # Form Fields
 
-Description of the Form Fields in markdown.
+Form fields is a work in progress. We can add to it as we find representations of various fields in the designs.
 
-<details>
-  <summary>Inherited CSS Variables:</summary>
-  - `--name`: description...
-</details>
-
-<details>
-  <summary>Twig Variables:</summary>
-  ```
-  variant: "default",
-  ...,
-  sub_component_data: {
-    variant: "default",
-    ...
-  }
-  ```
-</details>
+The goal is to just be a style guide for form elements and the CSS from this component will go into the global CSS so it's available to all components that include form elements, or any forms passed in from the CMS.

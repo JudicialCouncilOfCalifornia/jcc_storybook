@@ -1,53 +1,48 @@
-.half-stack {
-    width: 48%;
-    --align-items: left;
+input,
+textarea,
+select {
+  border: 1px solid var(--color-base-light-x);
+  padding: var(--s-1);
+  font-size: var(--s0);
+  line-height: var(--s0);
+  display: block;
+  width: 100%;
 }
 
-input[type='text'], textarea{
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    appearance:none;
-    border:0 none;
-    box-sizing:inherit;
-    display:block;
-    margin:0;
-    background:#FFFFFF;
-    padding:6px 10px;
-    font-size:13px;
-    position:relative;
-    -webkit-transition:box-shadow 200ms ease-out,opacity 200ms ease-out;
-    transition:box-shadow 200ms ease-out,opacity 200ms ease-out;
-    color:#333333;box-shadow:rgba(0,0,0,.1) 0 0 0 1px inset;
-    border-radius:4px;
-    line-height:20px;
-    -webkit-flex:1;
-    -ms-flex:1;
-    flex:1;
-    text-align:left;
-    width: 100%;
+.cluster input,
+.cluster textarea,
+.cluster select {
+  width: auto;
 }
 
-input[type='text'] {
-    min-height:32px;
+label {
+  font-size: var(--s0);
+  line-height: var(--s0);
 }
 
-textarea {
-    min-height: 100px;
+.form-item {
+  display: flex;
+  flex-direction: column;
 }
 
-.m-t-0 {
-    margin-top: 0px;
+.form-item + .form-item {
+  margin-block-start: var(--s5);
 }
 
-.stay-aln {
-    width: 95%;
-    margin: 0px 55px;
+.form-item > * + * {
+  margin-block-start: var(--s0);
 }
 
-#txtFooterYourName {
-    width: 70%;
-    float: left;
-    height: 54px;
-    margin-right: 10px;
+.form-item .description {
+  font-size: var(--s-1);
+  line-height: var(--s0);
+}
+
+fieldset {
+  border: 1px solid var(--color-base-light-x);
+  padding: var(--s0);
+}
+
+.fieldset-wrapper > * + * {
+  margin-block-start: var(--s0);
 }
