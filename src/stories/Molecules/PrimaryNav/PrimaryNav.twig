@@ -1,0 +1,70 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'primary-nav--' ~ variant : 'primary-nav--default' %}
+
+{% set classes = [
+  'primary-nav',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="primary-nav__default nav-level-1 reel no-bar">
+
+    {% for i,link in links %}
+      {% set parent = link.links is not empty ? true : false %}
+
+      <div class="primary-nav__group">
+        {% if parent %}
+          <button class="primary-nav__button">{{ link.text }}</button>
+        {% else %}
+          {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
+        {% endif %}
+
+        {% if link.links is not empty %}
+          {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
+          <div class="primary-nav__item nav-level-2 box {{ mega }}">
+            <div class="container">
+              <div class="grid">
+                {% for link2 in link.links %}
+                  {{ link(link2.text, link2.url) }}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="primary-nav__hamburger cluster">
+    <div class="primary-nav__hamburger-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-level-1 stack">
+      {% for i,link in links %}
+        {% set parent = link.links is not empty ? true : false %}
+
+        <div class="primary-nav__group">
+          {% if parent %}
+            <button class="primary-nav__button">{{ link.text }}</button>
+          {% else %}
+            {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
+          {% endif %}
+
+          {% if link.links is not empty %}
+            {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
+            <div class="primary-nav__item nav-level-2 box {{ mega }}">
+              <div class="container">
+                <div class="grid">
+                  {% for link2 in link.links %}
+                    {{ link(link2.text, link2.url) }}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

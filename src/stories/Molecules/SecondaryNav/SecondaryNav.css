@@ -68,10 +68,6 @@
   border: 0;
 }
 
-.secondary-nav--overflowing-stack .reel.overflowing::-webkit-scrollbar {
-  display: none;
-}
-
 /* Hidden Overflowing */
 /* Display: none; breaks the JS resize observer so it will not re-appear. */
 /* Reduce the element dimensions to 0 instead. Width remains for observer. */
