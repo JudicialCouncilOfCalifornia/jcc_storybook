@@ -127,6 +127,8 @@
   --button-fg: var(--accent-color);
   --border-thin: 1px;
   --border-normal: 2px;
+
+  --anim: 0.2s ease-out 0.2s;
 }
 
 /* The only media query used simply bumps the base size of our modular scale for larger screens. */

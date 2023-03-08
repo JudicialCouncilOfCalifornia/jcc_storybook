@@ -1,0 +1,19 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'header-search--' ~ variant : 'header-search--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'header-search',
+  'cluster',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="header-search__search-toggle">
+    <span class="header-search__search-line"></span>
+    <span class="header-search__search-circle"></span>
+  </div>
+  {{ form }}
+</div>

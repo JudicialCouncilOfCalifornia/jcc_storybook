@@ -16,12 +16,13 @@ docReady(function () {
       button.classList.add('js-open');
 
       button.addEventListener('pointerdown', (e) => {
-        // const sibling = e.target.nextElementSibling;
-        const opened = document.querySelector('.open:not(.primary-nav__hamburger-toggle)');
+        const opened = document.querySelectorAll('.primary-nav__button.open:not(.primary-nav__hamburger-toggle)');
 
-        if (opened && opened != e.target) {
-          opened.classList.remove('open');
-        }
+        opened.forEach(item => {
+          if (item && item != e.target) {
+            item.classList.remove('open');
+          }
+        });
 
         e.target.classList.toggle('open');
       });

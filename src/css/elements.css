@@ -78,3 +78,10 @@ code {
 .accent {
   color: var(--accent-color);
 }
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  left: -999em;
+  right: auto;
+}
