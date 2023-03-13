@@ -1,4 +1,12 @@
 
+0.30.0 / 2023-03-13
+===================
+
+  * chore: compile libs.
+  * feat: Complete header and sub components.
+  * fix: Fixed the component.
+  * fixed the Site branding as per the ticket
+
 0.29.0 / 2023-03-07
 ===================
 
