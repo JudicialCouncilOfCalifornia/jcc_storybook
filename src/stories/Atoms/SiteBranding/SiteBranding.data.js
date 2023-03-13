@@ -1,10 +1,10 @@
 // To mock drupal attributes in storybook.
 import drupalAttribute from 'drupal-attribute'
+import logo from './Council-Logo.svg';
 
 export default {
   default: {
-    variant: "default",
-    logo: "../static/media/src/assets/icons/Council-Logo.svg",
+    logo: logo,
     label: "California Courts",
     sub_label: "Language Access",
     attributes: new drupalAttribute()
