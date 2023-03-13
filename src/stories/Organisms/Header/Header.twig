@@ -1,24 +1,26 @@
 {# Set up variant classes. #}
-{% set variant_class = variant ? 'hat--' ~ variant : 'hat--default' %}
+{% set variant_class = variant ? 'header--' ~ variant : 'header--default' %}
 
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
 {# Include variant classes form above. #}
 {% set classes = [
-  'hat',
+  'header',
   variant_class,
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
   <div class="box">
     <div class="container">
-      <div class="cluster">
-        {% if global_branding_data is not empty %}
-          {% include "@atoms/GlobalBranding/GlobalBranding.twig" with global_branding_data %}
-        {% endif %}
-        {% if secondary_nav_data is not empty %}
+      {% if secondary_nav_data is not empty %}
+        <div class="header__secondary-nav cluster">
+          <div></div>
           {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
-        {% endif %}
+        </div>
+      {% endif %}
+      <div class="cluster">
+        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
+        {% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
       </div>
     </div>
   </div>

@@ -11,9 +11,11 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="header-search__search-toggle">
-    <span class="header-search__search-line"></span>
-    <span class="header-search__search-circle"></span>
-  </div>
+  {% if variant != "no-toggle" %}
+    <div class="header-search__search-toggle">
+      <span class="header-search__search-line"></span>
+      <span class="header-search__search-circle"></span>
+    </div>
+  {% endif %}
   {{ form }}
 </div>

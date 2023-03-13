@@ -10,9 +10,11 @@
 <div {{ attributes.addClass(classes) }}>
   {# Use composable layout classes as needed. #}
   {# Use BEM syntax if needed for styling classes. #}
+  {% include "@molecules/Hat/Hat.twig" with hat %}
+  {% include "@organisms/Header/Header.twig" with header %}
   {% include "@molecules/Hero/Hero.twig" with hero %}
-  {% include "@organisms/Section/Section.twig" with section_1 %}  
-  {% include "@organisms/Section/Section.twig" with section_2 %}  
-  {% include "@organisms/Section/Section.twig" with section_3 %}  
-  {% include "@organisms/Section/Section.twig" with section_4 %}  
+  {% include "@organisms/Section/Section.twig" with section_1 %}
+  {% include "@organisms/Section/Section.twig" with section_2 %}
+  {% include "@organisms/Section/Section.twig" with section_3 %}
+  {% include "@organisms/Section/Section.twig" with section_4 %}
 </div>

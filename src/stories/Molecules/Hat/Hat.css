@@ -8,7 +8,11 @@
   padding-block: var(--s-5);
 }
 
-.hat .box > .cluster {
+.hat .cluster {
   row-gap: 0;
   justify-content: space-between;
+}
+
+.hat .secondary-nav {
+  font-size: var(--s-1);
 }

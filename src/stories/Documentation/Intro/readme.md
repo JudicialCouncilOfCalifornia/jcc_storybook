@@ -54,8 +54,3 @@ By replacing or altering the scheme CSS file to change the variable values, we c
 ## Not Sassy
 
 This library does not have the overhead of Sass/SCSS. It uses plain but **modern CSS**. Most of the benefits of SCSS are eliminated with the use of modern CSS and Atomic components. Individual component CSS files can be very small and well structured for maximum flexibility and maintainability. Atomic Design, by it's nature, gives us component reusability.
-
-
-## Drupal Integration
-
-WIP

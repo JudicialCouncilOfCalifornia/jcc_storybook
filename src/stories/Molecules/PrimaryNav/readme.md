@@ -7,7 +7,7 @@ Since it doesn't use breakpoints the default nav style will be visible until the
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--burger-size`: (default: `var(--s2)`) Sets the size of the hamburger icon. This can be overridden on the `.primary-nav` element and set to any value in our Modular Scale.
+  - `--icon-size`: (default: `var(--s2)`) Sets the size of the hamburger icon. This can be overridden on the `.primary-nav` element and set to any value in our Modular Scale.
   - `--color`: sets the menu link color.
 </details>
 

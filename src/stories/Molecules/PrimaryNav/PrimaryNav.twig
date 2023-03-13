@@ -33,6 +33,7 @@
         {% endif %}
       </div>
     {% endfor %}
+    {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
   </div>
   <div class="primary-nav__hamburger cluster">
     <div class="primary-nav__hamburger-toggle">
@@ -41,6 +42,10 @@
       <span></span>
     </div>
     <div class="nav-level-1 stack">
+      <div class="primary-nav__group">
+        {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data_duplicate %}
+      </div>
+
       {% for i,link in links %}
         {% set parent = link.links is not empty ? true : false %}
 

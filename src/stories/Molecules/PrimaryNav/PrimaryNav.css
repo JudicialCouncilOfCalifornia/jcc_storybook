@@ -2,6 +2,7 @@
   --burger-size: var(--s2);
   justify-content: flex-start;
   align-items: center;
+  max-width: 100%;
 }
 
 .primary-nav .reel + * {
@@ -19,6 +20,8 @@ button.primary-nav__button {
   align-items: center;
   width: 100%;
   border: 0;
+  border-block-end: 2px solid transparent;
+  border-radius: 0;
   padding-inline: 0;
   padding-block: var(--s-2);
   font-size: var(--s-1);
@@ -43,8 +46,7 @@ button.primary-nav__button {
 }
 
 .primary-nav button.open {
-  border-radius: 0;
-  border-block-end: 2px solid var(--color-accent-warm);
+  border-color: var(--color-accent-warm);
   width: 100%;
 }
 
@@ -105,7 +107,9 @@ button.primary-nav__button {
 
 /* It's Burger Time when reel is overflowing/hidden. */
 .primary-nav .reel.overflowing + * {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 /* Hamburger */
@@ -169,6 +173,7 @@ button.primary-nav__button {
 /* Hamburger Styles */
 .primary-nav__hamburger > .stack {
   --gap: 0;
+  flex: 1 0 100%;
 }
 
 .primary-nav__hamburger .grid {

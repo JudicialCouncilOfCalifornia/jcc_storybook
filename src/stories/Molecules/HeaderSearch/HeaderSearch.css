@@ -1,5 +1,5 @@
 .header-search {
-  --icon-size: var(--s2);
+  --icon-size: var(--s3);
   flex-direction: row-reverse;
   position: relative;
 }
@@ -87,5 +87,24 @@
 }
 
 .header-search__form button {
+  border: 0;
+}
+
+/* Variants */
+.header-search--no-toggle {
+  --icon-size: var(--s2);
+}
+
+.header-search--no-toggle .header-search__form {
+  position: unset;
+  opacity: 1;
+  pointer-events: all;
+  width: 100%;
+  background-color: var(--color-base-light-xxx);
+  padding: var(--s-3);
+}
+
+.header-search--no-toggle .header-search__form input {
+  width: 100%;
   border: 0;
 }
