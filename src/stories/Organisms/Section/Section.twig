@@ -75,27 +75,29 @@
     <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
     <div class="section__tint"></div>
   {% endif %}
-  <div class="section__content container box">
-    <div class="section__header center stack" style="--gap: var(--s0):">
-      {% if brow_data %}
-        {% include "@atoms/Brow/Brow.twig" with brow_data %}
-      {% endif %}
-      {% if heading %}
-        <{{h}}>{{ heading }}</{{h}}>
-      {% endif %}
-      {% if text %}
-        {{ text }}
-      {% endif %}
-    </div>
-    <div class="section__main">
-      {% if sub_component|trim %}
-        {{ sub_component }}
-      {% endif %}
-    </div>
-    {% if button_data %}
-      <div class="section__button center">
-        {% include "@atoms/Button/Button.twig" with button_data %}
+  <div class="section__content box">
+    <div class="container stack">
+      <div class="section__header center stack">
+        {% if brow_data %}
+          {% include "@atoms/Brow/Brow.twig" with brow_data %}
+        {% endif %}
+        {% if heading %}
+          <{{h}}>{{ heading }}</{{h}}>
+        {% endif %}
+        {% if text %}
+          {{ text }}
+        {% endif %}
       </div>
-    {% endif %}
+      <div class="section__main">
+        {% if sub_component|trim %}
+          {{ sub_component }}
+        {% endif %}
+      </div>
+      {% if button_data %}
+        <div class="section__button center">
+          {% include "@atoms/Button/Button.twig" with button_data %}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>

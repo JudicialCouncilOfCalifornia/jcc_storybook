@@ -35,8 +35,13 @@
   --align-items: center;
 }
 
-.section .section__main > * {
+.section .section__main {
   width: 100%;
+}
+
+.section .section__header,
+.section .section__button {
+  --align-items: center;
 }
 
 .section .section__header h1,
@@ -48,10 +53,6 @@
 .section .section__header h2.brow {
   color: var(--accent-color);
   border-color: var(--color);
-}
-
-.section > * > * + * {
-  margin-top: var(--s5);
 }
 
 /* Variants */
