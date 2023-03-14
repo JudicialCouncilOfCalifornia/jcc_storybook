@@ -1,0 +1,21 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'footer--' ~ variant : 'footer--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'footer',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="box">
+    <div class="container">
+      <div class="cluster">
+        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
+        {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+      </div>
+    </div>
+  </div>
+</div>

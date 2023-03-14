@@ -1,8 +1,12 @@
 .primary-nav {
-  --burger-size: var(--s2);
+  --icon-size: var(--s2);
   justify-content: flex-start;
   align-items: center;
   max-width: 100%;
+}
+
+.primary-nav__default {
+  align-items: center;
 }
 
 .primary-nav .reel + * {
@@ -19,17 +23,19 @@ button.primary-nav__button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-inline-size: 18ch;
   border: 0;
   border-block-end: 2px solid transparent;
   border-radius: 0;
   padding-inline: 0;
   padding-block: var(--s-2);
   font-size: var(--s-1);
-  font-weight: bold;
+  font-weight: 500;
   line-height: var(--s1);
   color: var(--color);
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 }
 
 .primary-nav button::after {
@@ -38,8 +44,14 @@ button.primary-nav__button {
   color: var(--color-base-light-x);
 }
 
+.primary-nav .header-search__icon::after,
+.primary-nav .header-search__search-toggle::after {
+  content: none;
+}
+
 .primary-nav button + * {
   display: none;
+  min-width: 18ch;
   max-width: 25ch;
   background: var(--color-white);
   box-shadow: 4px 4px 10px 2px #0003;
@@ -114,8 +126,8 @@ button.primary-nav__button {
 
 /* Hamburger */
 .primary-nav__hamburger-toggle {
-  width: var(--burger-size);
-  height: var(--burger-size);
+  width: var(--icon-size);
+  height: var(--icon-size);
   position: relative;
   transform: rotate(0deg);
   transition: all var(--anim);
@@ -125,7 +137,7 @@ button.primary-nav__button {
 .primary-nav__hamburger-toggle span {
   display: block;
   position: absolute;
-  height: calc(var(--burger-size) / 7);
+  height: calc(var(--icon-size) / 7);
   width: 100%;
   background: var(--color);
   opacity: 1;
@@ -139,12 +151,12 @@ button.primary-nav__button {
 }
 
 .primary-nav__hamburger-toggle span:nth-child(2) {
-  top: calc(var(--burger-size) / 3);
+  top: calc(var(--icon-size) / 3);
   transform-origin: left center;
 }
 
 .primary-nav__hamburger-toggle span:nth-child(3) {
-  top: calc((var(--burger-size) / 3) * 2);
+  top: calc((var(--icon-size) / 3) * 2);
   transform-origin: left center;
 }
 
@@ -182,6 +194,11 @@ button.primary-nav__button {
 
 .primary-nav__hamburger .primary-nav__group + .primary-nav__group {
   border-block-start: 1px dashed var(--color-base);
+}
+
+.primary-nav__hamburger a.primary-nav__button,
+.primary-nav__hamburger button.primary-nav__button {
+  max-inline-size: none;
 }
 
 .primary-nav__hamburger .primary-nav__item a + a {

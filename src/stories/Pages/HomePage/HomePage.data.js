@@ -51,109 +51,91 @@ export default {
       primary_nav_data: {
         links: [
           {
-            text: "Simple Link",
+            text: "Language Access Information",
             is_current: true,
             id: "nav-section-one",
+            links: [
+              {
+                text: "Navigation link 1",
+                url: "#",
+              },
+              {
+                text: "Navigation link 2",
+                url: "#",
+              },
+              {
+                text: "Navigation link 3",
+                url: "#",
+              },
+              {
+                text: "Navigation link 4",
+                url: "#",
+              },
+              {
+                text: "Navigation link 5",
+                url: "#",
+              },
+              {
+                text: "Navigation link 6",
+                url: "#",
+              },
+              {
+                text: "Navigation link 7",
+                url: "#",
+              },
+            ],
+            section_link: {
+              text: "Language Access Information",
+              url: "#",
+            },
+          },
+          {
+            text: "Court Interpreters",
+            links: [
+              {
+                text: "Navigation link 1",
+                url: "#",
+              },
+              {
+                text: "Navigation link 2",
+                url: "#",
+              },
+              {
+                text: "Navigation link 3",
+                url: "#",
+              },
+              {
+                text: "Navigation link 4",
+                url: "#",
+              },
+              {
+                text: "Navigation link 5",
+                url: "#",
+              },
+              {
+                text: "Navigation link 6",
+                url: "#",
+              },
+              {
+                text: "Navigation link 7",
+                url: "#",
+              },
+            ],
+            section_link: {
+              text: "Navigation link",
+              url: "#",
+            },
+          },
+          {
+            text: "Become a Court Intrepreter",
             url: "#",
-            section_link: {
-              text: "Navigation link",
-              url: "#",
-            },
           },
           {
-            text: "Up To Seven",
-            links: [
-              {
-                text: "Navigation link 1",
-                url: "#",
-              },
-              {
-                text: "Navigation link 2",
-                url: "#",
-              },
-              {
-                text: "Navigation link 3",
-                url: "#",
-              },
-              {
-                text: "Navigation link 4",
-                url: "#",
-              },
-              {
-                text: "Navigation link 5",
-                url: "#",
-              },
-              {
-                text: "Navigation link 6",
-                url: "#",
-              },
-              {
-                text: "Navigation link 7",
-                url: "#",
-              },
-            ],
-            section_link: {
-              text: "Navigation link",
-              url: "#",
-            },
+            text: "Outreach",
+            url: "#",
           },
           {
-            text: "More Than Seven",
-            links: [
-              {
-                text: "Navigation link 1",
-                url: "#",
-              },
-              {
-                text: "Navigation link 2",
-                url: "#",
-              },
-              {
-                text: "Navigation link 3",
-                url: "#",
-              },
-              {
-                text: "Navigation link 4",
-                url: "#",
-              },
-              {
-                text: "Navigation link 5",
-                url: "#",
-              },
-              {
-                text: "Navigation link 6",
-                url: "#",
-              },
-              {
-                text: "Navigation link 7",
-                url: "#",
-              },
-              {
-                text: "Navigation link 8",
-                url: "#",
-              },
-              {
-                text: "Navigation link 9",
-                url: "#",
-                links: [
-                  {
-                    text: "Navigation link 5.1",
-                    url: "#",
-                  },
-                  {
-                    text: "Navigation link 5.2",
-                    url: "#",
-                  },
-                ],
-              },
-            ],
-            section_link: {
-              text: "Navigation link",
-              url: "#",
-            },
-          },
-          {
-            text: "Lots More",
+            text: "About",
             links: [
               {
                 text: "Navigation link 1",
@@ -483,6 +465,79 @@ export default {
       variant: 'white',
       first_component: false,
       attributes: new drupalAttribute(),
+    },
+    footer: {
+      site_branding_data: {
+        variant: "default",
+        logo: logo,
+        label: "California Courts",
+        sub_label: "Language Access",
+        attributes: new drupalAttribute(),
+      },
+      secondary_nav_data: {
+        variant: "default",
+        overflowing_variant: "stack",
+        links: [
+          {
+            text: "Careers",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Contact Us",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Accessibility",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Public Access to Records",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Disclaimer",
+            url: "#",
+            is_current: false,
+          },
+        ],
+        attributes: new drupalAttribute()
+      },
+      attributes: new drupalAttribute()
+    },
+    shoe: {
+      variant: "default",
+      global_branding_data: {
+        text: "Judicial Branch of California",
+        destination: "https://courts.ca.gov",
+        attributes: new drupalAttribute()
+      },
+      secondary_nav_data: {
+        variant: "",
+        overflowing_variant: "stack",
+        links: [
+          {
+            text: "Contact Us",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Privacy",
+            url: "#",
+            is_current: false,
+          },
+          {
+            text: "Terms Of Use",
+            url: "#",
+            is_current: false,
+          }
+        ],
+        attributes: new drupalAttribute()
+      },
+      attributes: new drupalAttribute()
     },
     attributes: new drupalAttribute(),
   }
