@@ -1,4 +1,9 @@
 
+0.31.2 / 2023-03-15
+===================
+
+  * fix: Include reel and form styles in global library.
+
 0.31.1 / 2023-03-14
 ===================
 
