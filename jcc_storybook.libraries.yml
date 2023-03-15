@@ -1,8 +1,11 @@
 global:
   css:
     base:
-      src/css/elements.css:  { minified: true, preprocess: false }
+      src/css/elements.css:  { minified: false }
     layout:
-      src/css/layout-primitives.css:  { minified: true, preprocess: false }
+      src/css/layout-primitives.css:  { minified: false }
     theme:
-      src/css/scheme-default.css:  { minified: true, preprocess: false }
+      src/css/scheme-default.css:  { minified: false }
+      lib/stories/Atoms/FormFields/FormFields.css: { minified: true }
+  js:
+    lib/stories/Layout/Reel/Reel.js: { minified: true }

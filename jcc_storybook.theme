@@ -41,5 +41,6 @@ function jcc_storybook_library_info_build() {
         break;
     }
   }
+
   return $libraries;
 }
