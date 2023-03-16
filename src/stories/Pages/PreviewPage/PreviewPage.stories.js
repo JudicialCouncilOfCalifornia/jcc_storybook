@@ -1,15 +1,15 @@
-import data from './HomePage.data';
-import HomePage from './HomePage.twig';
-import './HomePage.css';
+import data from './PreviewPage.data';
+import PreviewPage from './PreviewPage.twig';
+import './PreviewPage.css';
 
 export default {
-  title: 'Pages/HomePage',
-  component: HomePage
+  title: 'Pages/PreviewPage',
+  component: PreviewPage
 };
 
 // Create Template for variant templates to bind to.
 const Template = ({ ...args }) => {
-  return HomePage({ ...args });
+  return PreviewPage({ ...args });
 };
 
 // Bind the Basic component variant for this component.
