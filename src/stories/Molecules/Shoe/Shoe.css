@@ -7,7 +7,7 @@
   padding-block: var(--s-5);
 }
 
-.shoe .box > .cluster {
+.shoe .cluster {
   justify-content: space-between;
 }
 

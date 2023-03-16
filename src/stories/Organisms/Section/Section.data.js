@@ -17,6 +17,8 @@ export default {
       href: "#",
       variant: "primary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class="center stack"><h3>Heading</h3><p>Some markup  goes in this space.</p></div><div class="center stack"><h3>Heading</h3><p>Some markup  goes in this space.</p></div>',
     attributes: new drupalAttribute(),
   },
   primary_dark_xx: {
@@ -35,6 +37,8 @@ export default {
       href: "#",
       variant: "primary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
   primary_dark_xx_stripe: {
@@ -53,6 +57,8 @@ export default {
       href: "#",
       variant: "primary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
   warm_dark_x: {
@@ -71,6 +77,8 @@ export default {
       href: "#",
       variant: "primary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
   white: {
@@ -89,6 +97,8 @@ export default {
       href: "#",
       variant: "primary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
   bg_image: {
@@ -109,6 +119,9 @@ export default {
       href: "#",
       variant: "secondary",
     },
+    sub_component_template: null,
+    sub_component_data: '<div class=""><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
+    section_layout: 'switcher',
     attributes: new drupalAttribute(),
   },
 

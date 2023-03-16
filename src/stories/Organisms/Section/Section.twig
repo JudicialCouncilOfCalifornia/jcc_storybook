@@ -18,6 +18,8 @@
 
 {% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
 
+{% set section_layout = section_layout is not empty ? section_layout : 'switcher' %}
+
 {% set styles = [] %}
 
 {% if bg_tint %}
@@ -54,20 +56,14 @@
 {% set sub_component %}
   {% if sub_component_template == 'Card' %}
     {% include "@molecules/Card/Card.twig" with sub_component_data %}
-  {% endif %}
-  {% if sub_component_template == 'Cards' %}
+  {% elseif sub_component_template == 'Cards' %}
     {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
-  {% endif %}
-  {% if sub_component_template == 'TeaserPlusList' %}
+  {% elseif sub_component_template == 'TeaserPlusList' %}
     {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with sub_component_data %}
+  {% else %}
+    {{ sub_component_data }}
   {% endif %}
 {% endset %}
-
-{% if sub_component|trim == "" %}
-  {% set sub_component %}
-    <div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>
-  {% endset %}
-{% endif %}
 
 {# Section Template #}
 <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
@@ -88,7 +84,7 @@
           {{ text }}
         {% endif %}
       </div>
-      <div class="section__main">
+      <div class="section__main {{ section_layout }}">
         {% if sub_component|trim %}
           {{ sub_component }}
         {% endif %}
