@@ -1,4 +1,12 @@
 
+0.32.0 / 2023-03-21
+===================
+
+  * chore: export libs.
+  * fix: Refactor Pages after Section and Card changes.
+  * fix: Refactor Cards
+  * fix: Refactor Section component.
+
 0.31.3 / 2023-03-16
 ===================
 
