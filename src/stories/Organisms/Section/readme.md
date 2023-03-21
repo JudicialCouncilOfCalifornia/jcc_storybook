@@ -1,42 +1,58 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
 # Section
 
-A Section is a wrapping component that provides a background as well as optional **brow**, **heading**, **text** and **button**. The Section contains other components that provide content. Current sub component types are `Card`, `Cards`, `TeaserPlusList`.
+A Section is a wrapping component that provides a background as well as optional **brow**, **heading**, **lead text** and **button**. The Section contains other components that provide content.
 
-If the `sub_component_template` is empty, or any other value, then sub_component_data will be rendered directly as markup. In this way you can render any content from the back end inside a Section.
+The Section variant determines it's background and other element attributes like Heading color.
 
-When rendering content directly the Section will use the `switcher` layout by default. However you can set this to `grid` or `cluster` if you prefer, using the `section_layout` value. Then you can render multiple sub components inside the section and they will lay themselves out accordingly, and be intrinsically responsive.
+The `sub_component_layout` is highly configurable to accommodate many different content needs. You can set the `sub_component_layout` value to any of several "Layout Primitive" values plus some additional flex split values for legacy compatibility.
+
+Depending on which `sub_component_layout` is used, a number of other values are relevant for fine tuning. Or you may let the defaults remain.
+
+Then you can render multiple sub components inside the section and they will lay themselves out accordingly, and be intrinsically responsive.
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--color`
-  - `--color`
-  - `--accent-color`
-  - `--heading-color`
-  - `--button-fg`
+    - `--measure`: Sets the *measure* or ideal content width or switching point for **Center** or **Switcher**
+    - `--grid-min-width`: Sets the minimum content width for an item in the grid.
+    - `--sidebar-direction`: Sets the the direction for the Sidebar layout. Sidebar left (default) = `row`, sidebar right = `row-reverse`.
+    - `--sidebar-width`: Sets the sidebar width in ch.
 </details>
 
 <details>
   <summary>Twig Variables:</summary>
   ```
-  variant: "default",
+  variant: 'default',
   first_component: false,
+  sub_component_layout: 'switcher',
+  // center, stack
+  align_items: false,
+  // center, switcher
+  measure: false,
+  // cluster, grid, reel, stack, switcher
+  gap: false,
+  // grid
+  grid_min_width: false,
+  // with-sidebar
+  sidebar_direction: false,
+  // with-sidebar
+  sidebar_width: false,
+  background_image_url: "",
   brow_data: {
     variant: "default",
     part_one: "Brow Example",
     part_two: "",
   },
-  heading: "Heading Example",
-  text: "<p>...</p>",
-  sub_component_template: "Card"
-  sub_component_data: {
-    [Data for the specified sub_component_template]
-  },
+  heading: 'Heading Example',
+  text: '...',
   button_data: {
-    variant: "primary",
-    size: "normal",
     label: "Button",
-    href: "#"
-  }
+    href: "#",
+    variant: "primary",
+  },
+  sub_component_data: [
+    ...,
+    ...
+  ],
   ```
 </details>

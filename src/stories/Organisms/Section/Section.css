@@ -55,6 +55,42 @@
   border-color: var(--color);
 }
 
+.section__main.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+}
+
+.section__main.flex > * {
+  flex: 1 1 auto;
+  min-inline-size: 20ch;
+}
+
+.section__main.flex--75-25 > *:nth-child(1) {
+  flex-basis: calc(75% - var(--gap));
+}
+
+.section__main.flex--75-25 > *:nth-child(2) {
+  flex-basis: calc(25% - var(--gap));
+}
+
+.section__main.flex--70-30 > *:nth-child(1) {
+  flex-basis: calc(70% - var(--gap));
+}
+
+.section__main.flex--70-30 > *:nth-child(2) {
+  flex-basis: calc(30% - var(--gap));
+}
+
+.section__main.flex--60-40 > *:nth-child(1) {
+  flex-basis: calc(60% - var(--gap));
+}
+
+.section__main.flex--60-40 > *:nth-child(2) {
+  flex-basis: calc(40% - var(--gap));
+}
+
+
 /* Variants */
 .section--color-primary-dark-xx {
   --color: var(--color-white);
@@ -99,10 +135,11 @@
 }
 
 /* Drop padding when two sections of the same background are touching. */
-.section--color-default + .section--color-default,
+.section--color-default + .section--color-default .box,
+.section--color-white + .section--color-white .section__content,
 .section--color-warm-dark-x + .section--color-warm-dark-x,
 .section--color-warm-dark-xx + .section--color-warm-dark-xx,
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
-  padding-top: var(--s2);
+  padding-top: 0;
 }

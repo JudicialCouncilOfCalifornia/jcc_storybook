@@ -4,6 +4,20 @@ export default {
   default: {
     variant: 'default',
     first_component: false,
+    sub_component_layout: 'flex flex--60-40',
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
     brow_data: {
       variant: "default",
       part_one: "Brow Example",
@@ -17,8 +31,10 @@ export default {
       href: "#",
       variant: "primary",
     },
-    sub_component_template: null,
-    sub_component_data: '<div class="center stack"><h3>Heading</h3><p>Some markup  goes in this space.</p></div><div class="center stack"><h3>Heading</h3><p>Some markup  goes in this space.</p></div>',
+    sub_component_data: [
+      '<div class="stack"><h3>Heading</h3><p>Some markup  goes in this space. adsf asf asdf sdfaf asf asdf sadf sadf sadf sfd sadf sadf sdf fsa afs fsd safd.</p></div>',
+      '<div class="stack"><h3>Heading</h3><p>Some markup  goes in this space. adsf asf asdf sdfaf asf asdf sadf sadf sadf sfd sadf sadf sdf fsa afs fsd safd.</p></div>',
+    ],
     attributes: new drupalAttribute(),
   },
   primary_dark_xx: {
@@ -37,7 +53,7 @@ export default {
       href: "#",
       variant: "primary",
     },
-    sub_component_template: null,
+    sub_component_layout: null,
     sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
@@ -57,7 +73,7 @@ export default {
       href: "#",
       variant: "primary",
     },
-    sub_component_template: null,
+    sub_component_layout: null,
     sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
@@ -77,13 +93,14 @@ export default {
       href: "#",
       variant: "primary",
     },
-    sub_component_template: null,
+    sub_component_layout: null,
     sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
   white: {
     variant: 'white',
     first_component: false,
+    sub_component_layout: null,
     brow_data: {
       variant: "default",
       part_one: "Brow Example",
@@ -97,7 +114,6 @@ export default {
       href: "#",
       variant: "primary",
     },
-    sub_component_template: null,
     sub_component_data: '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     attributes: new drupalAttribute(),
   },
@@ -119,7 +135,7 @@ export default {
       href: "#",
       variant: "secondary",
     },
-    sub_component_template: null,
+    sub_component_layout: null,
     sub_component_data: '<div class=""><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     section_layout: 'switcher',
     attributes: new drupalAttribute(),

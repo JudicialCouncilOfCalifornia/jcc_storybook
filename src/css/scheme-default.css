@@ -127,7 +127,7 @@
   --button-fg: var(--accent-color);
   --border-thin: 1px;
   --border-normal: 2px;
-
+  --gap: var(--s1);
   --anim: 0.2s ease-out 0.2s;
 }
 

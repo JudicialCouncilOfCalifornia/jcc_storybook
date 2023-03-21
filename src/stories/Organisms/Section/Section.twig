@@ -6,21 +6,14 @@
   {% set h = brow ? 'h3' : 'h2' %}
 {% endif %}
 
-{% set variant_justify = content_justify
-  ? 'section--justify-' ~ content_justify
-  : 'section--justify-center' %}
-
-{% set variant_align = content_align
-  ? 'section--align-' ~ content_align
-  : 'section--align-center' %}
-
 {% set variant_bg_image = background_image_url is not empty ? 'section--with-bg-image' : '' %}
 
 {% set variant_class = variant ? 'section--color-' ~ variant : 'section--color-default' %}
 
-{% set section_layout = section_layout is not empty ? section_layout : 'switcher' %}
+{% set sub_component_layout = sub_component_layout is not empty ? sub_component_layout : 'switcher' %}
 
 {% set styles = [] %}
+{% set sub_component_styles = [] %}
 
 {% if bg_tint %}
   {% set styles = styles|merge([
@@ -28,42 +21,48 @@
   ]) %}
 {% endif %}
 
+{% if align_items %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    'align-items: ' ~ align_items ~ ';',
+  ]) %}
+{% endif %}
+
+{% if measure %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    '--measure: ' ~ measure ~ 'ch;',
+  ]) %}
+{% endif %}
+
+{% if gap %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    'gap: var(' ~ gap ~ ');',
+  ]) %}
+{% endif %}
+
+{% if grid_min_width %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    '--grid-min-width: ' ~ grid_min_width ~ 'ch;',
+  ]) %}
+{% endif %}
+
+{% if sidebar_direction %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    '--sidebar-direction: ' ~ sidebar_direction ~ ';',
+  ]) %}
+{% endif %}
+
+{% if sidebar_width %}
+  {% set sub_component_styles = sub_component_styles|merge([
+    '--sidebar-width: ' ~ sidebar_width ~ 'ch;',
+  ]) %}
+{% endif %}
+
 {# Create class array #}
 {% set classes = [
   'section',
-  variant_justify,
-  variant_align,
   variant_class,
   variant_bg_image
 ] %}
-
-{#
- # Due to a lack of support in twigjs-loader, we need to define possible
- # sub components. The maintainer will not support variables for template
- # parameter in include statements.
- #
- # i.e. {% include this_var_breaks_things with this_var_is_fine %}
- #
- # This would NOT break in Drupal, but in order for this to work in Storybook
- # we need to specify the include with if statements. It's better to have
- # this complexity in pattern library, rather than when integrating with
- # Drupal.
- #
- # https://github.com/twigjs/twig.js/issues/806
- #
- # @todo: Try to add support and PR or fork the twigjs-loader package.
- #}
-{% set sub_component %}
-  {% if sub_component_template == 'Card' %}
-    {% include "@molecules/Card/Card.twig" with sub_component_data %}
-  {% elseif sub_component_template == 'Cards' %}
-    {% include "@organisms/Cards/Cards.twig" with sub_component_data %}
-  {% elseif sub_component_template == 'TeaserPlusList' %}
-    {% include "@organisms/TeaserPlusList/TeaserPlusList.twig" with sub_component_data %}
-  {% else %}
-    {{ sub_component_data }}
-  {% endif %}
-{% endset %}
 
 {# Section Template #}
 <div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
@@ -84,9 +83,13 @@
           {{ text }}
         {% endif %}
       </div>
-      <div class="section__main {{ section_layout }}">
-        {% if sub_component|trim %}
-          {{ sub_component }}
+      <div class="section__main {{ sub_component_layout }}" style="{{ sub_component_styles|join }}">
+        {% if sub_component_data is iterable %}
+          {% for item in sub_component_data %}
+            {{ item }}
+          {% endfor %}
+        {% elseif sub_component_data|trim %}
+          {{ sub_component_data }}
         {% endif %}
       </div>
       {% if button_data %}
