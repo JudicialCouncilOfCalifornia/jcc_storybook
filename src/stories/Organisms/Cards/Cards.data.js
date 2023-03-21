@@ -1,4 +1,11 @@
 import drupalAttribute from 'drupal-attribute'
+import Card from '../../Molecules/Card/Card.twig';
+import {
+  Default as CardDefault,
+  Striped as CardStriped,
+  NoMedia as CardNoMedia,
+  NoMedia
+} from '../../Molecules/Card/Card.stories';
 
 // Random icon selector for Striped cards.
 const iconsJSON = require('../../../assets/icons.json');
@@ -9,229 +16,143 @@ const randomIcon = () => {
 
 export default {
   default: {
-    variant: "default",
-    card_width: "30ch",
-    card_variant: "default",
-    items: [
-      {
-        variant: "default",
-        media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
-        icon_data: {
-          icon: "speaker",
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "default",
-        media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
-        icon_data: {
-          icon: "speaker",
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "default",
-        media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
-        icon_data: {
-          icon: "speaker",
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "default",
-        media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
-        icon_data: {
-          icon: "speaker",
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
+    first_component: false,
+    variant: 'default',
+    card_variant: 'default',
+    sub_component_layout: 'flex flex--60-40',
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+      attributes: new drupalAttribute(),
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: false,
+    sub_component_data: [
+      Card({...NoMedia.args}),
+      Card({...NoMedia.args}),
     ],
     attributes: new drupalAttribute(),
   },
   media_left: {
-    variant: "",
-    card_width: "",
-    card_variant: "",
-    items: [
-      {
-        variant: "media-left",
-        media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
+    first_component: false,
+    variant: 'default',
+    card_variant: 'card--media-left',
+    sub_component_layout: 'center stack',
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: 69,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+      attributes: new drupalAttribute(),
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: false,
+    sub_component_data: [
+      Card({...CardDefault.args}),
+      Card({...CardDefault.args}),
     ],
     attributes: new drupalAttribute(),
   },
   media_right: {
-    variant: "",
-    card_width: "",
-    card_variant: "",
-    items: [
-      {
-        variant: "media-right",
-        media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-        heading: "Heading For A Card",
-        text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      }
+    first_component: false,
+    variant: 'default',
+    card_variant: 'card--media-right',
+    sub_component_layout: 'center stack',
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: 69,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+      attributes: new drupalAttribute(),
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: false,
+    sub_component_data: [
+      Card({...CardDefault.args}),
+      Card({...CardDefault.args}),
     ],
     attributes: new drupalAttribute(),
   },
   striped: {
-    variant: "",
-    card_width: "45ch",
-    card_variant: "",
-    items: [
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
-      {
-        variant: "striped",
-        media: false,
-        icon_data: {
-          icon: randomIcon(),
-          color: false,
-          attributes: new drupalAttribute(),
-        },
-        heading: "Heading For A Card",
-        text: false,
-        button_data: {
-          label: "Button",
-          href: "#",
-          variant: "primary",
-        },
-        attributes: new drupalAttribute(),
-      },
+    first_component: false,
+    variant: 'default',
+    card_variant: '',
+    sub_component_layout: 'grid',
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: '41',
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+      attributes: new drupalAttribute(),
+    },
+    heading: 'Heading Example',
+    text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+    sub_component_data: [
+      Card({...CardStriped.args}),
+      Card({...CardStriped.args}),
+      Card({...CardStriped.args}),
+      Card({...CardStriped.args}),
+      Card({...CardStriped.args}),
+      Card({...CardStriped.args}),
     ],
-    attributes: new drupalAttribute(),
-  }
+    attributes: new drupalAttribute().addClass('cards'),
+  },
 }

@@ -17,6 +17,12 @@
   background-size: cover;
 }
 
+.section .brow + h1,
+.section .brow + h2,
+.section .brow + h3 {
+  margin-block-start: 0;
+}
+
 .section__tint {
   mix-blend-mode: multiply;
   background-color: var(--bg);

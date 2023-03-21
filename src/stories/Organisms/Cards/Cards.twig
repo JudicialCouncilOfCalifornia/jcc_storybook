@@ -1,19 +1,5 @@
-{# Atomic templates should be as "dumb" as possible. #}
+{% if card_variant is not empty %}
+  {% set attributes = attributes.addClass(card_variant) %}
+{% endif %}
 
-{% set variant = variant ? 'cards--' ~ variant : 'cards--default' %}
-{% set card_variant = card_variant ? 'card--' ~ card_variant : 'card--default' %}
-
-{% set styles = card_width is not empty ? '--grid-min-width: ' ~ card_width ~ ';' : '--grid-min-width: 30ch;' %}
-
-{% set classes = [
-  'cards',
-  'grid',
-  variant,
-  card_variant,
-] %}
-
-<div {{ attributes.addClass(classes).setAttribute('style', styles) }}>
-{% for item in items %}
-  {% include "@molecules/Card/Card.twig" with item %}
-{% endfor %}
-</div>
+{% include "@organisms/Section/Section.twig" with _context %}

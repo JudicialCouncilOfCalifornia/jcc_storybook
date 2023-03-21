@@ -10,26 +10,93 @@ export default {
     notes: readme,
   },
   argTypes: {
-    attributes: {table: {disable: true}},
-    variant: {
-      description: "COMING SOON: See `Section` component for variant values.",
-      table: {defaultValue: {summary: "default"}},
+    first_component: {
+      description: "If true, sets the section heading to H1",
+      table: {defaultValue: {summary: false}},
     },
-    card_width: {
-      description: "The minimum width of an individual card. See the `Layout: Grid` layout example for more info and to experiment.",
-      table: {defaultValue: {summary: "30ch"}},
+    variant: {
+      description: "Variant name based on background color which also sets complimentary styles.",
+      table: {defaultValue: {summary: 'default'}},
+      control: { type: 'select' },
+      options: ['default', 'primary-dark-xx', 'primary-dark-xx-stripe', 'warm-dark-xx', 'warm-dark-x', 'white'],
     },
     card_variant: {
-      description: "We can set the `Card` variant at the `Cards` wrapper level for consistency within a group of cards.",
-      table: {defaultValue: {summary: "default"}},
+      description: "Variant for the cards.",
+      table: {defaultValue: {summary: 'default'}},
       control: { type: 'select' },
-      options: ['default', 'bordered-center', 'media-left', 'media-right', 'striped', 'overlay'],
-    },  
-    items: {
+      options: ['card--default', 'card--media-left', 'card--media-right', 'card--bordered-center', 'card--overlay', 'card--striped'],
+    },
+    sub_component_layout: {
+      description: "Sets the layout type for sub component items.",
+      table: {defaultValue: {summary: 'switcher'}},
+      control: { type: 'select' },
+      options: ['center', 'cluster', 'grid', 'reel', 'with-sidebar', 'stack', 'switcher', 'flex flex--75-25', 'flex flex--70-30', 'flex flex--60-40'],
+    },
+    // center, stack
+    align_items: {
+      description: "Sets the flex alignment for **Center** and **Stack**.",
+      table: {defaultValue: {summary: 'flex-start'}},
+      control: { type: 'select' },
+      options: ['flex-start', 'center', 'flex-end'],
+    },
+    // center, switcher
+    measure: {
+      description: "Sets the *measure* or ideal content width or switching point for **Center** or **Switcher**.",
+      table: {defaultValue: {summary: '60'}},
+      control: { type: 'number' },
+    },
+    // cluster, grid, reel, stack, switcher
+    gap: {
+      description: "Sets the *gap* size from our *modular scale* for **Cluster, Grid, Reel, Stack** and **Switcher**.",
+      table: {defaultValue: {summary: '--s1'}},
+      control: { type: 'select' },
+      options: ['--s-5', '--s-4', '--s-3', '--s-2', '--s-1', '--s0', '--s1', '--s2', '--s3', '--s4', '--s5'],
+    },
+    // grid
+    grid_min_width: {
+      description: "Sets the min width of items in the **Grid** in ch.",
+      table: {defaultValue: {summary: '20'}},
+      control: { type: 'number' },
+    },
+    // with-sidebar
+    sidebar_direction: {
+      description: "Sets the direction for the **Sidebar** layout where the default *row* is sidebar on the left and *row-reverse* is sidebar on the right.",
+      table: {defaultValue: {summary: 'row'}},
+      control: { type: 'select' },
+      options: ['row', 'row-reverse',],
+    },
+    // with-sidebar
+    sidebar_width: {
+      description: "Sets the width in ch for the **Sidebar** element.",
+      table: {defaultValue: {summary: '20'}},
+      control: { type: 'number' },
+    },
+    brow_data: {
+      description: "Populates the Brow template.",
+      table: {defaultValue: {summary: false}},
+    },
+    heading: {
+      description: "Populates the heading.",
+      table: {defaultValue: {summary: false}},
+    },
+    text: {
+      description: "Populates the lead text.",
+      table: {defaultValue: {summary: false}},
+    },
+    sub_component_data: {
+      description: "Populates the template specified in sub_component_template.",
+      table: {defaultValue: {summary: null}},
+      control: { type: 'object' },
+    },
+    button_data: {
+      description: "Populates the Button template.",
+      table: {defaultValue: {summary: false}},
+    },
+    attributes: {
       table: {
         disable: true,
       }
-    },
+    }
   }
 };
 

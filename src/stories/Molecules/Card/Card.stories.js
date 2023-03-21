@@ -7,7 +7,7 @@ export default {
   title: 'Molecules/Card',
   component: Card,
   parameters: {
-    layout: 'centered',
+    // layout: 'centered',
     notes: readme,
   },
   argTypes: {
@@ -49,6 +49,9 @@ const Template = ({ ...args }) => {
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
+
+export const NoMedia = Template.bind({});
+NoMedia.args = data.no_media;
 
 export const BorderedCenter = Template.bind({});
 BorderedCenter.args = data.bordered_center;
