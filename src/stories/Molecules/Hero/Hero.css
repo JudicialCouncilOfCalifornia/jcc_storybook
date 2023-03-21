@@ -26,6 +26,7 @@
 }
 
 .hero__content {
+  padding: var(--s1);
   /* Bring it above the tint mix-blend-mode. */
   z-index: 1;
 }
@@ -61,9 +62,14 @@
   align-items: flex-end;
 }
 
+/* Variants */
 .hero--content-bg {
   --color: var(--color-black);
   --button-color: var(--color-black);
+}
+
+.hero--content-bg .hero__content {
+  padding: 0;
 }
 
 .hero--content-bg .hero__content-inner {

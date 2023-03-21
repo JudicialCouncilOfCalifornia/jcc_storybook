@@ -4,8 +4,8 @@
 }
 
 .card__media .frame {
-  --frame-h: 4;
-  --frame-v: 3;
+  --frame-h: 16;
+  --frame-v: 9;
 }
 
 .card__media .frame iframe {
