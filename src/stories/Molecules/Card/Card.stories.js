@@ -16,7 +16,7 @@ export default {
       description: "The Card variant. Often set on the `Cards` component.",
       table: { defaultValue: { summary: 'default' }},
       control: { type: 'select' },
-      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay'],
+      options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay', 'striped'],
     },
     media: {
       description: "Image, Video",

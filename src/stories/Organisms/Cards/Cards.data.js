@@ -46,7 +46,7 @@ export default {
       Card({...NoMedia.args}),
       Card({...NoMedia.args}),
     ],
-    attributes: new drupalAttribute(),
+    attributes: new drupalAttribute().addClass('cards'),
   },
   media_left: {
     first_component: false,
@@ -79,7 +79,7 @@ export default {
       Card({...CardDefault.args}),
       Card({...CardDefault.args}),
     ],
-    attributes: new drupalAttribute(),
+    attributes: new drupalAttribute().addClass('cards'),
   },
   media_right: {
     first_component: false,
@@ -112,7 +112,7 @@ export default {
       Card({...CardDefault.args}),
       Card({...CardDefault.args}),
     ],
-    attributes: new drupalAttribute(),
+    attributes: new drupalAttribute().addClass('cards'),
   },
   striped: {
     first_component: false,
