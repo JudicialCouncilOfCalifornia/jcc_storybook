@@ -15,6 +15,11 @@
 
 /* Variants */
 
+.card--clickable {
+  display: block;
+  text-decoration: none;
+}
+
 /* Card modifier class can be used on cards wrapper element or on the card. */
 /* So we use both types of selector orders for each variant. */
 
@@ -121,18 +126,39 @@
   --heading-color: var(--color-white);
   --color: var(--heading-color);
   --align-items: center;
+  color: var(--color);
   display: block;
   padding: var(--s1);
   font-size: var(--s1);
   line-height: var(--s4);
   text-align: center;
-  text-decoration: none;
+  background: var(--background-striped-primary-dark-xx);
+}
 
-  background: repeating-linear-gradient(
-    125deg,
-    var(--color-primary-dark-x),
-    var(--color-primary-dark-x) 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  );
+.card--striped.card--background-striped-base-dark-x {
+  background: var(--background-striped-base-dark-x);
+}
+
+.card--striped.card--background-striped-primary-dark-xx {
+  background: var(--background-striped-primary-dark-xx);
+}
+
+.card--striped.card--background-striped-primary-dark-x {
+  background: var(--background-striped-primary-dark-x);
+}
+
+.card--striped.card--background-striped-primary-light-xx {
+  background: var(--background-striped-primary-light-xx);
+}
+
+.card--striped.card--background-striped-secondary-dark-xx {
+  background: var(--background-striped-secondary-dark-xx);
+}
+
+.card--striped.card--background-striped-secondary {
+  background: var(--background-striped-secondary);
+}
+
+.card--striped.card--background-striped-accent-warm-dark-x {
+  background: var(--background-striped-accent-warm-dark-x);
 }

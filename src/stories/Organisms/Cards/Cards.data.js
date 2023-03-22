@@ -4,7 +4,6 @@ import {
   Default as CardDefault,
   Striped as CardStriped,
   NoMedia as CardNoMedia,
-  NoMedia
 } from '../../Molecules/Card/Card.stories';
 
 // Random icon selector for Striped cards.
@@ -43,8 +42,8 @@ export default {
     text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>',
     button_data: false,
     sub_component_data: [
-      Card({...NoMedia.args}),
-      Card({...NoMedia.args}),
+      Card({...CardNoMedia.args}),
+      Card({...CardNoMedia.args}),
     ],
     attributes: new drupalAttribute().addClass('cards'),
   },

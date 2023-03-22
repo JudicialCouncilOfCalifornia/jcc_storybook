@@ -340,6 +340,8 @@ export default {
       sub_component_data: [
         Card({
           variant: "striped",
+          clickable_card: true,
+          background: null,
           icon_data: {
             icon: "documents",
             color: false,
@@ -355,6 +357,9 @@ export default {
           attributes: new drupalAttribute(),
         }),
         Card({
+          variant: "striped",
+          clickable_card: true,
+          background: null,
           icon_data: {
             icon: "speaker",
             color: false,
@@ -367,10 +372,12 @@ export default {
             href: "#",
             variant: "primary",
           },
-          variant: "striped",
           attributes: new drupalAttribute(),
         }),
         Card({
+          variant: "striped",
+          clickable_card: true,
+          background: null,
           icon_data: {
             icon: "speaker",
             color: false,
@@ -383,10 +390,12 @@ export default {
             href: "#",
             variant: "primary",
           },
-          variant: "striped",
           attributes: new drupalAttribute(),
         }),
         Card({
+          variant: "striped",
+          clickable_card: true,
+          background: null,
           icon_data: {
             icon: "exam",
             color: false,
@@ -399,7 +408,6 @@ export default {
             href: "#",
             variant: "primary",
           },
-          variant: "striped",
           attributes: new drupalAttribute(),
         }),
       ],

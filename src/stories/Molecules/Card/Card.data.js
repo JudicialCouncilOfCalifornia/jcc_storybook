@@ -3,6 +3,8 @@ import drupalAttribute from 'drupal-attribute'
 export default {
   default: {
     variant: "default",
+    clickable_card: false,
+    background: null,
     media: '<img src="https://source.unsplash.com/random/1280x720/?language" />',
     icon_data: {
       icon: "speaker",
@@ -20,6 +22,8 @@ export default {
   },
   no_media: {
     variant: "default",
+    clickable_card: false,
+    background: null,
     media: false,
     icon_data: false,
     heading: "Heading For A Card",
@@ -33,6 +37,8 @@ export default {
   },
   bordered_center: {
     variant: "bordered-center",
+    clickable_card: false,
+    background: null,
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Interested in becoming a court interpreter?",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -45,6 +51,8 @@ export default {
   },
   media_left: {
     variant: "media-left",
+    clickable_card: false,
+    background: null,
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -57,6 +65,8 @@ export default {
   },
   media_right: {
     variant: "media-right",
+    clickable_card: false,
+    background: null,
     media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -69,6 +79,8 @@ export default {
   },
   overlay: {
     variant: "overlay",
+    clickable_card: true,
+    background: null,
     media: '<img src="https://source.unsplash.com/random/400×400/?books" />',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
@@ -81,6 +93,8 @@ export default {
   },
   striped: {
     variant: "striped",
+    clickable_card: true,
+    background: null,
     media: false,
     icon_data: {
       icon: "speaker",
@@ -88,7 +102,7 @@ export default {
       attributes: new drupalAttribute(),
     },
     heading: "Heading For A Card",
-    text: false,
+    text: "",
     button_data: {
       label: "Button",
       href: "#",

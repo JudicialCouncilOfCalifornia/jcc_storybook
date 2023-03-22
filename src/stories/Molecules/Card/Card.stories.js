@@ -7,7 +7,7 @@ export default {
   title: 'Molecules/Card',
   component: Card,
   parameters: {
-    // layout: 'centered',
+    layout: 'padded',
     notes: readme,
   },
   argTypes: {
@@ -18,23 +18,41 @@ export default {
       control: { type: 'select' },
       options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay', 'striped'],
     },
+    background: {
+      description: "Specify the background style for the **Striped** variant.",
+      table: { defaultValue: { summary: null }},
+      control: { type: 'select' },
+      options: [
+        'striped-base-dark-x',
+        'striped-primary-dark-xx',
+        'striped-primary-dark-x',
+        'striped-primary-light-xx',
+        'striped-secondary-dark-xx',
+        'striped-secondary',
+        'striped-accent-warm-dark-x',
+      ]
+    },
+    clickable_card: {
+      description: "Make the card clickable and hide the button.",
+      table: { defaultValue: { summary: false }},
+    },
     media: {
       description: "Image, Video",
-      table: { defaultValue: { summary: false }},
+      table: { defaultValue: { summary: null }},
     },
     icon_data: {
       description: "Data to pass to the Icon component.",
-      table: { defaultValue: { summary: false }},
+      table: { defaultValue: { summary: null }},
     },
     heading: {
       description: "A heading.",
-      table: { defaultValue: { summary: false }},
+      table: { defaultValue: { summary: null }},
     },
     text: {
-      description: "A heading.",
-      table: { defaultValue: { summary: false }},
+      description: "Lead Text.",
+      table: { defaultValue: { summary: null }},
     },
-    button: {
+    button_data: {
       description: "`button.label`, `button.href`, `button.variant`",
       table: { defaultValue: { summary: false }},
     },

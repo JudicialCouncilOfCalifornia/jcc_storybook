@@ -3,22 +3,26 @@
 {# A card could provide the heading (h1) for a Hero in the first position. #}
 {# Usually the card heading witll be (h3). #}
 {% set h = first_component ? 'h1' : 'h2' %}
-{% set tag = variant == 'striped' ? 'a' : 'div' %}
+{% set tag = clickable_card ? 'a' : 'div' %}
 {% set tag_href = tag == 'a' ? attributes.setAttribute('href', button_data.href) : '' %}
 
-{% set type = variant ? 'card--' ~ variant : 'card--default' %}
+{% set variant = variant ? 'card--' ~ variant : 'card--default' %}
+{% set variant_clickable = clickable_card ? 'card--clickable' : '' %}
+{% set variant_background = background ? 'card--background-' ~ background : '' %}
 
 {# Create class array. #}
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
 {% set classes = [
   'card',
-  type,
+  variant,
+  variant_background,
+  variant_clickable,
 ] %}
 
 <{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
   <div class="switcher">
-  {% if icon_data and variant == 'striped' %}
+  {% if icon_data and variant == 'card--striped' %}
     {% include "@atoms/Icon/Icon.twig" with icon_data %}
   {% elseif media %}
     <div class="card__media">
