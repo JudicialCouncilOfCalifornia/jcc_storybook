@@ -1,4 +1,10 @@
 
+0.33.0 / 2023-03-22
+===================
+
+  * feat: clickable cards, and support for striped background selection.
+  * fix: Card tweaks.
+
 0.32.0 / 2023-03-21
 ===================
 
