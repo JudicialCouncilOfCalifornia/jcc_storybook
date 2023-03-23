@@ -3,7 +3,7 @@ import Backgrounds from './Backgrounds.twig';
 import './Backgrounds.css';
 import DrupalAttribute from 'drupal-attribute';
 
-const schemeJSON = require('../../../assets/scheme.json');
+const schemeJSON = require('../../../assets/scheme-default.json');
 const rows = schemeJSON.children[':root'].attributes;
 const backgrounds = [];
 

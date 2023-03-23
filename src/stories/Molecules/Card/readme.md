@@ -11,7 +11,8 @@ The card variant type can be inherited which means you can set it on the element
 
 
 <details>
-  <summary>Inherited CSS Variables:</summary>  - `--color`
+  <summary>Inherited CSS Variables:</summary>
+  - `--color`
   - `--heading-color`
   - `--button-border`
   - `--button-bg`
