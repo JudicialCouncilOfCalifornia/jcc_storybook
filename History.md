@@ -1,4 +1,9 @@
 
+0.33.2 / 2023-03-23
+===================
+
+  * chore: rename scheme.json to scheme-default.json for consistency for future scheme switching.
+
 0.33.1 / 2023-03-22
 ===================
 
