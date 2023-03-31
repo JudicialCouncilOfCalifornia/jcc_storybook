@@ -6,7 +6,9 @@ An Accordion component is made from a label and a content element. The content i
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--name`: variant_name
+  - `--name`: Variant name.
+  - `--heading-color`: Summary color.
+  - `--accent-color`: For the arrow icon color.
 </details>
 
 <details>

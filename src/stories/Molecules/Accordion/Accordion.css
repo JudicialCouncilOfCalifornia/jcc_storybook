@@ -15,7 +15,7 @@
   color: var(--heading-color, --color-primary-dark-x);
   font-size: var(--s1);
   line-height: var(--s2);
-  padding: 0 0 var(--s1) 0;
+  padding-block-end: var(--s1);
   border-bottom: 1.5px dotted var(--color-base);
   list-style-type: none;
   cursor: pointer;
