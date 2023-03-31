@@ -1,0 +1,66 @@
+.accordion {
+  padding: var(--s3) var(--s5) var(--s5);
+  border: 1px dashed var(--color-base);
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.accordion details,
+.accordion details[open] {
+  position: relative;
+  width: 100%;
+}
+
+.accordion details > summary {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: var(--color-primary-dark-x);
+  font-size: var(--s1);
+  line-height: var(--s2);
+  padding: var(--s-1) var(--s4) var(--s1) 0;
+  border-bottom: 1.5px dashed var(--color-base);
+  cursor: pointer;
+}
+
+.accordion details > summary:before {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 0;
+  bottom: var(--s1);
+  font-size: var(--s4);
+  font-weight: bold;
+  line-height: 0;
+  color: var(--color-accent-warm-dark-x);
+  content: '\231F';
+  transform:rotate(45deg);
+  transform-origin: 50% 50%;
+  transition: all 0.2s ease;
+}
+
+.accordion details[open] > summary:before {
+  transform:rotate(225deg);
+}
+
+/**
+ * Accordion animation:
+ * Fade in content on open, Fade out content on close.
+ */
+.accordion details[open] > summary~* {
+  animation: open .2s;
+}
+
+.accordion details.closing > summary~* {
+  animation: close .2s;
+}
+
+@keyframes open {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes close {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
