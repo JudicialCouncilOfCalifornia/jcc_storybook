@@ -1,0 +1,22 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'accordion--' ~ variant : 'accordion--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'accordion',
+  variant_class,
+  'stack',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% for item in items %}
+  <details>
+    <summary>{{ item.label }}</summary>
+    <div class="box">
+      {{ item.content }}
+    </div>
+  </details>
+  {% endfor %}
+</div>
