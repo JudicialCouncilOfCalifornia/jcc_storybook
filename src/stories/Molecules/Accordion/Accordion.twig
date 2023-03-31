@@ -13,7 +13,7 @@
 <div {{ attributes.addClass(classes) }}>
   {% for item in items %}
   <details>
-    <summary>{{ item.label }}</summary>
+    <summary role="button">{{ item.label }}</summary>
     <div class="box">
       {{ item.content }}
     </div>
