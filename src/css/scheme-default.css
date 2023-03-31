@@ -121,7 +121,7 @@
 
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
-  --heading-color: var(--color-primary-dark-xx);
+  --heading-color: var(--color-primary-dark-x);
   --accent-color: var(--color-accent-warm-dark-x);
   --color: var(--color-black);
   --button-fg: var(--accent-color);

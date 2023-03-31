@@ -9,6 +9,7 @@ export default {
   component: Accordion,
   parameters: {
     notes: readme,
+    layout: "padded",
   },
   argTypes: {
     // Don't show the mock drupal attributes.

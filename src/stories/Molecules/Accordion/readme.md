@@ -17,17 +17,14 @@ An Accordion component is made from a label and a content element. The content i
       {
         label: "Text String",
         content: "rendered content",
-        attributes: new drupalAttribute(),
       },
       {
         label: "Text String",
         content: "rendered content",
-        attributes: new drupalAttribute(),
       },
       {
         label: "Text String",
         content: "rendered content",
-        attributes: new drupalAttribute(),
       },
       ...
     ],
