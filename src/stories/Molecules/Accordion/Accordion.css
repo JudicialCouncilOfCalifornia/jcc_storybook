@@ -28,7 +28,6 @@
   align-content: end;
   height: 30px;
   width: 30px;
-  bottom: var(--s1);
   font-size: var(--s4);
   font-weight: bold;
   line-height: 0;
