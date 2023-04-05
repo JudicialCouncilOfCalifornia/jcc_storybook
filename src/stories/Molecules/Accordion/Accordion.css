@@ -11,8 +11,7 @@
   display: flex;
   justify-content: space-between;
   gap: var(--s-2);
-  width: 100%;
-  color: var(--heading-color, --color-primary-dark-x);
+  color: var(--heading-color, var(--color-primary-dark-x));
   font-size: var(--s1);
   line-height: var(--s2);
   padding-block-end: var(--s1);
@@ -29,7 +28,6 @@
   align-content: end;
   height: 30px;
   width: 30px;
-  right: 0;
   bottom: var(--s1);
   font-size: var(--s4);
   font-weight: bold;

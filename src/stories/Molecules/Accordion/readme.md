@@ -6,7 +6,6 @@ An Accordion component is made from a label and a content element. The content i
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--name`: Variant name.
   - `--heading-color`: Summary color.
   - `--accent-color`: For the arrow icon color.
 </details>
@@ -14,7 +13,7 @@ An Accordion component is made from a label and a content element. The content i
 <details>
   <summary>Twig Variables:</summary>
   ```
-  variant: "default",
+    variant: "default",
     items: [
       {
         label: "Text String",
@@ -30,6 +29,5 @@ An Accordion component is made from a label and a content element. The content i
       },
       ...
     ],
-    attributes: new drupalAttribute()
   ```
 </details>
