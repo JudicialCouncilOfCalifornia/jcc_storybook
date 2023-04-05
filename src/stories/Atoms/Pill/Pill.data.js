@@ -5,7 +5,6 @@ export default {
   default: {
     variant: "default",
     label: "Pill",
-    href: "#",
     attributes: new drupalAttribute()
   }
 }

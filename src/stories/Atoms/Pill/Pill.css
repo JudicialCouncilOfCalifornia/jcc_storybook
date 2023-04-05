@@ -1,4 +1,4 @@
-.pill-content a{
+.pill-content span{
     display: inline-block;
     width: auto;
     background-color: var(--color-accent-warm-light-xxx);
