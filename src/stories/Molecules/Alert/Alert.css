@@ -1,0 +1,109 @@
+.alert {
+  background-color: var(--color-primary-light-x);
+  color: var(--color-white);
+  padding-top: var(--s-1);
+  padding-bottom: var(--s0);
+  gap: var(--s-2);
+}
+
+/* This is not right but can't figure out right way to pass gap value */
+.alert .switcher {
+  gap: var(--s-3);
+}
+
+.alert > * {
+  position: relative;
+}
+
+.alert[data-alert-type="info"] .icon {
+  color: var(--color-white) !important;
+}
+
+.alert[data-alert-type="status"] {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.alert[data-alert-type="warning"] {
+  background-color: var(--color-accent-warm-light-xx);
+  color: var(--color-black);
+}
+
+.alert[data-alert-type="error"] {
+  background-color: var(--color-accent-warm-dark-x);
+  color: var(--color-white);
+}
+
+.alert--icon {
+  max-width: 3ch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.alert--icon .icon {
+  width: 3ch;
+  height: 3ch;
+}
+
+.alert--content {
+  font-size: calc(var(--s0) - 1px);
+  line-height: var(--s2);
+  font-weight: 400;
+}
+
+.alert[data-alert-dismissable="true"] .alert--content {
+  padding-right: var(--s3);
+}
+
+/* Need to figure out a cleaner workaround */
+.alert[data-alert-type="default"] .alert--content > *,
+.alert[data-alert-type="status"] .alert--content > *,
+.alert[data-alert-type="error"] .alert--content > * {
+  color: var(--color-white);
+}
+
+.alert--dismiss {
+  display: none;
+}
+
+.alert[data-alert-dismissable="true"] .alert--dismiss {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: var(--s1);
+}
+
+.alert--dismiss--close {
+  height: var(--s1);
+  width: var(--s1);
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.alert--dismiss--close::after {
+  content: none;
+}
+
+.alert--dismiss--close-line {
+  width: 20px;
+  height: 2px;
+  background: var(--color-white);
+  display: grid;
+  transform: rotate(45deg);
+  position: absolute;
+  place-content: center;
+  top: 50%;
+  left: 0%;
+  transition: all var(--anim);
+}
+
+.alert[data-alert-type="warning"] .alert--dismiss--close-line {
+  background: var(--color-black);
+}
+
+.alert--dismiss--close-line:last-child {
+  transform: rotate(135deg);
+}

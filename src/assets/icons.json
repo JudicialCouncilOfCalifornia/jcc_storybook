@@ -2,13 +2,17 @@
   "control",
   "documents",
   "education",
+  "error",
   "exam",
   "grant",
+  "info",
   "interpreter_certificate",
   "magnifying_glass",
   "resources",
   "speaker",
+  "status",
   "toolkit",
   "training",
-  "translation"
+  "translation",
+  "warning"
 ]
