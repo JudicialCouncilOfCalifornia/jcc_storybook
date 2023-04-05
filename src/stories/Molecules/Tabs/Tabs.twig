@@ -1,0 +1,49 @@
+{# Set variant classes #}
+{% set variant_class = variant ? 'tabs--' ~ variant : 'tabs--default' %}
+
+{% set classes = [
+  'tabs',
+  'stack',
+  variant_class
+] %}
+
+{% set tablist_classes = [
+  'tablist',
+  variant == 'default' ? 'switcher' : 'cluster',
+] %}
+
+{% set tabpanel_classes = [
+  'tabpanel',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+
+  <div role="tablist" {{ tablist_attributes.addClass(tablist_classes) }}>
+    {% for item in items %}
+      <button 
+        id='{{ "tab-" ~ loop.index }}' 
+        class="button {{ loop.index == 1 ? 'active' : '' }}" 
+        type="button" 
+        role="tab" 
+        aria-selected="true" 
+        aria-controls='{{ "tabpanel-" ~ loop.index }}'
+      >
+        <span class="focus">{{ item.label }}</span>
+      </button>
+    {% endfor %}
+  </div>
+
+  <div {{ tabpanel_attributes.addClass(tabpanel_classes) }}>
+    {% for item in items %}
+      <div 
+        id='{{ "tabpanel-" ~ loop.index }}' 
+        role="tabpanel" 
+        tabindex="0" 
+        aria-labelledby='{{ "tab-" ~ loop.index }}'
+      >
+        {{ item.content }}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
