@@ -1,0 +1,12 @@
+.pill-content a{
+    display: inline-block;
+    width: auto;
+    background-color: var(--color-accent-warm-light-xxx);
+    padding: var(--s-1) var(--s2);
+    border-radius: var(--s5);
+    color: var(--color-black);
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: var(--s1);
+    line-height: var(--s1);
+}
