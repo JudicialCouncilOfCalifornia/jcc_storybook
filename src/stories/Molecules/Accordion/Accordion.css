@@ -34,7 +34,14 @@
   color: var(--accent-color);
   content: '\231F';
   transform:rotate(45deg);
-  transition: all 0.2s ease;
+  transition: all var(--anim-speed) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion details > summary::after {
+    transition: all 0 ease;
+    animation: none;
+  }
 }
 
 .accordion details[open] > summary::after {
@@ -46,11 +53,11 @@
  * Fade in content on open, Fade out content on close.
  */
 .accordion details[open] > summary ~ * {
-  animation: open .2s;
+  animation: open var(--anim-speed);
 }
 
 .accordion details.closing > summary ~ * {
-  animation: close .2s;
+  animation: close var(--anim-speed);
 }
 
 @keyframes open {
@@ -61,4 +68,14 @@
 @keyframes close {
   0% { opacity: 1 }
   100% { opacity: 0 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion details[open] > summary ~ * {
+    animation: none;
+  }
+  
+  .accordion details.closing > summary ~ * {
+    animation: none;
+  }
 }

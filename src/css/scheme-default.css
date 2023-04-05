@@ -128,7 +128,8 @@
   --border-thin: 1px;
   --border-normal: 2px;
   --gap: var(--s1);
-  --anim: 0.2s ease-out 0.2s;
+  --anim: var(--anim-speed) ease-out var(--anim-speed);
+  --anim-speed: 0.2s
 }
 
 /* The only media query used simply bumps the base size of our modular scale for larger screens. */
