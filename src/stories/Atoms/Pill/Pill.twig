@@ -1,0 +1,12 @@
+{% set variant_class = variant ? 'pill--' ~ variant : 'pill--default' %}
+
+{% set classes = [
+  'pill',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="pill-content">
+    <a href="{{ href }}" >{{ label }}</a>
+  </div>
+</div>
