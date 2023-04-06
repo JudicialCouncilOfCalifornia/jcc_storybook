@@ -14,50 +14,42 @@ docReady(function () {
   class Tabs {
     constructor(groupNode) {
       this.tablistNode = groupNode;
-
       this.tabs = [];
-
       this.firstTab = null;
       this.lastTab = null;
-
       this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
       this.tabpanels = [];
 
-      for (var i = 0; i < this.tabs.length; i += 1) {
-        var tab = this.tabs[i];
+      this.tabs.forEach(tab => {
         var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
-
         tab.tabIndex = -1;
         tab.setAttribute('aria-selected', 'false');
         this.tabpanels.push(tabpanel);
-
         tab.addEventListener('keydown', this.onKeydown.bind(this));
         tab.addEventListener('click', this.onClick.bind(this));
-
         if (!this.firstTab) {
           this.firstTab = tab;
         }
         this.lastTab = tab;
-      }
+      });
 
       this.setSelectedTab(this.firstTab);
     }
 
     setSelectedTab(currentTab) {
-      for (var i = 0; i < this.tabs.length; i += 1) {
-        var tab = this.tabs[i];
+      this.tabs.forEach((tab, idx) => {
         if (currentTab === tab) {
           tab.setAttribute('aria-selected', 'true');
           tab.classList.add('active');
           tab.removeAttribute('tabindex');
-          this.tabpanels[i].classList.remove('is-hidden');
+          this.tabpanels[idx].classList.remove('is-hidden');
         } else {
           tab.setAttribute('aria-selected', 'false');
           tab.classList.remove('active');
           tab.tabIndex = -1;
-          this.tabpanels[i].classList.add('is-hidden');
+          this.tabpanels[idx].classList.add('is-hidden');
         }
-      }
+      });
     }
 
     moveFocusToTab(currentTab) {
@@ -128,7 +120,10 @@ docReady(function () {
 
   // Initialize tablist
   var tablists = document.querySelectorAll('.tabs [role=tablist]');
-  for (var i = 0; i < tablists.length; i++) {
-    new Tabs(tablists[i]);
-  }
+  tablists.forEach(tablist => {
+    if (!tablist.classList.contains('js-tabs__tablist')) {
+      tablist.classList.add('js-tabs__tablist');
+      new Tabs(tablist);
+    }
+  });
 });
