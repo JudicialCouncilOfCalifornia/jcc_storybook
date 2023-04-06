@@ -1,25 +1,7 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'alert--' ~ variant : 'alert--default' %}
 
-{# Set up alert type classes. #}
-{% set type_class = type ? 'alert--type--' ~ type : 'alert--type--default' %}
-
-{# Set up alert type classes. #}
-{% set icon_class = type ? 'alert--icon--' ~ type : 'alert--icon--default' %}
+{% set icon = type ? type : icon_data.icon %}
 
 {# Create class array. #}
 {% set classes = [
@@ -30,23 +12,21 @@
 
 <div {{ attributes.addClass(classes) }} data-alert-type="{{ type }}" data-alert-dismissable="{{ dismissable }}">
   <div class="container">
-    <div class="switcher">
-      <div class="alert--icon {{ icon_class }}">
-        <svg class="icon">
-          <use xlink:href="icons.svg#{{ type == 'default' ? 'info' : type }}"></use>
-        </svg>
-        <span class="sr-only">{{ type }}</span>
-      </div>
-      <div class="alert--content">
-        {{ content }}
-      </div>
-      <div class="alert--dismiss">
-        <button role="button" tabIndex="0" class="alert--dismiss--close">
-          <span class="alert--dismiss--close-line"></span>
-          <span class="alert--dismiss--close-line"></span>
+    {% include "@atoms/Icon/Icon.twig" with {
+      icon: type ? type : icon_data.icon,
+      attributes: icon_data.attributes,
+    } %}
+    <div class="alert__content">
+      {{ content }}
+    </div>
+    {% if dismissable %}
+      <div class="alert__dismiss">
+        <button role="button" tabIndex="0" class="alert__dismiss-button">
+          <span></span>
+          <span></span>
         </button>
         <span class="sr-only">Dismiss alert</span>
       </div>
-    </div>
+    {% endif %}
   </div>
 </div>

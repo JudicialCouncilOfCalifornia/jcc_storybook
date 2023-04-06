@@ -10,7 +10,7 @@ function docReady(fn) {
 
 docReady(function () {
   // Have each alert close button remove its parent alert.
-  const close_buttons = Array.from(document.querySelectorAll('.alert--dismiss--close'));
+  const close_buttons = Array.from(document.querySelectorAll('.alert__dismiss-button'));
   close_buttons.forEach(close_button => {
     close_button.addEventListener('click', function(e) {
       this.closest('.alert').remove()

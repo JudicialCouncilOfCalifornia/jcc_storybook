@@ -19,7 +19,7 @@ export default {
     },
     type: {
       name: "Alert type",
-      options: ["default", "status", "warning", "error"],
+      options: ["info", "status", "warning", "error"],
       control: { type: "inline-radio" },
     },
     dismissable: {
@@ -31,6 +31,10 @@ export default {
       control: false,
     },
     content: {
+      table: {disable: true},
+      control: false,
+    },
+    icon_data: {
       table: {disable: true},
       control: false,
     },
