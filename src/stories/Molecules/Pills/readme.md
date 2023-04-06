@@ -2,5 +2,24 @@
 # Pills
 
 This is a container for pills.
-It creates a list of pill, with the option for an icon left aligned.
+It creates a list of pill components, with optional icon.
+
+<details>
+  <summary>Twig Variables:</summary>
+  ```
+  variant: "default",
+  icon_data: {
+    icon: "translation",
+    color: false,
+  },
+  items: [
+    {
+      variant: "default",
+      label: "Pill",
+      url: "#",
+    },
+    ...
+  ],
+  ```
+</details>
 

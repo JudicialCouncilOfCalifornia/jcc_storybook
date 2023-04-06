@@ -1,12 +1,14 @@
-.pill-content span{
-    display: inline-block;
-    width: auto;
-    background-color: var(--color-accent-warm-light-xxx);
-    padding: var(--s-1) var(--s2);
-    border-radius: var(--s5);
-    color: var(--color-black);
-    text-decoration: none;
-    font-family: var(--font-primary);
-    font-size: var(--s1);
-    line-height: var(--s1);
+.pill {
+  background-color: var(--background-color, var(--color-accent-warm-light-xxx));
+  padding: var(--s-6) var(--s-2);
+  border-radius: var(--s1);
+  color: var(--color, var(--color-black));
+  font-family: var(--font-primary);
+  font-size: var(--s-1);
+  line-height: var(--s0);
+}
+
+.pill a {
+  color: var(--color);
+  text-decoration: none;
 }

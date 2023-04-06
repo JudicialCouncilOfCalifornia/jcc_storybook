@@ -50,7 +50,7 @@
   --frame-h: 4;
   --frame-v: 3;
   max-block-size: 300px;
-  border: var(--s-1) solid var(--color-accent-warm-light-xxx);
+  border: var(--s-1) solid var(--color-accent-warm-light-xxxx);
 }
 
 /* Use negative bottom margin to pull the image into the bottom sidebar. */

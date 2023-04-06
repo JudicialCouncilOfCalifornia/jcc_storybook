@@ -26,7 +26,7 @@
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid var(--color-accent-warm-light-xxx);
+  border: var(--s-2) solid var(--color-accent-warm-light-xxxx);
 }
 
 .card--bordered-center .card > div,
