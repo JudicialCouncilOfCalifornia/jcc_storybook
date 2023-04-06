@@ -1,4 +1,17 @@
 
+0.34.0 / 2023-04-05
+===================
+
+  * chore: export scheme.
+  * chore: Export libs.
+  * Merge branch 'LWR-64-build-accordion-component-storybook'
+  * [LWR-64] -- Improved animations of accordions, and also implement animation reduction checks for accessibility.
+  * [LWR-64] -- Missed css cleanup
+  * [LWR-64] -- Code cleanup
+  * [LWR-64] -- Improvements to Accordion component
+  * [LWR-64] -- Improvements to accordion component
+  * [LWR-64] -- Added Accordion component.
+
 0.33.3 / 2023-04-05
 ===================
 
