@@ -1,0 +1,14 @@
+{% set variant_class = variant ? 'pill--' ~ variant : 'pill--default' %}
+
+{% set classes = [
+  'pill',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if url %}
+    {{ link(label, url, { 'class': ['pill__link'] }) }}
+  {% else %}
+    {{ label }}
+  {% endif %}
+</div>

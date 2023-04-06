@@ -1,0 +1,16 @@
+{% set variant_class = variant ? 'pills--' ~ variant : 'pills--default' %}
+
+{% set classes = [
+  'pills',
+  'cluster',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if icon_data %}
+    {% include "@atoms/Icon/Icon.twig" with icon_data %}
+  {% endif %}
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
+</div>

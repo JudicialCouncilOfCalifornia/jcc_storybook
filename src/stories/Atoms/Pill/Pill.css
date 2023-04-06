@@ -1,0 +1,14 @@
+.pill {
+  background-color: var(--background-color, var(--color-accent-warm-light-xxx));
+  padding: var(--s-6) var(--s-2);
+  border-radius: var(--s1);
+  color: var(--color, var(--color-black));
+  font-family: var(--font-primary);
+  font-size: var(--s-1);
+  line-height: var(--s0);
+}
+
+.pill a {
+  color: var(--color);
+  text-decoration: none;
+}

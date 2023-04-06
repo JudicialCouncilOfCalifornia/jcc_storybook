@@ -131,7 +131,7 @@
 .section--color-warm-dark-x {
   --color: var(--color-black);
   --accent-color: var(--color-accent-warm-dark-x);
-  background: var(--color-accent-warm-light-xxx);
+  background: var(--color-accent-warm-light-xxxx);
 }
 
 .section--with-bg-image {
