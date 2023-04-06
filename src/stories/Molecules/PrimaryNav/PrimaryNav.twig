@@ -14,7 +14,7 @@
 
       <div class="primary-nav__group">
         {% if parent %}
-          <button class="primary-nav__button">{{ link.text }}</button>
+          <button class="primary-nav__button button">{{ link.text }}</button>
         {% else %}
           {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
         {% endif %}
@@ -51,7 +51,7 @@
 
         <div class="primary-nav__group">
           {% if parent %}
-            <button class="primary-nav__button">{{ link.text }}</button>
+            <button class="primary-nav__button button">{{ link.text }}</button>
           {% else %}
             {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
           {% endif %}

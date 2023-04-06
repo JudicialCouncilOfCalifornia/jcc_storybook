@@ -1,5 +1,4 @@
-button,
-a.button {
+.button {
   --button-border: var(--button-fg);
   display: inline-block;
   width: auto;
@@ -16,8 +15,7 @@ a.button {
   letter-spacing: .01rem;
 }
 
-button::after,
-a.button::after {
+.button::after {
   margin-left: var(--s-5);
   content: "\2192";
   align-self: flex-end;
@@ -25,28 +23,24 @@ a.button::after {
 
 /* Button Variants */
 /* Size */
-button.button--small,
-a.button.button--small {
+.button.button--small {
   font-size: var(--s0);
   padding: var(--s-1) var(--s2);
 }
 
-button.button--large,
-a.button.button--large {
+.button.button--large {
   font-size: var(--s2);
   padding: var(--s0) var(--s2);
 }
 
 /* Type */
-button.button--secondary,
-a.button.button--secondary {
+.button.button--secondary {
   --button-bg: var(--color-accent-warm-dark-x);
   --button-fg: var(--color-white);
   --button-border: var(--color-white);
 }
 
-button.button--text,
-a.button.button--text {
+.button.button--text {
   padding-left: 0;
   border: 0;
   background: transparent;
