@@ -3,17 +3,16 @@
 
 {% set classes = [
   'tabs',
-  'stack',
   variant_class
 ] %}
 
 {% set tablist_classes = [
-  'tablist',
+  'tabs__tablist',
   variant == 'default' ? 'switcher' : 'cluster',
 ] %}
 
 {% set tabpanel_classes = [
-  'tabpanel',
+  'tabs__tabpanel',
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
@@ -22,13 +21,13 @@
     {% for item in items %}
       <button 
         id='{{ "tab-" ~ loop.index }}' 
-        class="button {{ loop.index == 1 ? 'active' : '' }}" 
+        class="{{ loop.index == 1 ? 'active' : '' }}" 
         type="button" 
         role="tab" 
         aria-selected="true" 
         aria-controls='{{ "tabpanel-" ~ loop.index }}'
       >
-        <span class="focus">{{ item.label }}</span>
+        <div class="tabs__label focus">{{ item.label }}</div>
       </button>
     {% endfor %}
   </div>

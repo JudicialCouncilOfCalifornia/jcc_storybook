@@ -11,9 +11,6 @@ function docReady(fn) {
 docReady(function () {
   const reels = Array.from(document.querySelectorAll('.reel'));
   const toggleOverflowClass = elem => {
-    console.log(elem);
-    console.log(elem.scrollWidth);
-    console.log(elem.clientWidth);
     elem.classList.toggle('overflowing', elem.scrollWidth > elem.clientWidth);
   };
 
