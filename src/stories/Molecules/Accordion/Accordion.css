@@ -1,0 +1,81 @@
+.accordion {
+  padding: var(--s3);
+  border: 1px dotted var(--color-base);
+}
+
+.accordion details {
+  width: 100%;
+}
+
+.accordion details > summary {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-2);
+  color: var(--heading-color, var(--color-primary-dark-x));
+  font-size: var(--s1);
+  line-height: var(--s2);
+  padding-block-end: var(--s1);
+  border-bottom: 1.5px dotted var(--color-base);
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.accordion details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details > summary::after {
+  align-content: end;
+  height: 30px;
+  width: 30px;
+  font-size: var(--s4);
+  font-weight: bold;
+  line-height: 0;
+  color: var(--accent-color);
+  content: '\231F';
+  transform:rotate(45deg);
+  transition: all var(--anim-speed) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion details > summary::after {
+    transition: all 0 ease;
+    animation: none;
+  }
+}
+
+.accordion details[open] > summary::after {
+  transform:rotate(225deg);
+}
+
+/**
+ * Accordion animation:
+ * Fade in content on open, Fade out content on close.
+ */
+.accordion details[open] > summary ~ * {
+  animation: open var(--anim-speed);
+}
+
+.accordion details.closing > summary ~ * {
+  animation: close var(--anim-speed);
+}
+
+@keyframes open {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes close {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion details[open] > summary ~ * {
+    animation: none;
+  }
+  
+  .accordion details.closing > summary ~ * {
+    animation: none;
+  }
+}
