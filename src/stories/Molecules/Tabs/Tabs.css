@@ -51,7 +51,7 @@
 
 .tabs--alternate .tabs__tablist button + button {
   border-inline-start: 1px dotted var(--color-base);
-  padding-inline-start: var(--s0);
+  padding-inline-start: var(--gap);
 }
 
 .tabs--alternate .tabs__tablist button .tabs__label {
