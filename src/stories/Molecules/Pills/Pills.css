@@ -1,4 +1,9 @@
-.pills-content .pill-icon{
-    max-width: 6ch;
+.pills {
+  --gap: var(--s-4);
+}
+
+.pills .icon {
+  height: var(--s4);
+  width: var(--s4);
 }
 

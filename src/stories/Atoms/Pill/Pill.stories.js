@@ -7,6 +7,7 @@ export default {
   title: 'Atoms/Pill',
   component: Pill,
   parameters: {
+    layout: 'centered',
     notes: readme,
   },
   argTypes: {

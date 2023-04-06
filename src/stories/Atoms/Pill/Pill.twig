@@ -6,7 +6,9 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="pill-content">
-    <span>{{ label }}</span>
-  </div>
+  {% if url %}
+    {{ link(label, url, { 'class': ['pill__link'] }) }}
+  {% else %}
+    {{ label }}
+  {% endif %}
 </div>

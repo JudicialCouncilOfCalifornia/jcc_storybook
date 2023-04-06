@@ -7,6 +7,7 @@ export default {
   title: 'Molecules/Pills',
   component: Pills,
   parameters: {
+    layout: 'padded',
     notes: readme,
   },
   argTypes: {

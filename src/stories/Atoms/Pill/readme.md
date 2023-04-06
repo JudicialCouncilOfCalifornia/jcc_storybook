@@ -2,5 +2,19 @@
 # Pill
 
 Pills are link/buttons that are meant to be contained in a pills molecule.
-They are essentially links.
+They can just be a list, or links if a url is included in the data.
 
+<details>
+  <summary>Inherited CSS Variables:</summary>
+  - `--color` : Sets the label color.
+  - `--background-color` : Sets the background color.
+</details>
+
+<details>
+  <summary>Twig Variables:</summary>
+  ```
+  variant: "default",
+  label: "Pill",
+  url: "#",
+  ```
+</details>

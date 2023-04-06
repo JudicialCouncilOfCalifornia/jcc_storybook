@@ -2,19 +2,15 @@
 
 {% set classes = [
   'pills',
+  'cluster',
   variant_class,
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-  <div class="pills-content box"><div class="cluster" >
-      <div class="pill-icon cluster">
-        {% if icon_data %}
-          {% include "@atoms/Icon/Icon.twig" with icon_data %}
-        {% endif %}
-      </div>
-    {% for pill in pills_content %}
-      <div class="cluster" >{{ pill }}</div>
-    {% endfor %}
-    </div>
-  </div>
+  {% if icon_data %}
+    {% include "@atoms/Icon/Icon.twig" with icon_data %}
+  {% endif %}
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
 </div>

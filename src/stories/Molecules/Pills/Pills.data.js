@@ -12,7 +12,7 @@ export default {
       color: false,
       attributes: new drupalAttribute(),
     },
-    pills_content: [
+    items: [
       Pill({...PillDefault.args}),
       Pill({...PillDefault.args}),
       Pill({...PillDefault.args}),
