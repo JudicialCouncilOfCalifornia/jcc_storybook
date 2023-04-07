@@ -1,4 +1,14 @@
 
+0.36.0 / 2023-04-06
+===================
+
+  * fix: Fix attribute rendering in Icon.twig
+  * chore: export libs.
+  * LWR-108: a few more tweaks.
+  * [LWR-108] -- Documentation update for Alerts
+  * LWR-108: collaborative updates.
+  * [LWR-108] -- Creation of Alert Component
+
 0.35.0 / 2023-04-06
 ===================
 
