@@ -1,0 +1,41 @@
+{% set variant_class = variant ? 'media-excerpt--' ~ variant : 'media-excerpt--default' %}
+
+{% set classes = [
+  'media-excerpt',
+  variant_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="media-excerpt">
+
+    <div class="media-excerpt-header cluster">
+      <div class="media-excerpt-title stack">
+        <a class="media-excerpt-title-link" href="{{ url }}">
+          <div class="box">
+            <h4>{{ title }}</h4>
+          </div>
+        </a>
+      </div>
+      {% if button_data %}
+        <div class="media-excerpt-button stack">
+          <div class="card__button box">
+            {% include "@atoms/Button/Button.twig" with button_data %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <a class="media-excerpt-content" href="{{ url }}">
+      <div class="mediaexcerpt_content box">
+        {{ content }}
+      </div>
+      {% if button_data %}
+        <div class="mediaexcerpt_details box">
+          <span class="details-label">{{ details_label }}:</span> {{ details }}
+        </div>
+      {% endif %}
+      <div class="mediaexcerpt_pills box">
+        {{ pills }}
+      </div>
+    </a>
+  </div>
+</div>
