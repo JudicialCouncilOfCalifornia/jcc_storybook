@@ -8,21 +8,26 @@ The type of alert is passed on to the Icon component, ensuring that the correct 
 
 Text or any other rendered content can be added to the `content` element.
 
-If the content is dismissable, an 'X' will appear in the upper corner.
+If the content is dismissible, an 'X' will appear in the upper corner.
 
 <details>
   <summary>Inherited CSS Variables:</summary>
   - `--gap`: space between icon, dismiss button, and text
   - `--color`: The color of the text that goes with each Alert type.
-  - `--accent-color`: The site accent color used on the active tab.
 </details>
 
 <details>
   <summary>Twig Variables:</summary>
   ```
   variant: "default",
-    type: "info", "status", "warning", or "error",
-    content: "Text or other rendered content can be placed here.",
-    dismissable: true or false,
+  type: "info", "status", "warning", or "error",
+  icon_data: {
+    attributes: (For now just make sure you send a clean attributes object.
+    The actual icon_data will be rebuilt by the component, controlled by the
+    "type" value above. This is just needed for Drupal, but I'd like to
+    refactor so it's not needed.)
+  },
+  content: "Text or other rendered content can be placed here.",
+  dismissible: true or false,
   ```
 </details>

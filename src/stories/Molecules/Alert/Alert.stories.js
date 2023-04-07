@@ -20,10 +20,10 @@ export default {
     type: {
       name: "Alert type",
       options: ["info", "status", "warning", "error"],
-      control: { type: "inline-radio" },
+      control: { type: "select" },
     },
-    dismissable: {
-      name: "Alert dismissable",
+    dismissible: {
+      name: "Alert dismissible",
       control: "boolean",
     },
     variant: {
@@ -49,4 +49,3 @@ const Template = ({ ...args }) => {
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
-
