@@ -15,6 +15,7 @@
 .list__item-label {
   margin-right: var(--s-6);
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .list--no-marker .list__container {
