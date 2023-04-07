@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="236px" height="166px" viewBox="-35 -10 236 166" enable-background="new 0 0 236 166" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:currentColor;}
+</style>
+    <path style="fill:currentColor" class="st0" d="M72.5,0 C112.478571,0 145,32.5214286 145,72.5 C145,112.478571 112.478571,145 72.5,145 C32.5214286,145 0,112.478571 0,72.5 C0,32.5214286 32.5214286,0 72.5,0 Z M72.5,18.3469388 C42.6418367,18.3469388 18.3469388,42.6418367 18.3469388,72.5 C18.3469388,102.358164 42.6418367,126.653061 72.5,126.653061 C102.358164,126.653061 126.653061,102.358164 126.653061,72.5 C126.653061,42.6418367 102.358164,18.3469388 72.5,18.3469388 Z" id="Shape"></path>
+    <g id="Group" transform="translate(61.515152, 37.787879)">
+        <ellipse style="fill:currentColor" id="Oval" class="st0" cx="10.7689866" cy="8.56875544" rx="8.60927227" ry="8.56875544"></ellipse>
+        <polygon style="fill:currentColor" id="Path" class="st0" points="23.7272727 67.6666667 19.3782589 67.6666667 4.34901383 67.6666667 0 67.6666667 0 56.2122135 4.34901383 56.2122135 4.34901383 36.7190311 0.0591702562 36.7190311 0.0591702562 25.2645779 4.34901383 25.2645779 17.2185445 25.2645779 19.3782589 25.2645779 19.3782589 56.2122135 23.7272727 56.2122135"></polygon>
+    </g>
+</svg>
