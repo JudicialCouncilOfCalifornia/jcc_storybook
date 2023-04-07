@@ -1,0 +1,29 @@
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'asset-bundle'
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if text %}<div class="asset-bundle__body">{{ text }}</div>{% endif %}
+  {% if assets or type %}
+    <div class="asset-bundle__details">
+      {{ primary_file_type }}
+      {% if assets and doc_type %} •{% endif %}
+      {{ doc_type }}
+    </div>
+  {% endif %}
+  {% if assets %}
+    <div class="asset-bundle__primary-files">
+      {% for asset in assets %}
+        <a class="button button--secondary button--normal" href="{{ asset.url }}">Download <span class="asset-bundle__doctype">{{ asset.type }}</span></a>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if languages %}
+    <div class="asset-bundle__translated-files">
+      {% include "@molecules/List/List.twig" with languages %}
+    </div>
+  {% endif %}
+</div>
