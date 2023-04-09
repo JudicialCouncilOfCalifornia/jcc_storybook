@@ -13,6 +13,20 @@ export default {
     // Don't show the mock drupal attributes.
     attributes: {table: {disable: true}},
     // More args here.
+    background: {
+      description: "Specify the alternate background style.",
+      table: { defaultValue: { summary: null }},
+      control: { type: 'select' },
+      options: [
+        'default',
+        'base-light-xx',
+      ]
+    },
+    hangover_offset: {
+      description: "Specify the offset of the hangover.",
+      table: { defaultValue: { summary: 22 }},
+      control: { type: 'number' },
+    },
   },
 };
 
@@ -37,5 +51,5 @@ export const WithBottom = Template.bind({});
 WithBottom.args = data.with_bottom;
 
 export const HideMediaPortrait = Template.bind({});
-HideMediaPortrait.args = data.hide_media_portrait;
+HideMediaPortrait.args = data.hide_media_compact;
 

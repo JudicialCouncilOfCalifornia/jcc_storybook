@@ -1,84 +1,110 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
+import Card from "../Card/Card.twig";
 
 export default {
   default: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
     brow: false,
     heading: "This is a Heading",
     text: "",
-    media: "",
-    media_hide_portrait: false,
+    hangover_content: "",
     bottom_content: "",
-    attributes: new drupalAttribute()
   },
   with_brow: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
     brow: {
       variant: "default",
       part_one: "Brow Example",
       part_two: "Part two",
-      attributes: new drupalAttribute(),
     },
     heading: "This is a Heading",
     text: "",
-    media: "",
-    media_hide_portrait: false,
+    hangover_content: "",
     bottom_content: "",
-    attributes: new drupalAttribute()
   },
   with_media: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
     brow: {
       variant: "default",
       part_one: "Brow Example",
       part_two: "Part two",
-      attributes: new drupalAttribute(),
     },
     heading: "This is a Heading",
     text: "",
-    media: "<img src='https://source.unsplash.com/random/400x300/?zen'/>",
-    media_hide_portrait: false,
+    hangover_content: Card({
+      variant: "bordered-center",
+      aspect: [4, 3],
+      clickable_card: false,
+      background: null,
+      media: '<img src="https://source.unsplash.com/random/720x720/?zen" />',
+    }),
     bottom_content: "",
-    attributes: new drupalAttribute()
   },
   with_text: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
     brow: {
       variant: "default",
       part_one: "Brow Example",
       part_two: "Part two",
-      attributes: new drupalAttribute(),
     },
     heading: "This is a Heading",
     text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
-    media: "<img src='https://source.unsplash.com/random/400x300/?zen'/>",
-    media_hide_portrait: false,
+    hangover_content: Card({
+      variant: "bordered-center",
+      aspect: [4, 3],
+      clickable_card: false,
+      background: null,
+      media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
+    }),
     bottom_content: "",
-    attributes: new drupalAttribute()
   },
   with_bottom: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
     brow: {
       variant: "default",
       part_one: "Brow Example",
       part_two: "Part two",
-      attributes: new drupalAttribute(),
     },
     heading: "This is a Heading",
     text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
-    media: "<img src='https://source.unsplash.com/random/400x300/?zen'/>",
-    media_hide_portrait: false,
+    hangover_content: Card({
+      variant: "bordered-center",
+      aspect: [4, 3],
+      clickable_card: false,
+      background: null,
+      media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
+    }),
     bottom_content: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
-    attributes: new drupalAttribute()
   },
-  hide_media_portrait: {
+  hide_media_compact: {
+    hangover_hide_compact: true,
+    hangover_offset: 22,
+    background: null,
     brow: {
       variant: "default",
       part_one: "Brow Example",
       part_two: "Part two",
-      attributes: new drupalAttribute(),
     },
     heading: "This is a Heading",
     text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla.</p>",
-    media: "<img src='https://source.unsplash.com/random/400x300/?zen'/>",
-    media_hide_portrait: true,
+    hangover_content: Card({
+      variant: "bordered-center",
+      aspect: [4, 3],
+      clickable_card: false,
+      background: null,
+      media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
+      heading: false,
+      text: false,
+    }),
     bottom_content: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
-    attributes: new drupalAttribute()
   },
 }

@@ -10,6 +10,15 @@
 {% set variant_clickable = clickable_card ? 'card--clickable' : '' %}
 {% set variant_background = background ? 'card--background-' ~ background : '' %}
 
+{% set styles = [] %}
+
+{% if aspect is not empty %}
+  {% set styles = styles|merge([
+    '--frame-h: ' ~ aspect[0] ~ ';',
+    '--frame-v: ' ~ aspect[1] ~ ';',
+  ]) %}
+{% endif %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
@@ -20,33 +29,35 @@
   variant_clickable,
 ] %}
 
-<{{tag}} {{ attributes.addClass(classes) }} {{ tag_href }}>
+<{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {{ tag_href }}>
   <div class="switcher">
-  {% if icon_data and variant == 'card--striped' %}
-    {% include "@atoms/Icon/Icon.twig" with icon_data %}
-  {% elseif media %}
-    <div class="card__media">
-      <div class="frame">
-        {{ media }}
-      </div>
-    </div>
-  {% endif %}
-    <div class="card__main stack center">
-    {% if heading %}
-      <div class="card__heading">
-        <{{h}}>{{ heading }}</{{h}}>
+    {% if icon_data and variant == 'card--striped' %}
+      {% include "@atoms/Icon/Icon.twig" with icon_data %}
+    {% elseif media %}
+      <div class="card__media">
+        <div class="frame">
+          {{ media }}
+        </div>
       </div>
     {% endif %}
-    {% if text %}
-      <div class="card__text">
-        {{ text }}
+    {% if heading or text or ( button_data.href and tag == 'div' ) %}
+      <div class="card__main stack center">
+        {% if heading %}
+          <div class="card__heading">
+            <{{h}}>{{ heading }}</{{h}}>
+          </div>
+        {% endif %}
+        {% if text %}
+          <div class="card__text">
+            {{ text }}
+          </div>
+        {% endif %}
+        {% if button_data.href and tag == 'div' %}
+          <div class="card__button">
+            {% include "@atoms/Button/Button.twig" with button_data %}
+          </div>
+        {% endif %}
       </div>
     {% endif %}
-    {% if button_data.href and tag == 'div' %}
-      <div class="card__button">
-        {% include "@atoms/Button/Button.twig" with button_data %}
-      </div>
-    {% endif %}
-    </div>
   </div>
 </{{tag}}>

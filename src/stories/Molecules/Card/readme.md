@@ -12,11 +12,13 @@ The card variant type can be inherited which means you can set it on the element
 
 <details>
   <summary>Inherited CSS Variables:</summary>
-  - `--color`
-  - `--heading-color`
-  - `--button-border`
-  - `--button-bg`
-  - `--button-fg`
+  - `--color`: The text color.
+  - `--heading-color`: The heading color.
+  - `--button-border`: The button border color.
+  - `--button-bg`: The button background color.
+  - `--button-fg`: The button foreground color.
+  - `--frame-h`: The horizontal frame aspect size.
+  - `--frame-v`: The vertical frame aspect size.
 </details>
 
 <details>
@@ -25,6 +27,7 @@ The card variant type can be inherited which means you can set it on the element
   variant: "default",
   clickable_card: false,
   background: null,
+  aspect: [16, 9],
   media: [markup],
   icon_data: {
     icon: "speaker",

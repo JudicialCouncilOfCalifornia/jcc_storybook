@@ -120,6 +120,14 @@
     var(--color-base-dark-x) 8px
   );
 
+  --background-striped-base-light-xx: repeating-linear-gradient(
+    125deg,
+    #F3F3F3,
+    #FFFFFF 1px,
+    var(--color-base-light-xx) 2px,
+    var(--color-base-light-xx) 8px
+  );
+
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
   --heading-color: var(--color-primary-dark-x);

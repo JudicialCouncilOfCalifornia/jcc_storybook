@@ -18,6 +18,10 @@ export default {
       control: { type: 'select' },
       options: ['default', 'bordered-center', 'media-left', 'media-right', 'overlay', 'striped'],
     },
+    aspect: {
+      description: "The aspect ratio of the card. Often set on an ancestor component.",
+      table: { defaultValue: { summary: [16, 9] }},
+    },
     background: {
       description: "Specify the background style for the **Striped** variant.",
       table: { defaultValue: { summary: null }},
