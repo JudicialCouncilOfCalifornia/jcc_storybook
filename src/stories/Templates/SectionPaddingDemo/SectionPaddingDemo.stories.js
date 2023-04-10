@@ -3,7 +3,7 @@ import SectionPaddingDemo from './SectionPaddingDemo.twig';
 import './SectionPaddingDemo.css';
 
 export default {
-  title: 'Pages/SectionPaddingDemo',
+  title: 'Templates/SectionPaddingDemo',
   component: SectionPaddingDemo
 };
 

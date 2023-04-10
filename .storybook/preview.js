@@ -12,7 +12,6 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
-      // color: /(background|color)$/i,
       date: /Date$/,
     },
   },
@@ -32,7 +31,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Pages', 'Layout'],
+      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
     },
   },
 }
