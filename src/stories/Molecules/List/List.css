@@ -1,31 +1,9 @@
-.list {}
-
-.list__container {
-  padding: var(--s1);
-}
-
-.list--no-side-margins .list__container {
-  padding: var(--s1) 0;
-}
-
-.list__item {
-  margin-left: var(--s1);
-}
-
 .list__item-label {
-  margin-right: var(--s-6);
   font-weight: bold;
   text-transform: capitalize;
+  margin-inline-end: var(--s-6);
 }
 
 .list--no-marker .list__container {
   list-style: none;
-}
-
-.list--no-marker .list__item {
-  margin-left: 0;
-}
-
-grid.list__container {
-  display: grid;
 }

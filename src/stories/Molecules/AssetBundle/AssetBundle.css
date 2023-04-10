@@ -1,18 +1,9 @@
-.asset-bundle {
-  padding: var(--s1);
+.asset-bundle__details + * {
+  margin-block-start: var(--s4);
 }
 
-.asset-bundle__body,
-.asset-bundle__primary-files,
-.asset-bundle__translated-files {
-  margin-bottom: var(--s1);
-}
-
-.asset-bundle__details {
-  margin-bottom: var(--s4);
-}
-
-.asset-bundle__doctype {
-  text-transform: uppercase;
+.asset-bundle__details > * + *::before {
+  content: '•';
+  margin-inline-end: var(--s-6);
 }
 

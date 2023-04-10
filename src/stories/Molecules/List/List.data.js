@@ -1,9 +1,7 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   default: {
     variant: null,
+    layout: '',
     items: [
       {
         text: "Unde omnis iste"
@@ -15,7 +13,6 @@ export default {
         text: "Ab illo inventore"
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_labels: {
     variant: null,
@@ -33,7 +30,6 @@ export default {
         text: "Ab illo inventore",
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_no_marker: {
     variant: "no-marker",
@@ -51,11 +47,10 @@ export default {
         text: "Ab illo inventore",
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_grid: {
     variant: "ul",
-    variant_layout: "grid",
+    layout: "grid",
     items: [
       {
         text: "Unde omnis iste"
@@ -67,6 +62,5 @@ export default {
         text: "Ab illo inventore"
       },
     ],
-    attributes: new drupalAttribute()
   },
 }

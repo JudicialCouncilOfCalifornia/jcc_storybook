@@ -3,24 +3,27 @@ import readme from './readme.md';
 import data from './List.data';
 import List from './List.twig';
 import './List.css';
-//import './List.js';
 
 export default {
   title: 'Molecules/List',
   component: List,
   parameters: {
     notes: readme,
-    layout: "padding",
+    layout: "padded",
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "Specify list style.",
       table: {defaultValue: {summary: 'ul'}},
       control: { type: 'select' },
       options: ['ul', 'ol', 'no-marker'],
+    },
+    layout: {
+      description: "Specify the list layout.",
+      table: {defaultValue: {summary: ''}},
+      control: { type: 'select' },
+      options: ['', 'cluster', 'grid'],
     },
   },
 };
