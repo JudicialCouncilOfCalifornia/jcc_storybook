@@ -1,4 +1,9 @@
 
+0.37.1 / 2023-04-10
+===================
+
+  * chore: Move SectionPaddingDemo to the Templates directory.
+
 0.37.0 / 2023-04-08
 ===================
 
