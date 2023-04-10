@@ -1,4 +1,9 @@
 
+0.37.2 / 2023-04-10
+===================
+
+  * fix: Set list style position to inside by default in element.css
+
 0.37.1 / 2023-04-10
 ===================
 
