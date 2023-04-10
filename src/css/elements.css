@@ -58,6 +58,11 @@ p + p {
   margin-top: var(--s0);
 }
 
+ul,
+ol {
+  list-style-position: inside;
+}
+
 img {
   max-inline-size: 100%;
 }
