@@ -1,4 +1,14 @@
 
+0.38.0 / 2023-04-11
+===================
+
+  * chore: Export libs.
+  * chore: Add css and js libs for core css and stand alone js.
+  * feat: Add detectWrap.js as stand alone lib.
+  * chore: Add prettier config. Please use it.
+  * chore: Remove empty js from SiteBranding.
+  * chore: remove console logs from Reel.js
+
 0.37.2 / 2023-04-10
 ===================
 
