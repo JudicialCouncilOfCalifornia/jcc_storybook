@@ -7,7 +7,7 @@ One golden rule of CSS is that it's a cascade. This means that the order in whic
 
 The cascade should be your north star in any CSS project. It's the guiding principle that will help you avoid specificity wars and other CSS pitfalls. It's why we can write such flexible components with very minimal and maintainable code.
 
-Always avoid creating CSS rules that are an exception or override of some other rule. If you're overriding CSS from earlier in the cascade, take that as a queue that you may be able to improve the earlier code to take better advantage of the cascade. Burn this into your brain with every line of CSS you write.
+Always avoid creating CSS rules that are an exception or override of some other rule. If you're overriding CSS from earlier in the cascade, take that as a cue that you may be able to improve the earlier code to take better advantage of the cascade. Burn this into your brain with every line of CSS you write.
 
 
 ## Logical Properties
@@ -19,10 +19,11 @@ https://www.w3.org/TR/css-logical-1/
 If we're going to support things like RTL languages and even flex directions, we need to use logical properties and values. This means using `inline/block` and `start/end` instead of `top, right, bottom, left`. This is a good resource for learning more about logical properties and values: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
 
 Examples:
+
 `marign-block-start:` instead of `margin-top:`
 `padding-inline:` instead of `padding-left:` and `padding-right:`
-`border-inline-start:` instead of `border-left:` and `border-right:`
-`border-block-end:` instead of `border-top:` and `border-bottom:`
+`border-inline-start:` instead of `border-left:`
+`border-block-end:` instead of `border-bottom:`
 
 Etc.
 

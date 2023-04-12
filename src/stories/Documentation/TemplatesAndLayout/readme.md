@@ -19,7 +19,7 @@ For a much deeper dive into the work behind these Layout Primitives, you would b
 
 ## Template Your Layout First
 
-Separate layout from styling in your mind. Always start with your twig template and create the bare bones html that will achieve the layout only. You should be able to do this without any CSS at all. Once you have the layout, then you can start adding the CSS to make it look good.
+Separate layout from styling in your mind. Always start with your twig template and create the bare bones html that will achieve the layout only. You should be able to do this without any extra CSS at all, just use the Layout Primitive classes. Once you have the layout, then you can start adding the CSS to make it look good.
 
 Test the layout with believable dummy content. One word headings will not give you a good idea of how the layout will look with real content. Use real content, even if it's just lorem ipsum.
 
