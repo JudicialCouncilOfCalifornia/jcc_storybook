@@ -17,6 +17,3 @@ As a general approach to building components for this library.
 *[1] For the 2% of the time that you don't quite get there out of the box, understand intrinsic layout, or ask for guidance. *
 
 *Remember that Web UI development is a collaboration between developer and designer. Ask for feedback, clarification, justification, or alternatives when something in the design does not integrate well with the system we're building or the browsers that render them.*
-
-
-
