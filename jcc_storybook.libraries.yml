@@ -1,11 +1,12 @@
 global:
   css:
     base:
-      src/css/elements.css:  { minified: false }
+      lib/css/elements.css:  { minified: true }
     layout:
-      src/css/layout-primitives.css:  { minified: false }
+      lib/css/layout-primitives.css:  { minified: true }
     theme:
-      src/css/scheme-default.css:  { minified: false }
+      lib/css/scheme-default.css:  { minified: true }
       lib/stories/Atoms/FormFields/FormFields.css: { minified: true }
   js:
+    lib/js/detectWrap.js: {minified: true }
     lib/stories/Layout/Reel/Reel.js: { minified: true }
