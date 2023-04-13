@@ -2,43 +2,41 @@
 
 {% set classes = [
   'media-excerpt',
+  'stack',
+  'box',
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  <div class="media-excerpt box">
-
-    <div class="media-excerpt-header switcher">
-      <div class="media-excerpt-title">
-        <a class="media-excerpt-title-link" href="{{ url }}">
+<div class="{{ classes.join(' ')}}">
+  <div class="media-excerpt__header switcher wrapping">
+    <div class="media-excerpt__title">
+      <a class="media-excerpt__title__link" href="{{ url }}">
+        <div class="">
+          <h4>{{ title }}</h4>
+        </div>
+      </a>
+    </div>
+    {% if button_data %}
+      <div class="media-excerpt__button">
+        <div class="card__button">
           <div class="box">
-            <h4>{{ title }}</h4>
-          </div>
-        </a>
-      </div>
-      {% if button_data %}
-        <div class="media-excerpt-button">
-          <div class="card__button box">
             {% include "@atoms/Button/Button.twig" with button_data %}
           </div>
         </div>
-      {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="media-excerpt__content-wrapper">
+    <div class="media_excerpt-content-inner">
+      {{ content }}
     </div>
-    <div class="media-excerpt-content-box box">
-      <a class="media-excerpt-content" href="{{ url }}">
-        <div class="mediaexcerpt_content">
-          {{ content }}
-        </div>
-        {% if button_data %}
-          <div class="mediaexcerpt_details">
-            <span class="details-label">{{ details_label }}:</span> {{ details }}
-          </div>
-        {% endif %}
-        <div class="mediaexcerpt_pills">
-          {{ pills }}
-        </div>
-      </a>
-
+    {% if button_data %}
+      <div class="media-excerpt__details">
+        <span>{{ details_label }}:</span> {{ details }}
+      </div>
+    {% endif %}
+    <div class="media-excerpt__pills">
+      {{ pills }}
     </div>
   </div>
 </div>

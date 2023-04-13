@@ -1,5 +1,4 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute';
+// import '../../../js/detectWrap.js';
 import Pills from "../../Molecules/Pills/Pills.twig";
 import {
   Default as PillsDefault,
@@ -21,14 +20,5 @@ export default {
     details: "Topic  •  July 12, 2022  •  Case Type  •  Office/Division: CFCC  •  Report",
     pills:
       Pills({...PillsDefault.args}),
-    attributes: new drupalAttribute()
-  },
-  another_variant: {
-    variant: "content-bg",
-    sub_component_data: {
-      variant: "default",
-      attributes: new drupalAttribute(),
-    },
-    attributes: new drupalAttribute()
   }
 }
