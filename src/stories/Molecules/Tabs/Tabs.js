@@ -21,12 +21,15 @@ docReady(function () {
       this.tabpanels = [];
 
       this.tabs.forEach(tab => {
-        var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
+        var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));        
         tab.tabIndex = -1;
         tab.setAttribute('aria-selected', 'false');
+        
         this.tabpanels.push(tabpanel);
+
         tab.addEventListener('keydown', this.onKeydown.bind(this));
         tab.addEventListener('click', this.onClick.bind(this));
+        
         if (!this.firstTab) {
           this.firstTab = tab;
         }
@@ -118,12 +121,38 @@ docReady(function () {
     }
   }
 
+  // Determine if tabs should convert to "accordion" layout on resize.
+  const resizeObserver = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+      toggleAccordionDisplay(entry.target)
+    });
+  });
+
   // Initialize tablist
   var tablists = document.querySelectorAll('.tabs [role=tablist]');
   tablists.forEach(tablist => {
     if (!tablist.classList.contains('js-tabs__tablist')) {
       tablist.classList.add('js-tabs__tablist');
       new Tabs(tablist);
+
+      resizeObserver.observe(tablist);
     }
   });
+
+  var tabGroup = document.querySelectorAll('.tabs');
+  var tabDetails = document.querySelectorAll('.tabs details');
+  
+  // Toggle class if the tab and tablist are the same width or not.
+  function toggleAccordionDisplay(tablist) {
+    let Tabs = Array.from(tablist.querySelectorAll('button'));
+    
+    if (Tabs[0].clientWidth >= tablist.clientWidth) {
+      tabGroup[0].classList.add('tabs--as-accordion');
+    } else {
+      tabGroup[0].classList.remove('tabs--as-accordion');
+      tabDetails.forEach((detail, idx) => {
+        detail.open = true;
+      });
+    }
+  }
 });

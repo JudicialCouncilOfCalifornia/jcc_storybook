@@ -34,14 +34,16 @@
 
   <div {{ tabpanel_attributes.addClass(tabpanel_classes) }}>
     {% for item in items %}
-      <div 
+      <details 
         id='{{ "tabpanel-" ~ loop.index }}' 
         role="tabpanel" 
         tabindex="0" 
         aria-labelledby='{{ "tab-" ~ loop.index }}'
+        class="stack"
       >
+        <summary><div class="tabs__label focus">{{ item.label }}</div></summary>
         {{ item.content }}
-      </div>
+      </details>
     {% endfor %}
   </div>
 
