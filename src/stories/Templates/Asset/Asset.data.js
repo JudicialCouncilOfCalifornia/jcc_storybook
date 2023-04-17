@@ -1,5 +1,4 @@
 // To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
 import List from '../../Molecules/List/List.twig';
 import {
   WithNoMarker as WithNoMarker,
@@ -20,13 +19,11 @@ export default {
       List({...WithNoMarker.args}),
       AssetBundle({...AssetBundleDefault.args}),
     ],
-    attributes: new drupalAttribute(),
   },
   with_no_sidebar: {
     variant: 'default',
     sub_component_data: [
       AssetBundle({...AssetBundleDefault.args}),
     ],
-    attributes: new drupalAttribute(),
   }
 }

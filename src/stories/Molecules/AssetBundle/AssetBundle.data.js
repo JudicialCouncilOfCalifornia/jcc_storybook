@@ -19,7 +19,7 @@ export default {
     ],
     languages: {
       variant: "ul",
-      variant_layout: "grid",
+      layout: "grid",
       items: [
         {
           text: "<a href='https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'>español</a> (Spanish)",

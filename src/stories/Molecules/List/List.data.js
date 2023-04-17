@@ -3,7 +3,8 @@ import drupalAttribute from 'drupal-attribute'
 
 export default {
   default: {
-    variant: null,
+    variant: "ul",
+    set_padding: true,
     items: [
       {
         text: "Unde omnis iste"
@@ -15,10 +16,10 @@ export default {
         text: "Ab illo inventore"
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_labels: {
-    variant: null,
+    variant: "ul",
+    set_padding: true,
     items: [
       {
         label: "Sed ut",
@@ -33,10 +34,10 @@ export default {
         text: "Ab illo inventore",
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_no_marker: {
-    variant: "no-marker",
+    variant: "none",
+    set_padding: true,
     items: [
       {
         label: "Sed ut",
@@ -51,11 +52,11 @@ export default {
         text: "Ab illo inventore",
       }
     ],
-    attributes: new drupalAttribute()
   },
   with_grid: {
     variant: "ul",
-    variant_layout: "grid",
+    layout: "grid",
+    set_padding: true,
     items: [
       {
         text: "Unde omnis iste"
@@ -67,6 +68,5 @@ export default {
         text: "Ab illo inventore"
       },
     ],
-    attributes: new drupalAttribute()
   },
 }

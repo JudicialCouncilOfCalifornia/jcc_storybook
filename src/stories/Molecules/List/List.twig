@@ -1,26 +1,28 @@
-{# Set up variant classes. #}
 {% set variant_class = variant ? 'list--' ~ variant : null %}
-{% set variant_margins = margins ? 'list--' ~ margins : null %}
 
-{# Create class array. #}
-{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
-{# Include variant classes form above. #}
 {% set classes = [
   'list',
   variant_class,
-  variant_margins,
 ] %}
 
-{% set variant_tag = variant and variant != 'no-marker' ? variant : 'ul' %}
-{% set layout = (variant_layout ? variant_layout : '') %}
+{% set tag = variant != 'none' ? variant : 'ul' %}
 
-<div {{ attributes.addClass(classes) }}>
-  <{{ variant_tag }} class="list__container {{ layout }}">
+{% set container_classes = [
+  'list__container',
+  layout,
+  set_padding ? 'box' : '',
+] %}
+
+
+<div class="{{ classes|join(' ') }}">
+  <{{ tag }} class="{{ container_classes|join(' ') }}">
     {% for item in items %}
       <li class="list__item">
-        {% if item.label %}<span class="list__item-label">{{ item.label }}:</span>{% endif %}
+        {% if item.label %}
+          <span class="list__item-label">{{ item.label}}:</span>
+        {% endif %}
         {{ item.text }}
       </li>
     {% endfor %}
-  </{{ variant_tag }}>
+  </{{ tag }}>
 </div>

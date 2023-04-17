@@ -1,8 +1,6 @@
 import readme from './readme.md';
 import data from './AssetBundle.data';
 import AssetBundle from './AssetBundle.twig';
-import './AssetBundle.css';
-// import './AssetBundle.js';
 
 export default {
   title: 'Molecules/AssetBundle',

@@ -3,7 +3,6 @@ import readme from './readme.md';
 import data from './List.data';
 import List from './List.twig';
 import './List.css';
-//import './List.js';
 
 export default {
   title: 'Molecules/List',
@@ -20,7 +19,7 @@ export default {
       description: "Specify list style.",
       table: {defaultValue: {summary: 'ul'}},
       control: { type: 'select' },
-      options: ['ul', 'ol', 'no-marker'],
+      options: ['ul', 'ol', 'none'],
     },
   },
 };
