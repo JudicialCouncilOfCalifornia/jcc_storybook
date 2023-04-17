@@ -3,11 +3,6 @@
 
 Standard display for an asset page including general documents, publications, and potentially video & audio.
 
-[//]: # (<details>)
-[//]: # (  <summary>Inherited CSS Variables:</summary>)
-[//]: # (  - `--name`: description...)
-[//]: # (</details>)
-
 <details>
   <summary>Twig Variables:</summary>
 

@@ -3,17 +3,13 @@
 
 Standard HTML list with variant functional styles.
 
-[//]: # (<details>)
-[//]: # (  <summary>Inherited CSS Variables:</summary>)
-[//]: # (  - `--name`: description...)
-[//]: # (</details>)
-
 <details>
   <summary>Twig Variables:</summary>
 
   ```
-  variant: null, ... UL by default else option for OL or no marker
-  variant-layout: null ... Optional 'grid' layout can be used
+  variant: "ul", ... UL by default else option for OL or none
+  layout: null ... Optional 'grid' layout can be used
+  set_padding: true, ... optionally adds .box padding
   items: [
     {
       label: "Sed ut",

@@ -1,18 +1,9 @@
-.asset-bundle {
-  padding: var(--s1);
+.asset-bundle__details span {
+  font-weight: bold;
 }
 
-.asset-bundle__body,
-.asset-bundle__primary-files,
-.asset-bundle__translated-files {
-  margin-bottom: var(--s1);
+.asset-bundle__details span:first-of-type:after {
+  list-style-type: disc;
+  content: '•';
+  padding: var(--s-5);
 }
-
-.asset-bundle__details {
-  margin-bottom: var(--s4);
-}
-
-.asset-bundle__doctype {
-  text-transform: uppercase;
-}
-

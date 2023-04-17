@@ -1,14 +1,11 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
-# asset
+# Asset
 
-Example asset display using the Section organism with optional metadata sidebar display.
+For demonstration only using a section with subcomponents. Do not use this organism directly unless the alias context is absolutely necessary.
+
+To implement, include the Section organism with List and AssetBundle as its content (sub_component_data). See Twig Variables for the controls involved. 
 
 To remove the sidebar, remove or set null as the value for sidebar_direction. However, to avoid confusion, do the same for sidebar_width, gap, and List subcomponent.
-
-[//]: # (<details>)
-[//]: # (  <summary>Inherited CSS Variables:</summary>)
-[//]: # (  - `--name`: description...)
-[//]: # (</details>)
 
 <details>
   <summary>Twig Variables:</summary>
