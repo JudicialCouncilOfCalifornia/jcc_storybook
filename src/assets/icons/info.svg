@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="236px" height="166px" viewBox="-35 -10 236 166" enable-background="new 0 0 236 166" xml:space="preserve">
+<svg width="126px" height="126px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>info</title>
 <style type="text/css">
     .st0{fill:currentColor;}
 </style>
-    <path style="fill:currentColor" class="st0" d="M72.5,0 C112.478571,0 145,32.5214286 145,72.5 C145,112.478571 112.478571,145 72.5,145 C32.5214286,145 0,112.478571 0,72.5 C0,32.5214286 32.5214286,0 72.5,0 Z M72.5,18.3469388 C42.6418367,18.3469388 18.3469388,42.6418367 18.3469388,72.5 C18.3469388,102.358164 42.6418367,126.653061 72.5,126.653061 C102.358164,126.653061 126.653061,102.358164 126.653061,72.5 C126.653061,42.6418367 102.358164,18.3469388 72.5,18.3469388 Z" id="Shape"></path>
-    <g id="Group" transform="translate(61.515152, 37.787879)">
-        <ellipse style="fill:currentColor" id="Oval" class="st0" cx="10.7689866" cy="8.56875544" rx="8.60927227" ry="8.56875544"></ellipse>
-        <polygon style="fill:currentColor" id="Path" class="st0" points="23.7272727 67.6666667 19.3782589 67.6666667 4.34901383 67.6666667 0 67.6666667 0 56.2122135 4.34901383 56.2122135 4.34901383 36.7190311 0.0591702562 36.7190311 0.0591702562 25.2645779 4.34901383 25.2645779 17.2185445 25.2645779 19.3782589 25.2645779 19.3782589 56.2122135 23.7272727 56.2122135"></polygon>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill="currentColor" fill-rule="nonzero">
+            <path d="M63,0 C97.7399996,0 126,28.26 126,63 C126,97.7399996 97.7399996,126 63,126 C28.26,126 0,97.7399996 0,63 C0,28.26 28.26,0 63,0 Z M72.6845387,52 L49.0723192,52 L49.0723192,66.3173612 L54.3154614,66.3173612 L54.3154614,90.6826388 L49,90.6826388 L49,105 L78,105 L78,90.6826388 L72.6845387,90.6826388 L72.6845387,52 Z M62.5,21 C56.7010101,21 52,25.7010101 52,31.5 C52,37.2989899 56.7010101,42 62.5,42 C68.2989899,42 73,37.2989899 73,31.5 C73,25.7010101 68.2989899,21 62.5,21 Z" id="Combined-Shape"></path>
+        </g>
     </g>
 </svg>
