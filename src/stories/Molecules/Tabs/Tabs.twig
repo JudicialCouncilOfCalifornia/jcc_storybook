@@ -15,16 +15,16 @@
   'tabs__tabpanel',
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
 
-  <div role="tablist" {{ tablist_attributes.addClass(tablist_classes) }}>
+  <div role="tablist" class="{{ tablist_classes|join(' ') }}">
     {% for item in items %}
-      <button 
-        id='{{ "tab-" ~ loop.index }}' 
-        class="{{ loop.index == 1 ? 'active' : '' }}" 
-        type="button" 
-        role="tab" 
-        aria-selected="true" 
+      <button
+        id='{{ "tab-" ~ loop.index }}'
+        class="{{ loop.index == 1 ? 'active' : '' }}"
+        type="button"
+        role="tab"
+        aria-selected="true"
         aria-controls='{{ "tabpanel-" ~ loop.index }}'
       >
         <div class="tabs__label focus">{{ item.label }}</div>
@@ -32,12 +32,12 @@
     {% endfor %}
   </div>
 
-  <div {{ tabpanel_attributes.addClass(tabpanel_classes) }}>
+  <div class="{{ tabpanel_classes|join(' ') }}">
     {% for item in items %}
-      <details 
-        id='{{ "tabpanel-" ~ loop.index }}' 
-        role="tabpanel" 
-        tabindex="0" 
+      <details
+        id='{{ "tabpanel-" ~ loop.index }}'
+        role="tabpanel"
+        tabindex="0"
         aria-labelledby='{{ "tab-" ~ loop.index }}'
         class="stack"
       >

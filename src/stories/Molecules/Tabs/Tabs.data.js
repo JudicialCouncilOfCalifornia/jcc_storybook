@@ -1,6 +1,3 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   default: {
     variant: "default",
@@ -19,9 +16,6 @@ export default {
         label: "Additional Resources",
         content: "Any rendered content goes here. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus",      },
     ],
-    attributes: new drupalAttribute(),
-    tablist_attributes: new drupalAttribute(),
-    tabpanel_attributes: new drupalAttribute(),
   },
   alternate: {
     variant: "alternate",
@@ -37,8 +31,5 @@ export default {
         label: "Popular Items",
         content: "Any rendered content goes here. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus. Lorem ipsum dolor sit amet consectetur adipiscing elit aenean tincidunt erat fames, tempor laoreet a facilisis nam aliquet nisi tellus",      }
     ],
-    attributes: new drupalAttribute(),
-    tablist_attributes: new drupalAttribute(),
-    tabpanel_attributes: new drupalAttribute(),
   }
 }

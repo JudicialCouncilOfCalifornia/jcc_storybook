@@ -12,11 +12,6 @@ export default {
     layout: "padded",
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {
-      table: {disable: true},
-      control: {type: null},
-    },
     variant: {
       table: {disable: true},
       control: {type: null},
@@ -25,14 +20,6 @@ export default {
       table: {disable: true},
       control: {type: null},
     },
-    tablist_attributes: {
-      table: {disable: true},
-      control: {type: null},
-    },
-    tabpanel_attributes: {
-      table: {disable: true},
-      control: {type: null},
-    }
   },
 };
 
