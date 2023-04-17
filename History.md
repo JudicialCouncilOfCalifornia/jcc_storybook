@@ -1,4 +1,10 @@
 
+0.41.0 / 2023-04-17
+===================
+
+  * chore: Export libs.
+  * feat: Update and document DetectWrap utility.
+
 0.40.0 / 2023-04-17
 ===================
 
