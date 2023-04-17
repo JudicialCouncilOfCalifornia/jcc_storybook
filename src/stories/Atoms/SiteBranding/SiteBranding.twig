@@ -1,13 +1,25 @@
 <div class="site-branding cluster">
   <div class='site-branding__logo'>
-    <img src='{{ logo }}' />
+    <a 
+      href="{{ url }}" 
+      title="{{ label }} {{ sub_label }}"
+      aria-label="Homepage: {{ label }} {{ sub_label }}"
+    >
+      <img src='{{ logo }}' />
+    </a>
   </div>
   <div class="site-branding__labels">
-    <div class="site-branding__label">
-      {{ label }}
-    </div>
-    <div class="site-branding__sub-label">
-      {{ sub_label }}
-    </div>
+    <a 
+      href="{{ url }}" 
+      title="{{ label }} {{ sub_label }}"
+      aria-label="Homepage: {{ label }} {{ sub_label }}"
+    >
+      <div class="site-branding__label">
+        {{ label }}
+      </div>
+      <div class="site-branding__sub-label">
+        {{ sub_label }}
+      </div>
+    </a>
   </div>
 </div>
