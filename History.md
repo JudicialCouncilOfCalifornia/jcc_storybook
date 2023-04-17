@@ -1,4 +1,10 @@
 
+0.41.1 / 2023-04-17
+===================
+
+  * chore: Export libs.
+  * [LWR-146] -- Added homepage linking to site branding
+
 0.41.0 / 2023-04-17
 ===================
 
