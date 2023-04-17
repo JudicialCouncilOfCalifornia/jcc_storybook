@@ -7,6 +7,7 @@ export default {
     logo: logo,
     label: "California Courts",
     sub_label: "Language Access",
+    url: '/',
     attributes: new drupalAttribute()
   }
 }
