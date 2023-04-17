@@ -1,0 +1,69 @@
+<div class='dw box stack'>
+  <p>See the &#9757; 'Docs' for more info.</p>
+  <p>This is not a component, but a utility class that can be used to detect if an element has wrapped.</p>
+
+  <div class='dw__examples switcher'>
+    <div class='dw__example stack'>
+      <h3>No Detection</h3>
+      <code>no class</code>
+
+      <h4>Switcher</h4>
+      <div class="dw__group switcher">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <h4>Cluster</h4>
+      <div class="dw__group cluster">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <p>Default behavior.</p>
+    </div>
+
+    <div class='dw__example stack'>
+      <h3>Detection</h3>
+      <code>.detect-wrap</code>
+
+      <h4>Switcher</h4>
+      <div class="dw__group switcher detect-wrap">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <h4>Cluster</h4>
+      <div class="dw__group cluster detect-wrap">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <p>Only runs on page load.</p>
+    </div>
+
+    <div class='dw__example stack'>
+      <h3>Detection Observed</h3>
+      <code>.detect-wrap .detect-wrap--observed</code>
+
+      <h4>Switcher</h4>
+      <div class="dw__group switcher detect-wrap detect-wrap--observed">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <h4>Cluster</h4>
+      <div class="dw__group cluster detect-wrap detect-wrap--observed">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <p>Resize Observer, runs on resize. More resource intensive. Probably only needed where content is loaded or replaced after page load, therefore dynamically changing the space where your element may need to wrap.</p>
+    </div>
+  </div>
+</div>

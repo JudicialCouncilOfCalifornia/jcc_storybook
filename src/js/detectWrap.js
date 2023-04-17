@@ -9,14 +9,19 @@ function docReady(fn) {
 }
 
 docReady(function () {
-  const detectWrap = elem => {
-    const top = elem.children[0].getBoundingClientRect().top;
+  const detectWrap = group => {
+    const top = group.children[0].getBoundingClientRect().top;
 
-    for (let i = 1; i < elem.children.length; i++) {
-      const child = elem.children[i];
+    for (let i = 1; i < group.children.length; i++) {
+      const child = group.children[i];
+
       if (child.getBoundingClientRect().top != top) {
         child.classList.add('wrapped');
-        elem.classList.add('wrapping');
+        group.classList.add('wrapping');
+      }
+      else {
+        child.classList.remove('wrapped');
+        group.classList.remove('wrapping');
       }
     }
   }
@@ -26,7 +31,18 @@ docReady(function () {
   wrappable.forEach(item => {
     if (!item.classList.contains('js-detect-wrap')) {
       item.classList.add('js-detect-wrap');
+
       detectWrap(item);
+
+      if (item.classList.contains('detect-wrap--observed')) {
+        if ('ResizeObserver' in window) {
+          new ResizeObserver(entries => {
+            detectWrap(item);
+          }).observe(item);
+        }
+      }
     }
   });
 });
+
+

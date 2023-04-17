@@ -1,0 +1,46 @@
+.dw__examples {
+  --measure: 15rem;
+}
+
+.dw__group {
+  --gap: 0;
+  --measure: 20ch;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.dw__group > * {
+  text-align: center;
+}
+
+.dw__group.switcher > * + * {
+  margin-inline-start: 1rem;
+  border-inline-start: 1px solid black;
+  padding-inline-start: 1rem;
+}
+
+.dw__group.switcher > .wrapped {
+  margin-inline-start: 0;
+  border-inline-start: none;
+  padding-inline-start: 0;
+}
+
+.dw__group.cluster > * + *::before {
+  margin-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  content: '\00bb';
+}
+
+.dw__group.cluster > .wrapped::before {
+  margin-inline-start: 0;
+  padding-inline-end: 0;
+  content: none;
+}
+
+
+/* With cluster you need to compensate */
+/* or it unwraps after the space is removed. */
+/* Equals margin + padding + border. */
+.dw__group.cluster > .wrapped {
+  margin-inline-end: calc(2rem + 1px);
+}

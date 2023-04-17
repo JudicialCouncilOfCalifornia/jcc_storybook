@@ -7,6 +7,7 @@ module.exports = {
     "../src/css/elements.css",
     "../src/stories/Atoms/FormFields/FormFields.css",
     "../src/stories/Layout/Reel/Reel.js",
+    "../src/js/detectWrap.js",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   addons: [
