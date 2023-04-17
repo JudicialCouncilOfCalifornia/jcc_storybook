@@ -19,7 +19,7 @@ export default {
     },
     type: {
       name: "Alert type",
-      options: ["info", "status", "warning", "error"],
+      options: ["info", "warning", "status", "error"],
       control: { type: "select" },
     },
     dismissible: {

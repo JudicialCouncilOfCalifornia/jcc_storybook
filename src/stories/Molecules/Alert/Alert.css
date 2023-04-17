@@ -1,23 +1,24 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
-  --color: var(--color-white);
-  background-color: var(--color-primary-light-x);
+  --color: var(--color-black);
+  background-color: var(--color-primary-light-xx);
   color: var(--color);
   padding-block: var(--s-1);
 }
 
 .alert[data-alert-type="status"] {
-  background-color: var(--color-secondary);
+  --color: var(--color-black);
+  background-color: var(--color-secondary-light-xx);
 }
 
 .alert[data-alert-type="warning"] {
-  --color: var(--color-black);
-  background-color: var(--color-accent-warm-light-xx);
+  background-color: var(--color-accent-warm-light-x);
 }
 
 .alert[data-alert-type="error"] {
-  background-color: var(--color-accent-warm-dark-x);
+  --color: var(--color-white);
+  background-color: var(--color-primary-light-x);
 }
 
 .alert > .container {
@@ -33,8 +34,8 @@
 }
 
 .alert .icon-wrapper .icon {
-  width: var(--s3);
-  height: var(--s3);
+  width: var(--s1);
+  height: var(--s1);
 }
 
 .alert__content {
