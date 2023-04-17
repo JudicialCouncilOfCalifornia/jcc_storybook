@@ -1,0 +1,20 @@
+.teaser {
+  padding-block: var(--s3);
+}
+
+.teaser .stack > * + * {
+  --gap: var(--s-1);
+}
+
+.teaser__list {
+  border-left: 1px dotted var(--accent-color);
+}
+
+.teaser__footer {
+  font-size: var(--s-1);
+  color: var(--color-base-dark-x);
+}
+
+.teaser + .teaser {
+  border-top: 1px solid var(--color-base-light-x);
+}

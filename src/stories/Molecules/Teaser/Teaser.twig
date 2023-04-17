@@ -1,0 +1,33 @@
+{# Set up variant classes. #}
+
+{# Create class array #}
+{% set classes = [
+  'teaser',
+  'grid',
+] %}
+<div {{ attributes.addClass(classes) }}>
+  <div class="teaser__teaser stack">
+    {% if teaser.brow_data %}
+      {% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
+    {% endif %}
+    <div class="teaser__teaser-heading">
+      <h3>
+        {% if teaser.href %}
+          {{ link(teaser.heading, teaser.href) }}
+        {% else %}
+          {{ teaser.heading }}
+        {% endif %}
+      </h3>
+    </div>
+    {% if teaser.text %}
+    <div class="teaser__teaser-text">
+      {{ teaser.text }}
+    </div>
+    {% endif %}
+    {% if teaser.footer %}
+      <div class="teaser__footer">
+        {{ teaser.footer }}
+      </div>
+    {% endif %}
+  </div>
+</div>
