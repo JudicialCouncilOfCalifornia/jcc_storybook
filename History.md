@@ -1,4 +1,15 @@
 
+0.40.0 / 2023-04-17
+===================
+
+  * chore: export libs.
+  * Merge pull request #19 from JudicialCouncilOfCalifornia/calvin/LWR-79-storybook-tabs-component
+  * LWR-79: Close accordions when switching from tabs. Minor cleanup of attributes for Storybook.
+  * [LWR-79] -- Setup of Tab switching to "Accordion" when appropriate.
+  * [LWR-79] -- Documentation update
+  * [LWR-79] -- Cleanup of Tabs component code from review. Removal of console log messages from Reel
+  * [LWR-79] - Added Tabs component
+
 0.39.3 / 2023-04-12
 ===================
 
