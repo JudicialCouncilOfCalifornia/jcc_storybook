@@ -1,0 +1,27 @@
+.pager {
+  margin: auto;
+}
+
+.pager .pager__items {
+  --gap: var(--s-3);
+  list-style-type: none;
+  margin: auto;
+  font-family: var( --font-primary);
+}
+
+.pager .pager__item--ellipsis,
+.pager a {
+  text-decoration: none;
+  color: var(--color);
+  border-radius: var(--s-6);
+  padding: var(--s-3) var(--s-1);
+}
+
+.pager a:hover {
+  color: var(--accent-color);
+}
+
+.pager .is-active a {
+  background-color: var(--color-accent-warm-dark-x);
+  color: var(--color-white);
+}
