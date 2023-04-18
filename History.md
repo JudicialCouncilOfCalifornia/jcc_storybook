@@ -1,4 +1,13 @@
 
+0.41.2 / 2023-04-18
+===================
+
+  * chore: Export libs.
+  * fix: Alerts adjustments, fix icon clipping.
+  * Adjustments to Alert component: - Set better aria/accessibility setup to dismiss button on Alerts.
+  * Adjustments to Alert component: - Change to content rendering since Drupal puts the content out as an array. - Change to layout styling to account for small message length. - Docs update.
+  * [Tweaks] -- Style adjustments and icon tweaks to Alerts based on latest figma designs. Had wrong bg colors for error and warning and found better icon for "info"
+
 0.41.1 / 2023-04-17
 ===================
 
