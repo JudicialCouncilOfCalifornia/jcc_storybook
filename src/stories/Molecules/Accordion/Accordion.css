@@ -1,5 +1,7 @@
 .accordion {
-  padding: var(--s3);
+  padding-inline: var(--s3);
+  padding-block-start: var(--s1);
+  padding-block-end: var(--s4);
   border: 1px dotted var(--color-base);
 }
 
@@ -14,7 +16,9 @@
   color: var(--heading-color, var(--color-primary-dark-x));
   font-size: var(--s1);
   line-height: var(--s2);
-  padding-block-end: var(--s1);
+  padding-block: var(--s1);
+  padding-inline-start: var(--s-6);
+  padding-inline-end: var(--s1);
   border-bottom: 1.5px dotted var(--color-base);
   list-style-type: none;
   cursor: pointer;
@@ -46,6 +50,15 @@
 
 .accordion details[open] > summary::after {
   transform:rotate(225deg);
+}
+
+.accordion details > summary:hover {
+  background-color: var(--color-base-light-xxx);
+  color: var(--accent-color);
+}
+
+.accordion.stack > * + * {
+  --gap: 0;
 }
 
 /**
