@@ -8,7 +8,9 @@ export default {
     icon_data: {
       attributes: new drupalAttribute(),
     },
-    content: "<p>Text or other rendered content will display here. If the content is dismissible, an X will appear in the upper corner. This content is here just to force the alert to go into a second line.</p>",
+    content: [
+      "<p>In Drupal this is an array of messages.</p>",
+    ],
     dismissible: true,
     attributes: new drupalAttribute()
   }
