@@ -6,14 +6,15 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'accordion',
-  'stack',
   variant_class,
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
   {% for item in items %}
   <details>
-    <summary role="button">{{ item.label }}</summary>
+    <summary role="button">
+      <div class="accordion__label">{{ item.label }}</div>
+    </summary>
     <div class="box">
       {{ item.content }}
     </div>
