@@ -27,7 +27,7 @@ If the content is dismissible, an 'X' will appear in the upper corner.
     "type" value above. This is just needed for Drupal, but I'd like to
     refactor so it's not needed.)
   },
-  content: "Text or other rendered content can be placed here.",
+  content: "Text or other rendered content can be placed here. In Drupal this is an array of items to be rendered.",
   dismissible: true or false,
   ```
 </details>
