@@ -1,21 +1,22 @@
-import readme from './readme.md';
-import data from './MediaExcerpt.data';
-import MediaExcerpt from './MediaExcerpt.twig';
-import './MediaExcerpt.css';
+import readme from "./readme.md";
+import data from "./MediaExcerpt.data";
+import MediaExcerpt from "./MediaExcerpt.twig";
+import "./MediaExcerpt.css";
 
 export default {
-  title: 'Molecules/MediaExcerpt',
+  title: "Molecules/MediaExcerpt",
   component: MediaExcerpt,
   parameters: {
     notes: readme,
+    layout: "padded",
   },
   argTypes: {
-    attributes: {table: {disable: true}},
+    attributes: { table: { disable: true } },
     variant: {
       description: "MediaExcerpt variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default"],
     },
   },
 };

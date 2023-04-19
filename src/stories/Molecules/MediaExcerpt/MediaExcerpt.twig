@@ -3,40 +3,40 @@
 {% set classes = [
   'media-excerpt',
   'stack',
-  'box',
   variant_class,
 ] %}
 
 <div class="{{ classes.join(' ')}}">
-  <div class="media-excerpt__header switcher wrapping">
-    <div class="media-excerpt__title">
-      <a class="media-excerpt__title__link" href="{{ url }}">
-        <div class="">
-          <h4>{{ title }}</h4>
-        </div>
-      </a>
-    </div>
-    {% if button_data %}
-      <div class="media-excerpt__button">
-        <div class="card__button">
-          <div class="box">
-            {% include "@atoms/Button/Button.twig" with button_data %}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  </div>
-  <div class="media-excerpt__content-wrapper">
-    <div class="media_excerpt-content-inner">
-      {{ content }}
-    </div>
-    {% if button_data %}
-      <div class="media-excerpt__details">
-        <span>{{ details_label }}:</span> {{ details }}
-      </div>
-    {% endif %}
-    <div class="media-excerpt__pills">
-      {{ pills }}
-    </div>
-  </div>
+	<div class="media-excerpt__header switcher">
+		<div class="media-excerpt__title">
+			<a href="{{ url }}">
+				<h4>{{ title }}</h4>
+			</a>
+		</div>
+		{% if button_data %}
+			<div class="media-excerpt__button">
+				{% include "@atoms/Button/Button.twig" with button_data %}
+			</div>
+		{% endif %}
+	</div>
+	<div class="media-excerpt__content stack">
+		{{ content }}
+		<div>
+			{% if button_data %}
+				<ul class="detail-list cluster">
+					{% if  detail_list_data.label  %}
+						<li>
+							<strong>{{ detail_list_data.label }}:</strong>
+						</li>
+					{% endif %}
+					{% for detail in detail_list_data.details %}
+						<li>{{ detail }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+			<div class="media-excerpt__pills">
+				{{ pills }}
+			</div>
+		</div>
+	</div>
 </div>

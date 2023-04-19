@@ -1,45 +1,37 @@
 .media-excerpt__header {
-    --sidebar-direction: row-reverse;
-    --sidebar-width: 30ch;
-}
-
-.media-excerpt__header.wrapping {
-    --sidebar-direction: column-reverse;
-}
-
-.media-excerpt .card__button {
-    border-left: 1px solid var(--color-base);
-}
-
-.media-excerpt__button {
-    border-inline-start: 1px solid var(--color-base);
-    padding-inline-start: var(--s1);
-    display: flex;
-    align-items: center;
-}
-
-.media-excerpt__header.wrapping .media-excerpt__button {
-    flex-basis: auto;
-    border-left: none;
-    padding-inline-start: 0;
-}
-
-.media-excerpt__details {
-    font-size: var(--s-1);
-}
-
-.media-excerpt__details > span:first-child {
-    font-weight: bold;
+  overflow: hidden;
 }
 
 .media-excerpt__title {
-    flex-grow: 6;
+  flex-grow: 3;
 }
 
 .media-excerpt__title a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .media-excerpt__title a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.media-excerpt__button {
+  /* Negative margin hides border when wrapped. */
+  margin-inline-start: -1px;
+  border-inline-start: 1px solid var(--color-base);
+  padding-inline: var(--gap);
+  display: flex;
+  align-items: center;
+}
+
+/* Suggestion: move detail-list to "List" component. */
+.media-excerpt .detail-list {
+  --gap: var(--s-3);
+  font-size: var(--s-1);
+  list-style: none;
+  row-gap: 0;
+}
+
+.media-excerpt .detail-list > * + *::before {
+  padding-inline-end: var(--gap);
+  content: "\2022";
 }
