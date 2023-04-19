@@ -7,7 +7,7 @@ Standard display for an asset page including general documents, publications, an
   <summary>Twig Variables:</summary>
 
   ```
-  text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+  text: "This is the text that will be displayed in the asset bundle.",
   primary_file_type: "PDF",
   doc_type: "Report",
   assets: [
@@ -19,7 +19,7 @@ Standard display for an asset page including general documents, publications, an
   ],
   languages: {
     variant: "ul",
-    variant_layout: "grid",
+    layout: "grid",
     items: [
       {
         text: "<a href='https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'>español</a> (Spanish)",

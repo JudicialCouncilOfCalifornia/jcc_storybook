@@ -23,7 +23,7 @@ export default {
         {
           text: "<a href='https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'>Tiếng Việt</a> (Vietnamese)",
         },
-      ]
-    }
-  }
-}
+      ],
+    },
+  },
+};

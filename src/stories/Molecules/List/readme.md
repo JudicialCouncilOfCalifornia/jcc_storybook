@@ -9,7 +9,6 @@ Standard HTML list with variant functional styles.
   ```
   variant: "ul", ... UL by default else option for OL or none
   layout: null ... Optional 'grid' layout can be used
-  set_padding: true, ... optionally adds .box padding
   items: [
     {
       label: "Sed ut",

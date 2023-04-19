@@ -19,7 +19,7 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
-  <div class="hangover__top {{ background ? 'hangover__top--' ~ background : '' }}">
+  <div class="hangover__top">
     <div class="with-sidebar container">
       {% if hangover_content is not empty %}
         <div class="hangover__top-hangover-content">

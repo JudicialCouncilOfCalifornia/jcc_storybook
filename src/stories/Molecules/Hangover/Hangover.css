@@ -41,17 +41,6 @@
   ;
 }
 
-.hangover__top--base-light-xx {
-  --heading-color: var(--color-primary);
-  --color: var(--color-primary);
-  background: var(--background-striped-base-light-xx);
-}
-.hangover__top--base-light-xx .hangover__top-content-brow,
-.hangover__top--base-light-xx .hangover__top .hangover__text,
-.hangover__top--base-light-xx .hangover__top-content h1 {
-  text-shadow: none;
-}
-
 /* @TODO See todo in the Hangover.twig. */
 .hangover__top-hangover-content {
   justify-content: center;

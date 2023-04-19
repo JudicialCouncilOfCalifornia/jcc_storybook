@@ -3,30 +3,33 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'asset-bundle',
-  'box',
   'stack',
 ] %}
 
-<div class="{{ classes|join(' ') }}">
-  {% if text %}
-    <div class="asset-bundle__body">
-      {{ text }}
-    </div>
-  {% endif %}
-  {% if assets %}
-    <div class="asset-bundle__details">
-      <span>{{ primary_file_type }}</span>
-      <span>{{ doc_type }}</span>
-    </div>
-    <div class="asset-bundle__primary-files">
-      {% for asset in assets %}
-        <a class="button button--secondary button--normal" href="{{ asset.url }}">Download <span class="asset-bundle__doctype">{{ asset.type|upper }}</span></a>
-      {% endfor %}
-    </div>
-  {% endif %}
-  {% if languages %}
-    <div class="asset-bundle__translated-files">
-      {% include "@molecules/List/List.twig" with languages %}
-    </div>
-  {% endif %}
+	<div class="{{ classes|join(' ') }}"> {% if text %}
+		<div class="asset-bundle__body">
+			{{ text }}
+		</div>
+	{% endif %}
+	{% if assets %}
+		<div class="asset-bundle__details">
+			<span>{{ primary_file_type }}</span>
+			<span>{{ doc_type }}</span>
+		</div>
+		<div class="asset-bundle__primary-files">
+			{% for asset in assets %}
+				{% include "@atoms/Button/Button.twig" with {
+          variant: "secondary",
+          size: "normal",
+          label: "Download " ~ asset.type|upper,
+          href: asset.url,
+        } %}
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if languages %}
+		<div class="asset-bundle__translated-files">
+			{% include "@molecules/List/List.twig" with languages %}
+		</div>
+	{% endif %}
 </div>

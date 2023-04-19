@@ -1,14 +1,13 @@
-import readme from './readme.md';
-import data from './Asset.data';
-import Asset from './Asset.twig';
-import './Asset.css';
+import readme from "./readme.md";
+import data from "./Asset.data";
+import Asset from "./Asset.twig";
 
 export default {
-  title: 'Templates/Asset',
+  title: "Templates/Asset",
   component: Asset,
   parameters: {
     notes: readme,
-  }
+  },
 };
 
 // Create Template for variant templates to bind to.
