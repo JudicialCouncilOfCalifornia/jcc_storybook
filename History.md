@@ -1,4 +1,11 @@
 
+0.43.2 / 2023-04-19
+===================
+
+  * chore: Export libs.
+  * fix: Refactor and update Hangover. Move to HeroHangover.
+  * LWR-128: Refactor and update Hero.
+
 0.43.1 / 2023-04-19
 ===================
 
