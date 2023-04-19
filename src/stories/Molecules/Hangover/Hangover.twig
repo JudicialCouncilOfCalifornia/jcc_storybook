@@ -45,14 +45,16 @@
       </div>
     </div>
   </div>
-  <div class="hangover__bottom">
-    <div class="with-sidebar container">
-      {% if hangover_content is not empty %}
-        <div></div>
-      {% endif %}
-      <div class="hangover__bottom-content">
-        {{ bottom_content }}
+  {% if bottom_content %}
+      <div class="hangover__bottom">
+        <div class="with-sidebar container">
+          {% if hangover_content is not empty %}
+            <div></div>
+          {% endif %}
+          <div class="hangover__bottom-content">
+            {{ bottom_content }}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+  {% endif %}
 </div>

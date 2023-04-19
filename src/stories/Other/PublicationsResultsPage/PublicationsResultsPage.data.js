@@ -261,29 +261,22 @@ export default {
     },
     pagetitle: {
       variant: "striped",
-      clickable_card: false,
       background: null,
-      aspect: [],
-      media: false,
+      hangover_content: "",
+      bottom_content: "",
       heading: "Research, Statistics and Publications",
       text: "",
       attributes: new drupalAttribute(),
     },
-    hero: {
-      variant: 'content-bg',
-      content_justify: 'left',
-      bg_tint: false,
-      card_data: {
-        variant: "no_media",
-        first_component: false,
-        media: false,
-        heading: "Explore Our Library of Policy, Programs and Legal Research Publications",
-        subheading: false,
-        text: "<p>The California Courts convene working groups, committees and other formal and informal collaborative efforts to work towards a fair and transparent legal system that the residents of California can count on. These include work on citizen access to the justice system, data on court performance, research projects to study litigation processes and procedures and a whole host of other topics.</p><p>Below you’ll find featured publications as well as filers and search features that allow you to sort through our extensive publications library. Have questions? See our FAQ  or contact us. </p>",
-        button_data: false,
-        attributes: new drupalAttribute(),
-      },
-      attributes: new drupalAttribute()
+    section_1: {
+      variant: 'default',
+      first_component: false,
+      sub_component_layout: 'stack',
+      sub_component_data: [
+        '<div class="box"><h3>Explore Our Library of Policy, Programs and Legal Research Publications</h3><p>The California Courts convene working groups, committees and other formal and informal collaborative efforts to work towards a fair and transparent legal system that the residents of California can count on. These include work on citizen access to the justice system, data on court performance, research projects to study litigation processes and procedures and a whole host of other topics. \n' +
+        'Below you’ll find featured publications as well as filers and search features that allow you to sort through our extensive publications library. Have questions? See our FAQ  or contact us. </p></div>',
+      ],
+      attributes: new drupalAttribute(),
     },
     publications: [
       {

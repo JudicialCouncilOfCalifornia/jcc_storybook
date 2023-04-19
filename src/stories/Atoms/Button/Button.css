@@ -48,6 +48,7 @@
 
 .button.button--pill {
   border-radius: var(--s5);
+  --button-bg: var(--color-white);
 }
 
 .button.button--pill::after {
