@@ -1,0 +1,22 @@
+{% set variant_class = variant ? 'action-list--' ~ variant : 'action-list--default' %}
+
+{% set classes = [
+  'action-list',
+  'stack',
+  variant_class,
+] %}
+
+<div class="{{ classes.join(' ')}}">
+    <div class="box">
+      <h2>{{ heading }}</h2>
+      <div>{{ text }}</div>
+    </div>
+    <div>
+      {% for link in links %}
+        <div class="action-item cluster box">
+          <div>{{ link.label }}</div>
+          <div>{% include "@atoms/Button/Button.twig" with link.button_data %}</div>
+        </div>
+      {% endfor %}
+    </div>
+</div>

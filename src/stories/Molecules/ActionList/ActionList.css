@@ -1,0 +1,10 @@
+.action-list {}
+
+.action-list .action-item {
+    border-top: 1px solid var(--color-base);
+    justify-content: space-between;
+}
+
+.action-list .action-item:last-child {
+    border-bottom: 1px solid var(--color-base);
+}
