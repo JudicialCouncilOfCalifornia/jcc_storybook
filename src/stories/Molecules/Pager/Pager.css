@@ -15,7 +15,10 @@
   text-decoration: none;
   color: var(--color);
   border-radius: var(--s-6);
-  padding: var(--s-3) var(--s-1);
+  padding: var(--s-2) var(--s-1);
+  line-height: var(--s0);
+  display: inline-flex;
+  flex-direction: row;
 }
 
 .pager a:hover {
@@ -25,4 +28,18 @@
 .pager .is-active a {
   background-color: var(--color-accent-warm-dark-x);
   color: var(--color-white);
+}
+
+.pager__item:is(.pager__item--first, .pager__item--previous) a > div {
+  padding-inline-end: var(--s-3);
+  stroke: var(--color);
+}
+
+.pager__item:is(.pager__item--last, .pager__item--next) a > div {
+  padding-inline-start: var(--s-3);
+  stroke: var(--color);
+}
+
+.pager__item:is(.pager__item--first, .pager__item--previous, .pager__item--last, .pager__item--next) a:hover > div {
+  stroke: var(--accent-color);
 }

@@ -1,10 +1,3 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
 {#
 /**
  * @file
@@ -59,7 +52,10 @@
         {% if items.first %}
           <li class="pager__item pager__item--first">
             <a href="{{ items.first.href }}" title="{{ 'Go to first page'|t }}">
-              <span aria-hidden="true">{{ items.first.text|default('« First'|t) }}</span>
+              {% include "@atoms/Icon/Icon.twig" with {
+                icon: "left_caret_double",
+              } %}
+              <span aria-hidden="true">{{ items.first.text|default('') }}</span>
             </a>
           </li>
         {% endif %}
@@ -68,7 +64,10 @@
         {% if items.previous %}
           <li class="pager__item pager__item--previous">
             <a href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}" rel="prev">
-              <span aria-hidden="true">{{ items.previous.text|default('‹ Prev'|t) }}</span>
+              {% include "@atoms/Icon/Icon.twig" with {
+                icon: "left_caret",
+              } %}
+              <span aria-hidden="true">{{ items.previous.text|default('') }}</span>
             </a>
           </li>
         {% endif %}
@@ -81,7 +80,7 @@
 
         {# Add an ellipsis if there are further previous pages. #}
         {% if ellipses.previous %}
-          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+          <li class="pager__item pager__item--ellipsis">&hellip;</li>
         {% endif %}
       
         {# Now generate the actual pager piece. #}
@@ -92,18 +91,26 @@
             {% else %}
               {% set title = 'Go to page @key'|t({'@key': key}) %}
             {% endif %}
-            <a href="{{ item.href }}" title="{{ title }}">
+
+            {% if variant == "mini_pager" %}
               <span class="sr-only">
                 {{ items.current == key ? 'Current page'|t : 'Page'|t }}
               </span>
               {{- key -}}
-            </a>
+            {% else %}
+              <a href="{{ item.href }}" title="{{ title }}">
+                <span class="sr-only">
+                  {{ items.current == key ? 'Current page'|t : 'Page'|t }}
+                </span>
+                {{- key -}}
+              </a>
+            {% endif %}
           </li>
         {% endfor %}
 
         {# Add an ellipsis if there are further next pages. #}
         {% if ellipses.next %}
-          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+          <li class="pager__item pager__item--ellipsis">&hellip;</li>
         {% endif %}
       
         </ul>
@@ -116,7 +123,10 @@
         {% if items.next %}
           <li class="pager__item pager__item--next">
             <a href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next">
-              <span aria-hidden="true">{{ items.next.text|default('Next ›'|t) }}</span>
+              <span aria-hidden="true">{{ items.next.text|default('') }}</span>
+              {% include "@atoms/Icon/Icon.twig" with {
+                icon: "right_caret",
+              } %}
             </a>
           </li>
         {% endif %}
@@ -125,7 +135,10 @@
         {% if items.last %}
           <li class="pager__item pager__item--last">
             <a href="{{ items.last.href }}" title="{{ 'Go to last page'|t }}">
-              <span aria-hidden="true">{{ items.last.text|default('Last »'|t) }}</span>
+              <span aria-hidden="true">{{ items.last.text|default('') }}</span>
+              {% include "@atoms/Icon/Icon.twig" with {
+                icon: "right_caret_double",
+              } %}
             </a>
           </li>
         {% endif %}

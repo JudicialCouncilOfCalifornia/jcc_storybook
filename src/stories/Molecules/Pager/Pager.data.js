@@ -12,7 +12,8 @@ export default {
       current: '7',
       previous: {
         href: '#',
-        text: '‹ Prev',
+        text: 'Prev',
+        //text: '‹ Prev',
       },
       pages: {
         3: {
@@ -45,7 +46,8 @@ export default {
       },
       next: {
         href: '#',
-        text: 'Next ›',
+        text: 'Next',
+        //text: 'Next ›',
       },
     },
   },
@@ -59,11 +61,13 @@ export default {
       current: '7',
       first: {
         href: '#',
-        text: '« First',
+        text: 'First',
+        //text: '« First',
       },
       previous: {
         href: '#',
-        text: '‹ Prev',
+        text: 'Prev',
+        //text: '‹ Prev',
       },
       pages: {
         3: {
@@ -96,11 +100,13 @@ export default {
       },
       next: {
         href: '#',
-        text: 'Next ›',
+        text: 'Next',
+        //text: 'Next ›',
       },
       last: {
         href: '#',
-        text: 'Last »',
+        text: 'Last',
+        //text: 'Last »',
       },
     },
   },
@@ -111,7 +117,7 @@ export default {
       first: [],
       previous: {
         href: '#',
-        text: '‹',
+        text: '',
       },
       pages: {
         3: {
@@ -120,7 +126,7 @@ export default {
       },
       next: {
         href: '#',
-        text: '›',
+        text: '',
       },
       last: [],
     },
@@ -144,7 +150,7 @@ export default {
       },
       next: {
         href: '#',
-        text: 'Next ›',
+        text: 'Next',
       },
       last: [],
     },
