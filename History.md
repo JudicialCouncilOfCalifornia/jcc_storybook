@@ -1,4 +1,11 @@
 
+0.43.1 / 2023-04-19
+===================
+
+  * chore: Export libs.
+  * [Accordion tweaks] -- removed attributes component from accordion. removed stack class related css
+  * Adjustments to Accordion component: - Added hover stying to label/summaries - Adjusted padding sizes to account for hover state design.
+
 0.43.0 / 2023-04-18
 ===================
 
