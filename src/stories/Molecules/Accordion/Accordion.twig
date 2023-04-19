@@ -9,7 +9,7 @@
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   {% for item in items %}
   <details>
     <summary role="button">
