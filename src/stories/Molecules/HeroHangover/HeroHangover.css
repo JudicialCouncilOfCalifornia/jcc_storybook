@@ -6,13 +6,20 @@
 
 .hangover .with-sidebar {
   --sidebar-width: 45ch;
+  /* Column gap makes detectWrap.js confused. */
+  gap: 0;
   flex-direction: row-reverse;
 }
 
 .hangover .with-sidebar > * {
-  padding: var(--s4) var(--s1);
+  padding-block: var(--s1);
   display: flex;
   align-items: center;
+}
+
+.hangover .with-sidebar > .hangover__top-content {
+  /* Using padding here instead of gap or detectWrap goes wild. */
+  padding-inline-end: var(--s1);
 }
 
 .hangover__top {
@@ -21,11 +28,7 @@
   background: var(--background);
 }
 
-.hangover__top-content-brow + * {
-  margin-block-start: 0;
-}
-
-.hangover__bottom *:not(.hangover__bottom-content) {
+.hangover__bottom > * *:not(.hangover__bottom-content) {
   padding: 0;
 }
 
@@ -33,15 +36,11 @@
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
 .hangover__top-content h1 {
-  text-shadow:
-    1px 1px 1px var(--text-shadow-color),
+  text-shadow: 1px 1px 1px var(--text-shadow-color),
     -1px -1px 1px var(--text-shadow-color),
-    -1px 1px 1px var(--text-shadow-color),
-    1px -1px 1px var(--text-shadow-color)
-  ;
+    -1px 1px 1px var(--text-shadow-color), 1px -1px 1px var(--text-shadow-color);
 }
 
-/* @TODO See todo in the Hangover.twig. */
 .hangover__top-hangover-content {
   justify-content: center;
 }
@@ -65,22 +64,28 @@
   background: var(--background);
 }
 
-/* @TODO: Use a resize observer to manage this, rather than a media query. */
-@media (orientation: portrait) {
-  .hangover .with-sidebar {
-    gap: 0;
-  }
-
-  .hangover .hangover__top-hangover-content {
-    padding-block-end: 0;
-  }
-
-  .hangover--with-bottom .hangover__top-hangover-content > * {
-    margin-block-end: 0;
-  }
-
-  .hangover--hide-compact .hangover__top-hangover-content {
-    display: none;
-  }
+.hangover--base-light-xx .card {
+  --border-color: var(--color-base-light-x);
 }
 
+/* Wrapping overrides with detectWrap.js */
+.hangover .wrapping {
+  gap: 0;
+}
+
+.hangover .wrapping .hangover__top-hangover-content {
+  padding-block-end: 0;
+}
+
+.hangover--with-bottom .wrapping .hangover__top-hangover-content > * {
+  margin-block-end: 0;
+}
+
+.hangover--hide-compact .wrapping .hangover__top-hangover-content {
+  /* We need to remove the space, but without it detectWrap.js breaks. */
+  padding-block: 0.1px;
+}
+
+.hangover--hide-compact .wrapping .hangover__top-hangover-content > * {
+  display: none;
+}

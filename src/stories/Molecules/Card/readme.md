@@ -13,6 +13,7 @@ The card variant type can be inherited which means you can set it on the element
 <details>
   <summary>Inherited CSS Variables:</summary>
   - `--color`: The text color.
+  - `--border-color`: The border color. Defaults to `--color-accent-warm-light-xxxx`.
   - `--heading-color`: The heading color.
   - `--button-border`: The button border color.
   - `--button-bg`: The button background color.

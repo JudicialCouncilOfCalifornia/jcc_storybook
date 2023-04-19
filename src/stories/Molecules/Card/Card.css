@@ -21,8 +21,9 @@
 /* Bordered Center */
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid var(--color-accent-warm-light-xxxx);
-  background: var(--color-accent-warm-light-xxxx);
+  border: var(--s-2) solid
+    var(--border-color, var(--color-accent-warm-light-xxxx));
+  background: var(--border-color, var(--color-accent-warm-light-xxxx));
 }
 
 .card--bordered-center .card > div,
@@ -87,7 +88,7 @@
 
 .card--overlay .card .card__media,
 .card.card--overlay .card__media {
-  opacity: .5;
+  opacity: 0.5;
   overflow: hidden;
   position: absolute;
   top: 0;
