@@ -1,4 +1,13 @@
 
+0.43.0 / 2023-04-18
+===================
+
+  * chore: Export libs.
+  * feat: Temp Media Excerpt
+  * code feedback
+  * templating
+  * excerpts
+
 0.42.0 / 2023-04-18
 ===================
 
