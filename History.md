@@ -1,4 +1,13 @@
 
+0.42.0 / 2023-04-18
+===================
+
+  * chore: export libs
+  * LWR-83: review follow up.
+  * LWR-83: improvements from code review
+  * LWR-83: list labels auto-capitalized
+  * LWR-83: publication/asset support including hanger bg variant
+
 0.41.2 / 2023-04-18
 ===================
 
