@@ -39,3 +39,8 @@ FullPager.args = data.full_pager;
 export const MiniPager = Template.bind({});
 // Data comes from the Pager.data.js file.
 MiniPager.args = data.mini_pager;
+
+// Bind the Default component variant for this component.
+export const CommonExample = Template.bind({});
+// Data comes from the Pager.data.js file.
+CommonExample.args = data.common;

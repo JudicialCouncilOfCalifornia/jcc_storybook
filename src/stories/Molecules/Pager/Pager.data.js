@@ -5,22 +5,16 @@ export default {
   default: {
     variant: "default",
     ellipses: {
-      previous: false,
+      previous: true,
       next: true,
     },
     items: {
-      current: '3',
+      current: '7',
       previous: {
         href: '#',
         text: '‹ Prev',
       },
       pages: {
-        1: {
-          href: '#',
-        },
-        2: {
-          href: '#',
-        },
         3: {
           href: '#',
         },
@@ -30,23 +24,39 @@ export default {
         5: {
           href: '#',
         },
+        6: {
+          href: '#',
+        },
+        7: {
+          href: '#',
+        },
+        8: {
+          href: '#',
+        },
+        9: {
+          href: '#',
+        },
+        10: {
+          href: '#',
+        },
+        11: {
+          href: '#',
+        },
       },
       next: {
         href: '#',
         text: 'Next ›',
       },
-      attributes: new drupalAttribute(),
     },
-    attributes: new drupalAttribute()
   },
   full_pager: {
     variant: "full_pager",
     ellipses: {
-      previos: false,
+      previous: true,
       next: true,
     },
     items: {
-      current: '3',
+      current: '7',
       first: {
         href: '#',
         text: '« First',
@@ -56,12 +66,6 @@ export default {
         text: '‹ Prev',
       },
       pages: {
-        1: {
-          href: '#',
-        },
-        2: {
-          href: '#',
-        },
         3: {
           href: '#',
         },
@@ -69,6 +73,24 @@ export default {
           href: '#',
         },
         5: {
+          href: '#',
+        },
+        6: {
+          href: '#',
+        },
+        7: {
+          href: '#',
+        },
+        8: {
+          href: '#',
+        },
+        9: {
+          href: '#',
+        },
+        10: {
+          href: '#',
+        },
+        11: {
           href: '#',
         },
       },
@@ -80,12 +102,7 @@ export default {
         href: '#',
         text: 'Last »',
       },
-      attributes: new drupalAttribute(),
     },
-    ellipses: {
-      next: true,
-    },
-    attributes: new drupalAttribute()
   },
   mini_pager: {
     variant: "mini_pager",
@@ -106,8 +123,30 @@ export default {
         text: '›',
       },
       last: [],
-      attributes: new drupalAttribute(),
     },
-    attributes: new drupalAttribute()
+  },
+  common: {
+    variant: "common",
+    items: {
+      current: '1',
+      first: [],
+      previous: [],
+      pages: {
+        1: {
+          href: '#',
+        },
+        2: {
+          href: '#',
+        },
+        3: {
+          href: '#',
+        },
+      },
+      next: {
+        href: '#',
+        text: 'Next ›',
+      },
+      last: [],
+    },
   }
 }
