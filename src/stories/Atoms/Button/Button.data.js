@@ -22,4 +22,11 @@ export default {
     href: "#",
     attributes: new drupalAttribute(),  
   },
+  pill: {
+    variant: 'pill',
+    size: 'normal',
+    label: "Button",
+    href: "#",
+    attributes: new drupalAttribute(),
+  },
 }

@@ -265,7 +265,7 @@ export default {
       background: null,
       aspect: [],
       media: false,
-      heading: "Page title",
+      heading: "Research, Statistics and Publications",
       text: "",
       attributes: new drupalAttribute(),
     },
@@ -285,24 +285,32 @@ export default {
       },
       attributes: new drupalAttribute()
     },
+    publications: [
+      {
+      },
+      {
+      },
+      {
+      },
+    ],
     popular_topics: [
       {
-        variant: 'primary',
-        size: 'normal',
+        variant: 'pill',
+        size: 'small',
         label: "Family law",
         href: "#",
         attributes: new drupalAttribute(),
       },
       {
-        variant: 'primary',
-        size: 'normal',
+        variant: 'pill',
+        size: 'small',
         label: "Small Claims",
         href: "#",
         attributes: new drupalAttribute(),
       },
       {
-        variant: 'primary',
-        size: 'normal',
+        variant: 'pill',
+        size: 'small',
         label: "Wills and Estates",
         href: "#",
         attributes: new drupalAttribute(),

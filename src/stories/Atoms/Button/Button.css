@@ -45,3 +45,12 @@
   border: 0;
   background: transparent;
 }
+
+.button.button--pill {
+  border-radius: var(--s5);
+}
+
+.button.button--pill::after {
+  content: '';
+  display: none;
+}

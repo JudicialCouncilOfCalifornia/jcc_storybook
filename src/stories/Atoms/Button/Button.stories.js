@@ -15,7 +15,7 @@ export default {
       description: "The button variant name.",
       table: { defaultValue: { summary: "primary" }},
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'text'],
+      options: ['primary', 'secondary', 'text', 'pill'],
     },
     size: {
       description: "The button size.",

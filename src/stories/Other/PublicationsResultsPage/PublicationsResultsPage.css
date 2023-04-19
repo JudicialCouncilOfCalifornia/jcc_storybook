@@ -1,5 +1,6 @@
 .publication-results-content .sidebar {
     background: var(--color-base-light-xx);
+    flex-basis: var(--sidebar-width, 25ch);
 }
 
 .publication-results-content .popular-topics {
