@@ -57,10 +57,6 @@
   color: var(--accent-color);
 }
 
-.accordion.stack > * + * {
-  --gap: 0;
-}
-
 /**
  * Accordion animation:
  * Fade in content on open, Fade out content on close.
