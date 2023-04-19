@@ -1,5 +1,3 @@
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   banner: {
     variant: "banner",
@@ -7,7 +5,8 @@ export default {
     accent_color: false,
     content_bg_color: false,
     bg_tint: "accent-warm-dark-xx",
-    background_image_url: "https://source.unsplash.com/random/900×700/?building",
+    background_image_url:
+      "https://source.unsplash.com/random/900×700/?building",
     card_data: {
       variant: "default",
       first_component: true,
@@ -19,9 +18,7 @@ export default {
         href: "#",
         variant: "text",
       },
-      attributes: new drupalAttribute(),
     },
-    attributes: new drupalAttribute()
   },
   content_bg: {
     variant: "content-bg",
@@ -42,8 +39,6 @@ export default {
         href: "#",
         variant: "text",
       },
-      attributes: new drupalAttribute(),
     },
-    attributes: new drupalAttribute()
-  }
-}
+  },
+};

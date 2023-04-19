@@ -7,7 +7,7 @@
 {% set styles = [] %}
 
 {% if bg_tint %}
-  {% set styles = styles|merge([
+	{% set styles = styles|merge([
     '--bg: var(--color-' ~ bg_tint ~ ');',
   ]) %}
 {% endif %}
@@ -18,15 +18,19 @@
   variant_justify,
 ] %}
 
-
-<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
-  <div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
-  <div class="hero__tint"></div>
-  <div class="hero__content container">
-    <div class="hero__content-inner">
-      {% if card_data %}
-        {% include "@molecules/Card/Card.twig" with card_data %}
-      {% endif %}
-    </div>
-  </div>
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
+	<div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
+	<div class="hero__tint"></div>
+	<div class="hero__content box">
+		<div class="container">
+			<div class="hero__content-inner">
+				<div class="hero__content-inner__background"></div>
+				<div class="hero__content-inner__content">
+					{% if card_data %}
+						{% include "@molecules/Card/Card.twig" with card_data %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -26,7 +26,6 @@
 }
 
 .hero__content {
-  padding: var(--s1);
   /* Bring it above the tint mix-blend-mode. */
   z-index: 1;
 }
@@ -68,13 +67,26 @@
   --button-color: var(--color-black);
 }
 
-.hero--content-bg .hero__content {
-  padding: 0;
+.hero--content-bg .box {
+  padding-block: 0;
 }
 
 .hero--content-bg .hero__content-inner {
-  padding: var(--s4);
-  background: var(--color-white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero-inner";
   max-width: 60ch;
-  color: var(--color);
+  color: var(--color-black);
+}
+
+.hero--content-bg .hero__content-inner > * {
+  padding: var(--s4);
+  grid-area: hero-inner;
+  z-index: 1;
+}
+
+.hero--content-bg .hero__content-inner__background {
+  background-color: var(--background-color, var(--color-white));
+  opacity: 0.9;
+  z-index: 0;
 }
