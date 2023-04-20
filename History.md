@@ -1,4 +1,9 @@
 
+0.45.1 / 2023-04-20
+===================
+
+  * chore: Clean up plop templates after attributes removed.
+
 0.45.0 / 2023-04-20
 ===================
 
