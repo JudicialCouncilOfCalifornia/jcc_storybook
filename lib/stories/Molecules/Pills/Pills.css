@@ -1,1 +1,1 @@
-.pills{--gap:var(--s-4)}.pills .icon{height:var(--s4);width:var(--s4)}
+.pills{--gap:var(--s-4)}.pills .icon-wrapper{block-size:var(--s4);inline-size:var(--s4)}

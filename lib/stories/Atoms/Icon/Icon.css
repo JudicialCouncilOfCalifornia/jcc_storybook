@@ -1,1 +1,1 @@
-.icon-wrapper{display:flex;justify-content:center;align-items:center;color:var(--color)}.icon-wrapper .icon{height:var(--s5);width:100%}
+.icon-wrapper{display:flex;justify-content:center;align-items:center;color:var(--color)}.icon-wrapper .icon{block-size:100%;inline-size:100%}
