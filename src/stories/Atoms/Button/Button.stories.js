@@ -13,9 +13,9 @@ export default {
   argTypes: {
     variant: {
       description: "The button variant name.",
-      table: { defaultValue: { summary: "primary" } },
-      control: { type: "select" },
-      options: ["primary", "secondary", "text"],
+      table: { defaultValue: { summary: "primary" }},
+      control: { type: 'select' },
+      options: ['primary', 'secondary', 'text', 'pill'],
     },
     size: {
       description: "The button size.",

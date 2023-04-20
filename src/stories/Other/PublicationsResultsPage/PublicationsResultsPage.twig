@@ -1,0 +1,52 @@
+{% set classes = [
+  'publicationsresultspage'
+] %}
+
+<div class="{{ classes.join(' ')}}">
+  {% include "@molecules/Hat/Hat.twig" with hat %}
+  {% include "@organisms/Header/Header.twig" with header %}
+  {% include "@molecules/HeroHangover/HeroHangover.twig" with pagetitle %}
+  {% include "@organisms/Section/Section.twig" with section_1 %}
+  <div class="publication-results-content container">
+    <div class="box">
+      <h3>Search Our Publication Directory or Browse by Topic</h3>
+    </div>
+    <div class="with-sidebar box">
+      <div class='sidebar box'>
+        <div class="filters stack">
+          --- Filters ---
+        </div>
+        {% if popular_topics %}
+          <div class="popular-topics stack">
+            <h4>Popular Publication Topics</h4>
+            {% for popular_topic in popular_topics %}
+              {% include "@atoms/Button/Button.twig" with popular_topic %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="box">
+        {% if publications %}
+          <div class="stack">
+            {% for publication in publications %}
+              {% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with publication %}
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>{{ empty_message }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if pager %}
+    <div class="container">
+      <div class="box">
+        <div class="pager">
+          --- PAGER ---
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% include "@organisms/Footer/Footer.twig" with footer %}
+  {% include "@molecules/Shoe/Shoe.twig" with shoe %}
+</div>
