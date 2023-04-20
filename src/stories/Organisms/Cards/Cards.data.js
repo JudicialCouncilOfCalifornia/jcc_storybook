@@ -43,7 +43,7 @@ export default {
       Card({ ...CardNoMedia.args }),
       Card({ ...CardNoMedia.args }),
     ],
-    section_classes: ["cards cards--overlay"],
+    section_classes: ["cards"],
   },
   media_left: {
     first_component: false,

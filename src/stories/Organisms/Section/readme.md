@@ -54,5 +54,7 @@ Then you can render multiple sub components inside the section and they will lay
     ...,
     ...
   ],
+  section_classes: [] // array of additional classes to add to the section
+  ```,
   ```
 </details>
