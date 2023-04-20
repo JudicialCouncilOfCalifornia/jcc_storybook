@@ -1,4 +1,10 @@
 
+0.44.0 / 2023-04-19
+===================
+
+  * chore: Export libs.
+  * chore: Remove attributes from all components.
+
 0.43.2 / 2023-04-19
 ===================
 
