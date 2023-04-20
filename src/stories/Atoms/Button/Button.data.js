@@ -22,6 +22,5 @@ export default {
     size: 'normal',
     label: "Button",
     href: "#",
-    attributes: new drupalAttribute(),
   },
 }
