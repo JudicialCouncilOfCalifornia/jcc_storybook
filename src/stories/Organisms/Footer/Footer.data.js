@@ -1,6 +1,4 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute';
-import logo from '../../Atoms/SiteBranding/Council-Logo.svg';
+import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
 
 export default {
   default: {
@@ -9,7 +7,6 @@ export default {
       logo: logo,
       label: "California Courts",
       sub_label: "Language Access",
-      attributes: new drupalAttribute(),
     },
     secondary_nav_data: {
       variant: "default",
@@ -41,8 +38,6 @@ export default {
           is_current: false,
         },
       ],
-      attributes: new drupalAttribute()
     },
-    attributes: new drupalAttribute()
   },
-}
+};

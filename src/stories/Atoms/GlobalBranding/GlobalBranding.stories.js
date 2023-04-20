@@ -1,17 +1,14 @@
-import readme from './readme.md';
-import data from './GlobalBranding.data';
-import GlobalBranding from './GlobalBranding.twig';
-import './GlobalBranding.css';
+import readme from "./readme.md";
+import data from "./GlobalBranding.data";
+import GlobalBranding from "./GlobalBranding.twig";
+import "./GlobalBranding.css";
 
 export default {
-  title: 'Atoms/GlobalBranding',
+  title: "Atoms/GlobalBranding",
   component: GlobalBranding,
   parameters: {
     layout: "centered",
     notes: readme,
-  },
-  argTypes: {
-    attributes: {table: {disable: true}},
   },
 };
 

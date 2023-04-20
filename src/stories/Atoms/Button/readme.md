@@ -16,6 +16,5 @@ Button border, text and background colors can be inherited from ancestor compone
   size: 'normal',
   label: "Button",
   href: "#",
-  attributes: new drupalAttribute(),  
   ```
 </details>

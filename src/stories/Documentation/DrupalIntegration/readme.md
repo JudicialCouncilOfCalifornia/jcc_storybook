@@ -67,14 +67,12 @@ Your `my_theme/templates/paragraphs/paragraph--hero.html.twig` file:
   bg_tint: 'accent-warm-dark-xx',
   background_image_url: 'https://source.unsplash.com/random/900×700/?building',
   card_data: {
-    attributes: create_attribute(),
     variant: "default",
     first_component: true,
     media: false,
     heading: paragraph.field_heading.value,
     text: content.field_lead,
     button_data: {
-      attributes: create_attribute(),
       variant: "primary",
       label: paragraph.field_link.title,
       href: paragraph.field_link.uri,
@@ -95,8 +93,6 @@ In your `include ... with` you simply need to copy the data structure from the C
 
 #### Attributes
 
-Drupal provides an `attributes` object to assist with managing attributes, usually, on the top level div/element in your template. This convention is followed in the Storybook library. However, when multiple templates are composed or nested together, the attributes object needs to be reset for each included template, otherwise the changes are accumulated and applied to subsequent templates. As of Drupal 8.3, we have a function to solve this problem. You can see how this is done in the Hero example above with:
+Drupal provides an `attributes` object to assist with managing attributes.The story book components do not use this and require specific data values to be set to perform their functions. If any attribute values are required from the attributes object, collect them from the object and pass them to the component as required. As of Drupal 8.3, there is a function to clear the attributes object, if you find the need to do so.
 
 `attributes: create_attribute()`
-
-If you notice your markup has classes or attributes that don't belong, you may have forgotten to clear them.

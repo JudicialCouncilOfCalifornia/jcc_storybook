@@ -1,23 +1,21 @@
-import readme from './readme.md';
-import data from './Header.data';
-import Header from './Header.twig';
-import './Header.css';
+import readme from "./readme.md";
+import data from "./Header.data";
+import Header from "./Header.twig";
+import "./Header.css";
 
 export default {
-  title: 'Organisms/Header',
+  title: "Organisms/Header",
   component: Header,
   parameters: {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "Header variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'variant_one'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "variant_one"],
     },
     // More args here.
   },

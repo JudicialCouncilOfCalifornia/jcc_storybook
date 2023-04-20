@@ -1,6 +1,3 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   default: {
     variant: "",
@@ -32,7 +29,6 @@ export default {
         is_current: false,
       },
     ],
-    attributes: new drupalAttribute()
   },
   stack_overflowing: {
     variant: "",
@@ -64,7 +60,6 @@ export default {
         is_current: false,
       },
     ],
-    attributes: new drupalAttribute()
   },
   hidden_overflowing: {
     variant: "",
@@ -96,7 +91,6 @@ export default {
         is_current: false,
       },
     ],
-    attributes: new drupalAttribute()
   },
   with_divider: {
     variant: "with-divider",
@@ -128,6 +122,5 @@ export default {
         is_current: false,
       },
     ],
-    attributes: new drupalAttribute()
   },
-}
+};

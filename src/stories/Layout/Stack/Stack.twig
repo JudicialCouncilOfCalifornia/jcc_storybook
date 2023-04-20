@@ -9,8 +9,8 @@
   'stack-demo',
 ] %}
 
-<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
-  {% for i in range(1, num_items) %}
-    <div class="box">{{ i }}</div>
-  {% endfor %}
+<div class="{{ classes|join(' ') }}" style=" {{ styles|join }} ">
+	{% for i in range(1, num_items) %}
+		<div class="box">{{ i }}</div>
+	{% endfor %}
 </div>

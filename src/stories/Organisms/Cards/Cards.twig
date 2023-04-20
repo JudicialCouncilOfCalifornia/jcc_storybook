@@ -1,5 +1,5 @@
 {% if card_variant is not empty %}
-  {% set attributes = attributes.addClass(card_variant) %}
+	{% set section_classes = section_classes|merge([card_variant]) %}
 {% endif %}
 
 {% include "@organisms/Section/Section.twig" with _context %}

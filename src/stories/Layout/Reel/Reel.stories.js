@@ -1,12 +1,12 @@
-import Reel from './Reel.twig';
-import readme from './readme.md';
-import data from './Reel.data';
-import './Reel.css';
-import './Reel.js';
+import Reel from "./Reel.twig";
+import readme from "./readme.md";
+import data from "./Reel.data";
+import "./Reel.css";
+import "./Reel.js";
 
 export default {
-  title: 'Layout/Reel',
-  description: 'This is a description of this component.',
+  title: "Layout/Reel",
+  description: "This is a description of this component.",
   component: Reel,
   parameters: {
     layout: "padded",
@@ -15,9 +15,8 @@ export default {
   argTypes: {
     num_items: {
       description: "Add or remove items for exploring this layout.",
-      table: { defaultValue: { summary: "--s1" }},
+      table: { defaultValue: { summary: "--s1" } },
     },
-    attributes: { table: { disable: true }},
   },
 };
 

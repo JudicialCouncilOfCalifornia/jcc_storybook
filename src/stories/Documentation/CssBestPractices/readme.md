@@ -20,10 +20,10 @@ If we're going to support things like RTL languages and even flex directions, we
 
 Examples:
 
-`marign-block-start:` instead of `margin-top:`
-`padding-inline:` instead of `padding-left:` and `padding-right:`
-`border-inline-start:` instead of `border-left:`
-`border-block-end:` instead of `border-bottom:`
+ - `marign-block-start:` instead of `margin-top:`
+ - `padding-inline:` instead of `padding-left:` and `padding-right:`
+ - `border-inline-start:` instead of `border-left:`
+ - `border-block-end:` instead of `border-bottom:`
 
 Etc.
 
@@ -66,7 +66,7 @@ The `>` selector is used to select direct children of a parent element. The `+` 
 
 The button styles are pretty obvious. I hope you recognize the Logical Properties.
 
-The margins are a little more complex. The `stack` class is used to create a vertical stack of elements. The margins are applied to the direct children of the stack. But specifically adjacent siblings using `+ *`. This means margin will be applied to the "top" of all the children except the first one, because it is not an "adjacent sibling" to anything (coming after).
+The margins are a little more complex. The `stack` class is used to create a vertical stack of elements. The margins are applied to the direct children of the stack. But specifically adjacent siblings using `+ *`. This means margin will be applied to the "top" of all the children except the first one, because it is not an "adjacent sibling" to (coming after) anything.
 
 This approach is very flexible and will never result in additional margin being applied to the bottom of the stack. It's also very easy to add additional elements to the stack without having to worry about the margins.
 
@@ -197,6 +197,6 @@ These can be set at the component level to affect the child elements of the comp
 
 You can see that the "General" variables are set to the values of "Specific" variables. The sub elements of the component inherit these values. Then the variant overrides the "General" variables to create a new look and feel for the component.
 
-Because the component elements are styled with the "General" Custom Property variables, we don't need to duplicate code to style each element for each variant. We can just change the values of the variables and the component will update automatically.
+Because the component elements are styled with the "General" Custom Property variables, we don't need to duplicate code to style each element for each variant. We can just change the values of the "general" variables at the `.block--modifier` level and the sub-elements will update automatically.
 
 The general variables also have default values defined in the scheme css.

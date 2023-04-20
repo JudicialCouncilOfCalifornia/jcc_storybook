@@ -1,6 +1,4 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute';
-import logo from '../../Atoms/SiteBranding/Council-Logo.svg';
+import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
 
 export default {
   default: {
@@ -9,18 +7,15 @@ export default {
       logo: logo,
       label: "California Courts",
       sub_label: "Language Access",
-      attributes: new drupalAttribute(),
     },
     primary_nav_data: {
       header_search_data: {
         variant: "default",
         form: "<form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
       header_search_data_duplicate: {
         variant: "no-toggle",
         form: "<form action='/search2' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
       links: [
         {
@@ -207,7 +202,6 @@ export default {
           },
         },
       ],
-      attributes: new drupalAttribute(),
     },
     secondary_nav_data: {
       variant: "with-divider",
@@ -234,8 +228,6 @@ export default {
           is_current: false,
         },
       ],
-      attributes: new drupalAttribute()
     },
-    attributes: new drupalAttribute()
   },
-}
+};

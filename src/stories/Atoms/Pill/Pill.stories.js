@@ -1,18 +1,16 @@
-import readme from './readme.md';
-import data from './Pill.data';
-import Pill from './Pill.twig';
-import './Pill.css';
+import readme from "./readme.md";
+import data from "./Pill.data";
+import Pill from "./Pill.twig";
+import "./Pill.css";
 
 export default {
-  title: 'Atoms/Pill',
+  title: "Atoms/Pill",
   component: Pill,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     notes: readme,
   },
-  argTypes: {
-    attributes: {table: {disable: true}},
-  },
+  argTypes: {},
 };
 
 const Template = ({ ...args }) => {
@@ -22,4 +20,3 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 
 Default.args = data.default;
-

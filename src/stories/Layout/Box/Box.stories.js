@@ -1,14 +1,13 @@
-import readme from './readme.md';
-import drupalAttribute from 'drupal-attribute'
-import Box from './Box.twig';
+import readme from "./readme.md";
+import Box from "./Box.twig";
 
 export default {
-  title: 'Layout/Box',
+  title: "Layout/Box",
   component: Box,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     notes: readme,
-  }
+  },
 };
 
 const Template = ({ ...args }) => {
@@ -16,7 +15,4 @@ const Template = ({ ...args }) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  attributes: new drupalAttribute(),
-};
-
+Default.args = {};

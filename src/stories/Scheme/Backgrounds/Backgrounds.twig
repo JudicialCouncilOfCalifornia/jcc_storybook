@@ -4,29 +4,29 @@
 
 {% set cat = '' %}
 
-<div {{ attributes.addClass(classes) }}>
-  {% for background in backgrounds %}
-    {% if cat != background.category %}
-      {# Close the previous group. #}
-      {% if cat != '' %}
-        </div></div>
-      {% endif %}
+<div class="{{ classes|join(' ') }}">
+	{% for background in backgrounds %}
+		{% if cat != background.category %}
+			{# Close the previous group. #}
+			{% if cat != '' %}
+			</div>
+		</div>
+	{% endif %}
 
-      {% set cat = background.category %}
+	{% set cat = background.category %}
 
-      {# Start new group. #}
-      <div class="background__group">
-        <h2>{{ background.category }}</h2>
-        <div class="grid">
-    {% endif %}
+	{# Start new group. #}
+	<div class="background__group">
+		<h2>{{ background.category }}</h2>
+		<div class="grid">
+		{% endif %}
 
-    <div class="background">
-      <div class="background__swatch" style="background: var(--background-{{ background.name}});"></div>
-      <div class="background__label">
-        <strong>{{ background.name }}</strong>
-      </div>
-    </div>
-  {% endfor %}
-  {# Close the final group. #}
-  </div></div>
-</div>
+		<div class="background">
+			<div class="background__swatch" style="background: var(--background-{{ background.name}});"></div>
+			<div class="background__label">
+				<strong>{{ background.name }}</strong>
+			</div>
+		</div>
+	{% endfor %}
+	{# Close the final group. #}
+</div></div></div>

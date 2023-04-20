@@ -1,34 +1,33 @@
-import readme from './readme.md';
-import data from './Button.data';
-import Button from './Button.twig';
-import './Button.css';
+import readme from "./readme.md";
+import data from "./Button.data";
+import Button from "./Button.twig";
+import "./Button.css";
 
 export default {
-  title: 'Atoms/Button',
+  title: "Atoms/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     notes: readme,
   },
   argTypes: {
     variant: {
       description: "The button variant name.",
-      table: { defaultValue: { summary: "primary" }},
-      control: { type: 'select' },
-      options: ['primary', 'secondary', 'text'],
+      table: { defaultValue: { summary: "primary" } },
+      control: { type: "select" },
+      options: ["primary", "secondary", "text"],
     },
     size: {
       description: "The button size.",
-      table: { defaultValue: { summary: "normal" }},
-      control: { type: 'select' },
-      options: ['small', 'normal', 'large'],
+      table: { defaultValue: { summary: "normal" } },
+      control: { type: "select" },
+      options: ["small", "normal", "large"],
     },
     label: {
       description: "The button text.",
-      table: { defaultValue: { summary: false }},
+      table: { defaultValue: { summary: false } },
     },
-    href: { table: { disable: true }},
-    attributes: { table: { disable: true }},
+    href: { table: { disable: true } },
   },
 };
 

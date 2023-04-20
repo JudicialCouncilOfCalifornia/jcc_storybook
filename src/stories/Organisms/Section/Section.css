@@ -17,10 +17,10 @@
   background-size: cover;
 }
 
-.section .brow + h1,
-.section .brow + h2,
-.section .brow + h3 {
-  margin-block-start: 0;
+.section .brow + h1 + *,
+.section .brow + h2 + *,
+.section .brow + h3 + * {
+  margin-block-start: var(--gap);
 }
 
 .section__tint {
@@ -96,7 +96,6 @@
   flex-basis: calc(40% - var(--gap));
 }
 
-
 /* Variants */
 .section--color-primary-dark-xx {
   --color: var(--color-white);
@@ -115,11 +114,11 @@
 
   background: repeating-linear-gradient(
     125deg,
-    #2F505E,
-    #2F404E 1px,
+    #2f505e,
+    #2f404e 1px,
     var(--color-primary-dark-xx) 2px,
     var(--color-primary-dark-xx) 8px
-  )
+  );
 }
 
 .section--color-warm-dark-xx {

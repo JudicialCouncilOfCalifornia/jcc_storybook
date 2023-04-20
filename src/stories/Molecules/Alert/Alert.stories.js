@@ -1,22 +1,16 @@
-import readme from './readme.md';
-import data from './Alert.data';
-import Alert from './Alert.twig';
-import './Alert.css';
-import './Alert.js';
-import drupalAttribute from 'drupal-attribute'
+import readme from "./readme.md";
+import data from "./Alert.data";
+import Alert from "./Alert.twig";
+import "./Alert.css";
+import "./Alert.js";
 
 export default {
-  title: 'Molecules/Alert',
+  title: "Molecules/Alert",
   component: Alert,
   parameters: {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {
-      table: {disable: true},
-      control: false,
-    },
     type: {
       name: "Alert type",
       options: ["info", "warning", "status", "error"],
@@ -27,18 +21,18 @@ export default {
       control: "boolean",
     },
     variant: {
-      table: {disable: true},
+      table: { disable: true },
       control: false,
     },
     content: {
-      table: {disable: true},
+      table: { disable: true },
       control: false,
     },
     icon_data: {
-      table: {disable: true},
+      table: { disable: true },
       control: false,
     },
-  }
+  },
 };
 
 // Create Template for variant templates to bind to.

@@ -25,8 +25,7 @@ When setting the `card_variant` on the Cards component, set the variant in `card
       icon_data: {
         icon: "speaker",
         color: false,
-        attributes: new drupalAttribute(),
-      },
+              },
       heading: "Heading For A Card",
       text: "<p>...</p>",
       button: {

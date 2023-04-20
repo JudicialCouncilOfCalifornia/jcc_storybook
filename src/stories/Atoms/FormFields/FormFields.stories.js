@@ -1,27 +1,23 @@
-import readme from './readme.md';
-import data from './FormFields.data';
-import FormFields from './FormFields.twig';
-import './FormFields.css';
-// import './FormFields.js';
+import readme from "./readme.md";
+import data from "./FormFields.data";
+import FormFields from "./FormFields.twig";
+import "./FormFields.css";
 
 export default {
-  title: 'Atoms/FormFields',
+  title: "Atoms/FormFields",
   component: FormFields,
   parameters: {
-    layout: 'padded',
+    layout: "padded",
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "FormFields variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'variant_one'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "variant_one"],
     },
-    // More args here.
   },
 };
 
@@ -34,7 +30,3 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 // Data comes from the FormFields.data.js file.
 Default.args = data.default;
-
-// // Bind additional component variants like this.
-// export const [VariantName] = Template.bind({});
-// [VariantName].args = data.[VariantName];

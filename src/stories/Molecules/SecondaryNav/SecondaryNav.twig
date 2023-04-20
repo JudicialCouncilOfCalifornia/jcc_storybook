@@ -8,13 +8,13 @@
   overflowing_variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  <ul class="reel no-bar">
-    {% for link in links %}
-      <li>
-        {% set link_class = link.is_current ? 'active' : '' %}
-        {{ link(link.text, link.url, { 'class': link_class }) }}
-      </li>
-    {% endfor %}
-  </ul>
+<div class="{{ classes|join(' ') }}">
+	<ul class="reel no-bar">
+		{% for link in links %}
+			<li>
+				{% set link_class = link.is_current ? 'active' : '' %}
+				{{ link(link.text, link.url, { 'class': link_class }) }}
+			</li>
+		{% endfor %}
+	</ul>
 </div>

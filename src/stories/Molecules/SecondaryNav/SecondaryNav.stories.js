@@ -1,30 +1,28 @@
-import readme from './readme.md';
-import data from './SecondaryNav.data';
-import SecondaryNav from './SecondaryNav.twig';
-import './SecondaryNav.css';
+import readme from "./readme.md";
+import data from "./SecondaryNav.data";
+import SecondaryNav from "./SecondaryNav.twig";
+import "./SecondaryNav.css";
 
 export default {
-  title: 'Molecules/SecondaryNav',
+  title: "Molecules/SecondaryNav",
   component: SecondaryNav,
   parameters: {
-    layout: 'padded',
+    layout: "padded",
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "SecondaryNav variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'with-divider'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "with-divider"],
     },
     overflowing_variant: {
       description: "Overflowing variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'stack', 'hidden'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "stack", "hidden"],
     },
   },
 };

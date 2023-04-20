@@ -21,12 +21,7 @@ If the content is dismissible, an 'X' will appear in the upper corner.
   ```
   variant: "default",
   type: "info", "status", "warning", or "error",
-  icon_data: {
-    attributes: (For now just make sure you send a clean attributes object.
-    The actual icon_data will be rebuilt by the component, controlled by the
-    "type" value above. This is just needed for Drupal, but I'd like to
-    refactor so it's not needed.)
-  },
+  icon_data: {},
   content: "Text or other rendered content can be placed here. In Drupal this is an array of items to be rendered.",
   dismissible: true or false,
   ```

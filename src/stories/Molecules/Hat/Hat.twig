@@ -9,17 +9,16 @@
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  <div class="box">
-    <div class="container">
-      <div class="cluster">
-        {% if global_branding_data is not empty %}
-          {% include "@atoms/GlobalBranding/GlobalBranding.twig" with global_branding_data %}
-        {% endif %}
-        {% if secondary_nav_data is not empty %}
-          {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
-        {% endif %}
-      </div>
-    </div>
-  </div>
+	<div class="{{ classes|join(' ') }}"> <div class="box">
+		<div class="container">
+			<div class="cluster">
+				{% if global_branding_data is not empty %}
+					{% include "@atoms/GlobalBranding/GlobalBranding.twig" with global_branding_data %}
+				{% endif %}
+				{% if secondary_nav_data is not empty %}
+					{% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
 </div>

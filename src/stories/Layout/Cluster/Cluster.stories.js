@@ -1,18 +1,16 @@
-import readme from './readme.md';
-import data from './Cluster.data';
-import Cluster from './Cluster.twig';
-import './Cluster.css';
+import readme from "./readme.md";
+import data from "./Cluster.data";
+import Cluster from "./Cluster.twig";
+import "./Cluster.css";
 
 export default {
-  title: 'Layout/Cluster',
+  title: "Layout/Cluster",
   component: Cluster,
   parameters: {
     layout: "padded",
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // More args here.
   },
 };

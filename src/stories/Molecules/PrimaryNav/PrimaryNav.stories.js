@@ -1,20 +1,17 @@
-import readme from './readme.md';
-import data from './PrimaryNav.data';
-import PrimaryNav from './PrimaryNav.twig';
-import './PrimaryNav.css';
-import './PrimaryNav.js';
+import readme from "./readme.md";
+import data from "./PrimaryNav.data";
+import PrimaryNav from "./PrimaryNav.twig";
+import "./PrimaryNav.css";
+import "./PrimaryNav.js";
 
 export default {
-  title: 'Molecules/PrimaryNav',
+  title: "Molecules/PrimaryNav",
   component: PrimaryNav,
   parameters: {
     layout: "padded",
     notes: readme,
   },
-  argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
-  },
+  argTypes: {},
 };
 
 // Create Template for variant templates to bind to.

@@ -11,30 +11,29 @@
 {% set icon_data = {
   icon: type,
   color: icon_data.color,
-  attributes: icon_data.attributes
 } %}
 
-<div {{ attributes.addClass(classes) }} data-alert-type="{{ type }}" data-alert-dismissible="{{ dismissible }}">
-  <div class="container">
-    {% include "@atoms/Icon/Icon.twig" with icon_data %}
-    <div class="alert__content">
-      {% if content|length > 1 %}
-        <ul>
-          {% for message in content %}
-            <li>{{ message }}</li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        {{ content|first }}
-      {% endif %}
-    </div>
-    {% if dismissible %}
-      <div class="alert__dismiss">
-        <button role="button" tabIndex="0" class="alert__dismiss-button" aria-label="Dismiss alert">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    {% endif %}
-  </div>
+<div class="{{ classes|join(' ') }}" data-alert-type="{{ type }}" data-alert-dismissible="{{ dismissible }}">
+	<div class="container">
+		{% include "@atoms/Icon/Icon.twig" with icon_data %}
+		<div class="alert__content">
+			{% if content|length > 1 %}
+				<ul>
+					{% for message in content %}
+						<li>{{ message }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				{{ content|first }}
+			{% endif %}
+		</div>
+		{% if dismissible %}
+			<div class="alert__dismiss">
+				<button role="button" tabindex="0" class="alert__dismiss-button" aria-label="Dismiss alert">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		{% endif %}
+	</div>
 </div>

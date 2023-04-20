@@ -1,18 +1,16 @@
-import readme from './readme.md';
-import data from './SiteBranding.data';
-import SiteBranding from './SiteBranding.twig';
-import './SiteBranding.css';
+import readme from "./readme.md";
+import data from "./SiteBranding.data";
+import SiteBranding from "./SiteBranding.twig";
+import "./SiteBranding.css";
 
 export default {
-  title: 'Atoms/SiteBranding',
+  title: "Atoms/SiteBranding",
   component: SiteBranding,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // More args here.
   },
 };

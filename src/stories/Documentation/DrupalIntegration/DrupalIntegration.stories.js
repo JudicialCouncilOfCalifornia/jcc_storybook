@@ -1,9 +1,8 @@
-import drupalAttribute from 'drupal-attribute'
-import DrupalIntegration from './DrupalIntegration.twig';
-import readme from './readme.md';
+import DrupalIntegration from "./DrupalIntegration.twig";
+import readme from "./readme.md";
 
 export default {
-  title: 'Documentation/DrupalIntegration',
+  title: "Documentation/DrupalIntegration",
   component: DrupalIntegration,
   parameters: {
     notes: readme,

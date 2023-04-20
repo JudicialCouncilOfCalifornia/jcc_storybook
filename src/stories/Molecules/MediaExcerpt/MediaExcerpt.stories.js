@@ -11,7 +11,6 @@ export default {
     layout: "padded",
   },
   argTypes: {
-    attributes: { table: { disable: true } },
     variant: {
       description: "MediaExcerpt variant.",
       table: { defaultValue: { summary: "default" } },

@@ -1,18 +1,16 @@
-import readme from './readme.md';
-import data from './Pills.data';
-import Pills from './Pills.twig';
-import './Pills.css';
+import readme from "./readme.md";
+import data from "./Pills.data";
+import Pills from "./Pills.twig";
+import "./Pills.css";
 
 export default {
-  title: 'Molecules/Pills',
+  title: "Molecules/Pills",
   component: Pills,
   parameters: {
-    layout: 'padded',
+    layout: "padded",
     notes: readme,
   },
-  argTypes: {
-    attributes: {table: {disable: true}},
-  },
+  argTypes: {},
 };
 
 const Template = ({ ...args }) => {

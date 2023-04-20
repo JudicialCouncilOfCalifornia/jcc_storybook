@@ -19,7 +19,7 @@
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure);
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: var(--align-items, flex-start);
 }
@@ -89,7 +89,10 @@
 
 @supports (width: min(var(--grid-min-width, 20ch), 100%)) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-width, 20ch), 100%), 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
+    );
   }
 }
 
@@ -134,12 +137,24 @@
   scrollbar-color: #fff #000;
   /* Affordance */
   background:
-    /* Shadow covers */
-    linear-gradient(90deg, white 50%, rgba(255,255,255,0)),
-    linear-gradient(90deg, rgba(255,255,255,0), white 50%) 0 100%,
+    /* Shadow covers */ linear-gradient(
+      90deg,
+      white 50%,
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0), white 50%) 0 100%,
     /* Shadows */
-    radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+      radial-gradient(
+        farthest-side at 0% 50%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      ),
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
   background-repeat: no-repeat;
   background-color: white;
   background-position: left, right;
@@ -157,7 +172,13 @@
 
 .reel::-webkit-scrollbar-thumb {
   background-color: #000;
-  background-image: linear-gradient(#000 0, #000 0.25rem, #fff 0.25rem, #fff 0.75rem, #000 0.75rem);
+  background-image: linear-gradient(
+    #000 0,
+    #000 0.25rem,
+    #fff 0.25rem,
+    #fff 0.75rem,
+    #000 0.75rem
+  );
 }
 
 .reel > * {
@@ -195,26 +216,24 @@
   display: none;
 }
 
-
 /* Sidebar. */
 .with-sidebar {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: var(--sidebar-direction, 'row');
+  flex-direction: var(--sidebar-direction, "row");
   gap: var(--gap, var(--s1));
 }
 
-.with-sidebar > :first-child {
+.with-sidebar > .sidebar {
   flex-basis: var(--sidebar-width, 20ch);
   flex-grow: 1;
 }
 
-.with-sidebar > :last-child {
+.with-sidebar > *:not(.sidebar) {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;
 }
-
 
 /* Stack. */
 .stack {
@@ -232,7 +251,6 @@
 .stack > * + * {
   margin-block-start: var(--gap, 1.5rem);
 }
-
 
 /* Switcher. */
 .switcher {

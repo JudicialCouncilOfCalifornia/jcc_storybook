@@ -1,6 +1,7 @@
-/* Card styles are dictated by the parent Cards component. */
-.card .switcher {
+/* Card styles can be dictated by the parent Cards component. */
+.card {
   --measure: 100rem;
+  --sidebar-width: 30ch;
 }
 
 .card__media .frame iframe {

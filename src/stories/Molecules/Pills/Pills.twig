@@ -6,11 +6,11 @@
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  {% if icon_data %}
-    {% include "@atoms/Icon/Icon.twig" with icon_data %}
-  {% endif %}
-  {% for item in items %}
-    {{ item }}
-  {% endfor %}
+<div class="{{ classes|join(' ') }}">
+	{% if icon_data %}
+		{% include "@atoms/Icon/Icon.twig" with icon_data %}
+	{% endif %}
+	{% for item in items %}
+		{{ item }}
+	{% endfor %}
 </div>

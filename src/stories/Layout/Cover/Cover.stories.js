@@ -1,18 +1,15 @@
-import readme from './readme.md';
-import data from './Cover.data';
-import Cover from './Cover.twig';
-import './Cover.css';
+import readme from "./readme.md";
+import data from "./Cover.data";
+import Cover from "./Cover.twig";
+import "./Cover.css";
 
 export default {
-  title: 'Layout/Cover',
+  title: "Layout/Cover",
   component: Cover,
   parameters: {
     notes: readme,
   },
-  argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
-  },
+  argTypes: {},
 };
 
 // Create Template for variant templates to bind to.

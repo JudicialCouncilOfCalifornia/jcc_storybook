@@ -1,25 +1,23 @@
-import readme from './readme.md';
-import data from './Accordion.data';
-import Accordion from './Accordion.twig';
-import './Accordion.css';
-import './Accordion.js';
+import readme from "./readme.md";
+import data from "./Accordion.data";
+import Accordion from "./Accordion.twig";
+import "./Accordion.css";
+import "./Accordion.js";
 
 export default {
-  title: 'Molecules/Accordion',
+  title: "Molecules/Accordion",
   component: Accordion,
   parameters: {
     notes: readme,
     layout: "padded",
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "Accordion variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default"],
     },
     // More args here.
   },

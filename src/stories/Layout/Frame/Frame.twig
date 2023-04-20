@@ -10,8 +10,8 @@
   'frame-demo',
 ] %}
 
-<div{{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
-{% if frame_item %}
-  {{ frame_item }}
-{% endif %}
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
+	{% if frame_item %}
+		{{ frame_item }}
+	{% endif %}
 </div>

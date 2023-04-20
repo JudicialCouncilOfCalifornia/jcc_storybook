@@ -1,30 +1,31 @@
-import readme from './readme.md';
-import data from './Brow.data';
-import Brow from './Brow.twig';
-import './Brow.css';
+import readme from "./readme.md";
+import data from "./Brow.data";
+import Brow from "./Brow.twig";
+import "./Brow.css";
 
 export default {
-  title: 'Atoms/Brow',
+  title: "Atoms/Brow",
   component: Brow,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
     notes: readme,
   },
   argTypes: {
-    attributes: { table: { disable: true }},
     variant: {
       description: "The component variant.",
-      table: { defaultValue: { summary: 'default' }},
-      control: { type: 'radio' },
-      options: ['default', 'heading'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "heading"],
     },
     part_one: {
-      description: "The first part of the Brow, usually colored by `--accent-color` value.",
-      table: { defaultValue: { summary: false }},
+      description:
+        "The first part of the Brow, usually colored by `--accent-color` value.",
+      table: { defaultValue: { summary: false } },
     },
     part_two: {
-      description: "The second part of the Brow, usually colored by `--color` value. Appears after a `|`.",
-      table: { defaultValue: { summary: false }},
+      description:
+        "The second part of the Brow, usually colored by `--color` value. Appears after a `|`.",
+      table: { defaultValue: { summary: false } },
     },
   },
 };

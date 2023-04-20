@@ -10,10 +10,8 @@
   'icon-wrapper',
 ] %}
 
-<div {{ attributes.addClass(classes).setAttribute('style', variant_styles|join) }}>
-  {# Use composable layout classes as needed. #}
-  {# Use BEM syntax if needed for styling classes. #}
-  <svg class="icon">
-    <use xlink:href="icons.svg#{{ icon }}"></use>
-  </svg>
+	<div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} "> {# Use composable layout classes as needed. #}
+	{# Use BEM syntax if needed for styling classes. #}
+		<svg class="icon"> <use xlink:href="icons.svg#{{ icon }}"></use>
+	</svg>
 </div>

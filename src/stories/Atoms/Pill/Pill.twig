@@ -5,10 +5,10 @@
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  {% if url %}
-    {{ link(label, url, { 'class': ['pill__link'] }) }}
-  {% else %}
-    {{ label }}
-  {% endif %}
+<div class="{{ classes|join(' ') }}">
+	{% if url %}
+		{{ link(label, url, { 'class': ['pill__link'] }) }}
+	{% else %}
+		{{ label }}
+	{% endif %}
 </div>

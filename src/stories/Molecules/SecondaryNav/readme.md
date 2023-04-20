@@ -33,7 +33,5 @@ In the case of default behavior, or the lack of javascript in the browser, the c
     },
     ...
   ],
-  attributes: new drupalAttribute()
-
   ```
 </details>

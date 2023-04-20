@@ -1,23 +1,21 @@
-import readme from './readme.md';
-import data from './Hat.data';
-import Hat from './Hat.twig';
-import './Hat.css';
+import readme from "./readme.md";
+import data from "./Hat.data";
+import Hat from "./Hat.twig";
+import "./Hat.css";
 
 export default {
-  title: 'Molecules/Hat',
+  title: "Molecules/Hat",
   component: Hat,
   parameters: {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "Hat variant.",
-      table: {defaultValue: {summary: 'default'}},
-      control: { type: 'radio' },
-      options: ['default', 'variant_one'],
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "radio" },
+      options: ["default", "variant_one"],
     },
   },
 };

@@ -1,18 +1,15 @@
-import readme from './readme.md';
-import data from './Container.data';
-import Container from './Container.twig';
-import './Container.css';
+import readme from "./readme.md";
+import data from "./Container.data";
+import Container from "./Container.twig";
+import "./Container.css";
 
 export default {
-  title: 'Layout/Container',
+  title: "Layout/Container",
   component: Container,
   parameters: {
     notes: readme,
   },
-  argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
-  },
+  argTypes: {},
 };
 
 // Create Template for variant templates to bind to.

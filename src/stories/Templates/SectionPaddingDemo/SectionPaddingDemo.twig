@@ -7,10 +7,8 @@
   'homepage',
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
-  {# Use composable layout classes as needed. #}
-  {# Use BEM syntax if needed for styling classes. #}
-  {% include "@organisms/Section/Section.twig" with section_1 %}  
-  {% include "@organisms/Section/Section.twig" with section_2 %}  
-  {% include "@organisms/Section/Section.twig" with section_3 %}  
-</div>
+	<div class="{{ classes|join(' ') }}"> {# Use composable layout classes as needed. #}
+	{# Use BEM syntax if needed for styling classes. #}
+	{% include "@organisms/Section/Section.twig" with section_1 %}
+	{% include "@organisms/Section/Section.twig" with section_2 %}
+{% include "@organisms/Section/Section.twig" with section_3 %}</div>

@@ -17,7 +17,6 @@ The Secondary Nav component is used for the links with "stack" overflow so the l
   global_branding_data: {
     text: "Judicial Branch of California",
     destination: "https://courts.ca.gov",
-    attributes: new drupalAttribute()
   },
   secondary_nav_data: {
     variant: "",

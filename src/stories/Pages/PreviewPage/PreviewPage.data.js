@@ -1,7 +1,6 @@
-import drupalAttribute from 'drupal-attribute'
-import logo from '../../Atoms/SiteBranding/Council-Logo.svg'
-import Card from '../../Molecules/Card/Card.twig'
-import TeaserPlusList from '../../Organisms/TeaserPlusList/TeaserPlusList.twig'
+import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
+import Card from "../../Molecules/Card/Card.twig";
+import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
 
 export default {
   default: {
@@ -10,7 +9,6 @@ export default {
       global_branding_data: {
         text: "Judicial Branch of California",
         destination: "https://courts.ca.gov",
-        attributes: new drupalAttribute()
       },
       secondary_nav_data: {
         variant: "",
@@ -35,11 +33,9 @@ export default {
             text: "Judicial Council",
             url: "#",
             is_current: false,
-          }
+          },
         ],
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     header: {
       variant: "default",
@@ -48,7 +44,6 @@ export default {
         logo: logo,
         label: "California Courts",
         sub_label: "Language Access",
-        attributes: new drupalAttribute(),
       },
       primary_nav_data: {
         links: [
@@ -218,7 +213,6 @@ export default {
             },
           },
         ],
-        attributes: new drupalAttribute(),
       },
       secondary_nav_data: {
         variant: "with-divider",
@@ -245,25 +239,22 @@ export default {
             is_current: false,
           },
         ],
-        attributes: new drupalAttribute()
       },
       header_search_data: {
         variant: "default",
         form: "<form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
       header_search_data_duplicate: {
         variant: "no-toggle",
         form: "<form action='/search2' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     hero: {
-      variant: 'content-bg',
-      content_justify: 'left',
+      variant: "content-bg",
+      content_justify: "left",
       bg_tint: false,
-      background_image_url: 'https://source.unsplash.com/random/900×500/?images',
+      background_image_url:
+        "https://source.unsplash.com/random/900×500/?images",
       card_data: {
         variant: "default",
         first_component: true,
@@ -272,15 +263,13 @@ export default {
         subheading: false,
         text: "<p>Mission statement or explanation of physical and people resources. Lorem ipsum dolor sit amet lorem ips consectetur adipisciue accumsan metus.</p>",
         button_data: false,
-        attributes: new drupalAttribute(),
       },
-      attributes: new drupalAttribute()
     },
     section_1: {
       first_component: false,
-      variant: 'primary-dark-xx-stripe',
-      card_variant: 'card--media-right',
-      sub_component_layout: 'switcher',
+      variant: "primary-dark-xx-stripe",
+      card_variant: "card--media-right",
+      sub_component_layout: "switcher",
       // center, stack
       align_items: false,
       // center, switcher
@@ -297,8 +286,7 @@ export default {
       brow_data: {
         part_one: "Introduction",
         part_two: false,
-        variant: 'heading',
-        attributes: new drupalAttribute(),
+        variant: "heading",
       },
       heading: false,
       text: false,
@@ -307,19 +295,18 @@ export default {
       sub_component_data: [
         Card({
           variant: "media-right",
-          media: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          media:
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
           heading: "About Language Access",
           text: "<p>Describes Language Access at the courts as both physical and *human* translation resources available. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre.</p><a href='#' class='button button--text'>See Language Resources</a><a href='#' class='button button--text'>Learn About Court Interpreters</a>",
-          attributes: new drupalAttribute(),
         }),
       ],
-      attributes: new drupalAttribute(),
     },
     section_2: {
       first_component: false,
-      variant: 'default',
-      card_variant: '',
-      sub_component_layout: 'grid',
+      variant: "default",
+      card_variant: "",
+      sub_component_layout: "grid",
       // center, stack
       align_items: false,
       // center, switcher
@@ -327,14 +314,14 @@ export default {
       // cluster, grid, reel, stack, switcher
       gap: false,
       // grid
-      grid_min_width: '41',
+      grid_min_width: "41",
       // with-sidebar
       sidebar_direction: false,
       // with-sidebar
       sidebar_width: false,
       background_image_url: "",
       brow_data: false,
-      heading: 'Start Here For Language Access',
+      heading: "Start Here For Language Access",
       text: false,
       button_data: false,
       sub_component_data: [
@@ -345,7 +332,6 @@ export default {
           icon_data: {
             icon: "documents",
             color: false,
-            attributes: new drupalAttribute(),
           },
           heading: "Language Access Resources for Courts",
           text: false,
@@ -354,7 +340,6 @@ export default {
             href: "#",
             variant: "primary",
           },
-          attributes: new drupalAttribute(),
         }),
         Card({
           variant: "striped",
@@ -363,7 +348,6 @@ export default {
           icon_data: {
             icon: "speaker",
             color: false,
-            attributes: new drupalAttribute(),
           },
           heading: "Search for an Interpreter",
           text: false,
@@ -372,7 +356,6 @@ export default {
             href: "#",
             variant: "primary",
           },
-          attributes: new drupalAttribute(),
         }),
         Card({
           variant: "striped",
@@ -381,7 +364,6 @@ export default {
           icon_data: {
             icon: "speaker",
             color: false,
-            attributes: new drupalAttribute(),
           },
           heading: "Become an Court Interpreter",
           text: false,
@@ -390,7 +372,6 @@ export default {
             href: "#",
             variant: "primary",
           },
-          attributes: new drupalAttribute(),
         }),
         Card({
           variant: "striped",
@@ -399,7 +380,6 @@ export default {
           icon_data: {
             icon: "exam",
             color: false,
-            attributes: new drupalAttribute(),
           },
           heading: "Find Court Interpreter Exam Information",
           text: false,
@@ -408,16 +388,15 @@ export default {
             href: "#",
             variant: "primary",
           },
-          attributes: new drupalAttribute(),
         }),
       ],
-      attributes: new drupalAttribute().addClass('cards'),
+      section_classes: ["cards"],
     },
     section_3: {
       first_component: false,
-      variant: 'warm-dark-x',
-      card_variant: '',
-      sub_component_layout: 'grid',
+      variant: "warm-dark-x",
+      card_variant: "",
+      sub_component_layout: "grid",
       // center, stack
       align_items: false,
       // center, switcher
@@ -425,59 +404,56 @@ export default {
       // cluster, grid, reel, stack, switcher
       gap: false,
       // grid
-      grid_min_width: '41',
+      grid_min_width: "41",
       // with-sidebar
       sidebar_direction: false,
       // with-sidebar
       sidebar_width: false,
       background_image_url: "",
       brow_data: false,
-      heading: 'Latest News',
+      heading: "Latest News",
       text: false,
       button_data: {
         label: "See All News",
         href: "#",
-        type: 'primary',
-        size: 'normal',
-        attributes: new drupalAttribute(),
+        type: "primary",
+        size: "normal",
       },
       sub_component_data: [
         TeaserPlusList({
           teaser: {
             brow_data: {
-              part_one: 'Orders',
-              part_two: 'July 12, 2022',
-              attributes: new drupalAttribute(),
+              part_one: "Orders",
+              part_two: "July 12, 2022",
             },
             heading: "2DCA Protocols for In-Person Oral Argument",
-            text: "The Second Appellate District's Division Two will hear oral arguments in the courtroom on May 19, 2022. Access to the courtroom will be limited to the..."
+            text: "The Second Appellate District's Division Two will hear oral arguments in the courtroom on May 19, 2022. Access to the courtroom will be limited to the...",
           },
           list_items: [
             {
               link: {
                 label: "Job Announcement – Appellate Court Attorney",
-                href: "#"
+                href: "#",
               },
-              footer: "May 25, 2022"
+              footer: "May 25, 2022",
             },
             {
               link: {
-                label: "Second District Court of Appeal to resume in‑person arguments effective May 2022",
-                href: "#"
+                label:
+                  "Second District Court of Appeal to resume in‑person arguments effective May 2022",
+                href: "#",
               },
-              footer: "May 25, 2022"
-            }
+              footer: "May 25, 2022",
+            },
           ],
-          attributes: new drupalAttribute(),
         }),
       ],
-      attributes: new drupalAttribute(),
     },
     section_4: {
       first_component: false,
-      variant: 'white',
-      card_variant: '',
-      sub_component_layout: 'grid',
+      variant: "white",
+      card_variant: "",
+      sub_component_layout: "grid",
       // center, stack
       align_items: false,
       // center, switcher
@@ -485,7 +461,7 @@ export default {
       // cluster, grid, reel, stack, switcher
       gap: false,
       // grid
-      grid_min_width: '41',
+      grid_min_width: "41",
       // with-sidebar
       sidebar_direction: false,
       // with-sidebar
@@ -497,7 +473,8 @@ export default {
       button_data: false,
       sub_component_data: [
         Card({
-          media: '<img src="https://source.unsplash.com/random/900×700/?office" />',
+          media:
+            '<img src="https://source.unsplash.com/random/900×700/?office" />',
           heading: "Interested in becoming a court interpreter?",
           text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
           button_data: {
@@ -508,11 +485,10 @@ export default {
           },
           // A variant type that contols the layout and style of the component.
           variant: "bordered-center",
-          // drupalAttribute allows us to mock drupal attributes in storybook.
-          attributes: new drupalAttribute(),
         }),
         Card({
-          media: '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?building,old" /></div>',
+          media:
+            '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?building,old" /></div>',
           heading: "LEP Court Users",
           text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet.</p>",
           button_data: {
@@ -523,11 +499,9 @@ export default {
           },
           // A variant type that contols the layout and style of the component.
           variant: "bordered-center",
-          // drupalAttribute allows us to mock drupal attributes in storybook.
-          attributes: new drupalAttribute(),
         }),
       ],
-      attributes: new drupalAttribute().addClass('cards'),
+      section_classes: ["cards"],
     },
     footer: {
       site_branding_data: {
@@ -535,7 +509,6 @@ export default {
         logo: logo,
         label: "California Courts",
         sub_label: "Language Access",
-        attributes: new drupalAttribute(),
       },
       secondary_nav_data: {
         variant: "default",
@@ -567,16 +540,13 @@ export default {
             is_current: false,
           },
         ],
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     shoe: {
       variant: "default",
       global_branding_data: {
         text: "Judicial Branch of California",
         destination: "https://courts.ca.gov",
-        attributes: new drupalAttribute()
       },
       secondary_nav_data: {
         variant: "",
@@ -596,12 +566,9 @@ export default {
             text: "Terms Of Use",
             url: "#",
             is_current: false,
-          }
+          },
         ],
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
-    attributes: new drupalAttribute(),
-  }
-}
+  },
+};

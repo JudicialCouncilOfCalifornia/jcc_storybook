@@ -17,6 +17,7 @@
   align-items: center;
 }
 
+.hangover .with-sidebar > .hangover__bottom-content,
 .hangover .with-sidebar > .hangover__top-content {
   /* Using padding here instead of gap or detectWrap goes wild. */
   padding-inline-end: var(--s1);

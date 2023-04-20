@@ -1,14 +1,3 @@
-{# Atomic templates should be as "dumb" as possible. #}
-
-{#
-  Available variables:
-    label: "Button",
-    href: "#",
-    type: 'primary | secondary | text',
-    size: 'normal | small | large',
-    attributes: new drupalAttribute(),
-#}
-
 {# Set up variant classes. #}
 {% set variant_type = variant ? 'button--' ~ variant : 'button--primary' %}
 {% set variant_size = size ? 'button--' ~ size : 'button--normal' %}

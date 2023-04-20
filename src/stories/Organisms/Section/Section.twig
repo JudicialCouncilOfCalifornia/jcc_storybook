@@ -1,9 +1,9 @@
 {# Set brow and heading tags based on if they're first component or not. #}
 {# Subordinate heading to brow if present. #}
-{% if first_component %}
-  {% set h = brow ? 'h2' : 'h1' %}
+	{% if first_component %}
+	{% set h = brow ? 'h2' : 'h1' %}
 {% else %}
-  {% set h = brow ? 'h3' : 'h2' %}
+	{% set h = brow ? 'h3' : 'h2' %}
 {% endif %}
 
 {% set variant_bg_image = background_image_url is not empty ? 'section--with-bg-image' : '' %}
@@ -16,43 +16,43 @@
 {% set sub_component_styles = [] %}
 
 {% if bg_tint %}
-  {% set styles = styles|merge([
+	{% set styles = styles|merge([
     '--bg: var(--color-' ~ bg_tint ~ ');',
   ]) %}
 {% endif %}
 
 {% if align_items %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     'align-items: ' ~ align_items ~ ';',
   ]) %}
 {% endif %}
 
 {% if measure %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     '--measure: ' ~ measure ~ 'ch;',
   ]) %}
 {% endif %}
 
 {% if gap %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     'gap: var(' ~ gap ~ ');',
   ]) %}
 {% endif %}
 
 {% if grid_min_width %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     '--grid-min-width: ' ~ grid_min_width ~ 'ch;',
   ]) %}
 {% endif %}
 
 {% if sidebar_direction %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     '--sidebar-direction: ' ~ sidebar_direction ~ ';',
   ]) %}
 {% endif %}
 
 {% if sidebar_width %}
-  {% set sub_component_styles = sub_component_styles|merge([
+	{% set sub_component_styles = sub_component_styles|merge([
     '--sidebar-width: ' ~ sidebar_width ~ 'ch;',
   ]) %}
 {% endif %}
@@ -64,39 +64,43 @@
   variant_bg_image
 ] %}
 
+{% if section_classes is iterable %}
+	{% set classes = classes|merge(section_classes) %}
+{% endif %}
+
 {# Section Template #}
-<div {{ attributes.addClass(classes).setAttribute('style', styles|join) }}>
-  {% if background_image_url is not empty %}
-    <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
-    <div class="section__tint"></div>
-  {% endif %}
-  <div class="section__content box">
-    <div class="container stack">
-      <div class="section__header center stack">
-        {% if brow_data %}
-          {% include "@atoms/Brow/Brow.twig" with brow_data %}
-        {% endif %}
-        {% if heading %}
-          <{{h}}>{{ heading }}</{{h}}>
-        {% endif %}
-        {% if text %}
-          {{ text }}
-        {% endif %}
-      </div>
-      <div class="section__main {{ sub_component_layout }}" style="{{ sub_component_styles|join }}">
-        {% if sub_component_data is iterable %}
-          {% for item in sub_component_data %}
-            {{ item }}
-          {% endfor %}
-        {% elseif sub_component_data|trim %}
-          {{ sub_component_data }}
-        {% endif %}
-      </div>
-      {% if button_data %}
-        <div class="section__button center">
-          {% include "@atoms/Button/Button.twig" with button_data %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
+<div {% if classes is not empty %} class="{{ classes|join(' ')}}" {% endif %} {% if styles is not empty %} style="{{ styles|join }}" {% endif %}>
+	{% if background_image_url is not empty %}
+		<div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
+		<div class="section__tint"></div>
+	{% endif %}
+	<div class="section__content box">
+		<div class="container stack">
+			<div class="section__header center">
+				{% if brow_data %}
+					{% include "@atoms/Brow/Brow.twig" with brow_data %}
+				{% endif %}
+				{% if heading %}
+					<{{h}}>{{ heading }}</{{h}}>
+				{% endif %}
+				{% if text %}
+					{{ text }}
+				{% endif %}
+			</div>
+			<div class="section__main {{ sub_component_layout }}" style="{{ sub_component_styles|join }}">
+				{% if sub_component_data is iterable %}
+					{% for item in sub_component_data %}
+						{{ item }}
+					{% endfor %}
+				{% elseif sub_component_data|trim %}
+					{{ sub_component_data }}
+				{% endif %}
+			</div>
+			{% if button_data %}
+				<div class="section__button center">
+					{% include "@atoms/Button/Button.twig" with button_data %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
 </div>

@@ -4,27 +4,29 @@
 
 {% set cat = '' %}
 
-<div {{ attributes.addClass(classes) }}>
-  {% for color in colors %}
-    {% if cat != color.category %}
-      {# Close the previous group. #}
-      {% if cat != '' %}
-        </div></div> 
-      {% endif %}
+<div class="{{ classes|join(' ') }}">
+	{% for color in colors %}
+		{% if cat != color.category %}
+			{# Close the previous group. #}
+			{% if cat != '' %}
+			</div>
+		</div>
+	{% endif %}
 
-      {% set cat = color.category %}
-      
-      {# Start new group. #}
-      <div class="color__group">
-        <h2>{{ color.category }}</h2>
-        <div class="grid">
-    {% endif %}
-    
-    <div class="color">
-      <div class="color__swatch" style="background-color: {{color.value}};"></div>
-      <div class="color__label"><strong>{{ color.name }}</strong><br /><em>{{ color.value }}</em></div>
-    </div>
-  {% endfor %}
-  {# Close the final group. #}
-  </div></div>
-</div>
+	{% set cat = color.category %}
+
+	{# Start new group. #}
+	<div class="color__group">
+		<h2>{{ color.category }}</h2>
+		<div class="grid">
+		{% endif %}
+
+		<div class="color">
+			<div class="color__swatch" style="background-color: {{color.value}};"></div>
+			<div class="color__label">
+				<strong>{{ color.name }}</strong><br/><em>{{ color.value }}</em>
+			</div>
+		</div>
+	{% endfor %}
+	{# Close the final group. #}
+</div></div></div>

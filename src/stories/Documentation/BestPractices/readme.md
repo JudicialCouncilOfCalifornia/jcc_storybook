@@ -12,7 +12,7 @@ As a general approach to building components for this library.
   - This should get you 100% of the way for layout, 98% of the time. [1]
   - Add aesthetic styling for variants. Use BEM style class names as needed for clarity in selectors.
   - Always use our Scheme values for Colors, sizes, fonts, etc.  If new values are required, add them to the Scheme first. Never hard code colors, sizes, etc into a component.
-  - Avoid adding margin and padding to elements directly. It's better for their containing element to determine their spacing and relationship to other elements.
+  - Avoid adding margin to elements directly. It's better for their containing element to determine their spacing and relationship to other elements.
 
 *[1] For the 2% of the time that you don't quite get there out of the box, understand intrinsic layout, or ask for guidance. *
 

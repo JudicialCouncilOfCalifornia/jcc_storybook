@@ -13,6 +13,6 @@
   variant_class,
 ] %}
 
-<div {{ attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   <a href="{{ destination }}" target="_blank">{{ text }}</a>
 </div>
