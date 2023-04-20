@@ -11,8 +11,6 @@ export default {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
     variant: {
       description: "{{pascalCase name}} variant.",

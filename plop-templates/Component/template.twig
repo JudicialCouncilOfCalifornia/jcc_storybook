@@ -1,17 +1,3 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
 {# Set up variant classes. #}
 {% set variant_class = variant ? '{{dashCase name}}--' ~ variant : '{{dashCase name}}--default' %}
 
@@ -23,10 +9,8 @@
   variant_class,
 ] %}
 
-<div \{{ attributes.addClass(classes) }}>
-  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
-  {# Use BEM syntax for styling classes on sub-components. #}
-  <div class="{{dashCase name}}__...">
-    \{{ example }}
-  </div>
+	<div class="\{{ classes|join(' ') }}"> {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
+	{# Use BEM syntax for styling classes on sub-components. #}
+		<div class="{{dashCase name}}__..."> \{{ example }}
+	</div>
 </div>
