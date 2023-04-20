@@ -7,14 +7,35 @@
   {% include "@organisms/Header/Header.twig" with header %}
   {% include "@molecules/HeroHangover/HeroHangover.twig" with pagetitle %}
   {% include "@organisms/Section/Section.twig" with section_1 %}
-  <div class="publication-results-content container">
-    <div class="box">
-      <h3>Search Our Publication Directory or Browse by Topic</h3>
-    </div>
-    <div class="with-sidebar box">
+  <div class="publication-results-content container stack">
+    <h3>Search Our Publication Directory or Browse by Topic</h3>
+    <div class="with-sidebar">
       <div class='sidebar box'>
         <div class="filters stack">
           <h4>Search and Filter</h4>
+          {% if filters not empty %}
+            <form class="stack">
+              {% for filter in filters %}
+                {% if filter.type == "input" %}
+                  <input type="input" placeholder="{{ filter.placeholder }}" id="{{filter.id}}" name="{{ filter.name }}" />
+                {% elseif filter.type == "select" %}
+                  <div class="select-element-wrapper">
+                    <select name="{{ filter.name }}" id="{{ filter.id }}">
+                      <option value="" disabled selected>{{ filter.placeholder }}</option>
+                      {% for option in filter.options %}
+                        <option value="{{ option.value }}">{{ option.label }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endif %}
+              {% endfor %}
+              <div class="cluster">
+                {% for filter_button in filters_buttons %}
+                  {% include "@atoms/Button/Button.twig" with filter_button %}
+                {% endfor %}
+              </div>
+            </form>
+          {% endif %}
         </div>
         {% if popular_topics %}
           <div class="popular-topics stack">
@@ -37,16 +58,14 @@
         {% endif %}
       </div>
     </div>
-  </div>
-  {% if pager %}
-    <div class="container">
-      <div class="box">
+    {% if pager %}
+      <div class="container">
         <div class="pager">
           --- PAGER ---
         </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
   {% include "@organisms/Footer/Footer.twig" with footer %}
   {% include "@molecules/Shoe/Shoe.twig" with shoe %}
 </div>

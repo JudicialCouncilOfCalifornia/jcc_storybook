@@ -1,7 +1,8 @@
 input,
 textarea,
 select {
-  border: 1px solid var(--color-base-light-x);
+  /*border: 1px solid var(--color-base-light-x);*/
+  border: 1px solid var(--color-black);
   padding: var(--s-1);
   font-size: var(--s0);
   line-height: var(--s0);
@@ -13,6 +14,26 @@ select {
 .cluster textarea,
 .cluster select {
   width: auto;
+}
+
+.select-element-wrapper{
+  border: 1px solid var(--color-black);
+  position: relative;
+}
+.select-element-wrapper:after {
+  content: '\2304';
+  font-size: 30px;
+  line-height: 23px;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  color: var(--color-accent-warm);
+}
+
+select {
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 label {

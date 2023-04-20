@@ -12,7 +12,6 @@ export default {
       global_branding_data: {
         text: "Judicial Branch of California",
         destination: "https://courts.ca.gov",
-        attributes: new drupalAttribute()
       },
       secondary_nav_data: {
         variant: "",
@@ -39,9 +38,7 @@ export default {
             is_current: false,
           }
         ],
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     header: {
       variant: "default",
@@ -50,7 +47,6 @@ export default {
         logo: logo,
         label: "California Courts",
         sub_label: "Language Access",
-        attributes: new drupalAttribute(),
       },
       primary_nav_data: {
         links: [
@@ -220,7 +216,6 @@ export default {
             },
           },
         ],
-        attributes: new drupalAttribute(),
       },
       secondary_nav_data: {
         variant: "with-divider",
@@ -247,19 +242,15 @@ export default {
             is_current: false,
           },
         ],
-        attributes: new drupalAttribute()
       },
       header_search_data: {
         variant: "default",
         form: "<form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
       header_search_data_duplicate: {
         variant: "no-toggle",
         form: "<form action='/search2' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     pagetitle: {
       variant: "striped",
@@ -268,7 +259,6 @@ export default {
       bottom_content: "",
       heading: "Research, Statistics and Publications",
       text: "",
-      attributes: new drupalAttribute(),
     },
     section_1: {
       variant: 'default',
@@ -278,7 +268,6 @@ export default {
         '<div class="box"><h3>Explore Our Library of Policy, Programs and Legal Research Publications</h3><p>The California Courts convene working groups, committees and other formal and informal collaborative efforts to work towards a fair and transparent legal system that the residents of California can count on. These include work on citizen access to the justice system, data on court performance, research projects to study litigation processes and procedures and a whole host of other topics. \n' +
         'Below you’ll find featured publications as well as filers and search features that allow you to sort through our extensive publications library. Have questions? See our FAQ  or contact us. </p></div>',
       ],
-      attributes: new drupalAttribute(),
     },
     empty_message: "No publications to display.",
     publications: [
@@ -361,27 +350,106 @@ export default {
         pills: Pills({ ...PillsDefault.args }),
       },
     ],
+    filters: [
+      {
+        type: 'input',
+        placeholder: 'Search Publication',
+        id: 'search',
+        name: 'search'
+      },
+      {
+        type: 'select',
+        placeholder: 'Topic/Case Type',
+        id: 'topic',
+        name: 'topic',
+        options: [
+          {
+            value: 'opt1',
+            label: 'Option 1'
+          },
+          {
+            value: 'opt2',
+            label: ' Option 2'
+          },
+          {
+            value: 'opt3',
+            label: 'Option 3'
+          }
+        ]
+      },
+      {
+        type: 'select',
+        placeholder: 'Office/Division',
+        id: 'office',
+        name: 'office',
+        options: [
+          {
+            value: 'opt1',
+            label: 'Option 1'
+          },
+          {
+            value: 'opt2',
+            label: ' Option 2'
+          },
+          {
+            value: 'opt3',
+            label: 'Option 3'
+          }
+        ]
+      },
+      {
+        type: 'select',
+        placeholder: 'Publication Type',
+        id: 'put_type',
+        name: 'put_type',
+        options: [
+          {
+            value: 'opt1',
+            label: 'Option 1'
+          },
+          {
+            value: 'opt2',
+            label: ' Option 2'
+          },
+          {
+            value: 'opt3',
+            label: 'Option 3'
+          }
+        ]
+      }
+    ],
+    filters_buttons: [
+      {
+        variant: 'secondary',
+        size: 'small',
+        label: "Submit",
+        href: "#",
+      },
+      {
+        variant: 'primary',
+        size: 'small',
+        label: "Reset",
+        href: "#",
+      },
+    ],
     popular_topics: [
       {
         variant: 'pill',
         size: 'small',
         label: "Family law",
         href: "#",
-        attributes: new drupalAttribute(),
       },
       {
         variant: 'pill',
         size: 'small',
         label: "Small Claims",
         href: "#",
-        attributes: new drupalAttribute(),
       },
       {
         variant: 'pill',
         size: 'small',
         label: "Wills and Estates",
         href: "#",
-        attributes: new drupalAttribute(),
       },
     ],
     pager: true,
@@ -391,7 +459,6 @@ export default {
         logo: logo,
         label: "California Courts",
         sub_label: "Language Access",
-        attributes: new drupalAttribute(),
       },
       secondary_nav_data: {
         variant: "default",
@@ -423,16 +490,13 @@ export default {
             is_current: false,
           },
         ],
-        attributes: new drupalAttribute()
       },
-      attributes: new drupalAttribute()
     },
     shoe: {
       variant: "default",
       global_branding_data: {
         text: "Judicial Branch of California",
         destination: "https://courts.ca.gov",
-        attributes: new drupalAttribute()
       },
       secondary_nav_data: {
         variant: "",
@@ -453,11 +517,8 @@ export default {
             url: "#",
             is_current: false,
           }
-        ],
-        attributes: new drupalAttribute()
-      },
-      attributes: new drupalAttribute()
-    },
-    attributes: new drupalAttribute(),
+        ]
+      }
+    }
   }
 }
