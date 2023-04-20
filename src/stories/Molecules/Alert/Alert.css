@@ -33,9 +33,9 @@
   align-items: flex-start;
 }
 
-.alert .icon-wrapper .icon {
-  width: var(--s1);
-  height: var(--s1);
+.alert .icon-wrapper {
+  inline-size: var(--s1);
+  block-size: var(--s1);
 }
 
 .alert__content {
