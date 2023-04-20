@@ -1,4 +1,14 @@
 
+0.45.0 / 2023-04-20
+===================
+
+  * chore: Export libs.
+  * fix: Also update css fixes for icons in Alert and Pills.
+  * LWR-84: Fix icon sizes.
+  * [LWR-84] -- Pager updates
+  * [LWR-84] -- Updates to pager.
+  * [LWR-84] -- Search results page -- Added Pager component
+
 0.44.1 / 2023-04-19
 ===================
 
