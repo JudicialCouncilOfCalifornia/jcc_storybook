@@ -6,8 +6,13 @@
   --gap: var(--s-3);
   list-style-type: none;
   margin: auto;
-  font-family: var( --font-primary);
+  font-family: var(--font-primary);
   justify-content: center;
+}
+
+.pager__items .icon-wrapper {
+  max-inline-size: var(--s0);
+  max-block-size: var(--s0);
 }
 
 .pager__item--ellipsis,
@@ -40,6 +45,8 @@
   stroke: var(--color);
 }
 
-.pager__item:is(.pager__item--first, .pager__item--previous, .pager__item--last, .pager__item--next) a:hover > div {
+.pager__item:is(.pager__item--first, .pager__item--previous, .pager__item--last, .pager__item--next)
+  a:hover
+  > div {
   stroke: var(--accent-color);
 }

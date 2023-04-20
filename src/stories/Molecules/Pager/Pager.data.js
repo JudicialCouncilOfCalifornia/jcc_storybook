@@ -1,6 +1,3 @@
-// To mock drupal attributes in storybook.
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   default: {
     variant: "default",
@@ -9,44 +6,44 @@ export default {
       next: true,
     },
     items: {
-      current: '7',
+      current: "7",
       previous: {
-        href: '#',
-        text: 'Prev',
+        href: "#",
+        text: "Prev",
         //text: '‹ Prev',
       },
       pages: {
         3: {
-          href: '#',
+          href: "#",
         },
         4: {
-          href: '#',
+          href: "#",
         },
         5: {
-          href: '#',
+          href: "#",
         },
         6: {
-          href: '#',
+          href: "#",
         },
         7: {
-          href: '#',
+          href: "#",
         },
         8: {
-          href: '#',
+          href: "#",
         },
         9: {
-          href: '#',
+          href: "#",
         },
         10: {
-          href: '#',
+          href: "#",
         },
         11: {
-          href: '#',
+          href: "#",
         },
       },
       next: {
-        href: '#',
-        text: 'Next',
+        href: "#",
+        text: "Next",
         //text: 'Next ›',
       },
     },
@@ -58,54 +55,54 @@ export default {
       next: true,
     },
     items: {
-      current: '7',
+      current: "7",
       first: {
-        href: '#',
-        text: 'First',
+        href: "#",
+        text: "First",
         //text: '« First',
       },
       previous: {
-        href: '#',
-        text: 'Prev',
+        href: "#",
+        text: "Prev",
         //text: '‹ Prev',
       },
       pages: {
         3: {
-          href: '#',
+          href: "#",
         },
         4: {
-          href: '#',
+          href: "#",
         },
         5: {
-          href: '#',
+          href: "#",
         },
         6: {
-          href: '#',
+          href: "#",
         },
         7: {
-          href: '#',
+          href: "#",
         },
         8: {
-          href: '#',
+          href: "#",
         },
         9: {
-          href: '#',
+          href: "#",
         },
         10: {
-          href: '#',
+          href: "#",
         },
         11: {
-          href: '#',
+          href: "#",
         },
       },
       next: {
-        href: '#',
-        text: 'Next',
+        href: "#",
+        text: "Next",
         //text: 'Next ›',
       },
       last: {
-        href: '#',
-        text: 'Last',
+        href: "#",
+        text: "Last",
         //text: 'Last »',
       },
     },
@@ -113,20 +110,20 @@ export default {
   mini_pager: {
     variant: "mini_pager",
     items: {
-      current: '3',
+      current: "3",
       first: [],
       previous: {
-        href: '#',
-        text: '',
+        href: "#",
+        text: "",
       },
       pages: {
         3: {
-          href: '#',
-        }
+          href: "#",
+        },
       },
       next: {
-        href: '#',
-        text: '',
+        href: "#",
+        text: "",
       },
       last: [],
     },
@@ -134,25 +131,25 @@ export default {
   common: {
     variant: "common",
     items: {
-      current: '1',
+      current: "1",
       first: [],
       previous: [],
       pages: {
         1: {
-          href: '#',
+          href: "#",
         },
         2: {
-          href: '#',
+          href: "#",
         },
         3: {
-          href: '#',
+          href: "#",
         },
       },
       next: {
-        href: '#',
-        text: 'Next',
+        href: "#",
+        text: "Next",
       },
       last: [],
     },
-  }
-}
+  },
+};

@@ -6,6 +6,6 @@
 }
 
 .icon-wrapper .icon {
-  height: var(--s5);
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
 }

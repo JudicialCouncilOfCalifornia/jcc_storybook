@@ -1,23 +1,21 @@
-import readme from './readme.md';
-import data from './Pager.data';
-import Pager from './Pager.twig';
-import './Pager.css';
+import readme from "./readme.md";
+import data from "./Pager.data";
+import Pager from "./Pager.twig";
+import "./Pager.css";
 
 export default {
-  title: 'Molecules/Pager',
+  title: "Molecules/Pager",
   component: Pager,
   parameters: {
     notes: readme,
   },
   argTypes: {
-    // Don't show the mock drupal attributes.
-    attributes: {table: {disable: true}},
     // Variant select is a pretty common arg.
-    variant: {table: {disable: true}},
+    variant: { table: { disable: true } },
     // More args here.
-    current: {table: {disable: true}},
-    ellipses: {table: {disable: true}},
-    items: {table: {disable: true}},
+    current: { table: { disable: true } },
+    ellipses: { table: { disable: true } },
+    items: { table: { disable: true } },
   },
 };
 
