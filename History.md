@@ -1,4 +1,11 @@
 
+0.46.0 / 2023-04-21
+===================
+
+  * chore: Export libs.
+  * readme / css indentation
+  * iframe componenent
+
 0.45.1 / 2023-04-20
 ===================
 
