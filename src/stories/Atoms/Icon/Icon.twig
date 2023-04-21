@@ -3,6 +3,8 @@
 {% set variant_styles = [] %}
 {% set variant_styles = color ? variant_styles|merge(['--color: var(--color-' ~ color ~ ');']) : variant_styles %}
 
+{% set icon_path = icon_path is not empty ? icon_path : 'icons.svg' %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
@@ -10,8 +12,8 @@
   'icon-wrapper',
 ] %}
 
-	<div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} "> {# Use composable layout classes as needed. #}
-	{# Use BEM syntax if needed for styling classes. #}
-		<svg class="icon"> <use xlink:href="icons.svg#{{ icon }}"></use>
+<div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} ">
+	<svg class="icon"> 
+			<use xlink:href="{{ icon_path }}#{{ icon }}"></use>
 	</svg>
 </div>
