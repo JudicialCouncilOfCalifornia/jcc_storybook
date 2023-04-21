@@ -13,6 +13,7 @@ export default {
     notes: readme,
   },
   argTypes: {
+    icon_path: { table: { disable: true } },
     icon: {
       description:
         'Available icons are in an svg "sprite" file built from the icons in `assets/icons`. i.e. `documents`, `speaker`, `toolkit`',
