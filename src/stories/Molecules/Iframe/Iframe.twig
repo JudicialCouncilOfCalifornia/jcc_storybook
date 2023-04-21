@@ -1,0 +1,18 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'iframe--' ~ variant : 'iframe--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  	'iframe',
+	'iframe--' ~ ratio,
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}"> {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
+	{# Use BEM syntax for styling classes on sub-components. #}
+	<iframe id="iframe-content-{{ random(1000) }}" src="{{ url }}" frameborder="0">
+		{{- 'Your browser does not support inline frames'|t -}}
+	</iframe>
+</div>

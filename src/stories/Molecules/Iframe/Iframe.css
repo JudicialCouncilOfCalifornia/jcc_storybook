@@ -1,0 +1,24 @@
+
+.iframe iframe{
+    width: 100%;
+    outline: none;
+}
+
+/*Aspect Ratio Style Classes*/
+/*If IE11 Support Required Revise:*/
+/*height: calc(100vw * ratio_value, e.g., 9/16 = 0.5625)*/
+.iframe--square iframe {
+    aspect-ratio: 1 / 1;
+}
+
+.iframe--video iframe {
+    aspect-ratio: 16 / 9;
+}
+
+.iframe--standard iframe {
+    aspect-ratio: 4 / 3;
+}
+
+.iframe--classic iframe {
+    aspect-ratio: 3 / 4;
+}
