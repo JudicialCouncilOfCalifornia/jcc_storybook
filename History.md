@@ -1,4 +1,11 @@
 
+0.47.0 / 2023-04-24
+===================
+
+  * chore: Export libs.
+  * fix: Rebased and removed attributes.
+  * [LWR-119] -- Steps component added
+
 0.46.2 / 2023-04-24
 ===================
 
