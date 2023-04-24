@@ -11,7 +11,6 @@ export default {
     layout: "padded",
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     variant: {table: {disable: true}},
     color: {
       name: "Color",

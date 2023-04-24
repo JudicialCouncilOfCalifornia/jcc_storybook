@@ -1,17 +1,3 @@
-{##
- #  Atomic templates should be as "dumb" as possible.
- #
- #  Styles should be applied as high up the DOM as possible so they can cascade
- #  down to lower elements.
- #}
-
-{#
-  Available variables:
-    main:
-    variant:
-    attributes: drupalAttribute()
-#}
-
 {# Set up variant classes. #}
 {% set color_class = color ? 'steps--color-' ~ color : 'steps--color-default' %}
 
