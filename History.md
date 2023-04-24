@@ -1,4 +1,10 @@
 
+0.46.1 / 2023-04-24
+===================
+
+  * chore: Export Libs
+  * LWR-137: prevent separator when no first part is present.
+
 0.46.0 / 2023-04-21
 ===================
 
