@@ -1,4 +1,10 @@
 
+0.46.2 / 2023-04-24
+===================
+
+  * chore: Export libs.
+  * [Icon adjustments] -- setup icons.svg to properly work in both Drupal and Storybook
+
 0.46.1 / 2023-04-24
 ===================
 
