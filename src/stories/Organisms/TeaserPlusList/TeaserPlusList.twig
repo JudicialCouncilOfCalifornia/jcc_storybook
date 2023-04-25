@@ -4,9 +4,12 @@
 {% set classes = [
   'teaser-list',
   'grid',
+	'detect-wrap',
+	'detect-wrap--observed',
 ] %}
 
-	<div class="{{ classes|join(' ') }}"> <div class="teaser-list__teaser stack box">
+<div class="{{ classes|join(' ') }}">
+	<div class="teaser-list__teaser stack">
 		{% if teaser.brow_data %}
 			{% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
 		{% endif %}
@@ -23,7 +26,7 @@
 			{{ teaser.text }}
 		</div>
 	</div>
-	<div class="teaser-list__list box">
+	<div class="teaser-list__list">
 		<ul class="stack">
 			{% for item in list_items %}
 				<li>
