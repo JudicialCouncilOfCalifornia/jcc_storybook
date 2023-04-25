@@ -1,4 +1,10 @@
 
+0.47.2 / 2023-04-25
+===================
+
+  * chore: Export libs.
+  * LWR-137: Refactor Teaser Plus List for better stacking and standards.
+
 0.47.1 / 2023-04-25
 ===================
 
