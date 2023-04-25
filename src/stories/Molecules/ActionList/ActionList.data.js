@@ -1,5 +1,3 @@
-import drupalAttribute from 'drupal-attribute'
-
 export default {
   default: {
     variant: "default",

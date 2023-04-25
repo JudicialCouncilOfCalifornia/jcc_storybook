@@ -1,21 +1,10 @@
-<!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
 # Action List
 
-Description of the Action List in markdown.
-
-<details>
-  <summary>Inherited CSS Variables:</summary>
-  - `--name`: description...
-</details>
+Action list is a list clickable elements.
 
 <details>
   <summary>Twig Variables:</summary>
-  ```
-  variant: "default",
-  ...,
-  sub_component_data: {
-    variant: "default",
-    ...
-  }
-  ```
+    heading : Title of the action list component,
+    text : description of the list,
+    links : an array of links
 </details>

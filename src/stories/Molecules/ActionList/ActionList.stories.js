@@ -10,7 +10,6 @@ export default {
     notes: readme,
   },
   argTypes: {
-    attributes: {table: {disable: true}},
     variant: {
       description: "ActionList variant.",
       table: {defaultValue: {summary: 'default'}},

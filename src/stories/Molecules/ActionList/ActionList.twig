@@ -7,13 +7,11 @@
 ] %}
 
 <div class="{{ classes.join(' ')}}">
-    <div class="box">
-      <h2>{{ heading }}</h2>
-      <div>{{ text }}</div>
-    </div>
+    <h2>{{ heading }}</h2>
+    <div>{{ text }}</div>
     <div>
       {% for link in links %}
-        <div class="action-item cluster box">
+        <div class="action-list__item cluster box">
           <div>{{ link.label }}</div>
           <div>{% include "@atoms/Button/Button.twig" with link.button_data %}</div>
         </div>

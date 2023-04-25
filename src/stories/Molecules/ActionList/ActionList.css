@@ -1,10 +1,8 @@
-.action-list {}
-
-.action-list .action-item {
+.action-list__item {
     border-top: 1px solid var(--color-base);
     justify-content: space-between;
 }
 
-.action-list .action-item:last-child {
+.action-list__item:last-child {
     border-bottom: 1px solid var(--color-base);
 }
