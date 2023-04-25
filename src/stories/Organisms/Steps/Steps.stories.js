@@ -17,7 +17,7 @@ export default {
       description: "Background color of step numbers.",
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'radio' },
-      options: ['default', 'warm', 'dark', 'primary', 'secondary'],
+      options: ['default', 'white', 'dark', 'primary', 'secondary'],
     },
   },
 };
