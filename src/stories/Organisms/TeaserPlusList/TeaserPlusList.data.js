@@ -26,11 +26,6 @@ export default {
         footer: "May 25, 2022",
       },
     ],
-    button_data: {
-      label: 'See all news',
-      href: '#',
-      variant: "primary",
-    },
   },
   stacked: {
     variant: "teaser-list--stacked",
@@ -59,10 +54,5 @@ export default {
         footer: "May 25, 2022",
       },
     ],
-    button_data: {
-      label: 'See all news',
-      href: '#',
-      variant: "primary",
-    },
   }
 };
