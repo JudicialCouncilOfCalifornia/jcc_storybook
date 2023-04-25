@@ -61,7 +61,7 @@
     {% if pager %}
       <div class="container">
         <div class="pager">
-          --- PAGER ---
+          {% include "@molecules/Pager/Pager.twig" with full_pager %}
         </div>
       </div>
     {% endif %}

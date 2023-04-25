@@ -432,6 +432,65 @@ export default {
         href: "#",
       },
     ],
+    full_pager: {
+      variant: "full_pager",
+      ellipses: {
+        previous: true,
+        next: true,
+      },
+      items: {
+        current: "7",
+        first: {
+          href: "#",
+          text: "First",
+          //text: '« First',
+        },
+        previous: {
+          href: "#",
+          text: "Prev",
+          //text: '‹ Prev',
+        },
+        pages: {
+          3: {
+            href: "#",
+          },
+          4: {
+            href: "#",
+          },
+          5: {
+            href: "#",
+          },
+          6: {
+            href: "#",
+          },
+          7: {
+            href: "#",
+          },
+          8: {
+            href: "#",
+          },
+          9: {
+            href: "#",
+          },
+          10: {
+            href: "#",
+          },
+          11: {
+            href: "#",
+          },
+        },
+        next: {
+          href: "#",
+          text: "Next",
+          //text: 'Next ›',
+        },
+        last: {
+          href: "#",
+          text: "Last",
+          //text: 'Last »',
+        },
+      },
+    },
     popular_topics: [
       {
         variant: 'pill',
