@@ -19,7 +19,7 @@
   --s6: calc(var(--s5) * var(--ratio));
 
   /* Content spacing. */
-  --measure: 60ch;
+  --measure: 75ch;
   --max-width: 126ch;
   --min-width: 40ch;
 
