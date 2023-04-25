@@ -10,7 +10,18 @@ export default {
     layout: "padded",
     notes: readme,
   },
-  argTypes: {},
+  argTypes: {
+    variant: {
+      description:
+          "Variant name for teaser orientation.",
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "select" },
+      options: [
+        "default",
+        "teaser-list--stacked",
+      ],
+    }
+  },
 };
 
 const Template = ({ ...args }) => {
@@ -19,3 +30,5 @@ const Template = ({ ...args }) => {
 
 export const Default = Template.bind({});
 Default.args = data.default;
+export const Stacked = Template.bind({});
+Stacked.args = data.stacked;

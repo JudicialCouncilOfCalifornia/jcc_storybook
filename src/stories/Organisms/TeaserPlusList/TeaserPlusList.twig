@@ -1,12 +1,16 @@
 {# Set up variant classes. #}
+{% set variant = variant ? 'teaser-list--' ~ variant : 'teaser-list--default' %}
+{% set variant_orientation = variant == 'teaser-list--default' ? 'grid' : 'stack' %}
 
 {# Create class array #}
 {% set classes = [
   'teaser-list',
-  'grid',
+  variant,
+  variant_orientation,
 ] %}
 
-	<div class="{{ classes|join(' ') }}"> <div class="teaser-list__teaser stack box">
+<div class="{{ classes|join(' ') }}">
+	<div class="teaser-list__teaser stack box">
 		{% if teaser.brow_data %}
 			{% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
 		{% endif %}
