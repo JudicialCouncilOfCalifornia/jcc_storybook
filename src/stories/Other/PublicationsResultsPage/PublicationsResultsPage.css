@@ -1,21 +1,21 @@
-.publication-results-content .sidebar {
+.publication-results__content .sidebar {
     background: var(--color-base-light-xx);
     flex-basis: var(--sidebar-width, 35ch);
 }
 
-.publication-results-content .popular-topics {
+.publication-results__content .popular-topics {
     border-top: 1px solid var(--color-base);
     padding-top: var(--s1);
 }
 
-.publication-results-content .media-excerpt {
+.publication-results__content .media-excerpt {
     margin-bottom: var(--s1);
 }
 
-.publication-results-content .filters{
+.publication-results__content .filters{
     margin-bottom: var(--s1);
 }
 
-.publicationsresultspage .pager {
+.publications-results .pager {
     border-top: 1px solid var(--color-base);
 }
