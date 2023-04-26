@@ -1,4 +1,11 @@
 
+0.47.4 / 2023-04-26
+===================
+
+  * chore: Export libs.
+  * LWR-157: dedupe icons simplify names and make them respect currentColor.
+  * new icons
+
 0.47.3 / 2023-04-25
 ===================
 
