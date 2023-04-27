@@ -14,6 +14,9 @@ An Accordion component is made from a label and a content element. The content i
   <summary>Twig Variables:</summary>
   ```
     variant: "default",
+    open_first: false, // Set the first accordion item to be open on load.
+    heading: 'A title for the Accordion',
+    lead: 'any rendered text',
     items: [
       {
         label: "Text String",

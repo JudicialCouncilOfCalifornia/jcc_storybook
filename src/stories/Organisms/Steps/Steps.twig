@@ -10,15 +10,29 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
-  {# Use BEM syntax for styling classes on sub-components. #}
-  {% for step in steps %}
-  <div class="steps__step step">
-    <h3 class="step__label">
-      <span class="sr-only">Step: {{ loop.index }}</span>
-      {{ step.label }}
-    </h3>
-    {{ step.content }}
+  <div class="stack">
+  
+    {% if heading|render %}
+      <h2 class="step__heading">{{ heading }}</h2>
+    {% endif %}
+    
+    {% if lead|render %}
+      <div class="step__lead">{{ lead }}</div>
+    {% endif %}
+
+    {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
+    {# Use BEM syntax for styling classes on sub-components. #}
+    <div class="steps__steps">
+      {% for step in steps %}
+    <div class="steps__step step">
+      <h3 class="step__label">
+        <span class="sr-only">Step: {{ loop.index }}</span>
+        {{ step.label }}
+      </h3>
+      {{ step.content }}
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+  
+  </div>
 </div>

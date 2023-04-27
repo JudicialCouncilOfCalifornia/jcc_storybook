@@ -39,8 +39,12 @@
 }
 
 .alert__content {
-  line-height: var(--s2);
-  font-weight: 400;
+  display: block;
+}
+
+.alert__content ul, .alert__content ol {
+  list-style-position: outside;
+  margin-inline-start: var(--s2);
 }
 
 .alert__dismiss-button {

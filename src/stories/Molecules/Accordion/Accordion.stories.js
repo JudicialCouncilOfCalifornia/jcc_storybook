@@ -19,6 +19,11 @@ export default {
       control: { type: "radio" },
       options: ["default"],
     },
+    open_first: {
+      description: "Accordion variant.",
+      table: {defaultValue: {summary: 'false'}},
+      control: { type: 'boolean' },
+    },
     // More args here.
   },
 };
