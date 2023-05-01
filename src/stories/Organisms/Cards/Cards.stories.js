@@ -36,6 +36,7 @@ export default {
         "card--default",
         "card--media-left",
         "card--media-right",
+        "card--bordered",
         "card--bordered-center",
         "card--overlay",
         "card--striped",
