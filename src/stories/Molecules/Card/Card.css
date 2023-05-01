@@ -137,6 +137,12 @@
   background: var(--background-striped-primary-dark-xx);
 }
 
+.card--striped .card .button,
+.card.card--striped .button {
+  border: 2px solid var(--color);
+  color: var(--color);
+}
+
 .card--striped.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
 }
