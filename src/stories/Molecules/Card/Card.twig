@@ -5,8 +5,8 @@
 {% set h = first_component ? 'h1' : 'h2' %}
 {% set tag = clickable_card ? 'a' : 'div' %}
 
-	{% if button_data is not empty and button_data[0] is empty %}
-{% set button_data = [button_data] %}
+{% if button_data is not empty and button_data[0] is empty %}
+	{% set button_data = [button_data] %}
 {% endif %}
 {% set tag_href = tag == 'a' and button_data[0] ? button_data[0].href : '' %}
 
@@ -34,7 +34,8 @@
   variant_clickable,
 ] %}
 
-	<{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {% if tag_href %} href="{{ tag_href }}" {% endif %}> <div class="switcher">
+<{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {% if tag_href %} href="{{ tag_href }}" {% endif %}>
+	<div class="switcher">
 		{% if icon_data and variant == 'card--striped' %}
 			{% include "@atoms/Icon/Icon.twig" with icon_data %}
 		{% elseif media %}
@@ -45,28 +46,28 @@
 			</div>
 		{% endif %}
 		{% if heading or text or ( button_data[0].href and tag == 'div' ) %}
-			<div class="card__main with-sidebar">
-				<div>
-					{% if heading %}
-						<div class="card__heading">
-							<{{h}}>{{ heading }}</{{h}}>
-						</div>
-					{% endif %}
+			<div class="card__main stack">
+				{% if heading %}
+					<div class="card__heading">
+						<{{h}}>{{ heading }}</{{h}}>
+					</div>
+				{% endif %}
+				<div class="with-sidebar">
 					{% if text %}
 						<div class="card__text">
 							{{ text }}
 						</div>
 					{% endif %}
+					{% if tag == 'div' and button_data is not empty %}
+						<div class="card__buttons stack sidebar">
+							{% for item in button_data %}
+								{% if item.href %}
+									{% include "@atoms/Button/Button.twig" with item %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					{% endif %}
 				</div>
-				{% if tag == 'div' and button_data is not empty %}
-					<div class="card__buttons stack sidebar">
-						{% for item in button_data %}
-							{% if item.href %}
-								{% include "@atoms/Button/Button.twig" with item %}
-							{% endif %}
-						{% endfor %}
-					</div>
-				{% endif %}
 			</div>
 		{% endif %}
 	</div>

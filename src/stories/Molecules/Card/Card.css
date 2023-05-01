@@ -24,6 +24,8 @@
 /* So we use both types of selector orders for each variant. */
 
 /* Bordered Center */
+.card--bordered .card,
+.card.card--bordered,
 .card--bordered-center .card,
 .card.card--bordered-center {
   border: var(--s-2) solid
@@ -31,6 +33,8 @@
   background: var(--border-color, var(--color-accent-warm-light-xxxx));
 }
 
+.card--bordered .card > div,
+.card.card--bordered > div,
 .card--bordered-center .card > div,
 .card.card--bordered-center > div {
   height: 100%;
@@ -38,18 +42,26 @@
   border: 1px dashed var(--color-base);
 }
 
+.card--bordered .card .card__main,
+.card.card--bordered .card__main,
 .card--bordered-center .card .card__main,
 .card.card--bordered-center .card__main {
-  /* Because this is also wrapped in '.center' we can cause intrinsic center. */
-  --align-items: center;
   --color: var(--color-black);
   --heading-color: var(--color-primary-dark-x);
   --button-fg: var(--color-accent-warm-dark-x);
-  text-align: center;
   padding: var(--s1);
   background-color: var(--color-white);
 }
 
+.card--bordered-center .card .card__main,
+.card.card--bordered-center .card__main {
+  /* Because this is also wrapped in '.center' we can cause intrinsic center. */
+  --align-items: center;
+  text-align: center;
+}
+
+.card--bordered .card .switcher,
+.card.card--bordered .switcher,
 .card--bordered-center .card .switcher,
 .card.card--bordered-center .switcher {
   gap: 0;

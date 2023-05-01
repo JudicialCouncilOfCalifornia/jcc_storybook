@@ -7,12 +7,12 @@ export default {
   default: {
     variant: "default",
     sub_component_layout: "with-sidebar",
-    sidebar_direction: "row",
-    sidebar_width: 39,
+    sidebar_direction: "row-reverse",
+    sidebar_width: "39ch",
     gap: "s4",
     sub_component_data: [
-      List({ ...WithNoMarker.args }),
       AssetBundle({ ...AssetBundleDefault.args }),
+      '<div class="sidebar">' + List({ ...WithNoMarker.args }) + '</div>',
     ],
   },
   with_no_sidebar: {

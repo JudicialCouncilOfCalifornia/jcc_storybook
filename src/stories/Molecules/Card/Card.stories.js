@@ -82,6 +82,9 @@ Default.args = data.default;
 export const NoMedia = Template.bind({});
 NoMedia.args = data.no_media;
 
+export const Bordered = Template.bind({});
+Bordered.args = data.bordered;
+
 export const BorderedCenter = Template.bind({});
 BorderedCenter.args = data.bordered_center;
 
