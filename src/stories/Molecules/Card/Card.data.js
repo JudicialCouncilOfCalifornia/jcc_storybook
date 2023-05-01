@@ -52,6 +52,28 @@ export default {
       },
     ],
   },
+  bordered: {
+    variant: "bordered",
+    clickable_card: false,
+    background: null,
+    aspect: [],
+    media:
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    heading: "Interested in becoming a court interpreter?",
+    text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+    button_data: [
+      {
+        label: "Button",
+        href: "#",
+        variant: "primary",
+      },
+      {
+        label: "Button",
+        href: "#",
+        variant: "primary",
+      },
+    ],
+  },
   bordered_center: {
     variant: "bordered-center",
     clickable_card: false,
