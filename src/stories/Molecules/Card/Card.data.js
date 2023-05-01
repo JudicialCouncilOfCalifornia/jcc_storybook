@@ -141,7 +141,7 @@ export default {
   },
   striped: {
     variant: "striped",
-    clickable_card: false,
+    clickable_card: true,
     background: null,
     aspect: [],
     media: false,
@@ -150,7 +150,7 @@ export default {
       color: false,
     },
     heading: "Heading For A Card",
-    text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+    text: "",
     button_data: [
       {
         label: "Button",
