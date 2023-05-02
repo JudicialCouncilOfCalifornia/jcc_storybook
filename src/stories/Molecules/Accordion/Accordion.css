@@ -1,4 +1,14 @@
 .accordion {
+  --color: var(--color-black);
+  --heading-color: var(--color-primary-dark-x);
+  color: var(--color);
+}
+
+.accordion__heading {
+  color: var(--heading-color);
+}
+
+.accordion__items {
   padding-inline: var(--s3);
   padding-block-start: var(--s1);
   padding-block-end: var(--s4);

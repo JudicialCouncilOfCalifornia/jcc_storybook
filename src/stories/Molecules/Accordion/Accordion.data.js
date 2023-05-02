@@ -1,6 +1,9 @@
 export default {
   default: {
     variant: "default",
+    open_first: false,
+    heading: 'This is a heading',
+    lead: '<p>This is some lead text that can describe the accordion items.</p>',
     items: [
       {
         label:

@@ -10,14 +10,28 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  {% for item in items %}
-  <details>
-    <summary role="button">
-      <div class="accordion__label">{{ item.label }}</div>
-    </summary>
-    <div class="box">
-      {{ item.content }}
+  <div class="stack">
+    
+    {% if heading|render %}
+      <h2 class="accordion__heading">{{ heading }}</h2>
+    {% endif %}
+    
+    {% if lead|render %}
+      <div class="accordion__lead">{{ lead }}</div>
+    {% endif %}
+
+    <div class="accordion__items">
+    {% for item in items %}
+      <details {{ loop.index == 1 and open_first ? 'open' : '' }}>
+        <summary role="button">
+          <div class="accordion__label">{{ item.label }}</div>
+        </summary>
+        <div class="box">
+          {{ item.content }}
+        </div>
+      </details>
+    {% endfor %}
     </div>
-  </details>
-  {% endfor %}
+
+  </div>
 </div>

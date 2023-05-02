@@ -2,6 +2,8 @@ export default {
   default: {
     variant: "default",
     color: "default",
+    heading: 'This is a heading',
+    lead: '<p>This is some lead text that could describe the steps</p>',
     steps: [
       {
         label: 'This is a step heading',
