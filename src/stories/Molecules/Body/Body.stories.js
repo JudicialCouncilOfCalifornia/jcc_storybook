@@ -17,11 +17,6 @@ export default {
       control: { type: 'radio' },
       options: ['default'],
     },
-    heading: { table: { disable: true } },
-    lead: { table: { disable: true } },
-    content: { table: { disable: true } },
-    subheading: { table: { disable: true } },
-    aside: { table: { disable: true } },
   },
 };
 
