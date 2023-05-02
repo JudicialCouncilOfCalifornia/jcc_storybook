@@ -6,32 +6,32 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'body',
-	'with-sidebar',
+  'with-sidebar',
   variant_class,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-	<div class="body__main stack">
-		{% if heading %}
-		<h2 class="body__heading">{{ heading }}</h2>
-		{% endif %}
+  <div class="body__main stack">
+    {% if heading %}
+    <h2 class="body__heading">{{ heading }}</h2>
+    {% endif %}
 
-		{% if lead %}
-		<div class="body__lead">{{ lead }}</div>
-		{% endif %}
+    {% if lead %}
+    <div class="body__lead">{{ lead }}</div>
+    {% endif %}
 
-		<div class="body__content">
-			{{ content }}
-		</div>
-	</div>
-	
-	{% if aside %}
-		<aside class="body__aside sidebar stack"> 
-			{% if subheading %}
-			<h3 class="body__title">{{ subheading }}</h3>
-			{% endif %}
+    <div class="body__content">
+      {{ content }}
+    </div>
+  </div>
 
-			{{ aside }}
-		</aside>
-	{% endif %}
+  {% if aside %}
+    <aside class="body__aside sidebar stack">
+      {% if subheading %}
+      <h3 class="body__title">{{ subheading }}</h3>
+      {% endif %}
+
+      {{ aside }}
+    </aside>
+  {% endif %}
 </div>
