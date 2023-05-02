@@ -1,4 +1,20 @@
 
+0.48.0 / 2023-05-02
+===================
+
+  * chore: Export libs.
+  * chore: convert tabs to spaces.
+  * [Feature] -- Cleanup of new body component and update to readme docs
+  * [Feature] -- Addition of Body component
+  * Merge branch 'Phil/accordion-step-alert-cleanup'
+  * chore: Remove drupal utility styles.
+  * [Cleanup] -- Css cleanup for accordion and steps
+  * LWR-125: cards organism variant
+  * LWR-125: bordered variant plus asset sidebar adjust
+  * LWR-155: undo tester
+  * LWR-155: button color inherit from heading color
+  * [Cleanup] -- Cleanup and improvements to Accordion, Alert, and Step components. Also added style to adjust odd black lines on drupal edit tabs and a section style for background radio selection.
+
 0.47.4 / 2023-04-26
 ===================
 
