@@ -2,13 +2,6 @@
   --color: var(--color-black);
   --heading-color: var(--color-primary-dark-x);
   color: var(--color);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "accordion";
-}
-
-.accordion > * {
-  grid-area: accordion;
 }
 
 .accordion__heading {

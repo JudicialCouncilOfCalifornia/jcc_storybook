@@ -1,13 +1,6 @@
 .steps {
   --color: var(--color-black);
   --heading-color: var(--color-primary-dark-x);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "steps";
-}
-
-.steps > * {
-  grid-area: steps;
 }
 
 .steps h2 {
