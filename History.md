@@ -1,4 +1,16 @@
 
+0.49.0 / 2023-05-02
+===================
+
+  * chore: Export libs."
+  * fix: Minor CSS refactor for consistency.
+  * feedback imoplementation
+  * action lists
+  * Merge branch 'Phil/addition-of-Body-component'
+  * chore: convert tabs to spaces.
+  * [Feature] -- Cleanup of new body component and update to readme docs
+  * [Feature] -- Addition of Body component
+
 0.48.0 / 2023-05-02
 ===================
 
