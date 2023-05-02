@@ -1,4 +1,10 @@
 
+0.49.1 / 2023-05-02
+===================
+
+  * chore: Export libs.
+  * fix: Don't render section__header if it has no content.
+
 0.49.0 / 2023-05-02
 ===================
 
