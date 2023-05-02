@@ -17,9 +17,9 @@
   background-size: cover;
 }
 
-.section .brow + h1 + *,
-.section .brow + h2 + *,
-.section .brow + h3 + * {
+.section__header h1 + *,
+.section__header h2 + *,
+.section__header h3 + * {
   margin-block-start: var(--gap);
 }
 
