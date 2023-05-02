@@ -30,18 +30,31 @@ button.primary-nav__button {
   padding-inline: 0;
   padding-block: var(--s-2);
   font-size: var(--s-1);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--s1);
   color: var(--color);
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  letter-spacing: 0.25px;
+  background-color: transparent;
 }
 
 .primary-nav button::after {
   align-self: center;
   content: "\25BE";
   color: var(--color-base-light-x);
+}
+
+a.primary-nav__button:hover,
+button.primary-nav__button:hover {
+  color: var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+}
+
+a.primary-nav__button.active,
+button.primary-nav__button.active {
+  border-block-end: 2px solid var(--accent-color);
 }
 
 .primary-nav .header-search__icon::after,
@@ -83,6 +96,7 @@ button.primary-nav__button {
   color: var(--color);
   font-size: var(--s-1);
   text-decoration: none;
+  line-height: var(--s1);
 }
 
 .primary-nav__item a:hover {
