@@ -148,10 +148,3 @@
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
 }
-
-/* Style for the section background select items (admin side) */
-.section.field--select  {
-  padding: .5rem;
-  max-width: 30ch;
-  border: 1px solid var(--color-base-light-x);
-}
