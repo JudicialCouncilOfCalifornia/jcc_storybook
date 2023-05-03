@@ -22,7 +22,7 @@
 	<div class="media-excerpt__content stack">
 		{{ content }}
 		<div>
-			{% if button_data %}
+			{% if detail_list_data %}
 				<ul class="detail-list cluster">
 					{% if  detail_list_data.label  %}
 						<li>
@@ -34,9 +34,11 @@
 					{% endfor %}
 				</ul>
 			{% endif %}
+			{% if pills %}
 			<div class="media-excerpt__pills">
 				{{ pills }}
 			</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
