@@ -1,0 +1,46 @@
+.search-results {
+  --sidebar-width:20ch;
+  --sidebar-direction:row-reverse;
+}
+
+.search-results > * + * {
+  border-block-start: 2px dotted var(--color-base-light-x);
+}
+
+.search-results__form {
+  margin-block: var(--s2);
+}
+
+.search-results__results ol {
+  list-style-type: none;
+}
+
+.search-results__results ol li {
+  margin-block-end: var(--s3);
+  padding-block-start: var(--s3);
+}
+
+.search-results__results ol > li + li {
+  border-block-start: 1px solid var(--color-base-light-x);
+}
+
+.search-results .media-excerpt__content {
+  margin-block-start: var(--s-3);
+}
+
+.search-results__footer {
+  --sidebar-direction:reverse;
+}
+
+.search-results__footer .sidebar .form-item {
+  align-items: center;
+  margin-inline: auto;
+  padding: var(--s0);
+}
+
+.search-results__footer .alt-select-style select {
+  border: 0;
+  padding: var(--s-5) 0;
+  color: var(--accent-color);
+  width: auto;
+}
