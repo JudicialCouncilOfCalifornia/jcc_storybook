@@ -1,3 +1,10 @@
+hr.divider {
+  padding-block-start: var(--s1);
+  border: 0;
+  border-bottom: 1px solid var(--color-base-light-x);
+  margin-block-end: var(--s1);
+}
+
 input,
 textarea,
 select {
@@ -7,6 +14,10 @@ select {
   line-height: var(--s0);
   display: block;
   width: 100%;
+}
+
+select[multiple] > * + * {
+  padding-block-start: var(--s-4);
 }
 
 .cluster input,
@@ -33,7 +44,7 @@ label {
   margin-block-start: var(--s0);
 }
 
-.form-item .description {
+form .description {
   font-size: var(--s-1);
   line-height: var(--s0);
 }
@@ -45,4 +56,75 @@ fieldset {
 
 .fieldset-wrapper > * + * {
   margin-block-start: var(--s0);
+}
+
+.form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-radios .form-item,
+.form-checkbox .form-item,
+.form-checkboxes .form-item {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.form-radios > * + *,
+.form-checkbox > * + *,
+.form-checkboxes > * + * {
+  padding-block-start: var(--s0);
+}
+
+.form-radios .form-item + .form-item,
+.form-checkbox .form-item + .form-item,
+.form-checkboxes .form-item + .form-item {
+  margin-block-start: var(--s-3);
+}
+
+.form-radios div.form--inline .form-item + .form-item,
+.form-checkbox div.form--inline .form-item + .form-item,
+.form-checkboxes div.form--inline .form-item + .form-item {
+  margin-block-start: 0;
+}
+
+.form-radios label,
+.form-checkbox label,
+.form-checkboxes label {
+  margin-block-start: 0;
+}
+
+.form-radios input,
+.form-checkbox input,
+.form-checkboxes input {
+  width: auto;
+}
+
+.form-radio label,
+.form-check label {
+  font-size: var(--s-1);
+}
+
+.alt-select-style select {
+  border: 0;
+  padding: var(--s-5) 0;
+  color: var(--accent-color);
+  width: auto;
+}
+
+fieldset {
+  padding-block-start: var(--s2);
+}
+
+fieldset legend span {
+  padding-inline: var(--s-2);
+  padding-block-end: var(--s-5);
+  margin-block-end: var(--s-3);
+  border-block-end: 2px solid var(--accent-color);
 }
