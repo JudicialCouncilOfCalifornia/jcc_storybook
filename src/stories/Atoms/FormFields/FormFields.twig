@@ -1,27 +1,32 @@
 <div class="form-field-demo">
 	<form class="stack" action="/form/sample" method="post" id="form-sample">
 
+		{# Text field #}
 		<div class="form-item form-item-text-field-label ">
 			<label for="edit-text-field-label">Text Field Label</label>
 			<input data-drupal-selector="edit-text-field-label" aria-describedby="edit-text-field-label--description" type="text" id="edit-text-field-label" name="text_field_label" value="" size="60" maxlength="255" class="form-text"/>
 
 			<div class="description">
 				<div id="edit-text-field-label--description" class="webform-element-description">
-					Description.
+					This is a description.
 				</div>
 			</div>
 		</div>
 
+		{# Text area #}
 		<div class="form-item form-item-textarea-label">
 			<label for="edit-textarea-label">Textarea Label</label>
 			<div>
 				<textarea data-drupal-selector="edit-textarea-label" aria-describedby="edit-textarea-label--description" id="edit-textarea-label" name="textarea_label" rows="5" cols="60" class="form-textarea"></textarea>
 			</div>
 			<div class="description">
-				<div id="edit-textarea-label--description" class="webform-element-description">Description</div>
+				<div id="edit-textarea-label--description" class="webform-element-description">
+					This is a description.
+				</div>
 			</div>
 		</div>
 
+		{# Text field with button #}
 		<div class="form-item form-item-textfield--withbutton">
 			<label class="usa-sr-only" for="header-search">Text Field With Button</label>
 			<div class="cluster">
@@ -34,5 +39,202 @@
 				</button>
 			</div>
 		</div>
+
+		<hr class="divider"/>
+
+		{# Select #}
+		<div class="form-item form-item-select-label">
+			<label for="edit-select-label">Select Field Label</label>
+			<div>
+				<select id="edit-select-label">
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+				</select>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description of select form item.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Alternate select #}
+		<div class="form-item form-item-select-label alt-select-style">
+			<label for="edit-select-label">Alternate Style Select Field Label</label>
+			<div>
+				<select id="edit-select-label">
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+				</select>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description of select form item.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Multiple select #}
+		<div class="form-item form-item-select-label">
+			<label for="edit-select-label">Multiple Select Field Label</label>
+			<div>
+				<select id="edit-select-label" multiple="multiple">
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+					<option value="">Value</option>
+				</select>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description of select form item.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Default checkboxes #}
+		<div class="form-checkbox" id="checkbox-example">
+			<label for="checkboxes-example">A Single boolean checkbox</label>
+			<div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-checkbox-boolean" name="checkbox" value="" class="form-checkbox form-check-input" checked/>
+					<label class="form-check-label option" for="id-checkbox-boolean">Enable setting</label>
+				</div>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description text for the checkbox.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Default checkboxes #}
+		<div class="form-checkboxes" id="checkboxes-example">
+			<label for="checkboxes-example">These are checkboxes</label>
+			<div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-checkbox-a" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-checkbox-a">Option A</label>
+				</div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-checkbox-b" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-checkbox-b">Option B</label>
+				</div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-checkbox-c" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-checkbox-c">Option C</label>
+				</div>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description text for the checkboxes.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Inline checkboxes #}
+		<div class="form-checkboxes" id="checkboxes-example">
+			<label for="checkboxes-example">These are inline checkboxes</label>
+			<div class="form--inline">
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-inline-checkbox-a" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-inline-checkbox-a">Option A</label>
+				</div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-inline-checkbox-b" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-inline-checkbox-b">Option B</label>
+				</div>
+				<div class="form-item form-check">
+					<input type="checkbox" id="id-inline-checkbox-c" name="checkboxes" value="" class="form-checkbox form-check-input" />
+					<label class="form-check-label option" for="id-inline-checkbox-c">Option C</label>
+				</div>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description text for the checkboxes.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Default radios #}
+		<div class="form-radios" id="radios-example">
+			<label for="radios-example">These are Radios</label>
+			<div>
+				<div class="form-item form-radio">
+					<input type="radio" id="none" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="none">- NA -</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-radio-a" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-radio-a">Option A</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-radio-b" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-radio-b">Option B</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-radio-c" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-radio-c">Option C</label>
+				</div>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description text for the checkboxes.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Inline radios #}
+		<div class="form-radios" id="inline-radios-example">
+			<label for="inline-radios-example">These are inline Radios</label>
+			<div class="form--inline">
+				<div class="form-item form-radio">
+					<input type="radio" id="none" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="none">- NA -</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-inline-radio-a" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-inline-radio-a">Option A</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-inline-radio-b" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-inline-radio-b">Option B</label>
+				</div>
+				<div class="form-item form-radio">
+					<input type="radio" id="id-inline-radio-c" name="radio" value="" class="form-radio form-radio-input" />
+					<label class="form-radio-label option" for="id-inline-radio-c">Option C</label>
+				</div>
+			</div>
+			<div class="description">
+				<div id="edit-select-label--description" class="webform-element-description">Description text for the checkboxes.</div>
+			</div>
+		</div>
+
+		<hr class="divider"/>
+
+		{# Fieldset and legend #}
+		<fieldset>
+			<legend>
+				<span class="fieldset-legend">Fieldset and legend</span>
+			</legend>
+			<div class="fieldset-wrapper">
+				<div class="form-item form-item-text-field-label ">
+					<label for="edit-text-field-label">Text Field Label</label>
+					<input data-drupal-selector="edit-text-field-label" aria-describedby="edit-text-field-label--description" type="text" id="edit-text-field-label" name="text_field_label" value="" size="60" maxlength="255" class="form-text"/>
+					<div class="description">
+						<div id="edit-text-field-label--description" class="webform-element-description">
+							This is a description.
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		
 	</form>
 </div>
