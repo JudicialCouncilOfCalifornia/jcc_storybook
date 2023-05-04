@@ -182,3 +182,31 @@
 .card--striped.card--background-striped-accent-warm-dark-x {
   background: var(--background-striped-accent-warm-dark-x);
 }
+
+.card--striped.card--background-base-dark-x {
+  background: var(--background-base-dark-x);
+}
+
+.card--striped.card--background-primary-dark-xx {
+  background: var(--background-primary-dark-xx);
+}
+
+.card--striped.card--background-primary-dark-x {
+  background: var(--background-primary-dark-x);
+}
+
+.card--striped.card--background-primary-light-xx {
+  background: var(--background-primary-light-xx);
+}
+
+.card--striped.card--background-secondary-dark-xx {
+  background: var(--background-secondary-dark-xx);
+}
+
+.card--striped.card--background-secondary {
+  background: var(--background-secondary);
+}
+
+.card--striped.card--background-accent-warm-dark-x {
+  background: var(--background-accent-warm-dark-x);
+}

@@ -128,6 +128,17 @@
     var(--color-base-light-xx) 8px
   );
 
+  /* Solid Backgrounds */
+
+  --background-primary-dark-xx: var(--color-primary-dark-xx);
+  --background-primary-dark-x: var(--color-primary-dark-x);
+  --background-secondary: var(--color-secondary);
+  --background-accent-warm-dark-x: var(--color-accent-warm-dark-x);
+  --background-secondary-dark-xx: var(--color-secondary-dark-xx);
+  --background-primary-light-xx: var(--color-primary-light-xx);
+  --background-base-dark-x: var(--color-base-dark-x);
+  --background-base-light-xx: var(--color-base-light-xx);
+
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
   --heading-color: var(--color-primary-dark-x);
