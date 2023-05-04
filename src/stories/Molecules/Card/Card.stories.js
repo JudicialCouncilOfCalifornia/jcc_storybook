@@ -41,6 +41,13 @@ export default {
         "striped-secondary-dark-xx",
         "striped-secondary",
         "striped-accent-warm-dark-x",
+        "base-dark-x",
+        "primary-dark-xx",
+        "primary-dark-x",
+        "primary-light-xx",
+        "secondary-dark-xx",
+        "secondary",
+        "accent-warm-dark-x",
       ],
     },
     clickable_card: {
