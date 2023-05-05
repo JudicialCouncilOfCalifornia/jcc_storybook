@@ -9,9 +9,30 @@
 
 Including the `[ticket-id]` in the branch name will allow us to track/find code changes related to tasks a lot easier. It can also open up the possibility of automating branch and task management in the future.
 
+
 ## Code Style
 
  - Please follow Drupal coding standards: https://www.drupal.org/docs/develop/standards
+
+
+## Code Review
+
+There are common things to look for in code review. In general we're looking for adherence to the best practices outlined in the other documentation in this repo, as well as Drupal coding standards and overall code hygiene.
+
+Some things to look for:
+
+ - Is the code well organized and easy to read?
+ - Is the Pull Request focused on a single task?
+ - Does it violate the Single Responsibility Principle?
+ - Is there commented out code?
+ - Is it making good use of the Layout Primitives, or is it using custom CSS unnecessarily?
+ - Does it demonstrate an understanding of intrinsic spacing vs extrinsic spacing managed by context?
+ - Is it using inheritance and composition correctly?
+ - Does it respect the cascade?
+ - Is it using the correct class naming conventions?
+ - Is it using the correct CSS Logical Properties? (i.e. margin-inline-start instead of margin-left)
+ - Are there any obvious bugs?
+ - JS should be limited to specific component interactions and written in plain JS. Complex JS that depends on Drupal JS Api's should live in the Drupal sub-theme.
 
 
 ## Commit Messages
