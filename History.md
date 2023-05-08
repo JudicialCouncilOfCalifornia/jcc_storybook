@@ -1,4 +1,12 @@
 
+0.49.3 / 2023-05-07
+===================
+
+  * chore: Export libs.
+  * fix: Revert the with-sidebar CSS as it complcated things unnecessarily.
+  * docs: Add additional notes for code review."
+  * docs: Add Code Management documenation.
+
 0.49.2 / 2023-05-02
 ===================
 
