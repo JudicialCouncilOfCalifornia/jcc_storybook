@@ -1,0 +1,65 @@
+{% set classes = [
+	'publications-results'
+] %}
+
+<div class="{{ classes.join(' ')}}">
+	<div class="publication-results__content container stack">
+		<h3>Search Our Publication Directory or Browse by Topic</h3>
+		<div class="with-sidebar">
+			<div class='sidebar box'>
+				<div class="filters stack">
+					<h4>Search and Filter</h4>
+					{% if filters not empty %}
+						<form class="stack">
+							{% for filter in filters %}
+								{% if filter.type == "input" %}
+									<input type="input" placeholder="{{ filter.placeholder }}" id="{{filter.id}}" name="{{ filter.name }}" />
+								{% elseif filter.type == "select" %}
+									<div class="select-element-wrapper">
+										<select name="{{ filter.name }}" id="{{ filter.id }}">
+											<option value="" disabled selected>{{ filter.placeholder }}</option>
+											{% for option in filter.options %}
+												<option value="{{ option.value }}">{{ option.label }}</option>
+											{% endfor %}
+										</select>
+									</div>
+								{% endif %}
+							{% endfor %}
+							<div class="cluster">
+								{% for filter_button in filters_buttons %}
+									{% include "@atoms/Button/Button.twig" with filter_button %}
+								{% endfor %}
+							</div>
+						</form>
+					{% endif %}
+				</div>
+				{% if popular_topics %}
+					<div class="popular-topics stack">
+						<h4>Popular Publication Topics</h4>
+						{% for popular_topic in popular_topics %}
+							{% include "@atoms/Button/Button.twig" with popular_topic %}
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="box">
+				{% if publications %}
+					<div class="stack">
+						{% for publication in publications %}
+							{% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with publication %}
+						{% endfor %}
+					</div>
+				{% else %}
+					<p>{{ empty_message }}</p>
+				{% endif %}
+			</div>
+		</div>
+		{% if pager %}
+			<div class="container">
+				<div class="pager">
+					{% include "@molecules/Pager/Pager.twig" with full_pager %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+</div>
