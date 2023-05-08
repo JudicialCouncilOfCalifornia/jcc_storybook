@@ -224,12 +224,13 @@
   gap: var(--gap, var(--s1));
 }
 
-.with-sidebar > .sidebar {
+
+.with-sidebar > :first-child {
   flex-basis: var(--sidebar-width, 20ch);
   flex-grow: 1;
 }
 
-.with-sidebar > *:not(.sidebar) {
+.with-sidebar > :last-child {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;
