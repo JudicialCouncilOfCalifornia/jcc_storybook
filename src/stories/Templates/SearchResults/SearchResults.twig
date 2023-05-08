@@ -11,11 +11,11 @@
   variant_class,
 ] %}
 
-<div class="{{ classes|join(' ') }}"> 
+<div class="{{ classes|join(' ') }}">
 
 	{% if form %}
 		<div class="search-results__form with-sidebar">
-			<div class="sidebar stack"></div>
+			<div class="stack"></div>
 			<div class="stack">
 				{{ form }}
 			</div>
@@ -23,7 +23,7 @@
 	{% endif %}
 
 	<div class="search-results__results with-sidebar">
-		<div class="sidebar stack">
+		<div class="stack">
 			{% if sidebar %}
 			<div class="box">{{ sidebar }}</div>
 			{% endif %}
@@ -51,16 +51,16 @@
 
 	{% if pager or items_per_page %}
 	<div class="search-results__footer with-sidebar">
-		
-		{% if pager %}
-		<div class="stack">
-			{{ pager }}
+
+		{% if items_per_page %}
+		<div class="box stack alt-select-style">
+			{{items_per_page }}
 		</div>
 		{% endif %}
 
-		{% if items_per_page %}
-		<div class="sidebar stack alt-select-style">
-			{{items_per_page }}
+		{% if pager %}
+		<div class="stack">
+			{{ pager }}
 		</div>
 		{% endif %}
 

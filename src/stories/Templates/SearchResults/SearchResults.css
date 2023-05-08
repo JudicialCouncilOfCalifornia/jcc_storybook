@@ -29,13 +29,11 @@
 }
 
 .search-results__footer {
-  --sidebar-direction:reverse;
+  --sidebar-direction: row-reverse;
 }
 
-.search-results__footer .sidebar .form-item {
-  align-items: center;
-  margin-inline: auto;
-  padding: var(--s0);
+.search-results__footer :first-child .form-item {
+  margin-block: auto;
 }
 
 .search-results__footer .alt-select-style select {
