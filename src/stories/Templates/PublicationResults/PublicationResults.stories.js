@@ -5,7 +5,7 @@ import './PublicationResults.css';
 
 export default {
   title: 'Templates/PublicationResults',
-  component: PublicationsResults,
+  component: PublicationResults,
   parameters: {
     notes: readme,
   },
