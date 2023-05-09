@@ -1,7 +1,7 @@
 <div class="site-branding cluster">
   <div class='site-branding__logo'>
     <a 
-      href="{{ url }}" 
+      href="{{ url|default('/') }}" 
       title="{{ label }} {{ sub_label }}"
       aria-label="Homepage: {{ label }} {{ sub_label }}"
     >
@@ -10,7 +10,7 @@
   </div>
   <div class="site-branding__labels">
     <a 
-      href="{{ url }}" 
+      href="{{ url|default('/') }}" 
       title="{{ label }} {{ sub_label }}"
       aria-label="Homepage: {{ label }} {{ sub_label }}"
     >

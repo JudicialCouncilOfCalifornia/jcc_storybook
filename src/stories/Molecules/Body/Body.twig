@@ -12,22 +12,24 @@
 
 <div class="{{ classes|join(' ') }}">
   <div class="body__main stack">
-    {% if heading %}
+    {% if heading is not empty %}
     <h2 class="body__heading">{{ heading }}</h2>
     {% endif %}
 
-    {% if lead %}
+    {% if lead is not empty %}
     <div class="body__lead">{{ lead }}</div>
     {% endif %}
 
+    {% if content is not empty %}
     <div class="body__content">
       {{ content }}
     </div>
+    {% endif %}
   </div>
 
-  {% if aside %}
+  {% if aside is not empty %}
     <aside class="body__aside sidebar stack">
-      {% if subheading %}
+      {% if subheading is not empty %}
       <h3 class="body__title">{{ subheading }}</h3>
       {% endif %}
 

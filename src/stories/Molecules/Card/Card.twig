@@ -47,14 +47,14 @@
 		{% endif %}
 		{% if heading or text or ( button_data[0].href and tag == 'div' ) %}
 			<div class="card__main stack">
-				{% if heading %}
+				{% if heading is not empty %}
 					<div class="card__heading">
 						<{{h}}>{{ heading }}</{{h}}>
 					</div>
 				{% endif %}
 				<div class="with-sidebar">
-					{% if text %}
-						<div class="card__text">
+					{% if text is not empty %}
+					<div class="card__text">
 							{{ text }}
 						</div>
 					{% endif %}

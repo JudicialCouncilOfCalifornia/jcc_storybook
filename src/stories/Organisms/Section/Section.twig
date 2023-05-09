@@ -78,13 +78,13 @@
 		<div class="container stack">
 			{% if brow_data or heading or text %}
 				<div class="section__header center">
-					{% if brow_data %}
+					{% if brow_data is not empty %}
 						{% include "@atoms/Brow/Brow.twig" with brow_data %}
 					{% endif %}
-					{% if heading %}
+					{% if heading is not empty %}
 						<{{h}}>{{ heading }}</{{h}}>
 					{% endif %}
-					{% if text %}
+					{% if text is not empty %}
 						{{ text }}
 					{% endif %}
 				</div>
@@ -98,7 +98,7 @@
 					{{ sub_component_data }}
 				{% endif %}
 			</div>
-			{% if button_data %}
+			{% if button_data is not empty %}
 				<div class="section__button center">
 					{% include "@atoms/Button/Button.twig" with button_data %}
 				</div>
