@@ -6,65 +6,65 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'search-results',
-	'container',
-	'stack',
+  'container',
+  'stack',
   variant_class,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
 
-	{% if form %}
-		<div class="search-results__form with-sidebar">
-			<div class="stack"></div>
-			<div class="stack">
-				{{ form }}
-			</div>
-		</div>
-	{% endif %}
+  {% if form %}
+    <div class="search-results__form with-sidebar">
+      <div class="stack"></div>
+      <div class="stack">
+        {{ form }}
+      </div>
+    </div>
+  {% endif %}
 
-	<div class="search-results__results with-sidebar">
-		<div class="stack">
-			{% if sidebar %}
-			<div class="box">{{ sidebar }}</div>
-			{% endif %}
-		</div>
-		<div class="stack">
-			{% if rows -%}
-				<ol>
-				{% for row in rows %}
-					<li>
-					{% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with {
-						title: row.title,
-						content: row.content,
-						url: row.url,
-					} %}
-					</li>
-    		{% endfor %}
-				</ol>
-			{% elseif rows is empty -%}
-				<div class="box">
-					<p>{{ 'No search results found. Please try another search.'|t }}</p>
-				</div>
-			{% endif %}
-		</div>
-	</div>
+  <div class="search-results__results with-sidebar">
+    <div class="stack">
+      {% if sidebar %}
+      <div class="box">{{ sidebar }}</div>
+      {% endif %}
+    </div>
+    <div class="stack">
+      {% if rows -%}
+        <ol>
+        {% for row in rows %}
+          <li>
+          {% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with {
+            title: row.title,
+            content: row.content,
+            url: row.url,
+          } %}
+          </li>
+        {% endfor %}
+        </ol>
+      {% elseif rows is empty -%}
+        <div class="box">
+          <p>{{ 'No search results found. Please try another search.'|t }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 
-	{% if pager or items_per_page %}
-	<div class="search-results__footer with-sidebar">
+  {% if pager or items_per_page %}
+  <div class="search-results__footer with-sidebar">
 
-		{% if items_per_page %}
-		<div class="box stack alt-select-style">
-			{{items_per_page }}
-		</div>
-		{% endif %}
+    {% if items_per_page %}
+    <div class="box stack alt-select-style">
+      {{items_per_page }}
+    </div>
+    {% endif %}
 
-		{% if pager %}
-		<div class="stack">
-			{{ pager }}
-		</div>
-		{% endif %}
+    {% if pager %}
+    <div class="stack">
+      {{ pager }}
+    </div>
+    {% endif %}
 
-	</div>
-	{% endif %}
+  </div>
+  {% endif %}
 
 </div>
