@@ -1,4 +1,15 @@
 
+0.49.4 / 2023-05-09
+===================
+
+  * chore: Export libs.
+  * LWR-169: adjust class names for grouping
+  * LWR-169: added solid background color variants
+  * style: Convert tabs to spaces.
+  * [Fix] -- Wrap pills in a check, and change the detail section to check the proper variable
+  * [LWR-153] -- Implement styles for more general form elements.
+  * [LWR-92] -- Adjustments to the Primary nav to better match figma designs
+
 0.49.3 / 2023-05-07
 ===================
 
