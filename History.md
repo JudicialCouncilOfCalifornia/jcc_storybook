@@ -1,4 +1,9 @@
 
+0.49.6 / 2023-05-10
+===================
+
+  * fix: Fix layout on asymetric borderd cards when they're side by side.
+
 0.49.5 / 2023-05-10
 ===================
 
