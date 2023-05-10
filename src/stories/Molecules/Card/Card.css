@@ -207,6 +207,6 @@
   background: var(--background-solid-secondary);
 }
 
-.card--striped.card--background-accent-warm-dark-x {
+.card--striped.card--background-solid-accent-warm-dark-x {
   background: var(--background-solid-accent-warm-dark-x);
 }
