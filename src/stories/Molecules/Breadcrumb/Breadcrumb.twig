@@ -1,0 +1,22 @@
+{% if breadcrumb %}
+<div class="breadcrumb">
+  <nav role="navigation" aria-labelledby="system-breadcrumb" class="container">
+    <h2 id="system-breadcrumb" class="sr-only">{{ 'Breadcrumb'|t }}</h2>
+    <ol class="breadcrumb__list cluster">
+    {% for item in breadcrumb %}
+      <li class="breadcrumb__item">
+        {% if item.url %}
+          <span class="breadcrumb__label">
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          </span>
+        {% else %}
+          <span class="breadcrumb__label">
+            {{ item.text }}
+          </span>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+  </nav>
+</div>
+{% endif %}
