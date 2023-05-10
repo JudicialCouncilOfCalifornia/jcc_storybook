@@ -1,4 +1,17 @@
 
+0.49.5 / 2023-05-10
+===================
+
+  * chore: Export libs.
+  * Merge branch 'bugfix/LWR-169--solid-card-colors'
+  * Merge branch 'LWR-181--breadcrumb-component'
+  * Merge branch 'fix/style-and-layout-fixes-for-many-components'
+  * standards: Set tabs to spaces in some templates.
+  * fix: Brow for seciton header.
+  * LWR-169: missed class name adjust
+  * [LWR-181] -- Added breadcrumb component
+  * [Fix] -- Some one-off style/layout/data check tweaks
+
 0.49.4 / 2023-05-09
 ===================
 
