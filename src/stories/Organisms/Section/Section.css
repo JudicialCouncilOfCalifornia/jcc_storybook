@@ -149,8 +149,6 @@
   padding-top: 0;
 }
 
-.section__header .brow__accent {
-  margin-block-end: var(--s2);
-  padding: var(--s-2);
-  border-block: 2px dotted var(--color-base);
+.section__header .brow {
+  margin-block-end: var(--s-3);
 }
