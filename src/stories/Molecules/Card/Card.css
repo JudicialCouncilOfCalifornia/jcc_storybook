@@ -13,6 +13,10 @@
   block-size: var(--s5);
 }
 
+.card > .switcher.wrapping {
+  display: block;
+}
+
 /* Variants */
 
 .card--clickable {
@@ -30,7 +34,7 @@
 .card.card--bordered-center {
   border: var(--s-2) solid
     var(--border-color, var(--color-accent-warm-light-xxxx));
-  background: var(--border-color, var(--color-accent-warm-light-xxxx));
+  background: var(--background-color, var(--color-white));
 }
 
 .card--bordered .card > div,
