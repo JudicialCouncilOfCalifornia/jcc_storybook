@@ -4,7 +4,7 @@
   --color: var(--color-black);
   background-color: var(--color-primary-light-xx);
   color: var(--color);
-  padding-block: var(--s-1);
+  padding-block: var(--s1);
 }
 
 .alert[data-alert-type="status"] {
@@ -36,6 +36,8 @@
 .alert .icon-wrapper {
   inline-size: var(--s1);
   block-size: var(--s1);
+  min-inline-size: var(--s1);
+  margin-block-start: var(--s-6);
 }
 
 .alert__content {
@@ -72,4 +74,5 @@
 
 .alert__dismiss {
   margin-inline-start: auto;
+  margin-block-start: var(--s-6);
 }

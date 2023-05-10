@@ -17,7 +17,7 @@ export default {
     sidebar_width: false,
     background_image_url: "",
     brow_data: {
-      variant: "default",
+      variant: "heading",
       part_one: "Brow Example",
       part_two: "",
     },

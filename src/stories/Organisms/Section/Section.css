@@ -148,3 +148,7 @@
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
 }
+
+.section__header .brow {
+  margin-block-end: var(--s-3);
+}
