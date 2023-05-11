@@ -40,8 +40,11 @@
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
     {% elseif media %}
       <div class="card__media">
-        <div class="frame">
+        <div class="frame stack">
           {{ media }}
+          {% if media_caption.show and media_caption.text %}
+            <div class="card__media_caption">{{ media_caption.text }}</div>
+          {% endif %}
         </div>
       </div>
     {% endif %}
