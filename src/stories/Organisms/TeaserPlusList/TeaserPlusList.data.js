@@ -1,5 +1,6 @@
 export default {
   default: {
+    heading: "Latest News",
     teaser: {
       brow_data: {
         part_one: "Orders",
@@ -25,5 +26,10 @@ export default {
         footer: "May 25, 2022",
       },
     ],
+    button_data: {
+      label: "See All News",
+      href: "#",
+      variant: "primary",
+    },
   },
 };
