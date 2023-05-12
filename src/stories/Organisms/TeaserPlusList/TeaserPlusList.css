@@ -3,6 +3,11 @@
   gap: var(--s5);
 }
 
+.teaser-list__heading {
+  margin-block-end: var(--s4);
+  --align-items: center;
+}
+
 .teaser-list__list {
   border-left: 1px dotted var(--accent-color);
   padding-inline-start: var(--s5);
@@ -17,6 +22,11 @@
 
 .teaser-list__list ul {
   list-style: none;
+}
+
+.teaser-list__button {
+  margin-block-start: var(--s4);
+  --align-items: center;
 }
 
 .teaser-list__footer {
