@@ -20,7 +20,7 @@ If we're going to support things like RTL languages and even flex directions, we
 
 Examples:
 
- - `marign-block-start:` instead of `margin-top:`
+ - `margin-block-start:` instead of `margin-top:`
  - `padding-inline:` instead of `padding-left:` and `padding-right:`
  - `border-inline-start:` instead of `border-left:`
  - `border-block-end:` instead of `border-bottom:`
