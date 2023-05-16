@@ -60,7 +60,7 @@ p + p {
 
 ul,
 ol {
-  list-style-position: inside;
+  padding-inline: var(--s2);
 }
 
 img {

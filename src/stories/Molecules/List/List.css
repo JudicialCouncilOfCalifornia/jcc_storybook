@@ -5,4 +5,5 @@
 
 .list--none .list__container {
   list-style: none;
+  padding-inline: 0;
 }
