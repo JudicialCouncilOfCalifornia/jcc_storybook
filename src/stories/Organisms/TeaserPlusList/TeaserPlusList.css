@@ -1,10 +1,8 @@
 .teaser-list {
   --grid-min-width: 40ch;
-  gap: var(--s5);
 }
 
 .teaser-list__heading {
-  margin-block-end: var(--s4);
   --align-items: center;
 }
 
@@ -25,7 +23,6 @@
 }
 
 .teaser-list__button {
-  margin-block-start: var(--s4);
   --align-items: center;
 }
 
