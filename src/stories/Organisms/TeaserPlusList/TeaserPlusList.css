@@ -2,7 +2,7 @@
   --grid-min-width: 40ch;
 }
 
-.teaser-list__heading {
+.teaser-list__heading, .teaser-list__button {
   --align-items: center;
 }
 
@@ -20,10 +20,6 @@
 
 .teaser-list__list ul {
   list-style: none;
-}
-
-.teaser-list__button {
-  --align-items: center;
 }
 
 .teaser-list__footer {
