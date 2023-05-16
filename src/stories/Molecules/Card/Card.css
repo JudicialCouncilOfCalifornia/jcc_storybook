@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-.card__media .frame .card__media_caption {
+.card__media_caption {
   margin-block-start: var(--s-6);
   padding-inline: var(--s-2);
   font-size: var(--s-1);
