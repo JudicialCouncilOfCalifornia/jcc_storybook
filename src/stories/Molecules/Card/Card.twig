@@ -52,14 +52,14 @@
             <{{h}}>{{ heading }}</{{h}}>
           </div>
         {% endif %}
-        <div class="with-sidebar">
+        <div class="card__body">
           {% if text is not empty %}
           <div class="card__text">
               {{ text }}
             </div>
           {% endif %}
           {% if tag == 'div' and button_data is not empty %}
-            <div class="card__buttons stack sidebar">
+            <div class="stack">
               {% for item in button_data %}
                 {% if item.href %}
                   {% include "@atoms/Button/Button.twig" with item %}

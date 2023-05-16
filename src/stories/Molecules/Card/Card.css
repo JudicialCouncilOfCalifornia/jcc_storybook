@@ -17,6 +17,17 @@
   display: block;
 }
 
+.card__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.card__text {
+  flex: 1 1 70%;
+}
+
 /* Variants */
 
 .card--clickable {
