@@ -6,6 +6,10 @@
   --align-items: center;
 }
 
+.teaser-list *:has(+ .wrapping), .wrapping + .teaser-list__button {
+  --align-items: flex-start;
+}
+
 .teaser-list__list {
   border-left: 1px dotted var(--accent-color);
   padding-inline-start: var(--s5);
