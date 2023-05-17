@@ -2,11 +2,13 @@
   --grid-min-width: 40ch;
 }
 
-.teaser-list__heading, .teaser-list__button {
+.teaser-list__heading,
+.teaser-list__button {
   --align-items: center;
 }
 
-.teaser-list *:has(+ .wrapping), .wrapping + .teaser-list__button {
+.teaser-list *:has(+ .wrapping),
+.wrapping + .teaser-list__button {
   --align-items: flex-start;
 }
 
