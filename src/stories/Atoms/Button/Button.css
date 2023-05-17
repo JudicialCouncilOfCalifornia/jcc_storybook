@@ -16,9 +16,13 @@
 }
 
 .button::after {
-  margin-left: var(--s-5);
+  margin-inline-start: var(--s-5);
   content: "\2192";
   align-self: flex-end;
+}
+
+[dir='rtl'] .button:after {
+  content: "\2190";
 }
 
 /* Button Variants */
@@ -45,3 +49,5 @@
   border: 0;
   background: transparent;
 }
+
+/* content: "\2190" */

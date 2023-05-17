@@ -34,4 +34,9 @@ export const parameters = {
       order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Sizes'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
     },
   },
+  rtlDirection: {
+    // Collection to set as RTL (You can add language or with add country code specifically)
+    autoLocales: ["ar", "ar-OM", "pa-PK"],
+    reload: true,
+  },
 }
