@@ -1,4 +1,20 @@
 
+0.50.0 / 2023-05-17
+===================
+
+  * chore: Export libs.
+  * chore: LWR-192: coding standards.
+  * LWR-192 if content is wrapping, left-align the heading and button.
+  * LWR-192 refactor heading/button css
+  * LWR-192 use stack to add gaps between heading, content, and button
+  * LWR-192 add optional heading and button to TeaserPlusList
+  * fix: Alignment of card body when stacked cards are in a row with other cards.
+  * fix: LWR-190: tidy up css selectors and move caption out of the frame div so we don't need the stack class.
+  * LWR-190: added media caption plus alignment fix
+  * LWR-199: Fix card button layout. No sidebar, just custom flex.
+  * Merge pull request #53 from JudicialCouncilOfCalifornia/bugfix/LWR-187--list-margins
+  * LWR-187: alternate global listing padding
+
 0.49.6 / 2023-05-10
 ===================
 
