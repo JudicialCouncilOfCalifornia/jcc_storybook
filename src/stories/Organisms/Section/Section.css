@@ -45,6 +45,10 @@
   width: 100%;
 }
 
+.section .section__main.multiple:not(.stack) .card__inner {
+  display: block;
+}
+
 .section .section__header,
 .section .section__button {
   --align-items: center;

@@ -39,6 +39,10 @@
   ]) %}
 {% endif %}
 
+{% if sub_component_data is iterable %}
+  {% set multiple = sub_component_data|length > 1 ? 'multiple' : null %}
+{% endif %}
+
 {% if grid_min_width %}
   {% set sub_component_styles = sub_component_styles|merge([
     '--grid-min-width: ' ~ grid_min_width ~ 'ch;',
@@ -89,7 +93,8 @@
           {% endif %}
         </div>
       {% endif %}
-      <div class="section__main {{ sub_component_layout }}" style="{{ sub_component_styles|join }}">
+      <div class="section__main {{ sub_component_layout }} {{ multiple }}" style="{{ sub_component_styles|join }}">
+
         {% if sub_component_data is iterable %}
           {% for item in sub_component_data %}
             {{ item }}
