@@ -1,4 +1,9 @@
 
+0.51.1 / 2023-05-17
+===================
+
+  * fix: Use logical properties on teaser plus list border.
+
 0.51.0 / 2023-05-17
 ===================
 
