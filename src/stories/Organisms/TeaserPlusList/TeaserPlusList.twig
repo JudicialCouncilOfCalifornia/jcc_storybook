@@ -8,47 +8,47 @@
 ] %}
 
 <div class="teaser-list stack">
-	{%  if heading %}
-		<div class="teaser-list__heading center">
-			<h2>{{ heading }}</h2>
-		</div>
-	{% endif %}
-	<div class="{{ classes|join(' ') }}">
-		<div class="teaser-list__teaser stack">
-			{% if teaser.brow_data %}
-				{% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
-			{% endif %}
-			<div class="teaser-list__teaser-heading">
-				<h3>
-					{% if teaser.href %}
-						{{ link(teaser.heading, teaser.href) }}
-					{% else %}
-						{{ teaser.heading }}
-					{% endif %}
-				</h3>
-			</div>
-			<div class="teaser-list__teaser-text">
-				{{ teaser.text }}
-			</div>
-		</div>
-		<div class="teaser-list__list">
-			<ul class="stack">
-				{% for item in list_items %}
-					<li>
-						<div class="teaser-list__link">
-							<h4>{{ link(item.link.label, item.link.href)}}</h4>
-						</div>
-						<div class="teaser-list__footer">
-							{{ item.footer }}
-						</div>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-	{% if button_data is not empty %}
-		<div class="teaser-list__button center">
-			{% include "@atoms/Button/Button.twig" with button_data %}
-		</div>
-	{% endif %}
+  {%  if heading %}
+    <div class="teaser-list__heading center">
+      <h2>{{ heading }}</h2>
+    </div>
+  {% endif %}
+  <div class="{{ classes|join(' ') }}">
+    <div class="teaser-list__teaser stack">
+      {% if teaser.brow_data %}
+        {% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
+      {% endif %}
+      <div class="teaser-list__teaser-heading">
+        <h3>
+          {% if teaser.href %}
+            {{ link(teaser.heading, teaser.href) }}
+          {% else %}
+            {{ teaser.heading }}
+          {% endif %}
+        </h3>
+      </div>
+      <div class="teaser-list__teaser-text">
+        {{ teaser.text }}
+      </div>
+    </div>
+    <div class="teaser-list__list">
+      <ul class="stack">
+        {% for item in list_items %}
+          <li>
+            <div class="teaser-list__link">
+              <h4>{{ link(item.link.label, item.link.href)}}</h4>
+            </div>
+            <div class="teaser-list__footer">
+              {{ item.footer }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% if button_data is not empty %}
+    <div class="teaser-list__button center">
+      {% include "@atoms/Button/Button.twig" with button_data %}
+    </div>
+  {% endif %}
 </div>
