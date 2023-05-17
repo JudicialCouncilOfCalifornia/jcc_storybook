@@ -48,6 +48,10 @@
   color: var(--color-white);
 }
 
+.steps__step .center {
+  margin-inline: initial;
+}
+
 .step__label {
   margin-block-end: var(--s0);
 }

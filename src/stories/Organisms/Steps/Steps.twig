@@ -11,11 +11,11 @@
 
 <div class="{{ classes|join(' ') }}">
   <div class="stack">
-  
+
     {% if heading|render %}
       <h2 class="step__heading">{{ heading }}</h2>
     {% endif %}
-    
+
     {% if lead|render %}
       <div class="step__lead">{{ lead }}</div>
     {% endif %}
@@ -29,10 +29,12 @@
         <span class="sr-only">Step: {{ loop.index }}</span>
         {{ step.label }}
       </h3>
-      {{ step.content }}
+      <div class="center">
+        {{ step.content }}
+      </div>
     </div>
     {% endfor %}
   </div>
-  
+
   </div>
 </div>
