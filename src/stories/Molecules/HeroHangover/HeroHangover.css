@@ -57,15 +57,208 @@
   padding-block-end: 0;
 }
 
-.hangover--base-light-xx .hangover__top {
-  --heading-color: var(--color-primary);
-  --color: var(--color-primary);
-  --text-shadow-color: var(--color-base-light-xx);
-  --background: var(--background-striped-base-light-xx);
+/* striped-primary-dark-xx */
+
+.hangover--striped-primary-dark-xx .hangover__top {
+  --heading-color: var(--color-base-light-xxx);
+  --color: var(--color-base-light-xxx);
+  --text-shadow-color: var(--color-primary-dark-x);
+  --background: var(--background-striped-primary-dark-xx);
   background: var(--background);
 }
 
-.hangover--base-light-xx .card {
+.hangover--striped-primary-dark-xx .card {
+  --border-color: var(--color-accent-warm-light-xxx);
+}
+
+/* striped-primary-dark-x */
+
+.hangover--striped-primary-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xxx);
+  --color: var(--color-base-light-xxx);
+  --text-shadow-color: var(--color-primary-dark-x);
+  --background: var(--background-striped-primary-dark-x);
+  background: var(--background);
+}
+
+.hangover--striped-primary-dark-x .card {
+  --border-color: var(--color-accent-warm-light-xxx);
+}
+
+/* striped-primary-light-xx */
+
+.hangover--striped-primary-light-xx .hangover__top {
+  --heading-color: var(--color-primary-dark-x);
+  --color: var(--color-primary-dark-x);
+  --text-shadow-color: var(--background-solid-primary-light-xx);
+  --background: var(--background-striped-primary-light-xx);
+  background: var(--background);
+}
+
+.hangover--striped-primary-light-xx .card {
+  --border-color: var(--color-accent-warm-light-xx);
+}
+
+/* striped-secondary-dark-xx */
+
+.hangover--striped-secondary-dark-xx .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--background-solid-secondary-dark-xx);
+  --background: var(--background-striped-secondary-dark-xx);
+  background: var(--background);
+}
+
+.hangover--striped-secondary-dark-xx .card {
+  --border-color: var(--color-secondary-light-x);
+}
+
+/* striped-secondary */
+
+.hangover--striped-secondary .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--background-solid-secondary);
+  --background: var(--background-striped-secondary);
+  background: var(--background);
+}
+
+.hangover--striped-secondary .card {
+  --border-color: var(--color-secondary-dark-x);
+}
+
+/* striped-accent-warm-dark-x */
+
+.hangover--striped-accent-warm-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--color-accent-warm-dark-x);
+  --background: var(--background-striped-accent-warm-dark-x);
+  background: var(--background);
+}
+
+.hangover--striped-accent-warm-dark-x .card {
+  --border-color: var(--color-accent-warm-light-xx);
+}
+
+/* solid-base-dark-x */
+
+.hangover--solid-base-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--color-base-dark-x);
+  --background: var(--background-solid-base-dark-x);
+  background: var(--background);
+}
+
+
+
+
+/* solid-primary-dark-xx */
+
+.hangover--solid-primary-dark-xx .hangover__top {
+  --heading-color: var(--color-base-light-xxx);
+  --color: var(--color-base-light-xxx);
+  --text-shadow-color: var(--color-primary-dark-x);
+  --background: var(--background-solid-primary-dark-xx);
+  background: var(--background);
+}
+
+.hangover--solid-primary-dark-xx .card {
+  --border-color: var(--color-accent-warm-light-xxx);
+}
+
+/* solid-primary-dark-x */
+
+.hangover--solid-primary-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xxx);
+  --color: var(--color-base-light-xxx);
+  --text-shadow-color: var(--color-primary-dark-x);
+  --background: var(--background-solid-primary-dark-x);
+  background: var(--background);
+}
+
+.hangover--solid-primary-dark-x .card {
+  --border-color: var(--color-accent-warm-light-xxx);
+}
+
+/* solid-primary-light-xx */
+
+.hangover--solid-primary-light-xx .hangover__top {
+  --heading-color: var(--color-primary-dark-x);
+  --color: var(--color-primary-dark-x);
+  --text-shadow-color: var(--background-solid-primary-light-xx);
+  --background: var(--background-solid-primary-light-xx);
+  background: var(--background);
+}
+
+.hangover--solid-primary-light-xx .card {
+  --border-color: var(--color-accent-warm-light-xx);
+}
+
+/* solid-secondary-dark-xx */
+
+.hangover--solid-secondary-dark-xx .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--background-solid-secondary-dark-xx);
+  --background: var(--background-solid-secondary-dark-xx);
+  background: var(--background);
+}
+
+.hangover--solid-secondary-dark-xx .card {
+  --border-color: var(--color-secondary-light-x);
+}
+
+/* solid-secondary */
+
+.hangover--solid-secondary .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--background-solid-secondary);
+  --background: var(--background-solid-secondary);
+  background: var(--background);
+}
+
+.hangover--solid-secondary .card {
+  --border-color: var(--color-secondary-dark-x);
+}
+
+/* solid-accent-warm-dark-x */
+
+.hangover--solid-accent-warm-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--color-accent-warm-dark-x);
+  --background: var(--background-solid-accent-warm-dark-x);
+  background: var(--background);
+}
+
+.hangover--solid-accent-warm-dark-x .card {
+  --border-color: var(--color-accent-warm-light-xx);
+}
+
+/* solid-base-dark-x */
+
+.hangover--solid-base-dark-x .hangover__top {
+  --heading-color: var(--color-base-light-xx);
+  --color: var(--color-base-light-xx);
+  --text-shadow-color: var(--color-base-dark-x);
+  --background: var(--background-solid-base-dark-x);
+  background: var(--background);
+}
+
+/* solid-base-light-xx */
+
+.hangover--solid-base-light-xx .hangover__top {
+  --heading-color: var(--color-primary);
+  --color: var(--color-primary);
+  --text-shadow-color: var(--color-base-light-xx);
+  --background: var(--background-solid-base-light-xx);
+  background: var(--background);
+}
+
+.hangover--solid-base-light-xx .card {
   --border-color: var(--color-base-light-x);
 }
 
