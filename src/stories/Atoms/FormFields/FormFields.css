@@ -16,6 +16,44 @@ select {
   width: 100%;
 }
 
+.placeholder-container {
+  position: relative;
+}
+
+.placeholder-container input:focus,
+.placeholder-container input:focus-visible,
+.placeholder-container textarea:focus,
+.placeholder-container textarea:focus-visible {
+  border-color: var(--accent-color);
+  border-radius: 0;
+  outline:0;
+}
+
+.placeholder-container input:focus ~ label,
+.placeholder-container input:not(:placeholder-shown) ~ label,
+.placeholder-container textarea:focus ~ label,
+.placeholder-container textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-30px) translateX(0px) scale(0.75);
+}
+
+.placeholder-container input:focus ~ label,
+.placeholder-container textarea:focus ~ label {
+  color: var(--accent-color);
+}
+
+.placeholder-container label {
+  color: var(--color-base-light-x);
+  left: 10px;
+  top: 0px;
+  background-color: white;
+  margin-block-start: var(--s0);
+  pointer-events: none;
+  position: absolute;
+  padding: 0 10px;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+}
+
 select[multiple] > * + * {
   padding-block-start: var(--s-4);
 }
