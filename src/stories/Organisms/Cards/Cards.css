@@ -40,3 +40,8 @@
     var(--color-primary-light-xx) 8px
   )
 }
+
+.cards .section__header {
+  max-inline-size: var(--max-width);
+  text-align: center;
+}
