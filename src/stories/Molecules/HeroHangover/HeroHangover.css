@@ -141,6 +141,20 @@
   --border-color: var(--color-accent-warm-light-xx);
 }
 
+/* striped-base-light-xx */
+
+.hangover--striped-base-light-xx .hangover__top {
+  --heading-color: var(--color-primary);
+  --color: var(--color-primary);
+  --text-shadow-color: var(--color-base-light-xx);
+  --background: var(--background-striped-base-light-xx);
+  background: var(--background);
+}
+
+.hangover--atriped-base-light-xx .card {
+  --border-color: var(--color-base-light-x);
+}
+
 /* solid-base-dark-x */
 
 .hangover--solid-base-dark-x .hangover__top {
