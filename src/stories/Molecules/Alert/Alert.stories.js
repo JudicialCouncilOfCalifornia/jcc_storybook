@@ -24,10 +24,6 @@ export default {
       table: { disable: true },
       control: false,
     },
-    content: {
-      table: { disable: true },
-      control: false,
-    },
     icon_data: {
       table: { disable: true },
       control: false,

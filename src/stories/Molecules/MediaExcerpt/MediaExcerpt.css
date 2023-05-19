@@ -29,6 +29,7 @@
   font-size: var(--s-1);
   list-style: none;
   row-gap: 0;
+  padding-inline:0;
 }
 
 .media-excerpt .detail-list > * + *::before {

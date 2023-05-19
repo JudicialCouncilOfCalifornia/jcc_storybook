@@ -26,6 +26,7 @@
 
 .teaser-list__list ul {
   list-style: none;
+  padding-inline: 0;
 }
 
 .teaser-list__footer {
