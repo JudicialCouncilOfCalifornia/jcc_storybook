@@ -50,3 +50,13 @@
   > div {
   stroke: var(--accent-color);
 }
+
+[dir='rtl'] .pager__item:is(.pager__item--first, .pager__item--previous) a > div {
+  padding-inline: var(--s-3) 0;
+  rotate: 180deg;
+}
+
+[dir='rtl'] .pager__item:is(.pager__item--first, .pager__item--next) a > div {
+  padding-inline: 0 var(--s-3);
+  rotate: 180deg;
+}

@@ -1,10 +1,12 @@
 .breadcrumb {
   background-color: var(--color-accent-warm-light-xxxx);
   --gap: 0.5rem;
+  padding-inline: var(--s0);
 }
 
 .breadcrumb__list {
   list-style-type: none;
+  padding-inline: 0;
 }
 
 .breadcrumb__item {

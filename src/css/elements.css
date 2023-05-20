@@ -90,3 +90,9 @@ code {
   left: -999em;
   right: auto;
 }
+
+[dir='rtl'] .sr-only {
+  position: absolute;
+  right: -999em;
+  left: auto;
+}

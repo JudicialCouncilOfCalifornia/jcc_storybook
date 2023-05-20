@@ -13,24 +13,27 @@
   color: icon_data.color,
 } %}
 
+{% set content_class = content|length > 1 ? 'alert__content-multiple' : 'alert__content-single' %}
+
 <div class="{{ classes|join(' ') }}" data-alert-type="{{ type }}" data-alert-dismissible="{{ dismissible }}">
   <div class="container">
     {% include "@atoms/Icon/Icon.twig" with icon_data %}
 
-    <div class="alert__content">
-      {% if heading is not empty %}
-        <p><strong>{{ heading }}</strong></p>
-      {% endif %}
-
+    <div class="alert__content {{ content_class }}">
+      <div class="alert__content__inner">
       {% if content|length > 1 %}
+        {% if heading is not empty %}
+          <p class="alert__content__heading"><strong>{{ heading }}</strong></p>
+        {% endif %}
         <ul>
           {% for message in content %}
             <li>{{ message }}</li>
           {% endfor %}
         </ul>
       {% else %}
-        {{ content|first }}
+        {% if heading is not empty %}<span class="alert__content__heading"><strong>{{ heading }}</strong></span>{% endif %} {{ content|first }}
       {% endif %}
+      </div>
     </div>
 
     {% if dismissible %}
