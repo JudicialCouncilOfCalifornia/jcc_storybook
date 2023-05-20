@@ -1,4 +1,20 @@
 
+0.52.0 / 2023-05-20
+===================
+
+  * chore: Export libs.
+  * Merge branch 'LWR-84--views-results-generic-component-for-search-page-and-publication-page'
+  * Merge branch 'fix/style-updates-and-rtl-fixes'
+  * chore: Export libs.
+  * Merge branch 'feature/LWR-144-webform-styling'
+  * chore: Export libs.
+  * [LWR-84] -- Generic ViewsResult component for use in search results and publication/news results pages (and any future view pages). Also InlineForm for the Inline search form on search page.
+  * [Fix] - Style fixes and RTL styles
+  * placeholder styling
+  * add striped-base-light-xx
+  * remove extra spaces
+  * Add background schemes for Hangover Hero
+
 0.51.1 / 2023-05-17
 ===================
 
