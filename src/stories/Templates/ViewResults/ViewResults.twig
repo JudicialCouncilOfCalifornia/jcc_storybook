@@ -1,0 +1,110 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'view-results--' ~ variant : 'view-results--default' %}
+
+{% set list_type = list_type ?? 'ul' %}
+
+{% set divider = list_type_divider ? '' : 'no-divider' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'view-results',
+  'container',
+  'stack',
+  variant_class,
+  view_name,
+  view_display,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+
+  {% if form and not form_in_sidebar or header %}
+    <div class="view-results__header with-sidebar {{ sidebar_direction_header }}">
+      <div class="stack">
+        {% if header_sidebar %}
+          {{ header_sidebar }}
+        {% endif %}
+      </div>
+      <div class="stack">
+        {% if form and not form_in_sidebar %}
+          {{ form }}
+        {% endif %}
+
+        {% if header %}
+          {{ header }}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="view-results__results with-sidebar {{ sidebar_direction_results }} {{ divider }}">
+    <div class="stack">
+      {% if sidebar or form_in_sidebar %}
+      <div class="box">
+        {% if form_in_sidebar %}
+          {{ form }}
+        {% endif %}
+
+        {% if sidebar %}
+        {{ sidebar }}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="stack">
+      {% if rows -%}
+        <{{ list_type }}>
+        {% for row in rows %}
+          <li>
+          {% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with {
+            title: row.title,
+            content: row.content,
+            url: row.url,
+            button_data: row.button_data,
+            detail_list_data: row.detail_list_data,
+            pills: row.pills,
+            main_file: row.main_file,
+          } %}
+          </li>
+        {% endfor %}
+        </{{ list_type }}>
+      {% elseif rows is empty -%}
+        <div class="box">
+          <p>{{ 'No results found. Please try another search.'|t }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if pager or items_per_page %}
+  <div class="view-results__footer with-sidebar {{ sidebar_direction_footer }}" >
+
+    {% if footer_sidebar or items_per_page %}
+    <div class="stack box alt-select-style">
+      {% if items_per_page %}
+      <div class="alt-select-style">
+        {{ items_per_page }}
+      </div>
+      {% endif %}
+
+      {% if footer_sidebar %}
+        {{ footer_sidebar }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if pager or footer %}
+    <div class="stack">
+      {{ pager }}
+
+      {% if footer %}
+        {{ footer }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+
+</div>
