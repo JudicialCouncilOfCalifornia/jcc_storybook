@@ -40,8 +40,14 @@ export default {
     text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
     button_data: false,
     sub_component_data: [
-      Card({ ...CardNoMedia.args }),
-      Card({ ...CardNoMedia.args }),
+      Card({
+        has_section_heading: true,
+        ...CardNoMedia.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardNoMedia.args
+      }),
     ],
     section_classes: ["cards"],
   },
@@ -72,8 +78,14 @@ export default {
     text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
     button_data: false,
     sub_component_data: [
-      Card({ ...CardDefault.args }),
-      Card({ ...CardDefault.args }),
+      Card({
+        has_section_heading: true,
+        ...CardDefault.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardDefault.args
+      }),
     ],
     section_classes: ["cards"],
   },
@@ -104,8 +116,14 @@ export default {
     text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
     button_data: false,
     sub_component_data: [
-      Card({ ...CardDefault.args }),
-      Card({ ...CardDefault.args }),
+      Card({
+        has_section_heading: true,
+        ...CardDefault.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardDefault.args
+      }),
     ],
     section_classes: ["cards"],
   },
@@ -140,12 +158,30 @@ export default {
       variant: "primary",
     },
     sub_component_data: [
-      Card({ ...CardStriped.args }),
-      Card({ ...CardStriped.args }),
-      Card({ ...CardStriped.args }),
-      Card({ ...CardStriped.args }),
-      Card({ ...CardStriped.args }),
-      Card({ ...CardStriped.args }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardStriped.args
+      }),
     ],
     section_classes: ["cards"],
   },
