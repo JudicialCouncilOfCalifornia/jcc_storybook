@@ -65,7 +65,7 @@
             </div>
           {% endif %}
           {% if tag == 'div' and button_data is not empty %}
-            <div class="stack">
+            <div class="card__buttons stack">
               {% for item in button_data %}
                 {% if item.href %}
                   {% include "@atoms/Button/Button.twig" with item %}
