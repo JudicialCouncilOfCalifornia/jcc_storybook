@@ -3,6 +3,7 @@ import {
   Default as CardDefault,
   Striped as CardStriped,
   NoMedia as CardNoMedia,
+  BorderedCenter as BorderedCenter,
 } from "../../Molecules/Card/Card.stories";
 
 // Random icon selector for Striped cards.
@@ -17,7 +18,7 @@ export default {
     first_component: false,
     variant: "default",
     card_variant: "default",
-    sub_component_layout: "flex flex--60-40",
+    sub_component_layout: "grid",
     // center, stack
     align_items: false,
     // center, switcher
@@ -40,8 +41,9 @@ export default {
     text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
     button_data: false,
     sub_component_data: [
-      Card({ ...CardNoMedia.args }),
-      Card({ ...CardNoMedia.args }),
+      Card({ ...BorderedCenter.args }),
+      Card({ ...BorderedCenter.args }),
+      Card({ ...BorderedCenter.args }),
     ],
     section_classes: ["cards"],
   },
