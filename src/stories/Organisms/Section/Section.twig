@@ -1,6 +1,6 @@
 {# Set brow and heading tags based on if they're first component or not. #}
 {# Subordinate heading to brow if present. #}
-  {% if first_component %}
+{% if first_component %}
   {% set h = brow ? 'h2' : 'h1' %}
 {% else %}
   {% set h = brow ? 'h3' : 'h2' %}
