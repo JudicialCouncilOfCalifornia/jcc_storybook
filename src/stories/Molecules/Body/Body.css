@@ -1,6 +1,7 @@
 .body.with-sidebar {
   --gap: var(--s3);
-  --sidebar-width: 35ch;
+  --sidebar-width: 25ch;
+  --sidebar-direction: row-reverse;
   gap: var(--s6);
 }
 
