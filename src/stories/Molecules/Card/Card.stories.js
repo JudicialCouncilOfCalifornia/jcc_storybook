@@ -17,6 +17,7 @@ export default {
       control: { type: "select" },
       options: [
         "default",
+        "bordered",
         "bordered-center",
         "media-left",
         "media-right",
