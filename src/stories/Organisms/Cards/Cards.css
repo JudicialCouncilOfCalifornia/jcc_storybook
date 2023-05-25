@@ -43,5 +43,4 @@
 
 .cards .section__header {
   max-inline-size: var(--max-width);
-  text-align: center;
 }
