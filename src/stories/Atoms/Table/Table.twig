@@ -1,0 +1,30 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'table--' ~ variant : 'table--default' %}
+
+{% set classes = [
+  'table',
+  variant_class,
+] %}
+
+<table>
+  <tr>
+    <th>Col 1</th>
+    <th>Col 2</th>
+    <th>Col 3</th>
+  </tr>
+  <tr>
+    <td><a href="#">Link 1</a></td>
+    <td>Lorem ipsum</td>
+    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada ut metus. Praesent egestas feugiat lacus, id ornare lorem.</td>
+  </tr>
+  <tr>
+    <td><a href="#">Link 2</a></td>
+    <td>Lorem ipsum</td>
+    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+  </tr>
+  <tr>
+    <td>Text</td>
+    <td>Lorem ipsum</td>
+    <td>Lorem ipsum dolor sit amet.</td>
+  </tr>
+</table>
