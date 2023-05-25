@@ -5,6 +5,8 @@
 
 {% set divider = list_type_divider ? '' : 'no-divider' %}
 
+{% set footer_sidebar_class = footer_sidebar or items_per_page ? 'with-sidebar' : '' %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
 {# Include variant classes form above. #}
@@ -78,7 +80,7 @@
   </div>
 
   {% if pager or items_per_page %}
-  <div class="view-results__footer with-sidebar {{ sidebar_direction_footer }}" >
+  <div class="view-results__footer {{ footer_sidebar_class }} {{ sidebar_direction_footer }}" >
 
     {% if footer_sidebar or items_per_page %}
     <div class="stack box alt-select-style">

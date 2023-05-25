@@ -4,7 +4,7 @@ import ViewResults from './ViewResults.twig';
 import './ViewResults.css';
 
 export default {
-  title: 'Templates/ViewResults',
+  title: 'Organisms/ViewResults',
   component: ViewResults,
   parameters: {
     notes: readme,
@@ -52,18 +52,6 @@ export default {
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'boolean' },
       options: [false, true],
-    },
-    pager: {
-      table: { disable: true },
-      control: false,
-    },
-    items_per_page: {
-      table: { disable: true },
-      control: false,
-    },
-    form: {
-      table: { disable: true },
-      control: false,
     }
   },
 };

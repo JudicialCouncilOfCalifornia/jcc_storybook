@@ -11,6 +11,17 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
+  
+  {% if aside is not empty %}
+    <aside class="body__aside sidebar stack">
+      {% if subheading is not empty %}
+      <h3 class="body__title">{{ subheading }}</h3>
+      {% endif %}
+
+      {{ aside }}
+    </aside>
+  {% endif %}
+
   <div class="body__main stack">
     {% if heading is not empty %}
     <h2 class="body__heading">{{ heading }}</h2>
@@ -26,14 +37,4 @@
     </div>
     {% endif %}
   </div>
-
-  {% if aside is not empty %}
-    <aside class="body__aside sidebar stack">
-      {% if subheading is not empty %}
-      <h3 class="body__title">{{ subheading }}</h3>
-      {% endif %}
-
-      {{ aside }}
-    </aside>
-  {% endif %}
 </div>
