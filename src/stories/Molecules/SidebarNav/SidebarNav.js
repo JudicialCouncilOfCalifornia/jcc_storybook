@@ -58,4 +58,19 @@ docReady(function () {
       });
     }
   });
+
+  // Make sure the content area has enought height for the sidebar nav.
+  const navs = Array.from(document.querySelectorAll('.sidebar-nav'));
+  navs.forEach(nav => {
+    let sidebar_nav_position = nav.getElementsByClassName('sidebar-nav__position')
+    if (sidebar_nav_position.length > 0) {
+      let sidebar_nav_height = sidebar_nav_position[0].clientHeight;
+      if (sidebar_nav_height >= nav.parentNode.clientHeight) {
+        nav.parentNode.style.minHeight = sidebar_nav_height + 'px';
+      } else {
+        nav.parentNode.style.removeProperty("minHeight");
+      }
+    }
+  });
+
 })
