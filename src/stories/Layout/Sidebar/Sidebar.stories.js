@@ -2,7 +2,7 @@ import readme from "./readme.md";
 import data from "./Sidebar.data";
 import Sidebar from "./Sidebar.twig";
 import "./Sidebar.css";
-// import './Sidebar.js';
+import './Sidebar.js';
 
 export default {
   title: "Layout/Sidebar",

@@ -1,0 +1,64 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'sidebar-nav--' ~ variant : 'sidebar-nav--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'sidebar-nav',
+  'container',
+  variant_class,
+] %}
+
+{% set menu_level = 1 %}
+
+{% set with_menu_heading = menu_heading ? 'with-parent-label' : '' %}
+
+<div class="{{ classes|join(' ') }}">
+
+  <div class="with-sidebar">
+    <div class="sidebar sidebar-nav__block">
+      <div class="sidebar-nav__position">
+        <div class="sidebar-nav__hamburger-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          {% if menu_heading %}
+            <h2 class="sidebar-nav__parent-label">{{ menu_heading }}</h2>
+          {% endif %}
+          
+          <div class="box {{ with_menu_heading }}">
+            {% macro menu_links(links, menu_level) %}
+            {% import _self as macros %}
+            {% for link in links %}
+              {% set parent = link.links is not empty ? true : false %}
+              <li>
+                {% set active_class = link.active ? 'active' : '' %}
+                {% if parent %}
+                  {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }} 
+                  {# <button class="sidebar-nav__button button {{ active_class }}">{{ link.title }}</button> #}
+                {% else %}
+                  {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }}
+                {% endif %}
+                {% if link.links %}
+                  <ul class="{{ 'sidebar-nav__item nav-level-' ~ menu_level }}">
+                    {{ macros.menu_links(link.links, menu_level + 1) }}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+            {% endmacro %}
+            {% import _self as macros %}
+            <ul class="{{ 'sidebar-nav__default nav-level-' ~ menu_level }}">
+              {{ macros.menu_links(links, menu_level + 1) }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sidebar-filler"></div>
+  </div>
+</div>
