@@ -1,4 +1,24 @@
 
+0.53.0 / 2023-05-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #60 from JudicialCouncilOfCalifornia/fix/action-lists-padding-issue
+  * Merge pull request #66 from JudicialCouncilOfCalifornia/LWR-182--storybook-side-navigation.
+  * Script to try to make sure there is enough room for sidebar nav in the content area.
+  * Code cleanup.
+  * [LWR-182] -- Addition of Sidebar navigation
+  * Merge pull request #65 from JudicialCouncilOfCalifornia/feature/LWR-195-table-styling.
+  * readme.
+  * table element.
+  * Merge pull request #64 from JudicialCouncilOfCalifornia/fix/move-viewresults-body-fix
+  * Merge pull request #63 from JudicialCouncilOfCalifornia/bugfix/LWR-212--bordered-center-card-button-layout
+  * LWR-212: auto flex card buttons container length
+  * [Fix] Moved ViewsResults under Organism so that its usable. Body paragraph fixes and primary nav character increase.
+  * Merge pull request #61 from JudicialCouncilOfCalifornia/bugfix/LWR-161--missing-card-h3
+  * LWR-161: add control to set card H3 as needed
+  * added box element
+
 0.52.0 / 2023-05-20
 ===================
 
