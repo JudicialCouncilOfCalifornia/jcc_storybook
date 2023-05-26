@@ -307,17 +307,6 @@ button.sidebar-nav__button.active {
   box-shadow: none;;
 }
 
-/* .has-sidebar-nav .sidebar-nav {
-  position: absolute;
-  inset: 3ch 3ch auto 3ch;
-  overflow-y: auto;
-}
-
-.has-sidebar-nav .section__content .container {
-  padding-inline-start: calc(var(--sidebarnav-width) + 6ch);
-  inline-size: auto;
-} */
-
 .has-sidebar-navigation .section .container.stack > *, 
 .has-sidebar-navigation .section .container.stack > .section__header,
 .has-sidebar-navigation .section .container.stack > .section__main,
