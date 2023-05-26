@@ -3,6 +3,7 @@
 ===================
 
   * chore: Export libs.
+  * History update. Release 0.53.0
   * Merge pull request #60 from JudicialCouncilOfCalifornia/fix/action-lists-padding-issue
   * Merge pull request #66 from JudicialCouncilOfCalifornia/LWR-182--storybook-side-navigation.
   * Script to try to make sure there is enough room for sidebar nav in the content area.
