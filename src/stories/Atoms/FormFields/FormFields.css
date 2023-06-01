@@ -74,7 +74,8 @@ label {
   flex-direction: column;
 }
 
-.form-item + .form-item {
+.form-item + .form-item,
+.form-item + .form-actions {
   margin-block-start: var(--s5);
 }
 
@@ -142,6 +143,19 @@ fieldset {
 .form-checkbox input,
 .form-checkboxes input {
   width: auto;
+  appearance: none;
+  padding: 8px;
+  border: 1px solid var(--color-black);
+}
+
+.form-radios input:checked,
+.form-checkbox input:checked,
+.form-checkboxes input:checked {
+  background-color: var(--accent-color);
+}
+
+.form-radios input {
+  border-radius:50%;
 }
 
 .form-radio label,
