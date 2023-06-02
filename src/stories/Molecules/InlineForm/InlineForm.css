@@ -1,6 +1,6 @@
 .inline-form {
   --gap: 0;
-  margin: auto;
+  margin: 0 auto;
   background-color: var(--color-base-light-xx);
   border-radius: 2rem;
 }
@@ -59,6 +59,10 @@
 }
 
 /* Submit buttons */
+.inline-form .form-item + .form-actions {
+  margin-block-start: 0;
+}
+
 .inline-form .form-actions input:is([type="submit"], .button),
 .inline-form .form-actions button  {
   border-radius: 2rem;

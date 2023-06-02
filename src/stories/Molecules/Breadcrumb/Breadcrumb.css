@@ -1,7 +1,7 @@
 .breadcrumb {
   background-color: var(--color-accent-warm-light-xxxx);
   --gap: 0.5rem;
-  padding-inline: var(--s0);
+  padding-inline: var(--s1);
 }
 
 .breadcrumb__list {

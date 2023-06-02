@@ -41,20 +41,18 @@
   {% endif %}
 
   <div class="view-results__results with-sidebar {{ sidebar_direction_results }} {{ divider }}">
-    <div class="stack">
+    <div class="stack sidebar">
       {% if sidebar or form_in_sidebar %}
-      <div class="box">
         {% if form_in_sidebar %}
           {{ form }}
         {% endif %}
 
         {% if sidebar %}
-        {{ sidebar }}
+          {{ sidebar }}
         {% endif %}
-      </div>
       {% endif %}
     </div>
-    <div class="stack">
+    <div class="stack content">
       {% if rows -%}
         <{{ list_type }}>
         {% for row in rows %}
