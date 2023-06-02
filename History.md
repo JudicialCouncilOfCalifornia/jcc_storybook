@@ -1,4 +1,15 @@
 
+0.53.1 / 2023-06-01
+===================
+
+  * chore: Export libs.
+  * Merge pull request #70 from JudicialCouncilOfCalifornia/LWR-122--publication-viewresults-updates-and-other-fixes
+  * [LWR-122] -- ViewResults styling updates for publications view (sidebar form mostly)
+  * Merge pull request #67 from JudicialCouncilOfCalifornia/feature/LWR-210-header-navigation-work
+  * Merge pull request #69 from JudicialCouncilOfCalifornia/feature/LWR-167-more-webform-fields
+  * radio/checkboxes
+  * search updates
+
 0.53.0 / 2023-05-26
 ===================
 
