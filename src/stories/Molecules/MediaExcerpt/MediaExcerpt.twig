@@ -6,7 +6,7 @@
   variant_class,
 ] %}
 
-<div class="{{ classes.join(' ')}}">
+<div class="{{ classes|join(' ')}}">
   {% if (title) or (button_data is not empty) %}
     <div class="media-excerpt__header switcher">
       {% if title %}
