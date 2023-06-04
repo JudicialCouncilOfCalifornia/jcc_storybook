@@ -1,4 +1,11 @@
 
+0.53.3 / 2023-06-04
+===================
+
+  * chore: Export libs.
+  * Merge pull request #72 from JudicialCouncilOfCalifornia/fix/more-style-fixes-for-mediaexcerpt
+  * [Fix] -- More style fixes for mediaExcerpt and primaryNav
+
 0.53.2 / 2023-06-03
 ===================
 
