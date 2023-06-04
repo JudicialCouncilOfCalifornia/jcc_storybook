@@ -334,15 +334,15 @@ button.sidebar-nav__button.active {
 
 .mobile-sidebar-nav .sidebar-nav__hamburger-toggle {
   display: block;
-  margin: 1ch;
-  margin-inline-end: auto;
+  margin: 2ch;
+  width: auto;
 }
 
 .sidebar-nav__hamburger-toggle span {
   display: block;
   position: absolute;
   height: calc(var(--icon-size) / 7);
-  width: 100%;
+  width: 2.25rem;
   background: var(--color-base-dark-x);
   opacity: 1;
   transform: rotate(0deg);
@@ -395,7 +395,7 @@ button.sidebar-nav__button.active {
 }
 
 .sidebar-nav__hamburger-toggle.open span {
-  width: 93%;
+  width: 1.5rem;
   background: var(--accent-color);
 }
 
