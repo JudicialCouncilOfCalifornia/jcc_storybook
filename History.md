@@ -1,4 +1,11 @@
 
+0.53.2 / 2023-06-03
+===================
+
+  * chore: Export libs.
+  * Merge pull request #71 from JudicialCouncilOfCalifornia/fix/multiple-fixes-for-viewresults-primarynav-sidebarnav-etc
+  * [Fix] -- Multiple fixes to several components
+
 0.53.1 / 2023-06-01
 ===================
 
