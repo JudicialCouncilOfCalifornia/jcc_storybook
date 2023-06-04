@@ -84,6 +84,22 @@ code {
   color: var(--accent-color);
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid var(--color-base-light-x);;
+  padding: var(--s-2) var(--s-2);
+}
+
+table th {
+  color: var(--color-white);
+  background-color: var(--color-base-dark-x);
+  text-align: left;
+}
+
 /* Screen Reader Only */
 .sr-only {
   position: absolute;

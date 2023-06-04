@@ -26,7 +26,7 @@
   /* Fonts */
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Lato', sans-serif;
-  --font-global-brand: 'Lora' ,'Georgia' ,'Cambria' ,'Times New Roman','Times' ,serif;
+  --font-global: 'Lora' ,'Georgia' ,'Cambria' ,'Times New Roman','Times' ,serif;
 
   /* Colors */
   --color-white: #ffffff;

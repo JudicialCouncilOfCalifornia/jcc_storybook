@@ -33,8 +33,8 @@
   display: inline-block;
   transform: rotate(45deg);
   position: absolute;
-  top: calc(var(--icon-size) / 2.1);
-  left: calc(var(--icon-size) / 4);
+  inset-block-start: calc(var(--icon-size) / 2.1);
+  inset-inline-start: calc(var(--icon-size) / 4);
   transition: all var(--anim);
 }
 
@@ -43,8 +43,8 @@
   height: calc(var(--icon-size) / 2.7);
   border: 2px solid var(--color-white);
   position: absolute;
-  top: calc(var(--icon-size) / 4);
-  left: calc(var(--icon-size) / 4);
+  inset-block-start: calc(var(--icon-size) / 4);
+  inset-inline-start: calc(var(--icon-size) / 4);
   border-radius: 50%;
   transform: rotate(135deg);
   transition: all var(--anim);
@@ -55,8 +55,8 @@
   border-width: 0;
   width: calc(var(--icon-size) / 2);
   height: 2px;
-  top: calc(var(--icon-size) / 2.1);
-  left: calc(var(--icon-size) / 4);
+  inset-block-start: calc(var(--icon-size) / 2.1);
+  inset-inline-start: calc(var(--icon-size) / 4);
   background-color: var(--color-white);
   border-radius: 0;
 }
@@ -107,4 +107,9 @@
 .header-search--no-toggle .header-search__form input {
   width: 100%;
   border: 0;
+}
+
+[dir='rtl'] .header-search__search-line {
+  transform: rotate(315deg);
+  inset-block-start: calc(var(--icon-size) / 2.0);
 }

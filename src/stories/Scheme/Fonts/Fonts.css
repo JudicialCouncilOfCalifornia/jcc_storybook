@@ -9,32 +9,53 @@
   background: var(--color-base-dark-x)
 }
 
-.font__swatch > p:nth-of-type(1) {
+.font__swatch {
+  color: var(--color-base-dark-xxxx);
+}
+
+.font__swatch h1 {
   font-size: var(--s5);
   line-height: var(--s6);
+  color: var(--color-base-dark-xxxx);
 }
 
-.font__swatch > p:nth-of-type(2) {
+.font__swatch h2 {
   font-size: var(--s4);
-  line-height: var(--s5);
+  line-height: var(--s6);
+  color: var(--color-base-dark-xxxx);
 }
 
-.font__swatch > p:nth-of-type(3) {
+.font__swatch h3 {
   font-size: var(--s3);
-  line-height: var(--s4);
+  line-height: var(--s5);
+  color: var(--color-base-dark-xxxx);
 }
 
-.font__swatch > p:nth-of-type(4) {
+.font__swatch > h4 {
   font-size: var(--s2);
-  line-height: var(--s3);
+  line-height: var(--s4);
+  color: var(--color-base-dark-xxxx);
 }
 
-.font__swatch > p:nth-of-type(5) {
+.font__swatch > h5 {
   font-size: var(--s1);
-  line-height: var(--s2);
+  line-height: var(--s3);
+  color: var(--color-base-dark-xxxx);
 }
 
-.font__swatch > p:nth-of-type(6) {
+.font__swatch > h6 {
+  font-size: var(--s0);
+  line-height: var(--s3);
+  color: var(--color-base-dark-xxxx);
+}
+
+.font__swatch hr {
+  margin-block: var(--s2);
+  color: var(--color-base-dark-xxxx);
+}
+
+.font__swatch p {
   font-size: var(--s0);
   line-height: var(--s1);
+  color: var(--color-base-dark-xxxx);
 }

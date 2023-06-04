@@ -7,10 +7,8 @@
 ] %}
 
 <div class="{{ classes.join(' ')}}">
-  <div class="box">
-    <h2>{{ heading }}</h2>
-    <div>{{ text }}</div>
-  </div>
+  <h2>{{ heading }}</h2>
+  <div>{{ text }}</div>
   <div class="action-list__items">
     {% for link in links %}
       <div class="action-list__item cluster box">

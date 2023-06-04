@@ -8,6 +8,7 @@ export default {
   component: ActionList,
   parameters: {
     notes: readme,
+    layout: 'padded',
   },
   argTypes: {
     variant: {

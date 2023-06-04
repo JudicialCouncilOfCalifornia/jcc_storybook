@@ -18,7 +18,7 @@
 
 .site-branding__label {
   text-transform: uppercase;
-  font-family: var(--font-global-brand);
+  font-family: var(--font-global);
   font-size: var(--s-1);
   letter-spacing: 2px;
 }
