@@ -159,6 +159,10 @@ button.primary-nav__button.active {
   margin-inline-start: -12ch;
 }
 
+.primary-nav__item .grid {
+  grid-gap: var(--s-2, var(--s0));
+}
+
 .primary-nav__item a {
   display: block;
   color: var(--color);
@@ -171,9 +175,13 @@ button.primary-nav__button.active {
   opacity: 0.5;
 }
 
+.primary-nav__item a.active {
+  font-weight: 600;
+}
+
 .primary-nav__item a + a {
   border-block-start: 1px dashed var(--color-base);
-  padding-block-start: var(--s0);
+  padding-block-start: var(--s-2);
 }
 
 .primary-nav button + .primary-nav__item--mega {
