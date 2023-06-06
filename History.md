@@ -1,4 +1,14 @@
 
+0.53.4 / 2023-06-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #74 from JudicialCouncilOfCalifornia/feature/primarynav-overview-link-setup
+  * Switched tabs for spaces
+  * [Feature] - Set ability to style overview link.
+  * Merge pull request #73 from JudicialCouncilOfCalifornia/fix/webform-styling-conflict
+  * styles
+
 0.53.3 / 2023-06-04
 ===================
 
