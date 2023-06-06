@@ -7,69 +7,71 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-	<div class="primary-nav__default nav-level-1 reel no-bar">
+  <div class="primary-nav__default nav-level-1 reel no-bar">
 
-		{% for i,link in links %}
-			{% set parent = link.links is not empty ? true : false %}
+    {% for i,link in links %}
+      {% set parent = link.links is not empty ? true : false %}
 
-			<div class="primary-nav__group">
-				{% if parent %}
-					<button class="primary-nav__button button">{{ link.text }}</button>
-				{% else %}
-					{{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
-				{% endif %}
+      <div class="primary-nav__group">
+        {% if parent %}
+          <button class="primary-nav__button button">{{ link.text }}</button>
+        {% else %}
+          {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
+        {% endif %}
 
-				{% if link.links is not empty %}
-					{% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
-					<div class="primary-nav__item nav-level-2 box {{ mega }}">
-						<div class="container">
-							<div class="grid">
-								{% for link2 in link.links %}
-									{{ link(link2.text, link2.url) }}
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				{% endif %}
-			</div>
-		{% endfor %}
-		{% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
-	</div>
-	<div class="primary-nav__hamburger cluster">
-		<div class="primary-nav__hamburger-toggle">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<div class="nav-level-1 stack">
-			<div class="primary-nav__group">
-				{% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data_duplicate %}
-			</div>
+        {% if link.links is not empty %}
+          {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
+          <div class="primary-nav__item nav-level-2 box {{ mega }}">
+            <div class="container">
+              <div class="grid">
+                {% for link2 in link.links %}
+                  {% set overview_link_class = link2.is_overview_link ? 'primary-nav__overview-link' : '' %}
+                  {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
+  </div>
+  <div class="primary-nav__hamburger cluster">
+    <div class="primary-nav__hamburger-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-level-1 stack">
+      <div class="primary-nav__group">
+        {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data_duplicate %}
+      </div>
 
-			{% for i,link in links %}
-				{% set parent = link.links is not empty ? true : false %}
+      {% for i,link in links %}
+        {% set parent = link.links is not empty ? true : false %}
 
-				<div class="primary-nav__group">
-					{% if parent %}
-						<button class="primary-nav__button button">{{ link.text }}</button>
-					{% else %}
-						{{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
-					{% endif %}
+        <div class="primary-nav__group">
+          {% if parent %}
+            <button class="primary-nav__button button">{{ link.text }}</button>
+          {% else %}
+            {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
+          {% endif %}
 
-					{% if link.links is not empty %}
-						{% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
-						<div class="primary-nav__item nav-level-2 box {{ mega }}">
-							<div class="container">
-								<div class="grid">
-									{% for link2 in link.links %}
-										{{ link(link2.text, link2.url) }}
-									{% endfor %}
-								</div>
-							</div>
-						</div>
-					{% endif %}
-				</div>
-			{% endfor %}
-		</div>
-	</div>
+          {% if link.links is not empty %}
+            {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
+            <div class="primary-nav__item nav-level-2 box {{ mega }}">
+              <div class="container">
+                <div class="grid">
+                  {% for link2 in link.links %}
+                    {% set overview_link_class = link2.is_overview_link ? 'primary-nav__overview-link' : '' %}
+                    {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
