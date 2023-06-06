@@ -2,7 +2,7 @@
 	<form class="stack" action="/form/sample" method="post" id="form-sample">
 
 		{# Text field #}
-		<div class="form-item form-item-text-field-label placeholder-container">
+		<div class="form-item form-item-text-field-label placeholder-container js-form-type-textfield">
 			<input data-drupal-selector="edit-text-field-label" aria-describedby="edit-text-field-label--description" type="text" id="edit-text-field-label" name="text_field_label" value="" size="60" maxlength="255" class="form-text" placeholder=" "/>
       <label for="edit-text-field-label">Text Field Label</label>
 
@@ -14,7 +14,7 @@
 		</div>
 
 		{# Text area #}
-		<div class="form-item form-item-textarea-label placeholder-container">
+		<div class="form-item form-item-textarea-label placeholder-container js-form-type-textfield">
       <textarea data-drupal-selector="edit-textarea-label" aria-describedby="edit-textarea-label--description" id="edit-textarea-label" name="textarea_label" rows="5" cols="60" class="form-textarea" placeholder=" "></textarea>
       <label for="edit-textarea-label" >Textarea Label</label>
 			<div class="description">
@@ -28,7 +28,7 @@
 		<div class="form-item form-item-textfield--withbutton">
 			<label class="usa-sr-only" for="header-search">Text Field With Button</label>
 			<div class="cluster">
-        <div class="placeholder-container">
+        <div class="placeholder-container js-form-type-textfield">
 				  <input class="usa-input" id="header-search" type="search" name="search" placeholder=" " />
           <label for="edit-text-field-label">Text Field Label</label>
         </div>
@@ -225,7 +225,7 @@
 				<span class="fieldset-legend">Fieldset and legend</span>
 			</legend>
 			<div class="fieldset-wrapper">
-				<div class="form-item form-item-text-field-label placeholder-container">
+				<div class="form-item form-item-text-field-label placeholder-container js-form-type-textfield">
 					<input data-drupal-selector="edit-text-field-label" aria-describedby="edit-text-field-label--description" type="text" id="edit-text-field-label" name="text_field_label" value="" size="60" maxlength="255" class="form-text" placeholder=" "/>
           <label for="edit-text-field-label">Text Field Label</label>
           <div class="description">
