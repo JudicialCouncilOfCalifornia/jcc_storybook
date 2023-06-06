@@ -23,12 +23,14 @@ export default {
         text: "Up To Seven",
         links: [
           {
-            text: "Navigation link 1",
+            text: "Navigation link 1 (Overview)",
             url: "#",
+            is_overview_link: true,
           },
           {
             text: "Navigation link 2",
             url: "#",
+            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -60,12 +62,14 @@ export default {
         text: "More Than Seven",
         links: [
           {
-            text: "Navigation link 1",
+            text: "Navigation link 1 (Overview)",
             url: "#",
+            is_overview_link: true,
           },
           {
             text: "Navigation link 2",
             url: "#",
+            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -96,8 +100,9 @@ export default {
             url: "#",
             links: [
               {
-                text: "Navigation link 5.1",
+                text: "Navigation link 5.1 (Overview)",
                 url: "#",
+                is_overview_link: true,
               },
               {
                 text: "Navigation link 5.2",
@@ -115,12 +120,14 @@ export default {
         text: "Lots More",
         links: [
           {
-            text: "Navigation link 1",
+            text: "Navigation link 1 (Overview)",
             url: "#",
+            is_overview_link: true,
           },
           {
             text: "Navigation link 2",
             url: "#",
+            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -190,6 +197,7 @@ export default {
         section_link: {
           text: "Navigation link",
           url: "#",
+          is_overview_link: false,
         },
       },
     ],
