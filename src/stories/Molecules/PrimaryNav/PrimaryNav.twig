@@ -25,7 +25,11 @@
 						<div class="container">
 							<div class="grid">
 								{% for link2 in link.links %}
-									{{ link(link2.text, link2.url) }}
+                  {% set link2_classes = [
+                    'link2',
+                    link2.is_current ? 'is_current' : '',
+                  ] %}
+									<span class="{{ link2_classes|join(' ') }}">{{ link(link2.text, link2.url) }}</span>
 								{% endfor %}
 							</div>
 						</div>

@@ -20,12 +20,16 @@ select {
   position: relative;
 }
 
+.placeholder-container input.form-checkbox:focus,
+.placeholder-container input.form-checkbox:focus-visible {
+  border-radius: 0;
+}
+
 .placeholder-container input:focus,
 .placeholder-container input:focus-visible,
 .placeholder-container textarea:focus,
 .placeholder-container textarea:focus-visible {
   border-color: var(--accent-color);
-  border-radius: 0;
   outline:0;
 }
 

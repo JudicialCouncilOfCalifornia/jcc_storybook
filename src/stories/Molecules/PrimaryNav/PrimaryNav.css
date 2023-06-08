@@ -160,7 +160,7 @@ button.primary-nav__button.active {
 }
 
 .primary-nav__item .grid {
-  grid-gap: var(--s-2, var(--s0));
+  grid-gap: var(--s-1, var(--s0));
 }
 
 .primary-nav__item a {
@@ -175,13 +175,14 @@ button.primary-nav__button.active {
   opacity: 0.5;
 }
 
-.primary-nav__item a.active {
+.primary-nav__item a.active,
+.primary-nav__item .link2.is_current a {
   font-weight: 600;
 }
 
-.primary-nav__item a + a {
+.primary-nav__item .link2 + .link2 {
   border-block-start: 1px dashed var(--color-base);
-  padding-block-start: var(--s-2);
+  padding-block-start: var(--s-1);
 }
 
 .primary-nav button + .primary-nav__item--mega {
