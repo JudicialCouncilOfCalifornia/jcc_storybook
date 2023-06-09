@@ -35,6 +35,7 @@
 
 .secondary-nav .reel {
   background: none;
+  align-items: baseline;
 }
 
 .secondary-nav .reel.overflowing {

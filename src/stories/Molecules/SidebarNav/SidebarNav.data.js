@@ -1,7 +1,10 @@
 export default {
   default: {
     variant: "default",
-    menu_heading: 'Parent menu item',
+    menu_heading: {
+      title: 'Parent menu item',
+      url: "#",
+    },
     links: [
       {
         title: "Simple link",
