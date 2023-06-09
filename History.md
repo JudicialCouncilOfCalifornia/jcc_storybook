@@ -1,4 +1,14 @@
 
+0.53.5 / 2023-06-09
+===================
+
+  * chore: Export libs.
+  * [LWR-219] -- Cleanup of header search styles.
+  * Merge pull request #75 from JudicialCouncilOfCalifornia/feature/LWR-209-nav-look-and-feel
+  * Merge branch 'master' into feature/LWR-209-nav-look-and-feel
+  * styles
+  * css rules
+
 0.53.4 / 2023-06-06
 ===================
 
