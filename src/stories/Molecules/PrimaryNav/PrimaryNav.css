@@ -102,6 +102,11 @@ button.primary-nav__button {
   background-color: transparent;
 }
 
+a.primary-nav__overview-link,
+button.primary-nav__overview-link {
+  font-weight: 700;
+}
+
 .primary-nav button::after {
   align-self: center;
   content: "\25BE";

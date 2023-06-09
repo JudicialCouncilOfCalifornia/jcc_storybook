@@ -33,8 +33,10 @@ select {
   outline:0;
 }
 
-.placeholder-container input:focus ~ label,
-.placeholder-container input:not(:placeholder-shown) ~ label,
+.placeholder-container.js-form-type-textfield input:focus ~ label,
+.placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label,
+.placeholder-container.js-form-type-email input:focus ~ label,
+.placeholder-container.js-form-type-email input:not(:placeholder-shown) ~ label,
 .placeholder-container textarea:focus ~ label,
 .placeholder-container textarea:not(:placeholder-shown) ~ label {
   transform: translateY(-30px) translateX(0px) scale(0.75);
@@ -45,7 +47,9 @@ select {
   color: var(--accent-color);
 }
 
-.placeholder-container label {
+.placeholder-container.js-form-type-email label,
+.placeholder-container.js-form-type-textfield label,
+.placeholder-container.js-form-type-textarea label {
   color: var(--color-base-light-x);
   left: 10px;
   top: 0px;
