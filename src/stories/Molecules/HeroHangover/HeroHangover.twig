@@ -1,5 +1,5 @@
 {% set variant_hide = hangover_hide_compact ? 'hangover--hide-compact' : '' %}
-{% set variant_with_bottom = bottom_content is not empty ? 'hangover--with-bottom' : '' %}
+{% set variant_with_bottom = bottom_content ? 'hangover--with-bottom' : '' %}
 {% set variant_background = background ? 'hangover--' ~ background : '' %}
 
 {% set variant_styles = [] %}

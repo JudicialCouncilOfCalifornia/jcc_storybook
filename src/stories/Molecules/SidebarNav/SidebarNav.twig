@@ -25,7 +25,9 @@
         </div>
         <div>
           {% if menu_heading %}
-            <h2 class="sidebar-nav__parent-label">{{ menu_heading }}</h2>
+            <h2 class="sidebar-nav__parent-label">
+              {{ link(menu_heading, '#') }}
+            </h2>
           {% endif %}
           
           <div class="box {{ with_menu_heading }}">
@@ -34,7 +36,7 @@
             {% for link in links %}
               {% set parent = link.links is not empty ? true : false %}
               <li>
-                {% set active_class = link.active ? 'active' : '' %}
+                {% set active_class = link.active ? 'is-active' : '' %}
                 {% if parent %}
                   {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }} 
                   {# <button class="sidebar-nav__button button {{ active_class }}">{{ link.title }}</button> #}

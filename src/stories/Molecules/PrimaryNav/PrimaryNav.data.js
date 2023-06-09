@@ -30,7 +30,6 @@ export default {
           {
             text: "Navigation link 2",
             url: "#",
-            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -70,7 +69,6 @@ export default {
           {
             text: "Navigation link 2",
             url: "#",
-            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -128,7 +126,6 @@ export default {
           {
             text: "Navigation link 2",
             url: "#",
-            is_overview_link: false,
           },
           {
             text: "Navigation link 3",
@@ -198,7 +195,6 @@ export default {
         section_link: {
           text: "Navigation link",
           url: "#",
-          is_overview_link: false,
         },
       },
     ],

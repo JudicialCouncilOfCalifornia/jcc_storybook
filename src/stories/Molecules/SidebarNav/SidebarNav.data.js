@@ -13,7 +13,7 @@ export default {
         title: "Link with sublinks",
         url: "#",
         attributes: [],
-        active: true,
+        active: false,
         links: [
           {
             title: "Simple link with extra words to test spacing",
@@ -25,7 +25,7 @@ export default {
             title: "Simple link",
             url: "#",
             attributes: [],
-            active: true,
+            active: false,
             links: [
               {
                 title: "Simple link",
