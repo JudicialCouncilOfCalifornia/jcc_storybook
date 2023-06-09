@@ -12,7 +12,7 @@
 
 {% set menu_level = 1 %}
 
-{% set with_menu_heading = menu_heading ? 'with-parent-label' : '' %}
+{% set with_menu_heading = menu_heading.title ? 'with-parent-label' : '' %}
 
 <div class="{{ classes|join(' ') }}">
   <div class="with-sidebar">
@@ -24,9 +24,13 @@
           <span></span>
         </div>
         <div>
-          {% if menu_heading %}
+          {% if menu_heading.title %}
             <h2 class="sidebar-nav__parent-label">
-              {{ link(menu_heading, '#') }}
+              {% if menu_heading.url %}
+                {{ link(menu_heading.title, menu_heading.url) }}
+              {% else %}
+                {{ menu_heading.title }}
+              {% endif %}
             </h2>
           {% endif %}
           
@@ -37,12 +41,14 @@
               {% set parent = link.links is not empty ? true : false %}
               <li>
                 {% set active_class = link.active ? 'is-active' : '' %}
+                
                 {% if parent %}
                   {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }} 
                   {# <button class="sidebar-nav__button button {{ active_class }}">{{ link.title }}</button> #}
                 {% else %}
                   {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }}
                 {% endif %}
+
                 {% if link.links %}
                   <ul class="{{ 'sidebar-nav__item nav-level-' ~ menu_level }}">
                     {{ macros.menu_links(link.links, menu_level + 1) }}
