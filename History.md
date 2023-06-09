@@ -1,4 +1,11 @@
 
+0.53.6 / 2023-06-09
+===================
+
+  * chore: Export libs.
+  * Merge pull request #77 from JudicialCouncilOfCalifornia/LWR-219--storybook--fix-to-sidebarnav-heading
+  * [LWR-219] -- Fix to rendering of sidebarNav heading element
+
 0.53.5 / 2023-06-09
 ===================
 
