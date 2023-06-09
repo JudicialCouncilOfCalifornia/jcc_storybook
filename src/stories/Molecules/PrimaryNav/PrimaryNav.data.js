@@ -35,6 +35,7 @@ export default {
           {
             text: "Navigation link 3",
             url: "#",
+            is_current: true
           },
           {
             text: "Navigation link 4",
