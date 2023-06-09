@@ -26,11 +26,12 @@
 							<div class="grid">
 								{% for link2 in link.links %}
                   {% set link2_classes = [
-                    'link2',
+                    'link',
+                    'link-level-2',
                     link2.is_current ? 'is_current' : '',
                   ] %}
                   {% set overview_link_class = link2.is_overview_link ? 'primary-nav__overview-link' : '' %}
-									<span class="{{ link2_classes|join(' ') }}">{{ link(link2.text, link2.url{class: [overview_link_class]}) }}</span>
+									<span class="{{ link2_classes|join(' ') }}">{{ link(link2.text, link2.url, {class: [overview_link_class]}) }}</span>
 								{% endfor %}
 							</div>
 						</div>

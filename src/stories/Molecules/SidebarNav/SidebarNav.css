@@ -57,6 +57,15 @@
   inline-size: 100%;
 }
 
+.sidebar-nav__parent-label a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.sidebar-nav__parent-label a:hover {
+  color: var(--accent-color);
+}
+
 .sidebar-nav > .box {
   padding-inline: var(--s2);
   padding-block: var(--s0);
@@ -133,8 +142,8 @@ button.sidebar-nav__button:hover {
   color: var(--accent-color);
 }
 
-a.sidebar-nav__button.active,
-button.sidebar-nav__button.active {
+a.sidebar-nav__button.is-active,
+button.sidebar-nav__button.is-active {
   color: var(--accent-color);
   border-block-end: 0px solid var(--accent-color);
 }

@@ -11,15 +11,10 @@ export default {
       />
     </div>
     <div class="form-actions form-wrapper" id="edit-actions">
-      <button 
-        type="submit" 
-        value="Search" 
-        class="button form-submit"
-      >
-        <svg class="icon">
-          <use xlink:href="icons.svg#fa-search"></use>
-        </svg>
-        <span class="sr-only">Search</span>
+      <button class='button form-submit' type='submit'>
+        <span class='inline-form__submit-line'></span>
+        <span class='inline-form__submit-circle'></span>
+        <span class='sr-only'>Search</span>
       </button>
     </div>
   </form>`,
@@ -55,15 +50,10 @@ export default {
       </select>
     </div>
     <div class="form-actions form-wrapper" id="edit-actions">
-      <button 
-        type="submit" 
-        value="Search" 
-        class="button form-submit"
-      >
-        <svg class="icon">
-          <use xlink:href="icons.svg#fa-search"></use>
-        </svg>
-        <span class="sr-only">Search</span>
+      <button class='button form-submit' type='submit'>
+        <span class='inline-form__submit-line'></span>
+        <span class='inline-form__submit-circle'></span>
+        <span class='sr-only'>Search</span>
       </button>
     </div>
   </form>`,

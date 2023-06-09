@@ -8,7 +8,7 @@ export default {
   title: "Molecules/PrimaryNav",
   component: PrimaryNav,
   parameters: {
-    layout: "padded",
+    layout: "centered",
     notes: readme,
   },
   argTypes: {},
