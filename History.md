@@ -1,4 +1,13 @@
 
+0.53.7 / 2023-06-15
+===================
+
+  * chore: Export libs.
+  * Merge pull request #80 from JudicialCouncilOfCalifornia/fix/add-alt-tag-to-logo-icon
+  * [Fix] -- Added alt tag to the site logo image.
+  * Merge pull request #79 from JudicialCouncilOfCalifornia/feature/LWR-229-style-bugs
+  * heading adjustment
+
 0.53.6 / 2023-06-09
 ===================
 
