@@ -32,7 +32,7 @@
 
 .section__content {
   box-sizing: border-box;
-  padding-block: var(--s5);
+  padding-block: var(--s3);
   /* Brings content above tint due to grid. */
   z-index: 1;
 }
