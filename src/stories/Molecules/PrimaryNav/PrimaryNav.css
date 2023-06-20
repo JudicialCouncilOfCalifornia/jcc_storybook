@@ -71,6 +71,10 @@
   display: none;
 }
 
+.primary-nav__item a {
+  padding: 0 0 0 var(--s0);
+}
+
 a.primary-nav__button,
 button.primary-nav__button {
   --button-border: transparent;
@@ -98,9 +102,11 @@ button.primary-nav__button {
   background-color: transparent;
 }
 
-a.primary-nav__overview-link,
-button.primary-nav__overview-link {
+.primary-nav__item a.primary-nav__overview-link,
+.primary-nav__item button.primary-nav__overview-link {
   font-weight: 700;
+  font-size: 1.5ch;
+  padding: 0 0 0 0;
 }
 
 .primary-nav button::after {
