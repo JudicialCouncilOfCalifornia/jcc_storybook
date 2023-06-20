@@ -6,7 +6,7 @@ export default {
       {
         text: "Careers",
         url: "#",
-        is_current: false,
+        is_current: true,
       },
       {
         text: "Contact Us",
@@ -37,7 +37,7 @@ export default {
       {
         text: "Careers",
         url: "#",
-        is_current: false,
+        is_current: true,
       },
       {
         text: "Contact Us",
@@ -68,7 +68,7 @@ export default {
       {
         text: "Careers",
         url: "#",
-        is_current: false,
+        is_current: true,
       },
       {
         text: "Contact Us",
@@ -99,7 +99,69 @@ export default {
       {
         text: "Careers",
         url: "#",
+        is_current: true,
+      },
+      {
+        text: "Contact Us",
+        url: "#",
         is_current: false,
+      },
+      {
+        text: "Accessibility",
+        url: "#",
+        is_current: false,
+      },
+      {
+        text: "Public Access To Records",
+        url: "#",
+        is_current: false,
+      },
+      {
+        text: "Newsroom",
+        url: "#",
+        is_current: false,
+      },
+    ],
+  },
+  alternate: {
+    variant: "alternate",
+    overflowing_variant: "stack",
+    links: [
+      {
+        text: "Careers",
+        url: "#",
+        is_current: true,
+      },
+      {
+        text: "Contact Us",
+        url: "#",
+        is_current: false,
+      },
+      {
+        text: "Accessibility",
+        url: "#",
+        is_current: false,
+      },
+      {
+        text: "Public Access To Records",
+        url: "#",
+        is_current: false,
+      },
+      {
+        text: "Newsroom",
+        url: "#",
+        is_current: false,
+      },
+    ],
+  },
+  alternate_with_divider: {
+    variant: "alternate-with-divider",
+    overflowing_variant: "stack",
+    links: [
+      {
+        text: "Careers",
+        url: "#",
+        is_current: true,
       },
       {
         text: "Contact Us",
