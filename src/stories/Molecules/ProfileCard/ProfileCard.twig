@@ -1,0 +1,21 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'profile-card--' ~ variant : 'profile-card--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'profile-card',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+	<a href="{{ url }}" class="profile-card__link"> 
+    <div class="profile-card__inner stack">
+      <div class="profile-card__image"> {{ image }} </div>
+      <h3 class="profile-card__name">{{ name }}</h3>
+      <div class="profile-card__title">{{ title }}</div>
+      <div class="profile-card__content">{{ content }}</div>
+    </div>
+  </a>
+</div>
