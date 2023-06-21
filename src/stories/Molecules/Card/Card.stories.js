@@ -23,6 +23,8 @@ export default {
         "media-right",
         "overlay",
         "striped",
+        "striped",
+        "striped-aligned",
       ],
     },
     aspect: {
@@ -107,3 +109,7 @@ Overlay.args = data.overlay;
 
 export const Striped = Template.bind({});
 Striped.args = data.striped;
+
+export const StripedAligned = Template.bind({});
+StripedAligned.args = data.striped_aligned;
+

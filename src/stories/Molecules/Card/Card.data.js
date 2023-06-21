@@ -194,4 +194,29 @@ export default {
       },
     ],
   },
+  striped_aligned: {
+    variant: "striped-aligned",
+    clickable_card: false,
+    background: null,
+    aspect: [],
+    media: false,
+    icon_data: {
+      icon: "speaker",
+      color: false,
+    },
+    heading: "Heading For A Card",
+    text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+    button_data: [
+      {
+        label: "Button text of variable length",
+        href: "#",
+        variant: "primary",
+      },
+      {
+        label: "Button text",
+        href: "#",
+        variant: "primary",
+      },
+    ],
+  },
 };
