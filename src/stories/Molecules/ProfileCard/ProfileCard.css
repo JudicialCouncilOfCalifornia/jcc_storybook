@@ -41,13 +41,14 @@ a.profile-card__link,
   margin-top: var(--s-2);
 }
 
-.profile-card:hover {
+a.profile-card__link:hover {
+  display: block;
   background-color: var(--color-secondary);
 }
 
-.profile-card:hover a.profile-card__link,
-.profile-card:hover h2,
-.profile-card:hover h3,
-.profile-card:hover .profile-card__content {
+a.profile-card__link:hover,
+a.profile-card__link:hover h2,
+a.profile-card__link:hover h3,
+a.profile-card__link:hover .profile-card__content {
   color: var(--color-white);
 }
