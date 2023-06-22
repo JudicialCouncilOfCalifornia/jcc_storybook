@@ -78,3 +78,111 @@
   padding: 0;
   margin: 0;
 }
+
+/* Alternate style */
+.secondary-nav--alternate {
+  border-block: 1px solid var(--color-base-light-x);
+}
+
+.secondary-nav--alternate > ul > li {
+  padding-block:0;
+}
+
+.secondary-nav--alternate > ul > li a {
+  padding-block: var(--s1);
+  padding-inline: var(--s0);
+  font-size: calc(var(--s0) - 2px);
+  font-weight: 600;
+}
+
+.secondary-nav--alternate ul li:first-of-type a {
+  padding-inline-start: var(--s0);
+}
+
+.secondary-nav--alternate ul li:last-of-type a {
+  padding-inline-end: var(--s0);
+}
+
+.secondary-nav--alternate > ul > li:hover a,
+.secondary-nav--alternate > ul > li:focus-within a {
+  color: var(--color-white);
+  background-color: var(--color-primary-light-x);
+  outline: 0;
+}
+
+.secondary-nav--alternate > ul > li a:hover {
+  opacity: 1;
+}
+
+.secondary-nav--alternate ul li a.active, 
+.secondary-nav--alternate ul li.active a {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark-x);
+}
+
+.secondary-nav--alternate .reel.overflowing > li > a,
+.secondary-nav--alternate .reel.overflowing > li:hover > a,
+.secondary-nav--alternate .reel.overflowing > li:focus-within > a,
+.secondary-nav--alternate .reel.overflowing > li > a:hover,
+.secondary-nav--alternate .reel.overflowing > li > a:focus {
+  width: 100%;
+  padding-inline: var(--s0);
+}
+
+/* Alternate style - with divider*/
+.secondary-nav--alternate-with-divider {
+  border-block: 1px solid var(--color-base-light-x);
+}
+
+.secondary-nav--alternate-with-divider > ul > li {
+  padding-block:0;
+}
+
+.secondary-nav--alternate-with-divider > ul > li a {
+  padding-block: var(--s1);
+  padding-inline: var(--s0);
+  font-size: calc(var(--s0) - 2px);
+  font-weight: 600;
+}
+
+.secondary-nav--alternate-with-divider ul li:first-of-type a {
+  padding-inline-start: var(--s0);
+}
+
+.secondary-nav--alternate-with-divider ul li:last-of-type a {
+  padding-inline-end: var(--s0);
+}
+
+.secondary-nav--alternate-with-divider > ul > li:hover a,
+.secondary-nav--alternate-with-divider > ul > li:focus-within a {
+  color: var(--color-white);
+  background-color: var(--color-primary-light-x);
+  outline: 0;
+}
+
+.secondary-nav--alternate-with-divider ul li a.active, 
+.secondary-nav--alternate-with-divider ul li.active a {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark-x);
+}
+
+.secondary-nav--alternate-with-divider > ul > li a:hover {
+  opacity: 1;
+}
+
+.secondary-nav--alternate-with-divider > ul > li + li a {
+  border-inline-start: 1px solid var(--color-base-light-x);
+}
+
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li:hover > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li:focus-within > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a:hover,
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a:focus {
+  width: 100%;
+  padding-inline: var(--s0);
+}
+
+.secondary-nav--alternate-with-divider > ul.reel.overflowing > li + li a {
+  border-block-start: 1px solid var(--color-base-light-x);
+}

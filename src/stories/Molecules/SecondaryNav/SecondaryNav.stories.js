@@ -16,7 +16,7 @@ export default {
       description: "SecondaryNav variant.",
       table: { defaultValue: { summary: "default" } },
       control: { type: "radio" },
-      options: ["default", "with-divider"],
+      options: ["default", "with-divider", "alternate", "alternate-with-divider"],
     },
     overflowing_variant: {
       description: "Overflowing variant.",
@@ -44,3 +44,9 @@ HiddenOverflowing.args = data.hidden_overflowing;
 
 export const WithDivider = Template.bind({});
 WithDivider.args = data.with_divider;
+
+export const Alternate = Template.bind({});
+Alternate.args = data.alternate;
+
+export const AlternateWithDivider = Template.bind({});
+AlternateWithDivider.args = data.alternate_with_divider;
