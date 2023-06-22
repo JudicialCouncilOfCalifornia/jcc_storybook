@@ -1,6 +1,18 @@
 
-0.53.7 / 2023-06-15
+0.54.0 / 2023-06-22
 ===================
+
+  * chore: Export libs.
+  * [docs] -- readme updates on some recently updated items.
+  * Merge pull request #83 from JudicialCouncilOfCalifornia/DCAS-36-preserve-bulleted-style-for-rules-alpha-numeric-roman
+  * Merge pull request #84 from JudicialCouncilOfCalifornia/DCAS-42-storybook-card-variation-no-media-with-icon-left-of-header
+  * Merge pull request #81 from JudicialCouncilOfCalifornia/DCAS-44-storybook-secondary-nav-variant-for-dca-with-hover-state
+  * [DCAS-42] -- Added new "Striped (Aligned)" card variant.
+  * [DCAS-36] -- Added a setup to try to set ordered and unordered lists in a pre-formatted fashion.
+  * [DCAS-44] -- Setup alternate styles for secondary nav, "alternate" and "alternate_with_divider".
+
+0.53.7 / 2023-06-15
+ ===================
 
   * chore: Export libs.
   * Merge pull request #80 from JudicialCouncilOfCalifornia/fix/add-alt-tag-to-logo-icon
