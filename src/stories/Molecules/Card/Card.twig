@@ -55,6 +55,9 @@
       <div class="card__main stack">
         {% if heading is not empty %}
           <div class="card__heading">
+            {% if icon_data and variant == 'card--striped-aligned' %}
+              {% include "@atoms/Icon/Icon.twig" with icon_data %}
+            {% endif %}
             <{{h}}>{{ heading }}</{{h}}>
           </div>
         {% endif %}
@@ -65,7 +68,8 @@
             </div>
           {% endif %}
           {% if tag == 'div' and button_data is not empty %}
-            <div class="card__buttons stack">
+          {% set button_class = variant == 'card--striped-aligned' ? 'cluster' : 'stack' %}
+            <div class="card__buttons {{ button_class }}">
               {% for item in button_data %}
                 {% if item.href %}
                   {% include "@atoms/Button/Button.twig" with item %}
