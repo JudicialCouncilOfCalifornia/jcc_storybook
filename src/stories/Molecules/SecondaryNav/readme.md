@@ -1,4 +1,5 @@
 <!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
+
 # Secondary Nav
 
 The Secondary Nav is essentially just an inline list of links. However it needs to behave differently in some contexts.
@@ -23,7 +24,7 @@ In the case of default behavior, or the lack of javascript in the browser, the c
 <details>
   <summary>Twig Variables:</summary>
   ```
-  variant: [default | with-divider],
+  variant: [default | with-divider | alternate | alternate-with-divider],
   overflowing_variant: [default | stack | hidden],
   links: [
     {

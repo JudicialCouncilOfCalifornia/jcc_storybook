@@ -1,21 +1,18 @@
-<!-- This is the general documentation layout. Add or remove any sections as needed, but try to stay consistent across components. -->
-# Text
+# Example body/wysiwyg text
 
-Description of the Text in markdown.
+This page is to show how default "body/wyiswyg" content will appear with the base
+elements styles.
 
-<details>
-  <summary>Inherited CSS Variables:</summary>
-  - `--name`: description...
-</details>
+This page includes:
 
-<details>
-  <summary>Twig Variables:</summary>
-  ```
-  variant: "default",
-  ...,
-  sub_component_data: {
-    variant: "default",
-    ...
-  }
-  ```
-</details>
+- headings
+- paragraphs
+- links
+- bold/strong
+- italic/empasized
+- ordered lists
+- unordered list
+- definition list
+- code and preformatted
+
+_This is only an example page and not to be used as a component_
