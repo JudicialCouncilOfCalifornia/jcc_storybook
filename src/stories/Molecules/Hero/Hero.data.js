@@ -1,3 +1,6 @@
+import Card from "../Card/Card.twig";
+import { NoMedia as CardNoMedia } from "../Card/Card.stories";
+
 export default {
   banner: {
     variant: "banner",
@@ -19,6 +22,88 @@ export default {
         variant: "text",
       },
     },
+    navigation: [
+      {
+        variant: "striped-aligned",
+        clickable_card: true,
+        background: null,
+        aspect: [],
+        media: false,
+        icon_data: {
+          icon: "line-paper-gather-documents",
+          color: false,
+        },
+        heading: "Case Information",
+        text: "",
+        button_data: [
+          {
+            label: "Button",
+            href: "#",
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        variant: "striped-aligned",
+        clickable_card: true,
+        background: null,
+        aspect: [],
+        media: false,
+        icon_data: {
+          icon: "line-judge-gavel",
+          color: false,
+        },
+        heading: "Oral Arguments",
+        text: "",
+        button_data: [
+          {
+            label: "Button",
+            href: "#",
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        variant: "striped-aligned",
+        clickable_card: true,
+        background: null,
+        aspect: [],
+        media: false,
+        icon_data: {
+          icon: "line-circle-person",
+          color: false,
+        },
+        heading: "Job Opportunities",
+        text: "",
+        button_data: [
+          {
+            label: "Button",
+            href: "#",
+            variant: "primary",
+          },
+        ],
+      },
+      {
+        variant: "striped-aligned",
+        clickable_card: true,
+        background: null,
+        aspect: [],
+        media: false,
+        icon_data: {
+          icon: "line-courthouse",
+          color: false,
+        },
+        heading: "About the Courts",
+        text: "",
+        button_data: [
+          {
+            label: "Button",
+            href: "#",
+            variant: "primary",
+          },
+        ],
+      },
+    ],
   },
   content_bg: {
     variant: "content-bg",

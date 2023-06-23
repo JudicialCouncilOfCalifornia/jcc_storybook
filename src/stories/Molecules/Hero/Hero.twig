@@ -33,4 +33,11 @@
 			</div>
 		</div>
 	</div>
+	{% if navigation %}
+		<div class="hero__navigation cards grid">
+			{% for item in navigation %}
+				{% include "@molecules/Card/Card.twig" with item %}
+			{% endfor %}
+		</div>
+	{% endif %}
 </div>
