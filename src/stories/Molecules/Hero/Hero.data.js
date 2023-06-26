@@ -1,8 +1,26 @@
-import Card from "../Card/Card.twig";
-import { NoMedia as CardNoMedia } from "../Card/Card.stories";
-
 export default {
   banner: {
+    variant: "banner",
+    content_justify: "left",
+    accent_color: false,
+    content_bg_color: false,
+    bg_tint: "accent-warm-dark-xx",
+    background_image_url:
+      "https://source.unsplash.com/random/900×700/?building",
+    card_data: {
+      variant: "default",
+      first_component: true,
+      media: false,
+      heading: "Hero Heading",
+      text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p>",
+      button_data: {
+        label: "Text Button",
+        href: "#",
+        variant: "text",
+      },
+    },
+  },
+  banner_featured_links: {
     variant: "banner",
     content_justify: "left",
     accent_color: false,
