@@ -179,18 +179,25 @@ button.primary-nav__button.active {
 }
 
 .primary-nav__item a:hover {
-  opacity: 0.5;
+  color: var(--accent-color);
 }
 
 .primary-nav__item a.active,
 .primary-nav__item .link-level-2.is_current a {
   font-weight: 600;
+  color: var(--accent-color);
 }
 
-.primary-nav__item .link-level-2 + .link-level-2,
-.primary-nav__item.primary-nav__item--mega .link-level-2  {
+.primary-nav__item .link-level-2 + .link-level-2 {
   border-block-start: 1px dashed var(--color-base);
   padding-block-start: var(--s-1);
+}
+
+.primary-nav__item.primary-nav__item--mega .link-level-2  {
+  border-block-end: 1px dashed var(--color-base);
+  padding-block-end: var(--s-1);
+  border-block-start: none;
+  padding-block-start: 0;
 }
 
 .primary-nav button + .primary-nav__item--mega {
@@ -200,10 +207,14 @@ button.primary-nav__button.active {
   width: 100%;
 }
 
+.primary-nav__item--mega .grid :first-child{
+  grid-column: 1 / -1;
+}
+
 .primary-nav__default button + .primary-nav__item--mega a {
   border: 0;
   padding: var(--s-5) var(--s-3);
-  background-color: var(--color-base-light-xx);
+  /*background-color: var(--color-base-light-xx);*/
 }
 
 /* Hide the reel when overflowing. */
