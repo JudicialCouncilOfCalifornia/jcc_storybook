@@ -21,5 +21,8 @@ const Template = ({ ...args }) => {
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
-// Data comes from the PrimaryNav.data.js file.
 Default.args = data.default;
+
+// Bind the Alternate component variant for this component.
+export const Alternate = Template.bind({});
+Alternate.args = data.alternate;
