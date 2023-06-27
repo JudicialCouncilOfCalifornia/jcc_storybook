@@ -22,21 +22,9 @@
 }
 
 .cards .card--striped:nth-of-type(6n + 5) {
-  background: repeating-linear-gradient(
-    125deg,
-    var(--color-secondary-dark-x),
-    var(--color-secondary-dark-x) 1px,
-    var(--color-secondary-dark-xx) 1px,
-    var(--color-secondary-dark-xx) 8px
-  )
+  background: var(--background-striped-secondary-dark-xx);
 }
 
 .cards .card--striped:nth-of-type(6n + 6) {
-  background: repeating-linear-gradient(
-    125deg,
-    #2fBfEf,
-    #2fBfEf 1px,
-    var(--color-primary-light-xx) 1px,
-    var(--color-primary-light-xx) 8px
-  )
+  background: var(--background-striped-primary-light-xx);
 }

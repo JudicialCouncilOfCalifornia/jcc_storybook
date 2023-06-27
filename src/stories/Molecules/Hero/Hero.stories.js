@@ -58,5 +58,8 @@ const Template = ({ ...args }) => {
 export const Banner = Template.bind({});
 Banner.args = data.banner;
 
+export const BannerFeaturedLinks = Template.bind({});
+BannerFeaturedLinks.args = data.banner_featured_links;
+
 export const BannerContentBGWhite = Template.bind({});
 BannerContentBGWhite.args = data.content_bg;

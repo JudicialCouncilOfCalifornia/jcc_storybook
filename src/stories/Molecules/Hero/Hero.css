@@ -12,6 +12,10 @@
   grid-area: hero;
 }
 
+.hero .box {
+  padding-block: 0;
+}
+
 .hero__image {
   background-image: var(--background-image);
   background-position: center center;
@@ -31,9 +35,73 @@
 }
 
 .hero__content-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "hero-inner";
   color: var(--color);
-  max-width: 50%;
+  max-width: 60ch;
   width: 100%;
+}
+
+/* Banner content min height & vertical alignment */
+.hero__content-inner__content {
+  display: flex;
+  padding-block: var(--s4);
+  min-height: calc(20rem - calc(var(--s4) * 2));
+}
+
+.hero__content-inner__content .card {
+  margin-block: auto;
+}
+
+.hero__content-inner > * {
+  /* padding: var(--s4); */
+  grid-area: hero-inner;
+  z-index: 1;
+}
+
+.hero__navigation.cards {
+  --gap: none;
+  --grid-min-width: 29ch;
+  grid-area: unset;
+}
+
+.hero__navigation.cards .card {
+  padding-inline: var(--s-4);
+  padding-block: var(--s0);
+}
+
+.hero__navigation.cards .card .icon {
+  height: var(--s3);
+}
+
+.hero__navigation.cards .card .icon-wrapper {
+  margin-inline-end: unset;
+}
+
+.hero__navigation.cards .card h2 {
+  font-size: var(--s1);
+}
+
+/* Automated nav button colors */
+.hero__navigation.cards .card:nth-of-type(6n + 1) {
+  background: var(--background-striped-secondary);
+}
+
+.hero__navigation.cards .card:nth-of-type(6n + 2) {
+  background: var(--background-striped-primary-dark-x);
+}
+
+.hero__navigation.cards .card:nth-of-type(6n + 3) {
+  background: var(--background-striped-primary);
+}
+
+.hero__navigation.cards .card:nth-of-type(6n + 4) {
+  background: var(--background-striped-accent-warm-dark-x);
+}
+
+.hero__navigation.cards .card--striped-aligned .card__heading {
+  --gap: var(--s-3);
 }
 
 /* Alignment */
@@ -67,22 +135,14 @@
   --button-color: var(--color-black);
 }
 
-.hero--content-bg .box {
-  padding-block: 0;
+.hero--content-bg .hero__content-inner {
+  color: var(--color-black);
+  padding-inline: var(--s4);
+  background-color: var(--background-fade-900-white);
 }
 
 .hero--content-bg .hero__content-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "hero-inner";
-  max-width: 60ch;
   color: var(--color-black);
-}
-
-.hero--content-bg .hero__content-inner > * {
-  padding: var(--s4);
-  grid-area: hero-inner;
-  z-index: 1;
 }
 
 .hero--content-bg .hero__content-inner__background {
