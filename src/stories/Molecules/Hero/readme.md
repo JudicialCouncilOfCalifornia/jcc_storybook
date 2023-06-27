@@ -31,6 +31,10 @@ A hero typically consists of a background overlaid with content that spans the w
       href: "#",
       variant: "text",
     },
+    navigation: [
+      // Card variants go here. "stripe_aligned" is recommended. 
+      // Up to 4 is recommended.
+    ],
   },
   ```
 </details>

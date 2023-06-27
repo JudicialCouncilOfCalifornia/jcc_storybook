@@ -19,25 +19,25 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
-	<div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
-	<div class="hero__tint"></div>
-	<div class="hero__content box">
-		<div class="container">
-			<div class="hero__content-inner">
-				<div class="hero__content-inner__background"></div>
-				<div class="hero__content-inner__content">
-					{% if card_data %}
-						{% include "@molecules/Card/Card.twig" with card_data %}
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</div>
-	{% if navigation %}
-		<div class="hero__navigation cards grid">
-			{% for item in navigation %}
-				{% include "@molecules/Card/Card.twig" with item %}
-			{% endfor %}
-		</div>
-	{% endif %}
+  <div class="hero__image" style="--background-image: url('{{ background_image_url }}');"></div>
+  <div class="hero__tint"></div>
+  <div class="hero__content box">
+    <div class="container">
+      <div class="hero__content-inner">
+        <div class="hero__content-inner__content">
+          {% if card_data %}
+            {% include "@molecules/Card/Card.twig" with card_data %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if navigation %}
+    <div class="hero__navigation cards grid">
+      {% for item in navigation %}
+        {% include "@molecules/Card/Card.twig" with item %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>
+

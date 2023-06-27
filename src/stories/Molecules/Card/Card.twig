@@ -53,6 +53,7 @@
     {% endif %}
     {% if heading or text or ( button_data[0].href and tag == 'div' ) %}
       <div class="card__main stack">
+
         {% if heading is not empty %}
           <div class="card__heading">
             {% if icon_data and variant == 'card--striped-aligned' %}
@@ -61,23 +62,30 @@
             <{{h}}>{{ heading }}</{{h}}>
           </div>
         {% endif %}
-        <div class="card__body">
-          {% if text is not empty %}
-          <div class="card__text">
-              {{ text }}
-            </div>
-          {% endif %}
-          {% if tag == 'div' and button_data is not empty %}
-          {% set button_class = variant == 'card--striped-aligned' ? 'cluster' : 'stack' %}
-            <div class="card__buttons {{ button_class }}">
-              {% for item in button_data %}
-                {% if item.href %}
-                  {% include "@atoms/Button/Button.twig" with item %}
-                {% endif %}
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
+
+        {% if text is not empty or (button_data is not empty and not clickable_card) %}
+          <div class="card__body">
+            
+            {% if text is not empty %}
+            <div class="card__text">
+                {{ text }}
+              </div>
+            {% endif %}
+            
+            {% if tag == 'div' and button_data is not empty %}
+            {% set button_class = variant == 'card--striped-aligned' ? 'cluster' : 'stack' %}
+              <div class="card__buttons {{ button_class }}">
+                {% for item in button_data %}
+                  {% if item.href %}
+                    {% include "@atoms/Button/Button.twig" with item %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
       </div>
     {% endif %}
   </div>

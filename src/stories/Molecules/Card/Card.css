@@ -259,6 +259,7 @@
 }
 
 .card--striped-aligned .card__heading {
+  --gap: var(--s2);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -267,12 +268,12 @@
   max-width: var(--measure);
   margin-inline-end: auto;
   flex-wrap: wrap;
-  gap: var(--gap, 1rem);
+  column-gap: var(--gap, 1rem);
 }
 
 .card--striped-aligned .card__heading .icon-wrapper {
-  width: var(--s6);
-  margin-inline-end: var(--s1);
+  width: 3.25rem;
+  margin-inline-end: 0;
 }
 
 .card--striped-aligned .card__text {

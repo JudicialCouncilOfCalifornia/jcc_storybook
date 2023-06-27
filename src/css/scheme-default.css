@@ -161,6 +161,14 @@
   --background-solid-base-dark-x: var(--color-base-dark-x);
   --background-solid-base-light-xx: var(--color-base-light-xx);
 
+  /* Semi-transparent backgrounds */
+  --background-fade-900-white: rgba(255 255 255 / .9);
+  --background-fade-500-white: rgba(255 255 255 / .5);
+  --background-fade-100-white: rgba(255 255 255 / .1);
+  --background-fade-900-black: rgba(0 0 0 / .9);
+  --background-fade-500-black: rgba(0 0 0 / .5);
+  --background-fade-100-black: rgba(0 0 0 / .1);
+
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
   --heading-color: var(--color-primary-dark-x);
