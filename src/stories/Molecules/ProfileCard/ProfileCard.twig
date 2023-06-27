@@ -1,0 +1,25 @@
+
+{% set classes = [
+  'profile-card',
+  'profile-card--default',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  {% if url is not empty %}<a href="{{ url }}" class="profile-card__link">{% endif %}
+    <div class="profile-card__inner stack">
+      <div class="profile-card__image"> {{ image }} </div>
+
+      {% if name %}
+        <h3 class="profile-card__name">{{ name }}</h3>
+      {% endif %}
+      
+      {% if title %}
+        <div class="profile-card__title">{{ title }}</div>
+      {% endif %}
+      
+      {% if content %}
+        <div class="profile-card__content">{{ content }}</div>
+      {% endif %}
+    </div>
+  {% if url is not empty %}</a>{% endif %}
+</div>
