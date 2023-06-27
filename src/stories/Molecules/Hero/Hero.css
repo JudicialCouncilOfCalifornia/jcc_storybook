@@ -45,7 +45,7 @@
 
 /* Banner content min height & vertical alignment */
 .hero__content-inner__content {
-  display: flex;
+  /* display: flex; */
   padding-block: var(--s4);
   min-height: calc(20rem - calc(var(--s4) * 2));
 }
