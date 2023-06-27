@@ -10,6 +10,7 @@
   variant_class,
 ] %}
 
+{% if form is not empty %}
 	<div class="{{ classes|join(' ') }}"> {% if variant != "no-toggle" %}
 		<div class="header-search__search-toggle">
 			<span class="header-search__search-line"></span>
@@ -18,3 +19,4 @@
 	{% endif %}
 	{{ form }}
 	</div>
+{% endif %}
