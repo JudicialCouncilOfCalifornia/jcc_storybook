@@ -1,4 +1,19 @@
 
+0.54.1 / 2023-06-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #87 from JudicialCouncilOfCalifornia/feature/DCAS-44-storybook-primary-nav-variant
+  * [DCAS-44] -- Setup Alternate style on primary navigation
+  * [DCAS-41] -- Set display on inner content to expand the width.
+  * Merge pull request #85 from JudicialCouncilOfCalifornia/feature/DCAS-41--hero-navigation
+  * Merge pull request #82 from JudicialCouncilOfCalifornia/DCAS-50-storybook-hover-state-and-rounded-image-for-justices
+  * [DCAS-50] -- Update to allow for no-link/non-hover style. Update to readme
+  * [DCAS-50] -- Added ProfileCard and ProfileCards components.
+  * [DCAS-41] -- Refinement of hero navigation with cards.
+  * DCAS-41: vertical align fix, separated example, & tweaks
+  * DCAS-41: add nav & adjust banner content alignment
+
 0.54.0 / 2023-06-22
 ===================
 
