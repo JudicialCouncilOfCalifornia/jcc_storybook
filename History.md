@@ -1,4 +1,15 @@
 
+0.54.3 / 2023-06-28
+===================
+
+  * chore: Export libs.
+  * Merge pull request #86 from JudicialCouncilOfCalifornia/feature/LWR-234-menu-items-cleanup
+  * Merge pull request #89 from JudicialCouncilOfCalifornia/DCAS-41--hero-navgiation-icon-sizing-adjustments
+  * [DCAS-41] -- Set max width to profile cards
+  * [DCAS-41] -- Adjust hero nav card min width
+  * new edits
+  * css edits
+
 0.54.2 / 2023-06-27
 ===================
 
