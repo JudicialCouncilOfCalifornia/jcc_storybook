@@ -62,7 +62,7 @@
 
 .hero__navigation.cards {
   --gap: none;
-  --grid-min-width: 29ch;
+  --grid-min-width: 40ch;
   grid-area: unset;
 }
 
