@@ -1,4 +1,11 @@
 
+0.54.2 / 2023-06-27
+===================
+
+  * chore: Export libs.
+  * Merge pull request #88 from JudicialCouncilOfCalifornia/DCAS-41--hero-navgiation-icon-sizing-adjustments
+  * [DCAS-41] -- Adjust the icon height and width in hero navigation cards
+
 0.54.1 / 2023-06-26
 ===================
 
