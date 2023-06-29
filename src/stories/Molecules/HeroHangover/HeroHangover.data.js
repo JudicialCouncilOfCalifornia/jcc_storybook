@@ -10,6 +10,7 @@ export default {
     text: "",
     hangover_content: "",
     bottom_content: "",
+    blurb: false,
   },
   with_brow: {
     hangover_hide_compact: false,
@@ -24,6 +25,7 @@ export default {
     text: "",
     hangover_content: "",
     bottom_content: "",
+    blurb: false,
   },
   with_media: {
     hangover_hide_compact: false,
@@ -44,6 +46,28 @@ export default {
       media: '<img src="https://source.unsplash.com/random/720x720/?zen" />',
     }),
     bottom_content: "",
+    blurb: false,
+  },
+  with_blurb: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
+    brow: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "Part two",
+    },
+    heading: "This is a Heading",
+    text: "",
+    hangover_content: Card({
+      variant: "bordered-center",
+      aspect: [4, 3],
+      clickable_card: false,
+      background: null,
+      text: '<h3>Apply or Nominate a Member</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p><p><a href="#" class="button button--primary button--normal">Apply</a></p>',
+    }),
+    bottom_content: "",
+    blurb: true,
   },
   with_text: {
     hangover_hide_compact: false,
@@ -64,6 +88,7 @@ export default {
       media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
     }),
     bottom_content: "",
+    blurb: false,
   },
   with_bottom: {
     hangover_hide_compact: false,
@@ -84,6 +109,7 @@ export default {
       media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
     }),
     bottom_content: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    blurb: false,
   },
   hide_media_compact: {
     hangover_hide_compact: true,
@@ -106,5 +132,6 @@ export default {
       text: false,
     }),
     bottom_content: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    blurb: false,
   },
 }
