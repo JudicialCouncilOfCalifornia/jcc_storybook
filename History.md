@@ -1,4 +1,13 @@
 
+0.54.4 / 2023-06-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #90 from JudicialCouncilOfCalifornia/feature/LWR-238-content-in-hero-hangover-blurb
+  * Merge pull request #91 from JudicialCouncilOfCalifornia/bugfix/LWR-243--missing-secondary-dark-xx
+  * LWR-243: correct scheme value for missing darker green
+  * added variant to hero hangover
+
 0.54.3 / 2023-06-28
 ===================
 
