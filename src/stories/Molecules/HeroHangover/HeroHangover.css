@@ -33,6 +33,11 @@
   padding: 0;
 }
 
+.hangover .card--bordered-center .card .card__main,
+.hangover .card.card--bordered-center .card__main {
+  text-align: left;
+}
+
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
@@ -49,11 +54,13 @@
 /* Variants */
 
 /* Use negative bottom margin to pull the image into the bottom sidebar. */
-.hangover--with-bottom .hangover__top-hangover-content > * {
+.hangover--with-bottom .hangover__top-hangover-content > *,
+.hangover--with-blurb .hangover__top-hangover-content > * {
   margin-block-end: var(--hangover-offset);
 }
 
-.hangover--with-bottom .hangover__top-media.box {
+.hangover--with-bottom .hangover__top-media.box,
+.hangover--with-blurb .hangover__top-media.box {
   padding-block-end: 0;
 }
 
@@ -282,7 +289,8 @@
   padding-block-end: 0;
 }
 
-.hangover--with-bottom .wrapping .hangover__top-hangover-content > * {
+.hangover--with-bottom .wrapping .hangover__top-hangover-content > *,
+.hangover--with-blurb .wrapping .hangover__top-hangover-content > * {
   margin-block-end: 0;
 }
 

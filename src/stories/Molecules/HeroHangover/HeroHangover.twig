@@ -1,5 +1,6 @@
 {% set variant_hide = hangover_hide_compact ? 'hangover--hide-compact' : '' %}
 {% set variant_with_bottom = bottom_content ? 'hangover--with-bottom' : '' %}
+{% set variant_with_blurb = blurb ? 'hangover--with-blurb' : '' %}
 {% set variant_background = background ? 'hangover--' ~ background : '' %}
 
 {% set variant_styles = [] %}
@@ -15,6 +16,7 @@
   variant_background,
   variant_hide,
   variant_with_bottom,
+  variant_with_blurb,
 ] %}
 
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">

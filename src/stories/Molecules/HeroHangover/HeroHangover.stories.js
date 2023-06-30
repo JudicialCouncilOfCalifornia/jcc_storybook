@@ -56,6 +56,9 @@ WithBrow.args = data.with_brow;
 export const WithMedia = Template.bind({});
 WithMedia.args = data.with_media;
 
+export const WithBlurb = Template.bind({});
+WithBlurb.args = data.with_blurb;
+
 export const WithText = Template.bind({});
 WithText.args = data.with_text;
 
