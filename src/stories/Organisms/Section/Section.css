@@ -43,6 +43,7 @@
 
 .section .section__main {
   width: 100%;
+  align-items: flex-start;
 }
 
 .section .section__main.multiple:not(.stack) .card__inner {

@@ -1,0 +1,30 @@
+{# Set up variant classes. #}
+{% set classes = [
+  'profile-bio',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <div class="profile-bio__main stack">
+    {% if name|render %}
+      <div class="profile-bio__header">
+        <h1 class="profile-bio__heading">{{ name }}</h1>
+      </div>
+    {% endif %}
+
+    {% if title|render %}
+      <div class="profile-bio__title">{{ title }}</div>
+    {% endif %}
+
+    {% if division|render %}
+      <div class="profile-bio__division">{{ division }}</div>
+    {% endif %}
+
+    {% if date|render %}
+      <div class="profile-bio__date">{{ date }}</div>
+    {% endif %}
+
+    {% if content|render %}
+      <div class="profile-bio__text">{{ content }}</div>
+    {% endif %}
+  </div>
+</div>

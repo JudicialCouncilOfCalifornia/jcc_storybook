@@ -1,0 +1,6 @@
+.profile .section .section__main {
+  --gap: var(--s4);
+  --sidebar_direction: "row-reverse";
+  --sidebar-width: 30ch;
+  align-items: flex-start;
+}

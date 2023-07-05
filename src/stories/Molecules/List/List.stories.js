@@ -9,7 +9,7 @@ export default {
   component: List,
   parameters: {
     notes: readme,
-    layout: "padding",
+    layout: 'padded',
   },
   argTypes: {
     variant: {
