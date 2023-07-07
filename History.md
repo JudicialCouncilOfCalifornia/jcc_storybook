@@ -1,4 +1,14 @@
 
+0.54.5 / 2023-07-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #93 from JudicialCouncilOfCalifornia/feature/DCAS-32--profile-bio-component
+  * DCAS-32: remove unneeded section align-items
+  * Merge pull request #92 from JudicialCouncilOfCalifornia/feature/LWR-238-content-in-hero-hangover-blurb-z-index-fix
+  * DCAS-32: profile bio, profile layout, general clean-up
+  * zindex css rule
+
 0.54.4 / 2023-06-29
 ===================
 
