@@ -8,6 +8,7 @@ export default {
   component: AssetBundle,
   parameters: {
     notes: readme,
+    layout: 'padded',
   },
   argTypes: { },
 };

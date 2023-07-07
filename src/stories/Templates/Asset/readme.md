@@ -13,7 +13,7 @@ To remove the sidebar, remove or set null as the value for sidebar_direction. Ho
   ```
   variant: 'default',
   sub_component_layout: 'with-sidebar', ... adds sidebar
-  sidebar_direction: 'row', ... sets sidebar location - row (left) or row-reverse (left)
+  sidebar_direction: 'row', ... sets sidebar location - row (left) or row-reverse (right)
   sidebar_width: 39, ... sets sidebar minimum width
   gap: 's4', ... sets spacing between sidebar and body
   sub_component_data: [ ... Requires List and AssetBundle subcomponents included as data

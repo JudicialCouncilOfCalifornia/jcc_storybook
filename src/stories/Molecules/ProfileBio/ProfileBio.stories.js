@@ -1,31 +1,31 @@
-import readme from "./readme.md";
-import data from "./Asset.data";
-import Asset from "./Asset.twig";
+import readme from './readme.md';
+import data from './ProfileBio.data';
+import ProfileBio from './ProfileBio.twig';
+import './ProfileBio.css';
 
 export default {
-  title: "Templates/Asset",
-  component: Asset,
+  title: 'Molecules/ProfileBio',
+  component: ProfileBio,
   parameters: {
     notes: readme,
+    layout: 'padded',
   },
   argTypes: {
-    sidebar_direction: {
-      description: "Sidebar placement.",
+    variant: {
+      description: "ProfileBio variant.",
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'radio' },
-      options: ['row', 'row-reverse'],
+      options: ['default'],
     },
+    // More args here.
   },
 };
 
 // Create Template for variant templates to bind to.
 const Template = ({ ...args }) => {
-  return Asset({ ...args });
+  return ProfileBio({ ...args });
 };
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
-
-export const WithNoSidebar = Template.bind({});
-WithNoSidebar.args = data.with_no_sidebar;
