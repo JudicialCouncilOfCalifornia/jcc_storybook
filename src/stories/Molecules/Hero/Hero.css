@@ -91,19 +91,19 @@
 }
 
 /* Automated nav button colors */
-.hero__navigation.cards .card:nth-of-type(6n + 1) {
-  background: var(--background-striped-secondary);
-}
-
-.hero__navigation.cards .card:nth-of-type(6n + 2) {
-  background: var(--background-striped-primary-dark-x);
-}
-
-.hero__navigation.cards .card:nth-of-type(6n + 3) {
+.hero__navigation.cards .card:nth-of-type(odd) {
   background: var(--background-striped-primary);
 }
 
-.hero__navigation.cards .card:nth-of-type(6n + 4) {
+.hero__navigation.cards .card:nth-of-type(even) {
+  background: var(--background-striped-primary-dark-x);
+}
+
+.hero__navigation.cards .card:first-child:not(.card:last-child) {
+  background: var(--background-striped-secondary);
+}
+
+.hero__navigation.cards .card:last-child:not(.card:nth-of-type(2), .card:first-child) {
   background: var(--background-striped-accent-warm-dark-x);
 }
 
