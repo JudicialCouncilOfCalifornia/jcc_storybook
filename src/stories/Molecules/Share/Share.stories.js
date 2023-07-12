@@ -1,18 +1,19 @@
 import readme from './readme.md';
-import data from './ProfileBio.data';
-import ProfileBio from './ProfileBio.twig';
-import './ProfileBio.css';
+import data from './Share.data';
+import Share from './Share.twig';
+import './Share.css';
 
 export default {
-  title: 'Molecules/ProfileBio',
-  component: ProfileBio,
+  title: 'Molecules/Share',
+  component: Share,
   parameters: {
     notes: readme,
     layout: 'padded',
   },
   argTypes: {
+    // Variant select is a pretty common arg.
     variant: {
-      description: "ProfileBio variant.",
+      description: "Share variant.",
       table: {defaultValue: {summary: 'default'}},
       control: { type: 'radio' },
       options: ['default'],
@@ -23,12 +24,10 @@ export default {
 
 // Create Template for variant templates to bind to.
 const Template = ({ ...args }) => {
-  return ProfileBio({ ...args });
+  return Share({ ...args });
 };
 
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
+// Data comes from the Share.data.js file.
 Default.args = data.default;
-
-export const ShareEnabled = Template.bind({});
-ShareEnabled.args = data.share_enabled;
