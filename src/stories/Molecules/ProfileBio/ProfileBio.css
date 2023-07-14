@@ -1,6 +1,9 @@
+.profile-bio__header {
+  border-block-end: 2px dotted var(--color-base-light-x);
+}
+
 .profile-bio__heading {
   padding-block-end: var(--s0);
-  border-block-end: 2px dotted var(--color-base-light-x);
 }
 
 .profile-bio__title,
@@ -21,4 +24,8 @@
 .profile-bio__date {
   margin-block-start: var(--s-2);
   color: var(--accent-color);
+}
+
+.profile-bio__header .share {
+  margin-left: auto;
 }

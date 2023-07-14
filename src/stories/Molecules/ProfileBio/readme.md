@@ -11,6 +11,13 @@ Layout and styling for profile biographies.
   title: 'Position title or person/roles type',
   division: 'Division grouping if needed',
   date: 'Date context as needed (e.g. Since 2020)',
-  content: 'Format-agnostic biography content'
+  content: 'Format-agnostic biography content',
+  share: {
+    print_url: "javascript: window.print();",
+    print_aria_label: "Print profile",
+    download_url: "javascript: void(0);",
+    download_aria_label: "Download profile",
+    icon_path: "Path to icons.svg may be needed ... /themes/contrib/jcc_storybook/src/assets/icons.svg"
+  },
   ```
 </details>

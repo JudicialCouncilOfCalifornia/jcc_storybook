@@ -1,6 +1,7 @@
 import readme from './readme.md';
 import data from './Profile.data';
 import Profile from './Profile.twig';
+import './Profile.css';
 
 export default {
   title: 'Templates/Profile',

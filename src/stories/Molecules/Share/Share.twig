@@ -1,0 +1,37 @@
+{% set variant_class = variant ? 'share--' ~ variant : 'share--default' %}
+
+{% set classes = [
+  'share',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+	<ul class="share__items cluster">
+    {% if print_url %}
+    <li class="share__item">
+      {% set print_label = 'Print' %}
+      <a class="cluster" href="{{ print_url }}" aria-label="{{ print_aria_label ? print_aria_label : print_label }}">
+        <div class="share__label">Print</div>
+        {% include "@atoms/Icon/Icon.twig" with {
+          icon: "fa-file",
+          color: false,
+          icon_path: icon_path,
+        } %}
+      </a>
+    </li>
+    {% endif %}
+    {% if download_url %}
+      <li class="share__item">
+        {% set download_label = 'Download' %}
+        <a class="cluster" href="{{ download_url }}" aria-label="{{ download_aria_label ? download_aria_label : download_label }}">
+          <div class="share__label">{{ download_label }}</div>
+          {% include "@atoms/Icon/Icon.twig" with {
+            icon: "fa-chevron-down",
+            color: false,
+            icon_path: icon_path,
+          } %}
+        </a>
+      </li>
+    {% endif %}
+	</ul>
+</div>
