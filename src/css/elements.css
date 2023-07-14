@@ -117,6 +117,103 @@ dd {
   margin-inline-start: var(--s1);
 }
 
+/* Legal formatting of Ordered lists. See @LegalFormatting component */
+@counter-style legal_decimal {
+  system: extends decimal;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+@counter-style legal_upper_roman {
+  system: extends upper-roman;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+@counter-style legal_upper_alpha {
+  system: extends upper-alpha;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+@counter-style legal_lower_roman {
+  system: extends lower-roman;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+@counter-style legal_lower_alpha {
+  system: extends lower-alpha;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+@counter-style legal_decimal_leading_zero {
+  system: extends decimal-leading-zero;
+  prefix: '(';
+  suffix: ')  ';
+}
+
+ol.legal {
+  counter-reset: list;
+  list-style: legal_decimal;
+}
+
+ol.legal, ol.legal ol {
+  padding-inline: var(--s2);
+}
+
+ol.legal li + li {
+  margin-block-start: var(--s-6);
+}
+
+ol.legal li + li > ol,
+ol.legal li + li > ul {
+  margin-block: var(--s1);
+}
+
+ol.legal li::marker {
+  font-weight: 600;
+}
+
+ol.legal li li li li li ol > li {
+  list-style: legal_upper_roman;
+}
+
+ol.legal li li li li ol > li {
+  list-style: legal_upper_alpha;
+}
+
+ol.legal li li li ol > li {
+  list-style: legal_decimal_leading_zero;
+}
+
+ol.legal li li ol > li {
+  list-style: legal_lower_roman;
+}
+
+ol.legal li ol > li {
+  list-style: legal_decimal;
+}
+
+ol.legal > li {
+  list-style: legal_lower_alpha;
+}
+
+/* Legal formatting of Unordered lists. See @LegalFormatting component */
+ol.legal ul > li ul > li ul > li {
+  list-style-type: square;
+}
+
+ol.legal ul > li ul > li {
+  list-style-type: circle;
+}
+
+ol.legal li ul > li,
+ol.legal ul > li {
+  list-style-type: disc;
+}
+
 /* Screen Reader Only */
 .sr-only {
   position: absolute;
