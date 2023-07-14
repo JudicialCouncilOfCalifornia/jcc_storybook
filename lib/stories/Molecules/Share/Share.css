@@ -1,0 +1,1 @@
+.share ul{list-style:none;padding-inline:0}.share>.cluster{gap:var(--s2)}.share__item{padding-inline-end:0;font-weight:600}.share__item a{gap:var(--s-4);text-decoration:none}.share__item a:hover{text-decoration:underline}.share__item a:hover,.share__label{color:var(--accent-color)}.share__item .icon-wrapper{block-size:var(--s2);inline-size:var(--s2);color:var(--accent-color)}
