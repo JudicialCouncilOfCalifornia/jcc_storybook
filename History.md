@@ -1,4 +1,18 @@
 
+0.54.6 / 2023-07-14
+===================
+
+  * chore: Export libs.
+  * Merge pull request #97 from JudicialCouncilOfCalifornia/feature/DCAS-51--share-component
+  * Merge pull request #96 from JudicialCouncilOfCalifornia/DCAS-46-storybook-hero-button-ct-as-color-variants
+  * Merge pull request #95 from JudicialCouncilOfCalifornia/DCAS-54--improved-legal-list-formatting-for-drupal-integration
+  * DCAS-51: share component, profile integration, & profile fixes
+  * [DCAS-46] -- Tweak to the way the background color order is applied to the nav items of a hero.
+  * [DCAS-54] -- Copied legal formatting styles to main elements.css file to bring them in globally.
+  * [DCAS-54] -- Use @counter-styles to implement specific legal ordered list styles.
+  * Merge pull request #94 from JudicialCouncilOfCalifornia/feature/LWR-238-content-in-hero-hangover-blurb-2
+  * z-index fix
+
 0.54.5 / 2023-07-06
 ===================
 
