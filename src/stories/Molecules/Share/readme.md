@@ -11,6 +11,6 @@ This is a container for sharing actions such as print, download, and potentially
   print_aria_label: "Print profile",
   download_url: "javascript: void(0);",
   download_aria_label: "Download profile",
-  icon_path: "Path to icons.svg may be needed ... /themes/contrib/jcc_storybook/src/assets/icons.svg"
+  icon_path: "/themes/contrib/jcc_storybook/src/assets/icons.svg" ... Path to icons.svg may be needed
   ```
 </details>

@@ -5,6 +5,8 @@
   variant_class,
 ] %}
 
+{% set h = heading_style ? heading_style : 'h2' %}
+
 {% set tag = variant != 'none' ? variant : 'ul' %}
 
 {% set container_classes = [
@@ -14,6 +16,9 @@
 
 
 <div class="{{ classes|join(' ') }}">
+	{% if heading %}
+		<{{h}}>{{ heading }}</{{h}}>
+	{% endif %}
 	<{{tag}} class="{{ container_classes|join(' ') }}">
 		{% for item in items %}
 			<li class="list__item">

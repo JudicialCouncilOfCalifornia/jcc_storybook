@@ -9,8 +9,8 @@ To implement, include the Section organism with ProfileCard and ProfileBio as it
   <summary>Twig Variables:</summary>
 
   ```
-  variant: 'default',
-  sub_component_layout: 'with-sidebar', ... adds sidebar
+  variant: "default",
+  sub_component_layout: "with-sidebar", ... adds sidebar
   sidebar_direction: 'row', ... sets sidebar location - row (left) or row-reverse (right)
   sub_component_data: [ ... Requires ProfileCard and ProfileBio subcomponents included as data
     ProfileCard({...NoLinkExample.args}),
