@@ -7,6 +7,7 @@ global:
     theme:
       lib/css/scheme-default.css:  { minified: true }
       lib/stories/Atoms/FormFields/FormFields.css: { minified: true }
+      lib/css/print.css: { media: print, minified: true }
   js:
     lib/js/detectWrap.js: {minified: true }
     lib/stories/Layout/Reel/Reel.js: { minified: true }
