@@ -17,6 +17,11 @@ with a name, title, and addtional content (like start year).
   ...,
   img: // any rendered image
   name: // rendered as an h3
+  placeholder: {
+    icon: // SVG when img is not available, image must be false.
+    color: // Leave as false but an override can be set.
+    icon_path: // Path to icons.svg may be needed or try " ".
+  }
   title: // below the name, like a job title
   content: // any rendered content, like start year, quote, or other content.
   url: // url string. if set to false, no hover styles will apply.

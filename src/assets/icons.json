@@ -1,6 +1,7 @@
 [
   "control",
   "documents",
+  "download",
   "education",
   "error",
   "exam",
@@ -47,6 +48,7 @@
   "grant",
   "info",
   "interpreter_certificate",
+  "justice-avatar",
   "left_caret",
   "left_caret_double",
   "line-alert",
@@ -103,6 +105,7 @@
   "line-wheelchair",
   "line-workshop",
   "magnifying_glass",
+  "print",
   "resources",
   "right_caret",
   "right_caret_double",

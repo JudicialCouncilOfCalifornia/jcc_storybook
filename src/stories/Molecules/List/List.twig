@@ -16,17 +16,17 @@
 
 
 <div class="{{ classes|join(' ') }}">
-	{% if heading %}
-		<{{h}}>{{ heading }}</{{h}}>
-	{% endif %}
-	<{{tag}} class="{{ container_classes|join(' ') }}">
-		{% for item in items %}
-			<li class="list__item">
-				{% if item.label %}
-					<span class="list__item-label">{{ item.label|capitalize }}:</span>
-				{% endif %}
-				{{ item.text }}
-			</li>
-		{% endfor %}
-	</{{tag}}>
+  {% if heading %}
+    <{{h}}>{{ heading }}</{{h}}>
+  {% endif %}
+  <{{tag}} class="{{ container_classes|join(' ') }}">
+    {% for item in items %}
+      <li class="list__item">
+        {% if item.label %}
+          <span class="list__item-label">{{ item.label|capitalize }}:</span>
+        {% endif %}
+        {{ item.text }}
+      </li>
+    {% endfor %}
+  </{{tag}}>
 </div>

@@ -13,7 +13,7 @@
       <a class="cluster" href="{{ print_url }}" aria-label="{{ print_aria_label ? print_aria_label : print_label }}">
         <div class="share__label">Print</div>
         {% include "@atoms/Icon/Icon.twig" with {
-          icon: "fa-file",
+          icon: "print",
           color: false,
           icon_path: icon_path,
         } %}
@@ -26,7 +26,7 @@
         <a class="cluster" href="{{ download_url }}" aria-label="{{ download_aria_label ? download_aria_label : download_label }}" download>
           <div class="share__label">{{ download_label }}</div>
           {% include "@atoms/Icon/Icon.twig" with {
-            icon: "fa-chevron-down",
+            icon: "download",
             color: false,
             icon_path: icon_path,
           } %}

@@ -26,3 +26,7 @@ Default.args = data.default;
 // Bind the Default component variant for this component.
 export const NoLinkExample = Template.bind({});
 NoLinkExample.args = data.no_link_example;
+
+// Bind the Default component variant for this component.
+export const PlaceholderImage = Template.bind({});
+PlaceholderImage.args = data.placeholder_image;

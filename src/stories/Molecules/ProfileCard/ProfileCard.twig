@@ -7,7 +7,17 @@
 <div class="{{ classes|join(' ') }}">
   {% if url is not empty %}<a href="{{ url }}" class="profile-card__link">{% endif %}
     <div class="profile-card__inner stack">
-      <div class="profile-card__image"> {{ image }} </div>
+      <div class="profile-card__image">
+        {% if image %}
+          {{ image }}
+        {% else %}
+          {% include "@atoms/Icon/Icon.twig" with {
+            icon: placeholder.icon,
+            color: false,
+            icon_path: placeholder.icon_path,
+          } %}
+        {% endif %}
+      </div>
 
       {% if name %}
         <h3 class="profile-card__name">{{ name }}</h3>
