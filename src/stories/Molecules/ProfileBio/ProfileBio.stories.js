@@ -32,3 +32,6 @@ Default.args = data.default;
 
 export const ShareEnabled = Template.bind({});
 ShareEnabled.args = data.share_enabled;
+
+export const WithSubComponents = Template.bind({});
+WithSubComponents.args = data.with_subcomponents;

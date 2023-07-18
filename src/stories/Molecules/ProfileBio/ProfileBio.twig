@@ -29,5 +29,13 @@
     {% if content|render %}
       <div class="profile-bio__text">{{ content }}</div>
     {% endif %}
+
+    {% if sub_component_data is iterable %}
+      {% for item in sub_component_data %}
+        {{ item }}
+      {% endfor %}
+    {% elseif sub_component_data|trim %}
+      {{ sub_component_data }}
+    {% endif %}
   </div>
 </div>

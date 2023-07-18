@@ -34,5 +34,8 @@ WithLabels.args = data.with_labels;
 export const WithNoMarker = Template.bind({});
 WithNoMarker.args = data.with_no_marker;
 
+export const WithHeading = Template.bind({});
+WithHeading.args = data.with_heading;
+
 export const WithGrid = Template.bind({});
 WithGrid.args = data.with_grid;

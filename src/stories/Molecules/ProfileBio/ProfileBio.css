@@ -29,3 +29,7 @@
 .profile-bio__header .share {
   margin-left: auto;
 }
+
+.profile-bio__main .pills {
+  margin-block-start: var(--s5);
+}

@@ -1,0 +1,16 @@
+@media print {
+  * {
+    color: var(--color-black) !important;
+  }
+
+  .hat,
+  .primary-nav,
+  .header,
+  .page__tabs,
+  .page__tabs+div,
+  .footer,
+  .shoe,
+  .share {
+    display: none;
+  }
+}
