@@ -1,4 +1,13 @@
 
+0.54.7 / 2023-07-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #101 from JudicialCouncilOfCalifornia/feature/DCAS-32--profile-icons
+  * DCAS-32: icons for profile use plus general fixes
+  * Merge pull request #100 from JudicialCouncilOfCalifornia/feature/DCAS-51--share-improvement-and-subcomponents
+  * DCAS-51: print css, subcomponents, and download attribute
+
 0.54.6 / 2023-07-14
 ===================
 
