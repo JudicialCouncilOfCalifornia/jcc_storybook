@@ -20,7 +20,8 @@ a.profile-card__link,
   margin-inline: auto
 }
 
-.profile-card__image img {
+.profile-card__image img,
+.profile-card__image svg {
   border-radius: 20rem;
   filter: grayscale();
   max-width: 11rem;

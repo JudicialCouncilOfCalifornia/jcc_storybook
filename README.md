@@ -24,7 +24,7 @@ External References:
 
 ### Use
   - Install with composer to your drupal project.
-    - COMING SOON
+    - `composer require judicialcouncil/jcc_storybook`
   - Enable the base theme in drupal via the UI or with drush:
     - `drush en jcc_storybook`
   - Create a new theme with the following line in your `info.yml` file:  `base theme: jcc_storybook`

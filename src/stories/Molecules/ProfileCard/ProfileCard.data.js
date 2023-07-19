@@ -15,4 +15,15 @@ export default {
     content: false,
     url: false,
   },
+  placeholder_image: {
+    variant: "no_link_example",
+    image: false,
+    placeholder: {
+      icon: "justice-avatar",
+    },
+    name: false,
+    title: false,
+    content: false,
+    url: false,
+  },
 };
