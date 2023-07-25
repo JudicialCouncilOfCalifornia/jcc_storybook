@@ -34,8 +34,7 @@
   position: absolute;
   background-color: var(--color-base-light-xx);
   width: var(--sidebarnav-width);
-  margin-block-start: 2ch;
-  inset-inline-start: 2ch;
+  margin-block-start: 4ch;
 }
 
 .mobile-sidebar-nav .sidebar-nav__position {
