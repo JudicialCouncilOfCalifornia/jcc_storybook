@@ -1,4 +1,13 @@
 
+0.54.8 / 2023-07-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #103 from JudicialCouncilOfCalifornia/additional-la-icons
+  * [feature] -- Addition of 4 icons related to Language Access content
+  * Merge pull request #102 from JudicialCouncilOfCalifornia/LWR-247-Sidebarnav-css-update
+  * Updated sidebarnav css
+
 0.54.7 / 2023-07-19
 ===================
 
