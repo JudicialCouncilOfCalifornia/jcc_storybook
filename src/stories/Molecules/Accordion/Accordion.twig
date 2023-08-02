@@ -20,6 +20,7 @@
       <div class="accordion__lead">{{ lead }}</div>
     {% endif %}
 
+    <div class="expand-all-btn">Expand all</div>
     <div class="accordion__items">
     {% for item in items %}
       <details {{ loop.index == 1 and open_first ? 'open' : '' }}>
