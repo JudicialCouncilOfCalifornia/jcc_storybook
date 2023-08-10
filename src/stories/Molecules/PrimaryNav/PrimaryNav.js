@@ -10,13 +10,13 @@ function docReady(fn) {
 
 docReady(function () {
   // Toggle the sub menus.
-  const buttons = Array.from(document.querySelectorAll('.primary-nav__button'));
+  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__button'));
   buttons.forEach(button => {
     if (!button.classList.contains('js-open')) {
       button.classList.add('js-open');
 
       button.addEventListener('pointerdown', (e) => {
-        const opened = document.querySelectorAll('.primary-nav__button.open:not(.primary-nav__hamburger-toggle)');
+        const opened = document.querySelectorAll('.primary-nav__mobile .primary-nav__button.open:not(.primary-nav__hamburger-toggle)');
 
         opened.forEach(item => {
           if (item && item != e.target) {
