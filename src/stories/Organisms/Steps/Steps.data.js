@@ -3,7 +3,7 @@ export default {
     variant: "default",
     color: "default",
     heading: 'This is a heading',
-    lead: '<p>This is some lead text that could describe the steps</p>',
+    lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
     steps: [
       {
         label: 'This is a step heading',

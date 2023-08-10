@@ -6,9 +6,15 @@
   variant_class,
 ] %}
 
-<div class="{{ classes.join(' ')}}">
-  <h2>{{ heading }}</h2>
-  <div>{{ text }}</div>
+<div class="{{ classes.join(' ')}}">  
+  {% if heading|render %}
+    <h2 class="action-list__heading">{{ heading }}</h2>
+  {% endif %}
+
+  {% if text|render %}
+    <div class="action-list__text">{{ text }}</div>
+  {% endif %}
+
   <div class="action-list__items">
     {% for link in links %}
       <div class="action-list__item cluster box">

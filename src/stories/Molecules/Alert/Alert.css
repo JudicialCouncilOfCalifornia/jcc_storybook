@@ -41,7 +41,9 @@
 }
 
 .alert__content {
+  --max-width: 102ch;
   display: block;
+  max-inline-size: var(--max-width);
 }
 
 .alert__content ul, 

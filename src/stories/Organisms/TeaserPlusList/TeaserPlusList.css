@@ -12,11 +12,17 @@
   --align-items: flex-start;
 }
 
-.teaser-list__list {
+.teaser-list__teaser:not(.wrapped) {
+  padding-inline-end: calc(var(--s4) - var(--gap));
+  margin-block-end: var(--gap, 1.5rem);
+}
+
+.teaser-list__list:not(.wrapped) {
   border-inline-start: 1px dotted var(--accent-color);
   padding-inline-start: var(--s5);
   /* Adding space values to get to the brow + gap for alignment */
   padding-block-start: calc(var(--s2) + var(--gap));
+  margin-block-end: var(--gap, 1.5rem);
 }
 
 .teaser-list__list.wrapped {

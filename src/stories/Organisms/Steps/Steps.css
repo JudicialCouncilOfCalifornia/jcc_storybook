@@ -1,10 +1,15 @@
 .steps {
+  --max-width: 102ch;
   --color: var(--color-black);
   --heading-color: var(--color-primary-dark-x);
 }
 
 .steps h2 {
   color: var(--heading-color);
+}
+
+.step__lead {
+  max-inline-size: var(--max-width);
 }
 
 .steps__steps {

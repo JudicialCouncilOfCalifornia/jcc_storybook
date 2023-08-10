@@ -39,6 +39,7 @@
 
 .section > * > .center {
   --align-items: center;
+  --measere: var(--max-width);
 }
 
 .section .section__main {
@@ -47,6 +48,11 @@
 
 .section .section__main.multiple:not(.stack) .card__inner {
   display: block;
+}
+
+.section .section__header {
+  --max-width: 103ch;
+  max-inline-size: var(--max-width);
 }
 
 .section .section__header,

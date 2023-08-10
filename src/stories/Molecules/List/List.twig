@@ -5,7 +5,7 @@
   variant_class,
 ] %}
 
-{% set h = heading_style ? heading_style : 'h2' %}
+{% set h = heading_style|default('h2') %}
 
 {% set tag = variant != 'none' ? variant : 'ul' %}
 

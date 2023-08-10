@@ -17,19 +17,23 @@ docReady(function () {
   const summaries = Array.from(document.querySelectorAll('details summary'));
   const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn'));
 
-  // Expand / Close all buton logic
+  // Expand / Close all button logic
   if (!expandallbtn[0].classList.contains('js-loaded')) {
     expandallbtn[0].classList.add('js-loaded');
+    
     expandallbtn[0].addEventListener('click', (e) => {
       e.preventDefault();
+      
       if (expandallbtn[0].hasAttribute('expanded')) {
         expandallbtn[0].removeAttribute('expanded');
+        expandallbtn[0].setAttribute('aria-pressed', 'false');
         expandallbtn[0].innerHTML = 'Expand all';
         summaries.forEach(summary => {
           summary.closest('details').removeAttribute('open', '');
         })
-      }else{
+      } else {
         expandallbtn[0].setAttribute('expanded', '');
+        expandallbtn[0].setAttribute('aria-pressed', 'true');
         expandallbtn[0].innerHTML = 'Close all';
         summaries.forEach(summary => {
           summary.closest('details').setAttribute('open', '');

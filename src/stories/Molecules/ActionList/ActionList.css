@@ -1,3 +1,11 @@
+.action-list {
+  --max-width: 102ch;
+}
+
+.action-list__text {
+  max-inline-size: var(--max-width);
+}
+
 /* Allow the containing div to manage it's own borders. */
 .action-list__items {
   border-block: 1px solid var(--color-base);

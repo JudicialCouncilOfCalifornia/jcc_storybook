@@ -13,11 +13,11 @@ function docReady(fn) {
 
 docReady(function () {
   const detectWrap = (group) => {
-    const top = group.children[0].getBoundingClientRect().top;
+    const top = Math.floor(group.children[0].getBoundingClientRect().top);
     for (let i = 1; i < group.children.length; i++) {
       const child = group.children[i];
 
-      if (child.getBoundingClientRect().top != top) {
+      if (Math.floor(child.getBoundingClientRect().top) != top) {
         child.classList.add("wrapped");
         group.classList.add("wrapping");
       } else {

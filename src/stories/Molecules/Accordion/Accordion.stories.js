@@ -20,8 +20,13 @@ export default {
       options: ["default"],
     },
     open_first: {
-      description: "Accordion variant.",
-      table: {defaultValue: {summary: 'false'}},
+      description: "Open first item",
+      table: {defaultValue: false},
+      control: { type: 'boolean' },
+    },
+    expand_button: {
+      description: "Allow link to expand/collapse all",
+      table: {defaultValue: true},
       control: { type: 'boolean' },
     },
     // More args here.
