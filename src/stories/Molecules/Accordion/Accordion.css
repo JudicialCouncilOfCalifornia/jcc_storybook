@@ -8,6 +8,12 @@
   color: var(--heading-color);
 }
 
+.accordion .expand-all-btn{
+  padding-inline: var(--s3);
+  cursor: pointer;
+  text-align: right;
+}
+
 .accordion__items {
   padding-inline: var(--s3);
   padding-block-start: var(--s1);
