@@ -21,7 +21,7 @@
     {% endif %}
 
     {% if expand_button %}
-      <a class="expand-all-btn">Expand all</a>
+      <a class="expand-all-btn" aria-pressed="false" title="Toggle accordions">Expand all</a>
     {% endif %}
     <div class="accordion__items">
     {% for item in items %}

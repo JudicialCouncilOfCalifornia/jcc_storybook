@@ -4,7 +4,7 @@ export default {
     open_first: false,
     expand_button: true,
     heading: 'This is a heading',
-    lead: '<p>This is some lead text that can describe the accordion items.</p>',
+    lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
     items: [
       {
         label:

@@ -3,7 +3,7 @@
   display: inline-block;
   width: auto;
   background-color: var(--button-bg);
-  padding: var(--s-1) var(--s2);
+  padding: var(--s-1) var(--s1);
   border: 2px solid var(--button-border);
   border-radius: var(--s-5);
   color: var(--button-fg);

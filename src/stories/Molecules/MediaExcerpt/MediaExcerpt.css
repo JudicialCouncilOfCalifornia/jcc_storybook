@@ -19,7 +19,7 @@
 
 .media-excerpt__button {
   /* Negative margin hides border when wrapped. */
-  margin-inline-start: -1px;
+  /* margin-inline-start: -1px; */
   border-inline-start: 1px solid var(--color-base);
   padding-inline: var(--s1);
   display: flex;
@@ -30,6 +30,13 @@
 }
 .media-excerpt__button .button {
   font-size: var(--s0);
+  min-width: 100%;
+  text-align: center;
+}
+
+.media-excerpt__button.wrapped {
+  padding-inline: 0;
+  border-inline-start: none;
 }
 
 .media-excerpt__content {
