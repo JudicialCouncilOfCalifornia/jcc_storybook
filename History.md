@@ -1,4 +1,16 @@
 
+0.54.9 / 2023-08-09
+===================
+
+  * chore: Export libs.
+  * Merge pull request #106 from JudicialCouncilOfCalifornia/DCAS-60-storybook-add-rollover-hover-state-to-show-dropdown-list-of-both-primary-nav
+  * [DCAS-60] -- Change desktop main menu (primary with dropdown) to be hover controlled, and no longer click controlled.
+  * Merge pull request #105 from JudicialCouncilOfCalifornia/LWR-168-storybook-set-body-one-column-component-to-1070-px-approx-129-characters-including-spaces-for-left-and-center-aligned-text
+  * [LWR-168] -- Set character width for several lead text elements.
+  * Merge pull request #104 from JudicialCouncilOfCalifornia/feature/DCAS-72-add-expand-collapse-all-to-accordions
+  * missing optional button - changed button element
+  * added expand all logic
+
 0.54.8 / 2023-07-26
 ===================
 
