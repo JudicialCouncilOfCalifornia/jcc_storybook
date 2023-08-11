@@ -1,4 +1,10 @@
 
+0.54.11 / 2023-08-11
+===================
+
+  * chore: Export libs.
+  * Bug Fix: Fix border-color variable. Caused bad color on card borders
+
 0.54.10 / 2023-08-11
 ===================
 
