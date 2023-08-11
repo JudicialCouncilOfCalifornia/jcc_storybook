@@ -1,4 +1,12 @@
 
+0.54.10 / 2023-08-11
+===================
+
+  * chore: Export libs.
+  * Centered Section header content
+  * Merge pull request #107 from JudicialCouncilOfCalifornia/DCAS-36-rule-styles-demo
+  * DCAS-36 -- Created a demo for current Rule styles.
+
 0.54.9 / 2023-08-09
 ===================
 
