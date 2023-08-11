@@ -177,6 +177,7 @@
   --button-fg: var(--accent-color);
   --border-thin: 1px;
   --border-normal: 2px;
+  --border-color: var(--color-base);
   --gap: var(--s1);
   --anim: var(--anim-speed) ease-out var(--anim-speed);
   --anim-speed: 0.2s;
