@@ -31,7 +31,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Sizes', 'Text'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
+      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Scale', 'Text', 'Backgrounds', 'LegalFormatting', 'RulesFormatting'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
     },
   },
   rtlDirection: {
