@@ -23,6 +23,11 @@
   margin-block-start: var(--gap);
 }
 
+.section__header.center {
+  text-align: center;
+  text-wrap: balance;
+}
+
 .section__tint {
   mix-blend-mode: multiply;
   background-color: var(--bg);
