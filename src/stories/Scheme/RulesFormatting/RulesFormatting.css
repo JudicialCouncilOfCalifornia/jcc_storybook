@@ -96,7 +96,7 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
   margin-block-start: var(--s2);
   margin-block-end: var(--s-1);
   padding-block-end: var(--s-1);
-  border-block-end: 1px solid var(--border-color);
+  border-block-end: 1px solid var(--border-color-gray);
 }
 
 .body li.TOClevel3 {
