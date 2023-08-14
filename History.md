@@ -1,4 +1,11 @@
 
+0.54.12 / 2023-08-14
+===================
+
+  * chore: Export libs.
+  * Merge pull request #108 from JudicialCouncilOfCalifornia/LWR-247-Update-sidebar-styling.
+  * sidebar position css change
+
 0.54.11 / 2023-08-11
 ===================
 
