@@ -1,4 +1,11 @@
 
+0.54.13 / 2023-08-16
+===================
+
+  * chore: Export libs.
+  * Merge pull request #109 from JudicialCouncilOfCalifornia/DCAS-60-rollover-hover-state-parent-link-not-working-as-link
+  * [DCAS-60] -- On desktop, the parent link was not working as link when hover state is set.
+
 0.54.12 / 2023-08-14
 ===================
 
