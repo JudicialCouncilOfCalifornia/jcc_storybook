@@ -1,6 +1,7 @@
 export default {
   default: {
     variant: "default",
+    desktop_dropdown_overview_link: false,
     header_search_data: {
       variant: "default",
       form: "<form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
@@ -22,9 +23,10 @@ export default {
       },
       {
         text: "Up To Seven",
+        url: "#",
         links: [
           {
-            text: "Navigation link 1 (Overview)",
+            text: "Navigation link 1",
             url: "#",
             is_overview_link: true,
           },
@@ -61,9 +63,10 @@ export default {
       },
       {
         text: "More Than Seven",
+        url: "#",
         links: [
           {
-            text: "Navigation link 1 (Overview)",
+            text: "Navigation link 1",
             url: "#",
             is_overview_link: true,
           },
@@ -118,9 +121,10 @@ export default {
       },
       {
         text: "Lots More",
+        url: "#",
         links: [
           {
-            text: "Navigation link 1 (Overview)",
+            text: "Navigation link 1",
             url: "#",
             is_overview_link: true,
           },
@@ -392,6 +396,7 @@ export default {
   },
   alternate: {
     variant: "alternate",
+    desktop_dropdown_overview_link: false,
     header_search_data: {
       variant: "",
       form: "",

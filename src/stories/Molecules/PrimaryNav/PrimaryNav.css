@@ -109,7 +109,14 @@ button.primary-nav__button {
   padding: 0 0 0 0;
 }
 
+.primary-nav__mobile .primary-nav__item a.primary-nav__overview-link,
+.primary-nav__mobile .primary-nav__item button.primary-nav__overview-link {
+  font-size: var(--s-1);
+}
+
+.primary-nav a.primary-nav__button.parent_link::after,
 .primary-nav button::after {
+  margin-inline-start: var(--s-5);
   align-self: center;
   content: "\25BE";
   color: var(--color-base-light-x);
@@ -137,6 +144,7 @@ button.primary-nav__button.active {
   content: none;
 }
 
+.primary-nav .parent_link + *,
 .primary-nav button + * {
   display: none;
   min-width: 18ch;
@@ -206,10 +214,6 @@ button.primary-nav__button.active {
   max-width: none;
   width: 100%;
 }
-
-/* .primary-nav__item--mega .grid :first-child{
-  grid-column: 1 / -1;
-} */
 
 .primary-nav__default button + .primary-nav__item--mega a {
   border: 0;
@@ -442,4 +446,12 @@ button.primary-nav__button.active {
 .primary-nav__desktop .primary-nav__group:focus-within .primary-nav__item {
   display: block;
   position: absolute;
+}
+
+.primary-nav__desktop .primary-nav__group.primary-nav__has-overview-link .primary-nav__link:not(.primary-nav__overview-link) {
+  margin-inline-start: var(--s-1);
+}
+
+.primary-nav__desktop .primary-nav__item--mega .grid .link-level-2__has-overview-link {
+  grid-column: 1 / -1;
 }
