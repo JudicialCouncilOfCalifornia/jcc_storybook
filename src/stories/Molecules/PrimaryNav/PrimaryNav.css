@@ -102,6 +102,12 @@ button.primary-nav__button {
   background-color: transparent;
 }
 
+a.primary-nav__button {
+  font-family: var(--font-primary);
+  align-items: flex-start;
+  font-kerning: auto;
+}
+
 .primary-nav__item a.primary-nav__overview-link,
 .primary-nav__item button.primary-nav__overview-link {
   font-weight: 700;
@@ -208,6 +214,7 @@ button.primary-nav__button.active {
   padding-block-start: 0;
 }
 
+.primary-nav a.primary-nav__button + .primary-nav__item--mega,
 .primary-nav button + .primary-nav__item--mega {
   --gap: var(--s0);
   left: 0;
