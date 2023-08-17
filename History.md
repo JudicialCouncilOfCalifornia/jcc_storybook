@@ -1,4 +1,11 @@
 
+0.54.14 / 2023-08-17
+===================
+
+  * chore: Export libs.
+  * Merge pull request #110 from JudicialCouncilOfCalifornia/DCAS-60-rollover-hover-state-parent-link-not-working-as-link
+  * Fix to mega menus and spacing on non-overview link based parent menu items
+
 0.54.13 / 2023-08-16
 ===================
 
