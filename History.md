@@ -1,4 +1,14 @@
 
+0.54.15 / 2023-08-22
+===================
+
+  * chore: Export libs.
+  * Merge pull request #111 from JudicialCouncilOfCalifornia/fix/legal-and-rule-formatting-change-to-embed-and-primary-nav-tweaks
+  * LWR-268 -- css fix to help make primary nav and alternate primary nav appear in front of items like hero hangover elements.
+  * DCAS-84 -- spacing adjustments when ActionList is in a section, thats in a section.
+  * DCAS-36 -- Adjusting RulesFormatting into an Atom so it can be called in the page template.
+  * DCAS-36 -- Adjusting LegalFormatting into an Atom so it can be called in the page template.
+
 0.54.14 / 2023-08-17
 ===================
 
