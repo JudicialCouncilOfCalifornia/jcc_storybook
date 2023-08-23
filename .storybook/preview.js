@@ -31,7 +31,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Scale', 'Text', 'Backgrounds', 'LegalFormatting', 'RulesFormatting'], 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
+      order: ['Documentation', ['Intro'], 'Scheme', ['Colors', 'Fonts', 'Scale', 'Text', 'Backgrounds'], 'Atoms', ['Brow', 'Button', 'FormFields', 'GlobalBranding', 'Icon', 'Pill', 'SiteBranding', 'Table', 'LegalFormatting', 'RulesFormatting'], 'Molecules', 'Organisms', 'Templates', 'Pages', 'Layout'],
     },
   },
   rtlDirection: {

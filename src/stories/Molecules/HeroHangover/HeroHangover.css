@@ -57,7 +57,7 @@
 .hangover--with-bottom .hangover__top-hangover-content > *,
 .hangover--with-blurb .hangover__top-hangover-content > * {
   margin-block-end: var(--hangover-offset);
-  z-index:2;
+  z-index: 1;
 }
 
 .hangover--with-bottom .hangover__top-media.box,

@@ -170,6 +170,7 @@ button.primary-nav__button.active {
 
 .primary-nav__default button.open + .primary-nav__item {
   position: absolute;
+  z-index: 2;
 }
 
 /* Prevent menu from opening wider than the nav. */
@@ -351,6 +352,7 @@ button.primary-nav__button.active {
 /* Alternate style */
 .primary-nav--alternate {
   border-block: 1px solid var(--color-base-light-x);
+  display: block;
 }
 
 .primary-nav--alternate .primary-nav__default {
@@ -421,6 +423,10 @@ button.primary-nav__button.active {
 .primary-nav--alternate .reel.overflowing + * {
   padding-block-start: var(--s-4);
   padding-block-end: var(--s-6);
+}
+
+.primary-nav--alternate .primary-nav__item.nav-level-2 {
+  z-index: 20;
 }
 
 .primary-nav--alternate .primary-nav__hamburger .primary-nav__button {
