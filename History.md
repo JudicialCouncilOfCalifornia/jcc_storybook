@@ -1,4 +1,11 @@
 
+0.54.17 / 2023-08-23
+===================
+
+  * chore: Export libs.
+  * Merge pull request #112 from JudicialCouncilOfCalifornia/DCAS-78-actionlist-label-and-description-broken
+  * DCAS-78 -- Added description field to output. Fixed heading source, and set button title into place with default "Learn More" text
+
 0.54.16 / 2023-08-22
 ===================
 
