@@ -155,8 +155,8 @@
 }
 
 /* Drop padding when two sections of the same background are touching. */
-.section--color-default + .section--color-default .box,
-.section--color-white + .section--color-white .section__content,
+.section--color-default + .section--color-default > .box,
+.section--color-white + .section--color-white > .section__content,
 .section--color-warm-dark-x + .section--color-warm-dark-x,
 .section--color-warm-dark-xx + .section--color-warm-dark-xx,
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
@@ -166,4 +166,8 @@
 
 .section__header .brow {
   margin-block-end: var(--s-3);
+}
+
+.section__content.box .section__main .section__content.box {
+  padding-inline: 0;
 }

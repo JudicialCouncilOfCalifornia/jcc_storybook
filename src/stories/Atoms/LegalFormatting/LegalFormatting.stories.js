@@ -3,7 +3,7 @@ import LegalFormatting from './LegalFormatting.twig';
 import './LegalFormatting.css';
 
 export default {
-  title: 'Scheme/LegalFormatting',
+  title: 'Atoms/LegalFormatting',
   component: LegalFormatting,
   parameters: {
     notes: readme,

@@ -3,7 +3,7 @@ import RulesFormatting from './RulesFormatting.twig';
 import './RulesFormatting.css';
 
 export default {
-  title: 'Scheme/RulesFormatting',
+  title: 'Atoms/RulesFormatting',
   component: RulesFormatting,
   parameters: {
     notes: readme,
