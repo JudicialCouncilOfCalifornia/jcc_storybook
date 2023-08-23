@@ -19,3 +19,14 @@
 .action-list__item {
   justify-content: space-between;
 }
+
+h3.action-list__item__heading {
+  font-size: var(--s0);
+  color: var(--color);
+  font-family: var(--font-secondary);
+  font-weight: bold;
+}
+
+.action-list__item .button {
+  padding-inline: var(--s3);
+}

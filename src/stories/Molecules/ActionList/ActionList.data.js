@@ -6,6 +6,7 @@ export default {
     links: [
       {
         label: "Certified Interpreter",
+        description: "<p>This is a description that goes along with the link.</p>",
         button_data :{
           label: "Learn more",
           href: "#",
@@ -14,6 +15,7 @@ export default {
       },
       {
         label: "Registered Interpreter",
+        description: "",
         button_data :{
           label: "Learn more",
           href: "#",
@@ -22,6 +24,7 @@ export default {
       },
       {
         label: "Certified interpreter for American SIgn Language (ASL)",
+        description: "<p>This is a description that goes along with the link.</p>",
         button_data :{
           label: "Learn more",
           href: "#",
