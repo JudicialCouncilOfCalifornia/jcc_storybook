@@ -6,7 +6,7 @@
   variant_class,
 ] %}
 
-<div class="{{ classes.join(' ')}}">  
+<div class="{{ classes|join(' ') }}">
   {% if heading|render %}
     <h2 class="action-list__heading">{{ heading }}</h2>
   {% endif %}

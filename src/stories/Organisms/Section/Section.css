@@ -168,6 +168,6 @@
   margin-block-end: var(--s-3);
 }
 
-.section__content.box .section__main .section__content.box {
+.section > .section__content.box .section__main > .section__content.box {
   padding-inline: 0;
 }
