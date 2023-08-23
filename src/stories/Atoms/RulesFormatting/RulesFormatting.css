@@ -3,15 +3,6 @@
   margin-block: 2rem;
 }
 
-.body h2 {
-  margin-block-end: 2rem;
-}
-
-.body p {
-  font-size: var(--s0);
-  line-height: 1.5;
-}
-
 .body p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subparagraphlist, .subparagraphnolist, .rulehist, .advcommheader, .advcommtext) + 
 p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subparagraphlist, .subparagraphnolist, .rulehist, .advcommheader, .advcommtext) {
   margin-block-start: var(--s0);
@@ -28,12 +19,10 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
 
 .body p.subdivheading {
   margin-inline-start: 1rem;
-  /* text-indent: calc(var(--s-2) * -1); */
 }
 
 .body p.subdivtext {
   margin-inline-start:2.25rem;
-  /* text-indent: calc(var(--s-2) * -1); */
 }
 
 .body p.subdhist {
@@ -41,12 +30,10 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
   font-size: var(--s-1);
   font-style: italic;
   line-height: 1.5;
-  /* text-indent: calc(var(--s-2) * -1); */
 }
 
 .body p.paragraphlist {
   margin-inline-start: 3rem;
-  /* text-indent: calc(var(--s-6) * -1); */
 }
 
 .body p.paragraphnolist {
@@ -56,7 +43,6 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
 
 .body p.subparagraphlist {
   margin-inline-start: 5rem;  
-  /* text-indent: calc(var(--s-2) * -1); */
 }
 
 .body p.subparagraphnolist {
@@ -107,7 +93,7 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
   margin-inline-start: 4rem;
 }
 
-/* Local styles */
+/* Local rule styles */
 
 .body blockquote {
   margin: 0 0 1rem;

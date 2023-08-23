@@ -1,4 +1,5 @@
 .action-list {
+  --sidebar-direction: 'row-reverse';
   --max-width: 102ch;
 }
 
@@ -17,7 +18,13 @@
 }
 
 .action-list__item {
+  --sidebar-direction: 'row-reverse';
   justify-content: space-between;
+  align-items: center;
+}
+
+.action-list__item__content {
+  max-inline-size: 75ch;
 }
 
 h3.action-list__item__heading {

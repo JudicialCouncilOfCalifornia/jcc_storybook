@@ -24,7 +24,7 @@ export default {
       },
       {
         label: "Certified interpreter for American SIgn Language (ASL)",
-        description: "<p>This is a description that goes along with the link.</p>",
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
         button_data :{
           label: "Learn more",
           href: "#",
