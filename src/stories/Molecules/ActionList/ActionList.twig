@@ -18,8 +18,17 @@
   <div class="action-list__items">
     {% for link in links %}
       <div class="action-list__item cluster box">
-        <div>{{ link.label }}</div>
-        <div>{% include "@atoms/Button/Button.twig" with link.button_data %}</div>
+        <div>
+          <h3 class="action-list__item__heading">{{ link.label }}</h3>
+          {% if link.description|render %}
+            <div>{{ link.description }}</div>
+          {% endif %}
+        </div>
+        <div>{% include "@atoms/Button/Button.twig" with {
+          label: link.button_data.label,
+          href: link.button_data.href,
+          variant: 'secondary',
+        } %}</div>
       </div>
     {% endfor %}
   </div>
