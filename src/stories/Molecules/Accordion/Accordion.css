@@ -35,9 +35,9 @@
   justify-content: space-between;
   gap: var(--s-2);
   color: var(--heading-color, var(--color-primary-dark-x));
-  font-size: var(--s1);
+  font-size: var(--s0);
   line-height: var(--s2);
-  padding-block: var(--s1);
+  padding-block: var(--s-1);
   padding-inline-start: var(--s-6);
   padding-inline-end: var(--s1);
   border-bottom: 1.5px dotted var(--color-base);
@@ -53,7 +53,7 @@
   align-content: end;
   height: 30px;
   width: 30px;
-  font-size: var(--s4);
+  font-size: var(--s3);
   font-weight: bold;
   line-height: 0;
   color: var(--accent-color);
