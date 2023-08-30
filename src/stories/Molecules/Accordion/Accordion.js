@@ -15,30 +15,29 @@ docReady(function () {
   const animation_speed = mediaQuery.matches ? 0 : 200;
 
   const summaries = Array.from(document.querySelectorAll('details summary'));
-  const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn'));
+  const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn.expand'));
+  const closeallbtn = Array.from(document.querySelectorAll('.expand-all-btn.close'));
 
   // Expand / Close all button logic
   if (!expandallbtn[0].classList.contains('js-loaded')) {
     expandallbtn[0].classList.add('js-loaded');
+    closeallbtn[0].classList.add('js-loaded');
     
     expandallbtn[0].addEventListener('click', (e) => {
       e.preventDefault();
-      
-      if (expandallbtn[0].hasAttribute('expanded')) {
-        expandallbtn[0].removeAttribute('expanded');
-        expandallbtn[0].setAttribute('aria-pressed', 'false');
-        expandallbtn[0].innerHTML = 'Expand all';
-        summaries.forEach(summary => {
-          summary.closest('details').removeAttribute('open', '');
-        })
-      } else {
-        expandallbtn[0].setAttribute('expanded', '');
-        expandallbtn[0].setAttribute('aria-pressed', 'true');
-        expandallbtn[0].innerHTML = 'Close all';
-        summaries.forEach(summary => {
-          summary.closest('details').setAttribute('open', '');
-        })
-      }
+
+      expandallbtn[0].setAttribute('aria-pressed', 'false');
+      summaries.forEach(summary => {
+        summary.closest('details').setAttribute('open', '');
+      })
+    });
+
+    closeallbtn[0].addEventListener('click', (e) => {
+      e.preventDefault();
+      closeallbtn[0].setAttribute('aria-pressed', 'true');
+      summaries.forEach(summary => {
+        summary.closest('details').removeAttribute('open', '');
+      })
     });
   }
 
@@ -74,18 +73,6 @@ docReady(function () {
             summary.closest('details').setAttribute('open', '');
           }, animation_speed)
         }
-
-        // Close any open details who werent clicked.
-        // const details = Array.from(document.querySelectorAll('details'));
-        // details.forEach(detail => {
-        //   if (detail.hasAttribute('open')) {
-        //     detail.classList.add('closing');
-        //     setTimeout(() => {
-        //       detail.removeAttribute('open');
-        //       detail.classList.remove('closing');
-        //     }, animation_speed)
-        //   }
-        // });
 
       });
     }

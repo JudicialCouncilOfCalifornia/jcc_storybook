@@ -13,10 +13,14 @@
   max-inline-size: var(--max-width);
 }
 
-.accordion .expand-all-btn{
+.accordion .expand-btns{
   padding-inline: var(--s3);
-  cursor: pointer;
   text-align: right;
+}
+
+.accordion .expand-btns .expand-all-btn {
+  cursor: pointer;
+  padding-inline-start: var(--s-1)
 }
 
 .accordion__items {
