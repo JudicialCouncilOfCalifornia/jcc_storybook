@@ -20,26 +20,28 @@ docReady(function () {
   const accordion_object = Array.from(document.querySelectorAll('.accordion__items'));
 
   // Expand / Close all button logic
-  if (!expandallbtn[0].classList.contains('js-loaded')) {
-    expandallbtn[0].classList.add('js-loaded');
-    closeallbtn[0].classList.add('js-loaded');
-    
-    expandallbtn[0].addEventListener('click', (e) => {
-      e.preventDefault();
+  if (expandallbtn[0]) {
+    if (!expandallbtn[0].classList.contains('js-loaded')) {
+      expandallbtn[0].classList.add('js-loaded');
+      closeallbtn[0].classList.add('js-loaded');
 
-      expandallbtn[0].setAttribute('aria-pressed', 'false');
-      summaries.forEach(summary => {
-        summary.closest('details').setAttribute('open', '');
-      })
-    });
+      expandallbtn[0].addEventListener('click', (e) => {
+        e.preventDefault();
 
-    closeallbtn[0].addEventListener('click', (e) => {
-      e.preventDefault();
-      closeallbtn[0].setAttribute('aria-pressed', 'true');
-      summaries.forEach(summary => {
-        summary.closest('details').removeAttribute('open', '');
-      })
-    });
+        expandallbtn[0].setAttribute('aria-pressed', 'false');
+        summaries.forEach(summary => {
+          summary.closest('details').setAttribute('open', '');
+        })
+      });
+
+      closeallbtn[0].addEventListener('click', (e) => {
+        e.preventDefault();
+        closeallbtn[0].setAttribute('aria-pressed', 'true');
+        summaries.forEach(summary => {
+          summary.closest('details').removeAttribute('open', '');
+        })
+      });
+    }
   }
 
   summaries.forEach(summary => {
