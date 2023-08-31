@@ -1,0 +1,7 @@
+export default {
+  default: {
+    variant: "default",
+    heading: "Read more about this component",
+    content: "<p>Reveal additional supportive content inline rather than a new page.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+  },
+};

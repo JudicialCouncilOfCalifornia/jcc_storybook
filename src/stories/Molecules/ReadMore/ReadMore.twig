@@ -1,0 +1,20 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'read-more--' ~ variant : 'read-more--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'read-more',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <h3 class="read-more__heading">
+    {{ heading }}
+    <span class="read-more__action">More</span>
+  </h3>
+  <div class="read-more__content">
+    {{ content }}
+  </div>
+</div>
