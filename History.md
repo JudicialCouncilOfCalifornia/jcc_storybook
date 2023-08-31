@@ -1,4 +1,11 @@
 
+0.54.20 / 2023-08-31
+===================
+
+  * chore: Export libs.
+  * Merge pull request #119 from JudicialCouncilOfCalifornia/fix/javascript-error-on-accordion
+  * js fix
+
 0.54.19 / 2023-08-31
 ===================
 
