@@ -17,6 +17,7 @@ docReady(function () {
   const summaries = Array.from(document.querySelectorAll('details summary'));
   const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn.expand'));
   const closeallbtn = Array.from(document.querySelectorAll('.expand-all-btn.close'));
+  const accordion_object = Array.from(document.querySelectorAll('.accordion__items'));
 
   // Expand / Close all button logic
   if (!expandallbtn[0].classList.contains('js-loaded')) {
@@ -73,8 +74,13 @@ docReady(function () {
             summary.closest('details').setAttribute('open', '');
           }, animation_speed)
         }
-
       });
     }
   });
+
+  var open_on_load = accordion_object[0].getAttribute("open_on_load");
+  if (open_on_load != '') {
+    var expand_on_load = Array.from(document.querySelectorAll('#'+ open_on_load));
+    expand_on_load[0].closest('details').setAttribute('open', '');
+  }
 });

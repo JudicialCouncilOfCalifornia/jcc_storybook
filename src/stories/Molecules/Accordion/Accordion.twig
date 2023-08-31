@@ -26,11 +26,11 @@
         <a class="expand-all-btn close" aria-pressed="false" title="Toggle accordions">Close all</a>
       </div>
     {% endif %}
-    <div class="accordion__items">
+    <div class="accordion__items" open_on_load="{{ open_on_load }}">
     {% for item in items %}
       <details {{ loop.index == 1 and open_first ? 'open' : '' }}>
         <summary role="button">
-          <div class="accordion__label">{{ item.label }}</div>
+          <div class="accordion__label" id="{{ item.id }}">{{ item.label }}</div>
         </summary>
         <div class="box">
           {{ item.content }}
