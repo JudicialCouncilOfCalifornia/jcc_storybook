@@ -371,7 +371,7 @@ button.primary-nav__button.active {
 
 .primary-nav--alternate .primary-nav__button {
   padding-block: var(--s1);
-  padding-inline: var(--s0);
+  padding-inline: var(--s-1);
   max-inline-size: 100%;
   border-block-end: 0px;
   line-height: normal;
@@ -387,7 +387,7 @@ button.primary-nav__button.active {
 }
 
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group + .primary-nav__group .primary-nav__button {
-  border-inline-start: 1px solid var(--color-base-light-x);
+  /* border-inline-start: 1px solid var(--color-base-light-x); */
 }
 
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group .primary-nav__button.open {
@@ -421,7 +421,7 @@ button.primary-nav__button.active {
 }
 
 .primary-nav--alternate .reel.overflowing + * {
-  padding-block-start: var(--s-4);
+  padding-block-start: var(--s-2);
   padding-block-end: var(--s-6);
 }
 
@@ -467,4 +467,51 @@ button.primary-nav__button.active {
 
 .primary-nav__desktop .primary-nav__item--mega .grid .link-level-2__has-overview-link {
   grid-column: 1 / -1;
+}
+
+.primary-nav--alternate .primary-nav__desktop {
+  /* This is limited for now because their menu is too big and will always */
+  /* be stuck in mobile version. */
+  /* max-inline-size: var(--max-width); */
+  margin-inline: auto;
+  /* justify-content: center; */
+}
+
+.primary-nav--alternate .reel.overflowing + * {
+  padding-block-start: 0;
+  padding-block-end: 0;
+  gap: 0;
+}
+
+.primary-nav--alternate .primary-nav__hamburger-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-block: var(--s0);
+  margin-inline-end: var(--s-2);
+}
+
+
+.primary-nav--alternate .primary-nav__hamburger-toggle span {
+  height: 3px;
+  width: 100%;
+  transform-origin: unset;
+  inset-block-start: unset;
+  position: relative;
+}
+
+.primary-nav--alternate .primary-nav__hamburger-toggle.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.primary-nav--alternate .primary-nav__hamburger-toggle.open span {
+  height: 3px;
+  width: 98%;
+  transform-origin: 10px;
 }
