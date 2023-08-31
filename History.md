@@ -1,4 +1,19 @@
 
+0.54.19 / 2023-08-31
+===================
+
+  * chore: Export libs.
+  * Merge pull request #117 from JudicialCouncilOfCalifornia/update/style-tweaks-to-primary-alternate.
+  * Some tweaks to primary alternate to help with current look. Future work will be in diff branch.
+  * Merge pull request #115 from JudicialCouncilOfCalifornia/feature/LWR-165--read-more-toggle
+  * Merge pull request #116 from JudicialCouncilOfCalifornia/feature/DCAS-73-location-hash-to-accordions
+  * added option for accordion loading open
+  * LWR-165: new read more component
+  * Merge pull request #114 from JudicialCouncilOfCalifornia/feature/DCAS-89-expand-and-collapse-on-accordion
+  * modified expand functionality
+  * Merge pull request #113 from JudicialCouncilOfCalifornia/LWR-264-Css-changes
+  * Added css changes for LWR-264
+
 0.54.18 / 2023-08-23
 ===================
 
