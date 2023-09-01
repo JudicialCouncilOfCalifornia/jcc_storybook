@@ -65,9 +65,11 @@ docReady(function () {
             summary.closest('details').removeAttribute('open');
             summary.closest('details').classList.remove('closing');
           }, animation_speed)
-          if (expandallbtn[0].hasAttribute('expanded')) {
-            expandallbtn[0].removeAttribute('expanded');
-            expandallbtn[0].innerHTML = 'Expand all';
+          if (expandallbtn[0]) {
+            if (expandallbtn[0].hasAttribute('expanded')) {
+              expandallbtn[0].removeAttribute('expanded');
+              expandallbtn[0].innerHTML = 'Expand all';
+            }
           }
         } else {
           // If closed when clicked, open the detail. The delay helps improve the
