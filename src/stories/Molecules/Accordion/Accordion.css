@@ -24,7 +24,7 @@
 }
 
 .accordion__items {
-  padding-inline: var(--s3);
+  padding-inline: var(--s6);
   padding-block-start: var(--s1);
   padding-block-end: var(--s4);
   border: 1px dotted var(--color-base);
@@ -32,6 +32,7 @@
 
 .accordion details {
   width: 100%;
+  border-bottom: 1.5px dotted var(--color-base);
 }
 
 .accordion details > summary {
@@ -44,7 +45,6 @@
   padding-block: var(--s-1);
   padding-inline-start: var(--s-6);
   padding-inline-end: var(--s1);
-  border-bottom: 1.5px dotted var(--color-base);
   list-style-type: none;
   cursor: pointer;
 }
