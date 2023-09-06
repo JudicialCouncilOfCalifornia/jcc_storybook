@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline-start: var(--s1);
+  padding-inline-start: var(--s3);
   border: var(--border-thin) solid var(--color-base-light-x);
   border-radius: var(--s-4);
   background-color: var(--color-base-light-xxx);
@@ -20,11 +20,13 @@
   display: flex;
   justify-content: center;
   width: 10ch;
-  padding-block: var(--s0);
+  padding-block: var(--s2);
   border-top-right-radius: var(--s-4);
   border-bottom-right-radius: var(--s-4);
+  border: none;
   border-left: var(--border-thin) solid var(--color-base-light-x);
   background-color: var(--color-white);
+  font-size: var(--s0);
   color: var(--color-primary);
 }
 
@@ -39,7 +41,7 @@
   color: var(--color-primary);
   content: '\231F';
   transform:rotate(45deg);
-  transition: all var(--anim-speed) ease;
+  /*transition: all var(--anim-speed) ease;*/
 }
 
 .read-more__action.open::after {
