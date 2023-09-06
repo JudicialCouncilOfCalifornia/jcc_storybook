@@ -67,10 +67,6 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
   line-height: 1.5;
 }
 
-.body ul {
-  padding-inline: 0;
-}
-
 .body li:is(.TOClevel1, .TOClevel2, .TOClevel3, .TOClevel4) {
   list-style-type: none;
   margin-block-start: var(--s-1);

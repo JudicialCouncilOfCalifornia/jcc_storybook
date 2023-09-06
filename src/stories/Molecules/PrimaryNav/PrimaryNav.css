@@ -387,7 +387,7 @@ button.primary-nav__button.active {
 }
 
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group + .primary-nav__group .primary-nav__button {
-  /* border-inline-start: 1px solid var(--color-base-light-x); */
+  border-inline-start: 0;
 }
 
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group .primary-nav__button.open {
