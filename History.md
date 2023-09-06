@@ -1,4 +1,15 @@
 
+0.54.21 / 2023-09-05
+===================
+
+  * chore: Export libs.
+  * Merge pull request #122 from JudicialCouncilOfCalifornia/fix/legal-rule-formatting-list-padding
+  * Fix to body field lists indentation. Rules indentation wasn't generalized to just rules setups.
+  * Merge pull request #121 from JudicialCouncilOfCalifornia/feature/DCAS-108-accordion-adjustment
+  * Merge pull request #120 from JudicialCouncilOfCalifornia/fix/javascript-error-on-accordion-expand-collapse
+  * styles
+  * null test
+
 0.54.20 / 2023-08-31
 ===================
 
