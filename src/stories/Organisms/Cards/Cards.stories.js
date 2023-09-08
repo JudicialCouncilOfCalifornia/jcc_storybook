@@ -40,6 +40,7 @@ export default {
         "card--bordered-center",
         "card--overlay",
         "card--striped",
+        "card--striped-aligned",
       ],
     },
     sub_component_layout: {
@@ -153,3 +154,6 @@ MediaRight.args = data.media_right;
 
 export const Striped = Template.bind({});
 Striped.args = data.striped;
+
+export const StripedAligned = Template.bind({});
+StripedAligned.args = data.striped_aligned;
