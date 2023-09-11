@@ -28,3 +28,7 @@
   padding-inline: var(--s0);
   padding-block: var(--s-3);
 }
+
+.news--teaser-in-view .brow.brow--default {
+  margin-block-end: var(--s-3);
+}
