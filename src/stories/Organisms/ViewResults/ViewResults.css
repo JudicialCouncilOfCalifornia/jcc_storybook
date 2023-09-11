@@ -132,7 +132,7 @@
 }
 
 .views-view--news--news-list .views-row + .views-row {
-  margin-block-end: var(--s5);
+  margin-block-start: var(--s5);
 }
 
 .views-view--news--news-list article .brow.brow--default {
