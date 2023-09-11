@@ -14,6 +14,12 @@ select {
   line-height: var(--s0);
   display: block;
   width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .placeholder-container {
@@ -84,7 +90,7 @@ label {
 
 .form-item + .form-item,
 .form-item + .form-actions {
-  margin-block-start: var(--s5);
+  margin-block-start: var(--s2);
 }
 
 .form-item > * + * {
