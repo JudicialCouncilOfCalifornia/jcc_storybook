@@ -1,4 +1,13 @@
 
+0.54.22 / 2023-09-11
+===================
+
+  * chore: Export libs.
+  * Merge pull request #124 from JudicialCouncilOfCalifornia/update/style-tweaks-to-forms-and-news-publication-views
+  * style tweaks to forms (publication date filter and news listing page)
+  * Merge pull request #118 from JudicialCouncilOfCalifornia/bugfix/LWR-165--read-more-button
+  * LWR-165: correct action as button
+
 0.54.21 / 2023-09-05
 ===================
 
