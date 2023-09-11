@@ -10,7 +10,6 @@ function docReady(fn) {
 
 docReady(function () {
   const readmorebtns = Array.from(document.querySelectorAll('.read-more__action'));
-  console.clear();
 
   // More-Less logic per instance.
   readmorebtns.forEach(readmorebtn => {
