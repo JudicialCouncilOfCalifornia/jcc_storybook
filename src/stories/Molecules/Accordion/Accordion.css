@@ -20,7 +20,8 @@
 
 .accordion .expand-btns .expand-all-btn {
   cursor: pointer;
-  padding-inline-start: var(--s-1)
+  padding-inline-start: var(--s-1);
+  text-decoration: underline;
 }
 
 .accordion__items {
@@ -28,6 +29,7 @@
   padding-block-start: var(--s1);
   padding-block-end: var(--s4);
   border: 1px dotted var(--color-base);
+  margin-block-start: var(--s-3);
 }
 
 .accordion details {
