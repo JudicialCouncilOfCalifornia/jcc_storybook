@@ -1,4 +1,12 @@
 
+0.54.24 / 2023-09-12
+===================
+
+  * chore: Export libs.
+  * [fix] -- TeaserPlusList tweak to better handle empty left/right teaser content.
+  * Merge pull request #125 from JudicialCouncilOfCalifornia/styling-edits-to-accordions
+  * css edits
+
 0.54.23 / 2023-09-11
 ===================
 
