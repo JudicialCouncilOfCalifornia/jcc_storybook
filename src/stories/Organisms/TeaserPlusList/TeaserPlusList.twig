@@ -14,6 +14,16 @@
     </div>
   {% endif %}
   <div class="{{ classes|join(' ') }}">
+
+    {% if teaser.heading is empty %}
+    <div class="teaser-list__teaser teaser-list__teaser--empty stack">
+      <div class="teaser-list__teaser-text">
+        <p>{{ 'Featured news item not available.'|t }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if teaser.heading is not empty %}
     <div class="teaser-list__teaser stack">
       {% if teaser.brow_data %}
         {% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
@@ -31,6 +41,17 @@
         {{ teaser.text }}
       </div>
     </div>
+    {% endif %}
+    
+    {% if list_items is empty %}
+    <div class="teaser-list__list teaser-list__list--empty">
+      <div class="teaser-list__teaser-text">
+        <p>{{ 'Additional news items are not available.'|t }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if list_items is not empty %}
     <div class="teaser-list__list">
       <ul class="stack">
         {% for item in list_items %}
@@ -45,6 +66,8 @@
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
+
   </div>
   {% if button_data is not empty %}
     <div class="teaser-list__button center">
