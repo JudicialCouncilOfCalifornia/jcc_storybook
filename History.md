@@ -1,4 +1,11 @@
 
+0.54.25 / 2023-09-15
+===================
+
+  * chore: Export libs.
+  * Merge pull request #126 from JudicialCouncilOfCalifornia/DCAS-91-114-120-style-updates-and-fixes
+  * [DCAS-91-114-120] - Style updates/fixes
+
 0.54.24 / 2023-09-12
 ===================
 
