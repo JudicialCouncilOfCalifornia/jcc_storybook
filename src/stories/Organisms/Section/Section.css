@@ -171,3 +171,9 @@
 .section > .section__content.box .section__main > .section__content.box {
   padding-inline: 0;
 }
+
+/* Remove extra top spacing for cards subsection when 1st or 2nd element */
+.section .section__main .section.cards:nth-child(1) .section__content,
+.section .section__main .section.cards:nth-child(2) .section__content {
+  padding-block-start: unset;
+}
