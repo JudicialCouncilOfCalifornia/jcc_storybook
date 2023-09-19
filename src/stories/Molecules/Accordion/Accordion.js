@@ -82,11 +82,9 @@ docReady(function () {
     }
   });
 
-  if (accordion_object[0]) {
-    var open_on_load = accordion_object[0].getAttribute("open_on_load");
-    if (open_on_load != '') {
-      var expand_on_load = Array.from(document.querySelectorAll('#'+ open_on_load));
-      expand_on_load[0].closest('details').setAttribute('open', '');
-    }
+  var open_on_load = accordion_object[0].getAttribute("open_on_load");
+  if (open_on_load != '') {
+    var expand_on_load = Array.from(document.querySelectorAll('#'+ open_on_load));
+    expand_on_load[0].closest('details').setAttribute('open', '');
   }
 });

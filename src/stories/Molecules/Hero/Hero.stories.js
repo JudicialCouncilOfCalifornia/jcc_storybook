@@ -12,7 +12,7 @@ export default {
   argTypes: {
     variant: {
       description: "Hero variant.",
-      table: { defaultValue: { summary: "img_left_aligned" } },
+      table: { defaultValue: { summary: "banner" } },
       control: { type: "radio" },
       options: ["banner", "content-bg", "img_left_aligned"],
     },
