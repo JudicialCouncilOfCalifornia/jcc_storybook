@@ -1,4 +1,11 @@
 
+0.54.26 / 2023-09-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #129 from JudicialCouncilOfCalifornia/DCAS-91-114-120-style-updates-and-fixes
+  * PrimaryNav alternate - Parent menu item caret size fix and contextual nav overview link style on mobile fix
+
 0.54.25 / 2023-09-15
 ===================
 
