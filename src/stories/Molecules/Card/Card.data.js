@@ -4,6 +4,11 @@ export default {
     clickable_card: false,
     background: null,
     aspect: [],
+    brow: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "Part two",
+    },
     media:
       '<img src="https://source.unsplash.com/random/1280x720/?language" />',
     icon_data: {

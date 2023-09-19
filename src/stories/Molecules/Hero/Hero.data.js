@@ -144,4 +144,30 @@ export default {
       },
     },
   },
+  img_left_aligned: {
+    variant: "img-left-aligned",
+    content_justify: "left",
+    accent_color: "primary-dark-x",
+    content_bg_color: "white",
+    bg_tint: false,
+    background_image_url: "https://source.unsplash.com/random/900×700/?books",
+    first_component: true,
+    card_data: {
+      variant: "default",
+      first_component: true,
+      media: false,
+      brow: {
+        variant: "default",
+        part_one: "Orders",
+        part_two: "July 12, 2022",
+      },
+      heading: "Hero Heading",
+      text: "<p>varius euismod.</p>",
+      button_data: {
+        label: "Text Button",
+        href: "#",
+        variant: "text",
+      },
+    },
+  },
 };

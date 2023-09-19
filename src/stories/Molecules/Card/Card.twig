@@ -53,6 +53,11 @@
     {% endif %}
     {% if heading or text or ( button_data[0].href and tag == 'div' ) %}
       <div class="card__main stack">
+        {% if brow %}
+          <div class="hero__top-content-brow">
+            {% include "@atoms/Brow/Brow.twig" with brow %}
+          </div>
+        {% endif %}
 
         {% if heading is not empty %}
           <div class="card__heading">

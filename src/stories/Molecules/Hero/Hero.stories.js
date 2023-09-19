@@ -12,9 +12,9 @@ export default {
   argTypes: {
     variant: {
       description: "Hero variant.",
-      table: { defaultValue: { summary: "banner" } },
+      table: { defaultValue: { summary: "img_left_aligned" } },
       control: { type: "radio" },
-      options: ["banner", "content-bg"],
+      options: ["banner", "content-bg", "img_left_aligned"],
     },
     content_justify: {
       description: "Justify the content container left, center or right.",
@@ -63,3 +63,6 @@ BannerFeaturedLinks.args = data.banner_featured_links;
 
 export const BannerContentBGWhite = Template.bind({});
 BannerContentBGWhite.args = data.content_bg;
+
+export const BannerImgLeftAligned = Template.bind({});
+BannerImgLeftAligned.args = data.img_left_aligned;
