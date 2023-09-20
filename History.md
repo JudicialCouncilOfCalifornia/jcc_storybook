@@ -1,4 +1,13 @@
 
+0.54.27 / 2023-09-20
+===================
+
+  * chore: Export libs.
+  * Merge pull request #131 from JudicialCouncilOfCalifornia/DCAS-91-114-120-style-updates-and-fixes
+  * Css updates for Primary nav (alternate/contextual menu).
+  * Merge pull request #130 from JudicialCouncilOfCalifornia/fix/accordion-js
+  * removed js error
+
 0.54.26 / 2023-09-19
 ===================
 
