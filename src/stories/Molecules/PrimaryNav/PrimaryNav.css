@@ -367,7 +367,7 @@ button.primary-nav__button.active {
 .primary-nav--alternate .primary-nav__default {
   min-height: unset;
   justify-content: flex-start;
-  padding-inline: var(--s-2);
+  padding-inline: 0;
   margin-inline: auto;
   max-inline-size: var(--max-width);
 }
@@ -382,7 +382,7 @@ button.primary-nav__button.active {
 
 .primary-nav--alternate .primary-nav__button {
   padding-block: var(--s1);
-  padding-inline: var(--s-1);
+  padding-inline: var(--s1);
   max-inline-size: 100%;
   border-block-end: 0px;
   line-height: normal;
