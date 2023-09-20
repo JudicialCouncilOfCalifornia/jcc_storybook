@@ -303,3 +303,8 @@
 .hangover--hide-compact .wrapping .hangover__top-hangover-content > * {
   display: none;
 }
+
+.hangover--with-bottom .hangover__bottom > .box {
+  /* This tries to match bottom spacing with the bottom of image */
+  padding-block-end: var(--s-3);
+}
