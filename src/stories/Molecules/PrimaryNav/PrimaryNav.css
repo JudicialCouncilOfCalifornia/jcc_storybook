@@ -134,6 +134,7 @@ a.primary-nav__button {
   margin-inline-start: var(--s-3);
   width: 6px;
   height: 6px;
+  min-width: 6px;
 }
 
 .primary-nav button.header-search__icon::after {
@@ -366,7 +367,7 @@ button.primary-nav__button.active {
 .primary-nav--alternate .primary-nav__default {
   min-height: unset;
   justify-content: flex-start;
-  padding-inline: var(--s-2);
+  padding-inline: 0;
   margin-inline: auto;
   max-inline-size: var(--max-width);
 }
@@ -381,7 +382,7 @@ button.primary-nav__button.active {
 
 .primary-nav--alternate .primary-nav__button {
   padding-block: var(--s1);
-  padding-inline: var(--s-1);
+  padding-inline: var(--s1);
   max-inline-size: 100%;
   border-block-end: 0px;
   line-height: normal;
@@ -529,4 +530,10 @@ button.primary-nav__button.active {
 .primary-nav--alternate.primary-nav a.primary-nav__button.parent_link::after,
 .primary-nav--alternate.primary-nav button::after {
   margin-block-start: -1px;
+}
+
+.primary-nav--alternate .primary-nav__mobile .primary-nav__item a.primary-nav__overview-link,
+.primary-nav--alternate .primary-nav__mobile .primary-nav__item button.primary-nav__overview-link {
+  font-weight: 400;
+  padding: 0 var(--s0) 0 var(--s0);
 }

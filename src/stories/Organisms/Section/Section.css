@@ -55,6 +55,10 @@
   display: block;
 }
 
+.section .section__main.multiple:not(.stack) .card__inner > * + * {
+  margin-block-start: var(--s0);
+}
+
 .section .section__header {
   --max-width: 103ch;
   max-inline-size: var(--max-width);
