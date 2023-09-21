@@ -24,12 +24,10 @@ docReady(function () {
         if (readmoreheading.hasAttribute('expanded')) {
           readmoreheading.removeAttribute('expanded');
           readmorebtn.setAttribute('aria-pressed', 'false');
-          readmorebtn.classList.remove('open');
           readmorebtn.innerHTML = 'More';
         } else {
           readmoreheading.setAttribute('expanded', 'true');
           readmorebtn.setAttribute('aria-pressed', 'true');
-          readmorebtn.classList.add('open');
           readmorebtn.innerHTML = 'Less';
         }
       });

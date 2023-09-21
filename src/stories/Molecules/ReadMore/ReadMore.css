@@ -1,12 +1,13 @@
 .read-more {
   max-inline-size: 75ch;
+  gap: unset;
 }
 
 .read-more__heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline-start: var(--s3);
+  padding-inline-start: var(--s2);
   border: var(--border-thin) solid var(--color-base-light-x);
   border-radius: var(--s-4);
   background-color: var(--color-base-light-xxx);
@@ -20,33 +21,52 @@
   display: flex;
   justify-content: center;
   width: 10ch;
+  margin-inline-start: var(--s2);
   padding-block: var(--s2);
+  padding-inline: var(--s5);
   border-top-right-radius: var(--s-4);
   border-bottom-right-radius: var(--s-4);
   border: none;
   border-left: var(--border-thin) solid var(--color-base-light-x);
   background-color: var(--color-white);
   font-size: var(--s0);
+  font-weight: 600;
   color: var(--color-primary);
 }
 
 .read-more__action::after {
   position: relative;
-  left: var(--s-3);
+  left: var(--s-2);
   border-top-right-radius: var(--s-4);
   border-bottom-right-radius: var(--s-4);
   font-size: var(--s2);
   font-weight: bold;
-  line-height: 0;
+  line-height: 0.3;
   color: var(--color-primary);
   content: '\231F';
   transform:rotate(45deg);
   /*transition: all var(--anim-speed) ease;*/
 }
 
-.read-more__action.open::after {
-  top: var(--s-6);
+.read-more__heading[expanded] > .read-more__action::after  {
+  top: var(--s-1);
+  left: var(--s-6);
   transform:rotate(225deg);
+}
+
+@-moz-document url-prefix() {
+  .read-more__action {
+    padding-inline-end: var(--s6);
+  }
+
+  .read-more__action::after {
+    line-height: 0;
+  }
+
+  .read-more__heading[expanded] > .read-more__action::after {
+    top: var(--s-4);
+    left: var(--s-2);
+  }
 }
 
 .read-more__action:hover {
@@ -64,4 +84,23 @@
 .read-more__heading[expanded] + .read-more__content {
   display: block;
   line-height: var(--s1);
+}
+
+.read-more--text .read-more__heading {
+  border: unset;
+  border-radius: unset;
+  background-color: unset;
+  padding-inline-start: unset;
+}
+
+.read-more--text .read-more__action {
+  border: unset;
+  border-radius: unset;
+  background-color: unset;
+  margin-inline-start: unset;
+  padding-block: unset;
+}
+
+.read-more--text .read-more__action::after {
+  border-radius: unset;
 }

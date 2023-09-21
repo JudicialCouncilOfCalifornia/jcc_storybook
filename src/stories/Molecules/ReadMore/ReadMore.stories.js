@@ -32,3 +32,8 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 // Data comes from the ReadMore.data.js file.
 Default.args = data.default;
+
+// Bind the Default component variant for this component.
+export const Text = Template.bind({});
+// Data comes from the ReadMore.data.js file.
+Text.args = data.text;

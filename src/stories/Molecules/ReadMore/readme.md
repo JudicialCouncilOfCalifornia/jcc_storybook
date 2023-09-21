@@ -7,6 +7,7 @@ Component to add initially collapsed content that is revealed by users as needed
   <summary>Twig Variables:</summary>
 
   ```
+  variant: "[default, text]",
   heading: "Text string",
   content: "Rendered content",
   ```
