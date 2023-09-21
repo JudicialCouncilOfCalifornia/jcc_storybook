@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./Section.data";
 import Section from "./Section.twig";
 import "./Section.css";
+import './Section.js';
 
 export default {
   title: "Organisms/Section",
