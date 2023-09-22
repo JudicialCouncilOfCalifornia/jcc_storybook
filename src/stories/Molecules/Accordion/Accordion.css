@@ -55,6 +55,7 @@
   padding-inline-end: var(--s1);
   list-style-type: none;
   cursor: pointer;
+  align-items: center;
 }
 
 .accordion details > summary::-webkit-details-marker {
