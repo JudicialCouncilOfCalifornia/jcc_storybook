@@ -1,4 +1,17 @@
 
+0.54.28 / 2023-09-21
+===================
+
+  * chore: Export libs.
+  * Merge pull request #132 from JudicialCouncilOfCalifornia/update/style-fixes-for-body-type-content
+  * [Update] - Spacing style fixes for heading tags in body type content.
+  * Merge pull request #127 from JudicialCouncilOfCalifornia/bugfix/LWR-277--readmore-improvements
+  * LWR-277: button carat fix, width mgt, and text variant
+  * Merge pull request #123 from JudicialCouncilOfCalifornia/feature/DCAS-75--striped-aligned-cards-example
+  * DCAS-75: added variant example
+  * Merge branch 'master' into bugfix/DCAS-122--cards-layout-section-spacing
+  * DCAS-122: trim cards subsection top spacing when needed
+
 0.54.27 / 2023-09-20
 ===================
 
