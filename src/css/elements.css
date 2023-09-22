@@ -55,6 +55,18 @@ p {
 }
 
 p + p {
+  margin-block-start: var(--s0);
+}
+
+:where(p, h2, h3, h4, h5, h6) + h2,
+:where(p, h2, h3, h4, h5, h6) + h3,
+:where(p, h2, h3, h4, h5, h6) + h4,
+:where(p, h2, h3, h4, h5, h6) + h5,
+:where(p, h2, h3, h4, h5, h6) + h6 {
+  margin-block-start: var(--gap, 1.5rem);
+}
+
+:where(p, h2, h3, h4, h5, h6) + p {
   margin-top: var(--s0);
 }
 
