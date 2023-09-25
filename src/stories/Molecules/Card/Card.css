@@ -285,3 +285,7 @@
   align-items: flex-start;
   max-width: var(--measure);
 }
+
+.card.extra-padding {
+  padding: var(--s5) var(--s6);
+}

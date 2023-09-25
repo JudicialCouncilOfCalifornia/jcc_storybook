@@ -174,6 +174,7 @@ export default {
     clickable_card: true,
     background: null,
     aspect: [],
+    extra_padding: false,
     media: false,
     icon_data: {
       icon: "speaker",
