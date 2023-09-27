@@ -17,6 +17,7 @@
 {% set variant = variant ? 'card--' ~ variant : 'card--default' %}
 {% set variant_clickable = clickable_card ? 'card--clickable' : '' %}
 {% set variant_background = background ? 'card--background-' ~ background : '' %}
+{% set extra_padding = extra_padding ? 'extra-padding' : '' %}
 
 {% set styles = [] %}
 
@@ -35,6 +36,7 @@
   variant,
   variant_background,
   variant_clickable,
+  extra_padding,
 ] %}
 
 <{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {% if tag_href %} href="{{ tag_href }}" {% endif %}>
