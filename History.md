@@ -1,4 +1,11 @@
 
+0.54.29 / 2023-09-27
+===================
+
+  * chore: Export libs.
+  * Merge pull request #133 from JudicialCouncilOfCalifornia/feature/LWR-70-messenger-block
+  * extra padding option on cards
+
 0.54.28 / 2023-09-21
 ===================
 
