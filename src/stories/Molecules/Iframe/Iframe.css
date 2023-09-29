@@ -22,3 +22,9 @@
 .iframe--classic iframe {
   aspect-ratio: 3 / 4;
 }
+
+.iframe--granicus-link {
+  height: var(--s5);
+  border: none;
+  margin-block-start: var(--s-2);
+}
