@@ -1,4 +1,11 @@
 
+0.54.30 / 2023-09-27
+===================
+
+  * chore: Export libs.
+  * Merge pull request #134 from JudicialCouncilOfCalifornia/bugfix/DCAS-133--migrate-granicus-event-iframe-styles
+  * DCAS-133: granicus event embed styles
+
 0.54.29 / 2023-09-27
 ===================
 
