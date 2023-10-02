@@ -1,18 +1,3 @@
-function docEvents(readmorebtn) {
-  let readmoreheading = readmorebtn.closest('.read-more__heading');
-  let readmorebtntext = readmorebtn.children[0];
-
-  if (readmoreheading.hasAttribute('expanded')) {
-    readmoreheading.removeAttribute('expanded');
-    readmorebtn.setAttribute('aria-label', 'Show more');
-    readmorebtntext.innerHTML = 'More';
-  } else {
-    readmoreheading.setAttribute('expanded', 'true');
-    readmorebtn.setAttribute('aria-label', 'Show less');
-    readmorebtntext.innerHTML = 'Less';
-  }
-}
-
 function docReady(fn) {
   // See if DOM is already available.
   if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -35,15 +20,15 @@ docReady(function () {
       readmorebtn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        docEvents(readmorebtn);
-      });
+        let readmoreheading = readmorebtn.closest('.read-more__heading');
+        let readmorebtntext = readmorebtn.children[0];
 
-      // Keyboard interaction.
-      readmorebtn.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-
-          docEvents(readmorebtn);
+        if (readmoreheading.hasAttribute('expanded')) {
+          readmoreheading.removeAttribute('expanded');
+          readmorebtntext.innerHTML = 'More';
+        } else {
+          readmoreheading.setAttribute('expanded', 'true');
+          readmorebtntext.innerHTML = 'Less';
         }
       });
     }
