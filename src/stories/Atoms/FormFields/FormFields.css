@@ -194,3 +194,26 @@ fieldset legend span {
   margin-block-end: var(--s-3);
   border-block-end: 2px solid var(--accent-color);
 }
+
+/* Specific form styles */
+
+/* content-moderation-control */
+.entity-moderation-form {
+  margin-block: 0;
+  padding-block: var(--s-2);
+  padding-inline: var(--s1);
+}
+
+.entity-moderation-form > .form-item,
+.entity-moderation-form .form-item + .form-item {
+  margin-block: 0;
+}
+
+.entity-moderation-form .form-item-current {
+  font-weight: bold;
+}
+
+.entity-moderation-form input[type=submit] {
+  margin-block: 0;
+  margin-inline-start: auto;
+}
