@@ -1,4 +1,14 @@
 
+0.54.31 / 2023-10-05
+===================
+
+  * chore: Export libs.
+  * Merge pull request #136 from JudicialCouncilOfCalifornia/DCAS-143-content-moderation-form-styles
+  * DCAS-143 -- Content moderation form style tweaks
+  * Merge pull request #135 from JudicialCouncilOfCalifornia/bugfix/DCAS-138--readmore-wrap
+  * DCAS-138: always wrap content & refactored arrow 2
+  * DCAS-138: always wrap content & refactored arrow
+
 0.54.30 / 2023-09-27
 ===================
 
