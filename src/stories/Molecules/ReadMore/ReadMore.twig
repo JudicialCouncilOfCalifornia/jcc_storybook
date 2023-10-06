@@ -13,7 +13,12 @@
 <div class="{{ classes|join(' ') }}">
   <h3 class="read-more__heading">
     {{ heading }}
-    <button class="read-more__action">More</button>
+    <button class="read-more__action">
+      <span class="read-more__action_label">More</span>
+      {% include "@atoms/Icon/Icon.twig" with {
+        icon: "fa-chevron-down",
+      } %}
+    </button>
   </h3>
   <div class="read-more__content">
     {{ content }}
