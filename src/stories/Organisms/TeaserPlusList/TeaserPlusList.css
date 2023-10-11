@@ -17,6 +17,12 @@
   margin-block-end: var(--gap, 1.5rem);
 }
 
+/* Headline heading must always appear as H3 visually. */
+.teaser-list__teaser-heading_tag {
+  font-size: var(--s2);
+  line-height: var(--s3);
+}
+
 .teaser-list__list:not(.wrapped) {
   border-inline-start: 1px dotted var(--accent-color);
   padding-inline-start: var(--s5);
@@ -33,6 +39,12 @@
 .teaser-list__list ul {
   list-style: none;
   padding-inline: 0;
+}
+
+/* Other teaser headings must always appear as H4 visually. */
+.teaser-list__link_tag {
+  font-size: var(--s1);
+  line-height: var(--s2);
 }
 
 .teaser-list__footer {

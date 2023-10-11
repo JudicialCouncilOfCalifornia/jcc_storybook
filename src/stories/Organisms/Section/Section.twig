@@ -1,10 +1,5 @@
-{# Set brow and heading tags based on if they're first component or not. #}
-{# Subordinate heading to brow if present. #}
-{% if first_component %}
-  {% set h = brow ? 'h2' : 'h1' %}
-{% else %}
-  {% set h = brow ? 'h3' : 'h2' %}
-{% endif %}
+{# Set heading tag based on if they're first component or not. #}
+{% set h = first_component ? 'h1' : 'h2' %}
 
 {% set variant_bg_image = background_image_url is not empty ? 'section--with-bg-image' : '' %}
 
@@ -94,7 +89,6 @@
         </div>
       {% endif %}
       <div class="section__main {{ sub_component_layout }} {{ multiple }}" style="{{ sub_component_styles|join }}">
-
         {% if sub_component_data is iterable %}
           {% for item in sub_component_data %}
             {{ item }}

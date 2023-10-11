@@ -20,7 +20,7 @@
   position: relative;
   margin-block-start: 0;
   padding-inline-start: var(--s4);
-  padding-block-start: var(--s0);
+  padding-block-start: var(--s-4);
   padding-block-end: var(--s4);
   border-inline-start: 2px solid var(--color-accent-warm-light-x);
 }
@@ -57,8 +57,11 @@
   margin-inline: initial;
 }
 
+/* Label headings must always appear as H3 visually. */
 .step__label {
   margin-block-end: var(--s0);
+  font-size: var(--s2);
+  line-height: var(--s3);
 }
 
 .steps--color-white .step::before {

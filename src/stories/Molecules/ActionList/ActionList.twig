@@ -1,3 +1,6 @@
+{# Item heading depends if a section heading exists or not. #}
+{% set h = heading ? 'h3' : 'h2' %}
+
 {% set variant_class = variant ? 'action-list--' ~ variant : 'action-list--default' %}
 
 {% set classes = [
@@ -19,7 +22,7 @@
     {% for link in links %}
       <div class="action-list__item cluster box">
         <div class="action-list__item__content">
-          <h3 class="action-list__item__heading">{{ link.label }}</h3>
+          <{{ h }} class="action-list__item__heading">{{ link.label }}</{{ h }}>
           {% if link.description|render %}
             <div class="action-list__item__description">{{ link.description|render }}</div>
           {% endif %}

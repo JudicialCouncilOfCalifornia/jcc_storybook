@@ -5,14 +5,12 @@
 
 <div class="{{ classes|join(' ') }}">
   <div class="profile-bio__main stack">
-    {% if name|render %}
-      <div class="profile-bio__header {{ share ? 'cluster' : '' }}">
-        <h1 class="profile-bio__heading">{{ name }}</h1>
-        {% if share %}
-          {% include "@molecules/Share/Share.twig" with share %}
-        {% endif %}
-      </div>
-    {% endif %}
+    <div class="profile-bio__header {{ share ? 'cluster' : '' }}">
+      <h1 class="profile-bio__heading">{{ name }}</h1>
+      {% if share %}
+        {% include "@molecules/Share/Share.twig" with share %}
+      {% endif %}
+    </div>
 
     {% if title|render %}
       <div class="profile-bio__title">{{ title }}</div>

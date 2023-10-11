@@ -20,7 +20,7 @@ export default {
     share: {
       print_url: "javascript: window.print();",
       print_aria_label: "Print profile",
-      download_url: "javascript: void(0);",
+      download_url: "/iframe.html?args=&id=templates-profile--default&viewMode=story",
       download_aria_label: "Download profile",
     },
   },

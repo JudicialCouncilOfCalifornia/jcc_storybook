@@ -27,7 +27,7 @@
   max-inline-size: 75ch;
 }
 
-h3.action-list__item__heading {
+.action-list__item__heading {
   font-size: var(--s0);
   color: var(--color);
   font-family: var(--font-secondary);

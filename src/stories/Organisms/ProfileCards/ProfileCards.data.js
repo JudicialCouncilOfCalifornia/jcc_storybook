@@ -10,12 +10,15 @@ export default {
     text: "<p>Potential description if needed. Any rendered content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
     sub_component_data: [
       ProfileCard({
+        has_section_heading: true,
         ...ProfileCardDefault.args
       }),
       ProfileCard({
+        has_section_heading: true,
         ...ProfileCardDefault.args
       }),
       ProfileCard({
+        has_section_heading: true,
         ...ProfileCardDefault.args
       })
     ],

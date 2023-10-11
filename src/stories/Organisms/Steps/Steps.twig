@@ -1,3 +1,6 @@
+{# Step heading depends if a section heading exists or not. #}
+{% set h = heading ? 'h3' : 'h2' %}
+
 {# Set up variant classes. #}
 {% set color_class = color ? 'steps--color-' ~ color : 'steps--color-default' %}
 
@@ -25,10 +28,10 @@
     <div class="steps__steps">
       {% for step in steps %}
     <div class="steps__step step">
-      <h3 class="step__label">
+      <{{ h }} class="step__label">
         <span class="sr-only">Step: {{ loop.index }}</span>
         {{ step.label }}
-      </h3>
+      </{{ h }}>
       <div class="center">
         {{ step.content }}
       </div>

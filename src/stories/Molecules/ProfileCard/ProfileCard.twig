@@ -1,3 +1,5 @@
+{# Card heading depends if a section heading exists or not. #}
+{% set h = has_section_heading ? 'h3' : 'h2' %}
 
 {% set classes = [
   'profile-card',
@@ -20,7 +22,7 @@
       </div>
 
       {% if name %}
-        <h3 class="profile-card__name">{{ name }}</h3>
+        <{{ h }} class="profile-card__name">{{ name }}</{{ h }}>
       {% endif %}
       
       {% if title %}

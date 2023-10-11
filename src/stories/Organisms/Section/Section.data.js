@@ -1,3 +1,18 @@
+import Accordion from "../../Molecules/Accordion/Accordion.twig";
+import { Default as AccordionDefault } from "../../Molecules/Accordion/Accordion.stories";
+import ActionList from "../../Molecules/ActionList/ActionList.twig";
+import { Default as ActionListDefault } from "../../Molecules/ActionList/ActionList.stories";
+import Cards from "../../Organisms/Cards/Cards.twig";
+import { Striped as CardsStriped } from "../../Organisms/Cards/Cards.stories";
+import ProfileCards from "../../Organisms/ProfileCards/ProfileCards.twig";
+import { Default as ProfileCardsDefault } from "../../Organisms/ProfileCards/ProfileCards.stories";
+import Steps from "../../Organisms/Steps/Steps.twig";
+import { Default as StepsDefault } from "../../Organisms/Steps/Steps.stories";
+import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
+import { Default as TeaserListDefault } from "../../Organisms/TeaserPlusList/TeaserPlusList.stories";
+import ViewResults from "../../Organisms/ViewResults/ViewResults.twig";
+import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewResults.stories";
+
 export default {
   default: {
     variant: "default",
@@ -131,5 +146,49 @@ export default {
     sub_component_data:
       '<div class=""><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     section_layout: "switcher",
+  },
+  auto_adjusting_headings: {
+    variant: "default",
+    section_classes: ["headings-mgt"],
+    sub_component_layout: 'stack',
+    brow_data: {
+      variant: "heading",
+      part_one: "Brow Example",
+      part_two: "",
+    },
+    heading: "Auto Adjusting Headings",
+    text: "<p>Adding <strong>heading-mgt</strong> class to enable handlers that auto-adjust headings when the library components are used as subcomponents. Observe the heading shifts - visually and within markup - when you remove the section heading or set as the first component.</p>",
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+    sub_component_data: [
+      Accordion({
+        ...AccordionDefault.args
+      }),
+      ActionList({
+        ...ActionListDefault.args
+      }),
+      Cards({
+        ...CardsStriped.args,
+        brow_data: null,
+        text: null,
+        button_data: null,
+      }),
+      ProfileCards({
+        ...ProfileCardsDefault.args
+      }),
+      Steps({
+        ...StepsDefault.args
+      }),
+      TeaserPlusList({
+        ...TeaserListDefault.args
+      }),
+      ViewResults({
+        ...ViewResultsDefault.args,
+        variant: "search_results"
+      }),
+    ],
   },
 };

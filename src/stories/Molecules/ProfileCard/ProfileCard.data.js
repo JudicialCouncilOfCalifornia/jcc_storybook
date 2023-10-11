@@ -5,7 +5,7 @@ export default {
     name: 'Avery Person',
     title: 'Associate Individual',
     content: 'Since 2009',
-    url: '#',
+    url: '/iframe.html?args=&id=templates-profile--default&viewMode=story',
   },
   no_link_example: {
     variant: "no_link_example",

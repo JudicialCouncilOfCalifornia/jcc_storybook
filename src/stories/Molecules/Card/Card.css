@@ -20,6 +20,12 @@
   block-size: var(--s5);
 }
 
+/* Card headings must always appear as H3 visually. */
+.card__heading_tag:not(h1) {
+  font-size: var(--s2);
+  line-height: var(--s3);
+}
+
 .card__body {
   display: flex;
   flex-wrap: wrap;
@@ -166,7 +172,8 @@
   --align-items: center;
   color: var(--color);
   display: block;
-  padding: var(--s1);
+  padding-inline: var(--s4);
+  padding: var(--s4);
   font-size: var(--s1);
   line-height: var(--s4);
   text-align: center;
@@ -254,7 +261,6 @@
 /* Striped left addtional styling */
 .card--striped-aligned .card,
 .card.card--striped-aligned {
-  padding-inline: var(--s4);
   padding-block: var(--s5);
 }
 
