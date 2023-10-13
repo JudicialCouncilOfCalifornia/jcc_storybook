@@ -1,4 +1,13 @@
 
+0.54.33 / 2023-10-13
+===================
+
+  * chore: Export libs.
+  * Merge pull request #137 from JudicialCouncilOfCalifornia/bugfix/DCAS-156--readmore-spacing-and-font-size
+  * DCAS-156: refactor heading css & adjust ratio scale
+  * Merge pull request #138 from JudicialCouncilOfCalifornia/feature/DCAS-121--subheading-auto-adjust
+  * DCAS-121: section subcomponent headings handler
+
 0.54.32 / 2023-10-13
 ===================
 
