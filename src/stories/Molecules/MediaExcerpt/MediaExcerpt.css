@@ -17,6 +17,12 @@
   text-decoration: underline;
 }
 
+/* Media headings must always appear as H4 visually. */
+.media-excerpt__heading {
+  font-size: var(--s1);
+  line-height: var(--s2);
+}
+
 .media-excerpt__button {
   /* Negative margin hides border when wrapped. */
   /* margin-inline-start: -1px; */

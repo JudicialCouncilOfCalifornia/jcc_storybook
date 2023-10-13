@@ -21,6 +21,7 @@ Then you can render multiple sub components inside the section and they will lay
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: 'default',
   first_component: false,
@@ -54,7 +55,7 @@ Then you can render multiple sub components inside the section and they will lay
     ...,
     ...
   ],
-  section_classes: [] // array of additional classes to add to the section
+  section_classes: [] // array of additional classes to add to the section - for example 'headings-mgt' is used for auto-adjusting Storybook subcomponent headings
   ```,
   ```
 </details>

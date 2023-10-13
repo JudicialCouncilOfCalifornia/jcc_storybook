@@ -27,7 +27,9 @@ export default {
     },
     first_component: {
       description: "If true, sets the section heading to H1",
-      table: { defaultValue: { summary: false } },
+      table: { defaultValue: { summary: "default" } },
+      control: { type: 'boolean' },
+      options: [false, true],
     },
     sub_component_layout: {
       description: "Sets the layout type for sub component items.",
@@ -146,3 +148,6 @@ White.args = data.white;
 
 export const BGImage = Template.bind({});
 BGImage.args = data.bg_image;
+
+export const AutoAdjustingHeadings = Template.bind({});
+AutoAdjustingHeadings.args = data.auto_adjusting_headings;

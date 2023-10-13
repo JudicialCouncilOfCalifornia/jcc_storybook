@@ -30,9 +30,11 @@ a.profile-card__link,
   object-fit: cover;
 }
 
+/* Profile headings must always appear as H4 visually. */
 .profile-card__name {
   margin-top: var(--s1);
   font-size: var(--s1);
+  line-height: var(--s2);
 }
 
 .profile-card__title {

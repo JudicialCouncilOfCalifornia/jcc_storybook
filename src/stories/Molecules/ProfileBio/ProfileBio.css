@@ -16,7 +16,7 @@
   font-size: var(--s1);
 }
 
-.profile-bio__division {
+.profile-bio__title + .profile-bio__division {
   margin: 0;
   line-height: normal;
 }

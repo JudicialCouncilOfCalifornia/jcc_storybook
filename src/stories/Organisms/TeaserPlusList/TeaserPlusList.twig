@@ -1,5 +1,8 @@
-{# Set up variant classes. #}
+{# Headings depends if a section heading exists or not. #}
+{% set ha = heading ? 'h3' : 'h2' %}
+{% set hb = heading ? 'h4' : 'h3' %}
 
+{# Set up variant classes. #}
 {# Create class array #}
 {% set classes = [
   'grid',
@@ -29,13 +32,13 @@
         {% include "@atoms/Brow/Brow.twig" with teaser.brow_data %}
       {% endif %}
       <div class="teaser-list__teaser-heading">
-        <h3>
+        <{{ ha }} class="teaser-list__teaser-heading_tag">
           {% if teaser.href %}
             {{ link(teaser.heading, teaser.href) }}
           {% else %}
             {{ teaser.heading }}
           {% endif %}
-        </h3>
+        </{{ ha }}>
       </div>
       <div class="teaser-list__teaser-text">
         {{ teaser.text }}
@@ -57,7 +60,9 @@
         {% for item in list_items %}
           <li>
             <div class="teaser-list__link">
-              <h4>{{ link(item.link.label, item.link.href)}}</h4>
+              <{{ hb }} class="teaser-list__link_tag">
+                {{ link(item.link.label, item.link.href)}}
+              </{{ hb }}>
             </div>
             <div class="teaser-list__footer">
               {{ item.footer }}
