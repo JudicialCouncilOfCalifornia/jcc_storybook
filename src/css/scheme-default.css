@@ -3,7 +3,7 @@
 /* Variables. */
 :root {
   /* Scale */
-  --ratio: 1.26;
+  --ratio: 1.2;
   --s-6: calc(var(--s-5) / var(--ratio));
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
