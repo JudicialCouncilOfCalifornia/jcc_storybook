@@ -1,4 +1,11 @@
 
+0.54.32 / 2023-10-13
+===================
+
+  * chore: Export libs.
+  * Merge pull request #139 from JudicialCouncilOfCalifornia/DCAS-148-storybook-update-the-breadcrumb-design
+  * DCAS-148 -- Breadcrumb redesign. New global design for all sites.
+
 0.54.31 / 2023-10-05
 ===================
 
