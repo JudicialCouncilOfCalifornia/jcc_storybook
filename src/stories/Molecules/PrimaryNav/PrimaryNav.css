@@ -413,6 +413,11 @@ button.primary-nav__button.active {
   outline: 0;
 }
 
+.primary-nav--alternate a.primary-nav__button.is-active {
+  background-color: var(--color-primary-light-x);
+  color: white;
+}
+
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group:focus .primary-nav__button,
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group:focus-within .primary-nav__button {
   outline: 0;
@@ -536,4 +541,9 @@ button.primary-nav__button.active {
 .primary-nav--alternate .primary-nav__mobile .primary-nav__item button.primary-nav__overview-link {
   font-weight: 400;
   padding: 0 var(--s0) 0 var(--s0);
+}
+
+.primary-nav--alternate a.primary-nav__link.is-active {
+  font-weight: 600;
+  color: var(--accent-color);
 }

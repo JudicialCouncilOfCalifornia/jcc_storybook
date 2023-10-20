@@ -9,13 +9,15 @@
   variant_class,
 ] %}
 
-<div class="{{ classes|join(' ') }}">
-  {# Use composable layout classes as needed. #}
-  {# Use BEM syntax if needed for styling classes. #}
-  {% if part_one %}
-    <span class="brow__accent">{{ part_one }}</span>
-  {% endif %}
-  {% if part_two %}
-    <span class="brow__secondary">{{ part_two }}</span>
-  {% endif %}
-</div>
+{% if (part_one or part_two) %}
+  <div class="{{ classes|join(' ') }}">
+    {# Use composable layout classes as needed. #}
+    {# Use BEM syntax if needed for styling classes. #}
+    {% if part_one %}
+      <span class="brow__accent">{{ part_one }}</span>
+    {% endif %}
+    {% if part_two %}
+      <span class="brow__secondary">{{ part_two }}</span>
+    {% endif %}
+  </div>
+{% endif %}

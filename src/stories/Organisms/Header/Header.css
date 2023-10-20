@@ -1,5 +1,5 @@
 .header {
-  box-shadow: 4px 4px 10px 2px #aaa3;
+  /* box-shadow: 4px 4px 10px 2px #aaa3; */
   position: relative;
   z-index: 2;
 }

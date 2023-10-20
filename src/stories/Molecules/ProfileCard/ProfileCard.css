@@ -48,8 +48,12 @@ a.profile-card__link,
   margin-top: var(--s-2);
 }
 
-a.profile-card__link:hover {
+a.profile-card__link {
   display: block;
+  height: 100%;
+}
+
+a.profile-card__link:hover {
   background-color: var(--color-secondary);
 }
 

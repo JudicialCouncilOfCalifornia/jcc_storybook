@@ -1,0 +1,27 @@
+{# Set up variant classes for high components. Low level ones are "dumb". #}
+
+{# Create class array #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'previewsubpage',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  {% include "@molecules/Hat/Hat.twig" with hat %}
+  {% include "@organisms/Header/Header.twig" with header %}
+  {% include "@molecules/Breadcrumb/Breadcrumb.twig" with breadcrumb %}
+
+  <article role="article" class="contextual-region node__subpage has-sidebar-navigation">
+    <div class="node__subpage__content" >
+      {% include "@molecules/HeroHangover/HeroHangover.twig" with hero_hangover %}
+      {% include "@molecules/SidebarNav/SidebarNav.twig" with sidebar_nav %}
+      {% include "@organisms/Section/Section.twig" with section_1 %}
+      {% include "@organisms/Section/Section.twig" with section_2 %}
+      {% include "@organisms/Section/Section.twig" with section_3 %}
+    </div>
+  </article>
+  
+  {% include "@organisms/Footer/Footer.twig" with footer %}
+  {% include "@molecules/Shoe/Shoe.twig" with shoe %}
+</div>
