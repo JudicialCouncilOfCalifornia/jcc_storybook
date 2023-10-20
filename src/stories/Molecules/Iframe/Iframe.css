@@ -24,7 +24,7 @@
 }
 
 .iframe--granicus-link {
-  height: var(--s5);
+  height: 5rem;
   border: none;
   margin-block-start: var(--s-2);
 }
