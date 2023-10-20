@@ -12,7 +12,7 @@
   font-size: var(--s0);
   font-weight: 600;
   color: var(--color);
-  line-height: normal;
+  line-height: 1.5;
 }
 
 .read-more__heading_text {
@@ -76,7 +76,7 @@
 
 .read-more__heading[expanded] + .read-more__content {
   display: block;
-  line-height: var(--s1);
+  line-height: 1.5;
 }
 
 .read-more--text .read-more__heading {
