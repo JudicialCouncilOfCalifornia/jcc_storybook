@@ -1,4 +1,15 @@
 
+0.54.34 / 2023-10-20
+===================
+
+  * chore: Export libs.
+  * Merge branch 'feature/DCAS-128-left-nav-showing-too-many-pages'
+  * Remove unnecessary css and js files for preview type pages.
+  * Merge pull request #141 from JudicialCouncilOfCalifornia/bugfix/DCAS-149-167--height-fixes
+  * DCAS-146 & DCAS-167: read more line height & Granicus embed height
+  * Merge pull request #140 from JudicialCouncilOfCalifornia/feature/DCAS-128-left-nav-showing-too-many-pages
+  * DCAS-128 -- Updates to SidebarNav. New javascript to help regulate the size of the Sidebar Nav if the amount of available space is smaller than the nav.
+
 0.54.33 / 2023-10-13
 ===================
 
