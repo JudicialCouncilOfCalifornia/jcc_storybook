@@ -1,4 +1,11 @@
 
+0.54.36 / 2023-10-20
+===================
+
+  * chore: Export libs.
+  * Merge branch 'feature/DCAS-128-left-nav-showing-too-many-pages'
+  * Fix to triggering class for SidebarNav triggering
+
 0.54.35 / 2023-10-20
 ===================
 
