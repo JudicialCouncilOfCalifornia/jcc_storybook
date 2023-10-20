@@ -1,6 +1,5 @@
 import data from './PreviewSubPage.data';
 import PreviewSubPage from './PreviewSubPage.twig';
-import './PreviewSubPage.css';
 
 export default {
   title: 'Pages/PreviewSubPage',
