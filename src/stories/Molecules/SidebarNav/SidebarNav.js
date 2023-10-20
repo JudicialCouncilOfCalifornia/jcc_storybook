@@ -131,7 +131,7 @@ docReady(function () {
     window.addEventListener(event, () => {
       // Get the total footer visible in pixels. This includes footer and shoe.
       let total_footer_height = getVisibleHeight(footer[0]) + getVisibleHeight(shoe[0]);
-      const navs = Array.from(document.querySelectorAll('.sb-main-fullscreen:not(.mobile-sidebar-nav) .sidebar-nav'));
+      const navs = Array.from(document.querySelectorAll('body:not(.mobile-sidebar-nav) .sidebar-nav'));
       navs.forEach(nav => {
         let sidebar_nav_position = nav.getElementsByClassName('sidebar-nav__position')
         if (sidebar_nav_position.length > 0) {
