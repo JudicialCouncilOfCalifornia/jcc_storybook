@@ -1,4 +1,11 @@
 
+0.54.35 / 2023-10-20
+===================
+
+  * chore: Export libs.
+  * Merge branch 'feature/DCAS-128-left-nav-showing-too-many-pages'
+  * Refactor SidebarNav js
+
 0.54.34 / 2023-10-20
 ===================
 
