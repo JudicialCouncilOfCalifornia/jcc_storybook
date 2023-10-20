@@ -1,6 +1,5 @@
 import data from './PreviewPage.data';
 import PreviewPage from './PreviewPage.twig';
-import './PreviewPage.css';
 
 export default {
   title: 'Pages/PreviewPage',
