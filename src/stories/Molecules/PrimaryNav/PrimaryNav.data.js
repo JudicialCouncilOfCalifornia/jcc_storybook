@@ -594,6 +594,46 @@ export default {
           url: "#",
         },
       },
+      {
+        text: "Last item test",
+        url: "#",
+        links: [
+          {
+            text: "Navigation link 1",
+            url: "#",
+            is_overview_link: true,
+          },
+          {
+            text: "Navigation link 2",
+            url: "#",
+          },
+          {
+            text: "Navigation link 3",
+            url: "#",
+            is_current: true
+          },
+          {
+            text: "Navigation link 4",
+            url: "#",
+          },
+          {
+            text: "Navigation link 5",
+            url: "#",
+          },
+          {
+            text: "Navigation link 6",
+            url: "#",
+          },
+          {
+            text: "Navigation link 7",
+            url: "#",
+          },
+        ],
+        section_link: {
+          text: "Navigation link",
+          url: "#",
+        },
+      },
     ],
     mobile_links: [
       {

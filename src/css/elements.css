@@ -238,3 +238,7 @@ ol.legal ul > li {
   right: -999em;
   left: auto;
 }
+
+.page__tabs {
+  box-shadow: inset 4px 4px 10px 2px hsla(0,0%,66.7%,.2);
+}

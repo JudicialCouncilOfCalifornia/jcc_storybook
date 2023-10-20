@@ -1,6 +1,10 @@
 import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
-import Card from "../../Molecules/Card/Card.twig";
-import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
+import Body from "../../Molecules/Body/Body.twig";
+import SidebarNav from "../../Molecules/SidebarNav/SidebarNav.twig";
+
+let body_content = [
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod quidem iam fit etiam in Academia. Prave, nequiter, turpiter cenabat; Neque enim civitas in seditione beata esse potest nec in discordia dominorum domus.</p>",
+];
 
 export default {
   default: {
@@ -245,259 +249,193 @@ export default {
         form: "<form action='/search2' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
       },
     },
-    hero: {
-      variant: "content-bg",
-      content_justify: "left",
-      bg_tint: false,
-      background_image_url:
-        "https://source.unsplash.com/random/900×500/?images",
-      card_data: {
-        variant: "default",
-        first_component: true,
-        media: false,
-        heading: "Language Access",
-        subheading: false,
-        text: "<p>Mission statement or explanation of physical and people resources. Lorem ipsum dolor sit amet lorem ips consectetur adipisciue accumsan metus.</p>",
-        button_data: false,
+    breadcrumb: [
+      {
+        url: '#',
+        text: 'Home',
       },
+      {
+        url: '#',
+        text: 'FIrst Level Parent',
+      },
+      {
+        url: '#',
+        text: 'Second Level Parent',
+      },
+      {
+        url: false,
+        text: 'Current page',
+      },
+    ],
+    hero_hangover: {
+      hangover_hide_compact: false,
+      hangover_offset: 22,
+      background: null,
+      brow: false,
+      heading: "This is a heading for this sub page example",
+      text: "",
+      hangover_content: "",
+      bottom_content: "",
+      blurb: false,
+    },
+    sidebar_nav: {
+      variant: "default",
+      menu_heading: {
+        title: 'Parent menu item',
+        url: "#",
+      },
+      links: [
+        {
+          title: "Simple link",
+          url: "#",
+          attributes: [],
+          active: false,
+        },
+        {
+          title: "Link with sublinks",
+          url: "#",
+          attributes: [],
+          active: false,
+          links: [
+            {
+              title: "Simple link with extra words to test spacing",
+              url: "#",
+              attributes: [],
+              active: false,
+            },
+            {
+              title: "Simple link",
+              url: "#",
+              attributes: [],
+              active: false,
+              links: [
+                {
+                  title: "Simple link",
+                  url: "#",
+                  attributes: [],
+                  active: true,
+                },
+                {
+                  title: "Simple link",
+                  url: "#",
+                  attributes: [],
+                  active: false,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Simple Link",
+          url: "#",
+          attributes: [],
+          active: false,
+        },
+        {
+          title: "Simple link with extra words to test spacing",
+          url: "#",
+          attributes: [],
+          active: false,
+        },
+        {
+          title: "Link with sublinks with extra words to test spacing",
+          url: "#",
+          attributes: [],
+          active: false,
+          links: [
+            {
+              title: "Simple link",
+              url: "#",
+              attributes: [],
+              active: false,
+            },
+            {
+              title: "Simple link",
+              url: "#",
+              attributes: [],
+              active: false,
+            },
+          ],
+        },
+      ],
     },
     section_1: {
       first_component: false,
-      variant: "primary-dark-xx-stripe",
-      card_variant: "card--media-right",
+      variant: "default",
       sub_component_layout: "switcher",
-      // center, stack
       align_items: false,
-      // center, switcher
       measure: 69,
-      // cluster, grid, reel, stack, switcher
       gap: false,
-      // grid
       grid_min_width: false,
-      // with-sidebar
       sidebar_direction: false,
-      // with-sidebar
       sidebar_width: false,
-      background_image_url: "",
-      brow_data: {
-        part_one: "Introduction",
-        part_two: false,
-        variant: "heading",
-      },
+      brow_data: false,
       heading: false,
       text: false,
       first_component: false,
       button_data: false,
       sub_component_data: [
-        Card({
-          variant: "media-right",
-          media:
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-          heading: "About Language Access",
-          text: "<p>Describes Language Access at the courts as both physical and *human* translation resources available. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre.</p><a href='#' class='button button--text'>See Language Resources</a><a href='#' class='button button--text'>Learn About Court Interpreters</a>",
+        Body({
+          variant: "default",
+          heading: "This is a body heading",
+          lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod quidem iam fit etiam in Academia.</p>",
+          content: body_content.join(' '),
+          subheading: false,
+          aside: false,
         }),
       ],
     },
     section_2: {
       first_component: false,
-      variant: "default",
-      card_variant: "",
-      sub_component_layout: "grid",
-      // center, stack
-      align_items: false,
-      // center, switcher
-      measure: false,
-      // cluster, grid, reel, stack, switcher
-      gap: false,
-      // grid
-      grid_min_width: "41",
-      // with-sidebar
-      sidebar_direction: false,
-      // with-sidebar
-      sidebar_width: false,
-      background_image_url: "",
-      brow_data: false,
-      heading: "Start Here For Language Access",
-      text: false,
-      button_data: false,
-      sub_component_data: [
-        Card({
-          variant: "striped",
-          clickable_card: true,
-          background: null,
-          icon_data: {
-            icon: "documents",
-            color: false,
-          },
-          heading: "Language Access Resources for Courts",
-          text: false,
-          button_data: {
-            label: "Button",
-            href: "#",
-            variant: "primary",
-          },
-        }),
-        Card({
-          variant: "striped",
-          clickable_card: true,
-          background: null,
-          icon_data: {
-            icon: "speaker",
-            color: false,
-          },
-          heading: "Search for an Interpreter",
-          text: false,
-          button_data: {
-            label: "Button",
-            href: "#",
-            variant: "primary",
-          },
-        }),
-        Card({
-          variant: "striped",
-          clickable_card: true,
-          background: null,
-          icon_data: {
-            icon: "speaker",
-            color: false,
-          },
-          heading: "Become an Court Interpreter",
-          text: false,
-          button_data: {
-            label: "Button",
-            href: "#",
-            variant: "primary",
-          },
-        }),
-        Card({
-          variant: "striped",
-          clickable_card: true,
-          background: null,
-          icon_data: {
-            icon: "exam",
-            color: false,
-          },
-          heading: "Find Court Interpreter Exam Information",
-          text: false,
-          button_data: {
-            label: "Button",
-            href: "#",
-            variant: "primary",
-          },
-        }),
-      ],
-      section_classes: ["cards"],
-    },
-    section_3: {
-      first_component: false,
       variant: "warm-dark-x",
-      card_variant: "",
-      sub_component_layout: "grid",
-      // center, stack
+      sub_component_layout: "switcher",
       align_items: false,
-      // center, switcher
-      measure: false,
-      // cluster, grid, reel, stack, switcher
+      measure: 69,
       gap: false,
-      // grid
-      grid_min_width: "41",
-      // with-sidebar
+      grid_min_width: false,
       sidebar_direction: false,
-      // with-sidebar
       sidebar_width: false,
-      background_image_url: "",
-      brow_data: false,
-      heading: "Latest News",
-      text: false,
-      button_data: {
-        label: "See All News",
-        href: "#",
-        type: "primary",
-        size: "normal",
-      },
-      sub_component_data: [
-        TeaserPlusList({
-          teaser: {
-            brow_data: {
-              part_one: "Orders",
-              part_two: "July 12, 2022",
-            },
-            heading: "2DCA Protocols for In-Person Oral Argument",
-            text: "The Second Appellate District's Division Two will hear oral arguments in the courtroom on May 19, 2022. Access to the courtroom will be limited to the...",
-          },
-          list_items: [
-            {
-              link: {
-                label: "Job Announcement – Appellate Court Attorney",
-                href: "#",
-              },
-              footer: "May 25, 2022",
-            },
-            {
-              link: {
-                label:
-                  "Second District Court of Appeal to resume in‑person arguments effective May 2022",
-                href: "#",
-              },
-              footer: "May 25, 2022",
-            },
-          ],
-        }),
-      ],
-    },
-    section_4: {
-      first_component: false,
-      variant: "white",
-      card_variant: "",
-      sub_component_layout: "grid",
-      // center, stack
-      align_items: false,
-      // center, switcher
-      measure: false,
-      // cluster, grid, reel, stack, switcher
-      gap: false,
-      // grid
-      grid_min_width: "41",
-      // with-sidebar
-      sidebar_direction: false,
-      // with-sidebar
-      sidebar_width: false,
-      background_image_url: "",
       brow_data: false,
       heading: false,
       text: false,
+      first_component: false,
       button_data: false,
       sub_component_data: [
-        Card({
-          media:
-            '<img src="https://source.unsplash.com/random/900×700/?office" />',
-          heading: "Interested in becoming a court interpreter?",
-          text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
-          button_data: {
-            label: "Become a Court Interpreter",
-            href: "#",
-            variant: "primary",
-            size: "small",
-          },
-          // A variant type that contols the layout and style of the component.
-          variant: "bordered-center",
-        }),
-        Card({
-          media:
-            '<div class="frame"><img src="https://source.unsplash.com/random/900×700/?building,old" /></div>',
-          heading: "LEP Court Users",
-          text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet.</p>",
-          button_data: {
-            label: "Self-Help for LEP Court Users",
-            href: "#",
-            variant: "primary",
-            size: "small",
-          },
-          // A variant type that contols the layout and style of the component.
-          variant: "bordered-center",
+        Body({
+          variant: "default",
+          heading: false,
+          lead: false,
+          content: body_content.join(' '),
+          subheading: false,
+          aside: false,
         }),
       ],
-      section_classes: ["cards"],
+    },
+    section_3: {
+      first_component: false,
+      variant: "default",
+      sub_component_layout: "switcher",
+      align_items: false,
+      measure: 69,
+      gap: false,
+      grid_min_width: false,
+      sidebar_direction: false,
+      sidebar_width: false,
+      brow_data: false,
+      heading: false,
+      text: false,
+      first_component: false,
+      button_data: false,
+      sub_component_data: [
+        Body({
+          variant: "default",
+          heading: false,
+          lead: false,
+          content: body_content.join(' '),
+          subheading: false,
+          aside: false,
+        }),
+      ],
     },
     footer: {
       site_branding_data: {
