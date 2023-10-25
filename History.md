@@ -1,4 +1,11 @@
 
+0.54.37 / 2023-10-25
+===================
+
+  * chore: Export libs.
+  * Merge pull request #142 from JudicialCouncilOfCalifornia/update/style-update-for-primary-nav-alternate-active-trail
+  * [update] -- PrimaryNav alternate styles for active/in-active-trail menu items
+
 0.54.36 / 2023-10-20
 ===================
 
