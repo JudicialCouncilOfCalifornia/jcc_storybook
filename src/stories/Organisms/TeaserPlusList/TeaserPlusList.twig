@@ -61,7 +61,11 @@
           <li>
             <div class="teaser-list__link">
               <{{ hb }} class="teaser-list__link_tag">
-                {{ link(item.link.label, item.link.href)}}
+                {% if item.link.href %}
+                  {{ link(item.link.label, item.link.href)}}
+                {% else %}
+                  {{ item.link.label }}
+                {% endif %}
               </{{ hb }}>
             </div>
             <div class="teaser-list__footer">

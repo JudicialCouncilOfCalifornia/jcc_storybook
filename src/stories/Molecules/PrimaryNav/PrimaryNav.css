@@ -388,7 +388,7 @@ button.primary-nav__button.active {
   line-height: normal;
   display: block;
   letter-spacing: normal;
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 600;
   text-transform: none;
 }
@@ -411,11 +411,6 @@ button.primary-nav__button.active {
   color: var(--color-white);
   background-color: var(--color-primary-light-x);
   outline: 0;
-}
-
-.primary-nav--alternate a.primary-nav__button.is-active {
-  background-color: var(--color-primary-light-x);
-  color: white;
 }
 
 .primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group:focus .primary-nav__button,
@@ -543,7 +538,20 @@ button.primary-nav__button.active {
   padding: 0 var(--s0) 0 var(--s0);
 }
 
+.primary-nav--alternate a.primary-nav__button.in-active-trail,
 .primary-nav--alternate a.primary-nav__link.is-active {
   font-weight: 600;
   color: var(--accent-color);
+}
+
+.primary-nav--alternate a.primary-nav__button.is-active {
+  background-color: var(--color-primary-light-x);
+  color: white;
+}
+
+.primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group:hover a.primary-nav__button:not(.is-active),
+.primary-nav--alternate > .primary-nav__default.reel > .primary-nav__group:hover a.primary-nav__button.open {
+  color: var(--color-white);
+  background-color: var(--color-primary-light-x);
+  outline: 0;
 }
