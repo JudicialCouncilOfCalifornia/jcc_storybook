@@ -16,6 +16,7 @@
 .accordion .expand-btns{
   padding-inline: var(--s2);
   text-align: right;
+  margin-block: auto;
 }
 
 .accordion .expand-btns .expand-all-btn {
