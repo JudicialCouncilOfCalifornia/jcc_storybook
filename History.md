@@ -1,4 +1,11 @@
 
+0.54.39 / 2023-10-30
+===================
+
+  * chore: Export libs.
+  * Merge branch 'DCAS-155-spacing-around-accordions-and-all-content-elements'
+  * DCAS-155 -- adjustment so spacing does not effect cards
+
 0.54.38 / 2023-10-30
 ===================
 
