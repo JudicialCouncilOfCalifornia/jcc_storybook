@@ -183,7 +183,7 @@
 }
 
 /* Adds spacing between elements in the main content section */
-.section__content .section__main > * + * {
+.section__content .section__main > * + *:not(.card) {
   padding-block-start: var(--s4);
 }
 .section__content .section__header + .section__main {
