@@ -242,7 +242,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: var(--align-items, flex-start);
-  margin-bottom: 20px;
 }
 
 .stack > * {
