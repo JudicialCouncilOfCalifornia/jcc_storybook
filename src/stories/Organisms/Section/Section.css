@@ -181,3 +181,12 @@
 .section .section__main .section.cards:nth-child(2) .section__content {
   padding-block-start: unset;
 }
+
+/* Adds spacing between elements in the main content section */
+.section__content .section__main > * + * {
+  padding-block-start: var(--s4);
+}
+.section__content .section__header + .section__main {
+  padding-block-start: var(--s4);
+  margin-block-start: 0
+}
