@@ -1,4 +1,15 @@
 
+0.54.38 / 2023-10-30
+===================
+
+  * chore: Export libs.
+  * Merge pull request #146 from JudicialCouncilOfCalifornia/DCAS-155-spacing-around-accordions-and-all-content-elements
+  * DCAS-155 -- Adjusted spacing style source for content elements inside of a section.
+  * Merge pull request #145 from JudicialCouncilOfCalifornia/DCAS-155-margin-space-around-accordion-block
+  * Merge pull request #144 from JudicialCouncilOfCalifornia/feature/DCAS-149--companion-nav-wrap-mgt
+  * update margin spacing around accordion blocks within layout section
+  * DCAS-149: max menu item width
+
 0.54.37 / 2023-10-25
 ===================
 
