@@ -12,36 +12,38 @@ docReady(function () {
 
   // If reduced animation motion is preferred, set the speed to 0 (instant).
   const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const animation_speed = mediaQuery.matches ? 0 : 200;
+  const animation_speed = mediaQuery.matches ? 0 : 200; 
 
   const summaries = Array.from(document.querySelectorAll('details summary'));
   const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn.expand'));
   const closeallbtn = Array.from(document.querySelectorAll('.expand-all-btn.close'));
-  const accordion_object = Array.from(document.querySelectorAll('.accordion__items'));
+  if (expandallbtn.length === closeallbtn.length) {
+    expandallbtn.forEach((expandbtn, index) => {
+      const closebtn = closeallbtn[index];
+      if (!expandbtn.classList.contains('js-loaded')) {
+        expandbtn.classList.add('js-loaded');
+        closebtn.classList.add('js-loaded');
+        expandbtn.addEventListener('click', (e) => {
+          e.preventDefault();          
+          expandbtn.setAttribute('aria-pressed', 'false');
+          const accordionContainer = e.target.closest('.accordion');
+          const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');
+          accordionItems.forEach((accordionItem, i) => {            
+            accordionItem.closest('details').setAttribute('open', '');       
+          })
+          });
 
-  // Expand / Close all button logic
-  if (expandallbtn[0]) {
-    if (!expandallbtn[0].classList.contains('js-loaded')) {
-      expandallbtn[0].classList.add('js-loaded');
-      closeallbtn[0].classList.add('js-loaded');
-
-      expandallbtn[0].addEventListener('click', (e) => {
-        e.preventDefault();
-
-        expandallbtn[0].setAttribute('aria-pressed', 'false');
-        summaries.forEach(summary => {
-          summary.closest('details').setAttribute('open', '');
-        })
-      });
-
-      closeallbtn[0].addEventListener('click', (e) => {
-        e.preventDefault();
-        closeallbtn[0].setAttribute('aria-pressed', 'true');
-        summaries.forEach(summary => {
-          summary.closest('details').removeAttribute('open', '');
-        })
-      });
-    }
+         closebtn.addEventListener('click', (e) => {
+          e.preventDefault();          
+          closebtn.setAttribute('aria-pressed', 'false');
+          const accordionContainer = e.target.closest('.accordion');
+          const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');         
+          accordionItems.forEach((accordionItem, i) => {           
+            accordionItem.closest('details').removeAttribute('open', '');         
+          })          
+        });
+      }
+    });
   }
 
   summaries.forEach(summary => {
@@ -65,12 +67,7 @@ docReady(function () {
             summary.closest('details').removeAttribute('open');
             summary.closest('details').classList.remove('closing');
           }, animation_speed)
-          if (expandallbtn[0]) {
-            if (expandallbtn[0].hasAttribute('expanded')) {
-              expandallbtn[0].removeAttribute('expanded');
-              expandallbtn[0].innerHTML = 'Expand all';
-            }
-          }
+         
         } else {
           // If closed when clicked, open the detail. The delay helps improve the
           // fade in animation of the content.
@@ -80,13 +77,5 @@ docReady(function () {
         }
       });
     }
-  });
-
-  if (accordion_object[0]) {
-    var open_on_load = accordion_object[0].getAttribute("open_on_load");
-    if (open_on_load != '') {
-      var expand_on_load = Array.from(document.querySelectorAll('#'+ open_on_load));
-      expand_on_load[0].closest('details').setAttribute('open', '');
-    }
-  }
+  });  
 });
