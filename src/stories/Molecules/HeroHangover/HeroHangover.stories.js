@@ -62,6 +62,9 @@ WithBlurb.args = data.with_blurb;
 export const WithText = Template.bind({});
 WithText.args = data.with_text;
 
+export const NewsHeader = Template.bind({});
+NewsHeader.args = data.news_header;
+
 export const WithBottom = Template.bind({});
 WithBottom.args = data.with_bottom;
 

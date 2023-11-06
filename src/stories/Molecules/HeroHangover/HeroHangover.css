@@ -308,3 +308,16 @@
   /* This tries to match bottom spacing with the bottom of image */
   padding-block-end: var(--s-3);
 }
+
+.hangover--news--header .box { 
+  padding: none;
+  /*padding-block-end: none;*/
+  /*background-color: green;*/
+}
+
+.hangover--news--header .hangover { 
+  padding: none;
+  /*padding-block-end: none;*/
+  /*background-color: green;*/
+}
+
