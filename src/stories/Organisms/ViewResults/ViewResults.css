@@ -29,6 +29,7 @@
   padding-inline: 0;
 }
 
+.view-results__results .content > ol > li, 
 .view-results__results .content > ul > li + li,
 .view-results__results .content > ol > li + li {
   margin-block-start: var(--s4);
