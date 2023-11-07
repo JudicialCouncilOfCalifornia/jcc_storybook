@@ -181,12 +181,9 @@ button.primary-nav__button.active {
   z-index: 2;
 }
 
-/* Prevent menu from opening wider than the nav. */
-/* Issue with right: 0; with position: relative; parent. */
-/* @todo: resolve positioning issue to avoid forced width. */
-.primary-nav__default .primary-nav__group:nth-last-child(1) > .primary-nav__item:not(.primary-nav__item--mega) {
-  width: 25ch;
-  margin-inline-start: -12ch;
+/* Applied dynamically thru JS to prevent menu from opening wider than the viewport. */
+.primary-nav__item.submenu-adjust {
+  margin-inline-start: -3ch;
 }
 
 .primary-nav__item .grid {

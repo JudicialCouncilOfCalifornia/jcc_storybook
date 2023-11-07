@@ -40,3 +40,10 @@ export const parameters = {
     reload: true,
   },
 }
+
+// Prevents component JavaScript from being called twice until there is a Storybook fix.
+document.addEventListener('DOMContentLoaded', (event) => {
+  if (event.isTrusted) {
+    event.stopImmediatePropagation();
+  }
+});
