@@ -152,7 +152,6 @@
 .card--overlay .card .card__media img,
 .card.card--overlay .card__media img {
   display: block;
-
   object-fit: cover;
   height: 100%;
   mix-blend-mode: multiply;
