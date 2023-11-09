@@ -1,5 +1,6 @@
 import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
 import Card from "../../Molecules/Card/Card.twig";
+import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
 
 export default {
@@ -499,6 +500,93 @@ export default {
       ],
       section_classes: ["cards"],
     },
+    section_5: {first_component: false,
+      variant: "white",
+      card_variant: "",
+      sub_component_layout: "stack",     
+      align_items: false,      
+      measure: false,      
+      gap: false,     
+      grid_min_width: "41",     
+      sidebar_direction: false,      
+      sidebar_width: false,
+      background_image_url: "",
+      brow_data: false,
+      heading: false,
+      text: false,
+      button_data: false,
+      sub_component_data: [
+      Accordion({  
+      variant: "default",
+      open_first: false,
+      open_on_load: "",
+      expand_button: true,
+      heading: 'This is a heading',      
+      items: [
+        {
+          id: "judicial_council_role",
+          label:
+            "What is the Judicial Council of California's role in the current court interpreter program?",
+          content:
+            "<p>This is text in a paragraph. This content can realistically be any type of content. Cards, Sections, Media...any rendered content could be passed in.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <h3>Elit penatibus dignissim placerat</h3> <h4> Ac non lacus sollicitudin</h4><p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },       
+      ],
+    }),
+    Accordion({  
+      variant: "default",
+      open_first: false,
+      open_on_load: "",
+      expand_button: true,
+      heading: 'This is a heading',      
+      items: [
+        {
+          id: "judicial_council_role",
+          label:
+            "What is the Judicial Council of California's role in the current court interpreter program?",
+          content:
+            "<p>This is text in a paragraph. This content can realistically be any type of content. Cards, Sections, Media...any rendered content could be passed in.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <h3>Elit penatibus dignissim placerat</h3> <h4> Ac non lacus sollicitudin</h4><p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },
+        {
+          id: "which_judicial_council_panel_oversees_the_court_interpreters_program",
+          label:
+            "Which Judicial Council panel oversees the court interpreters program?",
+          content:
+            "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <h3>Ac non lacus sollicitudin</h3> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },       
+      ],
+    }),
+    Accordion({  
+      variant: "default",
+      open_first: false,
+      open_on_load: "",
+      expand_button: true,
+      heading: 'This is a heading',      
+      items: [
+        {
+          id: "judicial_council_role",
+          label:
+            "What is the Judicial Council of California's role in the current court interpreter program?",
+          content:
+            "<p>This is text in a paragraph. This content can realistically be any type of content. Cards, Sections, Media...any rendered content could be passed in.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu. blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <h3>Elit penatibus dignissim placerat</h3> <h4> Ac non lacus sollicitudin</h4><p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },
+        {
+          id: "which_judicial_council_panel_oversees_the_court_interpreters_program",
+          label:
+            "Which Judicial Council panel oversees the court interpreters program?",
+          content:
+            "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <h3>Ac non lacus sollicitudin</h3> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },
+        {
+          id: "how_can_courts_identify_certified_or_registered_court_interpreters",
+          label:
+            "How can courts identify certified or registered court interpreters?",
+          content:
+            "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare.</p> <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
+        },
+      ],
+    }),
+  ]
+},
     footer: {
       site_branding_data: {
         variant: "default",
