@@ -11,10 +11,12 @@ Button border, text and background colors can be inherited from ancestor compone
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: 'primary',
   size: 'normal',
   label: "Button",
   href: "#",
+  aria_label: "More descriptive label for screen readers",
   ```
 </details>
