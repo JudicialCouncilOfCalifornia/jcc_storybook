@@ -1,4 +1,25 @@
 
+0.54.40 / 2023-11-09
+===================
+
+  * chore: Export libs.
+  * Merge pull request #150 from JudicialCouncilOfCalifornia/DCAS-186-add-hr-viewresult
+  * DCAS-186: Checks to see if there is a header/footer element of the ViewsResult component, before applying the border to the first item.
+  * Merge pull request #153 from JudicialCouncilOfCalifornia/DCAS-173-add-aria-label
+  * Merge pull request #151 from JudicialCouncilOfCalifornia/bugfix/DCAS-180--primary-nav-dropdown-alignment
+  * Merge pull request #147 from JudicialCouncilOfCalifornia/DCAS-184-accordion-bugfix
+  * Merge pull request #148 from JudicialCouncilOfCalifornia/feature/DCAS-142--colorbox-video-support
+  * Merge pull request #149 from JudicialCouncilOfCalifornia/bugfix/DCAS-191--profile-card-top-spacing
+  * Merge pull request #152 from JudicialCouncilOfCalifornia/DCAS-192-fix-hidden-dropdown
+  * DCAS-173: add aria label
+  * DCAS-192: Remove whitespace
+  * DCAS-192: Fix for hidden dropdown
+  * DCAS-180: JS to manage submenu right align
+  * DCAS-186: Add hr above first publication item
+  * DCAS-191: exclude profile cards from section spacing rule
+  * DCAS-142: missing colorbox UX & button aria_label
+  * DCAS-184: Bug fix for accordion
+
 0.54.39 / 2023-10-30
 ===================
 
