@@ -59,6 +59,7 @@
   border: var(--s-2) solid
     var(--border-color, var(--color-accent-warm-light-xxxx));
   background: var(--background-color, var(--color-white));
+  z-index: 1;
 }
 
 .card--bordered .card > div,
