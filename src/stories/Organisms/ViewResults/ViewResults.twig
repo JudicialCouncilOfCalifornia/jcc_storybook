@@ -3,6 +3,9 @@
 
 {% set list_type = list_type ?? 'ul' %}
 
+{% set has_header = (form and not form_in_sidebar) or (header) %}
+{% set has_footer = (footer is not empty) or (pager is not empty) or (footer_sidebar is not empty) or (items_per_page is not empty) %}
+
 {% set divider = list_type_divider ? '' : 'no-divider' %}
 
 {% set footer_sidebar_class = footer_sidebar or items_per_page ? 'with-sidebar' : '' %}
@@ -15,13 +18,15 @@
   'container',
   'stack',
   variant_class,
+  has_header ? 'has-header' : 'no-header',
+  has_footer ? 'has-footer' : 'no-footer',
   view_name,
   view_display,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
 
-  {% if form and not form_in_sidebar or header %}
+  {% if has_header %}
     <div class="view-results__header with-sidebar {{ sidebar_direction_header }}">
       <div class="stack">
         {% if header_sidebar %}
@@ -77,7 +82,7 @@
     </div>
   </div>
 
-  {% if (footer is not empty) or (pager is not empty) or (footer_sidebar is not empty) or (items_per_page is not empty) %}
+  {% if has_footer %}
   <div class="view-results__footer {{ footer_sidebar_class }} {{ sidebar_direction_footer }}" >
 
     {% if footer_sidebar or items_per_page %}
