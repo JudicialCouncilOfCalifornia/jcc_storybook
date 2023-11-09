@@ -9,6 +9,25 @@ function docReady(fn) {
 }
 
 docReady(function () {
+  // Submenu position management on mouseover.
+  addEventListener('mouseover', (event) => {
+    // Adjust non-mega submenu position if no space on its right.
+    let element = event.target;
+    if (element.classList.contains('primary-nav__button')) {
+      let submenu = element.nextElementSibling;
+
+      if (!submenu.classList.contains('primary-nav__item--mega')) {
+        // Always use original position.
+        submenu.classList.remove('submenu-adjust');
+        let submenuRightPosition = window.innerWidth - submenu.getBoundingClientRect().right;
+
+        if (submenuRightPosition <= 20) {
+          submenu.classList.add('submenu-adjust');
+        }
+      }
+    }
+  });
+
   // Toggle the sub menus.
   const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__button'));
   buttons.forEach(button => {
@@ -37,7 +56,6 @@ docReady(function () {
       button.classList.add('js-open');
 
       button.addEventListener('pointerdown', (e) => {
-        // const sibling = e.target.nextElementSibling;
         const opened = document.querySelector('.open');
 
         if (opened && opened != e.target) {
