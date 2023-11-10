@@ -310,7 +310,7 @@
   content: "\25B6";
   transform: scale(5);
   color: var(--color-white);
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .remote-video-colorbox-launch-modal:hover::before {
