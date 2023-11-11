@@ -127,31 +127,36 @@ docReady(function () {
   let footer = document.querySelectorAll('.footer');
   let shoe = document.querySelectorAll('.shoe');
 
-  ['load', 'scroll', 'resize'].forEach( event => 
-    window.addEventListener(event, () => {
-      // Get the total footer visible in pixels. This includes footer and shoe.
-      let total_footer_height = getVisibleHeight(footer[0]) + getVisibleHeight(shoe[0]);
-      const navs = Array.from(document.querySelectorAll('body:not(.mobile-sidebar-nav) .sidebar-nav'));
-      navs.forEach(nav => {
-        let sidebar_nav_position = nav.getElementsByClassName('sidebar-nav__position')
-        if (sidebar_nav_position.length > 0) {
-          // Remove previously applied styles.
-          sidebar_nav_position[0].style.removeProperty("max-height");
-          sidebar_nav_position[0].style.removeProperty("overflow");
-          // We only adjust the sidebar height if the footer becomes visible.
-          if (total_footer_height > 0) {
-            // if the footer becomes visible, we add 40 pixels for spacing.
-            total_footer_height = total_footer_height > 0 ? total_footer_height + 40 : total_footer_height;
-            // Factor the max-height based on window height, minus the footer
-            // height, minus any visible space on the top of the sidebar nav.
-            let sidebar_nav_height = window.innerHeight - total_footer_height - nav.getBoundingClientRect().top;
-            sidebar_nav_position[0].style.maxHeight = sidebar_nav_height + 'px';
-            sidebar_nav_position[0].style.overflow = "auto";
-          }
-        }
-      });
-    })
-  );
+  if (footer[0] || shoe[0]) {
+    ['load', 'scroll', 'resize'].forEach( event => 
+      window.addEventListener(event, () => {
 
+        // Get the total footer visible in pixels. This includes footer and shoe.
+        let shoeHeight = shoe[0] ? getVisibleHeight(shoe[0]) : 0;
+        let footerHeight = footer[0] ? getVisibleHeight(footer[0]) : 0;
+        let total_footer_height = footerHeight + shoeHeight;
+
+        const navs = Array.from(document.querySelectorAll('body:not(.mobile-sidebar-nav) .sidebar-nav'));
+        navs.forEach(nav => {
+          let sidebar_nav_position = nav.getElementsByClassName('sidebar-nav__position')
+          if (sidebar_nav_position.length > 0) {
+            // Remove previously applied styles.
+            sidebar_nav_position[0].style.removeProperty("max-height");
+            sidebar_nav_position[0].style.removeProperty("overflow");
+            // We only adjust the sidebar height if the footer becomes visible.
+            if (total_footer_height > 0) {
+              // if the footer becomes visible, we add 40 pixels for spacing.
+              total_footer_height = total_footer_height > 0 ? total_footer_height + 40 : total_footer_height;
+              // Factor the max-height based on window height, minus the footer
+              // height, minus any visible space on the top of the sidebar nav.
+              let sidebar_nav_height = window.innerHeight - total_footer_height - nav.getBoundingClientRect().top;
+              sidebar_nav_position[0].style.maxHeight = sidebar_nav_height + 'px';
+              sidebar_nav_position[0].style.overflow = "auto";
+            }
+          }
+        });
+      })
+    );
+  };
 })
 

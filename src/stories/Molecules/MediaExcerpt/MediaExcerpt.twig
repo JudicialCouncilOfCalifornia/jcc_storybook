@@ -31,9 +31,9 @@
       
       {% if detail_list_data or pills %}
         {% if detail_list_data %}
-          <ul class="detail-list">
+          <ul class="detail-list detect-wrap detect-wrap--observed">
             {% if  detail_list_data.label  %}
-              <li>
+              <li class="detail-list__label">
                 <strong>{{ detail_list_data.label }}:</strong>
               </li>
             {% endif %}

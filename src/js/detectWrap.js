@@ -13,17 +13,30 @@ function docReady(fn) {
 
 docReady(function () {
   const detectWrap = (group) => {
-    const top = Math.floor(group.children[0].getBoundingClientRect().top);
+    // Start by removing parent wrapping class if it exists.
+    group.classList.remove("wrapping");
+
+    // Start our variables. We start assuming no child elements are wrapped.
+    const top_of_firstchild = Math.floor(group.children[0].getBoundingClientRect().top);
+    let wrapped = false;
+    
     for (let i = 1; i < group.children.length; i++) {
       const child = group.children[i];
-
-      if (Math.floor(child.getBoundingClientRect().top) != top) {
+      // if any other children do not have the same top as the first child, then 
+      // we know that the items are wrapping.
+      if (Math.floor(child.getBoundingClientRect().top) != top_of_firstchild) {
         child.classList.add("wrapped");
-        group.classList.add("wrapping");
+        wrapped = true;
       } else {
         child.classList.remove("wrapped");
-        group.classList.remove("wrapping");
+        wrapped = false;
       }
+    }
+
+    // If we have wrapping children, apply the wrapping class. Only apply after
+    // processing of all the children.
+    if (wrapped) {
+      group.classList.add("wrapping");
     }
   };
 
