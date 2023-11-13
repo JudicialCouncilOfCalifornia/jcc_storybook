@@ -181,11 +181,6 @@ button.primary-nav__button.active {
   z-index: 2;
 }
 
-/* Applied dynamically thru JS to prevent menu from opening wider than the viewport. */
-.primary-nav__item.submenu-adjust {
-  margin-inline-start: -3ch;
-}
-
 .primary-nav__item .grid {
   grid-gap: var(--s-1, var(--s0));
 }
