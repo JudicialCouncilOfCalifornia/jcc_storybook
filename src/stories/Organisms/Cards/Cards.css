@@ -5,32 +5,32 @@
 /* Striped Cards */
 
 /* Striped Card Variants */
-.cards .card--striped:nth-of-type(6n + 1),
-.cards .card--striped-aligned:nth-of-type(6n + 1) {
+.card--striped:nth-of-type(6n + 1),
+.card--striped-aligned:nth-of-type(6n + 1) {
   background: var(--background-striped-primary-dark-xx);
 }
 
-.cards .card--striped:nth-of-type(6n + 2),
-.cards .card--striped-aligned:nth-of-type(6n + 2) {
+.card--striped:nth-of-type(6n + 2),
+.card--striped-aligned:nth-of-type(6n + 2) {
   background: var(--background-striped-primary-dark-x);
 }
 
-.cards .card--striped:nth-of-type(6n + 3),
-.cards .card--striped-aligned:nth-of-type(6n + 3) {
+.card--striped:nth-of-type(6n + 3),
+.card--striped-aligned:nth-of-type(6n + 3) {
   background: var(--background-striped-secondary);
 }
 
-.cards .card--striped:nth-of-type(6n + 4),
-.cards .card--striped-aligned:nth-of-type(6n + 4) {
+.card--striped:nth-of-type(6n + 4),
+.card--striped-aligned:nth-of-type(6n + 4) {
   background: var(--background-striped-accent-warm-dark-x);
 }
 
-.cards .card--striped:nth-of-type(6n + 5),
-.cards .card--striped-aligned:nth-of-type(6n + 5) {
+.card--striped:nth-of-type(6n + 5),
+.card--striped-aligned:nth-of-type(6n + 5) {
   background: var(--background-striped-secondary-dark-xx);
 }
 
-.cards .card--striped:nth-of-type(6n + 6),
-.cards .card--striped-aligned:nth-of-type(6n + 6) {
+.card--striped:nth-of-type(6n + 6),
+.card--striped-aligned:nth-of-type(6n + 6) {
   background: var(--background-striped-primary-light-xx);
 }
