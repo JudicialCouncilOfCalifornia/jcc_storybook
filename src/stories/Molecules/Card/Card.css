@@ -189,73 +189,73 @@
   color: var(--color);
 }
 
-.card--striped.card--background-striped-base-dark-x,
-.card--striped-aligned.card--background-striped-base-dark-x {
+.card.card--striped.card--background-striped-base-dark-x,
+.card.card--striped-aligned.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
 }
 
-.card--striped.card--background-striped-primary-dark-xx,
-.card--striped-left.card--background-striped-primary-dark-xx {
+.card.card--striped.card--background-striped-primary-dark-xx,
+.card.card--striped-left.card--background-striped-primary-dark-xx {
   background: var(--background-striped-primary-dark-xx);
 }
 
-.card--striped.card--background-striped-primary-dark-x,
-.card--striped-aligned.card--background-striped-primary-dark-x {
+.card.card--striped.card--background-striped-primary-dark-x,
+.card.card--striped-aligned.card--background-striped-primary-dark-x {
   background: var(--background-striped-primary-dark-x);
 }
 
-.card--striped.card--background-striped-primary-light-xx,
-.card--striped-aligned.card--background-striped-primary-light-xx {
+.card.card--striped.card--background-striped-primary-light-xx,
+.card.card--striped-aligned.card--background-striped-primary-light-xx {
   background: var(--background-striped-primary-light-xx);
 }
 
-.card--striped.card--background-striped-secondary-dark-xx,
-.card--striped-aligned.card--background-striped-secondary-dark-xx {
+.card.card--striped.card--background-striped-secondary-dark-xx,
+.card.card--striped-aligned.card--background-striped-secondary-dark-xx {
   background: var(--background-striped-secondary-dark-xx);
 }
 
-.card--striped.card--background-striped-secondary,
-.card--striped-aligned.card--background-striped-secondary {
+.card.card--striped.card--background-striped-secondary,
+.card.card--striped-aligned.card--background-striped-secondary {
   background: var(--background-striped-secondary);
 }
 
-.card--striped.card--background-striped-accent-warm-dark-x,
-.card--striped-aligned.card--background-striped-accent-warm-dark-x {
+.card.card--striped.card--background-striped-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-x {
   background: var(--background-striped-accent-warm-dark-x);
 }
 
-.card--striped.card--background-solid-base-dark-x,
-.card--striped-aligned.card--background-solid-base-dark-x {
+.card.card--striped.card--background-solid-base-dark-x,
+.card.card--striped-aligned.card--background-solid-base-dark-x {
   background: var(--background-solid-base-dark-x);
 }
 
-.card--striped.card--background-solid-primary-dark-xx,
-.card--striped-aligned.card--background-solid-primary-dark-xx {
+.card.card--striped.card--background-solid-primary-dark-xx,
+.card.card--striped-aligned.card--background-solid-primary-dark-xx {
   background: var(--background-solid-primary-dark-xx);
 }
 
-.card--striped.card--background-solid-primary-dark-x,
-.card--striped-aligned.card--background-solid-primary-dark-x {
+.card.card--striped.card--background-solid-primary-dark-x,
+.card.card--striped-aligned.card--background-solid-primary-dark-x {
   background: var(--background-solid-primary-dark-x);
 }
 
-.card--striped.card--background-solid-primary-light-xx,
-.card--striped-aligned.card--background-solid-primary-light-xx {
+.card.card--striped.card--background-solid-primary-light-xx,
+.card.card--striped-aligned.card--background-solid-primary-light-xx {
   background: var(--background-solid-primary-light-xx);
 }
 
-.card--striped.card--background-solid-secondary-dark-xx,
-.card--striped-aligned.card--background-solid-secondary-dark-xx {
+.card.card--striped.card--background-solid-secondary-dark-xx,
+.card.card--striped-aligned.card--background-solid-secondary-dark-xx {
   background: var(--background-solid-secondary-dark-xx);
 }
 
-.card--striped.card--background-solid-secondary,
-.card--striped-aligned.card--background-solid-secondary {
+.card.card--striped.card--background-solid-secondary,
+.card.card--striped-aligned.card--background-solid-secondary {
   background: var(--background-solid-secondary);
 }
 
-.card--striped.card--background-solid-accent-warm-dark-x,
-.card--striped-aligned.card--background-solid-accent-warm-dark-x {
+.card.card--striped.card--background-solid-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
   background: var(--background-solid-accent-warm-dark-x);
 }
 
