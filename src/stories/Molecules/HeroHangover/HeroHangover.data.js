@@ -90,6 +90,28 @@ export default {
     bottom_content: "",
     blurb: false,
   },
+  news_header: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    background: null,
+    brow: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "Part two",
+    },
+    heading: "This is a Heading",
+    news_header: true,
+    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    hangover_content: Card({
+      variant: "media-right",
+      aspect: [],
+      clickable_card: false,
+      background: null,
+      media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
+    }),
+    bottom_content: "",
+    blurb: false,
+  },
   with_bottom: {
     hangover_hide_compact: false,
     hangover_offset: 22,

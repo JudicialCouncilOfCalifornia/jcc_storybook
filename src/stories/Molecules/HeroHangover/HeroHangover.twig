@@ -2,6 +2,7 @@
 {% set variant_with_bottom = bottom_content ? 'hangover--with-bottom' : '' %}
 {% set variant_with_blurb = blurb ? 'hangover--with-blurb' : '' %}
 {% set variant_background = background ? 'hangover--' ~ background : '' %}
+{% set variant_news_header = news_header ? 'hangover--news--header': '' %}
 
 {% set variant_styles = [] %}
 
@@ -17,6 +18,7 @@
   variant_hide,
   variant_with_bottom,
   variant_with_blurb,
+  variant_news_header
 ] %}
 
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">

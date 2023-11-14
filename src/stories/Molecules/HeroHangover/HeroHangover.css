@@ -304,7 +304,20 @@
   display: none;
 }
 
-.hangover--with-bottom .hangover__bottom > .box {
-  /* This tries to match bottom spacing with the bottom of image */
-  padding-block-end: var(--s-3);
+.hangover--news--header .box .hangover__top-hangover-content {
+  padding-block: 0;  
 }
+ 
+.hangover--news--header .box { 
+  padding: 0;  
+}
+
+.hangover--news--header .box .hangover__top-content {
+  padding-left: 30px;
+}
+ 
+.hangover--news--header .box .hangover__top-content .hangover__text {  
+  max-width: 80%;
+}
+ 
+
