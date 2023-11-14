@@ -17,12 +17,17 @@ docReady(function () {
       let submenu = element.nextElementSibling;
 
       if (!submenu.classList.contains('primary-nav__item--mega')) {
-        // Always use original position.
-        submenu.classList.remove('submenu-adjust');
+        // Always start with original position.
+        submenu.removeAttribute('style');
         let submenuRightPosition = window.innerWidth - submenu.getBoundingClientRect().right;
 
         if (submenuRightPosition <= 20) {
-          submenu.classList.add('submenu-adjust');
+          // If insufficient right spacing, right align.
+          submenu.setAttribute('style', 'right: 0');
+          // Adjust right alignment with target menu item.
+          let menuRightPosition = window.innerWidth - element.getBoundingClientRect().right;
+          let updatedSubmenuRightPosition = window.innerWidth - submenu.getBoundingClientRect().right;
+          submenu.setAttribute('style','right: ' + (menuRightPosition - updatedSubmenuRightPosition) + 'px');
         }
       }
     }
