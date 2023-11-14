@@ -1,12 +1,14 @@
 .media-excerpt__header {
   overflow: hidden;
-  align-items: center;
+  /* align-items: center; */
   --gap: var(--s1)
 }
 
 .media-excerpt__title {
   flex-grow: 3;
   flex-shrink: 1;
+  display: flex;
+  align-items: center;
 }
 
 .media-excerpt__title a {
@@ -79,4 +81,16 @@
 
 .media-excerpt ul.detail-list > * + *::before {
   display: none;
+}
+
+.media-excerpt ul.detail-list.wrapping {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding-inline-start: var(--s0);
+}
+
+.media-excerpt ul.detail-list.wrapping .detail-list__label {
+  margin-inline-start: -1rem;
 }
