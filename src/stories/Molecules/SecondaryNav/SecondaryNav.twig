@@ -9,7 +9,7 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-	<ul class="reel no-bar">
+	<ul class="reel no-bar" role="list">
 		{% for link in links %}
 			<li>
 				{% set link_class = link.is_current ? 'active' : '' %}

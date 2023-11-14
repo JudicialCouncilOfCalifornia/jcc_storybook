@@ -19,7 +19,7 @@
   {% if heading %}
     <{{h}}>{{ heading }}</{{h}}>
   {% endif %}
-  <{{tag}} class="{{ container_classes|join(' ') }}">
+  <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
     {% for item in items %}
       <li class="list__item">
         {% if item.label %}
