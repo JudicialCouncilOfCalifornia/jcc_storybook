@@ -16,7 +16,7 @@ docReady(function () {
     if (element.classList.contains('primary-nav__button')) {
       let submenu = element.nextElementSibling;
 
-      if (!submenu.classList.contains('primary-nav__item--mega')) {
+      if (submenu && !submenu.classList.contains('primary-nav__item--mega')) {
         // Always start with original position.
         submenu.removeAttribute('style');
         let submenuRightPosition = window.innerWidth - submenu.getBoundingClientRect().right;
