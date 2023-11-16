@@ -91,6 +91,7 @@
 
 .hangover--striped-primary-dark-x .card {
   --border-color: var(--color-accent-warm-light-xxx);
+  z-index:  1;
 }
 
 /* striped-primary-light-xx */
