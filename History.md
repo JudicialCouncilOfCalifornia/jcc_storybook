@@ -1,5 +1,14 @@
 
-0.54.41 / 2023-10-30
+0.54.42 / 2023-11-16
+===================
+
+  * chore: Export libs.
+  * Merge pull request #161 from JudicialCouncilOfCalifornia/DCAS-192-fix-dropdown
+  * Merge pull request #162 from JudicialCouncilOfCalifornia/bugfix/DCAS-205--colorbox-ux-on-card-image
+  * DCAS-205: removed colorbox markup left accidentally during last dev
+  * DCAS-192 -- Fix for hidden dropdown
+
+0.54.41 / 2023-11-16
 ===================
 
   * chore: Export libs.
