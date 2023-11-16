@@ -1,4 +1,24 @@
 
+0.54.41 / 2023-10-30
+===================
+
+  * chore: Export libs.
+  * Merge pull request #160 from JudicialCouncilOfCalifornia/hotfix/DCAS-180--primary-nav-js-error-on-no-submenu
+  * DCAS-180: no submenu exception handling
+  * Merge pull request #155 from JudicialCouncilOfCalifornia/fix/Improved-detectWrap-code-fixes-to-js-errors
+  * Merge pull request #159 from JudicialCouncilOfCalifornia/feature/dcas-197
+  * Merge pull request #156 from JudicialCouncilOfCalifornia/bugfix/DCAS-180--submenu-right-align-not-dynamic
+  * Merge pull request #154 from JudicialCouncilOfCalifornia/DCAS-70-news-item-template
+  * Merge pull request #157 from JudicialCouncilOfCalifornia/bugfix/DCAS-142--play-icon-overlay
+  * Merge pull request #158 from JudicialCouncilOfCalifornia/DCAS-176-containers-empty
+  * changed css cascading
+  * DCAS-180: purely JS to manage submenu alignment
+  * DCAS-197: changed css cascading
+  * [fix] -- Updates to detectWrap functionality to fix some js errors and style issues. Updates to sidebarNav js to address some potential js errors
+  * DCAS-142: soften play icon overlay
+  * DCAS-70: CSS changes
+  * DCAS-176: Adding role
+
 0.54.40 / 2023-11-09
 ===================
 
