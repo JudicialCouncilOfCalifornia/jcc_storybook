@@ -36,8 +36,8 @@
   border-block-start: 1px solid var(--color-base-light-x);
 }
 
-.view-results.no-header .view-results__results .content > ul > li,
-.view-results.no-header .view-results__results .content > ol > li {
+.view-results.no-header .view-results__results .content > ul > li:not(:first-child),
+.view-results.no-header .view-results__results .content > ol > li:not(:first-child) {
   padding-block-start: var(--s4);
   border-block-start: 1px solid var(--color-base-light-x);
 }
@@ -145,6 +145,6 @@
   margin-block-end: var(--s-1);
 }
 
-.views-view--news--news-list article .media-excerpt__content {
+.views-view--news--news-list article .result-excerpt__content {
   margin-block-start: var(--s0);
 }

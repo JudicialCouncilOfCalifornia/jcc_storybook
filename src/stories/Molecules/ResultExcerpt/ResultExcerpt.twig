@@ -1,0 +1,70 @@
+{% set variant_class = variant ? 'result-excerpt--' ~ variant : 'result-excerpt--default' %}
+
+{% set classes = [
+  'result-excerpt',
+  'stack',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ')}}">
+  <div class="result-excerpt__header">
+    {% if brow %}
+      <div class="result-excerpt__brow">
+        <div>
+          {% if brow.primary %}
+            <span class="result-excerpt__brow-primary">{{ brow.primary }}</span>
+          {% endif %}
+          {% if brow.secondary %}
+            <span class="result-excerpt__brow-secondary">{{ brow.secondary }}</span>
+          {% endif %}
+        </div>
+        {% if (brow.primary or brow.secondary) and brow.notation %}
+          <div class="result-excerpt__brow-notation">{{ brow.notation }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if (title) or (button_data is not empty) %}
+      <div class="switcher detect-wrap detect-wrap--observed">
+        {% if title %}
+        <div class="result-excerpt__title">
+          <a href="{{ url }}">
+            <h2 class="result-excerpt__heading">{{ title }}</h2>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if button_data %}
+          <div class="result-excerpt__button">
+            {% include "@atoms/Button/Button.twig" with button_data %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  
+  {% if detail_list_data or pills or content %}
+    <div class="result-excerpt__content stack">
+      {{ content }}
+      
+      {% if detail_list_data or pills %}
+        {% if detail_list_data %}
+          <ul class="detail-list detect-wrap detect-wrap--observed">
+            {% if  detail_list_data.label  %}
+              <li class="detail-list__label">
+                {{ detail_list_data.label }}:
+              </li>
+            {% endif %}
+            {% for detail in detail_list_data.details %}
+              <li>{{ detail }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if pills %}
+        <div class="result-excerpt__pills">
+          {{ pills }}
+        </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

@@ -47,6 +47,24 @@ export default {
       },
     ],
   },
+  with_wide_span: {
+    variant: "none",
+    wider_span: "true",
+    items: [
+      {
+        label: "Sed ut",
+        text: "Unde omnis iste",
+      },
+      {
+        label: "Voluptatem",
+        text: "Doloremque laudantium",
+      },
+      {
+        label: "Eaque ipsa",
+        text: "Ab illo inventore",
+      },
+    ],
+  },
   with_heading: {
     variant: "none",
     heading: "Heading",
