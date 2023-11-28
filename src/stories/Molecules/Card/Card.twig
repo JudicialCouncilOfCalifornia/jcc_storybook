@@ -44,10 +44,16 @@
     {% if icon_data and variant == 'card--striped' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
     {% elseif media %}
-      <div class="card__media">
+      <div class="card__media caption-container">
         <div class="frame">{{ media }}</div>
         {% if media_caption.show and media_caption.text %}
           <div class="card__media_caption">{{ media_caption.text }}</div>
+        {% endif %}
+        {% if caption_overlay %}
+        <div class="caption-overlay">
+            <span class="media-caption">{{ media_caption.text}}</span> 
+            <span class="media-citation">{{citation}}</span>
+        </div>          
         {% endif %}
       </div>
     {% endif %}
