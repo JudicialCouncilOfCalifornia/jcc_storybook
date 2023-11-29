@@ -58,11 +58,13 @@ p + p {
   margin-block-start: var(--s0);
 }
 
-:where(p, h2, h3, h4, h5, h6) + h2,
-:where(p, h2, h3, h4, h5, h6) + h3,
-:where(p, h2, h3, h4, h5, h6) + h4,
-:where(p, h2, h3, h4, h5, h6) + h5,
-:where(p, h2, h3, h4, h5, h6) + h6 {
+:where(p, ul, ol, h2, h3, h4, h5, h6) + h2,
+:where(p, ul, ol, h2, h3, h4, h5, h6) + h3,
+:where(p, ul, ol, h2, h3, h4, h5, h6) + h4,
+:where(p, ul, ol, h2, h3, h4, h5, h6) + h5,
+:where(p, ul, ol, h2, h3, h4, h5, h6) + h6,
+:where (ul, ol) + p,
+p + a {
   margin-block-start: var(--gap, 1.5rem);
 }
 

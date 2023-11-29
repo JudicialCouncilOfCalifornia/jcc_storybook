@@ -14,6 +14,10 @@
   layout,
 ] %}
 
+{% set item_classes = [
+  'list__item',
+  wider_span ? 'wide_span' : '',
+] %}
 
 <div class="{{ classes|join(' ') }}">
   {% if heading %}
@@ -21,9 +25,9 @@
   {% endif %}
   <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
     {% for item in items %}
-      <li class="list__item">
+      <li class="{{ item_classes|join(' ') }}">
         {% if item.label %}
-          <span class="list__item-label">{{ item.label|capitalize }}:</span>
+          <span class="list__item-label">{{ item.label|title }}:</span>
         {% endif %}
         {{ item.text }}
       </li>

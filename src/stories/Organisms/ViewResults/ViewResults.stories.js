@@ -65,3 +65,8 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 // Data comes from the ViewResults.data.js file.
 Default.args = data.default;
+
+// Bind the Default component variant for this component.
+export const WithFullBrow = Template.bind({});
+// Data comes from the ViewResults.data.js file.
+WithFullBrow.args = data.with_full_brow;

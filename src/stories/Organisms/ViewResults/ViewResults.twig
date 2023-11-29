@@ -62,7 +62,8 @@
         <{{ list_type }}>
         {% for row in rows %}
           <li>
-          {% include "@molecules/MediaExcerpt/MediaExcerpt.twig" with {
+          {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
+            brow: row.brow,
             title: row.title,
             content: row.content,
             url: row.url,

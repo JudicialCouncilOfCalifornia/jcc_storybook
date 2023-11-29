@@ -5,6 +5,11 @@ import { Default as PillsDefault } from "../../Molecules/Pills/Pills.stories";
 export default {
   default: {
     variant: "default",
+    brow: {
+      primary: 'Brow Primary',
+      secondary: 'Brow Secondary',
+      notation: 'Brow Notation',
+    },
     title:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     url: "#",
