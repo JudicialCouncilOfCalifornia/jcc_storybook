@@ -1,4 +1,18 @@
 
+0.55.0 / 2023-11-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #164 from JudicialCouncilOfCalifornia/feature/DCAS-29--adjustments-for-job
+  * DCAS-29: Merge branch 'master' into feature/DCAS-29--adjustments-for-job
+  * Merge pull request #166 from JudicialCouncilOfCalifornia/DCAS-70-news-header-changes
+  * Merge pull request #163 from JudicialCouncilOfCalifornia/DCAS-186-fix-margin
+  * Merge pull request #165 from JudicialCouncilOfCalifornia/bugfix/DCAS-142--card-remote-video-thumbnail-fix
+  * DCAS-70: Added caption overlay for cards
+  * DCAS-142: ensure minimum colorbox remote video thumbnail size
+  * DCAS-29: adjust ViewResults to support jobs & news
+  * DCAS-186: Fix for view results
+
 0.54.42 / 2023-11-16
 ===================
 
