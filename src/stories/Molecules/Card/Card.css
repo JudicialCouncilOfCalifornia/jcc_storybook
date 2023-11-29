@@ -48,6 +48,33 @@
   text-decoration: none;
 }
 
+.media-caption {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.media-citation {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.caption-overlay {  
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;  
+  color: #ffffff;
+  text-align: center;  
+  box-sizing: border-box;
+  height: 53px;  
+}
+
+.caption-container {
+  position: relative;
+}
+
 /* Card modifier class can be used on cards wrapper element or on the card. */
 /* So we use both types of selector orders for each variant. */
 
@@ -315,6 +342,10 @@
 
 .remote-video-colorbox-launch-modal:hover::before {
   transform: scale(6);
-  content: "\25B6";
+}
+
+.remote-video-colorbox-launch-modal img {
+  width: 40rem;
+  height: auto;
 }
 /* END */
