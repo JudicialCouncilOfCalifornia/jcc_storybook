@@ -57,6 +57,10 @@ export default {
       description: "Make the card clickable and hide the button.",
       table: { defaultValue: { summary: false } },
     },
+    caption_overlay: {
+      description: "Add caption overlay in card",
+      table: { defaultValue: { summary: false } },
+    },
     media: {
       description: "Image, Video",
       table: { defaultValue: { summary: null } },
