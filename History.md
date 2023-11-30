@@ -1,4 +1,11 @@
 
+0.55.1 / 2023-11-30
+===================
+
+  * chore: Export libs.
+  * Merge pull request #167 from JudicialCouncilOfCalifornia/DCAS-198-heading-alignment-in-layout-sections
+  * [DCAS-198] -- Improved heading alignment for 2nd items in a grid (2 column) output in a layout section.
+
 0.55.0 / 2023-11-29
 ===================
 
