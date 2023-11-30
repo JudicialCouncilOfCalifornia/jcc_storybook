@@ -183,8 +183,11 @@
 }
 
 /* Adds spacing between elements in the main content section */
-.section__content .section__main > * + *:not(.card):not(.profile-card) {
+.section__content .section__main:not(.grid) > * + *:not(.card):not(.profile-card) {
   padding-block-start: var(--s4);
+}
+.section__content .section__main.grid>*+:nth-child(2):not(.card):not(.cards):not(.profile-cards) {
+  padding-block-start: 0;
 }
 .section__content .section__header + .section__main {
   padding-block-start: var(--s4);
