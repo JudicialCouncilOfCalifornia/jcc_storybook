@@ -46,7 +46,7 @@
     {% elseif media %}
       <div class="card__media caption-container">
         <div class="frame">{{ media }}</div>
-        {% if media_caption.show and media_caption.text %}
+        {% if media_caption.show and media_caption.text and not caption_overlay %}
           <div class="card__media_caption">{{ media_caption.text }}</div>
         {% endif %}
         {% if caption_overlay %}
