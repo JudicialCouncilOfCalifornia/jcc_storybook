@@ -43,7 +43,7 @@
 .primary-nav__default .header-search__search-toggle + .header-search__form {
   position: absolute;
   inset-inline: 0;
-  padding: var(--s-3) 0 var(--s-3) var(--s0);
+  padding: var(--s1) 0 var(--s1) var(--s0);
   background: white;
   transition: opacity var(--anim);
 }
@@ -52,7 +52,7 @@
   position: absolute;
   inset-block: auto;
   inset-inline: 0;
-  padding: var(--s-3) 0 var(--s-3) var(--s0);
+  padding: var(--s1) 0 var(--s1) var(--s0);
   background: white;
   transition: opacity var(--anim);
 }
