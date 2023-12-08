@@ -1,4 +1,17 @@
 
+0.55.2 / 2023-12-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #171 from JudicialCouncilOfCalifornia/DCAS-177--add-padding-to-active-label-on-form-element
+  * DCAS-177: Adjusted padding for active state labels (textfields and textarea type elements)
+  * Merge pull request #169 from JudicialCouncilOfCalifornia/DCAS-208-remove-no-content-text-from-teaserpluslist-component
+  * Merge pull request #170 from JudicialCouncilOfCalifornia/DCAS-215-fix-search-form-padding-to-prevent-menu-hover-effect
+  * Merge pull request #168 from JudicialCouncilOfCalifornia/DCAS-70-add-condition-for-overlay
+  * DCAS-215: Adjust the padding/sizing of the search form on primary nav
+  * DCAS-208: Remove no-content text from the TeaserPlusList component twig file.
+  * DCAS-70: Adding condition for media caption
+
 0.55.1 / 2023-11-30
 ===================
 
