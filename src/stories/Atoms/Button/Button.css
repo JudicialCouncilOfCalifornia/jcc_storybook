@@ -13,6 +13,46 @@
   line-height: var(--s1);
   font-weight: 300;
   letter-spacing: 0.01rem;
+  position: relative;
+}
+
+.button:hover {
+  background-color: var(--color-accent-warm-light-xxxx); 
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+
+.button:active {
+  border: 2px solid #5F1B0F;
+  color: #5F1B0F;
+  background: var(--color-accent-warm-light-xxxx);
+}
+
+.button:focus {
+  outline: 2px solid var(--color-accent-warm-light-x);
+  outline-offset: 2px;
+  border: 2px solid var(--color-accent-warm-dark-x);  
+}
+
+.button.button--text:hover::before,
+.button.button--text:active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor; 
+}
+
+.button.button--text:focus::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 5px;  
+  width: 80%;
+  height: 2px;
+  background-color: currentColor; 
 }
 
 .button::after {
@@ -44,10 +84,42 @@
   --button-border: var(--color-white);
 }
 
+.button.button--secondary:hover {
+  background-color: var(--color-red); 
+  color: var(--color-white);
+  border: 2px solid var(--color-red);
+}
+
+.button.button--secondary:active {
+  border: 2px solid var(--color-brown);
+  color: var(--color-white);
+  background: var(--color-brown);
+}
+
+.button.button--secondary:focus {
+  outline: 2px solid var(--color-accent-warm-light-x);
+  outline-offset: 2px;  
+  background: var(--color-accent-warm-dark-x); 
+}
+
 .button.button--text {
   padding: 0;
   border: 0;
   background: transparent;
+  font-weight: 600;
 }
 
-/* content: "\2190" */
+.button.button--text:hover {
+  color: var(--color-red); 
+}
+
+.button.button--text:active {  
+  color: var(--color-brown);    
+}
+
+.button.button--text:focus {
+  padding: var(--s-1) var(--s1);
+  color: var(--color-accent-warm-dark-x); 
+  border-radius: var(--s-5);
+  --button-border: 2px solid var(--color-accent-warm-light-xx);
+}
