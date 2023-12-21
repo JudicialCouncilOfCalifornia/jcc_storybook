@@ -1,4 +1,12 @@
 
+0.55.3 / 2023-12-20
+===================
+
+  * chore: Export libs.
+  * Merge pull request #173 from JudicialCouncilOfCalifornia/DCAS-166-fix-php-and-twig-warnings-and-notices
+  * [DCAS-166] -- wrap content in div to fix styling on non formatted content.
+  * [DCAS-166] -- Alter the ResultExcerpt component to help address some twig/php notices and warnings showing in the logs.
+
 0.55.2 / 2023-12-07
 ===================
 
