@@ -44,7 +44,7 @@
   
   {% if detail_list_data or pills or content %}
     <div class="result-excerpt__content stack">
-      {{ content }}
+      <div>{{ content }}</div>
       
       {% if detail_list_data or pills %}
         {% if detail_list_data %}
@@ -61,7 +61,7 @@
         {% endif %}
         {% if pills %}
         <div class="result-excerpt__pills">
-          {{ pills }}
+          {% include "@molecules/Pills/Pills.twig" with pills %}
         </div>
         {% endif %}
       {% endif %}
