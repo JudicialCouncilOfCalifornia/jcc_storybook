@@ -61,7 +61,7 @@
         {% endif %}
         {% if pills %}
         <div class="result-excerpt__pills">
-          {{ pills }}
+          {% include "@molecules/Pills/Pills.twig" with pills %}
         </div>
         {% endif %}
       {% endif %}
