@@ -1,4 +1,11 @@
 
+0.55.4 / 2023-12-20
+===================
+
+  * chore: Export libs.
+  * Merge pull request #174 from JudicialCouncilOfCalifornia/fix/inline-child-svg-broken-mask
+  * [fix] -- Improperly set or broken mask attribute on the inline-child.svg causes a "page not found" error to keep showing in logs.
+
 0.55.3 / 2023-12-20
 ===================
 
