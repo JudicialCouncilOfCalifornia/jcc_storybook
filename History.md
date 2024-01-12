@@ -1,4 +1,13 @@
 
+0.55.5 / 2024-01-11
+===================
+
+  * chore: Export libs.
+  * Merge pull request #175 from JudicialCouncilOfCalifornia/feature/DCAS-221-paragraphs-into-bullets
+  * Merge pull request #172 from JudicialCouncilOfCalifornia/DCAS-154-button-styles
+  * [DCAS-221] -- removed list elements
+  * [DCAS-154] -- Button styling
+
 0.55.4 / 2023-12-20
 ===================
 
