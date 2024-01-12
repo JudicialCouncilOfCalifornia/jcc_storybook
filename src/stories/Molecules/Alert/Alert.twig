@@ -25,11 +25,9 @@
         {% if heading is not empty %}
           <p class="alert__content__heading"><strong>{{ heading }}</strong></p>
         {% endif %}
-        <ul>
-          {% for message in content %}
-            <li>{{ message }}</li>
-          {% endfor %}
-        </ul>
+        {% for message in content %}
+          {{ message }}
+        {% endfor %}
       {% else %}
         {% if heading is not empty %}<span class="alert__content__heading"><strong>{{ heading }}</strong></span>{% endif %} {{ content|first }}
       {% endif %}
