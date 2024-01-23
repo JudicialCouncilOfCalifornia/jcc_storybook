@@ -4,7 +4,7 @@
 {% set variant_styles = color ? variant_styles|merge(['--color: var(--color-' ~ color ~ ');']) : variant_styles %}
 
 {% set icon_path = icon_path is not empty ? icon_path : 'icons.svg' %}
-{% set name = name is not empty ? 'Placeholder for image of ' ~ name : 'Placeholder for justice image' %}
+{% set justice_name = justice_name is not empty ? 'Placeholder for image of ' ~ justice_name : 'Placeholder for justice image' %}
 {# Create class array. #}
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
@@ -13,8 +13,9 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} ">
-	<svg class="icon" aria-labelledby="titleID"> 
-	 <title id="titleID">{{name}} </title>
+	<svg class="icon" aria-labelledby="justice" aria-describedby="name_desc"> 
+	 <title id="justice">{{justice_name}} </title>
+	  <desc id="name_desc"> {{justice_name}} </desc>
 		<use xlink:href="{{ icon_path }}#{{ icon }}"></use>
 	</svg>
 </div>
