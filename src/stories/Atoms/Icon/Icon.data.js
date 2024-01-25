@@ -3,6 +3,7 @@ export default {
     icon: "education",
     color: false,
     icon_path: false,
-    justice_name: ''
+    title: '',
+    id:''
   },
 };
