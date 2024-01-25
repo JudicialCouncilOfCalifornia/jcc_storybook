@@ -12,9 +12,10 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} ">
-	<svg class="icon" aria-labelledby="id" aria-describedby="title"> 
-	 <title id="id">{{id}} </title>
-	  <desc id="title"> {{title}} </desc>
+	<svg class="icon" aria-labelledby="{{ id }}"> 
+	 {% if title %}
+		<title id="{{ id }}">{{ title }}</title>
+	 {% endif %} 
 		<use xlink:href="{{ icon_path }}#{{ icon }}"></use>
 	</svg>
 </div>
