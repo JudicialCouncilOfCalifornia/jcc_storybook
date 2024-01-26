@@ -1,4 +1,14 @@
 
+0.55.6 / 2024-01-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #177 from JudicialCouncilOfCalifornia/DCAS-232-alt-images-blank-avatar
+  * [DCAS-232] -- Removing description tag
+  * [DCAS-232] -- Added review comments to make generic
+  * [DCAS-232] -- alt for svg
+  * [DCAS-232] -- alt for svg
+
 0.55.5 / 2024-01-11
 ===================
 
