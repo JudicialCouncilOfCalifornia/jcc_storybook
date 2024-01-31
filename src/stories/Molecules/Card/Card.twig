@@ -50,10 +50,13 @@
           <div class="card__media_caption">{{ media_caption.text }}</div>
         {% endif %}
         {% if caption_overlay %}
-        <div class="caption-overlay">
+        <div class="caption-container">       
+          <div class="caption-overlay">
             <span class="media-caption">{{ media_caption.text}}</span> 
             <span class="media-citation">{{citation}}</span>
-        </div>          
+             <div class="overlay"></div> 
+          </div>
+        </div>    
         {% endif %}
       </div>
     {% endif %}

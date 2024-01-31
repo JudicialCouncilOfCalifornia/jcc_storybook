@@ -9,5 +9,9 @@
 
 .list--none .list__container {
   list-style: none;
-  padding-inline: 0;
+  padding-inline: 0;  
+}
+
+.list-heading {
+  margin-bottom: var(--s0);  
 }
