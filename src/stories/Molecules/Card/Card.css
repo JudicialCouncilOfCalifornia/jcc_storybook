@@ -211,9 +211,52 @@
 .card--striped .card .button,
 .card.card--striped .button,
 .card--striped-aligned .card .button,
-.card.card--striped-aligned .button {
+.card.card--striped-aligned .button,
+.card.card--striped-aligned .button-primary {
   border: 2px solid var(--color);
   color: var(--color);
+  background-color: var(--color-primary-dark-x);  
+}
+
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .card .button,
+.card.card--striped-aligned .button.button--primary::after {
+ background-color: var(--color);
+}
+
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .button,
+.card.card--striped-aligned .button:hover::after {
+ background-color: var(--color-red); 
+}
+
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .card .button,
+.card.card--striped-aligned .button:hover {
+  background-color: var(--color-accent-warm-light-xxxx); 
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .card .button,
+.card.card--striped-aligned .button:active {
+  border: 2px solid var(--color-brown);
+  color: var(--color-brown);
+  background: var(--color-accent-warm-light-xxxx);
+}
+
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .card .button,
+.card.card--striped-aligned .button:focus {
+  outline: 2px solid var(--color-accent-warm-light-x);
+  outline-offset: 2px;
+  border: 2px solid var(--color-accent-warm-dark-x);  
 }
 
 .card.card--striped.card--background-striped-base-dark-x,
