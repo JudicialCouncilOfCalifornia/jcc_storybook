@@ -38,8 +38,7 @@
 
 .view-results__results .content > ul > li,
 .view-results__results .content > ol > li {  
-  padding-block-start: var(--s4);
-  border-block-start: 1px solid var(--color-base-light-x);
+  padding-block-start: var(--s4);   
 }
 
 .view-results__results.no-divider > ul > li + li,
