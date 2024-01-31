@@ -21,9 +21,7 @@
 
 <div class="{{ classes|join(' ') }}">
   {% if heading %}
-    <{{h}} class="list-heading">{{ heading }}</{{h}}>
-    <hr />
-    <br />
+    <{{h}} class="list-heading">{{ heading }}</{{h}}> 
   {% endif %}
   <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
     {% for item in items %}
