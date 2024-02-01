@@ -66,9 +66,16 @@
   left: 0;
   width: 100%;  
   color: #ffffff;
-  text-align: center;  
   box-sizing: border-box;
   height: 53px;  
+}
+
+.caption-below-image {      
+    width: 100%;  
+    color: var(--color-base-dark-x);    
+    box-sizing: border-box;
+    height: 53px;
+    margin-top: 10px;
 }
 
 .caption-container {
