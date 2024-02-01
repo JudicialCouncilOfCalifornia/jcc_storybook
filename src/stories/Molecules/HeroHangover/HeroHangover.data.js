@@ -93,9 +93,8 @@ export default {
   news_header: {
     hangover_hide_compact: false,
     hangover_offset: 22,
-    background: null,
     brow: {
-      variant: "default",
+      variant: "default_with_date",
       part_one: "Brow Example",
       part_two: "Part two",
     },
@@ -106,11 +105,11 @@ export default {
       variant: "media-right",
       aspect: [],
       clickable_card: false,
-      background: null,
       media: '<img src="https://source.unsplash.com/random/1280x720/?zen" />',
     }),
     bottom_content: "",
     blurb: false,
+    background: 'striped-base-light-xx',
   },
   with_bottom: {
     hangover_hide_compact: false,
