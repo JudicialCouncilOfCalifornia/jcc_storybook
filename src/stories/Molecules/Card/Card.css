@@ -208,57 +208,6 @@
   background: var(--background-striped-primary-dark-xx);
 }
 
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .card .button,
-.card.card--striped-aligned .button,
-.card.card--striped-aligned .button-primary {
-  border: 2px solid var(--color);
-  color: var(--color);
-  background-color: var(--color-primary-dark-x);  
-}
-
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .card .button,
-.card.card--striped-aligned .button.button--primary::after {
- background-color: var(--color);
-}
-
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .button,
-.card.card--striped-aligned .button:hover::after {
- background-color: var(--color-red); 
-}
-
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .card .button,
-.card.card--striped-aligned .button:hover {
-  background-color: var(--color-accent-warm-light-xxxx); 
-  color: var(--color-red);
-  border: 2px solid var(--color-red);
-}
-
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .card .button,
-.card.card--striped-aligned .button:active {
-  border: 2px solid var(--color-brown);
-  color: var(--color-brown);
-  background: var(--color-accent-warm-light-xxxx);
-}
-
-.card--striped .card .button,
-.card.card--striped .button,
-.card--striped-aligned .card .button,
-.card.card--striped-aligned .button:focus {
-  outline: 2px solid var(--color-accent-warm-light-x);
-  outline-offset: 2px;
-  border: 2px solid var(--color-accent-warm-dark-x);  
-}
-
 .card.card--striped.card--background-striped-base-dark-x,
 .card.card--striped-aligned.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
@@ -392,3 +341,46 @@
   height: auto;
 }
 /* END */
+
+/* Button varaints START*/
+.card--striped .card .button,
+.card.card--striped .button,
+.card--striped-aligned .card .button,
+.card.card--striped-aligned .button {
+  border: 2px solid var(--color);
+  color: var(--color);
+}
+
+.card .button.button--primary::after, 
+.card .button.button--primary:focus::after, 
+.card .button.button--text::after, 
+.card .button.button--text:focus::after {
+  color: currentColor;
+}
+
+.card.card--striped .card__buttons .button.button--primary::after,
+.card.card--striped-aligned .card__buttons .button.button--primary::after,
+.card.card--striped .card__buttons .button.button--secondary::after,
+.card.card--striped-aligned .card__buttons .button.button--secondary::after,
+.card.card--striped .card__buttons .button.button--text::after,
+.card.card--striped-aligned .card__buttons .button.button--text::after {
+  color: currentColor;
+  background-color: currentColor;
+}
+
+.card.card--striped .card__buttons .button.button--primary:hover,
+.card.card--striped-aligned .card__buttons .button.button--primary:hover,
+.card.card--striped .card__buttons .button.button--secondary:hover,
+.card.card--striped-aligned .card__buttons .button.button--secondary:hover {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+
+.card.card--striped .card__buttons .button.button--primary:active,
+.card.card--striped-aligned .card__buttons .button.button--primary:active,
+.card.card--striped .card__buttons .button.button--secondary:active,
+.card.card--striped-aligned .card__buttons .button.button--secondary:active {
+  border-color: var(--color-brown);
+  color: var(--color-brown);
+}
+/* Button varaints END*/
