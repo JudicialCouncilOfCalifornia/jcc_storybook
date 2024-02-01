@@ -1,4 +1,20 @@
 
+0.55.7 / 2024-01-31
+===================
+
+  * chore: Export libs.
+  * Merge branch 'master' of github.com:JudicialCouncilOfCalifornia/jcc_storybook
+  * chore: Export libs.
+  * Merge pull request #179 from JudicialCouncilOfCalifornia/DCAS-70-news-variant-review-fixes
+  * Merge pull request #182 from JudicialCouncilOfCalifornia/DCAS-154-arrow
+  * [DCAS-154] -- Cleanup of remaining oddities in button styles when in specific variants of cards.
+  * [DCAS-70] -- Added review comments
+  * Merge pull request #181 from JudicialCouncilOfCalifornia/DCAS-154-arrow
+  * [DCAS-154] -- Fixes for striped aligned card.
+  * [DCAS-70] -- Review changes for News variant
+  * Merge pull request #176 from JudicialCouncilOfCalifornia/DCAS-154-arrow
+  * [DCAS-154] -- Set svg arrow to css variable. Condensed svg arrow css classes.
+
 0.55.6 / 2024-01-26
 ===================
 
