@@ -1,4 +1,13 @@
 
+0.55.8 / 2024-02-01
+===================
+
+  * chore: Export libs.
+  * Merge pull request #184 from JudicialCouncilOfCalifornia/DCAS-70-media-alignmentfix
+  * [DCAS-70] -- Update Card.data.js Converted camelCase variable to snake_case
+  * [DCAS-70] -- Update Card.twig converted camelCase variable to snake_case
+  * [DCAS-70] -- Ability to add caption below images
+
 0.55.7 / 2024-01-31
 ===================
 
