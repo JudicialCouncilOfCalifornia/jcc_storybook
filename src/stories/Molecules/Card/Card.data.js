@@ -134,7 +134,8 @@ export default {
       show: true,
       text: "This is caption for the media if provided"      
     },
-    citation: "This is citation for the media if provided",    
+    citation: "This is citation for the media if provided", 
+    caption_in_image: false,    
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
     button_data: [
