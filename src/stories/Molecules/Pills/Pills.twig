@@ -2,15 +2,16 @@
 
 {% set classes = [
   'pills',
-  'cluster',
   variant_class,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-	{% if icon_data %}
-		{% include "@atoms/Icon/Icon.twig" with icon_data %}
-	{% endif %}
-	{% for item in items %}
-		{{ item }}
-	{% endfor %}
+  {% if icon_data %}
+    {% include "@atoms/Icon/Icon.twig" with icon_data %}
+  {% endif %}
+  <div class="cluster">
+    {% for item in items %}
+      {{ item }}
+    {% endfor %}
+  </div>
 </div>
