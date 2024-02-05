@@ -54,6 +54,11 @@
   line-height: 17px;
 }
 
+.media-caption.caption-content {
+  margin-inline-start: var(--s0);
+  display: inline-block;
+}
+
 .media-citation {
   font-size: 9px;
   font-weight: 400;
@@ -74,8 +79,8 @@
     width: 100%;  
     color: var(--color-base-dark-x);    
     box-sizing: border-box;
-    height: 53px;
-    margin-top: 10px;
+    line-height: var(--s1);    
+    margin-top: 9px;
 }
 
 .caption-container {
