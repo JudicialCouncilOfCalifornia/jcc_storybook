@@ -300,6 +300,10 @@
   background: var(--background-solid-accent-warm-dark-x);
 }
 
+.card.card--background-base-light-xxx{
+  background: var(--color-base-light-xxx);
+}
+
 /* Striped left addtional styling */
 .card--striped-aligned .card,
 .card.card--striped-aligned {
@@ -362,6 +366,19 @@
   width: 40rem;
   height: auto;
 }
+
+.card h4.sidebar-label {
+  text-transform: uppercase;
+  margin-block-start: var(--s-3);
+  font-weight: 800;
+  font-size: var(--s0);
+}
+
+.card .sidebar-date {
+  font-size: var(--s2);
+}
+
+
 /* END */
 
 /* Button varaints START*/
