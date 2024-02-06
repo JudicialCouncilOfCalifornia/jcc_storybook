@@ -1,6 +1,9 @@
 {# Set up variant classes. #}
 {% set variant_type = variant ? 'button--' ~ variant : 'button--primary' %}
 {% set variant_size = size ? 'button--' ~ size : 'button--normal' %}
+{% set variant_icon = icon ? 'icon--' ~ icon : 'icon--arrow' %}
+{# TODO: Add touch device support for collapsed. #}
+{% set variant_collapsed = collapsed ? 'collapsed' : '' %}
 
 {# Create class array #}
 {# Include composable layout classes as needed. #}
@@ -8,7 +11,16 @@
 {% set classes = [
   'button',
   variant_type,
-  variant_size
+  variant_size,
+  variant_icon,
+  variant_collapsed,
+  custom
 ] %}
 
-{{ link(label, href, { 'class': classes,'aria_label': aria_label }) }}
+{% if collapsed %}
+  <a class="{{ classes|join(' ') }}" href="{{ href }}" aria-label="{{ aria_label }}">
+    <span>{{ label }}</span>
+  </a>
+{% else %}
+  {{ link(label, href, { 'class': classes, 'aria_label': aria_label }) }}
+{% endif %}

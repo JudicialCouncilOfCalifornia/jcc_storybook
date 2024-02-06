@@ -5,7 +5,26 @@
   color: var(--color);
 }
 
-.icon-wrapper .icon {
-  block-size: 100%;
-  inline-size: 100%;
+.icon--arrow::after,
+.icon--arrow:focus::after,
+.icon--arrow:hover::after,
+.icon--arrow:active::after {
+  -webkit-mask: var(--arrow-svg) no-repeat;
+  mask: var(--arrow-svg) no-repeat;
+}
+
+.icon--arrow-up::after,
+.icon--arrow-up:focus::after,
+.icon--arrow-up:hover::after,
+.icon--arrow-up:active::after {
+  -webkit-mask: var(--arrow-up-svg) no-repeat;
+  mask: var(--arrow-up-svg) no-repeat;
+}
+
+.icon--thumbs-up::after,
+.icon--thumbs-up:focus::after,
+.icon--thumbs-up:hover::after,
+.icon--thumbs-up:active::after {
+  -webkit-mask: var(--thumbs-up-svg) no-repeat;
+  mask: var(--thumbs-up-svg) no-repeat;
 }

@@ -1,0 +1,53 @@
+{# TODO: Do we dynamically support multiple content sources with a single offcanvas? #}
+
+{# Set up variant classes. #}
+{% set variant_align = align ? 'offcanvas--' ~ align : 'offcanvas--right' %}
+
+{% set classes = [
+  'offcanvas',
+  variant_align,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <div class="offcanvas__container">
+    <div class="offcanvas__canvas box">
+      <div class="offcanvas__heading">
+        <h2 class="cluster">
+          {% if heading.icon %}
+            {% include '@atoms/Icon/Icon.twig' with {
+              icon: heading.icon.name,
+              icon_path: heading.icon.icon_path,
+            } %}
+          {% endif %}
+          {{ heading.text|t }}
+        </h2>
+        <button class="offcanvas__close-button icon" role="button">
+          <span></span>
+          <span></span>
+          <span class="sr-only">{{ close_aria_label ? close_aria_label|t : 'Close canvas' }}</span>
+        </button>
+      </div>
+      <div class="offcanvas__body">
+        {{ sub_component_data }}
+      </div>
+    </div>
+  </div>
+
+  {% if trigger %}
+    <div class="offcanvas__triggers-container">
+      {% if trigger.button %}
+        {% include "@atoms/Button/Button.twig" with {
+          variant: trigger.button.variant,
+          label: trigger.button.label,
+          aria_label: trigger.button.aria_label ? trigger.button.aria_label : trigger.button.label,
+          href: "javascript:void(0);",
+          size: trigger.button.size,
+          custom: "offcanvas__open-button",
+        } %}
+      {% elseif trigger.custom %}
+        {{ trigger.custom }}
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+

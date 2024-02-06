@@ -281,7 +281,6 @@ export default {
       blurb: false,
     },
     section_1: {
-      first_component: false,
       variant: "default",
       sub_component_layout: "default",
       align_items: false,
@@ -408,7 +407,6 @@ export default {
       ],
     },
     section_2: {
-      first_component: false,
       variant: "warm-dark-x",
       sub_component_layout: "default",
       align_items: false,
@@ -500,7 +498,6 @@ export default {
       ],
     },
     section_3: {
-      first_component: false,
       variant: "default",
       sub_component_layout: "default",
       align_items: false,
