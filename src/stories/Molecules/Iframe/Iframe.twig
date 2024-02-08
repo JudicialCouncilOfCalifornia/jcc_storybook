@@ -12,7 +12,7 @@
 
 <div class="{{ classes|join(' ') }}"> {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
 	{# Use BEM syntax for styling classes on sub-components. #}
-	<iframe id="iframe-content-{{ random(1000) }}" src="{{ url }}" frameborder="0">
+	<iframe id="iframe-content-{{ random(1000) }}" src="{{ url }}" frameborder="0"  {{ (manual_height) ? 'style="height:' ~ manual_height ~ 'px;"' : '' }}>
 		{{- 'Your browser does not support inline frames'|t -}}
 	</iframe>
 </div>
