@@ -113,7 +113,6 @@
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 }
 
 .view-results .form-actions .button {
