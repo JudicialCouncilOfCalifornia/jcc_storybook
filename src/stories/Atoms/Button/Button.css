@@ -80,8 +80,30 @@
   background-color: var(--color-white);  
 }
 
+.button.button--primary::after,
+.button.button--primary:focus::after,
+.button.button--primary:hover::after,
+.button.button--primary:active::after,
+.button.button--secondary::after,
+.button.button--secondary:focus::after,
+.button.button--secondary:hover::after,
+.button.button--secondary:active::after,
+.button.button--text::after,
+.button.button--text:focus::after,
+.button.button--text:hover::after,
+.button.button--text:active::after {
+  -webkit-mask: var(--arrow-svg) no-repeat;
+  mask: var(--arrow-svg) no-repeat;
+}
+
 .button.button--text:focus::after{
-  background-color: currentColor;
+  background-color: currentColor; 
+}
+
+.button.button--no-icon::after {
+  -webkit-mask: none !important;
+  mask: none !important;
+  display: none !important;
 }
 
 [dir='rtl'] .button:after {
