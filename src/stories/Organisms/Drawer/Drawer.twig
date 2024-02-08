@@ -1,0 +1,22 @@
+{# Set up body classes. #}
+{% set container_classes = [
+  'drawer__container',
+  layout ? layout : 'stack',
+] %}
+
+{% set classes = [
+  'drawer',
+  'fixed',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <div class="{{ container_classes|join(' ') }}">
+    {% if sub_component_data is iterable %}
+      {% for item in sub_component_data %}
+        {{ item }}
+      {% endfor %}
+    {% elseif sub_component_data|trim %}
+      {{ sub_component_data }}
+    {% endif %}
+  </div>
+</div>

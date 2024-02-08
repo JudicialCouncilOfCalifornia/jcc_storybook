@@ -1,0 +1,14 @@
+.fixed-demo .box {
+  background: #000;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.fixed-demo .demo-example {
+  padding: 0.5rem;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}

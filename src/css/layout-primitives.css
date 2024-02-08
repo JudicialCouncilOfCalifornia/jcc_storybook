@@ -275,3 +275,24 @@
 .switcher.switcher--4 > :nth-last-child(n + 5) ~ * {
   flex-basis: 100%;
 }
+
+/*
+  END: https://every-layout.dev
+*/
+
+/* Fixed. */
+.fixed {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  padding: var(--s0);
+}
+
+.fixed,
+.fixed--right {
+  right: 0;
+}
+
+.fixed--left {
+  right: unset;
+}

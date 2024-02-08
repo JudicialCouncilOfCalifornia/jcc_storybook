@@ -1,0 +1,46 @@
+{# This is just a layout example for the styleguide.
+  Do not use this template directly. #}
+
+{# Set up variant classes. #}
+{% set variant_align = align ? 'fixed--' ~ align : '' %}
+
+{% set styles = [] %}
+{% set styles = frame_h ? styles|merge(['--frame-h: ' ~ frame_h ~ ';']) : styles %}
+{% set styles = frame_v ? styles|merge(['--frame-v: ' ~ frame_v ~ ';']) : styles %}
+
+{% set classes = [
+  'fixed',
+  variant_align,
+] %}
+
+<div class="fixed-demo">
+  <h2>Fixed</h2>
+  <p>Fixed layout will apply a floating, fixed position for the target element.</p>
+  <ul style="margin-block-end: var(--s0)">
+    <li>Overlays element on top of all page elements.</li>
+    <li>Positioning is always fixed at viewport bottom even when there is page scrolling.</li>
+    <li>Alignment can set to the right (default) or left.</li>
+  </ul>
+  <h3>Classes</h3>
+  <table>
+    <tr>
+      <td><strong>fixed</strong></td>
+      <td>Base to create fixed position overlay, bottom-right by default</td>
+    </tr>
+    <tr>
+      <td><strong>fixed--right</strong></td>
+      <td>Aligns elements to the right when a variant class is convenient</td>
+    </tr>
+    <tr>
+      <td><strong>fixed--left</strong></td>
+      <td>Aligns elements to the left</td>
+    </tr>
+  </table>
+  <div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
+    <div class="box">
+      <div class="demo-example">
+        xxxxxxxxxxxxxxxxxxxxx
+      </div>
+    </div>
+  </div>
+</div>

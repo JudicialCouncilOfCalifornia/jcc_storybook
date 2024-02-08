@@ -1,0 +1,18 @@
+.drawer.fixed .drawer__container {
+  justify-content: end;
+  align-items: var(--align-items, flex-end);
+}
+
+.drawer__container.cluster {
+  flex-wrap: nowrap;
+  align-items: normal;
+  gap: var(--s-6);
+}
+
+.drawer__container.stack > * + * {
+  margin-block-start: var(--s-6);
+}
+
+.drawer__container.stack > .button {
+  white-space: nowrap;
+}

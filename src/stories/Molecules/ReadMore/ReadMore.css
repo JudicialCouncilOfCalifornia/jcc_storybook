@@ -66,6 +66,7 @@
 }
 
 .read-more__content {
+  animation: open var(--anim-speed);
   display: none;
   flex: 0 0 100%;
   margin-block-start: var(--gap, 1.5rem);

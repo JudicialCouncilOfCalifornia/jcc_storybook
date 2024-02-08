@@ -28,6 +28,18 @@ export default {
       table: { defaultValue: { summary: false } },
     },
     href: { table: { disable: true } },
+    icon: {
+      description: "The button icon if not default arrow.",
+      table: { defaultValue: { summary: "normal" } },
+      control: { type: "select" },
+      options: ["arrow-up", "thumbs-up"],
+    },
+    collapsed: {
+      description: "Show label on hover.",
+      table: { defaultValue: { summary: false } },
+      control: { type: "radio" },
+      options: [true, false],
+    },
   },
 };
 
