@@ -127,12 +127,12 @@ export default {
     clickable_card: false,
     caption_overlay: true,
     background: null,
-    aspect: [],
+    aspect: [0,0],    
     media:
       '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     media_caption: {
       show: true,
-      text: "This is caption for the media if provided"      
+      text: "This is caption for the media if provided"
     },
     citation: "This is citation for the media if provided", 
     caption_in_image: false,    
