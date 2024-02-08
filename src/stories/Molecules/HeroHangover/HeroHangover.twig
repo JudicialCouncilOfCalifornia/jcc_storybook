@@ -34,9 +34,14 @@
 					<div class="stack">
 						<div>
 							{% if brow %}
-								<div class="hangover__top-content-brow">
-									{% include "@atoms/Brow/Brow.twig" with brow %}
-								</div>
+                <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
+                  <div class="hangover__top-content-brow">
+                    {% include "@atoms/Brow/Brow.twig" with brow %}
+                  </div>
+                  {% if share %}
+                    {% include "@molecules/Share/Share.twig" with share %}
+                  {% endif %}
+                </div>
 							{% endif %}
 							{% if heading %}
 								<h1>{{ heading }}</h1>

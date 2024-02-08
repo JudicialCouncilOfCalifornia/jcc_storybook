@@ -29,6 +29,10 @@
   background: var(--background);
 }
 
+.hangover__top .share{
+  margin-left: auto;
+}
+
 .hangover__bottom > * *:not(.hangover__bottom-content) {
   padding: 0;
 }
@@ -160,7 +164,15 @@
   background: var(--background);
 }
 
-.hangover--atriped-base-light-xx .card {
+.hangover--striped-base-light-xx p{
+  --color: var(--color-black);
+}
+
+.hangover--striped-base-light-xx{
+  --accent-color: var(--color-accent-warm-dark-x);
+}
+
+.hangover--striped-base-light-xx .card {
   --border-color: var(--color-base-light-x);
 }
 

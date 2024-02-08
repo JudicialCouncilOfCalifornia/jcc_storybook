@@ -111,6 +111,25 @@ export default {
     blurb: false,
     background: 'striped-base-light-xx',
   },
+  with_print: {
+    hangover_hide_compact: false,
+    hangover_offset: 22,
+    brow: {
+      variant: "default_with_date",
+      part_one: "Brow Example",
+    },
+    heading: "This is a Heading",
+    news_header: true,
+    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    bottom_content: "",
+    blurb: false,
+    background: 'striped-base-light-xx',
+    share: {
+      print_url: 'javascript: window.print();',
+      print_aria_label: 'Print advisory body',
+      icon_path: '/icons.svg',
+    },
+  },
   with_bottom: {
     hangover_hide_compact: false,
     hangover_offset: 22,
