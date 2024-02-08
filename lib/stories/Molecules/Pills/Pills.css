@@ -1,1 +1,1 @@
-.pills{--gap:var(--s-4)}.pills .icon-wrapper{block-size:var(--s4);inline-size:var(--s4)}
+.pills{display:flex;--gap:var(--s-4)}.pills .icon-wrapper{block-size:var(--s4);inline-size:var(--s4);margin-inline-end:var(--s-3)}.pills .icon-wrapper .icon{width:100%;height:100%}
