@@ -1,4 +1,17 @@
 
+0.55.9 / 2024-02-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #186 from JudicialCouncilOfCalifornia/DCAS-70-news-variant-fixes
+  * Merge pull request #178 from JudicialCouncilOfCalifornia/bugfix/DCAS-240--pills-icon-size
+  * Merge pull request #183 from JudicialCouncilOfCalifornia/DCAS-239-extra-hr-rule
+  * Merge pull request #188 from JudicialCouncilOfCalifornia/bugfix/DCAS-231--utility-nav-real-estate-handling
+  * [DCAS-231] -- remove secondary nav inline padding to avoid overflow handling
+  * [DCAS-70] -- CSS changes for news card variant
+  * [DCAS-240] -- fix group icon, layout, & view results actions spacing
+  * [DCAS-239] -- Fix for extra hr rule
+
 0.55.8 / 2024-02-01
 ===================
 
