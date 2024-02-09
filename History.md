@@ -1,4 +1,11 @@
 
+0.55.11 / 2024-02-08
+===================
+
+  * chore: Export libs.
+  * Merge pull request #190 from JudicialCouncilOfCalifornia/feature/DCAS-247-adjustments
+  * [DCAS-247] -- adjustments
+
 0.55.10 / 2024-02-08
 ===================
 
