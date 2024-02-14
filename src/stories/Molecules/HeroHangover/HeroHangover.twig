@@ -44,7 +44,7 @@
                 </div>
 							{% endif %}
 							{% if heading %}
-								<h1>{{ heading }}</h1>
+								<h1 style="{% if news_header %}color: var(--color-primary-dark-x);{% endif %}">{{ heading }}</h1>
 							{% endif %}
 						</div>
 						{% if text %}

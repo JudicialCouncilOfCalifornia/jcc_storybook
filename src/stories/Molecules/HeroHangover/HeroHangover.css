@@ -45,8 +45,7 @@
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
-.hangover__top-content h1 {
-  color: var(--color-primary-dark-x);
+.hangover__top-content h1 { 
   text-shadow: 1px 1px 1px var(--text-shadow-color),
     -1px -1px 1px var(--text-shadow-color),
     -1px 1px 1px var(--text-shadow-color), 1px -1px 1px var(--text-shadow-color);
@@ -325,6 +324,12 @@
 .hangover--news--header .box { 
   padding: 0;  
 }
+
+.hangover--news--header .box .hangover__top-content {
+  padding-left: 30px;
+  background-color: blue;
+}
+
 .hangover--news--header .box .hangover__top-content .hangover__text {  
   max-width: 80%;
 }
