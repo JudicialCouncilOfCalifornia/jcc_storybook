@@ -46,6 +46,7 @@
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
 .hangover__top-content h1 {
+  color: var(--color-primary-dark-x);
   text-shadow: 1px 1px 1px var(--text-shadow-color),
     -1px -1px 1px var(--text-shadow-color),
     -1px 1px 1px var(--text-shadow-color), 1px -1px 1px var(--text-shadow-color);
@@ -324,11 +325,6 @@
 .hangover--news--header .box { 
   padding: 0;  
 }
-
-.hangover--news--header .box .hangover__top-content {
-  padding-left: 30px;
-}
- 
 .hangover--news--header .box .hangover__top-content .hangover__text {  
   max-width: 80%;
 }

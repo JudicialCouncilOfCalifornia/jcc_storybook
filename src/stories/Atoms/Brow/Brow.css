@@ -22,6 +22,10 @@
   color: var(--accent-color);
 }
 
+.brow .brow__secondary {
+  color: var(--color-black);
+}
+
 .brow--heading {
   font-family: var(--font-primary);
   border-block: 1.5px dotted var(--color, var(--color-white));
