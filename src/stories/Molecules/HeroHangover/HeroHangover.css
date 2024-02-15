@@ -322,12 +322,7 @@
 }
  
 .hangover--news--header .box { 
-  padding: 0;  
-}
-
-.hangover--news--header .box .hangover__top-content {
-  padding-left: 30px;
-  background-color: blue;
+  padding: var(--s1);    
 }
 
 .hangover--news--header .box .hangover__top-content .hangover__text {  

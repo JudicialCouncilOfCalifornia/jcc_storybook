@@ -97,6 +97,7 @@ export default {
       variant: "default_with_date",
       part_one: "Brow Example",
       part_two: "Part two",
+      news_header: true,
     },
     heading: "This is a Heading",
     news_header: true,
