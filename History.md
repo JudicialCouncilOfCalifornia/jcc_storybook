@@ -1,4 +1,15 @@
 
+0.55.12 / 2024-02-14
+===================
+
+  * chore: Export libs.
+  * Merge pull request #192 from JudicialCouncilOfCalifornia/DCAS-70-color-changes
+  * [DCAS-70] -- Added review comments
+  * [DCAS-70] -- Header color change
+  * Merge pull request #191 from JudicialCouncilOfCalifornia/feature/DACS-225-color-palette-update
+  * [DCAS-70] -- color and alignment fixes
+  * [DCAS-225] -- color update
+
 0.55.11 / 2024-02-08
 ===================
 
