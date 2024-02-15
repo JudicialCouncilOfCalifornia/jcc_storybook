@@ -7,7 +7,7 @@ export default {
   default_with_date: {
     variant: "default",
     part_one: "Brow Example",
-    part_two: "Jan 05, 2023",
+    part_two: "January 5, 2023",
   },
   heading: {
     variant: "heading",

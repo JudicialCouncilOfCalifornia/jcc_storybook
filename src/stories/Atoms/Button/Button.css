@@ -80,18 +80,18 @@
   background-color: var(--color-white);  
 }
 
-.button.button--primary::after,
-.button.button--primary:focus::after,
-.button.button--primary:hover::after,
-.button.button--primary:active::after,
-.button.button--secondary::after,
-.button.button--secondary:focus::after,
-.button.button--secondary:hover::after,
-.button.button--secondary:active::after,
-.button.button--text::after,
-.button.button--text:focus::after,
-.button.button--text:hover::after,
-.button.button--text:active::after {
+.button--primary::after,
+.button--primary:focus::after,
+.button--primary:hover::after,
+.button--primary:active::after,
+.button--secondary::after,
+.button--secondary:focus::after,
+.button--secondary:hover::after,
+.button--secondary:active::after,
+.button--text::after,
+.button--text:focus::after,
+.button--text:hover::after,
+.button--text:active::after {
   -webkit-mask: var(--arrow-svg) no-repeat;
   mask: var(--arrow-svg) no-repeat;
 }

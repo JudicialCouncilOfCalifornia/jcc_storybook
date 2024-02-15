@@ -1,79 +1,79 @@
 
-.body hr {
+div:is(.body, .jcc-rulesformatting) hr {
   margin-block: 2rem;
 }
 
-.body p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subparagraphlist, .subparagraphnolist, .rulehist, .advcommheader, .advcommtext) + 
+div:is(.body, .jcc-rulesformatting) p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subparagraphlist, .subparagraphnolist, .rulehist, .advcommheader, .advcommtext) + 
 p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subparagraphlist, .subparagraphnolist, .rulehist, .advcommheader, .advcommtext) {
   margin-block-start: var(--s0);
 }
 
-.body p.normal {
+div:is(.body, .jcc-rulesformatting) p.normal {
   font-weight: normal;
 }
 
-.body p.ruleheading {
+div:is(.body, .jcc-rulesformatting) p.ruleheading {
   margin-block-start: var(--s0);
   font-weight: bold;
 }
 
-.body p.subdivheading {
+div:is(.body, .jcc-rulesformatting) p.subdivheading {
   margin-inline-start: 1rem;
 }
 
-.body p.subdivtext {
+div:is(.body, .jcc-rulesformatting) p.subdivtext {
   margin-inline-start:2.25rem;
 }
 
-.body p.subdhist {
+div:is(.body, .jcc-rulesformatting) p.subdhist {
   margin-inline-start: 2.25rem;
   font-size: var(--s-1);
   font-style: italic;
   line-height: 1.5;
 }
 
-.body p.paragraphlist {
+div:is(.body, .jcc-rulesformatting) p.paragraphlist {
   margin-inline-start: 3rem;
 }
 
-.body p.paragraphnolist {
+div:is(.body, .jcc-rulesformatting) p.paragraphnolist {
   margin-inline-start: 4.5rem;
   text-indent: none; 
 }
 
-.body p.subparagraphlist {
+div:is(.body, .jcc-rulesformatting) p.subparagraphlist {
   margin-inline-start: 5rem;  
 }
 
-.body p.subparagraphnolist {
+div:is(.body, .jcc-rulesformatting) p.subparagraphnolist {
   margin-inline-start: 6.5rem;
   text-indent: none; 
 }
 
-.body p.rulehist {
+div:is(.body, .jcc-rulesformatting) p.rulehist {
   font-size: var(--s-1);
   font-style: italic;
   line-height: 1.5;
 }
 
-.body p.advcommheader {
+div:is(.body, .jcc-rulesformatting) p.advcommheader {
   font-size: var(--s-2);
   font-weight: bold;
   text-align: center;
 }
 
-.body p.advcommtext {
+div:is(.body, .jcc-rulesformatting) p.advcommtext {
   font-size: var(--s-2);
   line-height: 1.5;
 }
 
-.body li:is(.TOClevel1, .TOClevel2, .TOClevel3, .TOClevel4) {
+div:is(.body, .jcc-rulesformatting) li:is(.TOClevel1, .TOClevel2, .TOClevel3, .TOClevel4) {
   list-style-type: none;
   margin-block-start: var(--s-1);
   margin-inline-start: 0;
 }
 
-.body li.TOClevel1 {
+div:is(.body, .jcc-rulesformatting) li.TOClevel1 {
   font-weight: bold;
   margin-block-start: var(--s2);
   margin-block-end: var(--s-1);
@@ -81,21 +81,21 @@ p:is(.ruleheading, .subdivheading, .subdivtext, .subdhist, .paragraphlist, .subp
   border-block-end: 1px solid var(--border-color-gray);
 }
 
-.body li.TOClevel3 {
+div:is(.body, .jcc-rulesformatting) li.TOClevel3 {
   margin-inline-start: 2rem;
 }
 
-.body li.TOClevel4 {
+div:is(.body, .jcc-rulesformatting) li.TOClevel4 {
   margin-inline-start: 4rem;
 }
 
 /* Local rule styles */
 
-.body blockquote {
+div:is(.body, .jcc-rulesformatting) blockquote {
   margin: 0 0 1rem;
   padding: 1rem 0 0 2rem;
 }
 
-.body p[style*="TEXT-INDENT: 40px"] {
+div:is(.body, .jcc-rulesformatting) p[style*="TEXT-INDENT: 40px"] {
   text-indent: 2.25rem; 
 }
