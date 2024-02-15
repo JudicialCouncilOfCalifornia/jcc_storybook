@@ -270,6 +270,16 @@
   background: var(--background-striped-accent-warm-dark-x);
 }
 
+.card.card--striped.card--background-striped-accent-warm-dark-xx,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-xx {
+  background: var(--background-striped-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-striped-accent-warm-dark-xxx,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-xxx {
+  background: var(--background-striped-accent-warm-dark-xxx);
+}
+
 .card.card--striped.card--background-solid-base-dark-x,
 .card.card--striped-aligned.card--background-solid-base-dark-x {
   background: var(--background-solid-base-dark-x);
@@ -303,6 +313,16 @@
 .card.card--striped.card--background-solid-accent-warm-dark-x,
 .card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
   background: var(--background-solid-accent-warm-dark-x);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-xx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xx {
+  background: var(--background-solid-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-xxx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xxx {
+  background: var(--background-solid-accent-warm-dark-xxx);
 }
 
 .card.card--background-base-light-xxx{
