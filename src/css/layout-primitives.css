@@ -98,8 +98,8 @@
 
 /* Icon. */
 .icon {
-  width: clamp(2rem, 100%, 3rem);
-  height: auto;
+  width: clamp(2rem, 100%, 4rem);
+  height: clamp(2rem, 100%, 4rem);
 }
 
 .with-icon {
