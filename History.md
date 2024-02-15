@@ -1,4 +1,16 @@
 
+0.55.13 / 2024-02-15
+===================
+
+  * chore: Export libs.
+  * Brow data fix. Button css fix. Added additional trigger class for Rules Formatting
+  * Merge pull request #195 from JudicialCouncilOfCalifornia/feature/DACS-225-color-palette-update-cards
+  * [DCAS-225] -- added color background for cards
+  * Merge pull request #194 from JudicialCouncilOfCalifornia/DCAS-254-icons-on-cards-are-rendering-really-tiny
+  * [DCAS-254] -- More icon sizing fixes
+  * Merge pull request #193 from JudicialCouncilOfCalifornia/DCAS-254-icons-on-cards-are-rendering-really-tiny
+  * [DCAS-254] -- Fix to icon sizing. Also fix to hero images still overlaying dropdown nav items.
+
 0.55.12 / 2024-02-14
 ===================
 
