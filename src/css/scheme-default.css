@@ -42,8 +42,8 @@
   --color-base-light-xx: #F3F3F3;
   --color-base-light-xxx: #F9F9F9;
 
-  --color-accent-warm-dark-xxx: #775540;
-  --color-accent-warm-dark-xx: #655A3DB2;
+  --color-accent-warm-dark-xxx: #5F1B0F;
+  --color-accent-warm-dark-xx: #902524;
   --color-accent-warm-dark-x: #C05600;
   --color-accent-warm: #d57513;
   --color-accent-warm-light-x: #FF8B2D;
@@ -126,6 +126,22 @@
     var(--color-accent-warm-dark-x) 8px
   );
 
+  --background-striped-accent-warm-dark-xx: repeating-linear-gradient(
+    125deg,
+    var(--color-accent-warm),
+    var(--color-accent-warm) 1px,
+    var(--color-accent-warm-dark-xx) 1px,
+    var(--color-accent-warm-dark-xx) 8px
+  );
+
+  --background-striped-accent-warm-dark-xxx: repeating-linear-gradient(
+     125deg,
+     var(--color-accent-warm),
+     var(--color-accent-warm) 1px,
+     var(--color-accent-warm-dark-xxx) 1px,
+     var(--color-accent-warm-dark-xxx) 8px
+  );
+
   --background-striped-primary-light-xx: repeating-linear-gradient(
     125deg,
     #2fBfEf,
@@ -160,6 +176,8 @@
   --background-solid-secondary-dark-x: var(--color-secondary-dark-x);
   --background-solid-secondary: var(--color-secondary);
   --background-solid-accent-warm-dark-x: var(--color-accent-warm-dark-x);
+  --background-solid-accent-warm-dark-xx: var(--color-accent-warm-dark-xx);
+  --background-solid-accent-warm-dark-xxx: var(--color-accent-warm-dark-xxx);
   --background-solid-base-dark-x: var(--color-base-dark-x);
   --background-solid-base-light-xx: var(--color-base-light-xx);
 
