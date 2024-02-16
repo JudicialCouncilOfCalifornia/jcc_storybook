@@ -128,16 +128,16 @@
 
   --background-striped-accent-warm-dark-xx: repeating-linear-gradient(
     125deg,
-    var(--color-accent-warm),
-    var(--color-accent-warm) 1px,
+    var(--color-accent-warm-dark-x),
+    var(--color-accent-warm-dark-x) 1px,
     var(--color-accent-warm-dark-xx) 1px,
     var(--color-accent-warm-dark-xx) 8px
   );
 
   --background-striped-accent-warm-dark-xxx: repeating-linear-gradient(
      125deg,
-     var(--color-accent-warm),
-     var(--color-accent-warm) 1px,
+     var(--color-accent-warm-dark-xx),
+     var(--color-accent-warm-dark-xx) 1px,
      var(--color-accent-warm-dark-xxx) 1px,
      var(--color-accent-warm-dark-xxx) 8px
   );
