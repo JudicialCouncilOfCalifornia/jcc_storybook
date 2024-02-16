@@ -4,7 +4,7 @@ export default {
     content_justify: "left",
     accent_color: false,
     content_bg_color: false,
-    bg_tint: "accent-warm-dark-xx",
+    bg_tint: "base-dark-x",
     background_image_url:
       "https://source.unsplash.com/random/900×700/?building",
     card_data: {
@@ -25,7 +25,7 @@ export default {
     content_justify: "left",
     accent_color: false,
     content_bg_color: false,
-    bg_tint: "accent-warm-dark-xx",
+    bg_tint: "base-dark-x",
     background_image_url:
       "https://source.unsplash.com/random/900×700/?building",
     card_data: {
