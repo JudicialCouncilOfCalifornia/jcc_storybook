@@ -1,4 +1,12 @@
 
+0.55.14 / 2024-02-16
+===================
+
+  * chore: Export libs.
+  * Merge pull request #196 from JudicialCouncilOfCalifornia/feature/DACS-225-color-palette-update-cards-adjustment
+  * [DCAS-225] -- Adjusted background color data for banner featured links
+  * [DCAS-225] -- adjsuted hero bg tint and stripes
+
 0.55.13 / 2024-02-15
 ===================
 
