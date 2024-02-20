@@ -1,3 +1,8 @@
+import Card from "../../Molecules/Card/Card.twig";
+import {
+  NoMedia as CardNoMedia,
+} from "../../Molecules/Card/Card.stories";
+
 export default {
   default: {
     variant: "default",
@@ -9,10 +14,13 @@ export default {
         rendered_content: '',
       },
       {
-        brow: "Topics",
-        heading: "IT Software",
+        brow: "",
+        heading: "",
         text: "",
-        rendered_content: '',
+        rendered_content: Card({
+          has_section_heading: true,
+          ...CardNoMedia.args
+        }),
       },
       {
         brow: "Deadline",
