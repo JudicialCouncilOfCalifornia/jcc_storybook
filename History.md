@@ -1,4 +1,12 @@
 
+0.55.16 / 2024-02-20
+===================
+
+  * chore: Export libs.
+  * Merge pull request #198 from JudicialCouncilOfCalifornia/COURTS-6--rfp-components-work-including-sidebarlists-and-blurbbox
+  * [COURTS-6] -- Documentation updates to BlurbBox and SidebarList
+  * [COURTS-6] -- Updates to SidebarList and BlurbBox components to fix some style issues and make them more generic for other usage. Documentation update.
+
 0.55.15 / 2024-02-19
 ===================
 
