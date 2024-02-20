@@ -1,0 +1,31 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'blurb-box--' ~ variant : 'blurb-box--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'blurb-box',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  {{ example }}
+  {% if data is not empty %}
+  <ul class="blurb-box--list switcher detect-wrap detect-wrap--observed">
+    {% for item in data %}
+    <li class="blurb-box--list--item stack">
+      {% if item.brow is not empty %}
+        <div class="blurb-box--list--item--brow">{{ item.brow }}</div>
+      {% endif %}
+      {% if item.heading is not empty %}
+        <div class="blurb-box--list--item--heading">{{ item.heading }}</div>
+      {% endif %}
+      {% if item.text is not empty %}
+        <div class="blurb-box--list--item--text">{{ item.text }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

@@ -1,0 +1,45 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'sidebar-list--' ~ variant : 'sidebar-list--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'sidebar-list',
+  'stack',
+  variant_class,
+] %}
+<div class="{{ classes|join(' ') }}">
+  {% if variant == 'default' %}
+    <h3 class="sidebar-list__heading">{{ heading }}</h3>
+  {% endif %}
+  {% if data is not empty %}
+  <ul class="sidebar-list__list stack">
+    {% for item in data %}
+    <li class="sidebar-list__item">
+      {% if item.brow is not empty and variant == 'secondary' %}
+        <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+      {% endif %}
+      {% if item.heading is not empty and variant != 'primary' %}
+        <h4 class="sidebar-list__item__heading">{{ item.heading }}</h4>
+      {% endif %}
+      {% if item.heading is not empty and variant == 'primary' %}
+        <h3 class="sidebar-list__item__heading">{{ item.heading }}</h3>
+      {% endif %}
+      {% if item.date_info is not empty %}
+        <h4 class="sidebar-list__item__date-info">{{ item.date_info }}</h4>
+      {% endif %}
+      {% if item.text is not empty %}
+        <div class="sidebar-list__item__text stack">{{ item.text }}</div>
+      {% endif %}
+      {% if item.links is not empty and variant != 'default' %}
+        {% set classes = 'button button--primary button--normal icon--arrow sidebar-list__item__link'%}
+        {% for link in item.links %}
+          {{ link(link.title, link.url, {class: [classes]}) }}
+        {% endfor %}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

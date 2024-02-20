@@ -320,7 +320,7 @@
 .hangover--news--header .box .hangover__top-hangover-content {
   padding-block: 0;  
 }
- 
+
 .hangover--news--header .box { 
   padding: var(--s1);    
 }
@@ -328,5 +328,11 @@
 .hangover--news--header .box .hangover__top-content .hangover__text {  
   max-width: 80%;
 }
- 
 
+.hangover--news--header .hangover__title {
+  color: var(--color-primary-dark-x);
+}
+
+.hangover--news--header .hangover__top-content {
+  min-inline-size: 100%;
+}
