@@ -8,6 +8,7 @@
   'sidebar-list',
   'stack',
   variant_class,
+  variant == 'secondary' ? 'stack__no-space' : '',
 ] %}
 <div class="{{ classes|join(' ') }}">
   {% if variant == 'default' %}
@@ -19,6 +20,9 @@
     <li class="sidebar-list__item">
       {% if item.brow is not empty and variant == 'secondary' %}
         <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+      {% endif %}
+      {% if item.brow is not empty and variant == 'default' %}
+        <h4 class="sidebar-list__item__brow">{{ item.brow }}</h4>
       {% endif %}
       {% if item.heading is not empty and variant != 'primary' %}
         <h4 class="sidebar-list__item__heading">{{ item.heading }}</h4>
@@ -32,11 +36,17 @@
       {% if item.text is not empty %}
         <div class="sidebar-list__item__text stack">{{ item.text }}</div>
       {% endif %}
-      {% if item.links is not empty and variant != 'default' %}
-        {% set classes = 'button button--primary button--normal icon--arrow sidebar-list__item__link'%}
-        {% for link in item.links %}
-          {{ link(link.title, link.url, {class: [classes]}) }}
-        {% endfor %}
+      {% if item.links is not empty %}
+        {% if variant == 'default' %}
+          {% set classes = 'sidebar-list__item__link sidebar-list__item__link--default stack__xs-space'%}
+        {% else %}
+          {% set classes = 'button button--primary button--normal icon--arrow sidebar-list__item__link'%}
+        {% endif %}
+        <div class="sidebar-list__item__links stack">
+          {% for link in item.links %}
+            {{ link(link.title, link.url, {class: [classes]}) }}
+          {% endfor %}
+        </div>
       {% endif %}
     </li>
     {% endfor %}

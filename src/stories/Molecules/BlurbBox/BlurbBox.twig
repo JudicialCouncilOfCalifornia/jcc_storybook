@@ -8,23 +8,27 @@
   'blurb-box',
   variant_class,
 ] %}
-
 <div class="{{ classes|join(' ') }}">
   {{ example }}
   {% if data is not empty %}
   <ul class="blurb-box--list switcher detect-wrap detect-wrap--observed">
     {% for item in data %}
-    <li class="blurb-box--list--item stack">
-      {% if item.brow is not empty %}
-        <div class="blurb-box--list--item--brow">{{ item.brow }}</div>
+      {% if item is not empty %}
+      <li class="blurb-box--list--item stack">
+        {% if item.brow is not empty %}
+          <div class="blurb-box--list--item--brow">{{ item.brow }}</div>
+        {% endif %}
+        {% if item.heading is not empty %}
+          <div class="blurb-box--list--item--heading">{{ item.heading }}</div>
+        {% endif %}
+        {% if item.text is not empty %}
+          <div class="blurb-box--list--item--text">{{ item.text }}</div>
+        {% endif %}
+        {% if item.rendered_content is not empty %}
+          <div class="blurb-box--list--item--content">{{ item.rendered_content }}</div>
+        {% endif %}
+      </li>
       {% endif %}
-      {% if item.heading is not empty %}
-        <div class="blurb-box--list--item--heading">{{ item.heading }}</div>
-      {% endif %}
-      {% if item.text is not empty %}
-        <div class="blurb-box--list--item--text">{{ item.text }}</div>
-      {% endif %}
-    </li>
     {% endfor %}
   </ul>
   {% endif %}
