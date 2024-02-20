@@ -1,5 +1,9 @@
 .sidebar-demo .box {
   background-color: #000;
-  color: #000;
+  color: #FFF;
   min-block-size: 20ch;
+}
+
+.sidebar-demo .box.sidebar {
+  background-color: #666;
 }

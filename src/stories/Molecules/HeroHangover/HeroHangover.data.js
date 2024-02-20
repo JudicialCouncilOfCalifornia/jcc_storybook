@@ -128,7 +128,6 @@ export default {
     share: {
       print_url: 'javascript: window.print();',
       print_aria_label: 'Print advisory body',
-      icon_path: '/icons.svg',
     },
   },
   with_bottom: {

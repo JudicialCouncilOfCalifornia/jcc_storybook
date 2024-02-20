@@ -251,6 +251,14 @@
   margin-block-start: var(--gap, 1.5rem);
 }
 
+.stack > * + *.stack__lg-space {
+  margin-block-start: var(--s4);
+}
+
+.stack > * + *.stack__xl-space {
+  margin-block-start: var(--s6);
+}
+
 /* Switcher. */
 .switcher {
   --measure: 80ch;
