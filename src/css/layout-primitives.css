@@ -251,6 +251,22 @@
   margin-block-start: var(--gap, 1.5rem);
 }
 
+.stack > * + *.stack__no-space {
+  margin-block-start: 0;
+}
+
+.stack > * + *.stack__xs-space {
+  margin-block-start: var(--s-5);
+}
+
+.stack > * + *.stack__sm-space {
+  margin-block-start: var(--s-2);
+}
+
+.stack > * + *.stack__md-space {
+  margin-block-start: var(--s1);
+}
+
 .stack > * + *.stack__lg-space {
   margin-block-start: var(--s4);
 }
