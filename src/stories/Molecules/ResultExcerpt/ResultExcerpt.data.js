@@ -44,5 +44,8 @@ export default {
         Pill({ ...PillDefault.args }),
       ],
     },
+    item_classes: [
+      'result-extra-style__some__style',
+    ],
   },
 };
