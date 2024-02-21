@@ -6,6 +6,10 @@
   variant_class,
 ] %}
 
+{% if item_classes is not empty %}
+  {% set classes = classes|merge(item_classes) %}
+{% endif %}
+
 <div class="{{ classes|join(' ')}}">
   <div class="result-excerpt__header">
     {% if brow %}

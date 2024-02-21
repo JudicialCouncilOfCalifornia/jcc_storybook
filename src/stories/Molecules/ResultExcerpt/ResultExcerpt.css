@@ -49,6 +49,11 @@
   line-height: var(--s3);
 }
 
+.result-extra-style__heading__lg .result-excerpt__heading {
+  font-size: var(--s2);
+  line-height: var(--s4);
+}
+
 .result-excerpt__button {
   /* Negative margin hides border when wrapped. */
   /* margin-inline-start: -1px; */
@@ -98,15 +103,15 @@
 }
 
 .result-excerpt ul.detail-list li:first-child,
-.result-excerpt ul.detail-list li.detail-list__label+li {
+.result-excerpt ul.detail-list:not(.wrapping) li.detail-list__label+li {
   list-style-type: none;
 }
 
-.result-excerpt ul.detail-list li.detail-list__label+li {
+.result-excerpt ul.detail-list:not(.wrapping) li.detail-list__label+li {
   margin-inline-start: -1rem;
 }
 
-.result-excerpt ul.detail-list li:not(.detail-list__label)+li {
+.result-excerpt ul.detail-list:not(.wrapping) li:not(.detail-list__label)+li {
   padding-inline-start: var(--s-4);
 }
 
