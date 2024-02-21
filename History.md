@@ -1,4 +1,11 @@
 
+0.55.17 / 2024-02-20
+===================
+
+  * chore: Export libs.
+  * Merge pull request #199 from JudicialCouncilOfCalifornia/COURTS-6--rfp-components-work-including-sidebarlists-and-blurbbox
+  * [COURTS-6] -- ResultExcerpt tweaks for request view
+
 0.55.16 / 2024-02-20
 ===================
 
