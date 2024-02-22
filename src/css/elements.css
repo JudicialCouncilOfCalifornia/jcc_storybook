@@ -63,7 +63,7 @@ p + p {
 :where(p, ul, ol, h2, h3, h4, h5, h6) + h4,
 :where(p, ul, ol, h2, h3, h4, h5, h6) + h5,
 :where(p, ul, ol, h2, h3, h4, h5, h6) + h6,
-:where (ul, ol) + p,
+:where(ul, ol) + p,
 p + a {
   margin-block-start: var(--gap, 1.5rem);
 }
@@ -244,4 +244,13 @@ ol.legal ul > li {
 
 .page__tabs {
   box-shadow: inset 4px 4px 10px 2px hsla(0,0%,66.7%,.2);
+}
+
+.disclaimer-content > *{
+  font-size: var(--s-1);
+  color: var(--color-base-dark-x);
+}
+
+.disclaimer-content > h3{
+  font-size: var(--s1);
 }
