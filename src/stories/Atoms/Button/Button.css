@@ -62,7 +62,7 @@
 .button.button--primary:focus::after,
 .button.button--text::after,
 .button.button--text:focus::after {
-  background-color: var(--button-fg);
+  background-color: currentColor;
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after {

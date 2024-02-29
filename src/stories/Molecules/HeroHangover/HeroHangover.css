@@ -332,7 +332,3 @@
 .hangover--news--header .hangover__title {
   color: var(--color-primary-dark-x);
 }
-
-.hangover--news--header .hangover__top-content {
-  min-inline-size: 100%;
-}
