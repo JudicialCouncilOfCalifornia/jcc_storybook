@@ -1,4 +1,11 @@
 
+0.55.19 / 2024-02-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #201 from JudicialCouncilOfCalifornia/DCAS-70-fixes
+  * [DCAS-70] -- Overlay fix
+
 0.55.18 / 2024-02-21
 ===================
 
