@@ -1,4 +1,11 @@
 
+0.55.20 / 2024-02-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #202 from JudicialCouncilOfCalifornia/DCAS-70-257-fixes
+  * [DCAS-70] [DCAS-257] -- CSS fixes for arrow color
+
 0.55.19 / 2024-02-29
 ===================
 
