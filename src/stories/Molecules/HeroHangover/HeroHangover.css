@@ -331,7 +331,7 @@
 }
 
 .hangover--news--header:not(.hangover--with-share) .box .hangover__top-content .hangover__text {  
-  max-width: 80%;
+  max-width: 76ch;
 }
 
 .hangover--news--header .hangover__title {

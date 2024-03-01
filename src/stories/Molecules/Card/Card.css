@@ -73,6 +73,7 @@
   color: #ffffff;
   box-sizing: border-box;
   height: 53px;  
+  z-index: 2;
 }
 
 .caption-below-image {      
@@ -89,12 +90,13 @@
 
 .overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(92, 92, 92, 0.5);;  
+  height: 20%; 
+  background:  #5C5C5C;
   z-index: 1;
+  opacity: 0.5;
   mix-blend-mode: multiply;  
 }
 
