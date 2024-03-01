@@ -1,4 +1,12 @@
 
+0.55.21 / 2024-03-01
+===================
+
+  * chore: Export libs.
+  * Merge pull request #203 from JudicialCouncilOfCalifornia/DCAS-260--RFP-print-share-link-placement-fix
+  * [DCAS-260] -- Update setup so that hangover_content_media or share/print link in herohangover right, cannot exist at same time.
+  * [DCAS-260] -- RFP print/share link placement fix
+
 0.55.20 / 2024-02-29
 ===================
 
