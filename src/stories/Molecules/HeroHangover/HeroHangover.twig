@@ -29,8 +29,9 @@
 			<div class="with-sidebar container detect-wrap detect-wrap--observed">
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
-						{{ hangover_content }}
-            {% if share %}
+            {% if hangover_content %}
+              {{ hangover_content }}
+            {% elseif share %}
               {% include "@molecules/Share/Share.twig" with share %}
             {% endif %}
 					</div>
