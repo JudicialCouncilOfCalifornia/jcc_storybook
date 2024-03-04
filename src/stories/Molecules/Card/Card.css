@@ -9,6 +9,16 @@
   height: 100%;
 }
 
+.remote-video-colorbox-launch-modal{
+ outline: none;
+}
+
+.remote-video-colorbox-launch-modal:focus img,
+.remote-video-colorbox-launch-modal:focus-within img,
+.remote-video-colorbox-launch-modal:focus-visible img{
+  outline: var(--border-color, var(--color-accent-warm-light-x)) auto var(--s-6);
+}
+
 .card__media_caption {
   margin-block-start: var(--s-6);
   padding-inline: var(--s-2);
