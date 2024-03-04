@@ -26,7 +26,7 @@
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
 	<div class="hangover__top">
 		<div class="box">
-			<div class="with-sidebar container detect-wrap detect-wrap--observed">
+			<div class="with-sidebar {% if not news_header %} container {% endif %} detect-wrap detect-wrap--observed">
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
             {% if hangover_content %}

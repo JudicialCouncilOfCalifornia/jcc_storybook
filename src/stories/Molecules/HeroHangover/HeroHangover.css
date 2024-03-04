@@ -327,7 +327,11 @@
 }
 
 .hangover--news--header .box { 
-  padding: var(--s1);    
+  padding: 0;    
+}
+
+.hangover--news--header .hangover__top-content {
+  padding: var(--s1);
 }
 
 .hangover--news--header:not(.hangover--with-share) .box .hangover__top-content .hangover__text {  
