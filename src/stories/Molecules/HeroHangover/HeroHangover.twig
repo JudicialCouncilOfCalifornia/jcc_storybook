@@ -26,7 +26,7 @@
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
 	<div class="hangover__top">
 		<div class="box">
-			<div class="with-sidebar {% if not news_header %} container {% endif %} detect-wrap detect-wrap--observed">
+			<div class="with-sidebar {% if not news_header or share %} container {% endif %} detect-wrap detect-wrap--observed">
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
             {% if hangover_content %}
@@ -38,7 +38,7 @@
 				{% endif %}
 				<div class="hangover__top-content">
 					<div class="stack">
-						<div>
+						<div class="stack">
 							{% if brow %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
                   <div class="hangover__top-content-brow">
@@ -47,7 +47,7 @@
                 </div>
 							{% endif %}
 							{% if heading %}
-								<h1 class="hangover__title">{{ heading }}</h1>
+								<h1 class="hangover__title stack__sm-space">{{ heading }}</h1>
 							{% endif %}
 						</div>
 						{% if text %}
