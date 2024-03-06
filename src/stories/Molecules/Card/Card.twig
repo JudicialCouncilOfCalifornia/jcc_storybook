@@ -51,13 +51,13 @@
         {% endif %}
         {% if caption_overlay %}
         {% if caption_in_image %}
+        {% if media_caption.text is not empty or citation is not empty %}
+         <div class="overlay"></div> 
+        {% endif %}
         <div class="caption-container">       
           <div class="caption-overlay">
             <span class="media-caption caption-content">{{ media_caption.text}}</span> 
             <span class="media-citation">{{citation}}</span>
-             {% if media_caption.text is not empty or citation is not empty %}
-             <div class="overlay"></div> 
-             {% endif %}
           </div>
         </div>         
         {% else %}

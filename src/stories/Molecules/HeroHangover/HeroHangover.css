@@ -323,15 +323,29 @@
 }
 
 .hangover--news--header .box .hangover__top-hangover-content {
-  padding-block: 0;  
+  padding-block: 0;
 }
 
 .hangover--news--header .box { 
-  padding: var(--s1);    
+  padding: 0;    
+}
+
+.hangover--news--header .hangover__top-content {
+  padding: var(--s1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hangover--news--header:not(.hangover--with-share) .box .hangover__top-content .hangover__text {  
-  max-width: 80%;
+  max-width: 80ch;
+}
+
+.hangover--news--header:not(.hangover--with-share) .box .wrapping .hangover__top-content {
+  padding: var(--s1);
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .hangover--news--header .hangover__title {
@@ -339,9 +353,19 @@
 }
 
 .hangover__top-hangover-content .share.share--default {
-  padding-block-start: var(--s1);
+  padding-block: var(--s1);
+  padding-inline: 0;
 }
 
 .hangover__top-hangover-content .share.share--default .share__items {
   padding-block-start: var(--s-5);
+}
+
+.hangover.hangover--with-share  .box {
+  padding: var(--s1);
+}
+
+.hangover.hangover--with-share  .hangover__top-content {
+  padding-block: var(--s1);
+  padding-inline: 0;
 }
