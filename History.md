@@ -1,4 +1,16 @@
 
+0.55.22 / 2024-03-08
+===================
+
+  * chore: Export libs.
+  * Merge pull request #204 from JudicialCouncilOfCalifornia/DCAS-263-news-variant-updates
+  * [DCAS-263] - Hero Hangover News Header variant tweaks to help left side look like its still in container, and aligned with other content
+  * Merge pull request #205 from JudicialCouncilOfCalifornia/feature/DCAS-262-focus-elements
+  * [DCAS-263] -- UI changes for news variant
+  * [DCAS-262] -- added extra css for modal launch
+  * [DCAS-263] -- Removing height
+  * [DCAS-263] -- UI fixes for news variant
+
 0.55.21 / 2024-03-01
 ===================
 
