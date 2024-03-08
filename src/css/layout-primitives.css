@@ -242,6 +242,10 @@
   align-items: var(--align-items, flex-start);
 }
 
+.min-width-layout {
+  min-width: 80ch;
+}
+
 .stack > * {
   margin-block: 0;
   inline-size: 100%;
