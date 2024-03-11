@@ -337,7 +337,7 @@
   justify-content: center;
 }
 
-.hangover--news--header:not(.hangover--with-share) .box .hangover__top-content .hangover__text {  
+.hangover--news--header .box .hangover__top-content .hangover__text {
   max-width: 80ch;
 }
 
