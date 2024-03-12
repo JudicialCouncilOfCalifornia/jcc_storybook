@@ -6,6 +6,7 @@
 {% set variant_header_with_share = share ? 'hangover--with-share': '' %}
 
 {% set variant_styles = [] %}
+{% set box_styles = [] %}
 
 {% if hangover_offset %}
 	{% set variant_styles = variant_styles|merge([
@@ -23,10 +24,28 @@
   variant_header_with_share
 ] %}
 
+{% set boxclasses = [
+	'with-sidebar',	
+	'detect-wrap', 
+	'detect-wrap--observed',
+] %}
+
+{% set layoutclasses = [
+	'stack',
+] %}
+
+{% if news_header and not share %}	
+	{% set layoutclasses = layoutclasses|merge(['min-width-layout']) %}	
+{% endif %} 
+
+{% if not news_header or share %}	
+	{% set boxclasses = boxclasses|merge(['container']) %}  
+{% endif %} 
+
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
 	<div class="hangover__top">
 		<div class="box">
-			<div class="with-sidebar {% if not news_header or share %} container {% endif %} detect-wrap detect-wrap--observed">
+			<div class="{{ boxclasses|join(' ') }}">		
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
             {% if hangover_content %}
@@ -37,7 +56,7 @@
 					</div>
 				{% endif %}
 				<div class="hangover__top-content">
-					<div class="stack">
+				<div class="{{ layoutclasses|join(' ') }}">				
 						<div class="stack">
 							{% if brow %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
