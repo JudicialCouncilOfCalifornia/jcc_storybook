@@ -1,4 +1,15 @@
 
+0.55.23 / 2024-03-11
+===================
+
+  * chore: Export libs.
+  * Merge pull request #207 from JudicialCouncilOfCalifornia/DCAS-263-news-variant-updates
+  * [DCAS-263] -- Missed a layout-primitive change after merge.
+  * Merge pull request #206 from JudicialCouncilOfCalifornia/DCAS-263-news-variant-updates
+  * [DCAS-263] -- Updates to make news header (without share/print links) to appear left aligned and inline with page containers, yet still allow for media item to float right.
+  * [DCAS-263] -- Code cleanup
+  * [DCAS-263] -- adding min-width
+
 0.55.22 / 2024-03-08
 ===================
 
