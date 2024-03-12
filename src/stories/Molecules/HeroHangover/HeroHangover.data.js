@@ -101,7 +101,7 @@ export default {
     },
     heading: "This is a Heading",
     news_header: true,
-    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>",
     hangover_content: Card({
       variant: "media-right",
       aspect: [],
@@ -121,7 +121,7 @@ export default {
     },
     heading: "This is a Heading",
     news_header: true,
-    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem et libero nulla, maiores quam eaque dolorum architecto cupiditate mollitia praesentium rem, fugiat natus beatae odio dignissimos, aliquam similique ea.</p>",
+    text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>",
     bottom_content: "",
     blurb: false,
     background: 'striped-base-light-xx',

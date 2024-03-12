@@ -27,17 +27,19 @@
 {% set boxclasses = [
 	'with-sidebar',	
 	'detect-wrap', 
-	'detect-wrap--observed'
+	'detect-wrap--observed',
 ] %}
 
 {% set layoutclasses = [
-	'stack'
+	'stack',
 ] %}
 
-{% if share or news_header %}	
-	{% set layoutclasses = layoutclasses|merge({'min-width-layout':'min-width-layout'}) %}	
-{% else %}
-	{% set boxclasses = boxclasses|merge({'container':'container'}) %}  
+{% if news_header and not share %}	
+	{% set layoutclasses = layoutclasses|merge(['min-width-layout']) %}	
+{% endif %} 
+
+{% if not news_header or share %}	
+	{% set boxclasses = boxclasses|merge(['container']) %}  
 {% endif %} 
 
 <div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
