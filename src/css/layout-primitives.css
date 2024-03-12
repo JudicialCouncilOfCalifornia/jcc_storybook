@@ -243,7 +243,7 @@
 }
 
 .min-width-layout {
-  min-width: 80ch;  
+  width: min(100%, 81ch);
 }
 
 .stack > * {
