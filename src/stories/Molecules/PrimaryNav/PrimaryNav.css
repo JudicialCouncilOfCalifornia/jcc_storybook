@@ -341,6 +341,10 @@ button.primary-nav__button.active {
   padding: 0;
 }
 
+.primary-nav--default .primary-nav__desktop .primary-nav__link:focus-visible {
+  outline-offset:5px;
+}
+
 .primary-nav--default .primary-nav__mobile .primary-nav__item {
   padding: var(--s0) var(--s-1);
 }
