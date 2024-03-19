@@ -322,3 +322,7 @@
 .fixed--left {
   right: unset;
 }
+
+.word-wrap {
+  overflow-wrap: break-word;  
+}
