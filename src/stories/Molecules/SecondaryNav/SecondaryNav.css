@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.secondary-nav > ul > li a:focus-visible {
+  outline-offset: 3px;
+}
+
 .secondary-nav > ul > li a:hover {
   opacity: .5;
 }
