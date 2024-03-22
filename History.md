@@ -1,4 +1,13 @@
 
+0.55.24 / 2024-03-22
+===================
+
+  * chore: Export libs.
+  * Merge pull request #208 from JudicialCouncilOfCalifornia/feature/DCAS-262-global-focus
+  * Merge pull request #209 from JudicialCouncilOfCalifornia/body-wrap-fix
+  * Word wrap for body content
+  * [DCAS-262] -- focus state in menu + color
+
 0.55.23 / 2024-03-11
 ===================
 
