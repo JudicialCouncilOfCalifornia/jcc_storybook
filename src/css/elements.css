@@ -49,6 +49,10 @@ a {
   color: var(--color-primary-light-x);
 }
 
+a:visited {
+  color: var(--color-primary-dark-x);
+}
+
 a:focus,
 a:focus-visible {
   outline: var(--border-color, var(--color-accent-warm-light-x)) auto var(--s-6);
