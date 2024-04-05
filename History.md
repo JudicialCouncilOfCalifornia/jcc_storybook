@@ -1,4 +1,17 @@
 
+0.55.25 / 2024-04-04
+===================
+
+  * chore: Export libs.
+  * Merge pull request #213 from JudicialCouncilOfCalifornia/DCAS-281--e-mail-icon-is-tiny
+  * [DCAS-281] -- Css fix to small sized email icon, the icon that comes from the external_links module.
+  * Merge pull request #212 from JudicialCouncilOfCalifornia/DCAS-271--platform-update-visited-link-color-doesnt-change-when-a-link-has-been-clicked
+  * [DCAS-271] -- Platform update: Visited Link color doesn't change when a link has been clicked.
+  * Merge pull request #211 from JudicialCouncilOfCalifornia/DCAS-277--teaser-and-news-list-read-more-link
+  * [DCAS-277] -- DCA Landing page, first news item: Adding ellipses or additional marker for users to read more
+  * Merge pull request #210 from JudicialCouncilOfCalifornia/bugfix/DCAS-274--subsection-text-color-on-section-bgcolor
+  * DCAS-274: add subsection white text support
+
 0.55.24 / 2024-03-22
 ===================
 
