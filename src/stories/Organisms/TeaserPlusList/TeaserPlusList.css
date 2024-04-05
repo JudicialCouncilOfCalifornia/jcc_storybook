@@ -64,3 +64,10 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.teaser-list__teaser-text__teaser-more-link {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  text-underline-offset: 2px;
+}
