@@ -263,3 +263,9 @@ ol.legal ul > li {
 .disclaimer-content > h3{
   font-size: var(--s1);
 }
+
+/* External links module css fix */
+svg.mailto {
+  width: 27px;
+  height: 17px;
+}
