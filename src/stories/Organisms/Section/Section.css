@@ -116,21 +116,21 @@
 }
 
 /* Variants */
-.section--color-primary-dark-xx {
+.section--color-primary-dark-xx,
+.section--color-primary-dark-xx .section,
+.section--color-primary-dark-xx-stripe,
+.section--color-primary-dark-xx-stripe .section {
   --color: var(--color-white);
   --accent-color: var(--color-accent-warm-light-x);
   --heading-color: var(--color-white);
   --button-fg: var(--accent-color);
+}
 
+.section--color-primary-dark-xx {
   background: var(--color-primary-dark-xx);
 }
 
 .section--color-primary-dark-xx-stripe {
-  --color: var(--color-white);
-  --accent-color: var(--color-accent-warm-light-x);
-  --heading-color: var(--color-white);
-  --button-fg: var(--accent-color);
-
   background: repeating-linear-gradient(
     125deg,
     #2f505e,
