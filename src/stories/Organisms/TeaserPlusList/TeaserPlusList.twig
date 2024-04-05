@@ -34,7 +34,16 @@
       </div>
       <div class="teaser-list__teaser-text">
         {{ teaser.text }}
+        {% if teaser.href %}
+          <a href="{{ teaser.href }}" 
+            aria-label="Read full article: {{ teaser.heading }}" 
+            title="Read full article: {{ teaser.heading }}" 
+            class="more-link teaser-list__teaser-text__teaser-more-link">
+            {{ '... Read more'|t }}
+          </a>
+        {% endif %}
       </div>
+
     </div>
     {% endif %}
 
