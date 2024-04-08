@@ -1,4 +1,11 @@
 
+0.55.26 / 2024-04-08
+===================
+
+  * chore: Export libs.
+  * Merge pull request #214 from JudicialCouncilOfCalifornia/feature/link-visited-color-adjustment
+  * Feature -- adjustment to the visited link color and some adjustments to link coloring on dark bg
+
 0.55.25 / 2024-04-04
 ===================
 
