@@ -295,7 +295,7 @@ export default {
           media:
             '<iframe width="560" height="315" src="https://www.youtube.com/embed/UpnXQalWR-U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
           heading: "About Language Access",
-          text: "<p>Describes Language Access at the courts as both physical and *human* translation resources available. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre.</p><a href='#' class='button button--text'>See Language Resources</a><a href='#' class='button button--text'>Learn About Court Interpreters</a>",
+          text: "<p>Describes Language Access at the courts as both physical and *human* translation resources available. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre.</p><p><a href='#' class='button button--text'>See Language Resources</a></p><p><a href='#' class='button button--text'>Learn About Court Interpreters</a></p>",
         }),
       ],
     },
@@ -425,6 +425,7 @@ export default {
             },
             heading: "2DCA Protocols for In-Person Oral Argument",
             text: "The Second Appellate District's Division Two will hear oral arguments in the courtroom on May 19, 2022. Access to the courtroom will be limited to the...",
+            href: "https://courts.ca.gov",
           },
           list_items: [
             {
