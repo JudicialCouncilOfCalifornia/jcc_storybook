@@ -50,7 +50,7 @@ a {
 }
 
 a:visited {
-  color: var(--color-primary-dark-x);
+  color: var(--color-link-visited);
 }
 
 a:focus,

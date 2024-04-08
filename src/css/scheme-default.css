@@ -67,6 +67,9 @@
 
   --color-error: #df2626;
   --color-error-light: #eec1c1;
+
+  --color-link-visited: #660066;
+  --color-link-visited-light: #a01ba0;
   
   /* Striped Backgrounds */
 
