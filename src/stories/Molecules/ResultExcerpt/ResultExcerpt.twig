@@ -31,9 +31,9 @@
       <div class="switcher detect-wrap detect-wrap--observed">
         {% if title %}
         <div class="result-excerpt__title">
-          <a href="{{ url }}">
-            <h2 class="result-excerpt__heading">{{ title }}</h2>
-          </a>
+          <h2 class="result-excerpt__heading">
+            <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
+          </h2>
         </div>
         {% endif %}
 
@@ -45,11 +45,11 @@
       </div>
     {% endif %}
   </div>
-  
+
   {% if detail_list_data or pills or content %}
     <div class="result-excerpt__content stack">
       <div>{{ content }}</div>
-      
+
       {% if detail_list_data or pills %}
         {% if detail_list_data %}
           <ul class="detail-list detect-wrap detect-wrap--observed">
