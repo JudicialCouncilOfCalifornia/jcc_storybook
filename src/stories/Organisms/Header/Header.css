@@ -8,6 +8,14 @@
   margin-block-start: var(--s0);
 }
 
+.header .cluster {
+  justify-content: space-between;
+}
+
+.header__secondary.cluster {
+  justify-content: right;
+}
+
 .header__secondary-nav {
   gap: 0;
 }
@@ -22,10 +30,21 @@
   font-size: var(--s-1);
 }
 
-.header .cluster {
-  justify-content: space-between;
-}
-
 .header .primary-nav__hamburger {
   margin-block-start: -3rem;
+}
+
+.header #google_translate_element > div {
+  line-height: 0;
+}
+
+.header #google_translate_element > div > div {
+  margin-block-end: 0.3rem;
+}
+
+.header .header__translate-extra select {
+  margin: 0;
+  padding-block: var(--s-6);
+  appearance: auto;
+  font-size: 12px;
 }
