@@ -65,7 +65,7 @@
 }
 
 .inline-form .form-actions input:is([type="submit"], .button),
-.inline-form .form-actions button  {
+.inline-form .form-actions button {
   --icon-size: var(--s1);
   border-radius: 2rem;
   border: 1px solid var(--accent-color);
@@ -75,6 +75,7 @@
   max-height: calc(var(--icon-size) * 1.26);
   padding: var(--s1);
   position: relative;
+  line-height: 0;
 }
 
 .inline-form .form-actions input:is([type="submit"], .button):hover,
