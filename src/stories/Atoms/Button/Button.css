@@ -29,6 +29,10 @@
 }
 
 .button:visited {
+  color: var(--button-fg);
+}
+
+.button:visited:hover {
   color: var(--color-red);
 }
 
