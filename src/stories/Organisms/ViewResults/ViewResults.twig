@@ -77,7 +77,7 @@
         </{{ list_type }}>
       {% elseif rows is empty -%}
         <div class="box">
-          <p>{{ 'No results found. Please try another search.'|t }}</p>
+          <p>{{ no_results_msg ? no_results_msg : 'No results found. Please try another search.'|t }}</p>
         </div>
       {% endif %}
     </div>
