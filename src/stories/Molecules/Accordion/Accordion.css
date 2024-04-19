@@ -64,7 +64,6 @@
 }
 
 .accordion details > summary::after {
-  align-content: end;
   height: var(--s1);
   width: var(--s1);
   font-size: var(--s3);

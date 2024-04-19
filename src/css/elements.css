@@ -255,17 +255,17 @@ ol.legal ul > li {
   box-shadow: inset 4px 4px 10px 2px hsla(0,0%,66.7%,.2);
 }
 
-.disclaimer-content > *{
+.disclaimer-content > * {
   font-size: var(--s-1);
   color: var(--color-base-dark-x);
 }
 
-.disclaimer-content > h3{
+.disclaimer-content > h3 {
   font-size: var(--s1);
 }
 
 /* External links module css fix */
 svg.mailto {
-  width: 27px;
-  height: 17px;
+  width: 27px !important;
+  height: 17px !important;
 }
