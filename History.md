@@ -1,4 +1,17 @@
 
+0.55.27 / 2024-04-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #219 from JudicialCouncilOfCalifornia/feature/LWR-284--google-translate-support
+  * Merge pull request #220 from JudicialCouncilOfCalifornia/DCAS-281-271--button-visited-color-fix-email-icon-size-fix
+  * [DCAS-281-271] -- Fix to button visited coloring and email icon sizing.
+  * Merge pull request #215 from JudicialCouncilOfCalifornia/feature/COURTS-21--opinion-adjustments
+  * Merge pull request #218 from JudicialCouncilOfCalifornia/feature/LWR-285--no-result-msg-improvement
+  * [LWR-284] -- translate menu/feature support
+  * [LWR-285] -- personalized no view results msg option
+  * [COURTS-21] -- improvements for opinions
+
 0.55.26 / 2024-04-08
 ===================
 
