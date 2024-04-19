@@ -9,18 +9,29 @@
   variant_class,
 ] %}
 
-	<div class="{{ classes|join(' ') }}"> <div class="box">
-		<div class="container">
-			{% if secondary_nav_data is not empty %}
-				<div class="header__secondary-nav cluster">
-					<div></div>
-					{% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
-				</div>
-			{% endif %}
-			<div class="cluster">
-				{% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
-				{% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
-			</div>
-		</div>
-	</div>
+<div class="{{ classes|join(' ') }}">
+  <div class="box">
+    <div class="container">
+      {% if secondary_nav_data is not empty or translate %}
+        <div class="header__secondary">
+          <div class="header__secondary-nav cluster detect-wrap detect-wrap--observed">
+            {% if translate %}
+              <div class="header__secondary__translate">
+                {% for feature in translate %}
+                  {{ feature }}
+                {% endfor %}
+              </div>
+            {% endif %}
+            {% if secondary_nav_data is not empty %}
+              {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="cluster">
+        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
+        {% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
+      </div>
+    </div>
+  </div>
 </div>
