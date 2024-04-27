@@ -28,6 +28,12 @@
   ]) %}
 {% endif %}
 
+{# Media classes. #}
+{% set media_classes = [
+  'card__media',
+  media_caption.overlay ? 'caption-overlay' : '',
+] %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. #}
 {# Include variant classes form above. #}
@@ -44,34 +50,20 @@
     {% if icon_data and variant == 'card--striped' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
     {% elseif media %}
-      <div class="card__media caption-container">
+      <div class="{{ media_classes|join(' ') }}">
         <div class="frame">{{ media }}</div>
-        {% if media_caption.show and media_caption.text and not caption_overlay %}
-          <div class="card__media_caption">{{ media_caption.text }}</div>
-        {% endif %}
-        {% if caption_overlay %}
-        {% if caption_in_image %}
-        {% if media_caption.text is not empty or citation is not empty %}
-         <div class="overlay"></div> 
-        {% endif %}
-        <div class="caption-container">       
-          <div class="caption-overlay">
-            <span class="media-caption caption-content">{{ media_caption.text}}</span> 
-            <span class="media-citation">{{citation}}</span>
+        {% if media_caption.show %}
+          <div class="card__media-caption-container">
+            <div class="card__media-caption">
+              <span>{{ media_caption.text }}</span>
+              <span class="card__media-citation">{{ media_caption.citation }}</span>
+            </div>
           </div>
-        </div>         
-        {% else %}
-        <div class="caption-below-image">
-            <span class="media-caption">{{ media_caption.text}}</span> 
-            <span class="media-citation">{{citation}}</span>
-        </div>      
-         {% endif %}
         {% endif %}
       </div>
     {% endif %}
     {% if heading or text or ( button_data[0].href and tag == 'div' ) %}
       <div class="card__main stack">
-
         {% if heading is not empty %}
           <div class="card__heading">
             {% if icon_data and variant == 'card--striped-aligned' %}
@@ -80,18 +72,15 @@
             <{{h}} class="card__heading_tag">{{ heading }}</{{h}}>
           </div>
         {% endif %}
-
         {% if text is not empty or (button_data is not empty and not clickable_card) %}
           <div class="card__body">
-            
             {% if text is not empty %}
             <div class="card__text">
                 {{ text }}
               </div>
             {% endif %}
-            
             {% if tag == 'div' and button_data is not empty %}
-            {% set button_class = variant == 'card--striped-aligned' ? 'cluster' : 'stack' %}
+              {% set button_class = variant == 'card--striped-aligned' ? 'cluster' : 'stack' %}
               <div class="card__buttons {{ button_class }}">
                 {% for item in button_data %}
                   {% if item.href %}
@@ -100,10 +89,8 @@
                 {% endfor %}
               </div>
             {% endif %}
-
           </div>
         {% endif %}
-
       </div>
     {% endif %}
   </div>
