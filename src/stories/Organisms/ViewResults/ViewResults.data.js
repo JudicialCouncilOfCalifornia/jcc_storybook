@@ -27,6 +27,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_header: 'List Header',
     rows: [
       {
         title: 'This is a the title for a search result item.',
@@ -98,6 +99,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_header: 'List Header',
     rows: [
       {
         brow: {
