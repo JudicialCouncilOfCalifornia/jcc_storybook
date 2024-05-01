@@ -209,4 +209,74 @@ export default {
     footer: '',
     footer_sidebar: '',
   },
+  grouped_view: {
+    variant: "grouped_view",
+    view_name: '',
+    view_display: '',
+    header: '',
+    header_sidebar: '',
+    form: InlineForm({ ...InlineFormDefault.args }),
+    form_in_sidebar: false,
+    list_type: 'ol',
+    list_type_divider: true,
+    rows: [
+      {
+        title: 'Group1',
+        items: [
+          {
+            brow: {
+              primary: 'Brow Primary',
+              secondary: 'Brow Secondary',
+              notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+          {
+            brow: {
+              primary: 'Brow Primary',
+              secondary: 'Brow Secondary',
+              notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+          {
+            brow: {
+              primary: 'Brow Primary',
+              secondary: 'Brow Secondary',
+              notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+        ]
+      }, {
+        title: 'Group 2',
+        items: [
+          {
+            brow: {
+              primary: 'Brow Primary',
+                secondary: 'Brow Secondary',
+                notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+              content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+        ]
+      }
+    ],
+    sidebar: '',
+    sidebar_direction_results: 'sidebar-row-reverse',
+    sidebar_direction_header: 'sidebar-row-reverse',
+    sidebar_direction_footer: 'sidebar-row-reverse',
+    pager: Pager({ ...DefaultPager.args }),
+    items_per_page: items_per_page,
+    footer: '',
+    footer_sidebar: '',
+  },
 };

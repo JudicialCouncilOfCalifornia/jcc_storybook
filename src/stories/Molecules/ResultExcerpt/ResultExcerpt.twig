@@ -32,7 +32,11 @@
         {% if title %}
         <div class="result-excerpt__title">
           <h2 class="result-excerpt__heading">
-            <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
+            {% if url %}
+              <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
+            {% else %}
+              <div>{{ title }}</div>
+            {% endif %}
           </h2>
         </div>
         {% endif %}

@@ -70,3 +70,8 @@ Default.args = data.default;
 export const WithFullBrow = Template.bind({});
 // Data comes from the ViewResults.data.js file.
 WithFullBrow.args = data.with_full_brow;
+
+// Bind the Default component variant for this component.
+export const GroupedView = Template.bind({});
+// Data comes from the ViewResults.data.js file.
+GroupedView.args = data.grouped_view;

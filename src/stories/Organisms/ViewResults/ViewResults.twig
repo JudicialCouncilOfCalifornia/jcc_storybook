@@ -46,8 +46,8 @@
   {% endif %}
 
   <div class="view-results__results with-sidebar {{ sidebar_direction_results }} {{ divider }}">
-    <div class="stack sidebar">
-      {% if sidebar or form_in_sidebar %}
+    {% if sidebar or form_in_sidebar %}
+      <div class="stack sidebar">
         {% if form_in_sidebar %}
           {{ form }}
         {% endif %}
@@ -55,26 +55,51 @@
         {% if sidebar %}
           {{ sidebar }}
         {% endif %}
+      </div>
       {% endif %}
-    </div>
     <div class="stack content">
       {% if rows -%}
         <{{ list_type }}>
-        {% for row in rows %}
-          <li>
-          {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
-            brow: row.brow,
-            title: row.title,
-            content: row.content,
-            url: row.url,
-            aria_label: row.aria_label,
-            button_data: row.button_data,
-            detail_list_data: row.detail_list_data,
-            pills: row.pills,
-            main_file: row.main_file,
-          } %}
-          </li>
-        {% endfor %}
+        {% if variant == 'grouped_view' %}
+          {% for row in rows %}
+            <li class="group-li">
+              <h2 class="group-name">{{ row.title }}</h2>
+              <{{ list_type }}>
+                {% for item in row.items %}
+                  <li>
+                    {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
+                      brow: item.brow,
+                      title: item.title,
+                      content: item.content,
+                      url: item.url,
+                      aria_label: item.aria_label,
+                      button_data: item.button_data,
+                      detail_list_data: item.detail_list_data,
+                      pills: item.pills,
+                      main_file: item.main_file,
+                    } %}
+                  </li>
+                {% endfor %}
+              </{{ list_type }}>
+            </li>
+          {% endfor %}
+        {% else %}
+          {% for row in rows %}
+            <li>
+              {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
+                brow: row.brow,
+                title: row.title,
+                content: row.content,
+                url: row.url,
+                aria_label: row.aria_label,
+                button_data: row.button_data,
+                detail_list_data: row.detail_list_data,
+                pills: row.pills,
+                main_file: row.main_file,
+              } %}
+            </li>
+          {% endfor %}
+        {% endif %}
         </{{ list_type }}>
       {% elseif rows is empty -%}
         <div class="box">
