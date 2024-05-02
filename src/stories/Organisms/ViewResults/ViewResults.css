@@ -27,40 +27,60 @@
   margin-block-start: var(--s5);
 }
 
+.view-results__results .content h2.group-name{
+  padding-block-end: var(--s4);
+}
+
+.view-results__results .content li.group-li{
+  border-block-start: none;
+}
+
 .view-results__results .content > ul,
-.view-results__results .content > ol {
+.view-results__results .content > ol,
+.view-results__results .content > ul > li > ul,
+.view-results__results .content > ol > li > ol{
   list-style-type: none;
   padding-inline: 0;
 }
 
 .view-results__results .content > ul > li + li,
-.view-results__results .content > ol > li + li {
+.view-results__results .content > ol > li + li,
+.view-results__results .content > ul > li > ul > li + li,
+.view-results__results .content > ol > li > ol > li + li {
   margin-block-start: var(--s4);
   padding-block-start: var(--s4);  
   border-block-start: 1px solid var(--color-base-light-x);  
 }
 
 .view-results__results .content > ul > li,
-.view-results__results .content > ol > li {  
+.view-results__results .content > ol > li,
+.view-results__results .content > ul > li > ul > li,
+.view-results__results .content > ol > li > ol > li {
   padding-block-start: var(--s4);  
   border-block-start: 1px solid var(--color-base-light-x);
 }
 
 .view-results.view-results--search_results  .content > ul > li,
-.view-results.view-results--search_results  .content > ol > li {  
+.view-results.view-results--search_results  .content > ol > li,
+.view-results.view-results--search_results  .content > ul > li > ul > li,
+.view-results.view-results--search_results  .content > ol > li > ol > li {
   padding-block-start: var(--s4);
   border-block-start: none;
 }
 
 .view-results.view-results--search_results .content > ul > li + li,
-.view-results.view-results--search_results .content > ol > li + li {
+.view-results.view-results--search_results .content > ol > li + li,
+.view-results.view-results--search_results .content > ul > li > ul > li + li,
+.view-results.view-results--search_results .content > ol > li > ol > li + li {
   margin-block-start: var(--s4);
   padding-block-start: var(--s4);    
   border-block-start: 1px solid var(--color-base-light-x);  
 }
 
 .view-results__results.no-divider > ul > li + li,
-.view-results__results.no-divider > ol > li + li {
+.view-results__results.no-divider > ol > li + li,
+.view-results__results.no-divider > ul > li > ul > li + li,
+.view-results__results.no-divider > ol > li > ol > li + li {
   margin-block-start: var(--s3);
   padding-block-start: var(--s3);
   border-block-start: 0px;

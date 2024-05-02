@@ -264,6 +264,20 @@ ol.legal ul > li {
   font-size: var(--s1);
 }
 
+a.file-download{
+  margin-right: 1rem;
+}
+
+a.file-download::before {
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-image: url( '../assets/icons/fa-file.svg' );
+  background-repeat: no-repeat;
+  filter: invert(34%) sepia(95%) saturate(3559%) hue-rotate(24deg) brightness(96%) contrast(101%);
+}
+
 /* External links module css fix */
 svg.mailto {
   width: 27px !important;
