@@ -4,8 +4,9 @@
   --sidebar-direction:row-reverse;
 }
 
- .listheader {  
-  --gap: var(--s0);  
+li.group-li + li.group-li > h2.list-label {  
+  border-block-start: 1px solid var(--color-base-light-x);  
+  padding-block-start: var(--s6);
 }
 
 .view-results.view-results--search_results {
@@ -27,20 +28,28 @@
   margin-block-start: var(--s5);
 }
 
-.view-results__results .content h2.group-name{
-  padding-block-end: var(--s4);
+.view-results__results .content li.group-li {
+  border-block-start: none;
 }
 
-.view-results__results .content li.group-li{
-  border-block-start: none;
+.view-results__results .content.grouped-view > ul > li,
+.view-results__results .content.grouped-view > ol > li {
+  padding-block-start: 0;
+}
+
+
+.view-results__results .content.grouped-view > ul,
+.view-results__results .content.grouped-view > ol {
+  margin-block-start: 0;
 }
 
 .view-results__results .content > ul,
 .view-results__results .content > ol,
 .view-results__results .content > ul > li > ul,
-.view-results__results .content > ol > li > ol{
+.view-results__results .content > ol > li > ol {
   list-style-type: none;
   padding-inline: 0;
+  margin-block-start: var(--s2);
 }
 
 .view-results__results .content > ul > li + li,
@@ -48,7 +57,7 @@
 .view-results__results .content > ul > li > ul > li + li,
 .view-results__results .content > ol > li > ol > li + li {
   margin-block-start: var(--s4);
-  padding-block-start: var(--s4);  
+  padding-block-start: var(--s2);  
   border-block-start: 1px solid var(--color-base-light-x);  
 }
 
@@ -56,7 +65,7 @@
 .view-results__results .content > ol > li,
 .view-results__results .content > ul > li > ul > li,
 .view-results__results .content > ol > li > ol > li {
-  padding-block-start: var(--s4);  
+  padding-block-start: var(--s2);  
   border-block-start: 1px solid var(--color-base-light-x);
 }
 
@@ -154,13 +163,13 @@
 
 
 /* Search page specific styling */
-.view-results .view-results__results.with-sidebar > :first-child {
+.view-results .view-results__results.with-sidebar > .sidebar {
   background-color: var(--color-base-light-xxx);
   padding-block: var(--s3);
   padding-inline: var(--s1);
 }
 
-.view-results.view-results--search_results .view-results__results.with-sidebar > :first-child {
+.view-results.view-results--search_results .view-results__results.with-sidebar > .sidebar {
   background-color: transparent;
   padding: 0;
 }
