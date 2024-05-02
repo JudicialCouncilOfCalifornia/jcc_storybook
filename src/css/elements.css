@@ -273,9 +273,10 @@ a.file-download::before {
   display: inline-block;
   height: 1rem;
   width: 1rem;
-  background-image: url( '../assets/icons/fa-file.svg' );
-  background-repeat: no-repeat;
+  background-color: currentColor;
   filter: invert(34%) sepia(95%) saturate(3559%) hue-rotate(24deg) brightness(96%) contrast(101%);
+  -webkit-mask: var(--fa-file-svg) no-repeat;
+  mask: var(--fa-file-svg) no-repeat;
 }
 
 /* External links module css fix */
