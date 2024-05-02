@@ -57,18 +57,22 @@
       </div>
     {% endif %}
     
-    <div class="stack content {% if list_header %} listheader {% endif %}">
-      {% if list_header  %}
-        <h2 class="listheader">{{list_header}}</h2>
+    <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
+      {% if list_label  %}
+        <h2 class="list-label">{{list_label}}</h2>
       {% endif %}   
 
       {% if rows -%}
-        <{{ list_type }}>
+        <{{ list_type }} class="stack">
         {% if variant == 'grouped_view' %}
+          
           {% for row in rows %}
             <li class="group-li">
-              <h2 class="group-name">{{ row.title }}</h2>
-              <{{ list_type }}>
+              {% if row.list_label  %}
+              <h2 class="list-label">{{ row.list_label }}</h2>
+              {% endif %}
+
+              <{{ list_type }} class="stack">
                 {% for item in row.items %}
                   <li>
                     {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
@@ -88,6 +92,7 @@
             </li>
           {% endfor %}
         {% else %}
+          
           {% for row in rows %}
             <li>
               {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {

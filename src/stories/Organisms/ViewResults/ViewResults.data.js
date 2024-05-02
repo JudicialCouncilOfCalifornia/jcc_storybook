@@ -27,7 +27,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
-    list_header: 'List Header',
+    list_label: 'List Label',
     rows: [
       {
         title: 'This is a the title for a search result item.',
@@ -99,7 +99,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
-    list_header: 'List Header',
+    list_label: 'List Label',
     rows: [
       {
         brow: {
@@ -223,7 +223,7 @@ export default {
     list_type_divider: true,
     rows: [
       {
-        title: 'Group1',
+        list_label: 'Group 1 List Label',
         items: [
           {
             brow: {
@@ -232,7 +232,7 @@ export default {
               notation: 'Brow Notation',
             },
             title: 'This is a the title for a search result item.',
-            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted. This is some more text, and this is some more content for display.',
             url: '#',
           },
           {
@@ -252,12 +252,13 @@ export default {
               notation: 'Brow Notation',
             },
             title: 'This is a the title for a search result item.',
-            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted. This is some more text, and this is some more content for display.',
             url: '#',
           },
         ]
-      }, {
-        title: 'Group 2',
+      }, 
+      {
+        list_label: 'Group 2 List Label',
         items: [
           {
             brow: {
@@ -266,7 +267,52 @@ export default {
                 notation: 'Brow Notation',
             },
             title: 'This is a the title for a search result item.',
-              content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+        ]
+      },
+      {
+        list_label: 'Group 3 List Label',
+        items: [
+          {
+            brow: {
+              primary: 'Brow Primary',
+                secondary: 'Brow Secondary',
+                notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+          {
+            brow: {
+              primary: 'Brow Primary',
+                secondary: 'Brow Secondary',
+                notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+          {
+            brow: {
+              primary: 'Brow Primary',
+                secondary: 'Brow Secondary',
+                notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
+            url: '#',
+          },
+          {
+            brow: {
+              primary: 'Brow Primary',
+                secondary: 'Brow Secondary',
+                notation: 'Brow Notation',
+            },
+            title: 'This is a the title for a search result item.',
+            content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted.',
             url: '#',
           },
         ]
