@@ -44,7 +44,6 @@
       </div>
     </div>
   {% endif %}
-
   <div class="view-results__results with-sidebar {{ sidebar_direction_results }} {{ divider }}">
     {% if sidebar or form_in_sidebar %}
       <div class="stack sidebar">
@@ -56,8 +55,13 @@
           {{ sidebar }}
         {% endif %}
       </div>
-      {% endif %}
-    <div class="stack content">
+    {% endif %}
+    
+    <div class="stack content {% if list_header %} listheader {% endif %}">
+      {% if list_header  %}
+        <h2 class="listheader">{{list_header}}</h2>
+      {% endif %}   
+
       {% if rows -%}
         <{{ list_type }}>
         {% if variant == 'grouped_view' %}

@@ -4,6 +4,10 @@
   --sidebar-direction:row-reverse;
 }
 
+ .listheader {  
+  --gap: var(--s0);  
+}
+
 .view-results.view-results--search_results {
   --gap: var(--s2);
   --sidebar-width:20ch;
