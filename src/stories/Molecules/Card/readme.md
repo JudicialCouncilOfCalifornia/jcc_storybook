@@ -24,12 +24,19 @@ The card variant type can be inherited which means you can set it on the element
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: "default",
   clickable_card: false,
   background: null,
   aspect: [16, 9],
   media: [markup],
+  media_caption: {
+    show: true,
+    text: "This is caption for the media if provided",
+    citation: "This is citation for the media if provided",
+    overlay: true,
+  },
   icon_data: {
     icon: "speaker",
     color: false,

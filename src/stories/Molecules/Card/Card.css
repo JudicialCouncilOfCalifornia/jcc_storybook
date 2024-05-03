@@ -9,6 +9,53 @@
   height: 100%;
 }
 
+.caption-overlay .card__media-caption-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__media-caption {
+  margin-block-start: var(--s-6);
+  color: #5C5C5C;
+  font-size: var(--s-2);
+  font-weight: 600;
+  line-height: var(--s0);
+}
+
+.card__media-caption span:not(.card__media-citation) {
+  margin-inline-end: var(--s-6);
+}
+
+.card__media-citation {
+  color: #919191;
+  font-size: var(--s-3);
+  font-weight: 400;
+}
+
+.caption-overlay .card__media-caption,
+.caption-overlay .card__media-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.caption-overlay .card__media-caption {
+  padding-block: var(--s-4);
+  padding-inline: var(--s-1);
+  background-color: rgba(0,0,0,0.5);
+  color: #FFFFFF;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.caption-overlay .card__media-citation {
+  color: #F3F3F3;
+}
+
 .remote-video-colorbox-launch-modal{
  outline: none;
 }
@@ -17,13 +64,6 @@
 .remote-video-colorbox-launch-modal:focus-within img,
 .remote-video-colorbox-launch-modal:focus-visible img{
   outline: var(--border-color, var(--color-accent-warm-light-x)) auto var(--s-6);
-}
-
-.card__media_caption {
-  margin-block-start: var(--s-6);
-  padding-inline: var(--s-2);
-  font-size: var(--s-1);
-  line-height: var(--s0);
 }
 
 .card .icon-wrapper {
@@ -56,62 +96,6 @@
 .card--clickable {
   display: block;
   text-decoration: none;
-}
-
-.media-caption {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 17px;
-}
-
-.media-caption.caption-content {
-  margin-inline-start: var(--s0);
-  display: inline-block;
-}
-
-.media-citation {
-  font-size: 9px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.caption-overlay {  
-  position: absolute;
-  bottom: 0; 
-  left: 0;
-  width: 100%;  
-  color: #ffffff;
-  box-sizing: border-box;
-  z-index: 2;
-  height: 53px;
-}
-
-.caption-below-image {      
-    width: 100%;  
-    color: var(--color-base-dark-x);    
-    box-sizing: border-box;
-    line-height: var(--s1);    
-    margin-top: 9px;
-}
-
-.caption-container {
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background:  #5C5C5C;
-  z-index: 1;
-  opacity: 0.5;
-  mix-blend-mode: multiply;  
-  height: 53px;
-}
-
-.caption-container {
-  position: relative;
 }
 
 /* Card modifier class can be used on cards wrapper element or on the card. */
