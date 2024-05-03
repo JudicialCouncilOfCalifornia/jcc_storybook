@@ -18,7 +18,6 @@
 
 .card__media-caption {
   margin-block-start: var(--s-6);
-  padding-inline: var(--s-2);
   color: #5C5C5C;
   font-size: var(--s-2);
   font-weight: 600;
@@ -30,6 +29,7 @@
 }
 
 .card__media-citation {
+  color: #919191;
   font-size: var(--s-3);
   font-weight: 400;
 }
@@ -50,6 +50,10 @@
   color: #FFFFFF;
   box-sizing: border-box;
   z-index: 2;
+}
+
+.caption-overlay .card__media-citation {
+  color: #F3F3F3;
 }
 
 .remote-video-colorbox-launch-modal{
