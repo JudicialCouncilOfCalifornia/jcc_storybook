@@ -67,6 +67,24 @@ div:is(.body, .jcc-rulesformatting) p.advcommtext {
   line-height: 1.5;
 }
 
+div:is(.body, .jcc-rulesformatting) table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-block: var(--s3);
+  table-layout: fixed;
+  border: 1px solid var(--color-base-light-x);
+}
+
+div:is(.body, .jcc-rulesformatting) table th,
+div:is(.body, .jcc-rulesformatting) table td {
+  border: 0;
+}
+
+div:is(.body, .jcc-rulesformatting) table.add-borders th,
+div:is(.body, .jcc-rulesformatting) table.add-borders td {
+  border: 1px solid var(--color-base-light-x);
+}
+
 div:is(.body, .jcc-rulesformatting) li:is(.TOClevel1, .TOClevel2, .TOClevel3, .TOClevel4) {
   list-style-type: none;
   margin-block-start: var(--s-1);
