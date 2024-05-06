@@ -28,6 +28,14 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: var(--s5);
 }
 
+.view-results.no-top-margin .view-results__results{
+  margin-block-start: 0;
+  padding-block-start: 0;
+}
+.view-results.no-top-margin > * + * {
+  border-block-start: none;
+}
+
 .view-results__results .content li.group-li {
   border-block-start: none;
 }
@@ -59,6 +67,11 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: var(--s4);
   padding-block-start: var(--s2);  
   border-block-start: 1px solid var(--color-base-light-x);  
+}
+
+.view-results.list-divider-skip-first .view-results__results .content > ul > li:first-child,
+.view-results.list-divider-skip-first .view-results__results .content > ol > li:first-child{
+  border-block-start: none;
 }
 
 .view-results__results .content > ul > li,

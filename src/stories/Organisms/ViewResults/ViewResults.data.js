@@ -19,6 +19,7 @@ const items_per_page = `
 export default {
   default: {
     variant: "default",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -27,6 +28,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     list_label: 'List Label',
     rows: [
       {
@@ -91,6 +93,7 @@ export default {
   },
   with_full_brow: {
     variant: "default",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -99,6 +102,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     list_label: 'List Label',
     rows: [
       {
@@ -213,6 +217,7 @@ export default {
   },
   grouped_view: {
     variant: "grouped_view",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -221,6 +226,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     rows: [
       {
         list_label: 'Group 1 List Label',

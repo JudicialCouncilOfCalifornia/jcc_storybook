@@ -20,6 +20,8 @@
   variant_class,
   has_header ? 'has-header' : 'no-header',
   has_footer ? 'has-footer' : 'no-footer',
+  top_margin ? '' : 'no-top-margin',
+  list_divider_skip_first ? 'list-divider-skip-first' : '',
   view_name,
   view_display,
 ] %}
@@ -69,7 +71,7 @@
           {% for row in rows %}
             <li class="group-li">
               {% if row.list_label  %}
-              <h2 class="list-label">{{ row.list_label }}</h2>
+                <h2 class="list-label">{{ row.list_label }}</h2>
               {% endif %}
 
               <{{ list_type }} class="stack">
