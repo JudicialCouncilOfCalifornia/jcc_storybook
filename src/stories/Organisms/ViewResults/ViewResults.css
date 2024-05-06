@@ -28,6 +28,13 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: var(--s5);
 }
 
+.views-results_content-header{
+  font-size: var(--s-1);
+  color: var(--color-base);
+  margin-block-end: var(--s-2);
+
+}
+
 .view-results.no-top-margin .view-results__results{
   margin-block-start: 0;
   padding-block-start: 0;

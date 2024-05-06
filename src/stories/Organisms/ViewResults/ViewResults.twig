@@ -60,9 +60,15 @@
     {% endif %}
     
     <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
-      {% if list_label  %}
-        <h2 class="list-label">{{list_label}}</h2>
-      {% endif %}   
+      <div>
+        {% if content_header  %}
+          <div class="views-results_content-header">{{ content_header }}</div>
+        {% endif %}
+
+        {% if list_label  %}
+          <h2 class="list-label">{{list_label}}</h2>
+        {% endif %}
+      </div>
 
       {% if rows -%}
         <{{ list_type }} class="stack">
