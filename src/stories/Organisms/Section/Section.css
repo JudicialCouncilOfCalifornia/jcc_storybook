@@ -115,6 +115,10 @@
   flex-basis: calc(40% - var(--gap));
 }
 
+.section__main .main-sidebar{
+  word-break: break-word;
+}
+
 /* Variants */
 .section--color-primary-dark-xx,
 .section--color-primary-dark-xx .section,

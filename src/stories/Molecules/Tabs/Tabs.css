@@ -1,6 +1,18 @@
 /* Default tabs styling */
 .tabs__tablist {
   --gap: 0;
+  position: relative;
+}
+
+.tabs--default .tabs__tablist::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom: var(--border-thin) solid var(--color-base-light-x);
+  bottom: 0px;
+  z-index: -1;
 }
 
 .tabs details summary::marker,
