@@ -90,17 +90,16 @@ export default {
     bottom_content: "",
     blurb: false,
   },
-  news_header: {
+  borderless_media: {
     hangover_hide_compact: false,
     hangover_offset: 22,
     brow: {
       variant: "default_with_date",
       part_one: "Brow Example",
       part_two: "Part two",
-      news_header: true,
     },
     heading: "This is a Heading",
-    news_header: true,
+    borderless_media: true,
     text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>",
     hangover_content: Card({
       variant: "media-right",
