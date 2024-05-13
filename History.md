@@ -1,4 +1,17 @@
 
+0.55.30 / 2024-05-13
+===================
+
+  * chore: Export libs.
+  * Merge pull request #231 from JudicialCouncilOfCalifornia/feature/rules-formatting-for-tables
+  * [COURTS-11] -- Tables styles for rules formatting updates
+  * [COURTS-11] -- Table styles added specifically for rules of court formatted styles.
+  * Merge pull request #228 from JudicialCouncilOfCalifornia/feature/COURTS-13-advisory-body-styles
+  * Merge pull request #229 from JudicialCouncilOfCalifornia/feature/DCAS-291--news-hero-fix
+  * [DCAS-291] -- scale back borderless hangover media for now to correct layout
+  * [COURTS-13] -- content header for views
+  * [COURTS-13] -- styling adjustments
+
 0.55.29 / 2024-05-04
 ===================
 
