@@ -4,7 +4,7 @@ table {
 
 table td,
 table th {
-  border: 1px solid var(--color-base-light-x);;
+  border: 1px solid var(--color-base-light-x);
   padding: var(--s-2) var(--s-2);
 }
 
