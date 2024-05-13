@@ -1,5 +1,15 @@
 
-0.55.28 / 2024-05-102
+0.55.29 / 2024-05-04
+===================
+
+  * chore: Export libs.
+  * Merge pull request #226 from JudicialCouncilOfCalifornia/feature/DCAS-243--update-jcc-seal
+  * Merge pull request #225 from JudicialCouncilOfCalifornia/bugfix/DCAS-291--media-caption
+  * [DCAS-243] -- updated JCC seal SVG file
+  * [DCAS-291] -- updated citation colors
+  * [DCAS-291] -- correct citation layout & overlay
+
+0.55.28 / 2024-05-02
 ===================
 
   * chore: Export libs.

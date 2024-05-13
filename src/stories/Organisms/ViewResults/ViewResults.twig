@@ -20,6 +20,8 @@
   variant_class,
   has_header ? 'has-header' : 'no-header',
   has_footer ? 'has-footer' : 'no-footer',
+  top_margin ? '' : 'no-top-margin',
+  list_divider_skip_first ? 'list-divider-skip-first' : '',
   view_name,
   view_display,
 ] %}
@@ -58,9 +60,15 @@
     {% endif %}
     
     <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
-      {% if list_label  %}
-        <h2 class="list-label">{{list_label}}</h2>
-      {% endif %}   
+      <div>
+        {% if content_header  %}
+          <div class="views-results_content-header">{{ content_header }}</div>
+        {% endif %}
+
+        {% if list_label  %}
+          <h2 class="list-label">{{list_label}}</h2>
+        {% endif %}
+      </div>
 
       {% if rows -%}
         <{{ list_type }} class="stack">
@@ -69,7 +77,7 @@
           {% for row in rows %}
             <li class="group-li">
               {% if row.list_label  %}
-              <h2 class="list-label">{{ row.list_label }}</h2>
+                <h2 class="list-label">{{ row.list_label }}</h2>
               {% endif %}
 
               <{{ list_type }} class="stack">

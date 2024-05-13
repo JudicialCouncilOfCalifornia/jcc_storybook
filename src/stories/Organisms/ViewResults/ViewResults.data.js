@@ -19,6 +19,7 @@ const items_per_page = `
 export default {
   default: {
     variant: "default",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -27,6 +28,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     list_label: 'List Label',
     rows: [
       {
@@ -80,6 +82,7 @@ export default {
         url: '#',
       },
     ],
+    content_header: '',
     sidebar: '',
     sidebar_direction_results: 'sidebar-row-reverse',
     sidebar_direction_header: 'sidebar-row-reverse',
@@ -91,6 +94,7 @@ export default {
   },
   with_full_brow: {
     variant: "default",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -99,6 +103,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     list_label: 'List Label',
     rows: [
       {
@@ -202,6 +207,7 @@ export default {
         url: '#',
       },
     ],
+    content_header: '',
     sidebar: '',
     sidebar_direction_results: 'sidebar-row-reverse',
     sidebar_direction_header: 'sidebar-row-reverse',
@@ -213,6 +219,7 @@ export default {
   },
   grouped_view: {
     variant: "grouped_view",
+    top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
@@ -221,6 +228,7 @@ export default {
     form_in_sidebar: false,
     list_type: 'ol',
     list_type_divider: true,
+    list_divider_skip_first: false,
     rows: [
       {
         list_label: 'Group 1 List Label',
@@ -318,10 +326,11 @@ export default {
         ]
       }
     ],
-    sidebar: '',
-    sidebar_direction_results: 'sidebar-row-reverse',
-    sidebar_direction_header: 'sidebar-row-reverse',
-    sidebar_direction_footer: 'sidebar-row-reverse',
+    content_header: '1 - 16 of 150 results',
+    sidebar: 'Sidebar',
+    sidebar_direction_results: 'sidebar-row',
+    sidebar_direction_header: 'sidebar-row',
+    sidebar_direction_footer: 'sidebar-row',
     pager: Pager({ ...DefaultPager.args }),
     items_per_page: items_per_page,
     footer: '',

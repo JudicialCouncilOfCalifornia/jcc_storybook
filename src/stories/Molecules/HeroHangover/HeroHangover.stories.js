@@ -62,14 +62,14 @@ WithBlurb.args = data.with_blurb;
 export const WithText = Template.bind({});
 WithText.args = data.with_text;
 
-export const NewsHeader = Template.bind({});
-NewsHeader.args = data.news_header;
-
 export const WithPrint = Template.bind({});
 WithPrint.args = data.with_print;
 
 export const WithBottom = Template.bind({});
 WithBottom.args = data.with_bottom;
+
+export const BorderlessMedia = Template.bind({});
+BorderlessMedia.args = data.borderless_media;
 
 export const HideMediaPortrait = Template.bind({});
 HideMediaPortrait.args = data.hide_media_compact;
