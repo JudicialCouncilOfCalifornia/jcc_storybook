@@ -61,8 +61,14 @@
     
     <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
       <div>
-        {% if content_header  %}
-          <div class="views-results_content-header">{{ content_header }}</div>
+        {% if content_header or items_per_page%}
+          <div class="cluster view-results_header_wrapper">
+            <div class="views-results_content-header">{{ content_header }}</div>
+
+            {% if items_per_page %}
+              <div class="alt-select-style items-per-page">{{ items_per_page }}</div>
+            {% endif %}
+          </div>
         {% endif %}
 
         {% if list_label  %}
@@ -131,11 +137,6 @@
 
     {% if footer_sidebar or items_per_page %}
     <div class="stack box alt-select-style">
-      {% if items_per_page %}
-      <div class="alt-select-style">
-        {{ items_per_page }}
-      </div>
-      {% endif %}
 
       {% if footer_sidebar %}
         {{ footer_sidebar }}

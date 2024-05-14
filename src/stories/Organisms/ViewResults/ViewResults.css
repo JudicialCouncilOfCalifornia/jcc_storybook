@@ -32,7 +32,30 @@ li.group-li + li.group-li > h2.list-label {
   font-size: var(--s-1);
   color: var(--color-base);
   margin-block-end: var(--s-2);
+}
 
+.items-per-page {
+  margin-block-end: var(--s-2);
+}
+
+.items-per-page select {
+  font-size: var(--s-1);
+}
+
+.items-per-page .form-item-select-label{
+  position: relative;
+  padding-right: var(--s-2);
+}
+
+.items-per-page .form-item-select-label > div:after {
+  content:'⋁';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--accent-color);
+  font-size: var(--s-1);
+  font-weight: bold;
 }
 
 .view-results.no-top-margin .view-results__results{
@@ -41,6 +64,10 @@ li.group-li + li.group-li > h2.list-label {
 }
 .view-results.no-top-margin > * + * {
   border-block-start: none;
+}
+
+.view-results__results .view-results_header_wrapper{
+  justify-content: space-between;
 }
 
 .view-results__results .content li.group-li {
