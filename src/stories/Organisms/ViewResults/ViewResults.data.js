@@ -19,7 +19,7 @@ const items_per_page = `
 export default {
   default: {
     variant: "default",
-    top_margin: true,
+    no_top_margin: false,
     view_name: '',
     view_display: '',
     header: '',
@@ -94,7 +94,7 @@ export default {
   },
   with_full_brow: {
     variant: "default",
-    top_margin: true,
+    no_top_margin: false,
     view_name: '',
     view_display: '',
     header: '',
@@ -219,7 +219,7 @@ export default {
   },
   grouped_view: {
     variant: "grouped_view",
-    top_margin: true,
+    no_top_margin: true,
     view_name: '',
     view_display: '',
     header: '',
