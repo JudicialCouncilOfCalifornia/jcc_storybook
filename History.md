@@ -1,4 +1,11 @@
 
+0.55.31 / 2024-05-14
+===================
+
+  * chore: Export libs.
+  * Merge pull request #232 from JudicialCouncilOfCalifornia/hotfix/views-results-margin
+  * Hotfix -- updated logic
+
 0.55.30 / 2024-05-13
 ===================
 
