@@ -6,7 +6,7 @@ import { Default as InlineFormDefault } from '../../Molecules/InlineForm/InlineF
 const items_per_page = `
 <div class="form-item form-item-select-label">
   <div>
-    <select name="items_per_page" id="edit-select-label" value="10">
+    <select name="items_per_page" id="edit-select-label" value="10" form="FORM_NAME">
       <option value="5">Show 5 per page</option>
       <option value="10">Show 10 per page</option>
       <option value="15">Show 15 per page</option>

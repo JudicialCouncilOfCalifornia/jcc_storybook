@@ -2,6 +2,7 @@ import readme from './readme.md';
 import data from './ViewResults.data';
 import ViewResults from './ViewResults.twig';
 import './ViewResults.css';
+import "./ViewResults.js";
 
 export default {
   title: 'Organisms/ViewResults',
