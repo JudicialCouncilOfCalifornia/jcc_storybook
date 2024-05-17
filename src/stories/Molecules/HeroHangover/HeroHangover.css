@@ -327,7 +327,7 @@
 }
 
 .hangover--borderless-media .box {
-  padding: 0;
+  padding-block: 0;
 }
 
 .hangover--borderless-media .with-sidebar > .hangover__top-content {
