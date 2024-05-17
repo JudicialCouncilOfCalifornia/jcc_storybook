@@ -9,12 +9,12 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'steps',
+  variant ? 'steps--' ~ variant : '',
   color_class,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
   <div class="stack">
-
     {% if heading|render %}
       <h2 class="step__heading">{{ heading }}</h2>
     {% endif %}
@@ -27,17 +27,22 @@
     {# Use BEM syntax for styling classes on sub-components. #}
     <div class="steps__steps">
       {% for step in steps %}
-    <div class="steps__step step">
-      <{{ h }} class="step__label">
-        <span class="sr-only">Step: {{ loop.index }}</span>
-        {{ step.label }}
-      </{{ h }}>
-      <div class="center">
-        {{ step.content }}
-      </div>
+        <div class="steps__step step">
+          <{{ h }} class="step__label">
+            <span {% if variant != 'custom-index' %}class="sr-only"{% endif %}>
+              {% if variant == 'custom-index' %}
+                {{ step.index }}
+              {% else %}
+                {{ loop.index }}
+              {% endif %}
+            </span>
+            {{ step.label }}
+          </{{ h }}>
+          <div class="center">
+            {{ step.content }}
+          </div>
+        </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-
   </div>
 </div>
