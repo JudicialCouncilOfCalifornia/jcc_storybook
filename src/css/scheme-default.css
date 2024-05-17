@@ -182,7 +182,9 @@
   --background-solid-accent-warm-dark-xx: var(--color-accent-warm-dark-xx);
   --background-solid-accent-warm-dark-xxx: var(--color-accent-warm-dark-xxx);
   --background-solid-base-dark-x: var(--color-base-dark-x);
+  --background-solid-base-light-x: var(--color-base-light-x);
   --background-solid-base-light-xx: var(--color-base-light-xx);
+  --background-solid-base-light-xxx: var(--color-base-light-xxx);
 
   /* Semi-transparent backgrounds */
   --background-fade-900-white: rgba(255 255 255 / .9);

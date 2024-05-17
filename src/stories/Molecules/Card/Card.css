@@ -236,6 +236,16 @@
   background: var(--background-striped-base-dark-x);
 }
 
+.card.card--striped.card--background-striped-base-light-x,
+.card.card--striped-aligned.card--background-striped-base-light-x {
+  background: var(--background-striped-base-light-x);
+}
+
+.card.card--striped.card--background-striped-base-light-xx,
+.card.card--striped-aligned.card--background-striped-base-light-xx {
+  background: var(--background-striped-base-light-xx);
+}
+
 .card.card--striped.card--background-striped-primary-dark-xx,
 .card.card--striped-left.card--background-striped-primary-dark-xx {
   background: var(--background-striped-primary-dark-xx);
