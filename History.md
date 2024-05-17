@@ -1,4 +1,17 @@
 
+0.55.32 / 2024-05-16
+===================
+
+  * chore: Export libs.
+  * Merge pull request #236 from JudicialCouncilOfCalifornia/update/rules-formatting-table-css-updates
+  * [Update] -- updates to rules formatting styles for tables and base light color variables
+  * Merge pull request #233 from JudicialCouncilOfCalifornia/feature/COURTS-13-items-per-page
+  * Merge pull request #234 from JudicialCouncilOfCalifornia/bugfix/DCAS-306--hero-hangover-side-spacing-with-borderless-media
+  * Merge pull request #235 from JudicialCouncilOfCalifornia/feature/COURTS-111--custom-step-marker-text
+  * [COURTS-111] -- custom step index support
+  * [DCAS-306] -- restored text container side padding
+  * [COURTS-13] -- javascript/css
+
 0.55.31 / 2024-05-14
 ===================
 
