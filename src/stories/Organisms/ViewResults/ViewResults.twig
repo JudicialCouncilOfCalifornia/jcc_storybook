@@ -60,23 +60,23 @@
     {% endif %}
     
     <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
-      <div>
-        {% if content_header or items_per_page%}
-          <div class="cluster view-results_header_wrapper">
-            <div class="views-results_content-header">{{ content_header }}</div>
-
-            {% if items_per_page %}
-              <div class="alt-select-style items-per-page">{{ items_per_page }}</div>
-            {% endif %}
-          </div>
-        {% endif %}
-
-        {% if list_label  %}
-          <h2 class="list-label">{{list_label}}</h2>
-        {% endif %}
-      </div>
 
       {% if rows -%}
+        <div>
+          {% if content_header or items_per_page%}
+            <div class="cluster view-results_header_wrapper">
+              <div class="views-results_content-header">{{ content_header }}</div>
+
+              {% if items_per_page %}
+                <div class="alt-select-style items-per-page">{{ items_per_page }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if list_label  %}
+            <h2 class="list-label">{{list_label}}</h2>
+          {% endif %}
+        </div>
         <{{ list_type }} class="stack">
         {% if variant == 'grouped_view' %}
           
@@ -125,8 +125,12 @@
         {% endif %}
         </{{ list_type }}>
       {% elseif rows is empty -%}
-        <div class="box">
-          <p>{{ no_results_msg ? no_results_msg : 'No results found. Please try another search.'|t }}</p>
+        <div>
+          {% if no_results_msg %}
+            {{ no_results_msg }}
+          {% else %}
+            <p>{{ 'No results found. Please try another search.'|t }}</p>
+          {% endif %}
         </div>
       {% endif %}
     </div>
