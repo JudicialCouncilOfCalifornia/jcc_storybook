@@ -25,18 +25,12 @@
   border-inline-start: 2px solid var(--color-accent-warm-light-x);
 }
 
-.steps__step:last-child {
-  border-inline-start: 2px solid transparent;
-}
-
 .steps {
   counter-reset: step_number;
 }
 
-.steps .step::before {
-  counter-increment: step_number;
-  content: counter(step_number);
-
+.steps .step::before,
+.steps--custom-index .step span {
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: calc(var(--s1) * -1.1);
@@ -53,6 +47,21 @@
   color: var(--color-white);
 }
 
+.steps--custom-index .step span {
+  width: var(--s5);
+  height: var(--s5);
+  font-size: var(--s-2);
+}
+
+.steps .step::before {
+  counter-increment: step_number;
+  content: counter(step_number);
+}
+
+.steps--custom-index .step::before {
+  content: unset;
+}
+
 .steps__step .center {
   margin-inline: initial;
 }
@@ -64,7 +73,8 @@
   line-height: var(--s3);
 }
 
-.steps--color-white .step::before {
+.steps--color-white .step::before,
+.steps--color-white.steps--custom-index .step span {
   background-color: var(--color-white);
   border: 2px solid var(--color-base);
   color: var(--color-base-dark-x);
@@ -74,7 +84,8 @@
   border-inline-start: 2px solid var(--color-base);
 }
 
-.steps--color-dark .step::before {
+.steps--color-dark .step::before,
+.steps--color-dark.steps--custom-index .step span {
   background-color: var(--color-base-dark-x);
   border: 2px solid var(--color-base-dark-x);
   color: var(--color-white);
@@ -84,22 +95,28 @@
   border-inline-start: 2px solid var(--color-base-dark-x);
 }
 
-.steps--color-primary .step::before {
+.steps--color-primary .step::before,
+.steps--color-primary.steps--custom-index .step span {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
   color: var(--color-white);
 }
 
 .steps--color-primary .steps__step {
-  border-inline-start: 2px solid var(--color-base);
+  border-inline-start: 2px solid var(--color-primary);
 }
 
-.steps--color-secondary .step::before {
+.steps--color-secondary .step::before,
+.steps--color-secondary.steps--custom-index .step span {
   background-color: var(--color-secondary);
   border: 2px solid var(--color-secondary);
   color: var(--color-white);
 }
 
 .steps--color-secondary .steps__step {
-  border-inline-start: 2px solid var(--color-base);
+  border-inline-start: 2px solid var(--color-secondary);
+}
+
+.steps__step:last-child {
+  border-inline-start: 2px solid transparent;
 }

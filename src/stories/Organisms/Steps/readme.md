@@ -14,12 +14,13 @@ Generate a numbered list of steps. Each step in a Steps list is comprised of a L
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
-  variant: "default",
+  variant: "default or custom-index",
   color: "default, warm, dark, primary, or secondary",
-  ...,
   steps: [
     {
+      index: "Up to four characters when using custom-index"
       label: "Must have a label for the step.",
       content: "Any rendered content or text can go here.
     },

@@ -31,3 +31,7 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 // Data comes from the Steps.data.js file.
 Default.args = data.default;
+
+export const CustomIndex = Template.bind({});
+// Data comes from the Steps.data.js file.
+CustomIndex.args = data.custom_index;
