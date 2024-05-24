@@ -27,9 +27,14 @@
     {# Use BEM syntax for styling classes on sub-components. #}
     <div class="steps__steps">
       {% for step in steps %}
+        {% set index_classes = [
+          step.index|length > 2 ? 'steps__index--small' : '',
+          variant != 'custom-index' ? 'sr-only' : '',
+        ] %}
+
         <div class="steps__step step">
           <{{ h }} class="step__label">
-            <span {% if variant != 'custom-index' %}class="sr-only"{% endif %}>
+            <span  class="{{ index_classes|join(' ') }}">
               {% if variant == 'custom-index' %}
                 {{ step.index }}
               {% else %}
