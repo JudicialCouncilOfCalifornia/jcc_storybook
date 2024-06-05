@@ -10,7 +10,8 @@
   .page__tabs+div,
   .footer,
   .shoe,
-  .share {
+  .share,
+  .drawer {
     display: none;
   }
 }
