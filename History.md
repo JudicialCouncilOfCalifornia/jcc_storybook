@@ -1,4 +1,16 @@
 
+0.55.33 / 2024-06-05
+===================
+
+  * chore: Export libs.
+  * rule-format style fix and moderation form fix
+  * Merge pull request #238 from JudicialCouncilOfCalifornia/bugfix/COURTS-114--custom-step-index-font-size-handling
+  * Merge pull request #239 from JudicialCouncilOfCalifornia/bugfix/DCAS-318--was-this-helpful-in-print-preview
+  * [DCAS-318] -- suppress was this helpful during print preview
+  * [COURTS-114] -- auto-size step index font
+  * Merge pull request #237 from JudicialCouncilOfCalifornia/feature/COURTS-13-no-results-message-styling
+  * [COURTS-13] -- templating
+
 0.55.32 / 2024-05-16
 ===================
 
