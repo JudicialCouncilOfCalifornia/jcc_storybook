@@ -135,7 +135,7 @@ div:is(.jcc-rulesformatting) table {
   width: 100%;
 }
 
-div:is(.body, .jcc-rulesformatting) table td,
+div:is(.jcc-rulesformatting) table td,
 div:is(.jcc-rulesformatting) table th {
   border: 0;
   padding: var(--s-6) var(--s-2);

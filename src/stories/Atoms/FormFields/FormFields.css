@@ -218,3 +218,6 @@ fieldset legend span {
   margin-block: 0;
   margin-inline-start: auto;
 }
+.entity-moderation-form .form-item-revision-log {
+  flex-grow: 1;
+}
