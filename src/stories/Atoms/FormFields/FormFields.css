@@ -39,6 +39,8 @@ select::-ms-expand {
   outline:0;
 }
 
+.placeholder-container.js-form-type-date input:focus ~ label,
+.placeholder-container.js-form-type-date input:not(:placeholder-shown) ~ label,
 .placeholder-container.js-form-type-textfield input:focus ~ label,
 .placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label,
 .placeholder-container.js-form-type-email input:focus ~ label,
@@ -54,6 +56,7 @@ select::-ms-expand {
   color: var(--accent-color);
 }
 
+.placeholder-container.js-form-type-date label,
 .placeholder-container.js-form-type-email label,
 .placeholder-container.js-form-type-textfield label,
 .placeholder-container.js-form-type-textarea label {
