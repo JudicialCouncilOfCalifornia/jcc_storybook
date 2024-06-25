@@ -15,6 +15,7 @@ docReady(function () {
   const animation_speed = mediaQuery.matches ? 0 : 200; 
 
   const summaries = Array.from(document.querySelectorAll('details summary'));
+  const accordions_items = Array.from(document.querySelectorAll('.accordion__items'));
   const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn.expand'));
   const closeallbtn = Array.from(document.querySelectorAll('.expand-all-btn.close'));
   if (expandallbtn.length === closeallbtn.length) {
@@ -45,6 +46,17 @@ docReady(function () {
       }
     });
   }
+
+  // Pre-open accordions
+  accordions_items.forEach(accordion_item => {
+    if (accordion_item.hasAttribute("open_on_load")) {
+      id_to_open = accordion_item.getAttribute('open_on_load');
+      openAccordion = document.getElementById(id_to_open);
+      if (openAccordion) {
+        openAccordion.closest('details').setAttribute('open','');
+      }
+    }
+  });
 
   summaries.forEach(summary => {
     // We only want to attach the click listener only to each details summary,
