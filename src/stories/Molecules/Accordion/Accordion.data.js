@@ -2,7 +2,7 @@ export default {
   default: {
     variant: "default",
     open_first: false,
-    open_on_load: "which_judicial_council_panel_oversees_the_court_interpreters_program",
+    open_on_load: "",
     expand_button: true,
     heading: 'This is a heading',
     lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
