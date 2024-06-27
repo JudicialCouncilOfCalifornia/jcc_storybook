@@ -20,7 +20,7 @@
   <div role="tablist" class="{{ tablist_classes|join(' ') }}">
     {% for item in items %}
       <button
-        id='{{ "tab-" ~ loop.index }}'
+        id="{{ item.id is not empty ? item.id : 'tab-' ~ loop.index }}"
         class="{{ loop.index == 1 ? 'active' : '' }}"
         type="button"
         role="tab"

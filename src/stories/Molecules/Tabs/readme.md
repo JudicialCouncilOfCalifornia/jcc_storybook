@@ -14,15 +14,18 @@ A Tabs component is made from an array of a label and rendered content elements.
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
     variant: "default" or "alternate"
     ...
     items: [
       {
+        id: "Text String",
         label: "Text String",
         content: "rendered content",
       },
       {
+        id: "Text String",
         label: "Text String",
         content: "rendered content",
       },
