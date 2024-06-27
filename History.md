@@ -1,4 +1,18 @@
 
+0.55.34 / 2024-06-27
+===================
+
+  * chore: Export libs.
+  * Merge pull request #242 from JudicialCouncilOfCalifornia/feature/COURTS-129--custom-tab-ids
+  * Merge pull request #243 from JudicialCouncilOfCalifornia/feature/DCAS-328-pre-open-accordions
+  * [DCAS-328] -- added js (1)
+  * [DCAS-328] -- added js
+  * [COURTS-129] -- improve tab & accordion item IDs
+  * Merge pull request #241 from JudicialCouncilOfCalifornia/feature/bef-update
+  * Merge pull request #240 from JudicialCouncilOfCalifornia/feature/COURTS-12-facilities
+  * [feature/bef_update] -- added css
+  * [COURTS-12] -- Fix for facilities view
+
 0.55.33 / 2024-06-05
 ===================
 
