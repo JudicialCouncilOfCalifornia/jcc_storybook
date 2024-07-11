@@ -54,6 +54,7 @@ docReady(function () {
       openAccordion = document.getElementById(id_to_open);
       if (openAccordion) {
         openAccordion.closest('details').setAttribute('open','');
+        openAccordion.scrollIntoView();
       }
     }
   });
