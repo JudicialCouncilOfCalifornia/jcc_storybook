@@ -1,4 +1,11 @@
 
+0.55.35 / 2024-07-16
+===================
+
+  * chore: Export libs.
+  * Merge pull request #244 from JudicialCouncilOfCalifornia/feature/courts-136-anchor-accordion-jump
+  * [COURTS-136] -- Fix for accordion scrolling into view issue.
+
 0.55.34 / 2024-06-27
 ===================
 
