@@ -18,11 +18,12 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-primary);
   font-weight: 400;
   color: var(--heading-color, inherit);
+  clear: both; 
 }
 
 h1 {
   font-size: var(--s4);
-  line-height: var(--s5);
+  line-height: var(--s5); 
 }
 
 h2 {
@@ -32,7 +33,7 @@ h2 {
 
 h3 {
   font-size: var(--s2);
-  line-height: var(--s3);
+  line-height: var(--s3); 
 }
 
 h4 {
