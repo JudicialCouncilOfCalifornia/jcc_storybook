@@ -1,4 +1,13 @@
 
+0.55.36 / 2024-08-02
+===================
+
+  * chore: Export libs.
+  * SidebarList heading correction and better data example
+  * Merge pull request #245 from JudicialCouncilOfCalifornia/COURTS-127-align-images
+  * [COURTS-127] -- Fix for align images.
+  * [COURTS-127] -- Fix for adding images in CK editor.
+
 0.55.35 / 2024-07-16
 ===================
 
