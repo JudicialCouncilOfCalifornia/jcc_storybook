@@ -1,20 +1,21 @@
 
 const date_one = {
   brow: "Date Issued",
-  heading: 'January 1, 2024',
+  heading: 'January 1, 2024<br/><small>11:00 AM</small>',
   attributes: [],
 }
 
 const date_two = {
   brow: "Questions and Answers",
-  heading: 'March 20, 2024 - September 7, 2024',
+  heading: "March 20, 2024<br/><small>11:00 AM</small> <br/>to<br/>September 7, 2024<br/><small>3:00 PM</small>",
   text: 'Questions regarding this RFP must be directed to solicitations@jud.ca.gov and must be received no later than September 7, 2022 by 3:00 p.m. Pacific Time',
   attributes: [],
 }
 
 const date_three = {
   brow: "Pre Conference",
-  heading: 'May 23, 2024',
+  heading: "May 23, 2024<br/>to<br/>May 30, 2024",
+  divider: '',
   links: [
     {
       title: 'Example link',

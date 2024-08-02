@@ -24,12 +24,14 @@
       {% if item.brow is not empty and variant == 'default' %}
         <h4 class="sidebar-list__item__brow">{{ item.brow }}</h4>
       {% endif %}
+      
       {% if item.heading is not empty and variant != 'primary' %}
-        <h4 class="sidebar-list__item__heading">{{ item.heading }}</h4>
+        <h5 class="sidebar-list__item__heading">{{ item.heading }}</h5>
       {% endif %}
       {% if item.heading is not empty and variant == 'primary' %}
-        <h3 class="sidebar-list__item__heading">{{ item.heading }}</h3>
+        <h4 class="sidebar-list__item__heading">{{ item.heading }}</h4>
       {% endif %}
+
       {% if item.date_info is not empty %}
         <h4 class="sidebar-list__item__date-info">{{ item.date_info }}</h4>
       {% endif %}
