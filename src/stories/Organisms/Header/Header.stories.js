@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./Header.data";
 import Header from "./Header.twig";
 import "./Header.css";
+import "./Header.js";
 
 export default {
   title: "Organisms/Header",

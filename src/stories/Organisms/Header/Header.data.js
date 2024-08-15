@@ -19,7 +19,7 @@ export default {
       },
       links: [
         {
-          text: "Simple Link",
+          text: "Courts",
           is_current: true,
           id: "nav-section-one",
           url: "#",
@@ -29,7 +29,7 @@ export default {
           },
         },
         {
-          text: "Up To Seven",
+          text: "Forms & Rules",
           links: [
             {
               text: "Navigation link 1",
@@ -66,7 +66,7 @@ export default {
           },
         },
         {
-          text: "More Than Seven",
+          text: "Opinions",
           links: [
             {
               text: "Navigation link 1",
@@ -121,7 +121,7 @@ export default {
           },
         },
         {
-          text: "Lots More",
+          text: "Programs",
           links: [
             {
               text: "Navigation link 1",
@@ -201,6 +201,15 @@ export default {
             url: "#",
           },
         },
+        {
+          text: "Policy & Administration",
+        },
+        {
+          text: "Reference",
+        },
+        {
+          text: "About",
+        }
       ],
       mobile_links: [
         {

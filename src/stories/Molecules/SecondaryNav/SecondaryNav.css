@@ -23,7 +23,9 @@
 .secondary-nav > ul > li a {
   display: block;
   border-inline-start: 1px solid transparent;
-  padding-inline: var(--s1);
+  padding-inline: var(--s-2);
+  font-family: var(--font-primary);
+  font-kerning: auto;
   line-height: 1em;
   color: var(--color, var(--color-base-dark-x));
   text-decoration: none;
