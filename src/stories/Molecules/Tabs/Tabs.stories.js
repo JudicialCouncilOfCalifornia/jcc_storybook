@@ -16,10 +16,6 @@ export default {
       table: {disable: true},
       control: {type: null},
     },
-    items: {
-      table: {disable: true},
-      control: {type: null},
-    },
   },
 };
 
