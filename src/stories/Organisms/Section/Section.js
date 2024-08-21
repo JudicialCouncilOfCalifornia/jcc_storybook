@@ -44,27 +44,25 @@ function adjustSubcomponents(subcomponents, type) {
 }
 
 docReady(function () {
-  // Select sections that require auto-adjusting headings.
-  const headingsAdjust = ".headings-mgt";
-  const sectionsWithHeadingMgt = document.querySelectorAll(headingsAdjust);
+  // Select parent sections that require auto-adjusting sub-headings.
+  const parentSection = document.querySelectorAll('.section');
   // Select cards.
   const cards = document.querySelectorAll(".cards");
 
   // Adjust subcomponent headings if parent section has H2.
-  if (sectionsWithHeadingMgt.length > 0) {
-    sectionsWithHeadingMgt.forEach(function(section) {
-      if (!section.classList.contains('headings-adjusted')) {
-        let sectionHeading = section.querySelector(headingsAdjust + " > .section__content > .container > .section__header");
-        let sectionHeadingTagName = sectionHeading ? sectionHeading.querySelector('h1, h2').tagName : null;
+  if (parentSection.length > 0) {
+    // Target subcomponents.
+    const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs";
 
-        // Apply to library components only.
-        if (sectionHeading && sectionHeadingTagName !== 'H1') {
-          const componentIds = ".accordion, .action-list, .cards, .steps, .teaser-list, .profile-cards, .view-results";
-          let subcomponents = section.querySelectorAll(componentIds);
-          adjustHeadings(subcomponents);
-          // Since scripts can execute per component instance, flag parent as processed.
-          section.classList.add('headings-adjusted');
-        }
+    parentSection.forEach(function(section) {
+      // Determine if parent section heading exists.
+      let sectionHeading = section.querySelector(".section:first-child > .section__content > .container > .section__header");
+      let sectionHeadingTagName = sectionHeading ? sectionHeading.querySelector('h1, h2').tagName : null;
+
+      // Adjust relevant subcomponents headings as needed.
+      if (sectionHeadingTagName && sectionHeadingTagName !== 'H1') {
+        let subcomponents = section.querySelectorAll(componentIds);
+        adjustHeadings(subcomponents);
       }
     });
   }

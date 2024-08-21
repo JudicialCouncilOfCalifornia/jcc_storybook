@@ -13,6 +13,10 @@ import { Default as TeaserListDefault } from "../../Organisms/TeaserPlusList/Tea
 import ViewResults from "../../Organisms/ViewResults/ViewResults.twig";
 import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewResults.stories";
 
+
+import Body from "../../Molecules/Body/Body.twig";
+import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
+
 export default {
   default: {
     variant: "default",
@@ -149,7 +153,6 @@ export default {
   },
   auto_adjusting_headings: {
     variant: "default",
-    section_classes: ["headings-mgt"],
     sub_component_layout: 'stack',
     brow_data: {
       variant: "heading",
@@ -169,6 +172,9 @@ export default {
       }),
       ActionList({
         ...ActionListDefault.args
+      }),
+      Body({
+        ...BodyDefault.args
       }),
       Cards({
         ...CardsStriped.args,
