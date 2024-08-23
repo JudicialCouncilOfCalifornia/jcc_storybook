@@ -1,15 +1,67 @@
 .header {
-  /* box-shadow: 4px 4px 10px 2px #aaa3; */
   position: relative;
   z-index: 3;
 }
 
-.header .box .container > * + * {
-  margin-block-start: var(--s0);
+.header > .container > * + * {
+  margin-block-start: var(--s-2);
 }
 
-.header__secondary-nav {
+.header > .container > .box {
+  padding-block: var(--s-2);
+}
+
+/* .header > .container > .header__upper.box {
+  padding-block-end: 0;
+} */
+
+/* .header > .container > .header__upper.box.wrapping {
+  padding-block-end: var(--s-3);
+} */
+.header .cluster {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.header .site-branding.cluster {
+  align-items: center;
+}
+
+.header .header-search {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.header .header__upper .header-search .header-search__form {
+  max-width: 40ch;
+}
+
+.header .header-search .header-search__form input,
+.header .header-search .header-search__form button {
+  align-self: center;
+}
+
+.header .header__secondary {
+  margin-inline-start: auto;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-grow: 1;
+  gap: var(--s-2);
+}
+
+.header .header__secondary-nav {
   gap: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* margin-inline-end: var(--s0); */
+}
+
+.header .header__secondary.cluster.wrapping {
+  height: 0;
+  min-height: 0;
+  max-height: 0;
 }
 
 .header__secondary-nav.cluster {
@@ -31,17 +83,11 @@
 }
 
 .header .secondary-nav a {
+  --gap: var(--s-2);
   --color: var(--color-base-dark-x);
   --accent-color: var(--color-base);
   font-size: var(--s-1);
-}
-
-.header .cluster {
-  justify-content: space-between;
-}
-
-.header .primary-nav__hamburger {
-  margin-block-start: -3rem;
+  line-height: var(--s-1);
 }
 
 /* BEGIN Translate */
@@ -78,5 +124,174 @@
   appearance: auto;
   font-size: 12px;
 }
-/* END */
 
+.header .wrapping .header__secondary {
+  display: none;
+}
+
+.header .primary-nav {
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.header .header__upper.wrapping ~ .header__lower .primary-nav__desktop {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header__upper.wrapping + .header__lower .primary-nav .reel + .primary-nav__mobile-wrapper,
+.header .header__upper.wrapping ~ .header__lower .primary-nav__mobile-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header .container:has(.header__upper.wrapping) .primary-nav__mobile-wrapper > label {
+  position: absolute;
+  top: -3.75rem;
+  padding: var(--s0);
+}
+
+.header > .container > .header__lower {
+  margin-block-start: 0;
+}
+
+.header .header__upper.box {
+  padding: var(--s-3) var(--s1) var(--s-3);
+}
+
+.header .header__lower.box {
+  padding: 0 var(--s1) 0;
+}
+
+/* Hide the header lower if the header upper triggers */
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower,
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower * {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+}
+
+/* Hide the header upper if the header lower triggers */
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary,
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary * {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+}
+
+/* Hide mobile menu section by default */
+.header__mobile {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+  display: none;
+}
+
+/* Show the mobile menu section if header lower or header upper triggers */
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__mobile,
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__mobile {
+  height: unset;
+  max-height: unset;
+  min-height: unset;
+  padding: unset;
+  visibility: visible;
+  display: block;
+}
+
+/* Header hamburger navigation toggle  */
+:root {
+  --bar-width: 2rem;
+  --bar-height: 5px;
+  --hamburger-gap: 4px;
+  --foreground: var(--color);
+  --background: var(--color);
+  --hamburger-margin: 6px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu-trigger {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu-trigger::before,
+.hamburger-menu-trigger::after,
+.hamburger-menu-trigger input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu-trigger input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+  border: none
+}
+
+.hamburger-menu-trigger:has(input:focus-visible)::before,
+.hamburger-menu-trigger:has(input:focus-visible)::after,
+.hamburger-menu-trigger input:focus-visible {
+  outline: 1px solid var(--foreground);
+  outline-offset: 0;
+}
+
+.hamburger-menu-trigger:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu-trigger:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu-trigger input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+/* Position the hamburger menu trigger into the right place in the header */
+.header__mobile .hamburger-menu-trigger {
+  position: absolute;
+  padding: var(--s-2);
+  top: var(--s0);
+  right: var(--s-4);
+}
+
+.hamburger-menu-trigger:has(input:not(:checked)) + div {
+  display: none;
+  visibility: hidden;
+}
+
+/* Show the mobile nav block once the hamburger trigger is checked */
+.hamburger-menu-trigger:has(input:checked) + div {
+  display: block;
+  visibility: visible;
+}

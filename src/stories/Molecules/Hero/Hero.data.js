@@ -5,8 +5,7 @@ export default {
     accent_color: false,
     content_bg_color: false,
     bg_tint: "base-dark-x",
-    background_image_url:
-      "https://source.unsplash.com/random/900×700/?building",
+    background_image_url: "https://picsum.photos/id/41/900/500",
     card_data: {
       variant: "default",
       first_component: true,
@@ -26,8 +25,7 @@ export default {
     accent_color: false,
     content_bg_color: false,
     bg_tint: "base-dark-x",
-    background_image_url:
-      "https://source.unsplash.com/random/900×700/?building",
+    background_image_url: "https://picsum.photos/id/41/900/500",
     card_data: {
       variant: "default",
       first_component: true,
@@ -129,7 +127,7 @@ export default {
     accent_color: "primary-dark-x",
     content_bg_color: "white",
     bg_tint: false,
-    background_image_url: "https://source.unsplash.com/random/900×700/?books",
+    background_image_url: "https://picsum.photos/id/41/900/500",
     first_component: true,
     card_data: {
       variant: "default",

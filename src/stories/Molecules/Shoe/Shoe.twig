@@ -9,19 +9,17 @@
   variant_class,
 ] %}
 
-	<div class="{{ classes|join(' ') }}"> <div class="box">
+<div class="{{ classes|join(' ') }}">
+  <div class="box">
 		<div class="container">
-			<div class="cluster">
+			<div class="cluster detect-wrap detect-wrap--observed">
 				{% if global_branding_data is not empty %}
 					{% include "@atoms/GlobalBranding/GlobalBranding.twig" with global_branding_data %}
 				{% endif %}
-				<div class="cluster">
-					{% if secondary_nav_data is not empty %}
-						{% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
-					{% endif %}
-					<p>&copy;
-						{{ "now"|date("Y") }}</p>
-				</div>
+				{% if secondary_nav_data is not empty %}
+					{% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+				{% endif %}
+				<p>&copy; {{ "now"|date("Y") }}</p>
 			</div>
 		</div>
 	</div>

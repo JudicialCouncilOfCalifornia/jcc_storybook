@@ -1,0 +1,103 @@
+/* Alternate style */
+.secondary-nav--alternate,
+.secondary-nav--alternate-with-divider {
+  border-block: 1px solid var(--color-base-light-x);
+}
+
+.secondary-nav--alternate > ul,
+.secondary-nav--alternate-with-divider > ul {
+  padding-inline: 0;
+}
+
+.secondary-nav--alternate > ul > li,
+.secondary-nav--alternate-with-divider > ul > li {
+  padding-block: 0;
+}
+
+.secondary-nav--alternate > ul > li a,
+.secondary-nav--alternate-with-divider > ul > li a {
+  padding: var(--s-1) var(--s-2);
+  font-size: calc(var(--s-1));
+  font-weight: 500;
+  line-height: normal;
+}
+
+.secondary-nav--alternate ul li:first-of-type a,
+.secondary-nav--alternate-with-divider ul li:first-of-type a {
+  padding-inline-start: var(--s-2);
+}
+
+.secondary-nav--alternate ul li:last-of-type a,
+.secondary-nav--alternate-with-divider ul li:last-of-type a {
+  padding-inline-end: var(--s-2);
+}
+
+.secondary-nav--alternate > ul > li:hover a,
+.secondary-nav--alternate > ul > li:focus-within a,
+.secondary-nav--alternate-with-divider > ul > li:hover a,
+.secondary-nav--alternate-with-divider > ul > li:focus-within a {
+  color: var(--color-white);
+  background-color: var(--color-primary-light-x);
+  outline: 0;
+}
+
+.secondary-nav--alternate > ul > li a:hover,
+.secondary-nav--alternate-with-divider > ul > li a:hover {
+  opacity: 1;
+}
+
+.secondary-nav--alternate ul li a.active, 
+.secondary-nav--alternate ul li.active a,
+.secondary-nav--alternate-with-divider ul li a.active, 
+.secondary-nav--alternate-with-divider ul li.active a {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark-x);
+}
+
+.secondary-nav--alternate .reel.overflowing > li > a,
+.secondary-nav--alternate .reel.overflowing > li:hover > a,
+.secondary-nav--alternate .reel.overflowing > li:focus-within > a,
+.secondary-nav--alternate .reel.overflowing > li > a:hover,
+.secondary-nav--alternate .reel.overflowing > li > a:focus,
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li:hover > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li:focus-within > a,
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a:hover,
+.secondary-nav--alternate-with-divider .reel.overflowing > li > a:focus {
+  width: 100%;
+  padding-inline: var(--s0);
+}
+
+/* Specific changes for "Alternate style - with divider"*/
+.secondary-nav--alternate-with-divider > ul > li + li a {
+  border-inline-start: 1px solid var(--color-base-light-x);
+}
+
+/* .secondary-nav--alternate-with-divider > ul.reel.overflowing > li + li a {
+  border-block-start: 1px solid var(--color-base-light-x);
+} */
+
+.secondary-nav--alternate-with-divider > ul > li:focus-within a {
+  box-shadow: inset 0px 0px 0px 3px var(--accent-color);
+  outline: 0;
+}
+
+.secondary-nav--alternate .secondary-nav__label,
+.secondary-nav--alternate-with-divider .secondary-nav__label {
+  font-size: var(--s1);
+  color: var(--color-primary-dark-x);
+  padding-block: var(--s-4);
+  display: flex;
+  align-items: center;
+}
+
+.secondary-nav--alternate.wrapping .secondary-nav__label,
+.secondary-nav--alternate-with-divider.wrapping .secondary-nav__label {
+  padding-block: var(--s-4);
+}
+
+.secondary-nav--alternate.wrapping > ul.secondary-nav__list,
+.secondary-nav--alternate-with-divider.wrapping > ul.secondary-nav__list {
+  border-block-start: 1px solid var(--color-base-light-x);
+  width: 100%;
+}

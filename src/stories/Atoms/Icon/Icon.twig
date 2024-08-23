@@ -9,9 +9,10 @@
 {# Include variant classes form above. #}
 {% set classes = [
   'icon-wrapper',
+  'icon-wrapper--' ~ icon,
 ] %}
 
-<div class="{{ classes|join(' ') }}" style=" {{ variant_styles|join }} ">
+<div class="{{ classes|join(' ') }}" {% if variant_styles %}style=" {{ variant_styles|join }} "{% endif %}>
 	<svg class="icon" aria-labelledby="{{ id }}"> 
 	 {% if title %}
 		<title id="{{ id }}">{{ title }}</title>

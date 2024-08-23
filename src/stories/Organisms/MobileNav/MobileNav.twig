@@ -1,0 +1,55 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'mobile-nav--' ~ variant : 'mobile-nav--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'mobile-nav',
+  variant_class,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+
+  {% if search_form %}
+    {% include "@molecules/HeaderSearch/HeaderSearch.twig" with search_form %}
+  {% endif %}
+
+  <ul class="stack mobile-nav__primary-nav__group-list nav-level-1" role="navigation" {% if primary_nav_data.show_label %} aria-labelledby="{{ nav_id }}" {% elseif primary_nav_data.label %} aria-label="{{ primary_nav_data.label }}" {% endif %}>
+    {% for i,link in primary_nav_data.links %}
+      {% set parent = link.links is not empty ? true : false %}
+      <li class="mobile-nav__primary-nav__group">
+        
+        {% if parent %}
+          <button class="button mobile-nav__button mobile-nav__primary-nav__button">
+            {{ link.text }}
+            {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
+          </button>
+        {% else %}
+          {{ link(link.text, link.url, {class: ['link mobile-nav__button mobile-nav__primary-nav__button ']}) }}
+        {% endif %}
+        
+        {% if link.links is not empty %}
+          {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
+          <ul class="mobile-nav__primary-nav__list nav-level-2 box {{ mega }}">
+            {% for link2 in link.links %}
+              <li class="mobile-nav__primary-nav__list__item">
+                {% set overview_link_class = link2.is_overview_link ? 'link mobile-nav__primary-nav__overview-link' : 'link mobile-nav__primary-nav__link' %}
+                {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="stack mobile-nav__secondary-nav__list nav-level-1" role="navigation" {% if secondary_nav_data.show_label %} aria-labelledby="{{ nav_id }}" {% elseif secondary_nav_data.label %} aria-label="{{ secondary_nav_data.label }}" {% endif %}>
+    {% for i,link in secondary_nav_data.links %}
+    <li class="mobile-nav__secondary-nav__list__item">
+      {{ link(link.text, link.url, {class: ['mobile-nav__secondary-nav__button link']}) }}
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>

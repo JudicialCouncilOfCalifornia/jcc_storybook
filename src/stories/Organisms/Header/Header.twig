@@ -10,28 +10,45 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  <div class="box">
+  
+  <div class="header__upper box">
     <div class="container">
-      {% if secondary_nav_data is not empty or translate %}
-        <div class="header__secondary">
-          <div class="header__secondary-nav cluster detect-wrap detect-wrap--observed">
+      <div class="cluster detect-wrap detect-wrap--observed">
+        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
+        {% if secondary_nav_data is not empty or translate or header_search_data %}
+          <div class="header__secondary cluster detect-wrap detect-wrap--observed">
+            {% if header_search_data %}
+              {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
+            {% endif %}
             {% if translate %}
               <div class="header__secondary__translate">
-                {% for feature in translate %}
-                  {{ feature }}
-                {% endfor %}
+              {% for feature in translate %}
+                {{ feature }}
+              {% endfor %}
               </div>
             {% endif %}
             {% if secondary_nav_data is not empty %}
-              {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+              <div class="header__secondary-nav">
+                {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+              </div>
             {% endif %}
           </div>
-        </div>
-      {% endif %}
-      <div class="cluster">
-        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
-        {% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
+        {% endif %}
       </div>
     </div>
   </div>
+
+  <div class="header__lower box">
+    <div class="container">
+      {% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
+    </div>
+  </div>
+
+  <div class="header__mobile">
+    <label class="hamburger-menu-trigger">
+      <input type="checkbox" />
+    </label>
+    {% include "@organisms/MobileNav/MobileNav.twig" with mobile_nav_data %}
+  </div>
+
 </div>

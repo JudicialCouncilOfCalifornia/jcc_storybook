@@ -4,5 +4,14 @@
 
 .footer .cluster {
   justify-content: space-between;
+  align-items: stretch;
 }
 
+.footer .site-branding.cluster {
+  align-items: center;
+}
+
+.footer  .secondary-nav {
+  display: flex;
+  align-items: center;
+}

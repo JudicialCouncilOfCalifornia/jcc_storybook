@@ -5,32 +5,36 @@
 .secondary-nav ul {
   list-style: none;
   justify-content: flex-start;
+  padding-inline: 0;
 }
 
 .secondary-nav ul li {
   display: flex;
-  padding-block: var(--s-6);
 }
 
-.secondary-nav ul li:first-of-type a {
+/* .secondary-nav ul li:first-of-type a {
   padding-inline-start: 0;
 }
 
 .secondary-nav ul li:last-of-type a {
   padding-inline-end: 0;
-}
+} */
 
-.secondary-nav > ul > li a {
-  display: block;
-  border-inline-start: 1px solid transparent;
-  padding-inline: var(--s1);
-  line-height: 1em;
+.secondary-nav > ul > li > a {
+  --gap: var(--s-1);
+  /* display: block; */
+  /* border-inline-start: 1px solid transparent; */
+  padding-inline: var(--gap, var(--s1));
+  /* line-height: 1em; */
   color: var(--color, var(--color-base-dark-x));
   text-decoration: none;
+  font-size: var(--s-1);
 }
 
 .secondary-nav > ul > li a:focus-visible {
-  outline-offset: 3px;
+  padding-block: 2px;
+  outline-width: 2px;
+  outline-offset: -1px;
 }
 
 .secondary-nav > ul > li a:hover {
@@ -46,11 +50,26 @@
   padding: 0;
 }
 
-/* Variants */
+/** 
+ * Variants 
+ */
+
+/* Has label */
+.secondary-nav--has-label {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.secondary-nav .secondary-nav__label,
+.secondary-nav .secondary-nav__label {
+  color: var(--color-base);
+  display: flex;
+  align-items: center;
+}
 
 /* With Divider */
 .secondary-nav--with-divider > ul > li + li a {
-  border-inline-start: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--color-base);
 }
 
 /* Stack Overflowing */
@@ -77,120 +96,28 @@
 /* Display: none; breaks the JS resize observer so it will not re-appear. */
 /* Reduce the element dimensions to 0 instead. Width remains for observer. */
 .secondary-nav--overflowing-hidden .reel.overflowing {
-  --gap: 0;
+  /* --gap: 0; */
   height: 0;
   padding: 0;
   margin: 0;
 }
 
-/* Alternate style */
-.secondary-nav--alternate {
-  border-block: 1px solid var(--color-base-light-x);
+/* Stacked */
+.secondary-nav--stacked {
+  --gap: var(--s-1);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.secondary-nav--alternate > ul > li {
-  padding-block:0;
+.secondary-nav--stacked.secondary-nav--has-label {
+  flex-direction: column;
 }
 
-.secondary-nav--alternate > ul > li a {
-  padding-block: var(--s1);
-  padding-inline: var(--s0);
-  font-size: calc(var(--s0) - 2px);
-  font-weight: 600;
+.secondary-nav--stacked.secondary-nav--has-label .secondary-nav__list {
+  margin-block-start: 0;
 }
 
-.secondary-nav--alternate ul li:first-of-type a {
-  padding-inline-start: var(--s0);
-}
-
-.secondary-nav--alternate ul li:last-of-type a {
-  padding-inline-end: var(--s0);
-}
-
-.secondary-nav--alternate > ul > li:hover a,
-.secondary-nav--alternate > ul > li:focus-within a {
-  color: var(--color-white);
-  background-color: var(--color-primary-light-x);
-  outline: 0;
-}
-
-.secondary-nav--alternate > ul > li a:hover {
-  opacity: 1;
-}
-
-.secondary-nav--alternate ul li a.active, 
-.secondary-nav--alternate ul li.active a {
-  color: var(--color-white);
-  background-color: var(--color-primary-dark-x);
-}
-
-.secondary-nav--alternate .reel.overflowing > li > a,
-.secondary-nav--alternate .reel.overflowing > li:hover > a,
-.secondary-nav--alternate .reel.overflowing > li:focus-within > a,
-.secondary-nav--alternate .reel.overflowing > li > a:hover,
-.secondary-nav--alternate .reel.overflowing > li > a:focus {
-  width: 100%;
-  padding-inline: var(--s0);
-}
-
-/* Alternate style - with divider*/
-.secondary-nav--alternate-with-divider {
-  border-block: 1px solid var(--color-base-light-x);
-}
-
-.secondary-nav--alternate-with-divider > ul > li {
-  padding-block:0;
-}
-
-.secondary-nav--alternate-with-divider > ul > li a {
-  padding-block: var(--s1);
-  padding-inline: var(--s0);
-  font-size: calc(var(--s0) - 2px);
-  font-weight: 600;
-}
-
-.secondary-nav--alternate-with-divider ul li:first-of-type a {
-  padding-inline-start: var(--s0);
-}
-
-.secondary-nav--alternate-with-divider ul li:last-of-type a {
-  padding-inline-end: var(--s0);
-}
-
-.secondary-nav--alternate-with-divider > ul > li:hover a {
-  color: var(--color-white);
-  background-color: var(--color-primary-light-x);
-  outline: 0;
-}
-
-.secondary-nav--alternate-with-divider ul li a.active, 
-.secondary-nav--alternate-with-divider ul li.active a {
-  color: var(--color-white);
-  background-color: var(--color-primary-dark-x);
-}
-
-.secondary-nav--alternate-with-divider > ul > li a:hover {
-  opacity: 1;
-}
-
-.secondary-nav--alternate-with-divider > ul > li + li a {
-  border-inline-start: 1px solid var(--color-base-light-x);
-}
-
-.secondary-nav--alternate-with-divider .reel.overflowing > li > a,
-.secondary-nav--alternate-with-divider .reel.overflowing > li:hover > a,
-.secondary-nav--alternate-with-divider .reel.overflowing > li:focus-within > a,
-.secondary-nav--alternate-with-divider .reel.overflowing > li > a:hover,
-.secondary-nav--alternate-with-divider .reel.overflowing > li > a:focus {
-  width: 100%;
-  padding-inline: var(--s0);
-}
-
-.secondary-nav--alternate-with-divider > ul.reel.overflowing > li + li a {
-  border-block-start: 1px solid var(--color-base-light-x);
-}
-
-.secondary-nav--alternate-with-divider > ul > li:focus-within a {
-  box-shadow: inset 0px 0px 0px 3px var(--accent-color);
-  outline: 0;
+.secondary-nav--stacked .secondary-nav__list > li > a {
+  --gap:0;
 }

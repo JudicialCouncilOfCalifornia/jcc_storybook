@@ -1,6 +1,5 @@
+import * as data from "../../Data/DefaultData.data";
+
 export default {
-  default: {
-    text: "Judicial Branch of California",
-    destination: "https://courts.ca.gov",
-  },
+  default: data.global_branding_data,
 };

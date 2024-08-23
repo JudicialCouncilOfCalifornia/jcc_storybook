@@ -10,13 +10,19 @@
   variant_class,
 ] %}
 
-{% if form is not empty %}
-	<div class="{{ classes|join(' ') }}"> {% if variant != "no-toggle" %}
-		<div class="header-search__search-toggle">
-			<span class="header-search__search-line"></span>
-			<span class="header-search__search-circle"></span>
-		</div>
-	{% endif %}
-	{{ form }}
+{% if add_wrapper %}<div class="header-search__wrapper">{% endif %}
+  {% if variant != "no-toggle" %}
+  <label class="search-toggle">
+    <span class="sr-only">{{ 'Toggle search form and secondary navigation'|t }}</span>
+    <input type="checkbox" />
+    {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-search'} %}
+    {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-close'} %}
+  </label>
+  {% endif %}
+
+  {% if form is not empty %}
+  <div class="{{ classes|join(' ') }}">
+    {{ form }}
 	</div>
-{% endif %}
+  {% endif %}
+{% if add_wrapper %}</div>{% endif %}

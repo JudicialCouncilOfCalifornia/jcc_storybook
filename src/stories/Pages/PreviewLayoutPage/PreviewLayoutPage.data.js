@@ -1,249 +1,49 @@
-import logo from "../../Atoms/SiteBranding/Council-Logo.svg";
 import Card from "../../Molecules/Card/Card.twig";
 import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
+
+// Default data for this page.
+import * as data from "../../Data/DefaultData.data";
 
 export default {
   default: {
     hat: {
       variant: "default",
-      global_branding_data: {
-        text: "Judicial Branch of California",
-        destination: "https://courts.ca.gov",
-      },
+      global_branding_data: data.global_branding_data,
       secondary_nav_data: {
         variant: "",
         overflowing_variant: "hidden",
-        links: [
-          {
-            text: "Supreme Court",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Courts of Appeal",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Superior Courts",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Judicial Council",
-            url: "#",
-            is_current: false,
-          },
-        ],
+        links: data.hat_secondary_nav_links_data,
       },
     },
     header: {
       variant: "default",
-      site_branding_data: {
-        variant: "default",
-        logo: logo,
-        label: "California Courts",
-        sub_label: "Language Access",
-      },
+      site_branding_data: data.site_branding_data,
       primary_nav_data: {
-        links: [
-          {
-            text: "Language Access Information",
-            is_current: true,
-            id: "nav-section-one",
-            links: [
-              {
-                text: "Navigation link 1",
-                url: "#",
-              },
-              {
-                text: "Navigation link 2",
-                url: "#",
-              },
-              {
-                text: "Navigation link 3",
-                url: "#",
-              },
-              {
-                text: "Navigation link 4",
-                url: "#",
-              },
-              {
-                text: "Navigation link 5",
-                url: "#",
-              },
-              {
-                text: "Navigation link 6",
-                url: "#",
-              },
-              {
-                text: "Navigation link 7",
-                url: "#",
-              },
-            ],
-            section_link: {
-              text: "Language Access Information",
-              url: "#",
-            },
-          },
-          {
-            text: "Court Interpreters",
-            links: [
-              {
-                text: "Navigation link 1",
-                url: "#",
-              },
-              {
-                text: "Navigation link 2",
-                url: "#",
-              },
-              {
-                text: "Navigation link 3",
-                url: "#",
-              },
-              {
-                text: "Navigation link 4",
-                url: "#",
-              },
-              {
-                text: "Navigation link 5",
-                url: "#",
-              },
-              {
-                text: "Navigation link 6",
-                url: "#",
-              },
-              {
-                text: "Navigation link 7",
-                url: "#",
-              },
-            ],
-            section_link: {
-              text: "Navigation link",
-              url: "#",
-            },
-          },
-          {
-            text: "Become a Court Intrepreter",
-            url: "#",
-          },
-          {
-            text: "About",
-            links: [
-              {
-                text: "Navigation link 1",
-                url: "#",
-              },
-              {
-                text: "Navigation link 2",
-                url: "#",
-              },
-              {
-                text: "Navigation link 3",
-                url: "#",
-              },
-              {
-                text: "Navigation link 4",
-                url: "#",
-              },
-              {
-                text: "Navigation link 5",
-                url: "#",
-              },
-              {
-                text: "Navigation link 6",
-                url: "#",
-              },
-              {
-                text: "Navigation link 7",
-                url: "#",
-              },
-              {
-                text: "Navigation link 8",
-                url: "#",
-              },
-              {
-                text: "Navigation link 9",
-                url: "#",
-              },
-              {
-                text: "Navigation link 10",
-                url: "#",
-              },
-              {
-                text: "Navigation link 11",
-                url: "#",
-              },
-              {
-                text: "Navigation link 12",
-                url: "#",
-              },
-              {
-                text: "Navigation link 13",
-                url: "#",
-              },
-              {
-                text: "Navigation link 14",
-                url: "#",
-              },
-              {
-                text: "Navigation link 15",
-                url: "#",
-              },
-              {
-                text: "Navigation link 16",
-                url: "#",
-              },
-              {
-                text: "Navigation link 17",
-                url: "#",
-              },
-              {
-                text: "Navigation link 18",
-                url: "#",
-              },
-            ],
-            section_link: {
-              text: "Navigation link",
-              url: "#",
-            },
-          },
-        ],
+        links: data.default_primary_nav_links_data,
       },
       secondary_nav_data: {
         variant: "with-divider",
         overflowing_variant: "hidden",
-        links: [
-          {
-            text: "Search for an Interpreter",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Questions?",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Complaints",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Contact Us",
-            url: "#",
-            is_current: false,
-          },
-        ],
+        links: data.default_secondary_links_data,
       },
       header_search_data: {
         variant: "default",
-        form: "<form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
+        form: data.header_search_form_data,
       },
-      header_search_data_duplicate: {
-        variant: "no-toggle",
-        form: "<form action='/search2' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label><input id='header-search' type='search' name='search' placeholder='Search' /><button class='header-search__icon' type='submit'><span class='header-search__search-line'></span><span class='header-search__search-circle'></span><span class='sr-only'>Search</span></button></form>",
+      mobile_nav_data: {
+        primary_nav_data: {
+          links: data.default_mobile_nav_primary_nav_links_data,
+        },
+        secondary_nav_data: {
+          variant: "stacked",
+          overflowing_variant: "",
+          links: data.default_mobile_nav_secondary_nav_links_data,
+        },
+        search_form: {
+          variant: "no-toggle",
+          form: data.mobile_search_form_data,
+        },
       },
     },
     hero: {
@@ -251,7 +51,7 @@ export default {
       content_justify: "left",
       bg_tint: false,
       background_image_url:
-        "https://source.unsplash.com/random/900×500/?images",
+        "https://picsum.photos/id/41/900/500",
       card_data: {
         variant: "default",
         first_component: true,
@@ -501,7 +301,8 @@ export default {
       ],
       section_classes: ["cards"],
     },
-    section_5: {first_component: false,
+    section_5: {
+      first_component: false,
       variant: "white",
       card_variant: "",
       sub_component_layout: "stack",     
@@ -587,72 +388,22 @@ export default {
       ],
     }),
   ]
-},
+    },
     footer: {
-      site_branding_data: {
-        variant: "default",
-        logo: logo,
-        label: "California Courts",
-        sub_label: "Language Access",
-      },
+      site_branding_data: data.site_branding_data,
       secondary_nav_data: {
         variant: "default",
         overflowing_variant: "stack",
-        links: [
-          {
-            text: "Careers",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Contact Us",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Accessibility",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Public Access to Records",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Disclaimer",
-            url: "#",
-            is_current: false,
-          },
-        ],
+        links: data.default_secondary_links_long_data,
       },
     },
     shoe: {
       variant: "default",
-      global_branding_data: {
-        text: "Judicial Branch of California",
-        destination: "https://courts.ca.gov",
-      },
+      global_branding_data: data.global_branding_data,
       secondary_nav_data: {
-        variant: "",
-        overflowing_variant: "stack",
-        links: [
-          {
-            text: "Contact Us",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Privacy",
-            url: "#",
-            is_current: false,
-          },
-          {
-            text: "Terms Of Use",
-            url: "#",
-            is_current: false,
-          },
-        ],
+        variant: "default",
+        overflowing_variant: "",
+        links: data.shoe_secondary_nav_links_data,
       },
     },
   },

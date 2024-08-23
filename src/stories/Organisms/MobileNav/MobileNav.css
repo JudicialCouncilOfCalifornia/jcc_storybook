@@ -1,0 +1,150 @@
+.mobile-nav {
+  /* background-color: var(--color-white); */
+  background-color: var(--color-base-light-xxx);
+  box-shadow: 0px 7px 10px 1px #0003;
+}
+
+ul.mobile-nav__primary-nav__group-list {
+  padding: 0;
+  list-style: none;
+  background-color: var(--color-white);
+}
+
+li.mobile-nav__primary-nav__group {
+  padding: 0;
+  border-radius: 0;
+  --gap: 0;
+}
+
+li.mobile-nav__primary-nav__group:focus-within button {
+  background-color: var(--color-accent-warm-light-xxxx);
+  color: var(--accent-color);
+}
+
+button.mobile-nav__primary-nav__button,
+a.mobile-nav__primary-nav__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: var(--s-1) var(--s1);
+  font-size: var(--s-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: var(--s0);
+  color: var(--color-base-dark-xxx);
+  text-decoration: none;
+}
+
+button.mobile-nav__primary-nav__button {
+  cursor: pointer;
+}
+
+button.mobile-nav__primary-nav__button:hover {
+  cursor: pointer;
+  background-color: var(--color-accent-warm-light-xxxx)
+}
+
+button.mobile-nav__primary-nav__button::after,
+a.mobile-nav__primary-nav__button::after {
+  display: none;
+}
+
+button.mobile-nav__primary-nav__button:hover,
+a.mobile-nav__primary-nav__button:hover,
+button.mobile-nav__primary-nav__button:focus,
+a.mobile-nav__primary-nav__button:focus-within {
+  border: none;
+  /* outline: 2px solid var(--accent-color); */
+  outline: 0;
+  border-radius: 0;
+  color: var(--accent-color);
+}
+
+button.mobile-nav__primary-nav__button .icon-wrapper,
+a.mobile-nav__primary-nav__button .icon-wrapper {
+  width: var(--s0);
+  height: var(--s0);
+  color: var(--color-base-dark-x);
+  border-radius: 0;
+  pointer-events: none;
+}
+
+ul.mobile-nav__primary-nav__list {
+  /* display: none; */
+  /* visibility: hidden; */
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+}
+
+li.mobile-nav__primary-nav__group ul.mobile-nav__primary-nav__list:focus-within,
+li.mobile-nav__primary-nav__group .mobile-nav__button.open + ul.mobile-nav__primary-nav__list {
+  /* display: block; */
+  /* visibility: visible; */
+  opacity: 1;
+  height: auto;
+  max-height: unset;
+  min-height: unset;
+  list-style: none;
+  padding-inline: var(--s1);
+  padding-block: 0;
+}
+
+ul.mobile-nav__primary-nav__group-list li + li .mobile-nav__button {
+  border-block-start: 1px dashed var(--color-base-dark-x);
+}
+
+ul.mobile-nav__primary-nav__group-list li button.mobile-nav__primary-nav__button.open {
+  border-block-end: 1px dashed var(--color-base-dark-x);
+}
+
+a.mobile-nav__primary-nav__link {
+  padding: var(--s-6) var(--s1);
+  gap: 0;
+  display: flex;
+  color: var(--color-base-dark-x);
+  font-size: var(--s-1);
+  text-decoration: none;
+}
+
+a.mobile-nav__primary-nav__link:hover,
+a.mobile-nav__primary-nav__link:focus,
+a.mobile-nav__primary-nav__link:active {
+  color: var(--accent-color);
+}
+
+li.mobile-nav__primary-nav__list__item + li.mobile-nav__primary-nav__list__item {
+  border-block-start: 1px solid var(--color-base-light-xx);;
+}
+
+ul.mobile-nav__secondary-nav__list {
+  list-style: none;
+  padding: var(--s1) 0;
+  gap: 0;
+}
+
+li.mobile-nav__secondary-nav__list__item {
+  --gap: 0;
+  border-radius: 0;
+}
+
+a.mobile-nav__secondary-nav__button {
+  padding: 2px var(--s1);
+  gap: 0;
+  display: flex;
+  color: var(--color-base-dark-x);
+  font-size: var(--s-1);
+  text-decoration: none;
+}
+
+a.mobile-nav__secondary-nav__button:hover,
+a.mobile-nav__secondary-nav__button:focus,
+a.mobile-nav__secondary-nav__button:active {
+  color: var(--accent-color);
+}

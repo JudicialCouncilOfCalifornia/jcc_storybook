@@ -1,35 +1,13 @@
+import * as data from "../../Data/DefaultData.data";
+
 export default {
   default: {
     variant: "default",
-    global_branding_data: {
-      text: "Judicial Branch of California",
-      destination: "https://courts.ca.gov",
-    },
+    global_branding_data: data.global_branding_data,
     secondary_nav_data: {
       variant: "",
       overflowing_variant: "hidden",
-      links: [
-        {
-          text: "Supreme Court",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "Courts of Appeal",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "Superior Courts",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "Judicial Council",
-          url: "#",
-          is_current: false,
-        },
-      ],
+      links: data.hat_secondary_nav_links_data,
     },
   },
 };

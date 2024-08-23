@@ -1,9 +1,11 @@
 .global-branding a {
   font-family: var(--font-global);
-  font-size: var(--s0);
+  font-size: var(--s-1);
   color: var(--color, var(--color-white));
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: normal;
 }
 .global-branding a:hover {
   text-decoration: underline;
