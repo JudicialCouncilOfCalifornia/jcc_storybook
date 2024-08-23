@@ -130,6 +130,11 @@
   --button-fg: var(--accent-color);
 }
 
+.section--color-primary-dark-xx .body__main.divider .body__content,
+.section--color-primary-dark-xx-stripe .body__main.divider .body__content {
+  border-inline-end-color: var(--color-accent-warm-light-x);
+}
+
 .section--color-primary-dark-xx {
   background: var(--color-primary-dark-xx);
 }
@@ -146,6 +151,7 @@
 
 .section--color-warm-dark-xx {
   --color: var(--color-white);
+  --heading-color: var(--color-white);
   --accent-color: var(--color-white);
   background: var(--color-accent-warm-dark-xx);
 }
@@ -156,10 +162,16 @@
   background: var(--color-accent-warm-light-xxxx);
 }
 
-.section--with-bg-image {
+.section--with-bg-image,
+.section--with-bg-image .section {
   --color: var(--color-white);
   --heading-color: var(--color-white);
   --accent-color: var(--color-white);
+}
+
+.section--with-bg-image .body__main.divider .body__content,
+.section--color-warm-dark-xx .body__main.divider .body__content {
+  border-inline-end-color: var(--color-white);
 }
 
 /* Drop padding when two sections of the same background are touching. */

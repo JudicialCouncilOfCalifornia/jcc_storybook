@@ -82,7 +82,7 @@
           {% for row in rows %}
             <li class="group-li">
               {% if row.list_label  %}
-                <h2 class="list-label">{{ row.list_label }}</h2>
+                <h3 class="list-label">{{ row.list_label }}</h3>
               {% endif %}
 
               <{{ list_type }} class="stack">
@@ -91,6 +91,7 @@
                     {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
                       brow: item.brow,
                       title: item.title,
+                      has_section_header: list_label ? true : false,
                       content: item.content,
                       url: item.url,
                       aria_label: item.aria_label,
@@ -105,12 +106,12 @@
             </li>
           {% endfor %}
         {% else %}
-          
           {% for row in rows %}
             <li>
               {% include "@molecules/ResultExcerpt/ResultExcerpt.twig" with {
                 brow: row.brow,
                 title: row.title,
+                has_section_header: list_label,
                 content: row.content,
                 url: row.url,
                 aria_label: row.aria_label,
