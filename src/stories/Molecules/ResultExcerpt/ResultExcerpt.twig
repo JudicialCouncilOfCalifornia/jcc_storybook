@@ -1,3 +1,6 @@
+{# Result heading depends if a section heading exists or not. #}
+{% set h = has_section_header is not empty ? 'h3' : 'h2' %}
+
 {% set variant_class = variant ? 'result-excerpt--' ~ variant : 'result-excerpt--default' %}
 
 {% set classes = [
@@ -31,13 +34,13 @@
       <div class="switcher detect-wrap detect-wrap--observed">
         {% if title %}
         <div class="result-excerpt__title">
-          <h2 class="result-excerpt__heading">
+          <{{ h }} class="result-excerpt__heading">
             {% if url %}
               <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
             {% else %}
               <div>{{ title }}</div>
             {% endif %}
-          </h2>
+          </{{ h }}>
         </div>
         {% endif %}
 

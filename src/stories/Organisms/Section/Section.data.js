@@ -2,6 +2,8 @@ import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import { Default as AccordionDefault } from "../../Molecules/Accordion/Accordion.stories";
 import ActionList from "../../Molecules/ActionList/ActionList.twig";
 import { Default as ActionListDefault } from "../../Molecules/ActionList/ActionList.stories";
+import Body from "../../Molecules/Body/Body.twig";
+import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
 import Cards from "../../Organisms/Cards/Cards.twig";
 import { Striped as CardsStriped } from "../../Organisms/Cards/Cards.stories";
 import ProfileCards from "../../Organisms/ProfileCards/ProfileCards.twig";
@@ -149,7 +151,7 @@ export default {
   },
   auto_adjusting_headings: {
     variant: "default",
-    section_classes: ["headings-mgt"],
+    section_classes: ["custom"],
     sub_component_layout: 'stack',
     brow_data: {
       variant: "heading",
@@ -169,6 +171,9 @@ export default {
       }),
       ActionList({
         ...ActionListDefault.args
+      }),
+      Body({
+        ...BodyDefault.args
       }),
       Cards({
         ...CardsStriped.args,

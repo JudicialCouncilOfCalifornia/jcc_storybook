@@ -2,6 +2,7 @@ import readme from './readme.md';
 import data from './Body.data';
 import Body from './Body.twig';
 import './Body.css';
+import './Body.js';
 
 export default {
   title: 'Molecules/Body',

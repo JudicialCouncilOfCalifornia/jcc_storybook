@@ -10,31 +10,36 @@
   variant_class,
 ] %}
 
+{% set main_classes = [
+  'body__main',
+  'stack',
+  aside ? 'divider' : ''
+] %}
+
 <div class="{{ classes|join(' ') }}">
-  
   {% if aside is not empty %}
     <aside class="body__aside sidebar stack">
       {% if subheading is not empty %}
-      <h3 class="body__title">{{ subheading }}</h3>
+        <h2 class="body__aside_heading">{{ subheading }}</h2>
       {% endif %}
 
       {{ aside }}
     </aside>
   {% endif %}
 
-  <div class="body__main stack">
+  <div class="{{ main_classes|join(' ') }}">
     {% if heading is not empty %}
-    <h2 class="body__heading">{{ heading }}</h2>
+      <h2 class="body__heading">{{ heading }}</h2>
     {% endif %}
 
     {% if lead is not empty %}
-    <div class="body__lead">{{ lead }}</div>
+      <div class="body__lead">{{ lead }}</div>
     {% endif %}
 
     {% if content is not empty %}
-    <div class="body__content word-wrap">
-      {{ content }}
-    </div>
+      <div class="body__content word-wrap">
+        {{ content }}
+      </div>
     {% endif %}
   </div>
 </div>
