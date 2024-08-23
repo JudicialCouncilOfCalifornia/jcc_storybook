@@ -145,9 +145,18 @@ docReady(function () {
 
   // Toggle class if the tab and tablist are the same width or not.
   function toggleAccordionDisplay(tablist) {
+    let container = tablist.parentElement;
     let Tabs = Array.from(tablist.querySelectorAll('button'));
+    let lastTab = Tabs[Tabs.length - 1];
+    let itemsTotalWidth = 0;
+    for (let i = 0; i < Tabs.length; i++) {
+      itemsTotalWidth += parseInt(Tabs[i].offsetWidth, 10);
+    }
 
-    if (Tabs[0].clientWidth >= tablist.clientWidth) {
+
+    if (itemsTotalWidth >= container.clientWidth || lastTab.offsetLeft <= 0) {
+      tablist.classList.remove('cluster');
+      tablist.classList.add('switcher');
       tabDetails.forEach((detail) => {
         if (detail.classList.contains('is-hidden')) {
           detail.open = false;
@@ -161,5 +170,7 @@ docReady(function () {
         detail.open = true;
       });
     }
+    tablist.classList.remove('switcher');
+    tablist.classList.add('cluster');
   }
 });
