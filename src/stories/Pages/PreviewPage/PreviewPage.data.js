@@ -263,7 +263,6 @@ export default {
       },
     },
     section_1: {
-      first_component: false,
       variant: "primary-dark-xx-stripe",
       card_variant: "card--media-right",
       sub_component_layout: "switcher",

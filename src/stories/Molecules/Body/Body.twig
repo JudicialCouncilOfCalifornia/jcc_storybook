@@ -10,9 +10,9 @@
   variant_class,
 ] %}
 
-{% set body_classes = [
-  'body__content',
-  'word-wrap',
+{% set main_classes = [
+  'body__main',
+  'stack',
   aside ? 'divider' : ''
 ] %}
 
@@ -27,7 +27,7 @@
     </aside>
   {% endif %}
 
-  <div class="body__main stack">
+  <div class="{{ main_classes|join(' ') }}">
     {% if heading is not empty %}
       <h2 class="body__heading">{{ heading }}</h2>
     {% endif %}
@@ -37,7 +37,7 @@
     {% endif %}
 
     {% if content is not empty %}
-      <div class="{{ body_classes|join(' ') }}">
+      <div class="body__content word-wrap">
         {{ content }}
       </div>
     {% endif %}

@@ -44,25 +44,35 @@ function adjustSubcomponents(subcomponents, type) {
 }
 
 docReady(function () {
-  // Select parent sections that require auto-adjusting sub-headings.
-  const parentSection = document.querySelectorAll('.section');
+  // Select custom sections.
+  // Must specify 'custom' as a custom section class.
+  const customSection = document.querySelectorAll('.section.custom');
   // Select cards.
   const cards = document.querySelectorAll(".cards");
 
-  // Adjust subcomponent headings if parent section has H2.
-  if (parentSection.length > 0) {
-    // Target subcomponents.
+  // Adjust custom layouts.
+  if (customSection.length > 0) {
+    const headingsAdjusted = "headings-adjusted";
+    // Target specific nested components.
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs";
 
-    parentSection.forEach(function(section) {
-      // Determine if parent section heading exists.
-      let sectionHeading = section.querySelector(".section:first-child > .section__content > .container > .section__header");
-      let sectionHeadingTagName = sectionHeading ? sectionHeading.querySelector('h1, h2').tagName : null;
-
-      // Adjust relevant subcomponents headings as needed.
-      if (sectionHeadingTagName && sectionHeadingTagName !== 'H1') {
+    customSection.forEach(function(section) {
+      // Adjust subcomponent headings if custom section has H2.
+      if (!section.classList.contains(headingsAdjusted)) {
         let subcomponents = section.querySelectorAll(componentIds);
-        adjustHeadings(subcomponents);
+
+        if (subcomponents) {
+          // Determine if section heading exists.
+          let sectionHeading = section.querySelector(".section__content > .container > .section__header");
+          let sectionHeadingTagName = sectionHeading.querySelector('h1, h2') ? sectionHeading.querySelector('h1, h2').tagName : null;
+
+          // Adjust relevant subcomponent headings if H2 in use.
+          if (sectionHeadingTagName && sectionHeadingTagName !== "H1") {
+            adjustHeadings(subcomponents);
+            // In case script is executed repeatedly, flag custom section as processed.
+            section.classList.add(headingsAdjusted);
+          }
+        }
       }
     });
   }

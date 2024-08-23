@@ -2,6 +2,8 @@ import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import { Default as AccordionDefault } from "../../Molecules/Accordion/Accordion.stories";
 import ActionList from "../../Molecules/ActionList/ActionList.twig";
 import { Default as ActionListDefault } from "../../Molecules/ActionList/ActionList.stories";
+import Body from "../../Molecules/Body/Body.twig";
+import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
 import Cards from "../../Organisms/Cards/Cards.twig";
 import { Striped as CardsStriped } from "../../Organisms/Cards/Cards.stories";
 import ProfileCards from "../../Organisms/ProfileCards/ProfileCards.twig";
@@ -12,10 +14,6 @@ import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
 import { Default as TeaserListDefault } from "../../Organisms/TeaserPlusList/TeaserPlusList.stories";
 import ViewResults from "../../Organisms/ViewResults/ViewResults.twig";
 import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewResults.stories";
-
-
-import Body from "../../Molecules/Body/Body.twig";
-import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
 
 export default {
   default: {
@@ -153,6 +151,7 @@ export default {
   },
   auto_adjusting_headings: {
     variant: "default",
+    section_classes: ["custom"],
     sub_component_layout: 'stack',
     brow_data: {
       variant: "heading",

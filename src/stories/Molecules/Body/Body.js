@@ -13,32 +13,50 @@ docReady(function () {
 
   // Aside positioning & theme.
   bodies.forEach(body => {
+    let regionLeftPosition = 18;
+    let parent = body.parentElement;
+    // Adjust region left position if nested in a custom section.
+    if (parent.classList.contains('section__main')) {
+      regionLeftPosition = 22;
+    }
     let aside = body.querySelector('.body__aside');
 
     if (aside) {
       let main = body.querySelector('.body__main');
-      let mainHeading = main.querySelector('.body__heading');
-      let lead = main.querySelector('.body__lead');
-      let mainContent = main.querySelector('.body__content')
 
       if ('ResizeObserver' in window) {
         new ResizeObserver(entries => {
-          if (aside.offsetLeft !== 18 || main.offsetLeft > 18) {
-            // Align aside with main content block.
-            let mainHeadingHeight = mainHeading.scrollHeight;
-            let leadHeight = lead.scrollHeight;
-            let leadBlockMargin = parseInt(window.getComputedStyle(lead).marginBlock, 10);
+          let mainHeading = main.querySelector('.body__heading');
+          let lead = main.querySelector('.body__lead');
 
-            asideTopSpacing = mainHeadingHeight + leadHeight + leadBlockMargin + leadBlockMargin + 'px';
-            aside.style.marginTop = asideTopSpacing;
-            mainContent.classList.add('divider');
+          // Aside theme & responsive positioning support.
+          if (aside.offsetLeft !== regionLeftPosition || main.offsetLeft !== regionLeftPosition) {
+            // Align aside block with content block by matching the height for the main heading & lead.
+            // Height is the combination of element and the element's bottom margin.
+            if (mainHeading || lead) {
+              let mainHeadingHeight = 0;
+              if (mainHeading) {
+                let mainHeadingElemHeight = mainHeading.scrollHeight;
+                let mainHeadingBlockMargin = parseInt(window.getComputedStyle(mainHeading).marginBlockEnd, 10);
+                mainHeadingHeight = mainHeadingElemHeight + mainHeadingBlockMargin;
+              }
+              let leadHeight = 0;
+              if (lead) {
+                let leadElemHeight = lead.scrollHeight;
+                let leadBlockMargin = parseInt(window.getComputedStyle(lead).marginBlockEnd, 10);
+                leadHeight = leadElemHeight + leadBlockMargin;
+              }
+              // Add top margin to aside.
+              aside.style.marginTop = mainHeadingHeight + leadHeight + 'px';
+            }
+            main.classList.add('divider');
             body.classList.remove('mobile');
           }
           else {
-            // Reposition aside & adjust styling for mobile stacking.
+            // Reposition aside & adjust styling when mobile stacking.
             body.classList.add('mobile');
             aside.style.removeProperty('margin-top');
-            mainContent.classList.remove('divider');
+            main.classList.remove('divider');
           }
         }).observe(body);
       }

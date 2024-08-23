@@ -130,8 +130,8 @@
   --button-fg: var(--accent-color);
 }
 
-.section--color-primary-dark-xx .body__main.divider,
-.section--color-primary-dark-xx-stripe .body__main.divider {
+.section--color-primary-dark-xx .body__main.divider .body__content,
+.section--color-primary-dark-xx-stripe .body__main.divider .body__content {
   border-inline-end-color: var(--color-accent-warm-light-x);
 }
 
@@ -169,8 +169,8 @@
   --accent-color: var(--color-white);
 }
 
-.section--with-bg-image .body__main.divider,
-.section--color-warm-dark-xx .body__main.divider {
+.section--with-bg-image .body__main.divider .body__content,
+.section--color-warm-dark-xx .body__main.divider .body__content {
   border-inline-end-color: var(--color-white);
 }
 
