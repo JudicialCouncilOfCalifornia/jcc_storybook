@@ -1,4 +1,14 @@
 
+0.55.37 / 2024-08-22
+===================
+
+  * chore: Export libs.
+  * Merge pull request #248 from JudicialCouncilOfCalifornia/feature/COURTS-100--body-styling-upgrade
+  * Merge pull request #247 from JudicialCouncilOfCalifornia/bugfix/COURTS-130--tabs-corrections
+  * [COURTS-100] -- bug fixes and context updates.
+  * [COURTS-100] -- upgrade body theme & responsive layout plus section heading accessibility.
+  * [COURTS-130] -- correct tabs default appearance & responsive layout.
+
 0.55.36 / 2024-08-02
 ===================
 
