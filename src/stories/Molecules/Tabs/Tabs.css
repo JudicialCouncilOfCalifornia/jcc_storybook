@@ -170,11 +170,15 @@
 }
 
 .tabs.tabs--as-accordion .tabs__tabpanel details[open] {
-  padding-bottom: var(--gap, var(--s1));
+  padding-bottom: var(--s3);
 }
 
 .tabs.tabs--as-accordion .tabs__tabpanel details[open] summary {
   margin-bottom: var(--gap, var(--s1));
+}
+
+.tabs.tabs--as-accordion .tabs__tabpanel details summary .tabs__label {
+  margin-inline: calc(-1rem * 1.2);
 }
 
 .tabs.tabs--as-accordion .tabs__tabpanel > details,
@@ -184,4 +188,8 @@
 
 .tabs:not(.tabs--as-accordion) .tabs__tabpanel > details summary {
   display: none;
+}
+
+.tabs--alternate.tabs--as-accordion .tabs__tabpanel {
+  margin-inline: var(--gap, 1.5rem);
 }

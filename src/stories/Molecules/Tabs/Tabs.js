@@ -41,16 +41,18 @@ docReady(function () {
 
     setSelectedTab(currentTab) {
       this.tabs.forEach((tab, idx) => {
+        let tabpanelID = tab.id.replace('tab', 'tabpanel');
+        let tabpanel = document.getElementById(tabpanelID);
         if (currentTab === tab) {
           tab.setAttribute('aria-selected', 'true');
           tab.classList.add('active');
           tab.removeAttribute('tabindex');
-          this.tabpanels[idx].classList.remove('is-hidden');
+          tabpanel.classList.remove('is-hidden');
         } else {
           tab.setAttribute('aria-selected', 'false');
           tab.classList.remove('active');
           tab.tabIndex = -1;
-          this.tabpanels[idx].classList.add('is-hidden');
+          tabpanel.classList.add('is-hidden');
         }
       });
     }
@@ -140,37 +142,34 @@ docReady(function () {
     }
   });
 
-  var tabGroup = document.querySelectorAll('.tabs');
-  var tabDetails = document.querySelectorAll('.tabs details');
-
   // Toggle class if the tab and tablist are the same width or not.
   function toggleAccordionDisplay(tablist) {
     let container = tablist.parentElement;
     let Tabs = Array.from(tablist.querySelectorAll('button'));
     let lastTab = Tabs[Tabs.length - 1];
+    let details = container.querySelectorAll('details');
     let itemsTotalWidth = 0;
     for (let i = 0; i < Tabs.length; i++) {
       itemsTotalWidth += parseInt(Tabs[i].offsetWidth, 10);
     }
 
-
     if (itemsTotalWidth >= container.clientWidth || lastTab.offsetLeft <= 0) {
       tablist.classList.remove('cluster');
       tablist.classList.add('switcher');
-      tabDetails.forEach((detail) => {
+      details.forEach((detail) => {
         if (detail.classList.contains('is-hidden')) {
           detail.open = false;
         }
       });
-      tabGroup[0].classList.add('tabs--as-accordion');
+      container.classList.add('tabs--as-accordion');
     }
     else {
-      tabGroup[0].classList.remove('tabs--as-accordion');
-      tabDetails.forEach((detail) => {
+      container.classList.remove('tabs--as-accordion');
+      details.forEach((detail) => {
         detail.open = true;
       });
+      tablist.classList.remove('switcher');
+      tablist.classList.add('cluster');
     }
-    tablist.classList.remove('switcher');
-    tablist.classList.add('cluster');
   }
 });
