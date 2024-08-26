@@ -5,6 +5,10 @@ export default {
       title: 'Parent menu item',
       url: "#",
     },
+    nav_trigger_data: {
+      label: 'Parent menu item',
+      show_label: false,
+    },
     links: [
       {
         title: "Simple link",

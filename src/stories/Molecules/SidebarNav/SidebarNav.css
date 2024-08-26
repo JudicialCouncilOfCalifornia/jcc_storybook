@@ -330,27 +330,27 @@ button.sidebar-nav__button.is-active {
   padding-inline-start: unset;
 }
 
-/* Hamburger */
-.sidebar-nav .with-sidebar:not(.stacked-sidebars) .hamburger-menu-trigger {
+/* Nav Trigger overrides */
+.sidebar-nav .with-sidebar:not(.stacked-sidebars) .nav-trigger {
   display: none;
 }
 
-.sidebar-nav .with-sidebar:not(.stacked-sidebars) .hamburger-menu-trigger + div {
+.sidebar-nav .with-sidebar:not(.stacked-sidebars) .nav-trigger + div {
   display: block;
 }
 
-.sidebar-nav .with-sidebar.stacked-sidebars .hamburger-menu-trigger {
+.sidebar-nav .with-sidebar.stacked-sidebars .nav-trigger {
   padding: var(--s1);
 }
 
-.sidebar-nav .with-sidebar.stacked-sidebars .hamburger-menu-trigger:has(input:not(:checked)) + div {
+.sidebar-nav .with-sidebar.stacked-sidebars .nav-trigger:has(input:not(:checked)) + div {
   display: none;
   visibility: hidden;
 }
 
-.sidebar-nav .with-sidebar:not(.stacked-sidebars) .hamburger-menu-trigger:has(input:not(:checked)) + div,
-.sidebar-nav .with-sidebar:not(.stacked-sidebars) .hamburger-menu-trigger:has(input:checked) + div,
-.sidebar-nav .with-sidebar.stacked-sidebars .hamburger-menu-trigger:has(input:checked) + div {
+.sidebar-nav .with-sidebar:not(.stacked-sidebars) .nav-trigger:has(input:not(:checked)) + div,
+.sidebar-nav .with-sidebar:not(.stacked-sidebars) .nav-trigger:has(input:checked) + div,
+.sidebar-nav .with-sidebar.stacked-sidebars .nav-trigger:has(input:checked) + div {
   display: block;
   visibility: visible;
 }

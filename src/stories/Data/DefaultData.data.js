@@ -134,6 +134,7 @@ export let default_primary_nav_sublinks_data = [
   {
     text: "Navigation link 1",
     url: "#",
+    is_overview_link: true,
   },
   {
     text: "Navigation link 2",
@@ -149,6 +150,7 @@ export let default_primary_nav_sublinks_more_data = [
   {
     text: "Navigation link 1",
     url: "#",
+    is_overview_link: true,
   },
   {
     text: "Navigation link 2",
@@ -172,6 +174,7 @@ export let default_primary_nav_sublinks_mega_data = [
   {
     text: "Navigation link 1",
     url: "#",
+    is_overview_link: true,
   },
   {
     text: "Navigation link 2",
@@ -253,3 +256,7 @@ export let default_primary_nav_links_data = [
 export let default_mobile_nav_primary_nav_links_data = default_primary_nav_links_data;
 
 export let default_mobile_nav_secondary_nav_links_data = default_secondary_links_data;
+
+// Default data for Mobile output of primary nav. NOT FOR MobileNav component.
+// For use in PrimaryNav component with mobile display enabled.
+export let default_primary_nav_mobile_links_data = default_primary_nav_links_data;

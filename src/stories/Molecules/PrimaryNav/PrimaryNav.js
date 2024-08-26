@@ -13,10 +13,10 @@ docReady(function () {
   addEventListener('mouseover', (event) => {
     // Adjust non-mega submenu position if no space on its right.
     let element = event.target;
-    if (element.classList.contains('primary-nav__button')) {
+    if (element.classList.contains('primary-nav__mobile__button')) {
       let submenu = element.nextElementSibling;
 
-      if (submenu && !submenu.classList.contains('primary-nav__item--mega')) {
+      if (submenu && !submenu.classList.contains('primary-nav__mobile__item--mega')) {
         // Always start with original position.
         submenu.removeAttribute('style');
         let submenuRightPosition = window.innerWidth - submenu.getBoundingClientRect().right;
@@ -34,13 +34,13 @@ docReady(function () {
   });
 
   // Toggle the sub menus.
-  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__button'));
+  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button'));
   buttons.forEach(button => {
     if (!button.classList.contains('js-open')) {
       button.classList.add('js-open');
 
       button.addEventListener('pointerdown', (e) => {
-        const opened = document.querySelectorAll('.primary-nav__mobile .primary-nav__button.open:not(.primary-nav__hamburger-toggle)');
+        const opened = document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button.open');
 
         opened.forEach(item => {
           if (item && item != e.target) {
@@ -49,25 +49,6 @@ docReady(function () {
         });
 
         e.target.classList.toggle('open');
-      });
-    }
-  });
-
-  // Toggle the hamburger menu.
-  const burgers = Array.from(document.querySelectorAll('.primary-nav__hamburger-toggle'));
-
-  burgers.forEach(button => {
-    if (!button.classList.contains('js-open')) {
-      button.classList.add('js-open');
-
-      button.addEventListener('pointerdown', (e) => {
-        const opened = document.querySelector('.open');
-
-        if (opened && opened != e.target) {
-          opened.classList.remove('open');
-        }
-
-        button.classList.toggle('open');
       });
     }
   });

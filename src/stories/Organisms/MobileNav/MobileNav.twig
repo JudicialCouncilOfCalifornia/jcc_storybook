@@ -34,7 +34,7 @@
           <ul class="mobile-nav__primary-nav__list nav-level-2 box {{ mega }}">
             {% for link2 in link.links %}
               <li class="mobile-nav__primary-nav__list__item">
-                {% set overview_link_class = link2.is_overview_link ? 'link mobile-nav__primary-nav__overview-link' : 'link mobile-nav__primary-nav__link' %}
+                {% set overview_link_class = link2.is_overview_link ? 'link mobile-nav__primary-nav__link mobile-nav__primary-nav__overview-link' : 'link mobile-nav__primary-nav__link' %}
                 {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
               </li>
             {% endfor %}

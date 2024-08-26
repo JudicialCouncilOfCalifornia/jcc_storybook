@@ -11,13 +11,6 @@
   padding-block: var(--s-2);
 }
 
-/* .header > .container > .header__upper.box {
-  padding-block-end: 0;
-} */
-
-/* .header > .container > .header__upper.box.wrapping {
-  padding-block-end: var(--s-3);
-} */
 .header .cluster {
   justify-content: space-between;
   align-items: stretch;
@@ -129,7 +122,7 @@
   display: none;
 }
 
-.header .primary-nav {
+.header .primary-nav .primary-nav__desktop--wrapper {
   justify-content: flex-end;
   gap: 0;
 }
@@ -208,90 +201,14 @@
   display: block;
 }
 
-/* Header hamburger navigation toggle  */
-:root {
-  --bar-width: 2rem;
-  --bar-height: 5px;
-  --hamburger-gap: 4px;
-  --foreground: var(--color);
-  --background: var(--color);
-  --hamburger-margin: 6px;
-  --animation-timing: 200ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-}
-
-.hamburger-menu-trigger {
-  --x-width: calc(var(--hamburger-height) * 1.41421356237);
-  display: flex;
-  flex-direction: column;
-  gap: var(--hamburger-gap);
-  width: max-content;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.hamburger-menu-trigger::before,
-.hamburger-menu-trigger::after,
-.hamburger-menu-trigger input {
-  content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: var(--foreground);
-  border-radius: 9999px;
-  transform-origin: left center;
-  transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing),
-    background-color var(--animation-timing);
-}
-
-.hamburger-menu-trigger input {
-  appearance: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  pointer-events: none;
-  border: none
-}
-
-.hamburger-menu-trigger:has(input:focus-visible)::before,
-.hamburger-menu-trigger:has(input:focus-visible)::after,
-.hamburger-menu-trigger input:focus-visible {
-  outline: 1px solid var(--foreground);
-  outline-offset: 0;
-}
-
-.hamburger-menu-trigger:has(input:checked)::before {
-  rotate: 45deg;
-  width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / -2);
-}
-
-.hamburger-menu-trigger:has(input:checked)::after {
-  rotate: -45deg;
-  width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / 2);
-}
-
-.hamburger-menu-trigger input:checked {
-  opacity: 0;
-  width: 0;
-}
-
 /* Position the hamburger menu trigger into the right place in the header */
-.header__mobile .hamburger-menu-trigger {
+.header__mobile .nav-trigger {
   position: absolute;
   padding: var(--s-2);
   top: var(--s0);
   right: var(--s-4);
 }
 
-.hamburger-menu-trigger:has(input:not(:checked)) + div {
-  display: none;
-  visibility: hidden;
-}
-
-/* Show the mobile nav block once the hamburger trigger is checked */
-.hamburger-menu-trigger:has(input:checked) + div {
-  display: block;
-  visibility: visible;
+.header__mobile .nav-trigger.nav-trigger--has-label .nav-trigger__label {
+  right: 3rem;
 }

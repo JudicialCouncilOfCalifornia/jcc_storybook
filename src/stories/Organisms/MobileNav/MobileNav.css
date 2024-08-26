@@ -43,6 +43,7 @@ button.mobile-nav__primary-nav__button {
   cursor: pointer;
 }
 
+a.mobile-nav__primary-nav__button:hover,
 button.mobile-nav__primary-nav__button:hover {
   cursor: pointer;
   background-color: var(--color-accent-warm-light-xxxx)
@@ -73,7 +74,8 @@ a.mobile-nav__primary-nav__button .icon-wrapper {
   pointer-events: none;
 }
 
-ul.mobile-nav__primary-nav__list {
+ul.mobile-nav__primary-nav__list,
+ul.mobile-nav__primary-nav__list * {
   /* display: none; */
   /* visibility: hidden; */
   opacity: 0;
@@ -84,7 +86,9 @@ ul.mobile-nav__primary-nav__list {
 }
 
 li.mobile-nav__primary-nav__group ul.mobile-nav__primary-nav__list:focus-within,
-li.mobile-nav__primary-nav__group .mobile-nav__button.open + ul.mobile-nav__primary-nav__list {
+li.mobile-nav__primary-nav__group .mobile-nav__button.open + ul.mobile-nav__primary-nav__list,
+li.mobile-nav__primary-nav__group ul.mobile-nav__primary-nav__list:focus-within *,
+li.mobile-nav__primary-nav__group .mobile-nav__button.open + ul.mobile-nav__primary-nav__list * {
   /* display: block; */
   /* visibility: visible; */
   opacity: 1;
@@ -92,8 +96,8 @@ li.mobile-nav__primary-nav__group .mobile-nav__button.open + ul.mobile-nav__prim
   max-height: unset;
   min-height: unset;
   list-style: none;
-  padding-inline: var(--s1);
-  padding-block: 0;
+  /* padding-inline: var(--s1); */
+  /* padding-block: 0; */
 }
 
 ul.mobile-nav__primary-nav__group-list li + li .mobile-nav__button {

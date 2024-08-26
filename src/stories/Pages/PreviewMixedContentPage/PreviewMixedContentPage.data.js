@@ -36,6 +36,10 @@ export default {
         variant: "default",
         form: data.header_search_form_data,
       },
+      nav_trigger_data: {
+        label: "Menu",
+        show_label: false,
+      },
       mobile_nav_data: {
         primary_nav_data: {
           links: data.default_mobile_nav_primary_nav_links_data,
