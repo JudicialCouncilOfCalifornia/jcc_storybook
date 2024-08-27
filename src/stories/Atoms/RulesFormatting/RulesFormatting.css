@@ -42,6 +42,8 @@ div:is(.jcc-rulesformatting) p.subdhist {
 body:is(.cke_editable) p.paragraphlist,
 div:is(.jcc-rulesformatting) p.paragraphlist {
   margin-inline-start: 3rem;
+  padding-inline-start: 1.5rem;
+  text-indent: -1.5rem;
 }
 
 body:is(.cke_editable) p.paragraphnolist,
@@ -52,7 +54,9 @@ div:is(.jcc-rulesformatting) p.paragraphnolist {
 
 body:is(.cke_editable) p.subparagraphlist,
 div:is(.jcc-rulesformatting) p.subparagraphlist {
-  margin-inline-start: 5rem;  
+  margin-inline-start: 5rem;
+  padding-inline-start: 1.5rem;
+  text-indent: -1.5rem;
 }
 
 body:is(.cke_editable) p.subparagraphnolist,
@@ -64,6 +68,25 @@ div:is(.jcc-rulesformatting) p.subparagraphnolist {
 body:is(.cke_editable) p:is(.itemList, .itemlist),
 div:is(.jcc-rulesformatting) p:is(.itemList, .itemlist) {
   margin-inline-start: 7rem;
+  padding-inline-start: 1rem;
+  text-indent: -1rem;
+}
+
+body:is(.cke_editable) p:is(.itemNoList, .itemnolist),
+div:is(.jcc-rulesformatting) p:is(.itemNoList, .itemnolist) {
+  margin-inline-start: 8rem;
+}
+
+body:is(.cke_editable) p:is(.itemSubList, .itemsublist),
+div:is(.jcc-rulesformatting) p:is(.itemSubList, .itemsublist) {
+  margin-inline-start: 9rem;
+  padding-inline-start: 1rem;
+  text-indent: -1rem;
+}
+
+body:is(.cke_editable) p:is(.itemSubNoList, .itemsubnolist),
+div:is(.jcc-rulesformatting) p:is(.itemSubNoList, .itemsubnolist) {
+  margin-inline-start: 10rem;
 }
 
 body:is(.cke_editable) p.rulehist,
@@ -78,6 +101,7 @@ div:is(.jcc-rulesformatting) p.advcommheader {
   font-size: var(--s-2);
   font-weight: bold;
   text-align: center;
+  margin-inline: auto;
 }
 
 body:is(.cke_editable) p.advcommtext,
