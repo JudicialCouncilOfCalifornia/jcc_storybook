@@ -20,12 +20,12 @@
   <div role="tablist" class="{{ tablist_classes|join(' ') }}">
     {% for item in items %}
       <button
-        id="{{ item.id is not empty ? item.id : 'tab-' ~ loop.index }}"
+        id="{{ item.id is not empty ? item.id : 'tab-' ~ item.label|replace({' ':'-'})|lower }}"
         class="{{ loop.index == 1 ? 'active' : '' }}"
         type="button"
         role="tab"
         aria-selected="true"
-        aria-controls='{{ "tabpanel-" ~ loop.index }}'
+        aria-controls='{{ "tabpanel-" ~ item.label|replace({' ':'-'})|lower }}'
       >
         <div class="tabs__label focus">{{ item.label }}</div>
       </button>
@@ -35,10 +35,10 @@
   <div class="{{ tabpanel_classes|join(' ') }}">
     {% for item in items %}
       <details
-        id='{{ "tabpanel-" ~ loop.index }}'
+        id='{{ "tabpanel-" ~ item.label|replace({' ':'-'})|lower }}'
         role="tabpanel"
         tabindex="0"
-        aria-labelledby='{{ "tab-" ~ loop.index }}'
+        aria-labelledby='{{ "tab-" ~ item.label|replace({' ':'-'})|lower }}'
         class="stack"
       >
         <summary><div class="tabs__label focus">{{ item.label }}</div></summary>
