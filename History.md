@@ -1,4 +1,15 @@
 
+0.55.38 / 2024-08-28
+===================
+
+  * chore: Export libs.
+  * Merge pull request #250 from JudicialCouncilOfCalifornia/feature/rulesformatting-updates
+  * [feature/update] -- Rules formatting updates.
+  * Merge pull request #249 from JudicialCouncilOfCalifornia/COURTS-130--multiple-tabs-support
+  * [feature/update] -- Updates to Rules Formatting and addition of rule content from Rule 3.672 as example content.
+  * [COURTS-130] -- Sneaking body component adjustment.
+  * [COURTS-130] -- Tabs multiple instance support.
+
 0.55.37 / 2024-08-22
 ===================
 
