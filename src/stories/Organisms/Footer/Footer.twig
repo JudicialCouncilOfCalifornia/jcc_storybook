@@ -9,12 +9,58 @@
   variant_class,
 ] %}
 
-	<div class="{{ classes|join(' ') }}"> <div class="box">
+<div class="{{ classes|join(' ') }}"> 
+  <div class="footer__upper box">
 		<div class="container">
 			<div class="cluster detect-wrap detect-wrap--observed">
 				{% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
-				{% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
+				{% include "@molecules/SecondaryNav/SecondaryNav.twig" with footer_upper_nav_data %}
 			</div>
 		</div>
 	</div>
+
+  {% if footer_lower_nav_data is not empty %}
+    <div class="footer__lower box">
+      <div class="container">
+        <div class="with-sidebar detect-wrap detect-wrap--observed" style=" --gap:5rem;--sidebar-width:40ch;--sidebar-direction:row; ">
+          <div class="stack footer__lower__side" style="--gap: var(--s-6)">
+            
+            {% if footer_about_content.label %}
+              <div class="footer__label">{{ footer_about_content.label }}</div>
+            {% endif %}
+
+            {% if footer_about_content.content %}
+            <div class="footer__content">{{ footer_about_content.content }}</div>
+            {% endif %}
+
+            {% if footer_about_content.link %}
+            <div class="footer__link">
+              {% include "@atoms/Button/Button.twig" with footer_about_content.link %}
+            </div>
+            {% endif %}
+
+            {% if footer_social_link is not empty %}
+            <div class="cluster footer__social">
+              {% for link in footer_social_link %}
+                <a href="{{ link.url }}" class="link link--icon">
+                {% include "@atoms/Icon/Icon.twig" with {
+                  icon: link.icon
+                } %}
+                <span class="sr-only">{{ link.text }}</span>
+                </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+          </div>
+          <div class="stack footer__lower__main">
+            {% if footer_lower_nav_data is not empty %}
+            {% include "@molecules/FlatNav/FlatNav.twig" with footer_lower_nav_data %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
 </div>

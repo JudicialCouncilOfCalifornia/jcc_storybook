@@ -3,7 +3,7 @@ import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import ActionList from "../../Molecules/ActionList/ActionList.twig";
 
 // Default data for this page.
-import * as data from "../../Data/DefaultData.data";
+import * as Data from "../../Data/DefaultData.data";
 
 let body_content = [
   "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod quidem iam fit etiam in Academia. Prave, nequiter, turpiter cenabat; Neque enim civitas in seditione beata esse potest nec in discordia dominorum domus.</p>",
@@ -14,27 +14,27 @@ export default {
   default: {
     hat: {
       variant: "default",
-      global_branding_data: data.global_branding_data,
+      global_branding_data: Data.global_branding_data,
       secondary_nav_data: {
         variant: "",
         overflowing_variant: "hidden",
-        links: data.hat_secondary_nav_links_data,
+        links: Data.hat_secondary_nav_links_data,
       },
     },
     header: {
       variant: "default",
-      site_branding_data: data.site_branding_data,
+      site_branding_data: Data.site_branding_data,
       primary_nav_data: {
-        links: data.default_primary_nav_links_data,
+        links: Data.default_primary_nav_links_data,
       },
       secondary_nav_data: {
         variant: "with-divider",
         overflowing_variant: "hidden",
-        links: data.default_secondary_links_data,
+        links: Data.default_secondary_links_data,
       },
       header_search_data: {
         variant: "default",
-        form: data.header_search_form_data,
+        form: Data.header_search_form_data,
       },
       nav_trigger_data: {
         label: "Menu",
@@ -42,20 +42,20 @@ export default {
       },
       mobile_nav_data: {
         primary_nav_data: {
-          links: data.default_mobile_nav_primary_nav_links_data,
+          links: Data.default_mobile_nav_primary_nav_links_data,
         },
         secondary_nav_data: {
           variant: "stacked",
           overflowing_variant: "",
-          links: data.default_mobile_nav_secondary_nav_links_data,
+          links: Data.default_mobile_nav_secondary_nav_links_data,
         },
         search_form: {
           variant: "no-toggle",
-          form: data.mobile_search_form_data,
+          form: Data.mobile_search_form_data,
         },
       },
     },
-    breadcrumb: data.breadcrumb_links_data,
+    breadcrumb: Data.breadcrumb_links_data,
     hero_hangover: {
       hangover_hide_compact: false,
       hangover_offset: 22,
@@ -369,20 +369,25 @@ export default {
       ],
     },
     footer: {
-      site_branding_data: data.site_branding_data,
-      secondary_nav_data: {
-        variant: "default",
+      site_branding_data: Data.site_branding_data,
+      footer_upper_nav_data: {
+        variant: "with-divider",
         overflowing_variant: "stack",
-        links: data.default_secondary_links_long_data,
+        links: Data.default_secondary_links_long_data,
       },
+      footer_about_content: Data.footer_about_data,
+      footer_lower_nav_data: {
+        links: Data.default_primary_nav_links_long_data,
+      },
+      footer_social_link: Data.default_social_media_links_data,
     },
     shoe: {
       variant: "default",
-      global_branding_data: data.global_branding_data,
+      global_branding_data: Data.global_branding_data,
       secondary_nav_data: {
         variant: "default",
         overflowing_variant: "",
-        links: data.shoe_secondary_nav_links_data,
+        links: Data.shoe_secondary_nav_links_data,
       },
     },
   },

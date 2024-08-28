@@ -1,0 +1,60 @@
+{# Define if the top level includes a an overview link in the dropdown #}
+{% set has_desktop_dropdown_overview_link = desktop_dropdown_overview_link|default(false) %}
+{% set nav_id = label ? label|clean_id : '' %}
+
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'flat-nav--' ~ variant : 'flat-nav--default' %}
+{% set has_label = show_label and label ? 'flat-nav--has-label' : '' %}
+
+{% set classes = [
+  'flat-nav',
+  variant_class,
+  has_label,
+] %}
+
+<div class="{{ classes|join(' ') }}">
+
+  {% if show_label and label %}
+  <div class="flat-nav__label" id="{{ nav_id }}">
+    <span>{{ label }}</span>
+  </div>
+  {% endif %}
+
+  <ul class="stack flat-nav__group__list nav-level-1" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+    {% for i,link in links %}
+      
+      {% set parent = link.links is not empty ? true : false %}
+      {% set active_class = link.is_current ? 'is_active' : '', %}
+      
+      <li class="flat-nav__group__item">
+        
+        {% set link_classes = [
+          'link',
+          'link-level-1',
+          'flat-nav__link',
+          parent,
+          active_class,
+        ] %}
+        
+        {{ link(link.text, link.url, {class: link_classes}) }}
+        
+        {% if link.links is not empty %}
+          <ul class="stack flat-nav__list nav-level-2">
+            {% for link2 in link.links %}
+            <li class="flat-nav__list__item">
+              {% set link2_classes = [
+                'link',
+                'link-level-2',
+                'flat-nav__link',
+                link2.is_current ? 'is_current' : '',
+              ] %}
+              {{ link(link2.text, link2.url, {class: link2_classes}) }}
+            </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
