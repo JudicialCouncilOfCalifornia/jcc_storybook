@@ -54,14 +54,14 @@ div:is(.jcc-rulesformatting) p.paragraphnolist {
 
 body:is(.cke_editable) p.subparagraphlist,
 div:is(.jcc-rulesformatting) p.subparagraphlist {
-  margin-inline-start: 5rem;
-  padding-inline-start: 1.5rem;
+  margin-inline-start: 4rem;
+  padding-inline-start: 2rem;
   text-indent: -1.5rem;
 }
 
 body:is(.cke_editable) p.subparagraphnolist,
 div:is(.jcc-rulesformatting) p.subparagraphnolist {
-  margin-inline-start: 6.5rem;
+  margin-inline-start: 6rem;
   text-indent: unset; 
 }
 
