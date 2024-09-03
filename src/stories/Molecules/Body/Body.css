@@ -11,7 +11,7 @@
 
 .body__heading {
   color: var(--heading-color, inherit);
-  margin-block-end: var(--s0);
+  margin-block-end: var(--s-3);
 }
 
 .body__lead {
@@ -27,11 +27,13 @@
 }
 
 .body__main.divider .body__content {
+  padding-block-start: var(--s-2);
   border-inline-end: 2px dotted var(--color-accent-warm-dark-x);
 }
 
 .body__aside {
   --gap: var(--s1);
+  padding-block-start: var(--s-4);
 }
 
 .body__aside_heading {
@@ -51,4 +53,5 @@
 
 .body.mobile .body__aside {
   order: 2;
+  margin-block-start: unset;
 }
