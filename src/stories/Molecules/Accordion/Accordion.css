@@ -26,8 +26,8 @@
 }
 
 .accordion__items {
-  padding-inline-start: var(--s6);
-  padding-inline-end: var(--s6);
+  padding-inline-start: 4%;
+  padding-inline-end: 4%;
   padding-block-start: var(--s1);
   padding-block-end: var(--s1);
   border: 1px dotted var(--color-base);

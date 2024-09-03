@@ -5,6 +5,7 @@
   padding-block-end: var(--s-3);
   align-items: stretch;
   row-gap: 0;
+  padding: 0;
 }
 
 .primary-nav ul {
@@ -38,7 +39,7 @@
 .primary-nav .primary-nav__label {
   display: flex;
   color: var(--color-base-dark-x);
-  padding-inline-start: var(--s-1);
+  /* padding-inline-start: var(--s1); */
   align-items: center;
 }
 
@@ -75,7 +76,7 @@
   border-block-end: 2px solid transparent;
   border-radius: 0;
   padding-inline: 0;
-  padding-block: var(--s-5);
+  padding-block: var(--s-2);
   font-size: calc(var(--s-1) - 1px);
   font-weight: 600;
   line-height: var(--s1);

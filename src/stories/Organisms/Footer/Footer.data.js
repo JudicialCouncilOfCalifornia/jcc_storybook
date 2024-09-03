@@ -2,6 +2,7 @@ import * as Data from "../../Data/DefaultData.data";
 
 export default {
   default: {
+    variant: "default",
     site_branding_data: Data.site_branding_data,
     footer_upper_nav_data: {
       variant: "with-divider",

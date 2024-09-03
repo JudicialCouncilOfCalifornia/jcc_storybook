@@ -322,6 +322,18 @@
   display: none;
 }
 
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-content{
+  order: 1;
+}
+
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content {
+  order: 2;
+}
+
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content > * {
+  width: 100%;
+}
+
 .hangover--borderless-media .box .hangover__top-hangover-content {
   padding-block: 0;
 }

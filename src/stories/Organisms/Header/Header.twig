@@ -38,15 +38,18 @@
     </div>
   </div>
 
+  {% if primary_nav_data is not empty %}
   <div class="header__lower box">
     <div class="container">
       {% include "@molecules/PrimaryNav/PrimaryNav.twig" with primary_nav_data %}
     </div>
   </div>
+  {% endif %}
 
+  {% if mobile_nav_data is not empty %}
   <div class="header__mobile">
     {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
     {% include "@organisms/MobileNav/MobileNav.twig" with mobile_nav_data %}
   </div>
-
+  {% endif %}
 </div>

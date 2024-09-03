@@ -36,13 +36,13 @@
 .flat-nav .flat-nav__link {
   font-size: var(--s-2);
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color);
 }
 
 .flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link {
   font-size: var(--s-1);
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color);
   font-weight: 700;
 }
 

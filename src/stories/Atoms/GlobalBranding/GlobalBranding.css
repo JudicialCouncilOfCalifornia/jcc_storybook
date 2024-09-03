@@ -1,6 +1,5 @@
 .global-branding a {
   font-family: var(--font-global);
-  font-family: var(--font-primary);
   font-size: var(--s-1);
   color: var(--color, var(--color-white));
   text-transform: uppercase;

@@ -267,7 +267,7 @@ export let default_primary_nav_links_long_data = [
     is_current: true,
     id: "nav-section-one",
     url: "#",
-    links: default_primary_nav_sublinks_mega_data,
+    links: default_primary_nav_sublinks_data,
     section_link: {
       text: "Navigation link",
       url: "#",
@@ -275,7 +275,7 @@ export let default_primary_nav_links_long_data = [
   },
   {
     text: "Self-Help Guide",
-    links: default_primary_nav_sublinks_data,
+    links: default_primary_nav_sublinks_more_data,
     section_link: {
       text: "Navigation link",
       url: "#",

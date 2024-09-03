@@ -76,20 +76,22 @@
 .nav-trigger.nav-trigger--has-label .nav-trigger__label {
   margin-inline: auto;
   white-space: nowrap;
+  font-size: 15px;
+  color: var(--color-base-dark-xx);
 }
 
 .nav-trigger__label {
   position: absolute;
-  right: calc(var(--navtrigger-width) + 1.25rem);
+  right: calc(var(--navtrigger-width) + 1.5rem);
   padding-block-start: 2px;
 }
 
 .nav-trigger--label-direction--left .nav-trigger__label {
-  right: calc(var(--navtrigger-width) + 1.25rem);
+  right: calc(var(--navtrigger-width) + 1.5rem);
 }
 
 .nav-trigger--label-direction--right .nav-trigger__label {
-  left: calc(var(--navtrigger-width) + 1.25rem);
+  left: calc(var(--navtrigger-width) + 1.5rem);
 }
 
 /* Hide the content by default if not checked. */
