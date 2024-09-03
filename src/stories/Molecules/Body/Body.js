@@ -27,27 +27,21 @@ docReady(function () {
       if ('ResizeObserver' in window) {
         new ResizeObserver(entries => {
           let mainHeading = main.querySelector('.body__heading');
-          let lead = main.querySelector('.body__lead');
 
           // Aside theme & responsive positioning support.
           if (aside.offsetLeft !== regionLeftPosition || main.offsetLeft !== regionLeftPosition) {
             // Align aside block with content block by matching the height for the main heading & lead.
             // Height is the combination of element and the element's bottom margin.
-            if (mainHeading || lead) {
+            if (mainHeading) {
               let mainHeadingHeight = 0;
               if (mainHeading) {
                 let mainHeadingElemHeight = mainHeading.scrollHeight;
                 let mainHeadingBlockMargin = parseInt(window.getComputedStyle(mainHeading).marginBlockEnd, 10);
                 mainHeadingHeight = mainHeadingElemHeight + mainHeadingBlockMargin;
               }
-              let leadHeight = 0;
-              if (lead) {
-                let leadElemHeight = lead.scrollHeight;
-                let leadBlockMargin = parseInt(window.getComputedStyle(lead).marginBlockEnd, 10);
-                leadHeight = leadElemHeight + leadBlockMargin;
-              }
+
               // Add top margin to aside.
-              aside.style.marginTop = mainHeadingHeight + leadHeight + 'px';
+              aside.style.marginTop = mainHeadingHeight + 'px';
             }
             main.classList.add('divider');
             body.classList.remove('mobile');
