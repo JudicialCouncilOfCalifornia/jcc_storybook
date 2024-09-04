@@ -1,4 +1,11 @@
 
+0.55.39 / 2024-09-04
+===================
+
+  * chore: Export libs.
+  * Merge pull request #251 from JudicialCouncilOfCalifornia/feature/COURTS-100--body-lead-alignment
+  * [COURTS-100] -- align lead with aside heading.
+
 0.55.38 / 2024-08-28
 ===================
 
