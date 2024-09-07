@@ -13,21 +13,21 @@
   max-inline-size: var(--max-width);
 }
 
-.accordion .expand-btns{
-  padding-inline: var(--s2);
+.accordion .expand-btns {
+  padding-inline: var(--s1);
   text-align: right;
-  margin-block: auto;
 }
 
 .accordion .expand-btns .expand-all-btn {
   cursor: pointer;
   padding-inline-start: var(--s-1);
   text-decoration: underline;
+  font-size: 1rem;
 }
 
 .accordion__items {
-  padding-inline-start: 4%;
-  padding-inline-end: 4%;
+  padding-inline-start: max(4%, var(--s0));
+  padding-inline-end: max(4%, var(--s0));
   padding-block-start: var(--s1);
   padding-block-end: var(--s1);
   border: 1px dotted var(--color-base);

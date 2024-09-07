@@ -1,6 +1,9 @@
-import Body from "../../Molecules/Body/Body.twig";
 import Accordion from "../../Molecules/Accordion/Accordion.twig";
 import ActionList from "../../Molecules/ActionList/ActionList.twig";
+import Body from "../../Molecules/Body/Body.twig";
+import Button from "../../Atoms/Button/Button.twig";
+import Card from "../../Molecules/Card/Card.twig";
+import Offcanvas from "../../Molecules/Offcanvas/Offcanvas.twig";
 
 // Default data for this page.
 import * as Data from "../../Data/DefaultData.data";
@@ -55,17 +58,39 @@ export default {
         },
       },
     },
+    section_nav: {
+      variant: "alternate",
+      label: "2nd District",
+      show_label: true,
+      display_mobile_version: true,
+      links: Data.default_primary_nav_links_data,
+      mobile_links: Data.default_primary_nav_mobile_links_data,
+      nav_trigger_data: {
+        label: "2nd District",
+        show_label: true,
+      }
+    },
     breadcrumb: Data.breadcrumb_links_data,
     hero_hangover: {
       hangover_hide_compact: false,
       hangover_offset: 22,
       background: null,
-      brow: false,
+      brow: {
+        part_one: 'Brow Example',	
+        part_two: '2024',	
+      },
       heading: "This page is for testing a mix of content elements",
-      text: "",
-      hangover_content: "",
-      bottom_content: "",
-      blurb: false,
+      text: "This is some text that goes along with the heading. It can be used to provide a little more context to the heading.",
+      hangover_content: [
+        Card({
+          variant: "bordered",
+          media: '',
+          heading: "Test Blurb content",
+          text: "<p>Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre.</p>",
+        }),
+      ],
+      bottom_content: "This is example bottom content for this hangover hero. Lorem ipsum dolor sit amet consectetur adipiscin lorem ispum bodlre. This content is not part of the content below.",
+      blurb: true,
     },
     section_1: {
       variant: "default",

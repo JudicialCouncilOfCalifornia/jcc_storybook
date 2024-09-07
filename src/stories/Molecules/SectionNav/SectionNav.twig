@@ -16,7 +16,7 @@
 ] %}
 
 <div class="section-nav__wrapper box">
-  <div class="{{ classes|join(' ') }}">
+  <div class="{{ classes|join(' ')|trim }}">
     <div class="cluster detect-wrap detect-wrap--observed section-nav__desktop--wrapper">
       {% if show_label and label %}
       <div class="section-nav__label" id="{{ nav_id }}">
@@ -42,7 +42,7 @@
             
             {% if parent %}
               {% if has_desktop_dropdown_overview_link %}
-                <button class="{{ link_classes|join(' ') }}">{{ link.text }}</button>
+                <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
               {% else %}
                 {{ link(link.text, link.url, {class: link_classes}) }}
               {% endif %}

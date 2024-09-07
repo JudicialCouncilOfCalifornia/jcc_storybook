@@ -38,7 +38,27 @@
 
 .footer .secondary-nav {
   display: flex;
+  align-items: stretch;
+}
+
+.footer .secondary-nav .reel {
+  align-items: stretch;
+}
+
+.footer .secondary-nav li {
   align-items: center;
+}
+
+.footer .secondary-nav--overflowing-stack .reel.overflowing > * {
+  flex-grow: 0;
+  flex-basis: auto;
+  /* flex-direction: column; */
+}
+
+.footer .footer__upper:has( .cluster.wrapping) .secondary-nav--overflowing-stack .reel.overflowing > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--measure) - 100%) * 999);
+  /* flex-direction: column; */
 }
 
 .footer .footer__upper .secondary-nav.secondary-nav--with-divider .secondary-nav__list__item a {

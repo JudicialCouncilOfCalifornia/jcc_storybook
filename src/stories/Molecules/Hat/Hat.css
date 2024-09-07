@@ -1,7 +1,7 @@
 .hat {
   --color: var(--color-white);
   border-bottom: 4px solid var(--color-accent-warm-light-xx);
-  background: var(--color-black);
+  background: var(--color-primary-dark-xx);
 }
 
 .hat .box {
@@ -26,6 +26,6 @@
   margin-inline-start: auto;
 }
 
-.hat > .box > .container > .wrapping .secondary-nav .secondary-nav__list__item:last-child a {
+.hat > .box > .container .secondary-nav .secondary-nav__list__item:last-child a {
   padding-inline-end: 0;
 }

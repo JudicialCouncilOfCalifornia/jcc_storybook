@@ -93,7 +93,9 @@ label {
 }
 
 .form-item + .form-item,
-.form-item + .form-actions {
+.form-item + .form-actions,
+input + .form-item,
+input + .form-actions {
   margin-block-start: var(--s2);
 }
 

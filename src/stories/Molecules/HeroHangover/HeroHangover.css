@@ -50,7 +50,8 @@
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
-.hangover__top-content h1 { 
+.hangover__top-content h1 {
+  color: var(--heading-color);
   text-shadow: 1px 1px 1px var(--text-shadow-color),
     -1px -1px 1px var(--text-shadow-color),
     -1px 1px 1px var(--text-shadow-color), 1px -1px 1px var(--text-shadow-color);

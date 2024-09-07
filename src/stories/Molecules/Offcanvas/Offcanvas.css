@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--s0);
+  margin-bottom: var(--s1);
 }
 
 .offcanvas__heading h2.cluster {

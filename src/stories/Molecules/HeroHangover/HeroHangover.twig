@@ -36,10 +36,10 @@
 	hangover_content or share ? 'min-width-layout' : '',
 ] %}
 
-<div class="{{ classes|join(' ') }}" style="{{ variant_styles|join }}">
+<div class="{{ classes|join(' ')|trim }}" style="{{ variant_styles|join|trim }}">
 	<div class="hangover__top">
 		<div class="box">
-			<div class="{{ boxclasses|join(' ') }}">		
+			<div class="{{ boxclasses|join(' ')|trim }}">		
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
             {% if hangover_content %}
@@ -50,7 +50,7 @@
 					</div>
 				{% endif %}
 				<div class="hangover__top-content">
-				<div class="{{ layoutclasses|join(' ') }}">				
+				<div class="{{ layoutclasses|join(' ')|trim }}">				
 						<div class="stack">
 							{% if brow %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">

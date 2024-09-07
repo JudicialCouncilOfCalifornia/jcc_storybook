@@ -85,6 +85,7 @@
 .secondary-nav--overflowing-stack .reel.overflowing > * {
   flex-grow: 1;
   flex-basis: calc((var(--measure) - 100%) * 999);
+  /* flex-direction: column; */
 }
 
 .secondary-nav--overflowing-stack .reel.overflowing a {
