@@ -157,7 +157,7 @@
 }
 
 .header .header__lower.box {
-  padding: 0 var(--s1) 0;
+  padding: 0 var(--s1) var(--s-6);
 }
 
 /* Hide the header lower if the header upper triggers */

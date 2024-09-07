@@ -76,8 +76,8 @@ export default {
       hangover_offset: 22,
       background: null,
       brow: {
-        part_one: 'Brow Example',	
-        part_two: '2024',	
+        part_one: 'California Rules of Court',	
+        part_two: 'January 1 2024',	
       },
       heading: "This page is for testing a mix of content elements",
       text: "This is some text that goes along with the heading. It can be used to provide a little more context to the heading.",

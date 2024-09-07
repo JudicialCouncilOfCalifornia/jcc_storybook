@@ -116,7 +116,8 @@ export default {
     hangover_offset: 22,
     brow: {
       variant: "default_with_date",
-      part_one: "Brow Example",
+      part_one: "Large Brow Example",
+      part_two: "January 1, 2021",
     },
     heading: "This is a Heading",
     news_header: true,

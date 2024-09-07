@@ -325,6 +325,70 @@ export let default_mobile_nav_secondary_nav_links_data = default_secondary_links
 export let default_primary_nav_mobile_links_data = default_primary_nav_links_data;
 
 //
+// Default data for section links in SectionNav component
+export let default_section_nav_links_data = [
+  {
+    text: "Home",
+    is_current: true,
+    id: "nav-section-one",
+    url: "#",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Justices",
+    links: default_primary_nav_sublinks_more_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Rules, Forms & Filings",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Oral Argument Calendar",
+    links: default_primary_nav_sublinks_more_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Court Programs",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "News & Announcements",
+    links: default_primary_nav_sublinks_small_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "About",
+    links: default_primary_nav_sublinks_small_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+];
+
+//
 // Default data for the footer about section.
 export let footer_about_label_data = "About the Judicial Council";
 

@@ -5,7 +5,7 @@
 
 <div class="{{ classes|join(' ') }}">
   <div class="profile-bio__main stack">
-    <div class="profile-bio__header {{ share ? 'cluster' : '' }}">
+    <div class="profile-bio__header {{ share ? 'cluster detect-wrap detect-wrap--observed' : '' }}">
       <h1 class="profile-bio__heading">{{ name }}</h1>
       {% if share %}
         {% include "@molecules/Share/Share.twig" with share %}

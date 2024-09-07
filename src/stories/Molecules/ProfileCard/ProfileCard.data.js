@@ -1,7 +1,7 @@
 export default {
   default: {
     variant: "default",
-    image: '<img src="https://source.unsplash.com/random/200x200/?face" />',
+    image: '<img src="https://picsum.photos/id/392/200/200" />',
     name: 'Avery Person',
     title: 'Associate Individual',
     content: 'Since 2009',
@@ -9,7 +9,7 @@ export default {
   },
   no_link_example: {
     variant: "no_link_example",
-    image: '<img src="https://source.unsplash.com/random/200x200/?face" />',
+    image: '<img src="https://picsum.photos/id/392/200/200" />',
     name: false,
     title: false,
     content: false,

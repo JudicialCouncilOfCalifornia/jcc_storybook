@@ -4,110 +4,121 @@
 
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'section-nav--' ~ variant : 'section-nav--default' %}
-{% set has_label = show_label and label ? 'section-nav--has-label' : '' %}
+{% set has_label = show_label and label and not label_above? 'section-nav--has-label' : 'section-nav--no-inline-label' %}
 
 {% set classes = [
   'container',
   'section-nav',
   variant_class,
   'cluster',
-  display_mobile_version ? 'display-mobile-version' : '',
+  display_mobile_version ? 'display-mobile-version' : 'no-mobile-version',
   has_label,
 ] %}
 
-<div class="section-nav__wrapper box">
-  <div class="{{ classes|join(' ')|trim }}">
-    <div class="cluster detect-wrap detect-wrap--observed section-nav__desktop--wrapper">
-      {% if show_label and label %}
-      <div class="section-nav__label" id="{{ nav_id }}">
-        <span>{{ label }}</span>
-      </div>
-      {% endif %}
+<div class="section-nav__wrapper">
 
-      <ul class="section-nav__desktop nav-level-1 reel no-bar" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
-        {% for i,link in links %}
-          
-          {% set parent = link.links is not empty ? true : false %}
-          {% set active_class = link.is_current ? 'is_active' : '', %}
-          {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'section-nav__has-overview-link' : '' %}
-          
-          <li class="section-nav__group {{ parent_overview_link_class }}">
+  {% if show_label and label and label_above %}
+    <div class="section-nav__label label-above box" id="{{ nav_id }}">
+      <div class="container">
+        <span class="section-nav__label__text">{{ label }}</span>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="section-nav__border-wrapper box">
+    <div class="{{ classes|join(' ')|trim }}">
+      <div class="cluster detect-wrap detect-wrap--observed section-nav__desktop--wrapper">
+        {% if show_label and label and not label_above %}
+        <div class="section-nav__label" id="{{ nav_id }}">
+          <span>{{ label }}</span>
+        </div>
+        {% endif %}
+
+        <ul class="section-nav__desktop nav-level-1 reel no-bar" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+          {% for i,link in links %}
             
-            {% set link_classes = [
-              'section-nav__button',
-              parent ? 'parent_link' : null,
-              has_desktop_dropdown_overview_link ? 'button' : null,
-              active_class,
-            ] %}
+            {% set parent = link.links is not empty ? true : false %}
+            {% set active_class = link.is_current ? 'is_active' : '', %}
+            {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'section-nav__has-overview-link' : '' %}
             
-            {% if parent %}
-              {% if has_desktop_dropdown_overview_link %}
-                <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
+            <li class="section-nav__group {{ parent_overview_link_class }}">
+              
+              {% set link_classes = [
+                'section-nav__button',
+                parent ? 'parent_link' : null,
+                has_desktop_dropdown_overview_link ? 'button' : null,
+                active_class,
+              ] %}
+              
+              {% if parent %}
+                {% if has_desktop_dropdown_overview_link %}
+                  <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
+                {% else %}
+                  {{ link(link.text, link.url, {class: link_classes}) }}
+                {% endif %}
               {% else %}
                 {{ link(link.text, link.url, {class: link_classes}) }}
               {% endif %}
-            {% else %}
-              {{ link(link.text, link.url, {class: link_classes}) }}
-            {% endif %}
-            
-            {% if link.links is not empty %}
-              {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
-              {% set mega = link.links|length > 7 ? 'section-nav__list--mega' : '' %}
-              <ul class="section-nav__list nav-level-2 {{ mega }}">
-                {% for link2 in link.links %}
-                <li class="section-nav__list__item">
-                  {% set link2_classes = [
-                    'link',
-                    'link-level-2',
-                    link2.is_current ? 'is_current' : '',
-                    (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
-                  ] %}
-                  {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null %}
-                  {{ link(link2.text, link2.url, {class: ['section-nav__link', overview_link_class]}) }}
-                </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    {% if display_mobile_version %}
-      <div class="section-nav__mobile--wrapper">
-      
-        {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
-
-        <ul class="section-nav__mobile nav-level-1 stack" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
-          {% for i,link in mobile_links %}
-            {% set parent = link.links is not empty ? true : false %}
-            <li class="section-nav__mobile__group">
-
-              {% if parent %}
-                <button class="section-nav__mobile__button button">
-                  {{ link.text }}
-                  {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
-                </button>
-              {% else %}
-                {{ link(link.text, link.url, {class: ['section-nav__mobile__button link']}) }}
-              {% endif %}
               
               {% if link.links is not empty %}
-                {% set mega = link.links|length > 7 ? 'section-nav__mobile__item--mega' : '' %}
-                <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
+                {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
+                {% set mega = link.links|length > 7 ? 'section-nav__list--mega' : '' %}
+                <ul class="section-nav__list nav-level-2 {{ mega }}">
                   {% for link2 in link.links %}
-                    <li class="section-nav__mobile__list__item">
-                      {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
-                      {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
-                    </li>
+                  <li class="section-nav__list__item">
+                    {% set link2_classes = [
+                      'link',
+                      'link-level-2',
+                      link2.is_current ? 'is_current' : '',
+                      (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
+                    ] %}
+                    {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null %}
+                    {{ link(link2.text, link2.url, {class: ['section-nav__link', overview_link_class]}) }}
+                  </li>
                   {% endfor %}
                 </ul>
               {% endif %}
-
-          </li>
-        {% endfor %}
+            </li>
+          {% endfor %}
         </ul>
       </div>
-    {% endif %}
+
+      {% if display_mobile_version %}
+        <div class="section-nav__mobile--wrapper">
+        
+          {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
+
+          <ul class="section-nav__mobile nav-level-1 stack" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+            {% for i,link in mobile_links %}
+              {% set parent = link.links is not empty ? true : false %}
+              <li class="section-nav__mobile__group">
+
+                {% if parent %}
+                  <button class="section-nav__mobile__button button">
+                    {{ link.text }}
+                    {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
+                  </button>
+                {% else %}
+                  {{ link(link.text, link.url, {class: ['section-nav__mobile__button link']}) }}
+                {% endif %}
+                
+                {% if link.links is not empty %}
+                  {% set mega = link.links|length > 7 ? 'section-nav__mobile__item--mega' : '' %}
+                  <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
+                    {% for link2 in link.links %}
+                      <li class="section-nav__mobile__list__item">
+                        {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
+                        {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
