@@ -1,4 +1,11 @@
 
+0.55.40 / 2024-09-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #252 from JudicialCouncilOfCalifornia/bugfix/COURTS-205--accordion-toggle-inconsistent
+  * [COURTS-205] -- improve element handling context & simplify toggle.
+
 0.55.39 / 2024-09-04
 ===================
 
