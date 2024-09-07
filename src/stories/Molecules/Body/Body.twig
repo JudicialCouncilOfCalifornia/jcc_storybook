@@ -32,12 +32,12 @@
       <h2 class="body__heading">{{ heading }}</h2>
     {% endif %}
 
-    {% if lead is not empty %}
-      <div class="body__lead">{{ lead }}</div>
-    {% endif %}
-
     {% if content is not empty %}
       <div class="body__content word-wrap">
+        {% if lead is not empty %}
+          <div class="body__lead">{{ lead }}</div>
+        {% endif %}
+
         {{ content }}
       </div>
     {% endif %}
