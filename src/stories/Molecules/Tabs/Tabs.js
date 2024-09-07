@@ -131,7 +131,7 @@ docReady(function () {
   });
 
   // Initialize tablist
-  var tablists = document.querySelectorAll('.tabs [role=tablist]');
+  const tablists = document.querySelectorAll('.tabs [role=tablist]');
 
   tablists.forEach(tablist => {
     if (!tablist.classList.contains('js-tabs__tablist')) {
@@ -142,21 +142,18 @@ docReady(function () {
     }
   });
 
-  // Toggle class if the tab and tablist are the same width or not.
+  // Toggle accordion class if the tabs have insufficient real estate.
   function toggleAccordionDisplay(tablist) {
     let container = tablist.parentElement;
-    let Tabs = Array.from(tablist.querySelectorAll('button'));
-    let lastTab = Tabs[Tabs.length - 1];
-    let details = container.querySelectorAll('details');
+    let tabs = Array.from(tablist.querySelectorAll('button'));
+    let tabDetails = Array.from(container.querySelectorAll('details'));
     let itemsTotalWidth = 0;
-    for (let i = 0; i < Tabs.length; i++) {
-      itemsTotalWidth += parseInt(Tabs[i].offsetWidth, 10);
+    for (let i = 0; i < tabs.length; i++) {
+      itemsTotalWidth += parseInt(tabs[i].offsetWidth, 10);
     }
 
-    if (itemsTotalWidth >= container.clientWidth || lastTab.offsetLeft <= 0) {
-      tablist.classList.remove('cluster');
-      tablist.classList.add('switcher');
-      details.forEach((detail) => {
+    if (itemsTotalWidth >= container.clientWidth) {
+      tabDetails.forEach((detail) => {
         if (detail.classList.contains('is-hidden')) {
           detail.open = false;
         }
@@ -165,11 +162,9 @@ docReady(function () {
     }
     else {
       container.classList.remove('tabs--as-accordion');
-      details.forEach((detail) => {
+      tabDetails.forEach((detail) => {
         detail.open = true;
       });
-      tablist.classList.remove('switcher');
-      tablist.classList.add('cluster');
     }
   }
 });
