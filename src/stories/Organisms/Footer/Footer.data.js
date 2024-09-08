@@ -9,6 +9,7 @@ export default {
       overflowing_variant: "stack",
       links: Data.default_secondary_links_long_data,
     },
+    display_footer_lower: true,
     footer_about_content: Data.footer_about_data,
     footer_lower_nav_data: {
       links: Data.default_primary_nav_links_long_data,

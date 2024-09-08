@@ -231,3 +231,14 @@ li.primary-nav__mobile__list__item + li.primary-nav__mobile__list__item {
   background-color: var(--color-primary-light-x);
   color: var(--color-white);
 }
+
+.primary-nav .primary-nav__mobile__button.in-active-trail,
+.primary-nav a.primary-nav__mobile__link.is-active {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.primary-nav .primary-nav__mobile__button.is-active {
+  background-color: var(--color-primary-light-x);
+  color: white;
+}
