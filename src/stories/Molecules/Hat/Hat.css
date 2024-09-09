@@ -29,3 +29,7 @@
 .hat > .box > .container .secondary-nav .secondary-nav__list__item:last-child a {
   padding-inline-end: 0;
 }
+
+.hat svg.ext {
+  display: none;
+}

@@ -272,3 +272,7 @@ li.section-nav__mobile__list__item + li.section-nav__mobile__list__item {
   background-color: var(--color-primary-light-x);
   color: white;
 }
+
+.section-nav__mobile__overview-link {
+  font-weight: 600;
+}

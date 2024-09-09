@@ -38,7 +38,7 @@
           {% for i,link in links %}
             
             {% set parent = link.links is not empty ? true : false %}
-            {% set active_class = link.is_current ? 'is_active' : '', %}
+            {% set active_class = link.is_current ? 'is_active' : '' %}
             {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'section-nav__has-overview-link' : '' %}
             
             <li class="section-nav__group {{ parent_overview_link_class }}">
