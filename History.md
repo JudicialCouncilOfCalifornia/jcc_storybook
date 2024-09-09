@@ -1,4 +1,22 @@
 
+0.56.1 / 2024-09-08
+===================
+
+  * chore: Export libs.
+  * Set section nav label placement to inline on the example preview pages
+  * Merge pull request #253 from JudicialCouncilOfCalifornia/feature/COURTS-162--header-and-mobile-nav-rebuild
+  * [COURTS-162] -- Removed some unnecessary code/data, fixed comments and readmes
+  * [COURTS-162] -- PrimaryNav SectionNav active trail style fix. Footer lower option set
+  * [COURTS-162] -- SectionNav improvements and ability to set label above. Cleaned up some js warnings and other data and css cleanups
+  * Merge branch 'master' into feature/COURTS-162--header-and-mobile-nav-rebuild
+  * [COURTS-162] -- More cleanup of components. Addition of trim to some class arrays in twig to help lesson some of the extra empty spaces.
+  * [COURTS-162] -- Addition of section nav and some other component cleanup
+  * [COURTS-162] -- Footer and shoe update work
+  * [COURTS-162] -- Fixed card demo image source
+  * [COURTS-162] -- Updated header and Preview Pages. Added option to set primary nav to render a mobile version and implemented related styles and config. implemented navTrigger element and style refinements.
+  * Merge branch 'master' into feature/COURTS-162--header-and-mobile-nav-rebuild
+  * [COURTS-162] -- TRACKING WORK. Rebuild of header output including updates to hat, global and site branding, secondary nav, header search form, primary nav, and creation of new MobileNav block element for rendering our complex mobile popup.
+
 0.55.40 / 2024-09-06
 ===================
 
