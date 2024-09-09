@@ -1,4 +1,10 @@
 
+0.56.2 / 2024-09-08
+===================
+
+  * chore: Export libs.
+  * [COURTS-162] -- Fixes for bug in twig template files for PrimaryNav and SectionNav and css tweaks to fix last release.
+
 0.56.1 / 2024-09-08
 ===================
 
