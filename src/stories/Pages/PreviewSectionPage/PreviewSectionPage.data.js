@@ -54,7 +54,7 @@ export default {
       variant: "alternate",
       label: "2nd District",
       show_label: true,
-      label_above: true,
+      label_above: false,
       display_mobile_version: true,
       links: Data.default_section_nav_links_data,
       mobile_links: Data.default_section_nav_links_data,
