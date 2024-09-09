@@ -19,7 +19,9 @@ docReady(function () {
     if (footer[0]) {
       let footer_height = footer[0].offsetHeight / 16 + "rem";
       let drawer = document.getElementsByClassName('drawer');
-      drawer[0].style.bottom = footer_height;
+      if (drawer[0])  {
+        drawer[0].style.bottom = footer_height;
+      } 
     }
 
     // Equal button widths when stacked.

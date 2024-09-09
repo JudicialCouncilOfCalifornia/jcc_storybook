@@ -2,6 +2,8 @@ import readme from "./readme.md";
 import data from "./PrimaryNav.data";
 import PrimaryNav from "./PrimaryNav.twig";
 import "./PrimaryNav.css";
+import "./PrimaryNavAlternate.css";
+import "./PrimaryNavMobile.css";
 import "./PrimaryNav.js";
 
 export default {

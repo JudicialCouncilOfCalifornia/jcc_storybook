@@ -1,0 +1,30 @@
+{# Set up variant classes. #}
+{% set variant_class = variant ? 'nav-trigger--' ~ variant : 'nav-trigger--default' %}
+
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'nav-trigger',
+  variant_class,
+  label_direction ? 'nav-trigger--label-direction--' ~ label_direction : 'nav-trigger--label-direction--left',
+  show_label and label ? 'nav-trigger--has-label' : '',
+] %}
+
+{% if display_demo %}<div class="nav-trigger__with-demo">{% endif %}
+  <label class="{{ classes|join(' ')}}">
+    {% if show_label and label %}
+    <div class="nav-trigger__label" id="{{ nav_id }}--mobile">
+      <span>{{ label }}</span>
+    </div>
+    {% endif %}
+    <input type="checkbox" />
+  </label>
+
+  {% if display_demo %}
+    <div class="nav-trigger__demo-content">
+      <p>This is demonstration content. A rendered menu/nav/block/or other rendered content would be in the div or ul item directly following the trigger.</p>
+    </div>  
+  {% endif %}
+
+{% if display_demo %}</div>{% endif %}

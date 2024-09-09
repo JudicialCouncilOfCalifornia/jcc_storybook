@@ -42,7 +42,7 @@
 ] %}
 
 {% if items %}
-  <nav class="{{ classes|join(' ') }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
+  <nav class="{{ classes|join(' ')|trim }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
     <ul class="pager__items js-pager__items cluster">
       
       <li class="pager__item">

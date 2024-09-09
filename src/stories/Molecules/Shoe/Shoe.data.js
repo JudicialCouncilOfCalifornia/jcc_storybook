@@ -1,30 +1,13 @@
+import * as data from "../../Data/DefaultData.data";
+
 export default {
   default: {
     variant: "default",
-    global_branding_data: {
-      text: "Judicial Branch of California",
-      destination: "https://courts.ca.gov",
-    },
+    global_branding_data: data.global_branding_data,
     secondary_nav_data: {
-      variant: "",
-      overflowing_variant: "stack",
-      links: [
-        {
-          text: "Contact Us",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "Privacy",
-          url: "#",
-          is_current: false,
-        },
-        {
-          text: "Terms Of Use",
-          url: "#",
-          is_current: false,
-        },
-      ],
+      variant: "default",
+      overflowing_variant: "",
+      links: data.shoe_secondary_nav_links_data,
     },
   },
 };

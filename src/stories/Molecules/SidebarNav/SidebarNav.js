@@ -150,6 +150,14 @@ docReady(function () {
               // Factor the max-height based on window height, minus the footer
               // height, minus any visible space on the top of the sidebar nav.
               let sidebar_nav_height = window.innerHeight - total_footer_height - nav.getBoundingClientRect().top;
+              
+              // If the avaialable space is 0 or less, set the max height to 0,
+              // essentially hiding the sidebar nav.
+              if (sidebar_nav_height <= 0) {
+                sidebar_nav_height = 0;
+              }
+              
+              // Set our inline styles.
               sidebar_nav_position[0].style.maxHeight = sidebar_nav_height + 'px';
               sidebar_nav_position[0].style.overflow = "auto";
             }

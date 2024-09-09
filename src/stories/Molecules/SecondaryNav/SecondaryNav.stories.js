@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./SecondaryNav.data";
 import SecondaryNav from "./SecondaryNav.twig";
 import "./SecondaryNav.css";
+import "./SecondaryNavAlternate.css";
 
 export default {
   title: "Molecules/SecondaryNav",
@@ -16,7 +17,7 @@ export default {
       description: "SecondaryNav variant.",
       table: { defaultValue: { summary: "default" } },
       control: { type: "radio" },
-      options: ["default", "with-divider", "alternate", "alternate-with-divider"],
+      options: ["default", "with-divider", "stacked", "alternate", "alternate-with-divider"],
     },
     overflowing_variant: {
       description: "Overflowing variant.",
@@ -35,6 +36,9 @@ const Template = ({ ...args }) => {
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
+
+export const Stacked = Template.bind({});
+Stacked.args = data.stacked;
 
 export const StackOverflowing = Template.bind({});
 StackOverflowing.args = data.stack_overflowing;

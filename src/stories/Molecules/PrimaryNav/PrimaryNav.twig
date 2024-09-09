@@ -1,91 +1,110 @@
 {# Define if the top level includes a an overview link in the dropdown #}
 {% set has_desktop_dropdown_overview_link = desktop_dropdown_overview_link|default(false) %}
+{% set nav_id = label ? label|clean_id : '' %}
 
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'primary-nav--' ~ variant : 'primary-nav--default' %}
+{% set has_label = show_label and label ? 'primary-nav--has-label' : '' %}
 
 {% set classes = [
   'primary-nav',
   variant_class,
+  'cluster',
+  display_mobile_version ? 'display-mobile-version' : '',
+  has_label,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  <div class="primary-nav__default primary-nav__desktop nav-level-1 reel no-bar">
-
-    {% for i,link in links %}
-      {% set parent = link.links is not empty ? true : false %}
-
-      {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
-      <div class="primary-nav__group {{ parent_overview_link_class }}">
-        {% if parent %}
-          {% if has_desktop_dropdown_overview_link %}
-            <button class="primary-nav__button button">{{ link.text }}</button>
-          {% else %}
-            {{ link(link.text, link.url, {class: ['primary-nav__button parent_link']}) }}
-          {% endif %}
-        {% else %}
-          {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
-        {% endif %}
-
-				{% if link.links is not empty %}
-					{% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
-					<div class="primary-nav__item nav-level-2 box {{ mega }}">
-						<div class="container">
-							<div class="grid">
-								{% for link2 in link.links %}
-                  {% set link2_classes = [
-                    'link',
-                    'link-level-2',
-                    link2.is_current ? 'is_current' : '',
-                    (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
-                  ] %}
-                  {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__overview-link' : null %}
-									<span class="{{ link2_classes|join(' ') }}">{{ link(link2.text, link2.url, {class: ['primary-nav__link', overview_link_class]}) }}</span>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				{% endif %}
-			</div>
-		{% endfor %}
-		{% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
-	</div>
-	<div class="primary-nav__hamburger primary-nav__mobile cluster">
-		<div class="primary-nav__hamburger-toggle">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<div class="nav-level-1 stack">
-			<div class="primary-nav__group">
-				{% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data_duplicate %}
-			</div>
-
-      {% for i,link in mobile_links %}
-        {% set parent = link.links is not empty ? true : false %}
-
-        <div class="primary-nav__group">
-          {% if parent %}
-            <button class="primary-nav__button button">{{ link.text }}</button>
-          {% else %}
-            {{ link(link.text, link.url, {class: ['primary-nav__button']}) }}
-          {% endif %}
-
-          {% if link.links is not empty %}
-            {% set mega = link.links|length > 7 ? 'primary-nav__item--mega' : '' %}
-            <div class="primary-nav__item nav-level-2 box {{ mega }}">
-              <div class="container">
-                <div class="grid">
-                  {% for link2 in link.links %}
-                    {% set overview_link_class = link2.is_overview_link ? 'primary-nav__overview-link' : 'primary-nav__link' %}
-                    {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-          {% endif %}
-        </div>
-      {% endfor %}
+  <div class="cluster detect-wrap detect-wrap--observed primary-nav__desktop--wrapper">
+    {% if show_label and label %}
+    <div class="primary-nav__label" id="{{ nav_id }}">
+      <span>{{ label }}</span>
     </div>
+    {% endif %}
+
+    <ul class="primary-nav__desktop nav-level-1 reel no-bar" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+      {% for i,link in links %}
+        
+        {% set parent = link.links is not empty ? true : false %}
+        {% set active_class = link.is_current ? 'is_active' : '', %}
+        {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
+        
+        <li class="primary-nav__group {{ parent_overview_link_class }}">
+          
+          {% set link_classes = [
+            'primary-nav__button',
+            parent ? 'parent_link' : null,
+            has_desktop_dropdown_overview_link ? 'button' : null,
+            active_class,
+          ] %}
+          
+          {% if parent %}
+            {% if has_desktop_dropdown_overview_link %}
+              <button class="{{ link_classes|join(' ') }}">{{ link.text }}</button>
+            {% else %}
+              {{ link(link.text, link.url, {class: link_classes}) }}
+            {% endif %}
+          {% else %}
+            {{ link(link.text, link.url, {class: link_classes}) }}
+          {% endif %}
+          
+          {% if link.links is not empty %}
+            {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
+            {% set mega = link.links|length > 7 ? 'primary-nav__list--mega' : '' %}
+            <ul class="primary-nav__list nav-level-2 {{ mega }}">
+              {% for link2 in link.links %}
+              <li class="primary-nav__list__item">
+                {% set link2_classes = [
+                  'link',
+                  'link-level-2',
+                  link2.is_current ? 'is_current' : '',
+                  (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
+                ] %}
+                {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__link primary-nav__overview-link' : null %}
+                {{ link(link2.text, link2.url, {class: ['primary-nav__link', overview_link_class]}) }}
+              </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
+
+  {% if display_mobile_version %}
+    <div class="primary-nav__mobile--wrapper">
+    
+      {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
+
+      <ul class="primary-nav__mobile nav-level-1 stack" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+        {% for i,link in mobile_links %}
+          {% set parent = link.links is not empty ? true : false %}
+          <li class="primary-nav__mobile__group">
+
+            {% if parent %}
+              <button class="primary-nav__mobile__button button">
+                {{ link.text }}
+                {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
+              </button>
+            {% else %}
+              {{ link(link.text, link.url, {class: ['primary-nav__mobile__button link']}) }}
+            {% endif %}
+            
+            {% if link.links is not empty %}
+              {% set mega = link.links|length > 7 ? 'primary-nav__mobile__item--mega' : '' %}
+              <ul class="primary-nav__mobile__list nav-level-2 box {{ mega }}">
+                {% for link2 in link.links %}
+                  <li class="primary-nav__mobile__list__item">
+                    {% set overview_link_class = link2.is_overview_link ? 'primary-nav__mobile__link primary-nav__mobile__overview-link' : 'primary-nav__mobile__link' %}
+                    {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 </div>

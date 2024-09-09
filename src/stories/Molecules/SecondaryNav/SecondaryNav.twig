@@ -1,17 +1,34 @@
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'secondary-nav--' ~ variant : 'secondary-nav--default' %}
 {% set overflowing_variant_class = overflowing_variant is not empty ? 'secondary-nav--overflowing-' ~ overflowing_variant : '' %}
+{% set nav_id = label ? label|clean_id : '' %}
+{% set has_label = show_label and label ? 'cluster secondary-nav--has-label ' : false %}
 
+{# Create class array. #}
+{# Include composable layout classes as needed. (stack, grid, center, etc.) #}
+{# Include variant classes from above. #}
 {% set classes = [
   'secondary-nav',
   variant_class,
   overflowing_variant_class,
+  has_label,
+  variant != 'stacked' ? 'detect-wrap detect-wrap--observed' : 'stack',
 ] %}
 
-<div class="{{ classes|join(' ') }}">
-	<ul class="reel no-bar" role="list">
+{% set list_classes = [
+  'secondary-nav__list',
+  variant != 'stacked' ? 'reel no-bar' : '',
+] %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if show_label and label %}
+    <div class="secondary-nav__label" id="{{ nav_id }}">
+      <span>{{ label }}</span>
+    </div>
+  {% endif %}
+	<ul class="{{ list_classes|join(' ')|trim }}" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
 		{% for link in links %}
-			<li>
+			<li class="secondary-nav__list__item">
 				{% set link_class = link.is_current ? 'active' : '' %}
 				{{ link(link.text, link.url, { 'class': link_class }) }}
 			</li>

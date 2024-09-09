@@ -8,7 +8,7 @@ export default {
   title: "Molecules/HeaderSearch",
   component: HeaderSearch,
   parameters: {
-    layout: "centered",
+    layout: "padded",
     notes: readme,
   },
   argTypes: {

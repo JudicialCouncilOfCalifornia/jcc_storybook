@@ -5,7 +5,7 @@ export default {
     background: null,
     aspect: [],
     media:
-      '<img src="https://source.unsplash.com/random/1280x720/?language" />',
+      '<img src="https://picsum.photos/id/41/1280/720" />',
     icon_data: {
       icon: "speaker",
       color: false,
@@ -159,7 +159,7 @@ export default {
     clickable_card: true,
     background: null,
     aspect: [],
-    media: '<img src="https://source.unsplash.com/random/400×400/?books" />',
+    media: '<img src="https://picsum.photos/id/41/1200/300" />',
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
     button_data: [

@@ -1,0 +1,22 @@
+{# Set up variant classes for high components. Low level ones are "dumb". #}
+
+{# Create class array #}
+{# Include composable layout classes as needed. #}
+{# Include variant classes form above. #}
+{% set classes = [
+  'previewpage',
+] %}
+
+	<div class="{{ classes|join(' ') }}"> {# Use composable layout classes as needed. #}
+	{# Use BEM syntax if needed for styling classes. #}
+	{% include "@molecules/Hat/Hat.twig" with hat %}
+	{% include "@organisms/Header/Header.twig" with header %}
+	{% include "@molecules/SectionNav/SectionNav.twig" with section_nav %}
+	{% include "@molecules/Hero/Hero.twig" with hero %}
+	{% include "@organisms/Section/Section.twig" with section_1 %}
+	{% include "@organisms/Section/Section.twig" with section_2 %}
+	{% include "@organisms/Section/Section.twig" with section_3 %}
+	{% include "@organisms/Section/Section.twig" with section_4 %}
+	{% include "@organisms/Section/Section.twig" with section_5 %}
+	{% include "@organisms/Footer/Footer.twig" with footer %}
+{% include "@molecules/Shoe/Shoe.twig" with shoe %}</div>

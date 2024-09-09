@@ -1,10 +1,5 @@
-import logo from "./Council-Logo.svg";
+import * as data from "../../Data/DefaultData.data";
 
 export default {
-  default: {
-    logo: logo,
-    label: "California Courts",
-    sub_label: "Language Access",
-    url: "/",
-  },
+  default: data.site_branding_data,
 };

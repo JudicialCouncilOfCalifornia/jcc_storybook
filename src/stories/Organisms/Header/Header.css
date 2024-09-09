@@ -1,15 +1,60 @@
 .header {
-  /* box-shadow: 4px 4px 10px 2px #aaa3; */
   position: relative;
   z-index: 3;
 }
 
-.header .box .container > * + * {
-  margin-block-start: var(--s0);
+.header > .container > * + * {
+  margin-block-start: var(--s-2);
 }
 
-.header__secondary-nav {
+.header > .container > .box {
+  padding-block: var(--s-2);
+}
+
+.header .cluster {
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.header .site-branding.cluster {
+  align-items: center;
+}
+
+.header .header-search {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.header .header__upper .header-search .header-search__form {
+  max-width: 40ch;
+}
+
+.header .header-search .header-search__form input,
+.header .header-search .header-search__form button {
+  align-self: center;
+}
+
+.header .header__secondary {
+  margin-inline-start: auto;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-grow: 1;
+  gap: var(--s-2);
+}
+
+.header .header__secondary-nav {
   gap: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* margin-inline-end: var(--s0); */
+}
+
+.header .header__secondary.cluster.wrapping {
+  height: 0;
+  min-height: 0;
+  max-height: 0;
 }
 
 .header__secondary-nav.cluster {
@@ -31,17 +76,11 @@
 }
 
 .header .secondary-nav a {
+  --gap: var(--s-2);
   --color: var(--color-base-dark-x);
   --accent-color: var(--color-base);
   font-size: var(--s-1);
-}
-
-.header .cluster {
-  justify-content: space-between;
-}
-
-.header .primary-nav__hamburger {
-  margin-block-start: -3rem;
+  line-height: var(--s-1);
 }
 
 /* BEGIN Translate */
@@ -78,5 +117,98 @@
   appearance: auto;
   font-size: 12px;
 }
-/* END */
 
+.header .wrapping .header__secondary {
+  display: none;
+}
+
+.header .primary-nav .primary-nav__desktop--wrapper {
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.header .header__upper.wrapping ~ .header__lower .primary-nav__desktop {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header__upper.wrapping + .header__lower .primary-nav .reel + .primary-nav__mobile-wrapper,
+.header .header__upper.wrapping ~ .header__lower .primary-nav__mobile-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header .container:has(.header__upper.wrapping) .primary-nav__mobile-wrapper > label {
+  position: absolute;
+  top: -3.75rem;
+  padding: var(--s0);
+}
+
+.header > .container > .header__lower {
+  margin-block-start: 0;
+}
+
+.header .header__upper.box {
+  padding: var(--s-3) var(--s1) var(--s-3);
+}
+
+.header .header__lower.box {
+  padding: 0 var(--s1) var(--s-6);
+}
+
+/* Hide the header lower if the header upper triggers */
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower,
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower * {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+}
+
+/* Hide the header upper if the header lower triggers */
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary,
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary * {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+}
+
+/* Hide mobile menu section by default */
+.header__mobile {
+  height: 0;
+  padding: 0;
+  max-height: 0;
+  min-height: 0;
+  visibility: hidden;
+  display: none;
+}
+
+/* Show the mobile menu section if header lower or header upper triggers */
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__mobile,
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__mobile {
+  height: unset;
+  max-height: unset;
+  min-height: unset;
+  padding: unset;
+  visibility: visible;
+  display: block;
+}
+
+/* Position the hamburger menu trigger into the right place in the header */
+.header__mobile .nav-trigger {
+  position: absolute;
+  padding: var(--s-2);
+  top: var(--s0);
+  right: var(--s-4);
+}
+
+.header__mobile .nav-trigger.nav-trigger--has-label .nav-trigger__label {
+  right: 3.5rem;
+}

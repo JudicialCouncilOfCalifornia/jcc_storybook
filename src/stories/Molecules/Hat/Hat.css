@@ -5,7 +5,7 @@
 }
 
 .hat .box {
-  padding-block: var(--s-5);
+  padding-block: 4px;
 }
 
 .hat .cluster {
@@ -14,5 +14,18 @@
 }
 
 .hat .secondary-nav {
-  font-size: var(--s-1);
+  font-weight: 400;
+}
+
+.hat .secondary-nav > ul > li > a {
+  --gap: var(--s0);
+  font-size: calc(var(--s-2) + 1.5px);
+}
+
+.hat > .box > .container > .wrapping .secondary-nav {
+  margin-inline-start: auto;
+}
+
+.hat > .box > .container .secondary-nav .secondary-nav__list__item:last-child a {
+  padding-inline-end: 0;
 }

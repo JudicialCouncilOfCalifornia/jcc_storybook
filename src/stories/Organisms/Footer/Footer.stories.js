@@ -15,7 +15,7 @@ export default {
       description: "Footer variant.",
       table: { defaultValue: { summary: "default" } },
       control: { type: "radio" },
-      options: ["default", "variant_one"],
+      options: ["default", "alternate"],
     },
     // More args here.
   },

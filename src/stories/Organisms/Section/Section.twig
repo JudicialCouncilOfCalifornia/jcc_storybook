@@ -67,13 +67,15 @@
   {% set classes = classes|merge(section_classes) %}
 {% endif %}
 
+{% set inner_box_class = disable_inner_box == true ? '' : 'box' %}
+
 {# Section Template #}
 <div {% if classes is not empty %} class="{{ classes|join(' ')}}" {% endif %} {% if styles is not empty %} style="{{ styles|join }}" {% endif %}>
   {% if background_image_url is not empty %}
     <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
     <div class="section__tint"></div>
   {% endif %}
-  <div class="section__content box">
+  <div class="section__content {{ inner_box_class }}">
     <div class="container stack">
       {% if brow_data or heading or text %}
         <div class="section__header center">

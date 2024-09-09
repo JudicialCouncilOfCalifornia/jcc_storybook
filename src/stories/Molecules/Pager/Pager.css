@@ -60,3 +60,8 @@
   padding-inline: 0 var(--s-3);
   rotate: 180deg;
 }
+
+.pager .pager__item:is(.pager__item--first, .pager__item--previous) a div.icon-wrapper .icon {
+  width: clamp(var(--s0), 100%, var(--s0));
+  height: clamp(var(--s0), 100%, var(--s0));
+}

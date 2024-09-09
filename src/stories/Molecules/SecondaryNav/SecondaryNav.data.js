@@ -1,188 +1,53 @@
+import * as data from "../../Data/DefaultData.data";
+
 export default {
   default: {
     variant: "",
     overflowing_variant: "",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_data,
   },
   stack_overflowing: {
     variant: "",
     overflowing_variant: "stack",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_long_data,
   },
   hidden_overflowing: {
     variant: "",
     overflowing_variant: "hidden",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_long_data,
+  },
+  stacked: {
+    variant: "stacked",
+    overflowing_variant: "",
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_long_data,
   },
   with_divider: {
     variant: "with-divider",
     overflowing_variant: "",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_long_data,
   },
   alternate: {
     variant: "alternate",
     overflowing_variant: "stack",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_data,
   },
   alternate_with_divider: {
     variant: "alternate-with-divider",
     overflowing_variant: "stack",
-    links: [
-      {
-        text: "Careers",
-        url: "#",
-        is_current: true,
-      },
-      {
-        text: "Contact Us",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Accessibility",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Public Access To Records",
-        url: "#",
-        is_current: false,
-      },
-      {
-        text: "Newsroom",
-        url: "#",
-        is_current: false,
-      },
-    ],
+    show_label: false,
+    label: "Secondary Navigation",
+    links: data.default_secondary_links_long_data,
   },
 };

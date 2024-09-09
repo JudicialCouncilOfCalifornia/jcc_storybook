@@ -37,9 +37,13 @@
 
 .section__content {
   box-sizing: border-box;
-  padding-block: var(--s3);
+  /* padding-block: var(--s3); */
   /* Brings content above tint due to grid. */
   z-index: 1;
+}
+
+.section__content.box {
+  padding-block: var(--s3);
 }
 
 .section > * > .center {

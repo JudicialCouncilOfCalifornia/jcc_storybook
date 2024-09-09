@@ -50,7 +50,8 @@
 /* Add text shadow to match the background so it's only seen when overlapping the image. */
 .hangover__top-content-brow,
 .hangover__top .hangover__text,
-.hangover__top-content h1 { 
+.hangover__top-content h1 {
+  color: var(--heading-color);
   text-shadow: 1px 1px 1px var(--text-shadow-color),
     -1px -1px 1px var(--text-shadow-color),
     -1px 1px 1px var(--text-shadow-color), 1px -1px 1px var(--text-shadow-color);
@@ -320,6 +321,18 @@
 
 .hangover--hide-compact .wrapping .hangover__top-hangover-content > * {
   display: none;
+}
+
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-content{
+  order: 1;
+}
+
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content {
+  order: 2;
+}
+
+.hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content > * {
+  width: 100%;
 }
 
 .hangover--borderless-media .box .hangover__top-hangover-content {

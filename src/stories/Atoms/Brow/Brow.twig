@@ -7,6 +7,8 @@
 {% set classes = [
   'brow',
   variant_class,
+  'detect-wrap',
+  'detect-wrap--observed',
 ] %}
 
 {% if (part_one or part_two) %}
@@ -17,7 +19,7 @@
       <span class="brow__accent">{{ part_one }}</span>
     {% endif %}
     {% if part_two %}
-      <span class="brow__secondary" style="{% if news_header %}color: var(--color-black);{% endif %}">{{ part_two }}</span> 
+      <span class="brow__secondary" {% if news_header %}style="color: var(--color-black);"{% endif %}>{{ part_two }}</span> 
     {% endif %}
   </div>
 {% endif %}

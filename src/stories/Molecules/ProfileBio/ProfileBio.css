@@ -1,5 +1,6 @@
 .profile-bio__header {
   border-block-end: 2px dotted var(--color-base-light-x);
+  align-items: stretch;
 }
 
 .profile-bio__heading {
@@ -28,8 +29,18 @@
 
 .profile-bio__header .share {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .profile-bio__main .pills {
-  margin-block-start: var(--s5);
+  margin-block-start: var(--s3);
+}
+
+.profile-bio__header.wrapping {
+  padding-block-end: var(--s0);
+}
+
+.profile-bio__header.wrapping .profile-bio__heading {
+  padding-block-end: 0;
 }
