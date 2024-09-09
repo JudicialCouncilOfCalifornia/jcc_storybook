@@ -1,3 +1,6 @@
+// Break this data up into multiple files if needed to help keep it manageable,
+// such as DefaultHeaderData.js or DefaultNavData.js.
+
 import logo from "../Atoms/SiteBranding/Council-Logo.svg";
 
 // Default data for GlobalBranding component
