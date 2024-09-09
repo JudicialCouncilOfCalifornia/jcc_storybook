@@ -1,1 +1,1 @@
-.global-branding a{font-family:var(--font-global);font-size:var(--s0);color:var(--color,var(--color-white));text-transform:uppercase;text-decoration:none}.global-branding a:hover{text-decoration:underline}
+.global-branding a{font-family:var(--font-global);font-size:var(--s-1);color:var(--color,var(--color-white));text-transform:uppercase;text-decoration:none;letter-spacing:.5px;font-weight:400}.global-branding a:hover{text-decoration:underline}
