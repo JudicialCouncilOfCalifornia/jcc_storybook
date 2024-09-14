@@ -32,4 +32,4 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: storybook-static # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: ${GITHUB_REF##*/}/docs # The folder that we serve our Storybook files from
+          TARGET_FOLDER: ${{ github.head_ref || github.ref_name }}/docs # The folder that we serve our Storybook files from
