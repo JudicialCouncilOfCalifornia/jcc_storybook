@@ -62,8 +62,8 @@ For more information about how to develop components for this library, see the "
 
 
 ## Links
-* Project Page:   https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
-* Documentation:  https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
+* Project Page:   https://judicialcouncilofcalifornia.github.io/jcc_storybook/master/docs/?path=/docs/documentation-intro--default
+* Documentation:  https://judicialcouncilofcalifornia.github.io/jcc_storybook/master/docs/?path=/docs/documentation-intro--default
 * Support:        https://www.courts.ca.gov/policyadmin-jc.htm
 
 ## License
