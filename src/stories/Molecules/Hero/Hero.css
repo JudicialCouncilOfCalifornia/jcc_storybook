@@ -1,4 +1,6 @@
 .hero {
+  --bg_tint: var(--color-base-dark-xxx);
+  --border: var(--border-base-dark-xxx);
   --color: var(--color-white);
   --heading-color: var(--color);
   --accent-color: var(--color);
@@ -6,6 +8,17 @@
   grid-template-columns: 1fr;
   grid-template-areas: "hero";
   overflow: hidden;
+  border-block-end: var(--border) solid var(--s0);
+}
+
+.hero[style*="--bg: var(--color-base-light-xxx);"],
+.hero[style*="--bg: var(--color-accent-warm-light-xxxx);"],
+.hero[style*="--bg: var(--color-primary-light-xxx);"] {
+  --color: var(--color-black);
+}
+
+.hero:not([style*="--bg: var(--color-base-light-xxx);"], [style*="--bg: var(--color-accent-warm-light-xxxx);"], [style*="--bg: var(--color-primary-light-xxx);"]) .button {
+  color: var(--color-white);
 }
 
 .hero > * {
@@ -32,6 +45,7 @@
 .hero__content {
   /* Bring it above the tint mix-blend-mode. */
   z-index: 1;
+  padding-inline: var(--s6);
 }
 
 .hero__content-inner {
@@ -69,6 +83,7 @@
 .hero__navigation.cards .card {
   padding-inline: var(--s1);
   padding-block: var(--s0);
+  border-radius: unset;
 }
 
 .hero__navigation.cards .card .icon {
@@ -133,6 +148,18 @@
 }
 
 /* Variants */
+.hero--mega .hero__content {
+  padding-block: var(--s6);
+}
+
+.hero--mega .header-search__form {
+  margin-block-start: var(--s3);
+}
+
+.hero--mega .header-search__form .header-search__icon {
+  --accent-color: var(--color-accent-warm-dark-x);
+}
+
 .hero--content-bg {
   --color: var(--color-black);
   --button-color: var(--color-black);
@@ -148,8 +175,6 @@
   color: var(--color-black);
 }
 
-.hero--content-bg .hero__content-inner__background {
-  background-color: var(--background-color, var(--color-white));
-  opacity: 0.9;
-  z-index: 0;
+.hero--content-bg .button {
+  color: var(--button-fg);
 }
