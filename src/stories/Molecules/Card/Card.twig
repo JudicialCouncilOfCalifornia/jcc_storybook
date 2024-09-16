@@ -9,14 +9,14 @@
 
 {% set tag = clickable_card ? 'a' : 'div' %}
 
-{% if button_data is not empty and button_data[0] is empty %}
+{% if button_data is not empty and button_data[0] is empty and not clickable_card %}
   {% set button_data = [button_data] %}
 {% endif %}
-{% set tag_href = tag == 'a' and button_data[0] ? button_data[0].href : '' %}
+{% set tag_href = button_data[0] ? button_data[0].href : '' %}
 
 {% set variant = variant ? 'card--' ~ variant : 'card--default' %}
 {% set variant_clickable = clickable_card ? 'card--clickable' : '' %}
-{% set variant_background = background ? 'card--background-' ~ background : '' %}
+{% set variant_background = background ? 'card--background-' ~ background ~ ' bg-adjust' : '' %}
 {% set extra_padding = extra_padding ? 'extra-padding' : '' %}
 
 {% set styles = [] %}
