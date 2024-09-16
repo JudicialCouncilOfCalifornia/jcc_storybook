@@ -15,8 +15,10 @@ When visible, the search form obscures the containing and adjacent elements with
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: "default",
+  bg_transparent: "true",
   form: "<form>...</form>",
   ```
 </details>

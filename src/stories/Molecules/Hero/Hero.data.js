@@ -2,9 +2,8 @@ export default {
   banner: {
     variant: "banner",
     content_justify: "left",
-    accent_color: false,
     content_bg_color: false,
-    bg_tint: "base-dark-x",
+    bg_tint: "primary-light-x",
     background_image_url: "https://picsum.photos/id/41/900/500",
     card_data: {
       variant: "default",
@@ -19,12 +18,25 @@ export default {
       },
     },
   },
+  banner_mega: {
+    variant: "mega",
+    content_justify: "left",
+    content_bg_color: false,
+    bg_tint: "primary-light-x",
+    background_image_url: "https://picsum.photos/id/41/900/500",
+    card_data: {
+      variant: "default",
+      first_component: true,
+      media: false,
+      heading: "Hero Heading",
+      text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit consequat, pellentesque accumsan metus sed fusce fringilla pretium varius euismod.</p><div class='header-search__wrapper'><div class='cluster header-search header-search--no-toggle bg-transparent'><form action='/search' class='header-search__form' role='search'><label class='sr-only' for='header-search'>Search</label> <input id='header-search' name='search' placeholder='Search' type='search'/> <button class='header-search__icon' type='submit'><div class='icon-wrapper icon-wrapper--fa-search'><svg class='icon' aria-labelledby=''><use xlink:href='/icons.svg#fa-search'></use></svg><span class='sr-only'>Search</span></div></button></form></div></div>",
+    },
+  },
   banner_featured_links: {
     variant: "banner",
     content_justify: "left",
-    accent_color: false,
     content_bg_color: false,
-    bg_tint: "base-dark-x",
+    bg_tint: "primary-light-x",
     background_image_url: "https://picsum.photos/id/41/900/500",
     card_data: {
       variant: "default",
@@ -124,7 +136,6 @@ export default {
   content_bg: {
     variant: "content-bg",
     content_justify: "left",
-    accent_color: "primary-dark-x",
     content_bg_color: "white",
     bg_tint: false,
     background_image_url: "https://picsum.photos/id/41/900/500",

@@ -6,11 +6,10 @@
 
 {% set styles = [] %}
 
-{% if bg_tint %}
-	{% set styles = styles|merge([
-    '--bg: var(--color-' ~ bg_tint ~ ');',
-  ]) %}
-{% endif %}
+{% set styles = [
+  bg_tint ? '--bg: var(--color-' ~ bg_tint ~ ');' : '',
+  variant_type == 'hero--content-bg' or navigation ? '--border: none' : '--border: var(--border-' ~ bg_tint ~ ')',
+] %}
 
 {% set classes = [
   'hero',
