@@ -14,36 +14,22 @@ function docReady(fn) {
 docReady(function () {
 
   const toggleOverflowClass = elem => {
-    // let items = elem.children;
-    // let itemsTotalWidth = 0;
-    // for (let i = 0; i < items.length; i++) {
-    //   itemsTotalWidth += parseInt(items[i].offsetWidth, 10);
-    // }
 
-    // if (elem.scrollWidth > elem.clientWidth) {
-    //   elem.classList.add('overflowing');
-    // } else {
-    //   elem.classList.remove('overflowing');
-    // }
+    // "scrollWidth" is the width of element, uneffected by overflow, visible 
+    // content, or screen size. The inner content (not counting gaps) set 
+    // this width.
 
-    //let offSetRight = window.innerWidth - (elem.lastElementChild.offsetLeft + elem.lastElementChild.offsetWidth);
-    // if (itemsTotalWidth > elem.offsetWidth || elem.firstElementChild.offsetLeft < 0 || offSetRight < 0) {
-    //   elem.classList.add('overflowing');
-    // }
-    // else {
-    //   elem.classList.remove('overflowing');
-    // }
+    // "clientWidth" is visible width of element, effected by wrapping, 
+    // overflow, window size, etc.
+
+    // "gap" spacing does not effect either above value.
+    
+    // When the visible clientWidth is less than the scrollWidth, we know that
+    // we are starting to overflow, so we can toggle the overflow class to 
+    // the element.
     
     elem.classList.toggle('overflowing', elem.scrollWidth > elem.clientWidth);
   };
-
-  // for (let reel of reels) {
-  //   if ('ResizeObserver' in window) {
-  //     new ResizeObserver(entries => {
-  //       toggleOverflowClass(entries[0].target);
-  //     }).observe(reel);
-  //   }
-  // }
 
   const reels = Array.from(document.querySelectorAll('.reel'));
   reels.forEach((reel) => {

@@ -51,9 +51,9 @@
   justify-content: space-between;
 }
 
-.section-nav.section-nav--has-label .section-nav__desktop {
+/* .section-nav.section-nav--has-label .section-nav__desktop {
   flex-wrap: wrap;
-}
+} */
 
 .section-nav .section-nav__label {
   display: flex;

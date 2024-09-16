@@ -152,9 +152,9 @@
   gap: var(--s1);
 }
 
-.primary-nav .primary-nav__desktop {
+/* .primary-nav .primary-nav__desktop {
   flex-wrap: wrap;
-}
+} */
 
 .primary-nav .primary-nav__group:hover .primary-nav__list,
 .primary-nav .primary-nav__group:focus-within .primary-nav__list,

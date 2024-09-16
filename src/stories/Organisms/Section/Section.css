@@ -179,13 +179,17 @@
 }
 
 /* Drop padding when two sections of the same background are touching. */
-.section--color-default + .section--color-default > .box,
 .section--color-white + .section--color-white > .section__content,
 .section--color-warm-dark-x + .section--color-warm-dark-x,
 .section--color-warm-dark-xx + .section--color-warm-dark-xx,
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
+}
+
+/* default boxes still need a little spacing when together */
+.section--color-default + .section--color-default > .box {
+  padding-top: 1rem;
 }
 
 .section__header .brow {

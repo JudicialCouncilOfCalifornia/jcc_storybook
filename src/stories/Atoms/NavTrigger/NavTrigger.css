@@ -8,7 +8,7 @@
   --navtrigger-margin: 6px;
   --animation-timing: 200ms ease-in-out;
   --navtrigger-height: calc(var(--bar-height) * 3 + var(--navtrigger-gap) * 2);
-  --navtrigger-width: var(--hamburger-height);
+  --navtrigger-width: var(--navtrigger-height);
 }
 
 .nav-trigger {

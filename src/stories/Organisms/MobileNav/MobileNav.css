@@ -1,8 +1,7 @@
 .mobile-nav {
-  /* background-color: var(--color-white); */
   background-color: var(--color-base-light-xxx);
   box-shadow: 0px 7px 10px 1px #0003;
-  position: absolute;
+  position: relative;
   inset: auto 0 auto;
 }
 

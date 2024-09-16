@@ -40,7 +40,7 @@
           
           {% if parent %}
             {% if has_desktop_dropdown_overview_link %}
-              <button class="{{ link_classes|join(' ') }}">{{ link.text }}</button>
+              <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
             {% else %}
               {{ link(link.text, link.url, {class: link_classes}) }}
             {% endif %}
@@ -52,16 +52,16 @@
             {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
             {% set mega = link.links|length > 7 ? 'primary-nav__list--mega' : '' %}
             <ul class="primary-nav__list nav-level-2 {{ mega }}">
-              {% for link2 in link.links %}
+              {% for link_lv2 in link.links %}
               <li class="primary-nav__list__item">
-                {% set link2_classes = [
+                {% set link_lv2_classes = [
+                  'primary-nav__link',
                   'link',
-                  'link-level-2',
-                  link2.is_current ? 'is_current' : '',
-                  (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
+                  link_lv2.is_current ? 'is_current' : '',
+                  (link_lv2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__link primary-nav__overview-link' : null,
                 ] %}
-                {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__link primary-nav__overview-link' : null %}
-                {{ link(link2.text, link2.url, {class: ['primary-nav__link', overview_link_class]}) }}
+                {% set overview_link_class = (link_lv2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__link primary-nav__overview-link' : null %}
+                {{ link(link_lv2.text, link_lv2.url, {class: link_lv2_classes}) }}
               </li>
               {% endfor %}
             </ul>

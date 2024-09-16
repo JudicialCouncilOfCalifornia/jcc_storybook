@@ -7,7 +7,7 @@
   position: sticky; 
   inset-block-start: 0; 
   inset-inline-start: 0; 
-  z-index: 1; 
+  z-index: 3; 
   padding-block: 0;
 }
 
@@ -357,4 +357,8 @@ button.sidebar-nav__button.is-active {
 
 body.sb-main-padded #root {
   height: 1000px;
+}
+
+.sidebar-nav .nav-trigger--label-direction--right .nav-trigger__label {
+  left: calc(var(--navtrigger-height) + 2.5rem);
 }
