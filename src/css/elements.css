@@ -68,12 +68,12 @@ p + p {
   margin-block-start: var(--s0);
 }
 
-:where(p, ul, ol, h2, h3, h4, h5, h6) + h2,
-:where(p, ul, ol, h2, h3, h4, h5, h6) + h3,
-:where(p, ul, ol, h2, h3, h4, h5, h6) + h4,
-:where(p, ul, ol, h2, h3, h4, h5, h6) + h5,
-:where(p, ul, ol, h2, h3, h4, h5, h6) + h6,
-:where(ul, ol) + p,
+:where(p, ul, ol, h2, h3, h4, h5, h6, blockquote) + h2,
+:where(p, ul, ol, h2, h3, h4, h5, h6, blockquote) + h3,
+:where(p, ul, ol, h2, h3, h4, h5, h6, blockquote) + h4,
+:where(p, ul, ol, h2, h3, h4, h5, h6, blockquote) + h5,
+:where(p, ul, ol, h2, h3, h4, h5, h6, blockquote) + h6,
+:where(ul, ol, blockquote) + p,
 p + a {
   margin-block-start: var(--gap, 1.5rem);
 }
@@ -127,6 +127,7 @@ table th {
 hr {
   border: 0;
   border-block-end: 1px solid var(--color-base-light-x);
+  margin-block: 1rem 2rem;
 }
 
 dl dd + dt {
