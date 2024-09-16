@@ -16,7 +16,6 @@ A hero typically consists of a background overlaid with content that spans the w
   ```
   variant: "banner",
   content_justify: "left",
-  accent_color: false,
   content_bg_color: false,
   bg_tint: "accent-warm-dark-xx",
   background_image_url: "https://...",
