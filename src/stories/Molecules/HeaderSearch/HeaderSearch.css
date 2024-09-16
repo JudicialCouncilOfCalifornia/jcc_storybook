@@ -143,6 +143,11 @@
   padding: var(--s-3) var(--s1);
 }
 
+.header-search--no-toggle.bg-transparent .header-search__form {
+  padding: 0;
+  background-color: transparent;
+}
+
 .header-search--no-toggle .header-search__form input {
   width: 100%;
   background-color: white;
