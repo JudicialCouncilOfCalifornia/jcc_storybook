@@ -22,13 +22,6 @@ export default {
       control: { type: "radio" },
       options: ["left", "center", "right"],
     },
-    accent_color: {
-      description:
-        "The accent color applied to the card. (variants: content-bg)",
-      table: { defaultValue: { summary: false } },
-      control: { type: "select" },
-      options: [false, "accent-warm-dark-xx", "primary-dark-x"],
-    },
     content_bg_color: {
       description:
         "The color applied to the content card background. (variants: content-bg)",
@@ -40,7 +33,20 @@ export default {
       description: "The tint applied to darken the background.",
       table: { defaultValue: { summary: "accent-warm-dark-xx" } },
       control: { type: "select" },
-      options: [false, "accent-warm-dark-xx", "primary-dark-x"],
+      options: [
+        "base-light-xxx",
+        "base-dark-x",
+        "base-dark-xxx",
+        "accent-warm-light-xxxx",
+        "accent-warm-dark-x",
+        "red",
+        "brown",
+        "primary-light-xxx",
+        "primary-light-x",
+        "primary-dark-x",
+        "secondary",
+        "secondary-dark-xx",
+      ],
     },
     background_image_url: {
       description:
@@ -57,6 +63,9 @@ const Template = ({ ...args }) => {
 
 export const Banner = Template.bind({});
 Banner.args = data.banner;
+
+export const BannerMega = Template.bind({});
+BannerMega.args = data.banner_mega;
 
 export const BannerFeaturedLinks = Template.bind({});
 BannerFeaturedLinks.args = data.banner_featured_links;
