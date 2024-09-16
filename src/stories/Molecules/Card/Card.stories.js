@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./Card.data";
 import Card from "./Card.twig";
 import "./Card.css";
+import "./Card.js";
 
 export default {
   title: "Molecules/Card",
@@ -33,29 +34,46 @@ export default {
       table: { defaultValue: { summary: [16, 9] } },
     },
     background: {
-      description: "Specify the background style for the **Striped** variant.",
+      description: "Specify the background.",
       table: { defaultValue: { summary: null } },
       control: { type: "select" },
       options: [
-        "striped-base-dark-x",
+        "",
+        "-- DEFAULT CARDS --",
+        "solid-base-light-xxx",
+        "solid-base-dark-x",
+        "solid-base-dark-xxx",
+        "solid-accent-warm-light-xxxx",
+        "solid-accent-warm-dark-x",
+        "solid-red",
+        "solid-brown",
+        "solid-primary-light-xxx",
+        "solid-primary-light-x",
+        "solid-primary-dark-x",
+        "solid-secondary",
+        "solid-secondary-dark-xx",
+        "-- DEPRECATED - SOLID ONLY --",
         "striped-primary-dark-xx",
         "striped-primary-dark-x",
         "striped-primary-light-xx",
         "striped-secondary-dark-xx",
         "striped-secondary",
+        "striped-accent-warm-dark-xxx",
+        "striped-accent-warm-dark-xx",
         "striped-accent-warm-dark-x",
-        "solid-base-dark-x",
+        "striped-base-dark-x",
         "solid-primary-dark-xx",
-        "solid-primary-dark-x",
         "solid-primary-light-xx",
-        "solid-secondary-dark-xx",
-        "solid-secondary",
         "solid-accent-warm-dark-x",
       ],
     },
     clickable_card: {
       description: "Make the card clickable and hide the button.",
       table: { defaultValue: { summary: false } },
+    },
+    tag_href: {
+      description: "URL",
+      table: { defaultValue: { summary: null } },
     },
     caption_overlay: {
       description: "Add caption overlay in card",
