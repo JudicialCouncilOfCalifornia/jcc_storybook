@@ -240,3 +240,22 @@ li.group-li + li.group-li > h2.list-label {
 .views-view--news--news-list article .result-excerpt__content {
   margin-block-start: var(--s0);
 }
+
+/* ===== One offs for specific views ====== */
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child,
+.view-results.list-divider-skip-first .view-results__results .content > ol > li:first-child,
+.view-results.list-divider-skip-first .view-results__results .content > ul > li:first-child {
+  padding-block-start: 0 !important;
+}
+
+.view-results.advisory_body_events .view-results__results .content > ol,
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child > ol,
+.view-results.advisory_body_events .view-results__results .content > ul,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child > ul,
+.view-results:not(.no-top-margin) .view-results__results .content > ol,
+.view-results:not(.no-top-margin) .view-results__results .content > ol > li > ol,
+.view-results:not(.no-top-margin) .view-results__results .content > ul,
+.view-results:not(.no-top-margin) .view-results__results .content > ul > li > ul {
+  margin-block-start: 0 !important;
+}
