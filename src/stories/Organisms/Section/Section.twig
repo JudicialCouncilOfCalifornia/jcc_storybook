@@ -78,7 +78,7 @@
   <div class="section__content {{ inner_box_class }}">
     <div class="container stack">
       {% if brow_data or heading or text %}
-        <div class="section__header center">
+        <div class="section__header">
           {% if brow_data is not empty %}
             {% include "@atoms/Brow/Brow.twig" with brow_data %}
           {% endif %}

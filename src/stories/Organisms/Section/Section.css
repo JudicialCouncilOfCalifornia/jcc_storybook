@@ -59,10 +59,6 @@
   display: block;
 }
 
-.section .section__main.multiple:not(.stack) .card__inner > * + * {
-  margin-block-start: var(--s0);
-}
-
 .section .section__header {
   --max-width: 103ch;
   max-inline-size: var(--max-width);
@@ -75,7 +71,7 @@
 
 .section .section__header h1,
 .section .section__header h2 {
-  color: var(--heading-color);
+  color: var(--color-primary-dark-xx);
 }
 
 .section .section__header h1.brow,
@@ -216,4 +212,14 @@
 .section__content .section__header + .section__main {
   padding-block-start: var(--s4);
   margin-block-start: 0
+}
+
+/* Add missing text block spacing for default cards without backgrounds */
+.section__main .card--default:not(.bg-adjust) .card__main {
+  padding-block: var(--gap);
+}
+
+/* Add missing bottom spacing when centered within section */
+.section__main.center .card--default.bg-adjust:not(:first-child) {
+  margin-block-start: var(--gap);
 }
