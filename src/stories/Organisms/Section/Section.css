@@ -1,6 +1,6 @@
 .section {
   --color: var(--color-black);
-  --heading-color: var(--color-primary-dark-x);
+  --heading-color: var(--color);
   color: var(--color);
   display: grid;
   grid-template-columns: 1fr;
