@@ -70,21 +70,6 @@
 
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
-  
-  /* Striped Backgrounds */
-
-  --background-striped-primary-dark-xx: var(--color-primary-dark-x);
-  --background-striped-primary-dark-x: var(--color-primary);
-  --background-striped-primary: var(--color-primary-light-x);
-  --background-striped-secondary-dark-xx: var(--color-secondary);
-  --background-striped-secondary-dark-x: var(--color-secondary);
-  --background-striped-secondary: var(--color-secondary-light-x);
-  --background-striped-accent-warm-dark-x: var(--color-accent-warm);
-  --background-striped-accent-warm-dark-xx: var(--color-accent-warm-dark-x);
-  --background-striped-accent-warm-dark-xxx: var(--color-accent-warm-dark-xx);
-  --background-striped-primary-light-xx: var(--color-primary-light-xx);
-  --background-striped-base-dark-x: var(--color-base-dark-x);
-  --background-striped-base-light-xx: var(--color-base-light-xx);
 
   /* Solid Backgrounds */
   /* Base */
@@ -122,7 +107,19 @@
   --border-secondary: var(--color-secondary-dark-x);
   --border-secondary-dark-xx: var(--color-secondary-dark-x);
 
-  /* DEPRECATED */
+  /* DEPRECATED BACKGROUNDS - DO NOT USE */
+  --background-striped-primary-dark-xx: var(--color-primary-dark-x);
+  --background-striped-primary-dark-x: var(--color-primary);
+  --background-striped-primary: var(--color-primary-light-x);
+  --background-striped-secondary-dark-xx: var(--color-secondary);
+  --background-striped-secondary-dark-x: var(--color-secondary);
+  --background-striped-secondary: var(--color-secondary-light-x);
+  --background-striped-accent-warm-dark-x: var(--color-accent-warm);
+  --background-striped-accent-warm-dark-xx: var(--color-accent-warm-dark-x);
+  --background-striped-accent-warm-dark-xxx: var(--color-accent-warm-dark-xx);
+  --background-striped-primary-light-xx: var(--color-primary-light-xx);
+  --background-striped-base-dark-x: var(--color-base-dark-x);
+  --background-striped-base-light-xx: var(--color-base-light-xx);
   --background-solid-primary-dark-xx: var(--color-primary-dark-xx);
   --background-solid-primary: var(--color-primary);
   --background-solid-primary-light-xx: var(--color-primary-light-xx);
