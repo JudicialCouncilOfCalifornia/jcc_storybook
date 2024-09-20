@@ -28,6 +28,7 @@ docReady(function () {
             if (cardMain.offsetLeft !== cardMainParentLeft || cardMedia.offsetLeft !== cardMainParentLeft) {
               // Aspect ratio disabled for media-left by CSS.
               // Match media height with main.
+              cardMediaFrame.style.aspectRatio = 'unset';
               cardMediaFrame.style.height = cardMain.offsetHeight + 'px';
             }
             else {
