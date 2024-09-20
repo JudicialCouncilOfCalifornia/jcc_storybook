@@ -254,6 +254,7 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 /* ===== One offs for specific views ====== */
+/* advisory bodies */
 .view-results.advisory_body_events .view-results__results .content > ol > li:first-child,
 .view-results.advisory_body_events .view-results__results .content > ul > li:first-child {
   padding-block-start: 0 !important;
@@ -264,4 +265,12 @@ li.group-li + li.group-li > h2.list-label {
 .view-results.advisory_body_events .view-results__results .content > ul,
 .view-results.advisory_body_events .view-results__results .content > ul > li:first-child > ul {
   margin-block-start: 0 !important;
+}
+
+/* facilities listing */
+.view-results.facilities_listing.block_1 {
+  --sidebar-width: 46ch;
+}
+.view-results.facilities_listing.block_1 .view-results__results {
+  --gap: 0;
 }
