@@ -25,7 +25,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
+}
+
+.card--default:not(.bg-adjust) .caption-overlay .card__media-caption {
+  border-bottom-left-radius: var(--corner-radius);
+  border-bottom-right-radius: var(--corner-radius);
 }
 
 .card__media-caption {
@@ -149,10 +153,6 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .button {
   --button-border: var(--color-white);
   --button-fg: var(--color-white);
-}
-
-.card--default .frame {
-  aspect-ratio: unset;
 }
 
 /* Card modifier class can be used on cards wrapper element or on the card. */

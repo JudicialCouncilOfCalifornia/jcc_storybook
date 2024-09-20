@@ -31,7 +31,7 @@
 {# Media classes. #}
 {% set media_classes = [
   'card__media',
-  media_caption.overlay ? 'caption-overlay' : '',
+  media_caption.show ? 'caption-overlay' : '',
 ] %}
 
 {# Create class array. #}
@@ -56,7 +56,9 @@
           <div class="card__media-caption-container">
             <div class="card__media-caption">
               <span>{{ media_caption.text }}</span>
-              <span class="card__media-citation">{{ media_caption.citation }}</span>
+              {% if media_caption.citation %}
+                <span class="card__media-citation">{{ media_caption.citation }}</span>
+              {% endif %}
             </div>
           </div>
         {% endif %}
