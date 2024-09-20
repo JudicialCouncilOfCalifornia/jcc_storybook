@@ -52,7 +52,7 @@
     {% elseif media %}
       <div class="{{ media_classes|join(' ') }}">
         <div class="frame">{{ media }}</div>
-        {% if media_caption.show %}
+        {% if media_caption.show and media_caption.text %}
           <div class="card__media-caption-container">
             <div class="card__media-caption">
               <span>{{ media_caption.text }}</span>
