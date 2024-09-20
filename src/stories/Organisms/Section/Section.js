@@ -52,13 +52,13 @@ docReady(function () {
 
   // Adjust custom layouts.
   if (customSection.length > 0) {
-    const headingsAdjusted = "headings-adjusted";
+    const isCustomLayout = "custom";
     // Target specific nested components.
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs";
 
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (!section.classList.contains(headingsAdjusted)) {
+      if (!section.classList.contains(isCustomLayout)) {
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {
@@ -70,7 +70,7 @@ docReady(function () {
           if (sectionHeadingTagName && sectionHeadingTagName !== "H1") {
             adjustHeadings(subcomponents);
             // In case script is executed repeatedly, flag custom section as processed.
-            section.classList.add(headingsAdjusted);
+            section.classList.add(isCustomLayout);
           }
         }
       }
