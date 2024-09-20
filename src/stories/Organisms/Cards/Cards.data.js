@@ -43,11 +43,11 @@ export default {
     sub_component_data: [
       Card({
         has_section_heading: true,
-        ...CardNoMedia.args
+        ...CardDefault.args
       }),
       Card({
         has_section_heading: true,
-        ...CardNoMedia.args
+        ...CardDefault.args
       }),
     ],
     section_classes: ["cards"],

@@ -15,18 +15,17 @@ docReady(function () {
   if (cards) {
     cards.forEach(card => {
       let cardMedia = card.querySelector('.card__media');
-      let defaultCardWithBG = card.classList.contains('card--default') && card.classList.contains('bg-adjust');
+      let isDefaultCard = card.classList.contains('card') && card.classList.contains('card--default');
 
       // Adjust default card variant media as needed.
-      if (cardMedia && defaultCardWithBG) {
-        let cardMediaFrame = cardMedia.querySelector('.frame');
-        let cardMain = card.querySelector('.card__main');
-
+      if (cardMedia && isDefaultCard) {
         if ('ResizeObserver' in window) {
           new ResizeObserver(entries => {
-            if (cardMain.offsetLeft !== 18) {
-              // Apply media-left class variant.
-              card.classList.add('card--media-left');
+            let cardMediaFrame = cardMedia.querySelector('.frame');
+            let cardMain = card.querySelector('.card__main');
+            let cardMainParentLeft = card.querySelector('.card__inner').offsetLeft;
+
+            if (cardMain.offsetLeft !== cardMainParentLeft || cardMedia.offsetLeft !== cardMainParentLeft) {
               // Aspect ratio disabled for media-left by CSS.
               // Match media height with main.
               cardMediaFrame.style.height = cardMain.offsetHeight + 'px';
@@ -34,7 +33,6 @@ docReady(function () {
             else {
               // Reset elements as needed when stacked.
               cardMediaFrame.removeAttribute('style');
-              card.classList.remove('card--media-left');
             }
           }).observe(card);
         }
