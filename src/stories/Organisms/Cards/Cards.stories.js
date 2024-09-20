@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./Cards.data";
 import Cards from "./Cards.twig";
 import "./Cards.css";
+import "./Cards.js";
 
 export default {
   title: "Organisms/Cards",
