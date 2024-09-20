@@ -1,4 +1,13 @@
 
+0.56.4 / 2024-09-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #258 from JudicialCouncilOfCalifornia/fix/COURTS-236--spacing-on-first-view-results-item-for-advisory-bodies
+  * [COURTS-236] -- Fixed spacing and sidebar placement on facilities view
+  * [COURTS-236] -- css update
+  * [COURTS-236] -- Adjust spacing on the first item in a ViewsResult component.
+
 0.56.3 / 2024-09-16
 ===================
 
