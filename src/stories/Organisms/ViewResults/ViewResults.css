@@ -240,3 +240,37 @@ li.group-li + li.group-li > h2.list-label {
 .views-view--news--news-list article .result-excerpt__content {
   margin-block-start: var(--s0);
 }
+
+.view-results.list-divider-skip-first .view-results__results .content > ol > li:first-child,
+.view-results.list-divider-skip-first .view-results__results .content > ul > li:first-child {
+  padding-block-start: 0 !important;
+}
+
+.view-results.no-top-margin .view-results__results .content > ol,
+.view-results.no-top-margin .view-results__results .content > ol > li > ol,
+.view-results.no-top-margin .view-results__results .content > ul,
+.view-results.no-top-margin .view-results__results .content > ul > li > ul {
+  margin-block-start: 0 !important;
+}
+
+/* ===== One offs for specific views ====== */
+/* advisory bodies */
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child {
+  padding-block-start: 0 !important;
+}
+
+.view-results.advisory_body_events .view-results__results .content > ol,
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child > ol,
+.view-results.advisory_body_events .view-results__results .content > ul,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child > ul {
+  margin-block-start: 0 !important;
+}
+
+/* facilities listing */
+.view-results.facilities_listing.block_1 {
+  --sidebar-width: 46ch;
+}
+.view-results.facilities_listing.block_1 .view-results__results {
+  --gap: 0;
+}
