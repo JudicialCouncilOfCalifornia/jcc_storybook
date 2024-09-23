@@ -1,4 +1,11 @@
 
+0.56.5 / 2024-09-23
+===================
+
+  * chore: Export libs.
+  * Merge pull request #262 from JudicialCouncilOfCalifornia/fix/footer-lower-element-fixes-sept-2024
+  * [Fix] -- Fix to FlatMenu component bad character.
+
 0.56.4 / 2024-09-19
 ===================
 
