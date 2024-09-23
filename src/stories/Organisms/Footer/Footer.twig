@@ -11,13 +11,13 @@
 
 <div class="{{ classes|join(' ') }}"> 
   <div class="footer__upper box">
-		<div class="container">
-			<div class="cluster detect-wrap detect-wrap--observed">
-				{% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
-				{% include "@molecules/SecondaryNav/SecondaryNav.twig" with footer_upper_nav_data %}
-			</div>
-		</div>
-	</div>
+    <div class="container">
+      <div class="cluster detect-wrap detect-wrap--observed">
+        {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
+        {% include "@molecules/SecondaryNav/SecondaryNav.twig" with footer_upper_nav_data %}
+      </div>
+    </div>
+  </div>
 
   {% if display_footer_lower %}
     <div class="footer__lower box">
@@ -44,7 +44,8 @@
               {% for link in footer_social_link %}
                 <a href="{{ link.url }}" class="link link--icon">
                 {% include "@atoms/Icon/Icon.twig" with {
-                  icon: link.icon
+                  icon: link.icon,
+                  icon_path: link.icon_path,
                 } %}
                 <span class="sr-only">{{ link.text }}</span>
                 </a>
