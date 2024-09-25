@@ -10,6 +10,7 @@
   max-height: 0;
   min-height: 0;
   visibility: hidden;
+  flex-wrap: wrap;
 }
 
 .section-nav:not(.display-mobile-version) .section-nav__desktop--wrapper + .section-nav__mobile--wrapper {
