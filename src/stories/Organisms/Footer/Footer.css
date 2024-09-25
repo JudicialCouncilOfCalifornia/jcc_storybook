@@ -12,10 +12,10 @@
   --color: var(--color-white);
   --footer-background: var(--color-primary);
   --footer-link-color: var(--color-white);
-  --footer-link-color-hover: var(--color-red);
+  --footer-link-color-hover: var(--color-white);
   --social-icon-color: var(--color-white);
   --border-color: var(--color-white);
-  --social-icon-color-hover: var(--color-accent-warm-light-x);
+  --social-icon-color-hover: var(--footer-link-color-hover);
 }
 
 .footer .cluster {
@@ -74,8 +74,7 @@
 }
 
 .footer.footer--alternate .footer__upper .secondary-nav.secondary-nav--with-divider .secondary-nav__list__item a:hover {
-  color: var(--accent-color);
-  opacity: 1;
+  opacity: .7;
 }
 
 .footer .footer__lower {
@@ -138,6 +137,26 @@
   color: var(--color-white);
 }
 
+.footer.footer--alternate .footer__social .link:hover {
+  color: var(--color-white);
+  opacity: .7;
+}
+
 .footer .footer__social .link:hover .icon-wrapper {
   color: var(--social-icon-color-hover);
+}
+
+.footer.footer--alternate .flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link:hover,
+.footer.footer--alternate .flat-nav .flat-nav__link:hover {
+  color: var(--color-white);
+  opacity: .7;
+}
+
+.footer.footer--alternate .button.button--text:hover {
+  opacity: .7;
+}
+
+.footer.footer--alternate .button.button--text:hover::after {
+  background-color: var(--social-icon-color-hover);
+  opacity: .7;
 }

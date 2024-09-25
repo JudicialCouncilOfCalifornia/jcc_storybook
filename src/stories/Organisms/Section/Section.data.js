@@ -19,6 +19,7 @@ export default {
   default: {
     variant: "default",
     first_component: false,
+    bg_tint: false,
     sub_component_layout: "flex flex--60-40",
     // center, stack
     align_items: false,
@@ -50,63 +51,6 @@ export default {
       '<div class="stack"><h3>Heading</h3><p>Some markup  goes in this space. adsf asf asdf sdfaf asf asdf sadf sadf sadf sfd sadf sadf sdf fsa afs fsd safd.</p></div>',
     ],
   },
-  primary_dark_xx: {
-    variant: "primary-dark-xx",
-    first_component: false,
-    brow_data: {
-      variant: "default",
-      part_one: "Brow Example",
-      part_two: "",
-    },
-    heading: "Heading Example",
-    text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
-    button_data: {
-      label: "Button",
-      href: "#",
-      variant: "primary",
-    },
-    sub_component_layout: null,
-    sub_component_data:
-      '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
-  },
-  primary_dark_xx_stripe: {
-    variant: "primary-dark-xx-stripe",
-    first_component: false,
-    brow_data: {
-      variant: "default",
-      part_one: "Brow Example",
-      part_two: "",
-    },
-    heading: "Heading Example",
-    text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
-    button_data: {
-      label: "Button",
-      href: "#",
-      variant: "primary",
-    },
-    sub_component_layout: null,
-    sub_component_data:
-      '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
-  },
-  warm_dark_x: {
-    variant: "warm-dark-x",
-    first_component: false,
-    brow_data: {
-      variant: "default",
-      part_one: "Brow Example",
-      part_two: "",
-    },
-    heading: "Heading Example",
-    text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae tincidunt lectus, ut sodales augue. Pellentesque pellentesque ut nunc id varius. Maecenas maximus, tortor eu molestie congue, arcu odio tristique nulla, venenatis maximus ligula tellus non massa. Proin quis tortor cursus, lacinia ligula id, maximus tortor.</p>",
-    button_data: {
-      label: "Button",
-      href: "#",
-      variant: "primary",
-    },
-    sub_component_layout: null,
-    sub_component_data:
-      '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
-  },
   white: {
     variant: "white",
     first_component: false,
@@ -127,11 +71,10 @@ export default {
       '<div class="container"><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
   },
   bg_image: {
-    variant: "default",
     first_component: false,
-    bg_tint: "accent-warm-dark-xx",
     background_image_url:
-      "https://source.unsplash.com/random/900×700/?office,people",
+      "https://picsum.photos/id/41/1280/720",
+    bg_tint: "red",
     brow_data: {
       variant: "default",
       part_one: "Brow Example",
@@ -151,6 +94,7 @@ export default {
   },
   auto_adjusting_headings: {
     variant: "default",
+    bg_tint: false,
     section_classes: ["custom"],
     sub_component_layout: 'stack',
     brow_data: {
