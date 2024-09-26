@@ -10,11 +10,11 @@
 {% set styles = [] %}
 {% set sub_component_styles = [] %}
 
-{% if bg_tint %}
-  {% set styles = styles|merge([
-    '--bg: var(--color-' ~ bg_tint ~ ');',
-  ]) %}
-{% endif %}
+{% set bg_color = bg_tint ? bg_tint : variant %}
+{% set styles = styles|merge([
+  '--bg: var(--color-' ~ bg_color ~ ');',
+  '--border: var(--border-' ~ bg_color ~ ')',
+]) %}
 
 {% if align_items %}
   {% set sub_component_styles = sub_component_styles|merge([
@@ -60,7 +60,8 @@
 {% set classes = [
   'section',
   variant_class,
-  variant_bg_image
+  variant_bg_image,
+  bg_tint ? 'bg-adjust' : '',
 ] %}
 
 {% if section_classes is iterable %}

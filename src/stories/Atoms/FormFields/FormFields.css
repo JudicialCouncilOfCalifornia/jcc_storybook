@@ -186,8 +186,14 @@ fieldset {
 .alt-select-style select {
   border: 0;
   padding: var(--s-5) 0;
-  color: var(--accent-color);
+  color: currentColor;
   width: auto;
+  background-color: transparent;
+}
+
+.alt-select-style select option {
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 fieldset {

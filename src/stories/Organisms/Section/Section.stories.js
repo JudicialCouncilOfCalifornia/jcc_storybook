@@ -18,10 +18,6 @@ export default {
       control: { type: "select" },
       options: [
         "default",
-        "primary-dark-xx",
-        "primary-dark-xx-stripe",
-        "warm-dark-xx",
-        "warm-dark-x",
         "white",
       ],
     },
@@ -30,6 +26,27 @@ export default {
       table: { defaultValue: { summary: "default" } },
       control: { type: 'boolean' },
       options: [false, true],
+    },
+    bg_tint: {
+      description:
+        "Background color or tint if background image.",
+      table: { defaultValue: { summary: "default" } },
+      control: { type: "select" },
+      options: [
+        "",
+        "base-light-xxx",
+        "base-dark-x",
+        "base-dark-xxx",
+        "accent-warm-light-xxxx",
+        "accent-warm-dark-x",
+        "red",
+        "brown",
+        "primary-light-xxx",
+        "primary-light-x",
+        "primary-dark-x",
+        "secondary",
+        "secondary-dark-xx",
+      ],
     },
     sub_component_layout: {
       description: "Sets the layout type for sub component items.",
@@ -133,15 +150,6 @@ const Template = ({ ...args }) => {
 
 export const Default = Template.bind({});
 Default.args = data.default;
-
-export const PrimaryDarkXX = Template.bind({});
-PrimaryDarkXX.args = data.primary_dark_xx;
-
-export const PrimaryDarkXXStripe = Template.bind({});
-PrimaryDarkXXStripe.args = data.primary_dark_xx_stripe;
-
-export const WarmDarkX = Template.bind({});
-WarmDarkX.args = data.warm_dark_x;
 
 export const White = Template.bind({});
 White.args = data.white;

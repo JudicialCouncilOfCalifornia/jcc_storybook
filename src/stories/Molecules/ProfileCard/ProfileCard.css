@@ -1,6 +1,7 @@
 .profile-card {
   background-color: var(--color-base-light-xxx);
   line-height: normal;
+  border-radius: var(--corner-radius);
 }
 
 a.profile-card__link,
@@ -34,12 +35,14 @@ a.profile-card__link,
 .profile-card__name {
   margin-top: var(--s1);
   font-size: var(--s1);
+  color: var(--color-primary) !important;
   line-height: var(--s2);
 }
 
 .profile-card__title {
   margin-block-start: 0;
   font-size: calc(var(--s-1) + 1px);
+  color: var(--color-primary) !important;
 }
 
 .profile-card__content {
@@ -55,6 +58,7 @@ a.profile-card__link {
 
 a.profile-card__link:hover {
   background-color: var(--color-secondary);
+  border-radius: var(--corner-radius);
 }
 
 a.profile-card__link:hover,

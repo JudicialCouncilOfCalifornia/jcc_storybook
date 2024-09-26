@@ -1,10 +1,11 @@
 .section {
   --color: var(--color-black);
-  --heading-color: var(--color);
   color: var(--color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "section";
+  background-color: var(--bg);
+  border-block-end: var(--border) solid var(--s0);
 }
 
 .section > * {
@@ -25,7 +26,7 @@
 
 .section__header.center {
   text-align: center;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 .section__tint {
@@ -67,11 +68,6 @@
 .section .section__header,
 .section .section__button {
   --align-items: center;
-}
-
-.section .section__header h1,
-.section .section__header h2 {
-  color: var(--color-primary-dark-xx);
 }
 
 .section .section__header h1.brow,
@@ -119,11 +115,80 @@
   word-break: break-word;
 }
 
-/* Variants */
-.section--color-primary-dark-xx,
-.section--color-primary-dark-xx .section,
+/* BEGIN Background colors with backwards compatibility */
+/* Reverse element colors for darker backgrounds */
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) > *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) h2,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) h3,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) h4,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) a,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) p,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) ::after,
+.section--color-warm-dark-xx > *,
+.section--color-warm-dark-xx a,
+.section--color-warm-dark-xx .section__header > *,
+.section--color-primary-dark-xx > *,
+.section--color-primary-dark-xx a,
+.section--color-primary-dark-xx .section__header > *,
+.section--color-primary-dark-xx-stripe > *,
+.section--color-primary-dark-xx-stripe a,
+.section--color-primary-dark-xx-stripe .section__header > * {
+  --color: var(--color-white);
+  --color-base: var(--color);
+  --heading-color: var(--color);
+  --accent-color: var(--color);
+  --button-border: var(--color);
+  color: var(--color);
+  border-color: var(--color);
+}
+
+/* Preserve card defaults when background color in use */
+.section.bg-adjust .profile-card .profile-card__content > *,
+.section.bg-adjust .profile-card .profile-card__content h3,
+.section.bg-adjust .card.bg-adjust > *,
+.section.bg-adjust .card.bg-adjust h2,
+.section.bg-adjust .card.bg-adjust h3,
+.section.bg-adjust .card.bg-adjust h4,
+.section.bg-adjust .card.bg-adjust p {
+  --color: var(--color);
+  --heading-color: var(--heading-color);
+  --accent-color: var(--color);
+  --button-border: var(--button-border);
+}
+
+/* BEGIN DEPRECATED */
+.section--color-primary-dark-xx:not,
+.section--color-primary-dark-xx .section:not(.cards .card--default.bg-adjust),
 .section--color-primary-dark-xx-stripe,
-.section--color-primary-dark-xx-stripe .section {
+.section--color-primary-dark-xx-stripe .section:not(.cards .card--default.bg-adjust) {
   --color: var(--color-white);
   --accent-color: var(--color-accent-warm-light-x);
   --heading-color: var(--color-white);
@@ -136,37 +201,88 @@
 }
 
 .section--color-primary-dark-xx {
-  background: var(--color-primary-dark-xx);
+  background: var(--background-solid-primary-dark-x);
 }
 
 .section--color-primary-dark-xx-stripe {
-  background: repeating-linear-gradient(
-    125deg,
-    #2f505e,
-    #2f404e 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  );
+  background: var(--background-solid-primary-dark-x);
 }
 
 .section--color-warm-dark-xx {
-  --color: var(--color-white);
-  --heading-color: var(--color-white);
-  --accent-color: var(--color-white);
-  background: var(--color-accent-warm-dark-xx);
+  background: var(--background-solid-red);
 }
 
 .section--color-warm-dark-x {
-  --color: var(--color-black);
-  --accent-color: var(--color-accent-warm-dark-x);
-  background: var(--color-accent-warm-light-xxxx);
+  background: var(--background-solid-accent-warm-light-xxxx);
+}
+/* END */
+
+/* Preview swatch for editor */
+.section.swatch {
+  border-radius: var(--corner-radius);
 }
 
+/* Base preview for editor */
+.section.swatch--color-base-light-xxx {
+  background: var(--background-solid-base-light-xxx);
+}
+
+.section.swatch--color-base-dark-x {
+  background: var(--background-solid-base-dark-x);
+}
+
+.section.swatch--color-base-dark-xxx {
+  background: var(--background-solid-base-dark-xxx);
+}
+
+/* Accent preview for editor */
+.section.swatch--color-accent-warm-light-xxxx {
+  background: var(--background-solid-accent-warm-light-xxxx);
+}
+
+.section.swatch--color-accent-warm-dark-x {
+  background: var(--background-solid-accent-warm-dark-x);
+}
+
+.section.swatch--color-red {
+  background: var(--background-solid-red);
+}
+
+.section.swatch--color-brown {
+  background: var(--background-solid-brown);
+}
+
+/* Primary preview for editor */
+.section.swatch--color-primary-light-xxx {
+  background: var(--background-solid-primary-light-xxx);
+}
+
+.section.swatch--color-primary-light-x {
+  background: var(--background-solid-primary-light-x);
+}
+
+.section.swatch--color-primary-dark-x {
+  background: var(--background-solid-primary-dark-x);
+}
+
+/* Secondary preview for editor */
+.section.swatch--color-secondary {
+  background: var(--background-solid-secondary);
+}
+
+.section.swatch--color-secondary-dark-xx {
+  background: var(--background-solid-secondary-dark-xx);
+}
+/* END */
+
+/* Variants */
+
 .section--with-bg-image,
-.section--with-bg-image .section {
+.section--with-bg-image .section,
+.section--with-bg-image h2 {
   --color: var(--color-white);
-  --heading-color: var(--color-white);
-  --accent-color: var(--color-white);
+  --heading-color: var(--color);
+  --accent-color: var(--color);
 }
 
 .section--with-bg-image .body__main.divider .body__content,
