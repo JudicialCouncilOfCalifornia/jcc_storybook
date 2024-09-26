@@ -12,7 +12,8 @@
   border-radius: var(--corner-radius);
 }
 
-.card--default:not(.bg-adjust) img {
+.card--default:not(.bg-adjust) img,
+.card--default:not(.bg-adjust) iframe {
   border-radius: var(--corner-radius);
 }
 
@@ -89,6 +90,7 @@
 /* Card headings must always appear as H3 visually. */
 .card__heading_tag:not(h1) {
   font-size: var(--s2);
+  color: currentColor;
   line-height: var(--s3);
 }
 
@@ -441,6 +443,7 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__heading > *,
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__text > * {
+  --heading-color: var(--color-white);
   color: var(--color-white);
 }
 

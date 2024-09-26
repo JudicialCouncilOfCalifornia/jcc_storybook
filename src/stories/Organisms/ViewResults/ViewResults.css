@@ -196,7 +196,9 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .view-results .form-actions .button {
+  --accent-color: var(--button-fg);
   font-size: var(--s0);
+  color: var(--accent-color);
 }
 
 .view-results__results.sidebar-row .stack.sidebar h2,

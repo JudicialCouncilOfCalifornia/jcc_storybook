@@ -116,10 +116,6 @@
 }
 
 /* BEGIN Background colors with backwards compatibility */
-.section.bg-adjust {
-  padding-block-start: var(--s5);
-}
-
 /* Reverse element colors for darker backgrounds */
 .section.bg-adjust:not(
   [style*="--bg: var(--color-base-light-xxx);"],
@@ -155,15 +151,20 @@
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) span,
-.section.bg-adjust:not(
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) ::after {
+) ::after,
+.section--color-warm-dark-xx > *,
+.section--color-warm-dark-xx a,
+.section--color-warm-dark-xx .section__header > *,
+.section--color-primary-dark-xx > *,
+.section--color-primary-dark-xx a,
+.section--color-primary-dark-xx .section__header > *,
+.section--color-primary-dark-xx-stripe > *,
+.section--color-primary-dark-xx-stripe a,
+.section--color-primary-dark-xx-stripe .section__header > * {
   --color: var(--color-white);
   --color-base: var(--color);
   --heading-color: var(--color);
+  --accent-color: var(--color);
   --button-border: var(--color);
   color: var(--color);
   border-color: var(--color);
@@ -179,7 +180,7 @@
 .section.bg-adjust .card.bg-adjust p {
   --color: var(--color);
   --heading-color: var(--heading-color);
-  --accent-color: var(--accent-color);
+  --accent-color: var(--color);
   --button-border: var(--button-border);
 }
 
@@ -315,10 +316,6 @@
 .section .section__main .section.cards:nth-child(1) .section__content,
 .section .section__main .section.cards:nth-child(2) .section__content {
   padding-block-start: unset;
-}
-
-.section.cards .section__content {
-  padding-inline: 0;
 }
 
 /* Adds spacing between elements in the main content section */
