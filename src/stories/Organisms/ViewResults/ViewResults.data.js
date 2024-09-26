@@ -4,8 +4,6 @@ import { Default as DefaultPager } from '../../Molecules/Pager/Pager.stories';
 import { Default as InlineFormDefault } from '../../Molecules/InlineForm/InlineForm.stories';
 
 const items_per_page = `
-<div class="form-item form-item-select-label">
-  <div>
     <select name="items_per_page" id="edit-select-label" value="10" form="FORM_NAME">
       <option value="5">Show 5 per page</option>
       <option value="10">Show 10 per page</option>
@@ -13,8 +11,7 @@ const items_per_page = `
       <option value="25">Show 25 per page</option>
       <option value="50">Show 50 per page</option>
     </select>
-  </div>
-</div>`;
+`;
 
 export default {
   default: {
