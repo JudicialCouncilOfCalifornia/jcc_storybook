@@ -1,4 +1,13 @@
 
+0.56.7 / 2024-09-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #270 from JudicialCouncilOfCalifornia/fix/FIX--flatnav-pager-and-viewresult-style-updates
+  * [FIX] -- Style fixes for FlatNav, Pager, and ViewsResult components
+  * Merge pull request #268 from JudicialCouncilOfCalifornia/items-per-page-update
+  * [items_per_page_fix] -- template and css.
+
 0.56.6 / 2024-09-26
 ===================
 
