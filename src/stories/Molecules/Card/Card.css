@@ -12,7 +12,8 @@
   border-radius: var(--corner-radius);
 }
 
-.card--default:not(.bg-adjust) img {
+.card--default:not(.bg-adjust) img,
+.card--default:not(.bg-adjust) iframe {
   border-radius: var(--corner-radius);
 }
 
@@ -34,7 +35,7 @@
 
 .card__media-caption {
   margin-block-start: var(--s-6);
-  color: #5C5C5C;
+  color: var(--color-base-dark-x);
   font-size: var(--s-2);
   font-weight: 600;
   line-height: var(--s0);
@@ -45,7 +46,7 @@
 }
 
 .card__media-citation {
-  color: #919191;
+  color: var(--color-base);
   font-size: var(--s-3);
   font-weight: 400;
 }
@@ -63,13 +64,13 @@
   padding-block: var(--s-4);
   padding-inline: var(--s-1);
   background-color: rgba(0,0,0,0.5);
-  color: #FFFFFF;
+  color: var(--color-white);
   box-sizing: border-box;
   z-index: 2;
 }
 
 .caption-overlay .card__media-citation {
-  color: #F3F3F3;
+  color: var(--color-base-light-xx);
 }
 
 .remote-video-colorbox-launch-modal{
@@ -275,8 +276,8 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card.card--striped,
 .card--striped-aligned .card,
 .card.card--striped-aligned  {
-  --heading-color: var(--color-white);
-  --color: var(--heading-color);
+  --color: var(--color-white);
+  --heading-color: var(--color);
   --align-items: center;
   color: var(--color);
   display: block;
@@ -293,7 +294,6 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card.card--striped-aligned {
   padding-block: var(--s5);
 }
-
 .card--striped-aligned .card__heading {
   --gap: var(--s2);
   display: flex;
@@ -305,6 +305,12 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
   margin-inline-end: auto;
   flex-wrap: wrap;
   column-gap: var(--gap, 1rem);
+}
+
+.card--overlay .card__heading_tag,
+.card--striped .card__heading_tag,
+.card--striped-aligned .card__heading_tag {
+  color: var(--color-white);
 }
 
 .card--striped-aligned .card__heading .icon-wrapper {
@@ -441,7 +447,9 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__heading > *,
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__text > * {
-  color: var(--color-white);
+  --color: var(--color-white);
+  --heading-color: var(--color);
+  color: var(--color);
 }
 
 .card--striped.card--background-solid-base-light-xxx,
@@ -471,7 +479,7 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 }
 
 
-/* STRIPED - DEPRECATED */
+/* DEPRECATED BACKGROUND COLORS */
 .card.card--striped.card--background-striped-base-dark-x,
 .card.card--striped-aligned.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
@@ -575,7 +583,7 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card.card--background-base-light-xxx {
   background: var(--color-base-light-xxx);
 }
-
+/* END */
 
 /* Button variants START*/
 .card--striped .card .button,

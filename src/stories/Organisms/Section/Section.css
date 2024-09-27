@@ -1,10 +1,11 @@
 .section {
   --color: var(--color-black);
-  --heading-color: var(--color);
   color: var(--color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "section";
+  background-color: var(--bg);
+  border-block-end: var(--border) solid var(--s0);
 }
 
 .section > * {
@@ -25,7 +26,7 @@
 
 .section__header.center {
   text-align: center;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 .section__tint {
@@ -67,11 +68,6 @@
 .section .section__header,
 .section .section__button {
   --align-items: center;
-}
-
-.section .section__header h1,
-.section .section__header h2 {
-  color: var(--color-primary-dark-xx);
 }
 
 .section .section__header h1.brow,
@@ -119,54 +115,186 @@
   word-break: break-word;
 }
 
-/* Variants */
-.section--color-primary-dark-xx,
-.section--color-primary-dark-xx .section,
-.section--color-primary-dark-xx-stripe,
-.section--color-primary-dark-xx-stripe .section {
-  --color: var(--color-white);
-  --accent-color: var(--color-accent-warm-light-x);
-  --heading-color: var(--color-white);
-  --button-fg: var(--accent-color);
+/* BEGIN Background colors with backwards compatibility */
+.section.bg-adjust .section__content {
+  padding-block-start: var(--s5);
 }
 
-.section--color-primary-dark-xx .body__main.divider .body__content,
-.section--color-primary-dark-xx-stripe .body__main.divider .body__content {
-  border-inline-end-color: var(--color-accent-warm-light-x);
+/* Reverse element colors for darker backgrounds */
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__header *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__button *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .accordion *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .action-list > *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .body *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .steps *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .teaser-list *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .view-results *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .card:not(.bg-adjust) .card__main * {
+  --color: var(--color-white);
+  --color-base: var(--color);
+  --heading-color: var(--color);
+  --accent-color: var(--color);
+  --button-border: var(--color);
+  color: var(--color);
+}
+
+/* Adjust accordion hover if darker background */
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .accordion details > summary:hover *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .accordion details > summary:hover:after {
+  --accent-color: var(--button-fg);
+  color: var(--accent-color);
 }
 
 .section--color-primary-dark-xx {
-  background: var(--color-primary-dark-xx);
+  --bg: var(--color-primary-dark-x) !important;
+  --border: var(--border-primary-dark-x) !important;
 }
 
 .section--color-primary-dark-xx-stripe {
-  background: repeating-linear-gradient(
-    125deg,
-    #2f505e,
-    #2f404e 1px,
-    var(--color-primary-dark-xx) 2px,
-    var(--color-primary-dark-xx) 8px
-  );
+  --bg: var(--color-primary-dark-x) !important;
+  --border: var(--border-primary-dark-x) !important;
 }
 
 .section--color-warm-dark-xx {
-  --color: var(--color-white);
-  --heading-color: var(--color-white);
-  --accent-color: var(--color-white);
-  background: var(--color-accent-warm-dark-xx);
+  --bg: var(--color-red) !important;
+  --border: var(--border-red) !important;
 }
 
 .section--color-warm-dark-x {
-  --color: var(--color-black);
-  --accent-color: var(--color-accent-warm-dark-x);
-  background: var(--color-accent-warm-light-xxxx);
+  --bg: var(--color-accent-warm-light-xxxx) !important;
+  --border: var(--border-accent-warm-light-xxxx) !important;
+}
+/* END */
+
+/* Preview swatch for editor */
+.section.swatch {
+  border-radius: var(--corner-radius);
 }
 
+/* Base preview for editor */
+.section.swatch--color-base-light-xxx {
+  background: var(--background-solid-base-light-xxx);
+}
+
+.section.swatch--color-base-dark-x {
+  background: var(--background-solid-base-dark-x);
+}
+
+.section.swatch--color-base-dark-xxx {
+  background: var(--background-solid-base-dark-xxx);
+}
+
+/* Accent preview for editor */
+.section.swatch--color-accent-warm-light-xxxx {
+  background: var(--background-solid-accent-warm-light-xxxx);
+}
+
+.section.swatch--color-accent-warm-dark-x {
+  background: var(--background-solid-accent-warm-dark-x);
+}
+
+.section.swatch--color-red {
+  background: var(--background-solid-red);
+}
+
+.section.swatch--color-brown {
+  background: var(--background-solid-brown);
+}
+
+/* Primary preview for editor */
+.section.swatch--color-primary-light-xxx {
+  background: var(--background-solid-primary-light-xxx);
+}
+
+.section.swatch--color-primary-light-x {
+  background: var(--background-solid-primary-light-x);
+}
+
+.section.swatch--color-primary-dark-x {
+  background: var(--background-solid-primary-dark-x);
+}
+
+/* Secondary preview for editor */
+.section.swatch--color-secondary {
+  background: var(--background-solid-secondary);
+}
+
+.section.swatch--color-secondary-dark-xx {
+  background: var(--background-solid-secondary-dark-xx);
+}
+/* END */
+
+/* Variants */
+
 .section--with-bg-image,
-.section--with-bg-image .section {
+.section--with-bg-image .section,
+.section--with-bg-image h2 {
   --color: var(--color-white);
-  --heading-color: var(--color-white);
-  --accent-color: var(--color-white);
+  --heading-color: var(--color);
+  --accent-color: var(--color);
 }
 
 .section--with-bg-image .body__main.divider .body__content,
@@ -181,11 +309,6 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
-}
-
-/* default boxes still need a little spacing when together */
-.section--color-default + .section--color-default > .box {
-  padding-top: 1rem;
 }
 
 .section__header .brow {
