@@ -80,7 +80,7 @@ export default {
       },
     },
     section_1: {
-      variant: "primary-dark-xx-stripe",
+      variant: "primary-dark-xx",
       card_variant: "card--media-right",
       sub_component_layout: "switcher",
       // center, stack
