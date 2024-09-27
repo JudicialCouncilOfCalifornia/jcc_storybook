@@ -27,13 +27,14 @@ h1 {
 }
 
 h2 {
+  --heading-color: var(--color-black);
   font-size: var(--s3);
   line-height: var(--s4);
 }
 
 h3 {
   font-size: var(--s2);
-  line-height: var(--s3); 
+  line-height: var(--s3);
 }
 
 h4 {
