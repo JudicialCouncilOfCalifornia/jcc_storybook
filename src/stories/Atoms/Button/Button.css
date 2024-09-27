@@ -51,18 +51,18 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: currentColor; 
+  background-color: currentColor;
 }
 
 .button::after {
   margin-inline-start: var(--s-5);
-  content: ''; 
+  content: '';
   align-self: flex-end;
-  display: inline-block; 
+  display: inline-block;
   width: 16px;
   height: 16px;
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   vertical-align: -2px;
   background-color: currentColor;
 }
@@ -75,7 +75,7 @@
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after {
-  background-color: var(--color-red);  
+  background-color: var(--color-red);
 }
 .button.button--primary:active::after,
 .button.button--text:active::after {
@@ -86,7 +86,7 @@
 .button.button--secondary:hover::after,
 .button.button--secondary:active::after,
 .button.button--secondary:focus::after {
-  background-color: var(--color-white);  
+  background-color: var(--color-white);
 }
 
 .button--primary::after,
@@ -106,7 +106,7 @@
 }
 
 .button.button--text:focus::after{
-  background-color: currentColor; 
+  background-color: currentColor;
 }
 
 .button.button--no-icon::after {
@@ -140,7 +140,7 @@
 }
 
 .button.button--secondary:hover {
-  background-color: var(--color-red); 
+  background-color: var(--color-red);
   color: var(--color-white);
   border: 2px solid var(--color-red);
 }
@@ -153,8 +153,8 @@
 
 .button.button--secondary:focus {
   outline: 2px solid var(--color-accent-warm-light-x);
-  outline-offset: 2px;  
-  background: var(--color-accent-warm-dark-x); 
+  outline-offset: 2px;
+  background: var(--color-accent-warm-dark-x);
 }
 
 .button.button--text {
@@ -170,13 +170,13 @@
   outline: none;
 }
 
-.button.button--text:active {  
-  color: var(--color-brown);    
+.button.button--text:active {
+  color: var(--color-brown);
 }
 
 /* .button.button--text:focus {
   padding: var(--s-1) var(--s1);
-  color: var(--color-accent-warm-dark-x); 
+  color: var(--color-accent-warm-dark-x);
   border-radius: var(--s-5);
   --button-border: 2px solid var(--color-accent-warm-light-xx);
 } */

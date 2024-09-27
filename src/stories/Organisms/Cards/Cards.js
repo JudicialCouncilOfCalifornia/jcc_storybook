@@ -53,6 +53,7 @@ docReady(function () {
                   // Adjust default card variant media as needed.
                   if (cardMedia && isDefaultCard && !isStacked) {
                     cardMediaFrame.style.height = minMediaHeight;
+                    cardMediaFrame.style.width = '100%';
                   }
                   else {
                     // Reset elements as needed when stacked.
