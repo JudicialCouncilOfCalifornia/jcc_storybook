@@ -116,104 +116,116 @@
 }
 
 /* BEGIN Background colors with backwards compatibility */
+.section.bg-adjust .section__content {
+  padding-block-start: var(--s5);
+}
+
 /* Reverse element colors for darker backgrounds */
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) > *,
+) .section__header *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) h2,
+) .section__button *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) h3,
+) .section__main .accordion *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) h4,
+) .section__main .action-list > *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) a,
+) .section__main .body *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) p,
+) .section__main .steps *,
 .section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) ::after,
-.section--color-warm-dark-xx > *,
-.section--color-warm-dark-xx a,
-.section--color-warm-dark-xx .section__header > *,
-.section--color-primary-dark-xx > *,
-.section--color-primary-dark-xx a,
-.section--color-primary-dark-xx .section__header > *,
-.section--color-primary-dark-xx-stripe > *,
-.section--color-primary-dark-xx-stripe a,
-.section--color-primary-dark-xx-stripe .section__header > * {
+) .section__main .teaser-list *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .view-results *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .card:not(.bg-adjust) .card__main * {
   --color: var(--color-white);
   --color-base: var(--color);
   --heading-color: var(--color);
   --accent-color: var(--color);
   --button-border: var(--color);
   color: var(--color);
-  border-color: var(--color);
 }
 
-/* Preserve card defaults when background color in use */
-.section.bg-adjust .profile-card .profile-card__content > *,
-.section.bg-adjust .profile-card .profile-card__content h3,
-.section.bg-adjust .card.bg-adjust > *,
-.section.bg-adjust .card.bg-adjust h2,
-.section.bg-adjust .card.bg-adjust h3,
-.section.bg-adjust .card.bg-adjust h4,
-.section.bg-adjust .card.bg-adjust p {
-  --color: var(--color);
-  --heading-color: var(--heading-color);
-  --accent-color: var(--color);
-  --button-border: var(--button-border);
-}
-
-/* BEGIN DEPRECATED */
-.section--color-primary-dark-xx:not,
-.section--color-primary-dark-xx .section:not(.cards .card--default.bg-adjust),
-.section--color-primary-dark-xx-stripe,
-.section--color-primary-dark-xx-stripe .section:not(.cards .card--default.bg-adjust) {
-  --color: var(--color-white);
-  --accent-color: var(--color-accent-warm-light-x);
-  --heading-color: var(--color-white);
-  --button-fg: var(--accent-color);
-}
-
-.section--color-primary-dark-xx .body__main.divider .body__content,
-.section--color-primary-dark-xx-stripe .body__main.divider .body__content {
-  border-inline-end-color: var(--color-accent-warm-light-x);
+/* Adjust accordion hover if darker background */
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .accordion details > summary:hover *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .accordion details > summary:hover:after {
+  --accent-color: var(--button-fg);
+  color: var(--accent-color);
 }
 
 .section--color-primary-dark-xx {
-  background: var(--background-solid-primary-dark-x);
+  --bg: var(--color-primary-dark-x) !important;
+  --border: var(--border-primary-dark-x) !important;
 }
 
 .section--color-primary-dark-xx-stripe {
-  background: var(--background-solid-primary-dark-x);
+  --bg: var(--color-primary-dark-x) !important;
+  --border: var(--border-primary-dark-x) !important;
 }
 
 .section--color-warm-dark-xx {
-  background: var(--background-solid-red);
+  --bg: var(--color-red) !important;
+  --border: var(--border-red) !important;
 }
 
 .section--color-warm-dark-x {
-  background: var(--background-solid-accent-warm-light-xxxx);
+  --bg: var(--color-accent-warm-light-xxxx) !important;
+  --border: var(--border-accent-warm-light-xxxx) !important;
 }
 /* END */
 
@@ -297,11 +309,6 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
-}
-
-/* default boxes still need a little spacing when together */
-.section--color-default + .section--color-default > .box {
-  padding-top: 1rem;
 }
 
 .section__header .brow {

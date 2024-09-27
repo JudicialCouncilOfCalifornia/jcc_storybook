@@ -1,4 +1,15 @@
 
+0.56.6 / 2024-09-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #266 from JudicialCouncilOfCalifornia/fix/nav-overflow-fix-and-hero-hangover-brow-empty-fix
+  * [fix] -- Header and SectionNav navigation wrapping fix and empty brow wrapper printout fix
+  * Merge pull request #263 from JudicialCouncilOfCalifornia/feature/COURTS-159-powerbi
+  * [COURTS-159] -- embedded iframes 3.
+  * [COURTS-159] -- embedded iframes 2.
+  * [COURTS-159] -- embedded iframes.
+
 0.56.5 / 2024-09-23
 ===================
 

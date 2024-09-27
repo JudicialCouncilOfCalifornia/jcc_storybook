@@ -277,8 +277,8 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card.card--striped,
 .card--striped-aligned .card,
 .card.card--striped-aligned  {
-  --heading-color: var(--color-white);
-  --color: var(--heading-color);
+  --color: var(--color-white);
+  --heading-color: var(--color);
   --align-items: center;
   color: var(--color);
   display: block;
@@ -295,7 +295,6 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 .card.card--striped-aligned {
   padding-block: var(--s5);
 }
-
 .card--striped-aligned .card__heading {
   --gap: var(--s2);
   display: flex;
@@ -307,6 +306,12 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
   margin-inline-end: auto;
   flex-wrap: wrap;
   column-gap: var(--gap, 1rem);
+}
+
+.card--overlay .card__heading_tag,
+.card--striped .card__heading_tag,
+.card--striped-aligned .card__heading_tag {
+  color: var(--color-white);
 }
 
 .card--striped-aligned .card__heading .icon-wrapper {
@@ -443,8 +448,9 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
 
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__heading > *,
 .card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--background-solid-primary-light-xxx, .card--background-solid-accent-warm-light-xxxx) .card__text > * {
-  --heading-color: var(--color-white);
-  color: var(--color-white);
+  --color: var(--color-white);
+  --heading-color: var(--color);
+  color: var(--color);
 }
 
 .card--striped.card--background-solid-base-light-xxx,

@@ -10,7 +10,12 @@
 {% set styles = [] %}
 {% set sub_component_styles = [] %}
 
-{% set bg_color = bg_tint ? bg_tint : variant %}
+{% if bg_tint %}
+  {% set bg_color = bg_tint %}
+{% else %}
+  {% set bg_tint = variant %}
+  {% set bg_color = bg_tint %}
+{% endif %}
 {% set styles = styles|merge([
   '--bg: var(--color-' ~ bg_color ~ ');',
   '--border: var(--border-' ~ bg_color ~ ')',
