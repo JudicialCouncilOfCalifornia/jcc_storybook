@@ -36,6 +36,7 @@ li.group-li + li.group-li > h2.list-label {
 
 .items-per-page {
   margin-block-end: var(--s-2);
+  color: var(--accent-color);
 }
 
 .items-per-page select {
