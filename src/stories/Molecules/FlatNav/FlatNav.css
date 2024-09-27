@@ -38,7 +38,7 @@
   text-decoration: none;
   color: var(--color);
   display: block;
-  height: 2rem;
+  height: unset;
 }
 
 .flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link {
