@@ -1,6 +1,7 @@
 import Pager from "../../Molecules/Pager/Pager.twig";
 import InlineForm from "../../Molecules/InlineForm/InlineForm.twig";
 import { Default as DefaultPager } from '../../Molecules/Pager/Pager.stories';
+import { FullPager } from '../../Molecules/Pager/Pager.stories';
 import { Default as InlineFormDefault } from '../../Molecules/InlineForm/InlineForm.stories';
 
 const items_per_page = `
@@ -84,7 +85,7 @@ export default {
     sidebar_direction_results: 'sidebar-row-reverse',
     sidebar_direction_header: 'sidebar-row-reverse',
     sidebar_direction_footer: 'sidebar-row-reverse',
-    pager: Pager({ ...DefaultPager.args }),
+    pager: Pager({ ...FullPager.args }),
     items_per_page: items_per_page,
     footer: '',
     footer_sidebar: '',

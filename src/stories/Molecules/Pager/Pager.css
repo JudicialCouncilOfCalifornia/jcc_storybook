@@ -1,13 +1,15 @@
 .pager {
   margin: auto;
+  padding-block: var(--s1);
 }
 
 .pager__items {
-  --gap: var(--s-3);
+  --gap: var(--s-5);
   list-style-type: none;
   margin: auto;
   font-family: var(--font-primary);
   justify-content: center;
+  padding-inline: 0;
 }
 
 .pager__items .icon-wrapper {
@@ -64,4 +66,8 @@
 .pager .pager__item:is(.pager__item--first, .pager__item--previous) a div.icon-wrapper .icon {
   width: clamp(var(--s0), 100%, var(--s0));
   height: clamp(var(--s0), 100%, var(--s0));
+}
+
+.pager__item:is(.pager__item--first, .pager__item--last) a > div.icon-wrapper:is(.icon-wrapper--left_caret_double, .icon-wrapper--right_caret_double) {
+  min-width: var(--s3);
 }
