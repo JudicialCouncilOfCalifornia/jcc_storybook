@@ -1,7 +1,7 @@
 .section {
   --color: var(--color-black);
   color: var(--color);
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   grid-template-areas: "section";
   background-color: var(--bg);
@@ -323,6 +323,11 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
+}
+
+/* default boxes still need a little spacing when together */
+.section--color-default + .section--color-default > .box {
+  padding-top: 1rem;
 }
 
 .section__header .brow {
