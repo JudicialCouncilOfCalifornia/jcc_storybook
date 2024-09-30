@@ -10,9 +10,10 @@
 {% set styles = [] %}
 {% set sub_component_styles = [] %}
 
+{% set bg_color = 'none' %}
 {% if bg_tint %}
   {% set bg_color = bg_tint %}
-{% else %}
+{% elseif variant != 'default' %}
   {% set bg_tint = variant %}
   {% set bg_color = bg_tint %}
 {% endif %}
