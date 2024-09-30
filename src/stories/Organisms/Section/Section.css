@@ -1,7 +1,7 @@
 .section {
   --color: var(--color-black);
   color: var(--color);
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   grid-template-areas: "section";
   background-color: var(--bg);
@@ -124,6 +124,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -131,6 +132,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -138,6 +140,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -145,6 +148,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -152,6 +156,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -159,6 +164,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -166,6 +172,7 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -173,12 +180,15 @@
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .view-results *,
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -194,12 +204,16 @@
 /* Adjust accordion hover if darker background */
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .accordion details > summary:hover *,
 .section.bg-adjust:not(
   [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
@@ -309,6 +323,11 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
+}
+
+/* default boxes still need a little spacing when together */
+.section--color-default + .section--color-default > .box {
+  padding-top: 1rem;
 }
 
 .section__header .brow {
