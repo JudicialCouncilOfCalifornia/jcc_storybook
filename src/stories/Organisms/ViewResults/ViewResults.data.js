@@ -1,11 +1,10 @@
 import Pager from "../../Molecules/Pager/Pager.twig";
 import InlineForm from "../../Molecules/InlineForm/InlineForm.twig";
 import { Default as DefaultPager } from '../../Molecules/Pager/Pager.stories';
+import { FullPager } from '../../Molecules/Pager/Pager.stories';
 import { Default as InlineFormDefault } from '../../Molecules/InlineForm/InlineForm.stories';
 
 const items_per_page = `
-<div class="form-item form-item-select-label">
-  <div>
     <select name="items_per_page" id="edit-select-label" value="10" form="FORM_NAME">
       <option value="5">Show 5 per page</option>
       <option value="10">Show 10 per page</option>
@@ -13,8 +12,7 @@ const items_per_page = `
       <option value="25">Show 25 per page</option>
       <option value="50">Show 50 per page</option>
     </select>
-  </div>
-</div>`;
+`;
 
 export default {
   default: {
@@ -87,7 +85,7 @@ export default {
     sidebar_direction_results: 'sidebar-row-reverse',
     sidebar_direction_header: 'sidebar-row-reverse',
     sidebar_direction_footer: 'sidebar-row-reverse',
-    pager: Pager({ ...DefaultPager.args }),
+    pager: Pager({ ...FullPager.args }),
     items_per_page: items_per_page,
     footer: '',
     footer_sidebar: '',

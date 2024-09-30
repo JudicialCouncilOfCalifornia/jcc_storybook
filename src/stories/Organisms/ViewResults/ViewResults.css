@@ -36,6 +36,7 @@ li.group-li + li.group-li > h2.list-label {
 
 .items-per-page {
   margin-block-end: var(--s-2);
+  color: var(--accent-color);
 }
 
 .items-per-page select {
@@ -199,6 +200,10 @@ li.group-li + li.group-li > h2.list-label {
   --accent-color: var(--button-fg) !important;
   font-size: var(--s0);
   color: var(--accent-color);
+}
+
+.view-results .form-actions .button .inline-form__submit-circle {
+  --accent-color: var(--button-fg) !important;
 }
 
 .view-results .form-actions .button .inline-form__submit-circle {

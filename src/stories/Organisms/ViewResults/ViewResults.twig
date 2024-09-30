@@ -4,7 +4,7 @@
 {% set list_type = list_type ?? 'ul' %}
 
 {% set has_header = (form and not form_in_sidebar) or (header) %}
-{% set has_footer = (footer is not empty) or (pager is not empty) or (footer_sidebar is not empty) or (items_per_page is not empty) %}
+{% set has_footer = (footer is not empty) or (pager is not empty) or (footer_sidebar is not empty) %}
 
 {% set divider = list_type_divider ? '' : 'no-divider' %}
 
@@ -67,7 +67,11 @@
               <div class="cluster view-results_header_wrapper">
                 <div class="views-results_content-header">{{ content_header }}</div>
                 {% if items_per_page %}
-                  <div class="alt-select-style items-per-page">{{ items_per_page }}</div>
+                  <div class="alt-select-style items-per-page">
+                    <div class="form-item form-item-select-label">
+                      <div>{{ items_per_page }}</div>
+                    </div>
+                  </div>
                 {% endif %}
               </div>
             {% endif %}
@@ -140,12 +144,9 @@
   {% if has_footer %}
   <div class="view-results__footer {{ footer_sidebar_class }} {{ sidebar_direction_footer }}" >
 
-    {% if footer_sidebar or items_per_page %}
+    {% if footer_sidebar %}
     <div class="stack box alt-select-style">
-
-      {% if footer_sidebar %}
-        {{ footer_sidebar }}
-      {% endif %}
+      {{ footer_sidebar }}
     </div>
     {% endif %}
 
