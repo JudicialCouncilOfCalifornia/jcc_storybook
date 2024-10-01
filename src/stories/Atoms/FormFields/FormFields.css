@@ -198,7 +198,7 @@ fieldset legend span {
   padding-inline: var(--s-2);
   padding-block-end: var(--s-5);
   margin-block-end: var(--s-3);
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color); 
 }
 
 /* Specific form styles */
@@ -225,4 +225,15 @@ fieldset legend span {
 }
 .entity-moderation-form .form-item-revision-log {
   flex-grow: 1;
+}
+
+label.form-required:after,
+fieldset legend span.form-required::after {
+  content: '*'; 
+  color: #df2626; 
+  margin-left: 5px;
+}
+
+input[required="required"] {
+   border-left: 1px solid #df2626;
 }
