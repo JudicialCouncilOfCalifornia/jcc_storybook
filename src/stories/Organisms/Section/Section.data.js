@@ -73,8 +73,7 @@ export default {
   bg_image: {
     variant: "default",
     first_component: false,
-    background_image_url:
-      "https://picsum.photos/id/41/1280/720",
+    background_image_url: "https://picsum.photos/id/41/1280/720",
     bg_tint: "red",
     brow_data: {
       variant: "default",
