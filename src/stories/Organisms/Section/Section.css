@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: var(--bg);
   border-block-end: var(--border) solid var(--s0);
 }
