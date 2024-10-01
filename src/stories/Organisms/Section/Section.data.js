@@ -73,8 +73,7 @@ export default {
   bg_image: {
     variant: "default",
     first_component: false,
-    background_image_url:
-      "https://picsum.photos/id/41/1280/720",
+    background_image_url: "https://picsum.photos/id/41/1280/720",
     bg_tint: "red",
     brow_data: {
       variant: "default",
@@ -104,7 +103,7 @@ export default {
       part_two: "",
     },
     heading: "Auto Adjusting Headings",
-    text: "<p>Adding <strong>heading-mgt</strong> class to enable handlers that auto-adjust headings when the library components are used as subcomponents. Observe the heading shifts - visually and within markup - when you remove the section heading or set as the first component.</p>",
+    text: "<p>Adding <strong>custom</strong> class to enable handlers that auto-adjust headings when the library components are used as subcomponents. Observe the heading shifts - visually and within markup - when you remove the section heading or set as the first component.</p>",
     button_data: {
       label: "Button",
       href: "#",
