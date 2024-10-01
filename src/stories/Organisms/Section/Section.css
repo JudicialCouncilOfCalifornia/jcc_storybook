@@ -9,6 +9,10 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
+.section > * {
+  width: 100%;
+}
+
 .section__header h1 + *,
 .section__header h2 + *,
 .section__header h3 + * {
