@@ -59,7 +59,8 @@ select::-ms-expand {
 .placeholder-container.js-form-type-date label,
 .placeholder-container.js-form-type-email label,
 .placeholder-container.js-form-type-textfield label,
-.placeholder-container.js-form-type-textarea label {
+.placeholder-container.js-form-type-textarea label,
+.placeholder-container.js-form-type-tel label {
   color: var(--color-base-light-x);
   left: .5rem;
   top: 0px;
