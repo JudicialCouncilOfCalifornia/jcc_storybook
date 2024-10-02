@@ -235,6 +235,6 @@ fieldset legend span.form-required::after {
   margin-left: 5px;
 }
 
-input[required="required"] {
+input[required="required"]:not([type="radio"]):not([type="checkbox"]) {
    border-left: 1px solid #df2626;
 }
