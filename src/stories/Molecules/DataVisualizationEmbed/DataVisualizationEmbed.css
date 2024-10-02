@@ -3,6 +3,10 @@
   outline: none;
 }
 
+.data-visualization-embed iframe {
+  max-width: 100%;
+}
+
 .data-visualization-embed.responsive-enabled .data-visualization-embed-responsive{
   display:none;
 }
