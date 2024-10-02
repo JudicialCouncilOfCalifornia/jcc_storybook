@@ -45,6 +45,8 @@ select::-ms-expand {
 .placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label,
 .placeholder-container.js-form-type-email input:focus ~ label,
 .placeholder-container.js-form-type-email input:not(:placeholder-shown) ~ label,
+.placeholder-container.js-form-type-tel input:focus ~ label,
+.placeholder-container.js-form-type-tel input:not(:placeholder-shown) ~ label,
 .placeholder-container textarea:focus ~ label,
 .placeholder-container textarea:not(:placeholder-shown) ~ label {
   padding: .25rem .5rem;
