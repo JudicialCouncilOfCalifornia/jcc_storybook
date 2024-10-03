@@ -30,7 +30,6 @@ li.group-li + li.group-li > h2.list-label {
 
 .views-results_content-header{
   font-size: var(--s-1);
-  color: var(--color-base);
   margin-block-end: var(--s-2);
 }
 
@@ -40,23 +39,13 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .items-per-page select {
+  background-color: transparent;
   font-size: var(--s-1);
 }
 
 .items-per-page .form-item-select-label{
   position: relative;
   padding-right: var(--s-2);
-}
-
-.items-per-page .form-item-select-label > div:after {
-  content:'⋁';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--accent-color);
-  font-size: var(--s-1);
-  font-weight: bold;
 }
 
 .view-results.no-top-margin .view-results__results{
