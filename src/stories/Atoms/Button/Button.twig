@@ -22,5 +22,5 @@
     <span>{{ label }}</span>
   </a>
 {% else %}
-  {{ link(label, href, { 'class': classes, 'aria_label': aria_label }) }}
+   {{ link(label, href, { 'class': classes, 'aria_label': aria_label,'style': color is defined ? 'color:' ~ color : '' }) }}    
 {% endif %}
