@@ -1,4 +1,19 @@
 
+0.56.9 / 2024-10-03
+===================
+
+  * chore: Export libs.
+  * Merge pull request #282 from JudicialCouncilOfCalifornia/fix/COURTS-252--footer-lower-nav-style-updates
+  * [COURTS-252] -- Style fix for Footer lower nav non-links
+  * Merge pull request #281 from JudicialCouncilOfCalifornia/feature/COURTS-224--items-by-number-improvements
+  * [COURTS-224] -- improve view results items sum & items per page.
+  * Merge pull request #280 from JudicialCouncilOfCalifornia/data-visualization-embed-feedback
+  * Merge pull request #279 from JudicialCouncilOfCalifornia/webform-input-fix
+  * [datavisualization-embed-feedback] -- implemented feedback
+  * [webform-input-fix] -- Added focus for telephone
+  * [webform-input-fix] -- Target only input fields
+
+
 0.56.8 / 2024-10-02
 ===================
 
