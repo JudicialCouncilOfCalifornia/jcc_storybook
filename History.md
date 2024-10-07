@@ -1,4 +1,11 @@
 
+0.56.10 / 2024-10-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #283 from JudicialCouncilOfCalifornia/bugfix/COURTS-224--improved-custom-select-tag-arrow
+  * [COURTS-224] -- svg select tag menu arrow.
+
 0.56.9 / 2024-10-03
 ===================
 
