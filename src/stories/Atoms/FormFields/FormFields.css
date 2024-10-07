@@ -14,16 +14,52 @@ select {
   line-height: var(--s0);
   display: block;
   width: 100%;
-}
-
-input,
-textarea {
   appearance: none;
   -webkit-appearance: none;
 }
 
+select:not([multiple]) {
+  background-image: var(--chevron-down);
+  background-repeat: no-repeat;
+  background-position: 99% center;
+  background-size: var(--s-1);
+}
+
 select::-ms-expand {
   display: none;
+}
+
+select[multiple] > * + * {
+  padding-block-start: var(--s-4);
+}
+
+.alt-select-style > div:not(.description) {
+  position: relative;
+  inline-size: fit-content;
+  color: var(--accent-color);
+}
+
+.alt-select-style > div:not(.description)::after {
+  content: '';
+  mask-image: var(--chevron-down);
+  mask-repeat: no-repeat;
+  position: absolute;
+  top: var(--s-5);
+  right: 0;
+  background-color: currentColor;
+  width: var(--s-1);
+  height: var(--s0);
+  pointer-events: none;
+}
+
+.alt-select-style select {
+  background-image: none;
+  background-color: transparent;
+  border: 0;
+  padding-block: var(--s-5);
+  padding-inline-start: 0;
+  padding-inline-end: var(--s1);
+  color: currentColor;
 }
 
 .placeholder-container {
@@ -77,10 +113,6 @@ select::-ms-expand {
   padding: 0 .5rem;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
-}
-
-select[multiple] > * + * {
-  padding-block-start: var(--s-4);
 }
 
 .cluster input,
@@ -188,13 +220,6 @@ fieldset {
 .form-radio label,
 .form-check label {
   font-size: var(--s-1);
-}
-
-.alt-select-style select {
-  border: 0;
-  padding: var(--s-5) 0;
-  color: var(--accent-color);
-  width: auto;
 }
 
 fieldset {

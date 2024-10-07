@@ -35,11 +35,14 @@ li.group-li + li.group-li > h2.list-label {
 
 .items-per-page {
   margin-block-end: var(--s-2);
-  color: var(--accent-color);
+}
+
+.alt-select-style.items-per-page > div::after {
+  mask-size: var(--s-2);
+  top: var(--s-3);
 }
 
 .items-per-page select {
-  background-color: transparent;
   font-size: var(--s-1);
 }
 
