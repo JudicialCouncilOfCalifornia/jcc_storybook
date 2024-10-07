@@ -16,16 +16,16 @@
   <div class="data-visualization-embed-desktop">
     <div class="data-visualization-container" style="position:relative;padding-top:{{ height / width * 100 }}%;">
       <div class="data-visualization-clip">
-        <iframe id="iframe-content-{{ random(1000) }}" src="{{ url }}" frameborder="0">
+        <iframe id="iframe-content-{{ random(100) }}" src="{{ url }}" frameborder="0">
           {{- 'Your browser does not support inline frames'|t -}}
         </iframe>
       </div>
     </div>
   </div>
   <div class="data-visualization-embed-responsive">
-    <div class="data-visualization-container" style="position:relative;padding-top:{{ height / width * 100 }}%;">
+    <div class="data-visualization-container" style="position:relative;padding-top:{{ mobile_height / mobile_width * 100 }}%;">
       <div class="data-visualization-clip">
-        <iframe id="iframe-content-{{ random(1000) }}" src="{{ mobile_url }}" frameborder="0">
+        <iframe id="iframe-content-{{ random(101, 200) }}" src="{{ mobile_url }}" frameborder="0">
           {{- 'Your browser does not support inline frames'|t -}}
         </iframe>
       </div>
