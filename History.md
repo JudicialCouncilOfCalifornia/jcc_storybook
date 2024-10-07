@@ -1,4 +1,11 @@
 
+0.56.12 / 2024-10-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #285 from JudicialCouncilOfCalifornia/bugfix/COURTS-224--select-tag-arrow-fix
+  * [COURTS-224] -- adjust select tag fixes for Drupal integration.
+
 0.56.11 / 2024-10-07
 ===================
 
