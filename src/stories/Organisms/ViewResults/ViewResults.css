@@ -39,7 +39,7 @@ li.group-li + li.group-li > h2.list-label {
 
 .alt-select-style.items-per-page > div::after {
   mask-size: var(--s-2);
-  top: var(--s-3);
+  top: var(--s-3) !important;
 }
 
 .items-per-page select {

@@ -19,9 +19,10 @@ select {
 }
 
 select:not([multiple]) {
+  background-origin: content-box;
   background-image: var(--chevron-down);
   background-repeat: no-repeat;
-  background-position: 99% center;
+  background-position: right center;
   background-size: var(--s-1);
 }
 
