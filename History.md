@@ -1,4 +1,11 @@
 
+0.56.11 / 2024-10-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #284 from JudicialCouncilOfCalifornia/datavisaulization-ratio
+  * [datavisualization-ratio] -- implemented feedback
+
 0.56.10 / 2024-10-06
 ===================
 
