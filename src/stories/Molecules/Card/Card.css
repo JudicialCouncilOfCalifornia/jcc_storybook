@@ -13,7 +13,11 @@
 }
 
 .card--default:not(.bg-adjust) img,
-.card--default:not(.bg-adjust) iframe {
+.card--default:not(.bg-adjust) iframe,
+.card.card--media-left img,
+.card.card--media-left iframe,
+.card.card--media-right img,
+.card.card--media-right iframe {
   border-radius: var(--corner-radius);
 }
 
@@ -28,7 +32,9 @@
   flex-direction: column;
 }
 
-.card--default:not(.bg-adjust) .caption-overlay .card__media-caption {
+.card--default:not(.bg-adjust) .caption-overlay .card__media-caption,
+.card.card--media-left .caption-overlay .card__media-caption,
+.card.card--media-right .caption-overlay .card__media-caption {
   border-bottom-left-radius: var(--corner-radius);
   border-bottom-right-radius: var(--corner-radius);
 }
