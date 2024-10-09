@@ -74,8 +74,8 @@
   background-color: currentColor;
 }
 .button.button--primary:hover::after,
-.button.button--text:hover::after {
-  background-color: var(--color-red);  
+.button.button--text:hover::after {  
+  background-color: var(--dynamic-color, var(--color-red));
 }
 .button.button--primary:active::after,
 .button.button--text:active::after {

@@ -100,7 +100,7 @@ export default {
       },
     ],
   },
-  popular_links: {
+  with_menu: {
     variant: "none",
     heading: "Popular Links",
     links: true,
@@ -111,6 +111,7 @@ export default {
             variant: "text",
             aria_label: "More descriptive label for screen readers",
             color: '#005EA2',
+            /*color: 'red',*/
       }),
       Button({
         label: "Text Button1",

@@ -43,5 +43,5 @@ WithHeading.args = data.with_heading;
 export const WithGrid = Template.bind({});
 WithGrid.args = data.with_grid;
 
-export const PopularLinks = Template.bind({});
-PopularLinks.args = data.popular_links;
+export const WithMenu = Template.bind({});
+WithMenu.args = data.with_menu;
