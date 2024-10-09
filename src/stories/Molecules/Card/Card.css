@@ -2,6 +2,7 @@
 .card {
   --measure: 100rem;
   --sidebar-width: 30ch;
+  --form-button: var(--bg);
 }
 
 .card--default.bg-adjust,
@@ -633,3 +634,7 @@ a.card--default.bg-adjust:not(.card--background-solid-base-light-xxx, .card--bac
   color: var(--color-brown);
 }
 /* Button varaints END*/
+
+.card .inline-form .form-actions button {
+  --icon-color: var(--form-button);
+}

@@ -19,14 +19,16 @@
 {% set variant_background = background ? 'card--background-' ~ background ~ ' bg-adjust' : '' %}
 {% set extra_padding = extra_padding ? 'extra-padding' : '' %}
 
-{% set styles = [] %}
-
-{% if aspect is not empty %}
-  {% set styles = styles|merge([
-    '--frame-h: ' ~ aspect[0] ~ ';',
-    '--frame-v: ' ~ aspect[1] ~ ';',
-  ]) %}
+{% set bg = '--bg: var(--accent-color);' %}
+{% if background and (background not 'solid-base-light-xxx' or background not 'solid-accent-warm-light-xxx' or background not 'solid-primary-light-xxx') %}
+  {% set bg = '--bg: var(--background-' ~ background ~ ');' %}
 {% endif %}
+
+{% set styles = [
+  bg,
+  aspect ? '--frame-h: ' ~ aspect[0] ~ ';' : '',
+  aspect ? '--frame-v: ' ~ aspect[0] ~ ';' : '',
+] %}
 
 {# Media classes. #}
 {% set media_classes = [
@@ -77,8 +79,24 @@
         {% if text is not empty or (button_data is not empty and not clickable_card) %}
           <div class="card__body">
             {% if text is not empty %}
-            <div class="card__text">
+              <div class="card__text">
                 {{ text }}
+
+
+                <div class="inline-form inline-form--default">
+                  <form class="views-exposed-form bef-exposed-form" action="/search" method="get">
+                    <div class="form-item">
+                      <input class="form-text" placeholder="Search" type="text" value=""/>
+                    </div>
+                    <div class="form-actions form-wrapper" id="edit-actions">
+                      <button class="button form-submit" type="submit">
+                        <span class="inline-form__submit-line"></span>
+                        <span class="inline-form__submit-circle"></span>
+                        <span class="sr-only">Search</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             {% endif %}
             {% if tag == 'div' and button_data is not empty %}

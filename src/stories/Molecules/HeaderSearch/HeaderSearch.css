@@ -26,8 +26,8 @@
 /* Search Toggle and Icon Button */
 .header-search__icon,
 .header-search__search-toggle {
-  width: var(--icon-height);
-  height: var(--icon-height);
+  width: var(--s3);
+  height: var(--s3);
   position: relative;
   cursor: pointer;
   transition: background-color var(--anim);
@@ -91,6 +91,7 @@
   flex-wrap: nowrap;
   inset-inline-end: calc(var(--icon-height) + var(--s-6));
   width: 100%;
+  align-items: center;
 }
 
 .header-search__search-toggle + .header-search__form {
@@ -112,7 +113,7 @@
   line-height: var(--s-1);
   padding-block: 0;
   height: var(--icon-height);
-  border-radius : calc(var(--icon-height) / 2);
+  border-radius : var(--corner-radius);
   margin-right: calc(var(--icon-height) * -1);
   background: var(--color-base-light-xx);
   border-color: var(--color-base-light-xx);
@@ -220,8 +221,8 @@ button.header-search__icon .icon-wrapper {
 
 .search-toggle input {
   content: "";
-  width: var(--icon-height) !important;
-  height: var(--icon-height);
+  width: var(--s3) !important;
+  height: var(--s3);
   background-color: var(--icon-background);
   border-radius: 9999px;
   transform-origin: center center;
