@@ -114,7 +114,7 @@ export default {
             /*color: 'red',*/
       }),
       Button({
-        label: "Text Button1",
+        label: "This is an example of really long popular link This is an example of really long popular linkThis is an example of really long popular link",
             href: "#",
             variant: "text",
             aria_label: "More descriptive label for screen readers",
