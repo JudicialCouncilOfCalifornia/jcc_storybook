@@ -1,3 +1,7 @@
+.share {
+  --color: var(--accent-color);
+}
+
 .share ul {
   list-style: none;
   padding-inline: 0;
@@ -18,16 +22,16 @@
 }
 
 .share__item a:hover {
-  color: var(--accent-color);
+  color: var(--color);
   text-decoration: underline;
 }
 
 .share__label {
-  color: var(--accent-color);
+  color: var(--color);
 }
 
 .share__item .icon-wrapper {
   block-size: var(--s2);
   inline-size: var(--s2);
-  color: var(--accent-color);
+  color: var(--color);
 }
