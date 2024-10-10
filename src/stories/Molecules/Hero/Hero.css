@@ -155,7 +155,8 @@
 
 /* Variants */
 .hero--mega .hero__content {
-  padding-block: var(--s6);
+  padding-block-start: var(--s9);
+  padding-block-end: var(--s10);
 }
 
 .hero--mega .hero__content-inner {
@@ -163,12 +164,12 @@
 }
 
 .hero--mega .card h1 {
-  font-size: var(--s5);
+  font-size: var(--s6);
   line-height: normal;
 }
 
-.hero--mega .card .card__text p {
-  font-size: var(--s2);
+.hero--mega .card .card__text {
+  font-size: var(--s3);
   line-height: normal;
 }
 
@@ -176,8 +177,21 @@
   margin-block-start: var(--s3);
 }
 
+/* Suppress input resize on focus */
+.hero--mega .header-search__form input:focus {
+  outline: unset;
+  border: unset;
+}
+
+.hero--mega .header-search__form input {
+  padding-block: var(--s2);
+}
+
 .hero--mega .header-search__form .header-search__icon {
-  --accent-color: var(--color-accent-warm-dark-x);
+  --accent-color: var(--color-accent-warm-dark-x);;
+  height: var(--s4);
+  width: var(--s4);
+  right: var(--s-6);
 }
 
 .hero--content-bg {

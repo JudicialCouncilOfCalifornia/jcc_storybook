@@ -4,6 +4,12 @@
 :root {
   /* Scale */
   --ratio: 1.2;
+  --s-12: calc(var(--s-11) / var(--ratio));
+  --s-11: calc(var(--s-10) / var(--ratio));
+  --s-10: calc(var(--s-9) / var(--ratio));
+  --s-9: calc(var(--s-8) / var(--ratio));
+  --s-8: calc(var(--s-7) / var(--ratio));
+  --s-7: calc(var(--s-6) / var(--ratio));
   --s-6: calc(var(--s-5) / var(--ratio));
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -17,6 +23,12 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
+  --s7: calc(var(--s6) * var(--ratio));
+  --s8: calc(var(--s7) * var(--ratio));
+  --s9: calc(var(--s8) * var(--ratio));
+  --s10: calc(var(--s9) * var(--ratio));
+  --s11: calc(var(--s10) * var(--ratio));
+  --s12: calc(var(--s11) * var(--ratio));
 
   /* Content spacing. */
   --measure: 75ch;
@@ -24,8 +36,9 @@
   --min-width: 40ch;
 
   /* Fonts */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Lato', sans-serif;
+  /* Lato was meant to be used as default. Secondary TBD if not removed later. */
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary: var(--font-primary);
   --font-global: 'Lora' ,'Georgia' ,'Cambria' ,'Times New Roman','Times' ,serif;
 
   /* Colors */
@@ -71,23 +84,23 @@
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
 
-  /* Solid Backgrounds */
+  /* Backgrounds */
   /* Base */
-  --background-solid-base-light-xxx: var(--color-base-light-xxx);
-  --background-solid-base-dark-x: var(--color-base-dark-x);
-  --background-solid-base-dark-xxx: var(--color-base-dark-xxx);
+  --background-base-light-xxx: var(--color-base-light-xxx);
+  --background-base-dark-x: var(--color-base-dark-x);
+  --background-base-dark-xxx: var(--color-base-dark-xxx);
   /* Accent */
-  --background-solid-accent-warm-light-xxxx: var(--color-accent-warm-light-xxxx);
-  --background-solid-accent-warm-dark-x: var(--color-accent-warm-dark-x);
-  --background-solid-red: var(--color-red);
-  --background-solid-brown: var(--color-brown);
+  --background-accent-warm-light-xxxx: var(--color-accent-warm-light-xxxx);
+  --background-accent-warm-dark-x: var(--color-accent-warm-dark-x);
+  --background-red: var(--color-red);
+  --background-brown: var(--color-brown);
   /* Primary */
-  --background-solid-primary-light-xxx: var(--color-primary-light-xxx);
-  --background-solid-primary-light-x: var(--color-primary-light-x);
-  --background-solid-primary-dark-x: var(--color-primary-dark-x);
+  --background-primary-light-xxx: var(--color-primary-light-xxx);
+  --background-primary-light-x: var(--color-primary-light-x);
+  --background-primary-dark-x: var(--color-primary-dark-x);
   /* Secondary */
-  --background-solid-secondary: var(--color-secondary);
-  --background-solid-secondary-dark-xx: var(--color-secondary-dark-xx);
+  --background-secondary: var(--color-secondary);
+  --background-secondary-dark-xx: var(--color-secondary-dark-xx);
 
   /* Borders */
   /* Base - Map color background context since repeated color values */
@@ -157,6 +170,7 @@
   --arrow-up-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>');
   --thumbs-up-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>');
   --fa-file-svg: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="file" class="svg-inline--fa fa-file fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"></path></svg>');
+  --chevron-down: url('data:image/svg+xml,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>');
 
   /* Corner radius */
   --corner-radius: var(--s-5);

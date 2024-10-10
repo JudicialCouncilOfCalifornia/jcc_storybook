@@ -30,13 +30,16 @@ li.group-li + li.group-li > h2.list-label {
 
 .views-results_content-header{
   font-size: var(--s-1);
-  color: var(--color-base);
   margin-block-end: var(--s-2);
 }
 
 .items-per-page {
   margin-block-end: var(--s-2);
-  color: var(--accent-color);
+}
+
+.alt-select-style.items-per-page > div::after {
+  mask-size: var(--s-2);
+  top: var(--s-3) !important;
 }
 
 .items-per-page select {
@@ -46,17 +49,6 @@ li.group-li + li.group-li > h2.list-label {
 .items-per-page .form-item-select-label{
   position: relative;
   padding-right: var(--s-2);
-}
-
-.items-per-page .form-item-select-label > div:after {
-  content:'⋁';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: currentColor;
-  font-size: var(--s-1);
-  font-weight: bold;
 }
 
 .view-results.no-top-margin .view-results__results{
@@ -200,6 +192,10 @@ li.group-li + li.group-li > h2.list-label {
   --accent-color: var(--button-fg) !important;
   font-size: var(--s0);
   color: var(--accent-color);
+}
+
+.view-results .form-actions .button .inline-form__submit-circle {
+  --accent-color: var(--button-fg) !important;
 }
 
 .view-results .form-actions .button .inline-form__submit-circle {
