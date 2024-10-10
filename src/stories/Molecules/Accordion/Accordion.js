@@ -32,9 +32,9 @@ docReady(function () {
           accordionItems.forEach((accordionItem, i) => {            
             accordionItem.closest('details').setAttribute('open', '');       
           })
-          });
+        });
 
-         closebtn.addEventListener('click', (e) => {
+        closebtn.addEventListener('click', (e) => {
           e.preventDefault();          
           closebtn.setAttribute('aria-pressed', 'false');
           const accordionContainer = e.target.closest('.accordion');
@@ -80,7 +80,6 @@ docReady(function () {
             summary.closest('details').removeAttribute('open');
             summary.closest('details').classList.remove('closing');
           }, animation_speed)
-         
         } else {
           // If closed when clicked, open the detail. The delay helps improve the
           // fade in animation of the content.

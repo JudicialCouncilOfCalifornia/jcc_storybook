@@ -37,7 +37,7 @@
   font-size: var(--s-2);
   text-decoration: none;
   color: var(--color);
-  display: block;
+  display: inline-block;
   height: unset;
 }
 
@@ -59,6 +59,7 @@
 }
 
 .flat-nav .flat-nav__link:focus {
-  outline: 2px solid var(--accent-color);
+  outline: 3px solid var(--accent-color);
   outline-offset: 2px;
+  border-radius: 1px;
 }
