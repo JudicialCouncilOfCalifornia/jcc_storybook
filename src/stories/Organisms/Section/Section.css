@@ -5,8 +5,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--bg);
-  border-block-end: var(--border) solid var(--s0);
 }
 
 .section > * {
@@ -30,6 +28,8 @@
   /* Brings content above tint due to grid. */
   justify-content: center;
   z-index: 1;
+  background-color: var(--bg);
+  border-block-end: var(--border) solid var(--s0);
 }
 
 .section__content.box {
@@ -54,9 +54,12 @@
   max-inline-size: var(--max-width);
 }
 
-.section .section__header,
-.section .section__button {
+.section .section__header {
   --align-items: center;
+}
+
+.section .section__button {
+  text-align: right;
 }
 
 .section .section__header h1.brow,
@@ -107,10 +110,11 @@
 /* BEGIN Background colors with backwards compatibility */
 .section.bg-adjust .section__content {
   padding-block-start: var(--s5);
+  padding-block-end: var(--s6);
 }
 
 /* Reverse element colors for darker backgrounds */
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -118,7 +122,15 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__header *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main *,
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -126,7 +138,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__button *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -134,7 +146,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .accordion *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -142,7 +154,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .action-list > *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -150,7 +162,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .body *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -158,7 +170,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .steps *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -166,7 +178,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .teaser-list *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -174,7 +186,7 @@
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .view-results *,
-.section.bg-adjust:not(
+.section.bg-adjust .section__content:not(
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -239,60 +251,65 @@
 
 /* Base preview for editor */
 .section.swatch--color-base-light-xxx {
-  background: var(--background-solid-base-light-xxx);
+  background: var(--background-base-light-xxx);
 }
 
 .section.swatch--color-base-dark-x {
-  background: var(--background-solid-base-dark-x);
+  background: var(--background-base-dark-x);
 }
 
 .section.swatch--color-base-dark-xxx {
-  background: var(--background-solid-base-dark-xxx);
+  background: var(--background-base-dark-xxx);
 }
 
 /* Accent preview for editor */
 .section.swatch--color-accent-warm-light-xxxx {
-  background: var(--background-solid-accent-warm-light-xxxx);
+  background: var(--background-accent-warm-light-xxxx);
 }
 
 .section.swatch--color-accent-warm-dark-x {
-  background: var(--background-solid-accent-warm-dark-x);
+  background: var(--background-accent-warm-dark-x);
 }
 
 .section.swatch--color-red {
-  background: var(--background-solid-red);
+  background: var(--background-red);
 }
 
 .section.swatch--color-brown {
-  background: var(--background-solid-brown);
+  background: var(--background-brown);
 }
 
 /* Primary preview for editor */
 .section.swatch--color-primary-light-xxx {
-  background: var(--background-solid-primary-light-xxx);
+  background: var(--background-primary-light-xxx);
 }
 
 .section.swatch--color-primary-light-x {
-  background: var(--background-solid-primary-light-x);
+  background: var(--background-primary-light-x);
 }
 
 .section.swatch--color-primary-dark-x {
-  background: var(--background-solid-primary-dark-x);
+  background: var(--background-primary-dark-x);
 }
 
 /* Secondary preview for editor */
 .section.swatch--color-secondary {
-  background: var(--background-solid-secondary);
+  background: var(--background-secondary);
 }
 
 .section.swatch--color-secondary-dark-xx {
-  background: var(--background-solid-secondary-dark-xx);
+  background: var(--background-secondary-dark-xx);
 }
 /* END */
 
 /* Variants */
-.section--with-bg-image {
+.section--with-bg-image .section__content {
   position: relative;
+}
+
+.section--with-bg-image .section__content .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section__image {
