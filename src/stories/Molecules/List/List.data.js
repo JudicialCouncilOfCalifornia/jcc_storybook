@@ -1,3 +1,5 @@
+import Button from "../../Atoms/Button/Button.twig";
+
 export default {
   default: {
     variant: "ul",
@@ -96,6 +98,28 @@ export default {
       {
         text: "Ab illo inventore",
       },
+    ],
+  },
+  with_menu: {
+    variant: "none",
+    heading: "Popular Links",
+    links: true,
+    items:[
+      Button({
+        label: "Text Button1",
+            href: "#",
+            variant: "text",
+            aria_label: "More descriptive label for screen readers",
+            color: '#005EA2',
+            /*color: 'red',*/
+      }),
+      Button({
+        label: "This is an example of really long popular link This is an example of really long popular linkThis is an example of really long popular link",
+            href: "#",
+            variant: "text",
+            aria_label: "More descriptive label for screen readers",
+            color: '#005EA2',
+      })
     ],
   },
 };

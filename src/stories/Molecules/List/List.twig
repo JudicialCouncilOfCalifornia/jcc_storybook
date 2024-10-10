@@ -21,10 +21,17 @@
 
 <div class="{{ classes|join(' ') }}">
   {% if heading %}
-    <{{h}} class="list-heading">{{ heading }}</{{h}}> 
+    <{{h}} class="list-heading {% if links %} popular-links-heading {% endif %}">{{ heading }}</{{h}}> 
   {% endif %}
   <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
-    {% for item in items %}
+  {% if links %}
+    {% for item in items %}   
+    <li class="{{ item_classes|merge(['link-item'])|join(' ') }}">
+      {{item}}
+    </li>   
+    {% endfor %}
+  {% else %}
+   {% for item in items %}
       <li class="{{ item_classes|join(' ') }}">
         {% if item.label %}
           <span class="list__item-label">{{ item.label|title }}:</span>
@@ -32,5 +39,6 @@
         {{ item.text }}
       </li>
     {% endfor %}
+    {% endif %}
   </{{tag}}>
 </div>

@@ -21,6 +21,10 @@
   <a class="{{ classes|join(' ') }}" href="{{ href }}" aria-label="{{ aria_label }}">
     <span>{{ label }}</span>
   </a>
-{% else %}
-  {{ link(label, href, { 'class': classes, 'aria_label': aria_label }) }}
+{% else %} 
+ {{ link(label, href, {
+    'class': classes,
+    'aria_label': aria_label,
+    'style': (color is defined and color is not empty) ? 'color:' ~ color ~ '; --dynamic-color: ' ~ color : ''
+  }) }}
 {% endif %}
