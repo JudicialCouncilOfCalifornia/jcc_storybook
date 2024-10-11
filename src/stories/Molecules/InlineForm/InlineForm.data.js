@@ -1,6 +1,7 @@
 export default {
   default: {
     variant: "default",
+    submit_color: "",
     form: `<form class="views-exposed-form bef-exposed-form" action="/search" method="get">
     <div class="form-item">
       <input 
