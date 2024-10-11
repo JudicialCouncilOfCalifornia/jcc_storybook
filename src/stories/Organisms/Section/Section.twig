@@ -83,12 +83,8 @@
 {% endif %}
 
 {# Section Template #}
-<div {% if classes is not empty %} class="{{ classes|join(' ')}}" {% endif %} {% if styles is not empty %} style="{{ styles|join }}" {% endif %}>
-  {% if background_image_url is not empty %}
-    <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
-    <div class="section__tint"></div>
-  {% endif %}
-  <div class="section__content {{ inner_box_class }}">
+<div {% if classes is not empty %} class="{{ classes|join(' ')}}" {% endif %} {% if styles is not empty %} {% endif %}>
+  <div class="section__content {{ inner_box_class }}" style="{{ styles|join }}">
     <div class="container stack">
       {% if brow_data or heading or text %}
         <div class="section__header">
@@ -112,11 +108,21 @@
           {{ sub_component_data }}
         {% endif %}
       </div>
-      {% if button_data is not empty %}
-        <div class="section__button center">
-          {% include "@atoms/Button/Button.twig" with button_data %}
-        </div>
-      {% endif %}
     </div>
+    {% if background_image_url is not empty %}
+      <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
+      <div class="section__tint"></div>
+    {% endif %}
   </div>
+  {% if button_data is not empty %}
+    <div class="container">
+      <div class="section__button box">
+        {% include "@atoms/Button/Button.twig" with {
+          variant: 'text',
+          label: button_data.label,
+          href: button_data.href,
+        } %}
+      </div>
+    </div>
+  {% endif %}
 </div>
