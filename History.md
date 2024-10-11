@@ -1,4 +1,15 @@
 
+0.56.13 / 2024-10-10
+===================
+
+  * chore: Export libs.
+  * Merge pull request #290 from JudicialCouncilOfCalifornia/feature/COURTS-229--deep-linking-tabs--query-attribute-based
+  * [COURTS-229] -- Feature to allow for preset active tab in Tab component.
+  * Merge pull request #288 from JudicialCouncilOfCalifornia/fix/footer-focus-link-style-fix
+  * [fix] -- Footer nav accessibility fix: focus link style fix for items in the FlatNav component in the Footer
+  * Merge pull request #286 from JudicialCouncilOfCalifornia/datavisualizationembed-feedback
+  * [datavisualization-feedback] -- css
+
 0.56.12 / 2024-10-07
 ===================
 
