@@ -15,13 +15,25 @@
   'tabs__tabpanel',
 ] %}
 
-<div class="{{ classes|join(' ') }}">
+<div class="{{ classes|join(' ') }}" {% if open_on_load %}data-open-on-load="{{ open_on_load }}"{% endif %}>
 
   <div role="tablist" class="{{ tablist_classes|join(' ') }}">
     {% for item in items %}
+
+      {% set tab_id = item.id is not empty ? item.id : 'tab-' ~ item.label|replace({' ':'-'})|lower %}
+      {% set panel_id = item.id is not empty ? item.id : 'tabpanel-' ~ item.label|replace({' ':'-'})|lower %}
+
+      {% if open_on_load is empty %}
+        {% set active_class = loop.index == 1 ? 'active' : '' %}
+      {% endif %}
+
+      {% if open_on_load == tab_id %}
+        {% set active_class = 'active' %}
+      {% endif %}
+
       <button
-        id="{{ item.id is not empty ? item.id : 'tab-' ~ item.label|replace({' ':'-'})|lower }}"
-        class="{{ loop.index == 1 ? 'active' : '' }}"
+        id="{{ tab_id }}"
+        class="{{ active_class }}"
         type="button"
         role="tab"
         aria-selected="true"
@@ -34,11 +46,14 @@
 
   <div class="{{ tabpanel_classes|join(' ') }}">
     {% for item in items %}
+      {% set tab_id = item.id is not empty ? item.id : 'tab-' ~ item.label|replace({' ':'-'})|lower %}
+      {% set panel_id = item.id is not empty ? item.id : 'tabpanel-' ~ item.label|replace({' ':'-'})|lower %}
+
       <details
-        id='{{ "tabpanel-" ~ item.label|replace({' ':'-'})|lower }}'
+        id='{{ panel_id }}'
         role="tabpanel"
         tabindex="0"
-        aria-labelledby='{{ "tab-" ~ item.label|replace({' ':'-'})|lower }}'
+        aria-labelledby='{{ tab_id }}'
         class="stack"
       >
         <summary><div class="tabs__label focus">{{ item.label }}</div></summary>
