@@ -1,5 +1,6 @@
 .hangover {
   --background: var(--bg);
+  --border: var(--border);
   --hangover-offset: var(--hangover-offset);
 }
 
@@ -28,6 +29,7 @@
 
 .hangover__top {
   background: var(--background);
+  border-block-end: var(--border) solid var(--s0);
 }
 
 .hangover:not(
@@ -73,6 +75,18 @@
 
 .hangover__top-hangover-content {
   justify-content: center;
+}
+
+.hangover .card.card--bordered-center {
+  --border-color: var(--bg);
+  border: var(--s-2) solid var(--border-color, var(--color-accent-warm-light-xxxx));
+  background: var(--bg);
+}
+
+.hangover .card.card--bordered-center .card__inner {
+  border: none;
+  border-radius: var(--corner-radius);
+  overflow: hidden;
 }
 
 /* Variants */
@@ -186,14 +200,14 @@
 
 .hangover--default .hangover__top,
 .hangover--solid-base-dark-x .hangover__top {
-  --background: var(--background-solid-base-dark-x);
+  --background: var(--background-base-dark-x);
   background: var(--background);
 }
 
 /* solid-primary-dark-xx */
 
 .hangover--solid-primary-dark-xx .hangover__top {
-  --background: var(--background-solid-primary-dark-xx);
+  --background: var(--background-primary-dark-xx);
   background: var(--background);
 }
 
@@ -204,7 +218,7 @@
 /* solid-primary-dark-x */
 
 .hangover--solid-primary-dark-x .hangover__top {
-  --background: var(--background-solid-primary-dark-x);
+  --background: var(--background-primary-dark-x);
   background: var(--background);
 }
 
@@ -215,7 +229,7 @@
 /* solid-primary-light-xx */
 
 .hangover--solid-primary-light-xx .hangover__top {
-  --background: var(--background-solid-primary-light-xx);
+  --background: var(--background-primary-light-xx);
   background: var(--background);
 }
 
@@ -226,7 +240,7 @@
 /* solid-secondary-dark-xx */
 
 .hangover--solid-secondary-dark-xx .hangover__top {
-  --background: var(--background-solid-secondary-dark-xx);
+  --background: var(--background-secondary-dark-xx);
   background: var(--background);
 }
 
@@ -237,7 +251,7 @@
 /* solid-secondary */
 
 .hangover--solid-secondary .hangover__top {
-  --background: var(--background-solid-secondary);
+  --background: var(--background-secondary);
   background: var(--background);
 }
 
@@ -248,7 +262,7 @@
 /* solid-accent-warm-dark-x */
 
 .hangover--solid-accent-warm-dark-x .hangover__top {
-  --background: var(--background-solid-accent-warm-dark-x);
+  --background: var(--background-accent-warm-dark-x);
   background: var(--background);
 }
 
@@ -259,14 +273,14 @@
 /* solid-base-dark-x */
 
 .hangover--solid-base-dark-x .hangover__top {
-  --background: var(--background-solid-base-dark-x);
+  --background: var(--background-base-dark-x);
   background: var(--background);
 }
 
 /* solid-base-light-xx */
 
 .hangover--solid-base-light-xx .hangover__top {
-  --background: var(--background-solid-base-light-xx);
+  --background: var(--background-base-light-xx);
   background: var(--background);
 }
 

@@ -11,30 +11,30 @@
 /* Striped Card Variants */
 .card--striped:nth-of-type(6n + 1),
 .card--striped-aligned:nth-of-type(6n + 1) {
-  background: var(--background-solid-primary-dark-x);
+  background: var(--background-primary-dark-x);
 }
 
 .card--striped:nth-of-type(6n + 2),
 .card--striped-aligned:nth-of-type(6n + 2) {
-  background: var(--background-solid-primary-light-x);
+  background: var(--background-primary-light-x);
 }
 
 .card--striped:nth-of-type(6n + 3),
 .card--striped-aligned:nth-of-type(6n + 3) {
-  background: var(--background-solid-secondary);
+  background: var(--background-secondary);
 }
 
 .card--striped:nth-of-type(6n + 4),
 .card--striped-aligned:nth-of-type(6n + 4) {
-  background: var(--background-solid-accent-warm-dark-x);
+  background: var(--background-accent-warm-dark-x);
 }
 
 .card--striped:nth-of-type(6n + 5),
 .card--striped-aligned:nth-of-type(6n + 5) {
-  background: var(--background-solid-secondary-dark-xx);
+  background: var(--background-secondary-dark-xx);
 }
 
 .card--striped:nth-of-type(6n + 6),
 .card--striped-aligned:nth-of-type(6n + 6) {
-  background: var(--background-solid-base-dark-x);
+  background: var(--background-base-dark-x);
 }

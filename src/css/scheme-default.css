@@ -4,6 +4,12 @@
 :root {
   /* Scale */
   --ratio: 1.2;
+  --s-12: calc(var(--s-11) / var(--ratio));
+  --s-11: calc(var(--s-10) / var(--ratio));
+  --s-10: calc(var(--s-9) / var(--ratio));
+  --s-9: calc(var(--s-8) / var(--ratio));
+  --s-8: calc(var(--s-7) / var(--ratio));
+  --s-7: calc(var(--s-6) / var(--ratio));
   --s-6: calc(var(--s-5) / var(--ratio));
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -17,6 +23,12 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --s6: calc(var(--s5) * var(--ratio));
+  --s7: calc(var(--s6) * var(--ratio));
+  --s8: calc(var(--s7) * var(--ratio));
+  --s9: calc(var(--s8) * var(--ratio));
+  --s10: calc(var(--s9) * var(--ratio));
+  --s11: calc(var(--s10) * var(--ratio));
+  --s12: calc(var(--s11) * var(--ratio));
 
   /* Content spacing. */
   --measure: 75ch;
@@ -24,8 +36,9 @@
   --min-width: 40ch;
 
   /* Fonts */
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Lato', sans-serif;
+  /* Lato was meant to be used as default. Secondary TBD if not removed later. */
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary: var(--font-primary);
   --font-global: 'Lora' ,'Georgia' ,'Cambria' ,'Times New Roman','Times' ,serif;
 
   /* Colors */
@@ -71,23 +84,23 @@
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
 
-  /* Solid Backgrounds */
+  /* Backgrounds */
   /* Base */
-  --background-solid-base-light-xxx: var(--color-base-light-xxx);
-  --background-solid-base-dark-x: var(--color-base-dark-x);
-  --background-solid-base-dark-xxx: var(--color-base-dark-xxx);
+  --background-base-light-xxx: var(--color-base-light-xxx);
+  --background-base-dark-x: var(--color-base-dark-x);
+  --background-base-dark-xxx: var(--color-base-dark-xxx);
   /* Accent */
-  --background-solid-accent-warm-light-xxxx: var(--color-accent-warm-light-xxxx);
-  --background-solid-accent-warm-dark-x: var(--color-accent-warm-dark-x);
-  --background-solid-red: var(--color-red);
-  --background-solid-brown: var(--color-brown);
+  --background-accent-warm-light-xxxx: var(--color-accent-warm-light-xxxx);
+  --background-accent-warm-dark-x: var(--color-accent-warm-dark-x);
+  --background-red: var(--color-red);
+  --background-brown: var(--color-brown);
   /* Primary */
-  --background-solid-primary-light-xxx: var(--color-primary-light-xxx);
-  --background-solid-primary-light-x: var(--color-primary-light-x);
-  --background-solid-primary-dark-x: var(--color-primary-dark-x);
+  --background-primary-light-xxx: var(--color-primary-light-xxx);
+  --background-primary-light-x: var(--color-primary-light-x);
+  --background-primary-dark-x: var(--color-primary-dark-x);
   /* Secondary */
-  --background-solid-secondary: var(--color-secondary);
-  --background-solid-secondary-dark-xx: var(--color-secondary-dark-xx);
+  --background-secondary: var(--color-secondary);
+  --background-secondary-dark-xx: var(--color-secondary-dark-xx);
 
   /* Borders */
   /* Base - Map color background context since repeated color values */
