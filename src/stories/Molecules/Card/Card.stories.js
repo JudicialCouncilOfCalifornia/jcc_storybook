@@ -50,7 +50,7 @@ export default {
         "primary-light-x",
         "primary-dark-x",
         "secondary",
-        "secondary-dark-xx",
+        "secondary-dark-x",
       ],
     },
     clickable_card: {

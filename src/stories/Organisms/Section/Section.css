@@ -5,6 +5,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-block: var(--s3);
+}
+
+.section:first-child {
+  margin-block-start: var(--s3);
+}
+
+.section .section {
+  margin-block: 0;
 }
 
 .section > * {
@@ -33,7 +42,7 @@
 }
 
 .section__content.box {
-  padding-block: var(--s3);
+  padding-block: 0;
 }
 
 .section > * > .center {
@@ -107,14 +116,18 @@
   word-break: break-word;
 }
 
-/* BEGIN Background colors with backwards compatibility */
-.section.bg-adjust .section__content {
+/* BEGIN Background colors  */
+.section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
+  [style*="--bg: var(--color-default);"]
+ ) {
   padding-block-start: var(--s5);
   padding-block-end: var(--s6);
 }
 
 /* Reverse element colors for darker backgrounds */
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -123,6 +136,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__header *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -131,6 +145,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -139,6 +154,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__button *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -147,6 +163,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .accordion *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -155,6 +172,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .action-list > *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -163,6 +181,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .body *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -171,6 +190,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .steps *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -179,6 +199,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .teaser-list *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -187,6 +208,7 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__main .view-results *,
 .section.bg-adjust .section__content:not(
+  [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
   [style*="--bg: var(--color-warm-dark-x);"],
@@ -222,6 +244,12 @@
   --accent-color: var(--button-fg);
   color: var(--accent-color);
 }
+
+.section.bg-adjust .section__button {
+  padding-block-start: var(--s0);
+}
+
+/* DEPRECATED */
 
 .section--color-primary-dark-xx {
   --bg: var(--color-primary-dark-x) !important;
