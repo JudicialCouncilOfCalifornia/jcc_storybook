@@ -448,9 +448,9 @@ a.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--backgroun
   background: var(--background-secondary);
 }
 
-.card.card--default.card--background-secondary-dark-xx,
-.card.card--striped.card--background-secondary-dark-xx {
-  background: var(--background-secondary-dark-xx);
+.card.card--default.card--background-secondary-dark-x,
+.card.card--striped.card--background-secondary-dark-x {
+  background: var(--background-secondary-dark-x);
 }
 
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading > *,

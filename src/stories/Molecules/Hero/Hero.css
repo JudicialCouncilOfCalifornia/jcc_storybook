@@ -188,7 +188,7 @@
 }
 
 .hero--mega .header-search__form .header-search__icon {
-  --accent-color: var(--color-accent-warm-dark-x);;
+  --accent-color: var(--color-accent-warm-dark-x);
   height: var(--s4);
   width: var(--s4);
   right: var(--s-6);

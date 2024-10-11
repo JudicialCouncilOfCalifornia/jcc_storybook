@@ -100,7 +100,7 @@
   --background-primary-dark-x: var(--color-primary-dark-x);
   /* Secondary */
   --background-secondary: var(--color-secondary);
-  --background-secondary-dark-xx: var(--color-secondary-dark-xx);
+  --background-secondary-dark-x: var(--color-secondary-dark-x);
 
   /* Borders */
   /* Base - Map color background context since repeated color values */
@@ -118,7 +118,7 @@
   --border-primary-dark-x: var(--color-primary-light-x);
   /* Secondary */
   --border-secondary: var(--color-secondary-dark-x);
-  --border-secondary-dark-xx: var(--color-secondary-dark-x);
+  --border-secondary-dark-x: var(--color-secondary-dark-xx);
 
   /* DEPRECATED BACKGROUNDS - DO NOT USE */
   --background-striped-primary-dark-xx: var(--color-primary-dark-x);

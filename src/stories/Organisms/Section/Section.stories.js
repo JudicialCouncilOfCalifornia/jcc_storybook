@@ -45,7 +45,7 @@ export default {
         "primary-light-x",
         "primary-dark-x",
         "secondary",
-        "secondary-dark-xx",
+        "secondary-dark-x",
       ],
     },
     sub_component_layout: {
