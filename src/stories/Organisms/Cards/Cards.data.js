@@ -39,7 +39,11 @@ export default {
     },
     heading: "Heading Example",
     text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
-    button_data: false,
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
     sub_component_data: [
       Card({
         has_section_heading: true,
@@ -51,6 +55,7 @@ export default {
       }),
     ],
     section_classes: ["cards"],
+
   },
   media_left: {
     first_component: false,
