@@ -12,11 +12,13 @@ docReady(function () {
   'use strict';
 
   class Tabs {
+
     constructor(groupNode) {
       this.tablistNode = groupNode;
       this.tabs = [];
       this.firstTab = null;
       this.lastTab = null;
+      this.preselected = null;
       this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
       this.tabpanels = [];
 
@@ -30,25 +32,33 @@ docReady(function () {
         tab.addEventListener('keydown', this.onKeydown.bind(this));
         tab.addEventListener('click', this.onClick.bind(this));
 
-        if (!this.firstTab) {
+        if (tab_open_on_load && !this.preselected && tab.id === tab_open_on_load) {
+          this.preselected = tab;
+        }
+
+        if (!tab_open_on_load && !this.firstTab) {
           this.firstTab = tab;
         }
         this.lastTab = tab;
       });
 
-      this.setSelectedTab(this.firstTab);
+      let selectedTab = !this.preselected ? this.firstTab : this.preselected;
+      this.setSelectedTab(selectedTab);
     }
 
     setSelectedTab(currentTab) {
       this.tabs.forEach((tab, idx) => {
+
         let tabpanelID = tab.id.replace('tab', 'tabpanel');
         let tabpanel = document.getElementById(tabpanelID);
+        
         if (currentTab === tab) {
           tab.setAttribute('aria-selected', 'true');
           tab.classList.add('active');
           tab.removeAttribute('tabindex');
           tabpanel.classList.remove('is-hidden');
-        } else {
+        } 
+        else {
           tab.setAttribute('aria-selected', 'false');
           tab.classList.remove('active');
           tab.tabIndex = -1;
@@ -123,31 +133,13 @@ docReady(function () {
     }
   }
 
-  // Determine if tabs should convert to "accordion" layout on resize.
-  const resizeObserver = new ResizeObserver(entries => {
-    entries.forEach(entry => {
-      toggleAccordionDisplay(entry.target)
-    });
-  });
-
-  // Initialize tablist
-  const tablists = document.querySelectorAll('.tabs [role=tablist]');
-
-  tablists.forEach(tablist => {
-    if (!tablist.classList.contains('js-tabs__tablist')) {
-      tablist.classList.add('js-tabs__tablist');
-      new Tabs(tablist);
-
-      resizeObserver.observe(tablist);
-    }
-  });
-
   // Toggle accordion class if the tabs have insufficient real estate.
   function toggleAccordionDisplay(tablist) {
     let container = tablist.parentElement;
     let tabs = Array.from(tablist.querySelectorAll('button'));
     let tabDetails = Array.from(container.querySelectorAll('details'));
     let itemsTotalWidth = 0;
+
     for (let i = 0; i < tabs.length; i++) {
       itemsTotalWidth += parseInt(tabs[i].offsetWidth, 10);
     }
@@ -167,4 +159,26 @@ docReady(function () {
       });
     }
   }
+
+  // Determine if tabs should convert to "accordion" layout on resize.
+  const resizeObserver = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+      toggleAccordionDisplay(entry.target)
+    });
+  });
+  
+  // Initialize tablist
+  const tablists = document.querySelectorAll('.tabs [role=tablist]');
+
+  const tab_wrapper = document.querySelector(".tabs");
+  let tab_open_on_load = tab_wrapper.dataset.openOnLoad ? tab_wrapper.dataset.openOnLoad : '';
+  tab_open_on_load = window.location.hash ? window.location.hash : tab_open_on_load;
+
+  tablists.forEach(tablist => {
+    if (!tablist.classList.contains('js-tabs__tablist')) {
+      tablist.classList.add('js-tabs__tablist');
+      new Tabs(tablist, tab_open_on_load);
+      resizeObserver.observe(tablist);
+    }
+  });
 });
