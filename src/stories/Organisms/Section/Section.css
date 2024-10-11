@@ -244,64 +244,6 @@
 }
 /* END */
 
-/* Preview swatch for editor */
-.section.swatch {
-  border-radius: var(--corner-radius);
-}
-
-/* Base preview for editor */
-.section.swatch--color-base-light-xxx {
-  background: var(--background-base-light-xxx);
-}
-
-.section.swatch--color-base-dark-x {
-  background: var(--background-base-dark-x);
-}
-
-.section.swatch--color-base-dark-xxx {
-  background: var(--background-base-dark-xxx);
-}
-
-/* Accent preview for editor */
-.section.swatch--color-accent-warm-light-xxxx {
-  background: var(--background-accent-warm-light-xxxx);
-}
-
-.section.swatch--color-accent-warm-dark-x {
-  background: var(--background-accent-warm-dark-x);
-}
-
-.section.swatch--color-red {
-  background: var(--background-red);
-}
-
-.section.swatch--color-brown {
-  background: var(--background-brown);
-}
-
-/* Primary preview for editor */
-.section.swatch--color-primary-light-xxx {
-  background: var(--background-primary-light-xxx);
-}
-
-.section.swatch--color-primary-light-x {
-  background: var(--background-primary-light-x);
-}
-
-.section.swatch--color-primary-dark-x {
-  background: var(--background-primary-dark-x);
-}
-
-/* Secondary preview for editor */
-.section.swatch--color-secondary {
-  background: var(--background-secondary);
-}
-
-.section.swatch--color-secondary-dark-xx {
-  background: var(--background-secondary-dark-xx);
-}
-/* END */
-
 /* Variants */
 .section--with-bg-image .section__content {
   position: relative;
