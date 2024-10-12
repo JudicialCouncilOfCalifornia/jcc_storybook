@@ -452,11 +452,11 @@ a.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--backgroun
   background: var(--background-secondary-dark-x);
 }
 
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading > *,
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text > * {
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading *,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text * {
   --color: var(--color-white);
   --heading-color: var(--color);
-  color: var(--color);
+  color: var(--color) !important;
 }
 
 .card--striped.card--background-base-light-xxx,
@@ -485,8 +485,8 @@ a.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--backgroun
   color: var(--color);
 }
 
-
 /* DEPRECATED BACKGROUND COLORS */
+
 .card.card--striped.card--background-striped-base-dark-x,
 .card.card--striped-aligned.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
@@ -564,7 +564,7 @@ a.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--backgroun
 
 .card.card--striped.card--background-secondary-dark-xx,
 .card.card--striped-aligned.card--background-secondary-dark-xx {
-  background: var(--background-secondary-dark-xx);
+  background: var(--background-secondary-dark-x);
 }
 
 .card.card--striped.card--background-secondary,
