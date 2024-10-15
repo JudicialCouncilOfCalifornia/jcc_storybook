@@ -42,8 +42,9 @@
   border: 2px solid var(--color-accent-warm-dark-x);  
 }
 
-.button.button--text:active::before,
-.button.button--text:focus::before {
+.button.button--text:hover::before,
+.button.button--text:focus::before, 
+.button.button--text:active::before{
   content: "";
   position: absolute;
   bottom: 0;
@@ -161,13 +162,14 @@
   border: 0;
   background: transparent;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .button.button--text:hover,
-.button.button--text:focus {
-  color: var(--color-red);
-  outline: none;
-  text-decoration: underline;
+.button.button--text:focus
+ {
+  color: var(--color-red); 
+  outline: none;  
 }
 
 .button.button--text:active {

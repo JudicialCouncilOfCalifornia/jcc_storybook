@@ -53,6 +53,7 @@
   color: var(--color-primary);
   font-size: 18px;
   font-weight: 700;  
-  line-height: var(--s6);
+  line-height: var(--s5);
   margin: 0;
+  list-style: none;
 }
