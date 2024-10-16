@@ -101,17 +101,16 @@ export default {
     ],
   },
   with_menu: {
-    variant: "none",
+    variant: "ul",
     heading: "Popular Links",
-    links: true,
+    withmenu: true,
     items:[
       Button({
         label: "Text Button1",
             href: "#",
             variant: "text",
             aria_label: "More descriptive label for screen readers",
-            color: '#005EA2',
-            /*color: 'red',*/
+            color: '#005EA2',           
       }),
       Button({
         label: "This is an example of really long popular link This is an example of really long popular linkThis is an example of really long popular link",
