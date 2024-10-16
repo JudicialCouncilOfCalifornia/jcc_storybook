@@ -152,7 +152,7 @@
 
   /* Contextual variable: can be overridden at the component level to affect accent elements within. */
   --bg: transparent;
-  --heading-color: var(--color-primary);
+  --heading-color: var(--color-black);
   --accent-color: var(--color-accent-warm-dark-x);
   --color: var(--color-black);
   --button-fg: var(--accent-color);
@@ -161,8 +161,10 @@
   --border-thick: 5px;
   --border-color-gray: var(--color-base);
   --gap: var(--s1);
-  --anim: var(--anim-speed) ease-out var(--anim-speed);
+  --anim: var(--anim-speed) ease var(--anim-speed);
   --anim-speed: 0.2s;
+  --anim-slow: var(--anim-speed-slow) ease var(--anim-speed-slow);
+  --anim-speed-slow: 200ms;
   --sidebarnav-width: 30ch;
   
   /* Icons */

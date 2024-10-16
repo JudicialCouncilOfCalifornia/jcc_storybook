@@ -9,7 +9,7 @@
 
 {% set tag = clickable_card ? 'a' : 'div' %}
 
-{% if button_data is not empty and button_data[0] is empty and not clickable_card %}
+{% if button_data is not empty and button_data[0] is empty %}
   {% set button_data = [button_data] %}
 {% endif %}
 {% set tag_href = button_data[0] ? button_data[0].href : '' %}
@@ -71,7 +71,9 @@
             {% if icon_data and variant == 'card--striped-aligned' %}
               {% include "@atoms/Icon/Icon.twig" with icon_data %}
             {% endif %}
-            <{{h}} class="card__heading_tag">{{ heading }}</{{h}}>
+            <{{h}} class="card__heading_tag">
+              <span>{{ heading }}</span>
+            </{{h}}>
           </div>
         {% endif %}
         {% if text is not empty or (button_data is not empty and not clickable_card) %}

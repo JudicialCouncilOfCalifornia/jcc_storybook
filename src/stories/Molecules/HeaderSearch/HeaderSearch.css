@@ -6,7 +6,6 @@
   --icon-color: var(--color-white);
   --icon-background: var(--accent-color);
   --icon-margin: 6px;
-  --animation-timing: 200ms ease-in-out;
   --icon-height: 2.15rem;
 }
 
@@ -185,17 +184,6 @@ button.header-search__icon .icon-wrapper {
   margin: auto;
 }
 
-:root {
-  --block-offset: 6px;
-  --inline-offset: 4px;
-  --thickness: 3px;
-  --icon-color: var(--color-white);
-  --icon-background: var(--accent-color);
-  --icon-margin: 6px;
-  --animation-timing: 200ms ease-in-out;
-  --icon-height: 2.15rem;
-}
-
 .search-toggle {
   --icon-size: var(--s3);
   flex-direction: row-reverse;
@@ -234,7 +222,7 @@ button.header-search__icon .icon-wrapper {
   border: none;
   position: relative;
   z-index: 1;
-  transition: all var(--animation-timing);
+  transition: all var(--anim-slow);
 }
 
 .search-toggle input:focus, 
@@ -255,21 +243,21 @@ button.header-search__icon .icon-wrapper {
 
 .search-toggle input:checked {
   filter: grayscale(100%);
-  transition: all var(--animation-timing);
+  transition: all var(--anim-slow);
 }
 
 /* Toggle the search and close icons */
 .search-toggle input[type="checkbox"]:checked ~ .icon-wrapper--fa-search,
 .search-toggle input[type="checkbox"] ~ .icon-wrapper--fa-close {
   opacity: 0;
-  transition: all var(--animation-timing);
+  transition: all var(--anim-slow);
   pointer-events: all;
 }
 
 .search-toggle input[type="checkbox"] ~ .icon-wrapper--fa-search,
 .search-toggle input[type="checkbox"]:checked ~ .icon-wrapper--fa-close {
   opacity: 1;
-  transition: all var(--animation-timing);
+  transition: all var(--anim-slow);
   pointer-events: all;
 }
 
