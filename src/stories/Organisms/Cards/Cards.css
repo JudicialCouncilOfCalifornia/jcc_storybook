@@ -13,10 +13,6 @@
     grid-gap: var(--gap, var(--s0));
   }
 
-  .cards .section__content .grid.multiple > * {
-    box-sizing: border-box;
-  }
-
   @supports (width: min(var(--grid-min-width, 20ch), 100%)) {
     .cards .section__content .grid.multiple {
       grid-template-columns: repeat(
