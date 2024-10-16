@@ -10,7 +10,7 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
-.section:last-child {
+.section:last-child:not(.bg-adjust) {
   margin-block-end: var(--s3);
 }
 
