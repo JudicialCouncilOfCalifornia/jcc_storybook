@@ -51,6 +51,10 @@
   order: 1;
 }
 
+.body .body__content .button {
+  margin-block-end: var(--s-3);
+}
+
 .body.mobile .body__aside {
   order: 2;
   margin-block-start: unset;
