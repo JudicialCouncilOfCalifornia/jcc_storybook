@@ -31,10 +31,10 @@
 
 .card--striped:nth-of-type(6n + 5),
 .card--striped-aligned:nth-of-type(6n + 5) {
-  background: var(--background-secondary-dark-xx);
+  background: var(--background-secondary-dark-x);
 }
 
 .card--striped:nth-of-type(6n + 6),
 .card--striped-aligned:nth-of-type(6n + 6) {
-  background: var(--background-base-dark-x);
+  background: var(--background-red);
 }

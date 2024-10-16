@@ -6,6 +6,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-block-start: var(--s3);
+  background-color: var(--bg);
+  border-block-end: var(--border) solid var(--s0);
 }
 
 .section:last-child {
@@ -26,6 +28,10 @@
   margin-block-start: var(--gap);
 }
 
+.section__header h2 {
+  --heading-color: var(--color-black);
+}
+
 .section__header.center {
   text-align: center;
   text-wrap: normal;
@@ -37,8 +43,6 @@
   /* Brings content above tint due to grid. */
   justify-content: center;
   z-index: 1;
-  background-color: var(--bg);
-  border-block-end: var(--border) solid var(--s0);
 }
 
 .section__content.box {
@@ -117,16 +121,16 @@
 }
 
 /* BEGIN Background colors  */
-.section.bg-adjust .section__content:not(
+.section--with-bg-image.bg-adjust,
+.section.bg-adjust:not(
   [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"]
  ) {
   padding-block-start: var(--s5);
-  padding-block-end: var(--s6);
 }
 
 /* Reverse element colors for darker backgrounds */
-.section.bg-adjust .section__content:not(
+.section.bg-adjust:not(
   [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
   [style*="--bg: var(--color-white);"],
@@ -134,88 +138,7 @@
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__header *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__button *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .accordion *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .action-list > *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .body *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .steps *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .teaser-list *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .view-results *,
-.section.bg-adjust .section__content:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"],
-  [style*="--bg: var(--color-white);"],
-  [style*="--bg: var(--color-warm-dark-x);"],
-  [style*="--bg: var(--color-base-light-xxx);"],
-  [style*="--bg: var(--color-primary-light-xxx);"],
-  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .card:not(.bg-adjust) .card__main * {
+) * {
   --color: var(--color-white);
   --color-base: var(--color);
   --heading-color: var(--color);
@@ -246,7 +169,7 @@
 }
 
 .section.bg-adjust .section__button {
-  padding-block-start: var(--s0);
+  margin-block-start: 0;
 }
 
 /* DEPRECATED */
@@ -306,8 +229,7 @@
 }
 
 .section--with-bg-image,
-.section--with-bg-image .section,
-.section--with-bg-image h2 {
+.section--with-bg-image .section__header > * {
   --color: var(--color-white);
   --heading-color: var(--color);
   --accent-color: var(--color);
