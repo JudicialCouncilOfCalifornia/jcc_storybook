@@ -10,7 +10,7 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
-.section:last-child {
+.section:last-child:not(.bg-adjust) {
   margin-block-end: var(--s3);
 }
 
@@ -43,10 +43,6 @@
   /* Brings content above tint due to grid. */
   justify-content: center;
   z-index: 1;
-}
-
-.section__content.box {
-  padding-block: 0;
 }
 
 .section > * > .center {
@@ -126,6 +122,7 @@
   [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"]
  ) {
+  margin-block-start: 0;
   padding-block-start: var(--s5);
 }
 

@@ -79,9 +79,23 @@
   z-index: 1;
 }
 
+.hero__navigation {
+  display: grid;
+  grid-gap: var(--gap, var(--s0));
+}
+
+@supports (width: min(var(--grid-min-width, 20ch), 100%)) {
+  .hero__navigation {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
+    );
+  }
+}
+
 .hero__navigation.cards {
   --gap: none;
-  --grid-min-width: 50ch;
+  --grid-min-width: 36ch;
   grid-area: unset;
 }
 
