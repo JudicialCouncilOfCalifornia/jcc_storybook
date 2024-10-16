@@ -6,6 +6,27 @@
   padding-inline: 0;
 }
 
+/* Enforce grid column width for multiple cards on larger devices. */
+@media (min-width: 1024px) {
+  .cards .section__content .grid.multiple {
+    display: grid;
+    grid-gap: var(--gap, var(--s0));
+  }
+
+  .cards .section__content .grid.multiple > * {
+    box-sizing: border-box;
+  }
+
+  @supports (width: min(var(--grid-min-width, 20ch), 100%)) {
+    .cards .section__content .grid.multiple {
+      grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
+    );
+    }
+  }
+}
+
 /* Striped Cards */
 
 /* Striped Card Variants */
