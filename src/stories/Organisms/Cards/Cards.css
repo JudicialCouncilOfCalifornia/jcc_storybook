@@ -6,6 +6,10 @@
   padding-inline: 0;
 }
 
+.cards .section__button {
+  padding-inline-start: 0;
+}
+
 /* Enforce grid column width for multiple cards on larger devices. */
 @media (min-width: 1024px) {
   .cards .section__content .grid.multiple {

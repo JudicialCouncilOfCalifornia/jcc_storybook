@@ -80,7 +80,7 @@
 .hangover .card.card--bordered-center {
   --border-color: var(--bg);
   border: var(--s-2) solid var(--border-color, var(--color-accent-warm-light-xxxx));
-  background: var(--bg);
+  background: var(--bg, var(--color-accent-warm-light-xxxx));
 }
 
 .hangover .card.card--bordered-center .card__inner {

@@ -45,10 +45,6 @@
   z-index: 1;
 }
 
-.section__content.box {
-  padding-block: 0;
-}
-
 .section > * > .center {
   --align-items: center;
   --measere: var(--max-width);
