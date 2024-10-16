@@ -131,11 +131,29 @@
   padding: var(--s2);
 }
 
-a.card--default {
+a.card--default.card--clickable {
   text-decoration: none;
 }
 
-a.card--default .card__heading_tag::after {
+a.card--default.card--clickable .card__heading_tag {
+  --heading-color: var(--color-primary);
+}
+
+a.card--default.card--clickable .card__heading_tag span {
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-color: transparent;
+  transition: border-color var(--anim-slow);
+}
+
+a.card--default.card--clickable:hover .card__heading_tag span {
+  border-color: var(--heading-color);
+  transition: all var(--anim-speed);
+}
+
+a.card--default.card--clickable .card__heading_tag::after {
+  position: relative;
+  top: 0.08rem;
   margin-inline-start: var(--s-2);
   content: "";
   align-self: flex-end;
@@ -150,12 +168,13 @@ a.card--default .card__heading_tag::after {
   mask-size: 100%;
 }
 
-a.card--default:hover .card__heading_tag {
-  text-decoration: underline;
+a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
+  background-color: var(--color-white);
 }
 
-a.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
-  background-color: var(--color-white);
+/* Suppress Drupal external link indicator */
+a .ext {
+  display: none;
 }
 
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .button {
