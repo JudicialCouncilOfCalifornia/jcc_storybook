@@ -17,14 +17,15 @@
 {% set item_classes = [
   'list__item',
   wider_span ? 'wide_span' : '',
+  withmenu ? 'with_menu' : ''
 ] %}
 
 <div class="{{ classes|join(' ') }}">
   {% if heading %}
-    <{{h}} class="list-heading {% if links %} popular-links-heading {% endif %}">{{ heading }}</{{h}}> 
+    <{{h}} class="list-heading {% if withmenu %} popular-links-heading {% endif %}">{{ heading }}</{{h}}> 
   {% endif %}
-  <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
-  {% if links %}
+  <{{tag}} class="{{ container_classes|join(' ') }} {% if withmenu %} link-container {% endif %}" role="list">  
+   {% if withmenu %}
     {% for item in items %}   
     <li class="{{ item_classes|merge(['link-item'])|join(' ') }}">
       {{item}}
@@ -39,6 +40,6 @@
         {{ item.text }}
       </li>
     {% endfor %}
-    {% endif %}
+    {% endif %} 
   </{{tag}}>
 </div>

@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 
-.list--none .list__container {
+.list--none .list__container, .link-container {
   list-style: none;
   padding-inline: 0;  
 }
@@ -45,11 +45,11 @@
   margin-block-end: var(--s-6);  
 }
 
-.link-item a {
+.list__item.with_menu a {
   font-family: var(--font-secondary);  
 }
- 
-.link-item {
+
+.list__item.with_menu {
   color: var(--color-primary);
   font-size: 18px;
   font-weight: 700;  
