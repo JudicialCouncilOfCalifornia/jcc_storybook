@@ -5,7 +5,7 @@ import { Default as ActionListDefault } from "../../Molecules/ActionList/ActionL
 import Body from "../../Molecules/Body/Body.twig";
 import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
 import Cards from "../../Organisms/Cards/Cards.twig";
-import { Striped as CardsStriped } from "../../Organisms/Cards/Cards.stories";
+import { Default as CardsDefault } from "../../Organisms/Cards/Cards.stories";
 import ProfileCards from "../../Organisms/ProfileCards/ProfileCards.twig";
 import { Default as ProfileCardsDefault } from "../../Organisms/ProfileCards/ProfileCards.stories";
 import Steps from "../../Organisms/Steps/Steps.twig";
@@ -119,10 +119,7 @@ export default {
         ...BodyDefault.args
       }),
       Cards({
-        ...CardsStriped.args,
-        brow_data: null,
-        text: null,
-        button_data: null,
+        ...CardsDefault.args,
       }),
       ProfileCards({
         ...ProfileCardsDefault.args

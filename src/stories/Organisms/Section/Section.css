@@ -5,7 +5,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-block-start: var(--s3);
   background-color: var(--bg);
   border-block-end: var(--border) solid var(--s0);
 }
@@ -54,9 +53,9 @@
   width: 100%;
 }
 
-.section .section__main.multiple:not(.stack) .card__inner {
-  display: block;
-}
+/*.section .section__main.multiple:not(.stack) .card__inner {*/
+/*  display: block;*/
+/*}*/
 
 .section .section__header {
   --max-width: 103ch;
@@ -135,7 +134,25 @@
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) * {
+) .section__header *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-none);"],
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main *,
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-none);"],
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__button *  {
   --color: var(--color-white);
   --color-base: var(--color);
   --heading-color: var(--color);
@@ -143,6 +160,28 @@
   --button-border: var(--color);
   color: var(--color);
 }
+
+/* Adjust default card with no background */
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-none);"],
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .cards .card:not(.bg-adjust) .card__main * {
+  --color: var(--color-white) !important;
+}
+
+/*.card--default .card__main * {*/
+/*  --color: var(--color-black) !important;*/
+/*}*/
+
+/*.card--default .card__buttons .button {*/
+/*  --color: var(--color-accent-warm-dark-x) !important;*/
+/*  --accent-color: var(--accent-color);*/
+/*}*/
 
 /* Adjust accordion hover if darker background */
 .section.bg-adjust:not(
@@ -167,6 +206,10 @@
 
 .section.bg-adjust .section__button {
   margin-block-start: 0;
+}
+
+.section.bg-adjust .section__button .button:hover {
+  color: var(--color-white) !important;
 }
 
 /* DEPRECATED */
@@ -257,11 +300,6 @@
 
 .section > .section__content.box .section__main > .section__content.box {
   padding-inline: 0;
-}
-
-/* Add missing text block spacing for default cards without backgrounds */
-.section__main .card--default:not(.bg-adjust) .card__main {
-  padding-block: var(--gap);
 }
 
 /* Add missing bottom spacing when centered within section */
