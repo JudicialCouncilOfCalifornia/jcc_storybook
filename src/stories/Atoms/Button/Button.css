@@ -142,7 +142,7 @@
 
 .button.button--secondary:hover {
   background-color: var(--color-red);
-  color: var(--color-white);
+  color: var(--color-white) !important;
   border: 2px solid var(--color-red);
 }
 
