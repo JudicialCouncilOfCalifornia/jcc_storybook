@@ -82,6 +82,10 @@ p + a {
   margin-top: var(--s0);
 }
 
+p + :where(ul, ol, blockquote) {
+  margin-block-start: var(--s-3);
+}
+
 ul,
 ol {
   padding-inline: var(--s2);
