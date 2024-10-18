@@ -5,8 +5,17 @@
   --form-button: var(--bg);
 }
 
-.card--default .card__main * {
+.card--default * {
   --color: var(--color-black) !important;
+}
+
+.card--default a {
+  --color: var(--color-primary) !important;
+  color: var(--color);
+}
+
+.card--default a:visited {
+  --color: var(--color-link-visited) !important;
 }
 
 .card--default .card__buttons .button {
@@ -146,8 +155,12 @@ a.card--default.card--clickable {
   text-decoration: none;
 }
 
-a.card--default.card--clickable .card__heading_tag {
-  --heading-color: var(--color-primary);
+a.card--default.card--clickable .card__heading *,
+a.card--default.card--clickable.card--background-base-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-primary-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__heading * {
+  --heading-color: var(--color-primary) !important;
+  color: var(--heading-color);
 }
 
 a.card--default.card--clickable .card__heading_tag span {
@@ -192,8 +205,7 @@ a .ext {
 .card.card--bordered,
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid
-    var(--border-color, var(--color-accent-warm-light-xxxx));
+  border: var(--s-2) solid var(--border-color, var(--color-accent-warm-light-xxxx));
   background: var(var(--color-white));
   z-index: 1;
 }
@@ -482,6 +494,15 @@ a .ext {
   --heading-color: var(--color);
   --button-border: var(--color);
   color: var(--color);
+}
+
+a.card--default.bg-adjust.card--clickable:hover:not(
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading_tag span {
+  --color: var(--color-white);
+  border-color: var(--color);
 }
 
 a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {

@@ -9,12 +9,16 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
-.section:last-child:not(.bg-adjust) {
-  margin-block-end: var(--s3);
+.section__content.box {
+  padding-block-start: var(--s3);
 }
 
-.section .section:first-child {
-  margin-block-start: 0;
+.section .section .section__content.box {
+  padding-block: 0;
+}
+
+.section:last-child:not(.bg-adjust) {
+  margin-block-end: var(--s3);
 }
 
 .section > * {
@@ -208,7 +212,14 @@
   margin-block-start: 0;
 }
 
-.section.bg-adjust .section__button .button:hover {
+.section.bg-adjust:not(
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__button .button:hover {
   color: var(--color-white) !important;
 }
 

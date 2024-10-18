@@ -24,7 +24,7 @@
 
 .button:active {
   border: 2px solid var(--color-brown);
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
   background: var(--color-accent-warm-light-xxxx);
 }
 
@@ -33,7 +33,7 @@
 }
 
 .button:visited:hover {
-  color: var(--color-red);
+  color: var(--color-red) !important;
 }
 
 .button:focus {
