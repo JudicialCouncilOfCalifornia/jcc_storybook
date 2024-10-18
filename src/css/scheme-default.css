@@ -124,12 +124,12 @@
   --background-striped-primary-dark-xx: var(--color-primary-dark-x);
   --background-striped-primary-dark-x: var(--color-primary);
   --background-striped-primary: var(--color-primary-light-x);
-  --background-striped-secondary-dark-xx: var(--color-secondary);
-  --background-striped-secondary-dark-x: var(--color-secondary);
-  --background-striped-secondary: var(--color-secondary-light-x);
-  --background-striped-accent-warm-dark-x: var(--color-accent-warm);
-  --background-striped-accent-warm-dark-xx: var(--color-accent-warm-dark-x);
-  --background-striped-accent-warm-dark-xxx: var(--color-accent-warm-dark-xx);
+  --background-striped-secondary-dark-xx: var(--color-secondary-dark-x);
+  --background-striped-secondary-dark-x: var(--color-secondary-dark-x);
+  --background-striped-secondary: var(--color-secondary);
+  --background-striped-accent-warm-dark-x: var(--color-accent-warm-dark-x);
+  --background-striped-accent-warm-dark-xx: var(--color-red);
+  --background-striped-accent-warm-dark-xxx: var(--color-brown);
   --background-striped-primary-light-xx: var(--color-primary-light-xx);
   --background-striped-base-dark-x: var(--color-base-dark-x);
   --background-striped-base-light-xx: var(--color-base-light-xx);
@@ -137,8 +137,8 @@
   --background-solid-primary: var(--color-primary);
   --background-solid-primary-light-xx: var(--color-primary-light-xx);
   --background-solid-secondary-dark-x: var(--color-secondary-dark-x);
-  --background-solid-accent-warm-dark-xx: var(--color-accent-warm-dark-xx);
-  --background-solid-accent-warm-dark-xxx: var(--color-accent-warm-dark-xxx);
+  --background-solid-accent-warm-dark-xx: var(--color-red);
+  --background-solid-accent-warm-dark-xxx: var(--color-brown);
   --background-solid-base-light-x: var(--color-base-light-x);
   --background-solid-base-light-xx: var(--color-base-light-xx);
 

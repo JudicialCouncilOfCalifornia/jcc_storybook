@@ -29,6 +29,7 @@ a.profile-card__link,
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  color: var(--color-black) !important;
 }
 
 /* Profile headings must always appear as H4 visually. */
@@ -46,8 +47,8 @@ a.profile-card__link,
 }
 
 .profile-card__content {
+  --color: var(--color-accent-warm-dark-x) !important;
   font-size: calc(var(--s-1) + 1px);
-  color: var(--accent-color);
   margin-top: var(--s-2);
 }
 
@@ -59,6 +60,10 @@ a.profile-card__link {
 a.profile-card__link:hover {
   background-color: var(--color-secondary);
   border-radius: var(--corner-radius);
+}
+
+a.profile-card__link:hover .profile-card__inner *  {
+  color: var(--color-white) !important;
 }
 
 a.profile-card__link:hover,
