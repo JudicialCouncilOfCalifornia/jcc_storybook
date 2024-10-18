@@ -14,7 +14,7 @@
   color: var(--color);
 }
 
-.card--default * a:visited {
+.card--default .card__text *:not(.button) a:visited {
   color: var(--color-link-visited) !important;
 }
 
@@ -488,11 +488,12 @@ a.card--clickable > .ext {
 
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading *,
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text *,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text a:visited,
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__buttons * {
   --color: var(--color-white) !important;
   --heading-color: var(--color);
   --button-border: var(--color);
-  color: var(--color);
+  color: var(--color) !important;
 }
 
 a.card--default.bg-adjust.card--clickable:hover:not(
