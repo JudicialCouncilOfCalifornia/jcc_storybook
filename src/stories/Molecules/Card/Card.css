@@ -9,13 +9,13 @@
   --color: var(--color-black) !important;
 }
 
-.card--default a {
+.card--default * a {
   --color: var(--color-primary) !important;
   color: var(--color);
 }
 
-.card--default a:visited {
-  --color: var(--color-link-visited) !important;
+.card--default * a:visited {
+  color: var(--color-link-visited);
 }
 
 .card--default .card__buttons .button {
@@ -99,7 +99,7 @@
 }
 
 .remote-video-colorbox-launch-modal{
- outline: none;
+  outline: none;
 }
 
 .remote-video-colorbox-launch-modal:focus img,
@@ -192,7 +192,7 @@ a.card--default.card--clickable .card__heading_tag::after {
 }
 
 /* Suppress Drupal external link indicator */
-a .ext {
+a.card--clickable > .ext {
   display: none;
 }
 
@@ -591,48 +591,48 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   background: var(--background-striped-accent-warm-dark-xxx);
 }
 
-.card.card--striped.card--background-base-dark-x,
-.card.card--striped-aligned.card--background-base-dark-x {
+.card.card--striped.card--background-solid-base-dark-x,
+.card.card--striped-aligned.card--background-solid-base-dark-x {
   background: var(--background-base-dark-x);
 }
 
-.card.card--striped.card--background-primary-dark-xx,
-.card.card--striped-aligned.card--background-primary-dark-xx {
+.card.card--striped.card--background-solid-primary-dark-xx,
+.card.card--striped-aligned.card--background-solid-primary-dark-xx {
   background: var(--background-solid-primary-dark-xx);
 }
 
-.card.card--striped.card--background-primary-dark-x,
-.card.card--striped-aligned.card--background-primary-dark-x {
+.card.card--striped.card--background-solid-primary-dark-x,
+.card.card--striped-aligned.card--background-solid-primary-dark-x {
   background: var(--background-primary-dark-x);
 }
 
-.card.card--striped.card--background-primary-light-xx,
-.card.card--striped-aligned.card--background-primary-light-xx {
+.card.card--striped.card--background-solid-primary-light-xx,
+.card.card--striped-aligned.card--background-solid-primary-light-xx {
   background: var(--background-solid-primary-light-xx);
 }
 
-.card.card--striped.card--background-secondary-dark-xx,
-.card.card--striped-aligned.card--background-secondary-dark-xx {
+.card.card--striped.card--background-solid-secondary-dark-xx,
+.card.card--striped-aligned.card--background-solid-secondary-dark-xx {
   background: var(--background-secondary-dark-x);
 }
 
-.card.card--striped.card--background-secondary,
-.card.card--striped-aligned.card--background-secondary {
+.card.card--striped.card--background-solid-secondary,
+.card.card--striped-aligned.card--background-solid-secondary {
   background: var(--background-secondary);
 }
 
-.card.card--striped.card--background-accent-warm-dark-x,
-.card.card--striped-aligned.card--background-accent-warm-dark-x {
-  background: var(--background-accent-warm-dark-x);
-}
-
-.card.card--striped.card--background-accent-warm-dark-xx,
-.card.card--striped-aligned.card--background-accent-warm-dark-xx {
+.card.card--striped.card--background-solid-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
   background: var(--background-solid-accent-warm-dark-xx);
 }
 
-.card.card--striped.card--background-accent-warm-dark-xxx,
-.card.card--striped-aligned.card--background-accent-warm-dark-xxx {
+.card.card--striped.card--background-solid-accent-warm-dark-xx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xx {
+  background: var(--background-solid-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-xxx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xxx {
   background: var(--background-solid-accent-warm-dark-xxx);
 }
 
@@ -650,9 +650,9 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   color: var(--color);
 }
 
-.card .button.button--primary::after, 
-.card .button.button--primary:focus::after, 
-.card .button.button--text::after, 
+.card .button.button--primary::after,
+.card .button.button--primary:focus::after,
+.card .button.button--text::after,
 .card .button.button--text:focus::after {
   color: currentColor;
 }
@@ -683,4 +683,3 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   color: var(--color-brown);
 }
 /* Button varaints END*/
-
