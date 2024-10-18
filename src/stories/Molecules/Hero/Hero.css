@@ -11,13 +11,24 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
-.hero[style*="--bg: var(--color-base-light-xxx);"],
-.hero[style*="--bg: var(--color-accent-warm-light-xxxx);"],
-.hero[style*="--bg: var(--color-primary-light-xxx);"] {
-  --color: var(--color-black);
-}
-
-.hero:not([style*="--bg: var(--color-base-light-xxx);"], [style*="--bg: var(--color-accent-warm-light-xxxx);"], [style*="--bg: var(--color-primary-light-xxx);"]) .button {
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__heading *,
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body p,
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body .button {
   color: var(--color-white);
 }
 

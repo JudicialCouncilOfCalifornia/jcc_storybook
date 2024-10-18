@@ -18,13 +18,13 @@
 
 .button:hover {
   background-color: var(--color-accent-warm-light-xxxx); 
-  color: var(--color-red);
+  color: var(--color-red) !important;
   border: 2px solid var(--color-red);
 }
 
 .button:active {
   border: 2px solid var(--color-brown);
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
   background: var(--color-accent-warm-light-xxxx);
 }
 
@@ -33,7 +33,7 @@
 }
 
 .button:visited:hover {
-  color: var(--color-red);
+  color: var(--color-red) !important;
 }
 
 .button:focus {
@@ -75,7 +75,8 @@
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after {
-  background-color: var(--color-red);
+  --hover-color: currentColor;
+  background-color: var(--hover-color, var(--color-red));
 }
 .button.button--primary:active::after,
 .button.button--text:active::after {
