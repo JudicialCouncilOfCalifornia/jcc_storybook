@@ -210,6 +210,10 @@ li.group-li + li.group-li > h2.list-label {
   --accent-color: var(--button-fg) !important;
 }
 
+.view-results .form-actions .button .inline-form__submit-circle {
+  --accent-color: var(--button-fg) !important;
+}
+
 .view-results__results.sidebar-row .stack.sidebar h2,
 .view-results__results.sidebar-row .stack.sidebar h3,
 .view-results__results.sidebar-row .stack.sidebar h4 {
@@ -278,10 +282,10 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0 !important;
 }
 
-/* facilities listing */
-.view-results.facilities_listing.block_1 {
+/* facilities, ITC listing */
+.view-results.facilities_listing.block_1, .view-results.past_proposals.block_1 {
   --sidebar-width: 46ch;
 }
-.view-results.facilities_listing.block_1 .view-results__results {
+.view-results.facilities_listing.block_1 .view-results__results, .view-results.past_proposals.block_1 .view-results__results {
   --gap: 0;
 }
