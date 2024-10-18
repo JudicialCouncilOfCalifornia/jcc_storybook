@@ -5,6 +5,24 @@
   --form-button: var(--bg);
 }
 
+.card--default * {
+  --color: var(--color-black) !important;
+}
+
+.card--default a {
+  --color: var(--color-primary) !important;
+  color: var(--color);
+}
+
+.card--default a:visited {
+  --color: var(--color-link-visited) !important;
+}
+
+.card--default .card__buttons .button {
+  --color: var(--color-accent-warm-dark-x) !important;
+  --accent-color: var(--accent-color);
+}
+
 .card--default.bg-adjust,
 .card.card--overlay,
 .card--striped,
@@ -109,6 +127,7 @@
 
 .card__text {
   flex: 1 1 80%;
+  color: var(--color-black);
 }
 
 .card__buttons {
@@ -135,8 +154,12 @@ a.card--default.card--clickable {
   text-decoration: none;
 }
 
-a.card--default.card--clickable .card__heading_tag {
-  --heading-color: var(--color-primary);
+a.card--default.card--clickable .card__heading *,
+a.card--default.card--clickable.card--background-base-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-primary-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__heading * {
+  --heading-color: var(--color-primary) !important;
+  color: var(--heading-color);
 }
 
 a.card--default.card--clickable .card__heading_tag span {
@@ -168,18 +191,9 @@ a.card--default.card--clickable .card__heading_tag::after {
   mask-size: 100%;
 }
 
-a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
-  background-color: var(--color-white);
-}
-
 /* Suppress Drupal external link indicator */
 a .ext {
   display: none;
-}
-
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .button {
-  --button-border: var(--color-white);
-  --button-fg: var(--color-white);
 }
 
 /* Card modifier class can be used on cards wrapper element or on the card. */
@@ -190,8 +204,7 @@ a .ext {
 .card.card--bordered,
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid
-    var(--border-color, var(--color-accent-warm-light-xxxx));
+  border: var(--s-2) solid var(--border-color, var(--color-accent-warm-light-xxxx));
   background: var(var(--color-white));
   z-index: 1;
 }
@@ -259,6 +272,7 @@ a .ext {
   background-color: var(--color-black);
   mix-blend-mode: multiply;
   position: relative;
+  height: 100%;
 }
 
 .card--overlay .card > * > *,
@@ -293,6 +307,7 @@ a .ext {
 
 .card--overlay .card .card__main,
 .card.card--overlay .card__main {
+  height: 100%;
   padding: var(--s4);
   z-index: 1;
 }
@@ -472,10 +487,25 @@ a .ext {
 }
 
 .card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading *,
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text * {
-  --color: var(--color-white);
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text *,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__buttons * {
+  --color: var(--color-white) !important;
   --heading-color: var(--color);
-  color: var(--color) !important;
+  --button-border: var(--color);
+  color: var(--color);
+}
+
+a.card--default.bg-adjust.card--clickable:hover:not(
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading_tag span {
+  --color: var(--color-white);
+  border-color: var(--color);
+}
+
+a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
+  background-color: var(--color-white);
 }
 
 .card--striped.card--background-base-light-xxx,
