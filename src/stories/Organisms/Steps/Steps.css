@@ -1,7 +1,5 @@
 .steps {
   --max-width: 102ch;
-  --color: var(--color-black);
-  --heading-color: var(--color-primary-dark-x);
 }
 
 .step__lead {
