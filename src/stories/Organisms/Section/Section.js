@@ -64,7 +64,7 @@ docReady(function () {
         if (subcomponents) {
           // Determine if section heading exists.
           let sectionHeading = section.querySelector(".section__content > .container > .section__header");
-          let sectionHeadingTagName = sectionHeading.querySelector('h1, h2') ? sectionHeading.querySelector('h1, h2').tagName : null;
+          let sectionHeadingTagName = sectionHeading !== null && sectionHeading.querySelector('h1, h2') ? sectionHeading.querySelector('h1, h2').tagName : null;
 
           // Adjust relevant subcomponent headings if H2 in use.
           if (sectionHeadingTagName && sectionHeadingTagName !== "H1") {
