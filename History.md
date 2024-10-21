@@ -1,4 +1,96 @@
 
+0.56.15 / 2024-10-21
+===================
+
+  * chore: Export libs.
+  * Merge pull request #309 from JudicialCouncilOfCalifornia/feature/COURTS-229--deep-linking-tabs--query-attribute-based
+  * [COURTS-229] -- Allow for deep linking in tabs.
+
+0.56.14 / 2024-10-18
+===================
+
+  * chore: Export libs.
+  * Merge pull request #304 from JudicialCouncilOfCalifornia/COURTS-267-align-filter
+  * [COURTS-267] -- Align ITC Filter.
+
+0.56.13 / 2024-10-10
+===================
+
+  * chore: Export libs.
+  * Merge pull request #290 from JudicialCouncilOfCalifornia/feature/COURTS-229--deep-linking-tabs--query-attribute-based
+  * [COURTS-229] -- Feature to allow for preset active tab in Tab component.
+  * Merge pull request #288 from JudicialCouncilOfCalifornia/fix/footer-focus-link-style-fix
+  * [fix] -- Footer nav accessibility fix: focus link style fix for items in the FlatNav component in the Footer
+  * Merge pull request #286 from JudicialCouncilOfCalifornia/datavisualizationembed-feedback
+  * [datavisualization-feedback] -- css
+
+0.56.12 / 2024-10-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #285 from JudicialCouncilOfCalifornia/bugfix/COURTS-224--select-tag-arrow-fix
+  * [COURTS-224] -- adjust select tag fixes for Drupal integration.
+
+0.56.11 / 2024-10-07
+===================
+
+  * chore: Export libs.
+  * Merge pull request #284 from JudicialCouncilOfCalifornia/datavisaulization-ratio
+  * [datavisualization-ratio] -- implemented feedback
+
+0.56.10 / 2024-10-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #283 from JudicialCouncilOfCalifornia/bugfix/COURTS-224--improved-custom-select-tag-arrow
+  * [COURTS-224] -- svg select tag menu arrow.
+
+0.56.9 / 2024-10-03
+===================
+
+  * chore: Export libs.
+  * Merge pull request #282 from JudicialCouncilOfCalifornia/fix/COURTS-252--footer-lower-nav-style-updates
+  * [COURTS-252] -- Style fix for Footer lower nav non-links
+  * Merge pull request #281 from JudicialCouncilOfCalifornia/feature/COURTS-224--items-by-number-improvements
+  * [COURTS-224] -- improve view results items sum & items per page.
+  * Merge pull request #280 from JudicialCouncilOfCalifornia/data-visualization-embed-feedback
+  * Merge pull request #279 from JudicialCouncilOfCalifornia/webform-input-fix
+  * [datavisualization-embed-feedback] -- implemented feedback
+  * [webform-input-fix] -- Added focus for telephone
+  * [webform-input-fix] -- Target only input fields
+
+
+0.56.8 / 2024-10-02
+===================
+
+  * chore: Export libs.
+  * Merge pull request #278 from JudicialCouncilOfCalifornia/datavisualization-edits
+  * Merge pull request #277 from JudicialCouncilOfCalifornia/COURTS-132-webform-telephone-label-fix
+  * [datavisualization-edits] -- css updaet
+  * [COURTS-132] -- Fix for telephone label in webform
+  * Merge pull request #275 from JudicialCouncilOfCalifornia/COURTS-132-itc-webform-changes
+  * [COURTS-132] -- Mandatory fields in webform.
+
+0.56.7 / 2024-09-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #270 from JudicialCouncilOfCalifornia/fix/FIX--flatnav-pager-and-viewresult-style-updates
+  * [FIX] -- Style fixes for FlatNav, Pager, and ViewsResult components
+  * Merge pull request #268 from JudicialCouncilOfCalifornia/items-per-page-update
+  * [items_per_page_fix] -- template and css.
+
+0.56.6 / 2024-09-26
+===================
+
+  * chore: Export libs.
+  * Merge pull request #266 from JudicialCouncilOfCalifornia/fix/nav-overflow-fix-and-hero-hangover-brow-empty-fix
+  * [fix] -- Header and SectionNav navigation wrapping fix and empty brow wrapper printout fix
+  * Merge pull request #263 from JudicialCouncilOfCalifornia/feature/COURTS-159-powerbi
+  * [COURTS-159] -- embedded iframes 3.
+  * [COURTS-159] -- embedded iframes 2.
+  * [COURTS-159] -- embedded iframes.
+
 0.56.5 / 2024-09-23
 ===================
 

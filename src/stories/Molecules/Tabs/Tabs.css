@@ -110,7 +110,7 @@
 
 /* Panel styling */
 .tabs__tabpanel {
-  margin-block-start: var(--gap, 1.5rem);
+  padding-block-start: var(--gap, 1.5rem);
 }
 
 .tabs__tabpanel [role="tabpanel"].is-hidden {

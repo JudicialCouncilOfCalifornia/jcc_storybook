@@ -12,6 +12,7 @@ docReady(function () {
   'use strict';
 
   class Tabs {
+
     constructor(groupNode) {
       this.tablistNode = groupNode;
       this.tabs = [];
@@ -20,11 +21,17 @@ docReady(function () {
       this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
       this.tabpanels = [];
 
+      // Set our preset "Tab from url hash" selection variables.
+      this.preselectedTab = null;
+      this.presetId = window.location.hash ? window.location.hash.substring(1) : null;
+      this.preselectedContentFound = null;
+
+      // Set our first tab and last tab by running thru all the available
+      // tabs.
       this.tabs.forEach(tab => {
         var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
         tab.tabIndex = -1;
         tab.setAttribute('aria-selected', 'false');
-
         this.tabpanels.push(tabpanel);
 
         tab.addEventListener('keydown', this.onKeydown.bind(this));
@@ -33,26 +40,63 @@ docReady(function () {
         if (!this.firstTab) {
           this.firstTab = tab;
         }
+
         this.lastTab = tab;
       });
 
-      this.setSelectedTab(this.firstTab);
+      // If we have a preset id hash, try to find the associated element.
+      if (this.presetId) {
+        this.preselectedContentFound = document.getElementById(this.presetId);
+      }
+
+      // If we have a matching preset element, determine if the hash id
+      // belongs to the "tab" itself, or an element in the tab panel.
+      if (this.preselectedContentFound) {
+        // If the preselected element is not a button, then the content
+        // is inside of tab panel and not the specific tab itself.
+        if (this.preselectedContentFound.tagName !== 'BUTTON') {
+          let closestDetail = this.preselectedContentFound.closest('details');
+          if (closestDetail.id) {
+            let closestTabID = closestDetail.id.replace('tabpanel-', 'tab-');
+            this.preselectedTab = document.getElementById(closestTabID);
+          }
+        }
+        // In this case, the preselected element is the tab itself.
+        else {
+          this.preselectedTab = this.preselectedContentFound;
+        }
+      }
+
+      // Set the selected tab element (defaults to first item, if no
+      // preset item is detected from the url hash id.
+      this.setSelectedTab(this.preselectedTab ? this.preselectedTab : this.firstTab);
+
+      // If there is preselected element, scroll down to it after figuring
+      // out the correct tab.
+      if (this.preselectedContentFound) {
+        this.preselectedContentFound.scrollIntoView();
+      }
     }
 
     setSelectedTab(currentTab) {
-      this.tabs.forEach((tab, idx) => {
-        let tabpanelID = tab.id.replace('tab', 'tabpanel');
+      this.tabs.forEach((tab) => {
+        let tabpanelID = tab.id.replace('tab-', 'tabpanel-');
         let tabpanel = document.getElementById(tabpanelID);
+
+        // If tab matches the currently selected tab (or preset tab),
+        // Open/show the content and set the active classes.
         if (currentTab === tab) {
           tab.setAttribute('aria-selected', 'true');
           tab.classList.add('active');
           tab.removeAttribute('tabindex');
-          tabpanel.classList.remove('is-hidden');
-        } else {
+          tabpanel.open = true;
+        }
+        // Otherwise, hide the tab content.
+        else {
           tab.setAttribute('aria-selected', 'false');
           tab.classList.remove('active');
           tab.tabIndex = -1;
-          tabpanel.classList.add('is-hidden');
+          tabpanel.open = false;
         }
       });
     }
@@ -123,48 +167,38 @@ docReady(function () {
     }
   }
 
-  // Determine if tabs should convert to "accordion" layout on resize.
-  const resizeObserver = new ResizeObserver(entries => {
-    entries.forEach(entry => {
-      toggleAccordionDisplay(entry.target)
-    });
-  });
-
-  // Initialize tablist
-  const tablists = document.querySelectorAll('.tabs [role=tablist]');
-
-  tablists.forEach(tablist => {
-    if (!tablist.classList.contains('js-tabs__tablist')) {
-      tablist.classList.add('js-tabs__tablist');
-      new Tabs(tablist);
-
-      resizeObserver.observe(tablist);
-    }
-  });
-
   // Toggle accordion class if the tabs have insufficient real estate.
   function toggleAccordionDisplay(tablist) {
     let container = tablist.parentElement;
     let tabs = Array.from(tablist.querySelectorAll('button'));
-    let tabDetails = Array.from(container.querySelectorAll('details'));
     let itemsTotalWidth = 0;
+
     for (let i = 0; i < tabs.length; i++) {
       itemsTotalWidth += parseInt(tabs[i].offsetWidth, 10);
     }
 
     if (itemsTotalWidth >= container.clientWidth) {
-      tabDetails.forEach((detail) => {
-        if (detail.classList.contains('is-hidden')) {
-          detail.open = false;
-        }
-      });
       container.classList.add('tabs--as-accordion');
     }
     else {
       container.classList.remove('tabs--as-accordion');
-      tabDetails.forEach((detail) => {
-        detail.open = true;
-      });
     }
   }
+
+  // Determine if tabs should convert to "accordion" layout on resize.
+  const resizeObserver = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+      toggleAccordionDisplay(entry.target);
+    });
+  });
+
+  // Initialize tablist
+  const tablists = document.querySelectorAll('.tabs [role=tablist]');
+  tablists.forEach(tablist => {
+    if (!tablist.classList.contains('js-tabs__tablist')) {
+      tablist.classList.add('js-tabs__tablist');
+      new Tabs(tablist);
+      resizeObserver.observe(tablist);
+    }
+  });
 });

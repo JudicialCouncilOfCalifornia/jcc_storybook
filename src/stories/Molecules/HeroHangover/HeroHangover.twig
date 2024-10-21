@@ -50,9 +50,9 @@
 					</div>
 				{% endif %}
 				<div class="hangover__top-content">
-				<div class="{{ layoutclasses|join(' ')|trim }}">				
+          <div class="{{ layoutclasses|join(' ')|trim }}">				
 						<div class="stack">
-							{% if brow %}
+              {% if (brow.part_one or brow.part_two) is not empty %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
                   <div class="hangover__top-content-brow">
                     {% include "@atoms/Brow/Brow.twig" with brow %}

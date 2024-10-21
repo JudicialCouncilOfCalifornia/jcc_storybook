@@ -37,8 +37,8 @@
   font-size: var(--s-2);
   text-decoration: none;
   color: var(--color);
-  display: block;
-  height: 2rem;
+  display: inline-block;
+  height: unset;
 }
 
 .flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link {
@@ -48,17 +48,18 @@
   font-weight: 700;
 }
 
-.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link:hover,
-.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link:focus,
-.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > .flat-nav__link:active,
-.flat-nav .flat-nav__link:hover,
-.flat-nav .flat-nav__link:focus,
-.flat-nav .flat-nav__link:active {
+.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > a.flat-nav__link:hover,
+.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > a.flat-nav__link:focus,
+.flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > a.flat-nav__link:active,
+.flat-nav a.flat-nav__link:hover,
+.flat-nav a.flat-nav__link:focus,
+.flat-nav a.flat-nav__link:active {
   text-decoration: underline;
   color: var(--accent-color);
 }
 
 .flat-nav .flat-nav__link:focus {
-  outline: 2px solid var(--accent-color);
+  outline: 3px solid var(--accent-color);
   outline-offset: 2px;
+  border-radius: 1px;
 }

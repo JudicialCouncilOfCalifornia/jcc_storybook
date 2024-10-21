@@ -18,8 +18,49 @@ select {
   -webkit-appearance: none;
 }
 
+select:not([multiple]) {
+  background-origin: content-box;
+  background-image: var(--chevron-down);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: var(--s-1);
+}
+
 select::-ms-expand {
   display: none;
+}
+
+select[multiple] > * + * {
+  padding-block-start: var(--s-4);
+}
+
+.alt-select-style > div:not(.description) {
+  position: relative;
+  inline-size: fit-content;
+  color: var(--accent-color);
+}
+
+.alt-select-style > div:not(.description)::after {
+  content: '';
+  mask-image: var(--chevron-down);
+  mask-repeat: no-repeat;
+  position: absolute;
+  top: var(--s-5);
+  right: 0;
+  background-color: currentColor;
+  width: var(--s-1);
+  height: var(--s0);
+  pointer-events: none;
+}
+
+.alt-select-style select {
+  background-image: none;
+  background-color: transparent;
+  border: 0;
+  padding-block: var(--s-5);
+  padding-inline-start: 0;
+  padding-inline-end: var(--s1);
+  color: currentColor;
 }
 
 .placeholder-container {
@@ -45,6 +86,8 @@ select::-ms-expand {
 .placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label,
 .placeholder-container.js-form-type-email input:focus ~ label,
 .placeholder-container.js-form-type-email input:not(:placeholder-shown) ~ label,
+.placeholder-container.js-form-type-tel input:focus ~ label,
+.placeholder-container.js-form-type-tel input:not(:placeholder-shown) ~ label,
 .placeholder-container textarea:focus ~ label,
 .placeholder-container textarea:not(:placeholder-shown) ~ label {
   padding: .25rem .5rem;
@@ -59,7 +102,8 @@ select::-ms-expand {
 .placeholder-container.js-form-type-date label,
 .placeholder-container.js-form-type-email label,
 .placeholder-container.js-form-type-textfield label,
-.placeholder-container.js-form-type-textarea label {
+.placeholder-container.js-form-type-textarea label,
+.placeholder-container.js-form-type-tel label {
   color: var(--color-base-light-x);
   left: .5rem;
   top: 0px;
@@ -70,10 +114,6 @@ select::-ms-expand {
   padding: 0 .5rem;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
-}
-
-select[multiple] > * + * {
-  padding-block-start: var(--s-4);
 }
 
 .cluster input,
@@ -183,13 +223,6 @@ fieldset {
   font-size: var(--s-1);
 }
 
-.alt-select-style select {
-  border: 0;
-  padding: var(--s-5) 0;
-  color: var(--accent-color);
-  width: auto;
-}
-
 fieldset {
   padding-block-start: var(--s2);
 }
@@ -198,7 +231,7 @@ fieldset legend span {
   padding-inline: var(--s-2);
   padding-block-end: var(--s-5);
   margin-block-end: var(--s-3);
-  border-block-end: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color); 
 }
 
 /* Specific form styles */
@@ -225,4 +258,15 @@ fieldset legend span {
 }
 .entity-moderation-form .form-item-revision-log {
   flex-grow: 1;
+}
+
+label.form-required:after,
+fieldset legend span.form-required::after {
+  content: '*'; 
+  color: #df2626; 
+  margin-left: 5px;
+}
+
+input[required="required"]:not([type="radio"]):not([type="checkbox"]) {
+   border-left: 1px solid #df2626;
 }
