@@ -1,4 +1,11 @@
 
+0.56.15 / 2024-10-21
+===================
+
+  * chore: Export libs.
+  * Merge pull request #309 from JudicialCouncilOfCalifornia/feature/COURTS-229--deep-linking-tabs--query-attribute-based
+  * [COURTS-229] -- Allow for deep linking in tabs.
+
 0.56.14 / 2024-10-18
 ===================
 
