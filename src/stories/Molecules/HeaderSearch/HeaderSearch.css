@@ -117,6 +117,7 @@
   background: var(--color-base-light-xx);
   border-color: var(--color-base-light-xx);
   width: 100%;
+  color: var(--color-black) !important;
 }
 
 .header-search .header-search__form input:focus {
