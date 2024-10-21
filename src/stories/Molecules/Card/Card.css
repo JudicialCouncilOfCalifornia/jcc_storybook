@@ -222,9 +222,6 @@ a.card--clickable > .ext {
 .card.card--bordered .card__main,
 .card--bordered-center .card .card__main,
 .card.card--bordered-center .card__main {
-  --color: var(--color-black);
-  --heading-color: var(--color-primary-dark-x);
-  --button-fg: var(--color-accent-warm-dark-x);
   padding: var(--s1);
   background-color: var(--color-white);
 }

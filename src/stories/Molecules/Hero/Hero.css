@@ -1,9 +1,6 @@
 .hero {
   --bg_tint: var(--color-base-dark-xxx);
   --border: var(--border-base-dark-xxx);
-  --color: var(--color-white);
-  --heading-color: var(--color);
-  --accent-color: var(--color);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "hero";
@@ -28,7 +25,8 @@
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"]
-) .card .card__body .button {
+) .card .card__body .button,
+.hero:not(.hero--content-bg) .hero__image:has(+ .hero__tint) ~ .hero__content .card * {
   color: var(--color-white);
 }
 
