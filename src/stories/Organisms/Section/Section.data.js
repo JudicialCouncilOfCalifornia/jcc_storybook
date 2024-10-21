@@ -3,6 +3,7 @@ import { Default as AccordionDefault } from "../../Molecules/Accordion/Accordion
 import ActionList from "../../Molecules/ActionList/ActionList.twig";
 import { Default as ActionListDefault } from "../../Molecules/ActionList/ActionList.stories";
 import Body from "../../Molecules/Body/Body.twig";
+import List from "../../Molecules/List/List.twig";
 import { Default as BodyDefault } from "../../Molecules/Body/Body.stories";
 import Cards from "../../Organisms/Cards/Cards.twig";
 import { Striped as CardsStriped } from "../../Organisms/Cards/Cards.stories";
@@ -14,6 +15,7 @@ import TeaserPlusList from "../../Organisms/TeaserPlusList/TeaserPlusList.twig";
 import { Default as TeaserListDefault } from "../../Organisms/TeaserPlusList/TeaserPlusList.stories";
 import ViewResults from "../../Organisms/ViewResults/ViewResults.twig";
 import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewResults.stories";
+import { WithMenu as ListWithMenu } from "../../Molecules/List/List.stories";
 
 export default {
   default: {
@@ -168,6 +170,9 @@ export default {
     sub_component_data: [
       Accordion({
         ...AccordionDefault.args
+      }),
+      List({
+        ...ListWithMenu.args
       }),
       ActionList({
         ...ActionListDefault.args
