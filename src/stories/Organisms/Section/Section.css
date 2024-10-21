@@ -31,10 +31,6 @@
   margin-block-start: var(--gap);
 }
 
-.section__header h2 {
-  --heading-color: var(--color-black);
-}
-
 .section__header.center {
   text-align: center;
   text-wrap: normal;
