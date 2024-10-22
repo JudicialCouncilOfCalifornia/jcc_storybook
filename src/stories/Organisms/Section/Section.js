@@ -19,18 +19,14 @@ function adjustHeadings(subcomponents) {
       let headingClass = subcompHeading.className;
       let newHeading = document.createElement("h" + (headingLevel + 1));
       // Migrate classes.
-        if (headingClass) {
-          headingClass.split(" ").forEach(className => {
-            if (className.trim()) {
-              newHeading.classList.add(className);
-            }
-          });
-        }
+      if (headingClass) {
+        newHeading.classList.add(headingClass);
+      }
       // Migrate text & replace original heading.
       while(subcompHeading.firstChild) {
         newHeading.appendChild(subcompHeading.firstChild);
       }
-      subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);
+      subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);    
     });
   });
 }
@@ -61,7 +57,7 @@ docReady(function () {
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs, .list";
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (section.classList.contains(isCustomLayout)) {
+      if (section.classList.contains(isCustomLayout)) {      
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {
