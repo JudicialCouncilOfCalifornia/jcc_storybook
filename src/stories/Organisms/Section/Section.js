@@ -61,7 +61,7 @@ docReady(function () {
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs, .list";
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (!section.classList.contains(isCustomLayout)) {
+      if (section.classList.contains(isCustomLayout)) {
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {
