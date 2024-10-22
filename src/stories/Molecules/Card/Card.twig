@@ -45,7 +45,7 @@
   extra_padding,
 ] %}
 
-<{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {% if tag_href %} href="{{ tag_href }}" {% endif %}>
+<{{tag}} class="{{ classes|join(' ') }}"{% if styles %} style="{{ styles|join }}"{% endif %}{% if clickable_card and tag_href%} href="{{ tag_href }}"{% endif %}>
   <div class="card__inner switcher">
     {% if icon_data and variant == 'card--striped' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
