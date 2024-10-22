@@ -126,12 +126,12 @@
 }
 
 .card__text {
-  flex: 1 1 80%;
+  flex: 1 0 68%;
   color: var(--color-black);
 }
 
 .card__buttons {
-  flex: auto;
+  flex: 0 1 auto;
 }
 
 /* Variants */

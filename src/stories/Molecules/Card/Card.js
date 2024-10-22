@@ -9,7 +9,7 @@ function docReady(fn) {
 }
 
 docReady(function () {
-  const cards = Array.from(document.querySelectorAll('.card'));
+  const cards = Array.from(document.querySelectorAll('.card.bg-adjust'));
 
   // Default variant adjustments.
   if (cards) {

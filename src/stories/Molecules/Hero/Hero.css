@@ -82,6 +82,11 @@
   font-weight: 600;
 }
 
+.hero__content-inner__content > .card .card__body,
+.hero__content-inner__content > .card .card__buttons {
+  flex: 1 1 100%;
+}
+
 .hero__content-inner > * {
   /* padding: var(--s4); */
   grid-area: hero-inner;
