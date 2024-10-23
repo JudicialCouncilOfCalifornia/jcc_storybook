@@ -15,7 +15,7 @@
 }
 
 .card--default .card__text *:not(.button) a:visited {
-  color: var(--color-link-visited) !important;
+  color: var(--color-link-visited);
 }
 
 .card--default .card__buttons .button {
@@ -490,7 +490,7 @@ a.card--clickable > .ext {
   --color: var(--color-white) !important;
   --heading-color: var(--color);
   --button-border: var(--color);
-  color: var(--color) !important;
+  color: var(--color);
 }
 
 a.card--default.bg-adjust.card--clickable:hover:not(
