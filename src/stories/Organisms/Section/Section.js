@@ -50,27 +50,30 @@ docReady(function () {
   // Select cards.
   const cards = document.querySelectorAll(".cards");
 
-  // Adjust custom layouts.
+  // Adjust custom layouts as needed.
   if (customSection.length > 0) {
-    const isCustomLayout = "custom";
+    const hasAdjustedHeadings = "adjusted-headings";
     // Target specific nested components.
-    const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs";
+    const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs, .list";
 
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (!section.classList.contains(isCustomLayout)) {
+      if (!section.classList.contains(hasAdjustedHeadings)) {
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {
           // Determine if section heading exists.
           let sectionHeading = section.querySelector(".section__content > .container > .section__header");
-          let sectionHeadingTagName = sectionHeading !== null && sectionHeading.querySelector('h1, h2') ? sectionHeading.querySelector('h1, h2').tagName : null;
+          let sectionHeadingTagName;
+          if (sectionHeading) {
+            sectionHeadingTagName = sectionHeading.querySelector('h1, h2') ? sectionHeading.querySelector('h1, h2').tagName : null;
+          }
 
           // Adjust relevant subcomponent headings if H2 in use.
           if (sectionHeadingTagName && sectionHeadingTagName !== "H1") {
             adjustHeadings(subcomponents);
             // In case script is executed repeatedly, flag custom section as processed.
-            section.classList.add(isCustomLayout);
+            section.classList.add(hasAdjustedHeadings);
           }
         }
       }

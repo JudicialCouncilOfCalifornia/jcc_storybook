@@ -120,6 +120,10 @@
   color: var(--color-black) !important;
 }
 
+.header-search .header-search__form input::placeholder {
+  color: var(--color-base);
+}
+
 .header-search .header-search__form input:focus {
   outline: var(--accent-color);
   border: 2px solid var(--accent-color);

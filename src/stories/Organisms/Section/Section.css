@@ -7,18 +7,17 @@
   justify-content: center;
   background-color: var(--bg);
   border-block-end: var(--border) solid var(--s0);
+  padding-block: var(--s0);
 }
 
-.section__content.box {
-  padding-block-start: var(--s3);
+:nth-child(1 of .section:not(.section--color-default)),
+.section:not(.section--color-default) + .section:not(.section--color-default),
+.section .section {
+  margin-block: 0;
 }
 
 .section .section .section__content.box {
   padding-block: 0;
-}
-
-.section:last-child:not(.bg-adjust) {
-  margin-block-end: var(--s3);
 }
 
 .section > * {
@@ -53,10 +52,6 @@
   width: 100%;
 }
 
-/*.section .section__main.multiple:not(.stack) .card__inner {*/
-/*  display: block;*/
-/*}*/
-
 .section .section__header {
   --max-width: 103ch;
   max-inline-size: var(--max-width);
@@ -74,6 +69,15 @@
 .section .section__header h2.brow {
   color: var(--accent-color);
   border-color: var(--color);
+}
+
+.section__main .accordion,
+.section__main .action-list,
+.section__main .body,
+.section__main .list,
+.section__main .steps,
+.section__main .teaser-list {
+  margin-block-start: var(--s5);
 }
 
 .section__main.flex {
@@ -116,14 +120,6 @@
 }
 
 /* BEGIN Background colors  */
-.section--with-bg-image.bg-adjust,
-.section.bg-adjust:not(
-  [style*="--bg: var(--color-none);"],
-  [style*="--bg: var(--color-default);"]
- ) {
-  margin-block-start: 0;
-  padding-block-start: var(--s5);
-}
 
 /* Reverse element colors for darker backgrounds */
 .section.bg-adjust:not(
@@ -173,15 +169,6 @@
 ) .section__main .cards .card:not(.bg-adjust) .card__main * {
   --color: var(--color-white) !important;
 }
-
-/*.card--default .card__main * {*/
-/*  --color: var(--color-black) !important;*/
-/*}*/
-
-/*.card--default .card__buttons .button {*/
-/*  --color: var(--color-accent-warm-dark-x) !important;*/
-/*  --accent-color: var(--accent-color);*/
-/*}*/
 
 /* Adjust accordion hover if darker background */
 .section.bg-adjust:not(
@@ -294,11 +281,6 @@
 .section--color-primary-dark-xx-stripe + .section--color-primary-dark-xx-stripe,
 .section--color-primary-dark-xx + .section--color-primary-dark-xx {
   padding-top: 0;
-}
-
-/* default boxes still need a little spacing when together */
-.section--color-default + .section--color-default > .box {
-  padding-top: 1rem;
 }
 
 .section__header .brow {
