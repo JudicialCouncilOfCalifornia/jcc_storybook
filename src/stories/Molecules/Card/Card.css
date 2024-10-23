@@ -330,7 +330,7 @@ a.card--clickable > .ext {
 /* Striped left additional styling */
 .card--striped-aligned .card,
 .card.card--striped-aligned {
-  padding-block: var(--s5);
+  padding-block: var(--s3);
 }
 .card--striped-aligned .card__heading {
   --gap: var(--s2);
