@@ -10,10 +10,8 @@
   padding-block: var(--s0);
 }
 
-:nth-child(1 of .section:not(.section--color-default)),
-.section:not(.section--color-default) + .section:not(.section--color-default),
 .section .section {
-  margin-block: 0;
+  padding-block: 0;
 }
 
 .section .section .section__content.box {
@@ -71,12 +69,18 @@
   border-color: var(--color);
 }
 
-.section__main .accordion,
-.section__main .action-list,
-.section__main .body,
-.section__main .list,
-.section__main .steps,
-.section__main .teaser-list {
+.section__main div + .accordion,
+.section__main div + div .accordion,
+.section__main div + .action-list,
+.section__main div + div .action-list,
+.section__main div + .body,
+.section__main div + div .body,
+.section__main div + .list,
+.section__main div + div .list,
+.section__main div + .steps,
+.section__main div + div .steps,
+.section__main div + .teaser-list,
+.section__main div + div .teaser-list {
   margin-block-start: var(--s5);
 }
 
