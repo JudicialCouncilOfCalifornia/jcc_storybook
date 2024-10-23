@@ -121,3 +121,9 @@
   inset-block-start: calc(var(--icon-size) / .85);
   inset-inline-start: calc(var(--icon-size) / 1);
 }
+
+.inline-form .description {
+  font-size: var(--s-1);
+  line-height: var(--s0);
+  margin-block-start: var(--s0);
+}
