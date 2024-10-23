@@ -171,9 +171,9 @@ export default {
       Accordion({
         ...AccordionDefault.args
       }),
-      List({
+      /*List({
         ...ListWithMenu.args
-      }),
+      }),*/
       ActionList({
         ...ActionListDefault.args
       }),

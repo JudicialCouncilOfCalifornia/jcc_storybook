@@ -17,7 +17,7 @@ function adjustHeadings(subcomponents) {
       let headingTag = subcompHeading.tagName;
       let headingLevel = Number(headingTag.charAt(1));
       let headingClass = subcompHeading.className;
-      let newHeading = document.createElement("h" + (headingLevel + 1));
+      let newHeading = document.createElement("h" + (headingLevel + 1));      
       // Migrate classes.
       if (headingClass) {
         newHeading.classList.add(headingClass);
@@ -52,12 +52,12 @@ docReady(function () {
 
   // Adjust custom layouts.
   if (customSection.length > 0) {    
-    const isCustomLayout = "custom";
+    const headingsAdjusted = "headings-adjusted";
     // Target specific nested components.
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs, .list";
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (section.classList.contains(isCustomLayout)) {      
+      if (section.classList.contains(headingsAdjusted)) {      
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {
@@ -69,7 +69,7 @@ docReady(function () {
           if (sectionHeadingTagName && sectionHeadingTagName !== "H1") {
             adjustHeadings(subcomponents);
             // In case script is executed repeatedly, flag custom section as processed.
-            section.classList.add(isCustomLayout);
+            section.classList.add(headingsAdjusted);
           }
         }
       }
