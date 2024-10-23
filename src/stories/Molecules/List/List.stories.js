@@ -42,3 +42,6 @@ WithHeading.args = data.with_heading;
 
 export const WithGrid = Template.bind({});
 WithGrid.args = data.with_grid;
+
+export const WithMenu = Template.bind({});
+WithMenu.args = data.with_menu;

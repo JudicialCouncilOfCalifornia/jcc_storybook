@@ -10,14 +10,14 @@ function docReady(fn) {
 
 function adjustHeadings(subcomponents) {
   // Migrate to new heading tags.
-  subcomponents.forEach(function(subcomponent) {
+  subcomponents.forEach(function(subcomponent) {    
     let subcompHeadings = subcomponent.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
     subcompHeadings.forEach(function(subcompHeading) {
       let headingTag = subcompHeading.tagName;
       let headingLevel = Number(headingTag.charAt(1));
       let headingClass = subcompHeading.className;
-      let newHeading = document.createElement("h" + (headingLevel + 1));
+      let newHeading = document.createElement("h" + (headingLevel + 1));      
       // Migrate classes.
       if (headingClass) {
         newHeading.classList.add(headingClass);
@@ -26,7 +26,7 @@ function adjustHeadings(subcomponents) {
       while(subcompHeading.firstChild) {
         newHeading.appendChild(subcompHeading.firstChild);
       }
-      subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);
+      subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);    
     });
   });
 }
@@ -51,14 +51,14 @@ docReady(function () {
   const cards = document.querySelectorAll(".cards");
 
   // Adjust custom layouts.
-  if (customSection.length > 0) {
+  if (customSection.length > 0) {    
     const headingsAdjusted = "headings-adjusted";
     // Target specific nested components.
     const componentIds = ".accordion, .action-list, .body, .cards, .steps, .teaser-list, .profile-cards, .view-results .content, .tabs, .list";
 
     customSection.forEach(function(section) {
       // Adjust subcomponent headings if custom section has H2.
-      if (!section.classList.contains(headingsAdjusted)) {
+      if (!section.classList.contains(headingsAdjusted)) {      
         let subcomponents = section.querySelectorAll(componentIds);
 
         if (subcomponents) {

@@ -43,8 +43,8 @@
 }
 
 .button.button--text:hover::before,
-.button.button--text:active::before,
-.button.button--text:focus::before {
+.button.button--text:focus::before, 
+.button.button--text:active::before{
   content: "";
   position: absolute;
   bottom: 0;
@@ -75,8 +75,8 @@
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after {
-  --hover-color: currentColor;
-  background-color: var(--hover-color, var(--color-red));
+  --dynamic-color: currentColor;
+  background-color: var(--dynamic-color, var(--color-red));
 }
 .button.button--primary:active::after,
 .button.button--text:active::after {
@@ -163,12 +163,14 @@
   border: 0;
   background: transparent;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .button.button--text:hover,
-.button.button--text:focus {
-  color: var(--color-red);
-  outline: none;
+.button.button--text:focus
+ {
+  color: var(--color-red); 
+  outline: none;  
 }
 
 .button.button--text:active {
