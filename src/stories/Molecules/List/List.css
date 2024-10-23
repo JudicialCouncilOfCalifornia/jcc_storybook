@@ -35,7 +35,7 @@
   padding-block-end: 3px;
 }
 
-.popular-links-heading {  
+.list-heading__popular-links-heading {  
   border-bottom: 1px solid var(--color-accent-warm-dark-x);
   font-size: 22px;
   font-weight: 700;

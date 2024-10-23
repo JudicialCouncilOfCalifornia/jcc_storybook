@@ -21,9 +21,9 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  {% if heading %}
-    <{{h}} class="list-heading {% if withmenu %} popular-links-heading {% endif %}">{{ heading }}</{{h}}> 
-  {% endif %}
+{% if heading %}
+    <{{h}} class="list-heading{% if withmenu %}__popular-links-heading{% endif %}">{{ heading }}</{{h}}>
+{% endif %}
   <{{tag}} class="{{ container_classes|join(' ') }} {% if withmenu %} link-container {% endif %}" role="list">  
    {% if withmenu %}
     {% for item in items %}   

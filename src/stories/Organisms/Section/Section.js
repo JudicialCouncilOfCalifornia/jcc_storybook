@@ -17,7 +17,7 @@ function adjustHeadings(subcomponents) {
       let headingTag = subcompHeading.tagName;
       let headingLevel = Number(headingTag.charAt(1));
       let headingClass = subcompHeading.className;
-      let newHeading = document.createElement("h" + (headingLevel + 1));
+      let newHeading = document.createElement("h" + (headingLevel + 1));      
       // Migrate classes.
       if (headingClass) {
         newHeading.classList.add(headingClass);
