@@ -231,7 +231,7 @@ fieldset legend span {
   padding-inline: var(--s-2);
   padding-block-end: var(--s-5);
   margin-block-end: var(--s-3);
-  border-block-end: 2px solid var(--accent-color); 
+  border-block-end: 2px solid var(--accent-color);
 }
 
 /* Specific form styles */
@@ -262,8 +262,8 @@ fieldset legend span {
 
 label.form-required:after,
 fieldset legend span.form-required::after {
-  content: '*'; 
-  color: #df2626; 
+  content: '*';
+  color: #df2626;
   margin-left: 5px;
 }
 

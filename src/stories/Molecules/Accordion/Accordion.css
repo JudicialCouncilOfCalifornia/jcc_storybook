@@ -1,12 +1,7 @@
 .accordion {
   --max-width: 102ch;
   --color: var(--color-black);
-  --heading-color: var(--color-primary-dark-x);
   color: var(--color);
-}
-
-.accordion__heading {
-  color: var(--heading-color);
 }
 
 .accordion__lead {

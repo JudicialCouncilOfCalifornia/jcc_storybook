@@ -28,7 +28,7 @@
 
 .body__main.divider .body__content {
   padding-block-start: var(--s-2);
-  border-inline-end: 2px dotted var(--color-accent-warm-dark-x);
+  border-inline-end: 2px dotted var(--accent-color);
 }
 
 .body__aside {
@@ -49,6 +49,10 @@
 
 .body.mobile .body__content {
   order: 1;
+}
+
+.body .body__content .button {
+  margin-block-end: var(--s-3);
 }
 
 .body.mobile .body__aside {

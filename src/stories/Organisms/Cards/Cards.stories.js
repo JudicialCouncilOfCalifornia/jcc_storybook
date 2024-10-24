@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./Cards.data";
 import Cards from "./Cards.twig";
 import "./Cards.css";
+import "./Cards.js";
 
 export default {
   title: "Organisms/Cards",
@@ -20,12 +21,19 @@ export default {
       table: { defaultValue: { summary: "default" } },
       control: { type: "select" },
       options: [
-        "default",
-        "primary-dark-xx",
-        "primary-dark-xx-stripe",
-        "warm-dark-xx",
-        "warm-dark-x",
-        "white",
+        "",
+        "base-light-xxx",
+        "base-dark-x",
+        "base-dark-xxx",
+        "accent-warm-light-xxxx",
+        "accent-warm-dark-x",
+        "red",
+        "brown",
+        "primary-light-xxx",
+        "primary-light-x",
+        "primary-dark-x",
+        "secondary",
+        "secondary-dark-xx",
       ],
     },
     card_variant: {

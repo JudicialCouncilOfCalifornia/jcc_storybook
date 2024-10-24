@@ -6,6 +6,11 @@ export default {
     aspect: [],
     media:
       '<img src="https://picsum.photos/id/41/1280/720" />',
+    media_caption: {
+      show: true,
+      text: "Ac non lacus sollicitudin vulputate sociosqu.",
+      citation: "Cat",
+    },
     icon_data: {
       icon: "speaker",
       color: false,

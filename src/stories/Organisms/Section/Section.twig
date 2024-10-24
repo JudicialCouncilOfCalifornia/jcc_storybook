@@ -10,11 +10,17 @@
 {% set styles = [] %}
 {% set sub_component_styles = [] %}
 
+{% set bg_color = 'none' %}
 {% if bg_tint %}
-  {% set styles = styles|merge([
-    '--bg: var(--color-' ~ bg_tint ~ ');',
-  ]) %}
+  {% set bg_color = bg_tint %}
+{% elseif variant != 'default' %}
+  {% set bg_tint = variant %}
+  {% set bg_color = bg_tint %}
 {% endif %}
+{% set styles = styles|merge([
+  '--bg: var(--color-' ~ bg_color ~ ');',
+  '--border: var(--border-' ~ bg_color ~ ');',
+]) %}
 
 {% if align_items %}
   {% set sub_component_styles = sub_component_styles|merge([
@@ -60,7 +66,8 @@
 {% set classes = [
   'section',
   variant_class,
-  variant_bg_image
+  variant_bg_image,
+  bg_tint ? 'bg-adjust' : '',
 ] %}
 
 {% if section_classes is iterable %}
@@ -70,7 +77,7 @@
 {% set inner_box_class = disable_inner_box == true ? '' : 'box' %}
 
 {# Section Template #}
-<div {% if classes is not empty %} class="{{ classes|join(' ')}}" {% endif %} {% if styles is not empty %} style="{{ styles|join }}" {% endif %}>
+<div {% if classes is not empty %} class="{{ classes|join(' ')}}"{% endif %} {% if styles is not empty %}style="{{ styles|join }}"{% endif %}>
   {% if background_image_url is not empty %}
     <div class="section__image" style="--background-image: url('{{ background_image_url }}');"></div>
     <div class="section__tint"></div>
@@ -78,7 +85,7 @@
   <div class="section__content {{ inner_box_class }}">
     <div class="container stack">
       {% if brow_data or heading or text %}
-        <div class="section__header center">
+        <div class="section__header">
           {% if brow_data is not empty %}
             {% include "@atoms/Brow/Brow.twig" with brow_data %}
           {% endif %}
@@ -100,8 +107,12 @@
         {% endif %}
       </div>
       {% if button_data is not empty %}
-        <div class="section__button center">
-          {% include "@atoms/Button/Button.twig" with button_data %}
+        <div class="section__button box">
+          {% include "@atoms/Button/Button.twig" with {
+            variant: 'text',
+            label: button_data.label,
+            href: button_data.href,
+          } %}
         </div>
       {% endif %}
     </div>

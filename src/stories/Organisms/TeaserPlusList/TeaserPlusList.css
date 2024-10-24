@@ -7,6 +7,10 @@
   --align-items: center;
 }
 
+.teaser-list__button {
+  margin-block-end: var(--gap);
+}
+
 .teaser-list *:has(+ .wrapping),
 .wrapping + .teaser-list__button {
   --align-items: flex-start;

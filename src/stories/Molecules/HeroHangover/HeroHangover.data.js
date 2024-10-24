@@ -109,7 +109,7 @@ export default {
     }),
     bottom_content: "",
     blurb: false,
-    background: 'striped-base-light-xx',
+    background: 'base-light-xxx',
   },
   with_print: {
     hangover_hide_compact: false,
@@ -124,7 +124,7 @@ export default {
     text: "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>",
     bottom_content: "",
     blurb: false,
-    background: 'striped-base-light-xx',
+    background: 'base-light-xxx',
     share: {
       print_url: 'javascript: window.print();',
       print_aria_label: 'Print advisory body',

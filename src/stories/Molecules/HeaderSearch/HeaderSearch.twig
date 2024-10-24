@@ -1,5 +1,7 @@
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'header-search--' ~ variant : 'header-search--default' %}
+{# Option #}
+{% set bg_transparent = bg_transparent ? 'bg-transparent' : '' %}
 
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
@@ -8,6 +10,7 @@
   'header-search',
   'cluster',
   variant_class,
+  bg_transparent,
 ] %}
 
 {% if add_wrapper %}<div class="header-search__wrapper">{% endif %}

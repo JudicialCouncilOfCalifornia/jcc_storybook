@@ -4,8 +4,12 @@
 {% set variant_background = background ? 'hangover--' ~ background : '' %}
 {% set variant_borderless_media = borderless_media ? 'hangover--borderless-media': '' %}
 {% set variant_header_with_share = share ? 'hangover--with-share': '' %}
+{% set bg_color = background ? background : 'base-dark-x' %}
 
-{% set variant_styles = [] %}
+{% set variant_styles = [
+	'--bg: var(--color-' ~ bg_color ~ ');',
+	'--border: var(--border-' ~ bg_color ~ ');',
+] %}
 {% set box_styles = [] %}
 
 {% if hangover_offset %}
@@ -25,8 +29,8 @@
 ] %}
 
 {% set boxclasses = [
-	'with-sidebar',	
-	'detect-wrap', 
+	'with-sidebar',
+	'detect-wrap',
 	'detect-wrap--observed',
 	'container',
 ] %}
@@ -39,7 +43,7 @@
 <div class="{{ classes|join(' ')|trim }}" style="{{ variant_styles|join(' ')|trim }}">
 	<div class="hangover__top">
 		<div class="box">
-			<div class="{{ boxclasses|join(' ')|trim }}">		
+			<div class="{{ boxclasses|join(' ')|trim }}">
 				{% if hangover_content is not empty or share is not empty %}
 					<div class="hangover__top-hangover-content">
             {% if hangover_content %}
@@ -50,9 +54,9 @@
 					</div>
 				{% endif %}
 				<div class="hangover__top-content">
-          <div class="{{ layoutclasses|join(' ')|trim }}">				
+          <div class="{{ layoutclasses|join(' ')|trim }}">
 						<div class="stack">
-              {% if (brow.part_one or brow.part_two) is not empty %}
+              {% if brow.part_one is not empty or brow.part_two is not empty %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
                   <div class="hangover__top-content-brow">
                     {% include "@atoms/Brow/Brow.twig" with brow %}

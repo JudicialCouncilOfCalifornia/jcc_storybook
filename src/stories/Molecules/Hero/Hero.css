@@ -1,11 +1,33 @@
 .hero {
-  --color: var(--color-white);
-  --heading-color: var(--color);
-  --accent-color: var(--color);
+  --bg_tint: var(--color-base-dark-xxx);
+  --border: var(--border-base-dark-xxx);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "hero";
   overflow: hidden;
+  border-block-end: var(--border) solid var(--s0);
+}
+
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__heading *,
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body p,
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body .button,
+.hero:not(.hero--content-bg) .hero__image:has(+ .hero__tint) ~ .hero__content .card * {
+  color: var(--color-white);
 }
 
 .hero > * {
@@ -32,6 +54,7 @@
 .hero__content {
   /* Bring it above the tint mix-blend-mode. */
   z-index: 1;
+  padding-inline: var(--s6);
 }
 
 .hero__content-inner {
@@ -54,21 +77,46 @@
   margin-block: auto;
 }
 
+.hero__content-inner__content > .card .card__heading_tag {
+  margin-block: auto;
+  font-weight: 600;
+}
+
+.hero__content-inner__content > .card .card__body,
+.hero__content-inner__content > .card .card__buttons {
+  flex: 1 1 100%;
+}
+
 .hero__content-inner > * {
   /* padding: var(--s4); */
   grid-area: hero-inner;
   z-index: 1;
 }
 
+.hero__navigation {
+  display: grid;
+  grid-gap: var(--gap, var(--s0));
+}
+
+@supports (width: min(var(--grid-min-width, 20ch), 100%)) {
+  .hero__navigation {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
+    );
+  }
+}
+
 .hero__navigation.cards {
   --gap: none;
-  --grid-min-width: 40ch;
+  --grid-min-width: 36ch;
   grid-area: unset;
 }
 
 .hero__navigation.cards .card {
   padding-inline: var(--s1);
   padding-block: var(--s0);
+  border-radius: unset;
 }
 
 .hero__navigation.cards .card .icon {
@@ -86,8 +134,9 @@
   --gap: var(--s-1);
 }
 
-.hero__navigation.cards .card h2 {
+.hero__navigation.cards .card .card__heading_tag {
   font-size: var(--s1);
+  color: currentColor;
 }
 
 /* Automated nav button colors */
@@ -133,6 +182,46 @@
 }
 
 /* Variants */
+.hero--mega .hero__content {
+  padding-block-start: var(--s9);
+  padding-block-end: var(--s10);
+}
+
+.hero--mega .hero__content-inner {
+  max-width: 78ch;
+}
+
+.hero--mega .card h1 {
+  font-size: var(--s6);
+  line-height: normal;
+}
+
+.hero--mega .card .card__text {
+  font-size: var(--s3);
+  line-height: normal;
+}
+
+.hero--mega .header-search__form {
+  margin-block-start: var(--s3);
+}
+
+/* Suppress input resize on focus */
+.hero--mega .header-search__form input:focus {
+  outline: unset;
+  border: unset;
+}
+
+.hero--mega .header-search__form input {
+  padding-block: var(--s2);
+}
+
+.hero--mega .header-search__form .header-search__icon {
+  --accent-color: var(--color-accent-warm-dark-x);
+  height: var(--s4);
+  width: var(--s4);
+  right: var(--s-6);
+}
+
 .hero--content-bg {
   --color: var(--color-black);
   --button-color: var(--color-black);
@@ -148,8 +237,6 @@
   color: var(--color-black);
 }
 
-.hero--content-bg .hero__content-inner__background {
-  background-color: var(--background-color, var(--color-white));
-  opacity: 0.9;
-  z-index: 0;
+.hero--content-bg .card .button {
+  color: var(--button-fg);
 }

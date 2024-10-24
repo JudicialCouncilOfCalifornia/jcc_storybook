@@ -28,8 +28,6 @@
 
 .brow--heading {
   font-family: var(--font-secondary);
-  border-block: 1.5px dotted var(--color, var(--color-white));
-  padding-inline: var(--s0);
   padding-block: var(--s-3);
 }
 

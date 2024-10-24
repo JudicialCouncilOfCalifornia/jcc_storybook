@@ -83,17 +83,13 @@
 
 /* Grid. */
 .grid {
-  display: grid;
+  display: flex;
   grid-gap: var(--gap, var(--s0));
+  flex-wrap: wrap;
 }
 
-@supports (width: min(var(--grid-min-width, 20ch), 100%)) {
-  .grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
-    );
-  }
+.grid > * {
+  flex: 1 1 var(--grid-min-width, 27ch);
 }
 
 /* Icon. */

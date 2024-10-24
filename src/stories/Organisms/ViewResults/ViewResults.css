@@ -189,7 +189,12 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .view-results .form-actions .button {
+  --accent-color: var(--button-fg) !important;
   font-size: var(--s0);
+}
+
+.view-results .form-actions .button .inline-form__submit-circle {
+  --accent-color: var(--button-fg) !important;
 }
 
 .view-results__results.sidebar-row .stack.sidebar h2,
