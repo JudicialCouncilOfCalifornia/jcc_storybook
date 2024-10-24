@@ -17,8 +17,8 @@
 }
 
 .button:hover {
-  background-color: var(--color-accent-warm-light-xxxx); 
-  color: var(--color-red) !important;
+  background-color: var(--color-accent-warm-light-xxxx);
+  color: var(--dynamic-color, var(--color-red)) !important;
   border: 2px solid var(--color-red);
 }
 
@@ -33,7 +33,7 @@
 }
 
 .button:visited:hover {
-  color: var(--color-red) !important;
+  color: var(--dynamic-color, var(--color-red)) !important;
 }
 
 .button:focus {
@@ -70,8 +70,8 @@
 .button.button--primary::after,
 .button.button--primary:focus::after,
 .button.button--text::after,
-.button.button--text:focus::after {
-  background-color: currentColor;
+.button.button--text:focus::after {  
+  background-color: var(--dynamic-color, currentColor);
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after {
