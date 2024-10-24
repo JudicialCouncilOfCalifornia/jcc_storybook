@@ -25,6 +25,6 @@
  {{ link(label, href, {
     'class': classes,
     'aria_label': aria_label,
-    'style': (color is defined and color is not empty) ? 'color:' ~ color ~ '; --dynamic-color: ' ~ color : ''
+    'style': (color is defined and color is not empty) ? 'color:' ~ color ~ '; --dynamic-color: ' ~ color : currentColor
   }) }}
 {% endif %}
