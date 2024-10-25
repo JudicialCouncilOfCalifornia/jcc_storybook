@@ -13,8 +13,10 @@ The icon for the button should be rendered into the embedded form.
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: "default" // or 'multi',
+  submit_color: "change submit button color",
   form: "rendered form with button/icon".
   ```
 </details>

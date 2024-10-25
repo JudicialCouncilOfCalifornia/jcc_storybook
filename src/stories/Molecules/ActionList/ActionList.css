@@ -29,7 +29,6 @@
 
 .action-list__item__heading {
   font-size: var(--s0);
-  color: var(--color);
   font-family: var(--font-secondary);
   font-weight: bold;
 }

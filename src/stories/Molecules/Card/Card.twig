@@ -12,11 +12,11 @@
 {% if button_data is not empty and button_data[0] is empty %}
   {% set button_data = [button_data] %}
 {% endif %}
-{% set tag_href = tag == 'a' and button_data[0] ? button_data[0].href : '' %}
+{% set tag_href = button_data[0] ? button_data[0].href : '' %}
 
 {% set variant = variant ? 'card--' ~ variant : 'card--default' %}
 {% set variant_clickable = clickable_card ? 'card--clickable' : '' %}
-{% set variant_background = background ? 'card--background-' ~ background : '' %}
+{% set variant_background = background ? 'card--background-' ~ background ~ ' bg-adjust' : '' %}
 {% set extra_padding = extra_padding ? 'extra-padding' : '' %}
 
 {% set styles = [] %}
@@ -31,7 +31,7 @@
 {# Media classes. #}
 {% set media_classes = [
   'card__media',
-  media_caption.overlay ? 'caption-overlay' : '',
+  media_caption.show ? 'caption-overlay' : '',
 ] %}
 
 {# Create class array. #}
@@ -45,18 +45,20 @@
   extra_padding,
 ] %}
 
-<{{tag}} class="{{ classes|join(' ') }}" style="{{ styles|join }}" {% if tag_href %} href="{{ tag_href }}" {% endif %}>
+<{{tag}} class="{{ classes|join(' ') }}"{% if styles %} style="{{ styles|join }}"{% endif %}{% if clickable_card and tag_href%} href="{{ tag_href }}"{% endif %}>
   <div class="card__inner switcher">
     {% if icon_data and variant == 'card--striped' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
     {% elseif media %}
       <div class="{{ media_classes|join(' ') }}">
         <div class="frame">{{ media }}</div>
-        {% if media_caption.show %}
+        {% if media_caption.show and media_caption.text %}
           <div class="card__media-caption-container">
             <div class="card__media-caption">
               <span>{{ media_caption.text }}</span>
-              <span class="card__media-citation">{{ media_caption.citation }}</span>
+              {% if media_caption.citation %}
+                <span class="card__media-citation">{{ media_caption.citation }}</span>
+              {% endif %}
             </div>
           </div>
         {% endif %}
@@ -69,13 +71,15 @@
             {% if icon_data and variant == 'card--striped-aligned' %}
               {% include "@atoms/Icon/Icon.twig" with icon_data %}
             {% endif %}
-            <{{h}} class="card__heading_tag">{{ heading }}</{{h}}>
+            <{{h}} class="card__heading_tag">
+              <span>{{ heading }}</span>
+            </{{h}}>
           </div>
         {% endif %}
         {% if text is not empty or (button_data is not empty and not clickable_card) %}
           <div class="card__body">
             {% if text is not empty %}
-            <div class="card__text">
+              <div class="card__text">
                 {{ text }}
               </div>
             {% endif %}

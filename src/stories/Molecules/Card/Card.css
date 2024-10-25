@@ -2,6 +2,42 @@
 .card {
   --measure: 100rem;
   --sidebar-width: 30ch;
+  --form-button: var(--bg);
+}
+
+.card--default * {
+  --color: var(--color-black) !important;
+}
+
+.card--default * a {
+  --color: var(--color-primary) !important;
+  color: var(--color);
+}
+
+.card--default .card__text *:not(.button) a:visited {
+  color: var(--color-link-visited);
+}
+
+.card--default .card__buttons .button {
+  --color: var(--color-accent-warm-dark-x) !important;
+  --accent-color: var(--accent-color);
+}
+
+.card--default.bg-adjust,
+.card.card--overlay,
+.card--striped,
+.card--striped-aligned {
+  overflow: hidden;
+  border-radius: var(--corner-radius);
+}
+
+.card--default:not(.bg-adjust) img,
+.card--default:not(.bg-adjust) iframe,
+.card.card--media-left img,
+.card.card--media-left iframe,
+.card.card--media-right img,
+.card.card--media-right iframe {
+  border-radius: var(--corner-radius);
 }
 
 .card__media .frame iframe {
@@ -13,12 +49,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
+}
+
+.card--default:not(.bg-adjust) .caption-overlay .card__media-caption,
+.card.card--media-left .caption-overlay .card__media-caption,
+.card.card--media-right .caption-overlay .card__media-caption {
+  border-bottom-left-radius: var(--corner-radius);
+  border-bottom-right-radius: var(--corner-radius);
 }
 
 .card__media-caption {
   margin-block-start: var(--s-6);
-  color: #5C5C5C;
+  color: var(--color-base-dark-x);
   font-size: var(--s-2);
   font-weight: 600;
   line-height: var(--s0);
@@ -29,7 +71,7 @@
 }
 
 .card__media-citation {
-  color: #919191;
+  color: var(--color-base);
   font-size: var(--s-3);
   font-weight: 400;
 }
@@ -47,17 +89,17 @@
   padding-block: var(--s-4);
   padding-inline: var(--s-1);
   background-color: rgba(0,0,0,0.5);
-  color: #FFFFFF;
+  color: var(--color-white);
   box-sizing: border-box;
   z-index: 2;
 }
 
 .caption-overlay .card__media-citation {
-  color: #F3F3F3;
+  color: var(--color-base-light-xx);
 }
 
 .remote-video-colorbox-launch-modal{
- outline: none;
+  outline: none;
 }
 
 .remote-video-colorbox-launch-modal:focus img,
@@ -84,11 +126,12 @@
 }
 
 .card__text {
-  flex: 1 1 80%;
+  flex: 1 0 68%;
+  color: var(--color-black);
 }
 
 .card__buttons {
-  flex: auto;
+  flex: 0 1 auto;
 }
 
 /* Variants */
@@ -96,6 +139,61 @@
 .card--clickable {
   display: block;
   text-decoration: none;
+}
+
+/* Default */
+.card--default.bg-adjust .card__inner {
+  gap: 0;
+}
+
+.card--default.bg-adjust .card__main {
+  padding: var(--s2);
+}
+
+a.card--default.card--clickable {
+  text-decoration: none;
+}
+
+a.card--default.card--clickable .card__heading *,
+a.card--default.card--clickable.card--background-base-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-primary-light-xxx .card__heading *,
+a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__heading * {
+  --heading-color: var(--color-primary) !important;
+  color: var(--heading-color);
+}
+
+a.card--default.card--clickable .card__heading_tag span {
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-color: transparent;
+  transition: border-color var(--anim-slow);
+}
+
+a.card--default.card--clickable:hover .card__heading_tag span {
+  border-color: var(--heading-color);
+  transition: all var(--anim-speed);
+}
+
+a.card--default.card--clickable .card__heading_tag::after {
+  position: relative;
+  top: 0.08rem;
+  margin-inline-start: var(--s-2);
+  content: "";
+  align-self: flex-end;
+  display: inline-block;
+  vertical-align: -2px;
+  width: var(--s2);
+  height: var(--s2);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--button-fg);
+  mask: var(--arrow-svg) no-repeat;
+  mask-size: 100%;
+}
+
+/* Suppress Drupal external link indicator */
+a.card--clickable > .ext {
+  display: none;
 }
 
 /* Card modifier class can be used on cards wrapper element or on the card. */
@@ -106,9 +204,8 @@
 .card.card--bordered,
 .card--bordered-center .card,
 .card.card--bordered-center {
-  border: var(--s-2) solid
-    var(--border-color, var(--color-accent-warm-light-xxxx));
-  background: var(--background-color, var(--color-white));
+  border: var(--s-2) solid var(--border-color, var(--color-accent-warm-light-xxxx));
+  background: var(var(--color-white));
   z-index: 1;
 }
 
@@ -125,9 +222,6 @@
 .card.card--bordered .card__main,
 .card--bordered-center .card .card__main,
 .card.card--bordered-center .card__main {
-  --color: var(--color-black);
-  --heading-color: var(--color-primary-dark-x);
-  --button-fg: var(--color-accent-warm-dark-x);
   padding: var(--s1);
   background-color: var(--color-white);
 }
@@ -150,14 +244,14 @@
 .card--media-left .card .switcher,
 .card.card--media-left .switcher {
   --measure: 40rem;
-  align-items: center;
+  align-items: start;
 }
 
 /* Media Right */
 .card--media-right .card .switcher,
 .card.card--media-right .switcher {
   --measure: 40rem;
-  align-items: center;
+  align-items: start;
   flex-direction: row-reverse;
 }
 
@@ -175,6 +269,7 @@
   background-color: var(--color-black);
   mix-blend-mode: multiply;
   position: relative;
+  height: 100%;
 }
 
 .card--overlay .card > * > *,
@@ -209,6 +304,7 @@
 
 .card--overlay .card .card__main,
 .card.card--overlay .card__main {
+  height: 100%;
   padding: var(--s4);
   z-index: 1;
 }
@@ -218,8 +314,8 @@
 .card.card--striped,
 .card--striped-aligned .card,
 .card.card--striped-aligned  {
-  --heading-color: var(--color-white);
-  --color: var(--heading-color);
+  --color: var(--color-white);
+  --heading-color: var(--color);
   --align-items: center;
   color: var(--color);
   display: block;
@@ -231,116 +327,11 @@
   background: var(--background-striped-primary-dark-xx);
 }
 
-.card.card--striped.card--background-striped-base-dark-x,
-.card.card--striped-aligned.card--background-striped-base-dark-x {
-  background: var(--background-striped-base-dark-x);
-}
-
-.card.card--striped.card--background-striped-base-light-x,
-.card.card--striped-aligned.card--background-striped-base-light-x {
-  background: var(--background-striped-base-light-x);
-}
-
-.card.card--striped.card--background-striped-base-light-xx,
-.card.card--striped-aligned.card--background-striped-base-light-xx {
-  background: var(--background-striped-base-light-xx);
-}
-
-.card.card--striped.card--background-striped-primary-dark-xx,
-.card.card--striped-left.card--background-striped-primary-dark-xx {
-  background: var(--background-striped-primary-dark-xx);
-}
-
-.card.card--striped.card--background-striped-primary-dark-x,
-.card.card--striped-aligned.card--background-striped-primary-dark-x {
-  background: var(--background-striped-primary-dark-x);
-}
-
-.card.card--striped.card--background-striped-primary-light-xx,
-.card.card--striped-aligned.card--background-striped-primary-light-xx {
-  background: var(--background-striped-primary-light-xx);
-}
-
-.card.card--striped.card--background-striped-secondary-dark-xx,
-.card.card--striped-aligned.card--background-striped-secondary-dark-xx {
-  background: var(--background-striped-secondary-dark-xx);
-}
-
-.card.card--striped.card--background-striped-secondary,
-.card.card--striped-aligned.card--background-striped-secondary {
-  background: var(--background-striped-secondary);
-}
-
-.card.card--striped.card--background-striped-accent-warm-dark-x,
-.card.card--striped-aligned.card--background-striped-accent-warm-dark-x {
-  background: var(--background-striped-accent-warm-dark-x);
-}
-
-.card.card--striped.card--background-striped-accent-warm-dark-xx,
-.card.card--striped-aligned.card--background-striped-accent-warm-dark-xx {
-  background: var(--background-striped-accent-warm-dark-xx);
-}
-
-.card.card--striped.card--background-striped-accent-warm-dark-xxx,
-.card.card--striped-aligned.card--background-striped-accent-warm-dark-xxx {
-  background: var(--background-striped-accent-warm-dark-xxx);
-}
-
-.card.card--striped.card--background-solid-base-dark-x,
-.card.card--striped-aligned.card--background-solid-base-dark-x {
-  background: var(--background-solid-base-dark-x);
-}
-
-.card.card--striped.card--background-solid-primary-dark-xx,
-.card.card--striped-aligned.card--background-solid-primary-dark-xx {
-  background: var(--background-solid-primary-dark-xx);
-}
-
-.card.card--striped.card--background-solid-primary-dark-x,
-.card.card--striped-aligned.card--background-solid-primary-dark-x {
-  background: var(--background-solid-primary-dark-x);
-}
-
-.card.card--striped.card--background-solid-primary-light-xx,
-.card.card--striped-aligned.card--background-solid-primary-light-xx {
-  background: var(--background-solid-primary-light-xx);
-}
-
-.card.card--striped.card--background-solid-secondary-dark-xx,
-.card.card--striped-aligned.card--background-solid-secondary-dark-xx {
-  background: var(--background-solid-secondary-dark-xx);
-}
-
-.card.card--striped.card--background-solid-secondary,
-.card.card--striped-aligned.card--background-solid-secondary {
-  background: var(--background-solid-secondary);
-}
-
-.card.card--striped.card--background-solid-accent-warm-dark-x,
-.card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
-  background: var(--background-solid-accent-warm-dark-x);
-}
-
-.card.card--striped.card--background-solid-accent-warm-dark-xx,
-.card.card--striped-aligned.card--background-solid-accent-warm-dark-xx {
-  background: var(--background-solid-accent-warm-dark-xx);
-}
-
-.card.card--striped.card--background-solid-accent-warm-dark-xxx,
-.card.card--striped-aligned.card--background-solid-accent-warm-dark-xxx {
-  background: var(--background-solid-accent-warm-dark-xxx);
-}
-
-.card.card--background-base-light-xxx{
-  background: var(--color-base-light-xxx);
-}
-
-/* Striped left addtional styling */
+/* Striped left additional styling */
 .card--striped-aligned .card,
 .card.card--striped-aligned {
   padding-block: var(--s5);
 }
-
 .card--striped-aligned .card__heading {
   --gap: var(--s2);
   display: flex;
@@ -352,6 +343,12 @@
   margin-inline-end: auto;
   flex-wrap: wrap;
   column-gap: var(--gap, 1rem);
+}
+
+.card--overlay .card__heading_tag,
+.card--striped .card__heading_tag,
+.card--striped-aligned .card__heading_tag {
+  color: var(--color-white);
 }
 
 .card--striped-aligned .card__heading .icon-wrapper {
@@ -408,11 +405,241 @@
 .card .sidebar-date {
   font-size: var(--s2);
 }
-
-
 /* END */
 
-/* Button varaints START*/
+
+/* BEGIN Background colors with striped backwards compatibility */
+/* Base */
+.card.card--default.card--background-base-light-xxx,
+.card.card--striped.card--background-base-light-xxx,
+.card.card--striped-aligned.card--background-base-light-xxx {
+  background: var(--background-base-light-xxx);
+}
+
+.card.card--default.card--background-base-dark-x,
+.card.card--striped.card--background-base-dark-x,
+.card.card--striped-aligned.card--background-base-dark-x {
+  background: var(--background-base-dark-x);
+}
+
+.card.card--default.card--background-base-dark-xxx,
+.card.card--striped.card--background-base-dark-xxx,
+.card.card--striped-aligned.card--background-base-dark-xxx {
+  background: var(--background-base-dark-xxx);
+}
+
+/* Accent */
+.card.card--default.card--background-accent-warm-light-xxxx,
+.card.card--striped.card--background-accent-warm-light-xxxx,
+.card.card--striped-aligned.card--background-accent-warm-light-xxxx {
+  background: var(--background-accent-warm-light-xxxx);
+}
+
+.card.card--default.card--background-accent-warm-dark-x,
+.card.card--striped.card--background-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-accent-warm-dark-x {
+  background: var(--background-accent-warm-dark-x);
+}
+
+.card.card--default.card--background-red,
+.card.card--striped.card--background-red ,
+.card.card--striped-aligned.card--background-red {
+  background: var(--background-red);
+}
+
+.card.card--default.card--background-brown,
+.card.card--striped.card--background-brown ,
+.card.card--striped-aligned.card--background-brown {
+  background: var(--background-brown);
+}
+
+/* Primary */
+.card.card--default.card--background-primary-light-xxx,
+.card.card--striped.card--background-primary-light-xxx ,
+.card.card--striped-aligned.card--background-primary-light-xxx {
+  background: var(--background-primary-light-xxx);
+}
+
+.card.card--default.card--background-primary-light-x,
+.card.card--striped.card--background-primary-light-x ,
+.card.card--striped-aligned.card--background-primary-light-x {
+  background: var(--background-primary-light-x);
+}
+
+.card.card--default.card--background-primary-dark-x,
+.card.card--striped.card--background-primary-dark-x ,
+.card.card--striped-aligned.card--background-primary-dark-x {
+  background: var(--background-primary-dark-x);
+}
+
+/* Secondary */
+.card.card--default.card--background-secondary,
+.card.card--striped.card--background-secondary {
+  background: var(--background-secondary);
+}
+
+.card.card--default.card--background-secondary-dark-x,
+.card.card--striped.card--background-secondary-dark-x {
+  background: var(--background-secondary-dark-x);
+}
+
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading *,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text *,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text a:visited,
+.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__buttons * {
+  --color: var(--color-white) !important;
+  --heading-color: var(--color);
+  --button-border: var(--color);
+  color: var(--color);
+}
+
+a.card--default.bg-adjust.card--clickable:hover:not(
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading_tag span {
+  --color: var(--color-white);
+  border-color: var(--color);
+}
+
+a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
+  background-color: var(--color-white);
+}
+
+.card--striped.card--background-base-light-xxx,
+.card--striped.card--background-base-light-xxx .card__heading > *,
+.card--striped.card--background-primary-light-xxx,
+.card--striped.card--background-primary-light-xxx .card__heading > *,
+.card--striped.card--background-accent-warm-light-xxxx,
+.card--striped.card--background-accent-warm-light-xxxx .card__heading > *,
+.card--striped-aligned.card--background-base-light-xxx,
+.card--striped-aligned.card--background-base-light-xxx .card__heading > *,
+.card--striped-aligned.card--background-primary-light-xxx,
+.card--striped-aligned.card--background-primary-light-xxx .card__heading > *,
+.card--striped-aligned.card--background-accent-warm-light-xxxx,
+.card--striped-aligned.card--background-accent-warm-light-xxxx .card__heading > * {
+  --color: var(--color-black);
+  color: var(--color);
+}
+
+.card--striped.card--background-base-light-xxx .button,
+.card--striped.card--background-primary-light-xxx .button,
+.card--striped.card--background-accent-warm-light-xxxx .button,
+.card--striped-aligned.card--background-base-light-xxx .button,
+.card--striped-aligned.card--background-primary-light-xxx .button,
+.card--striped-aligned.card--background-accent-warm-light-xxxx .button {
+  --color: var(--button-fg);
+  color: var(--color);
+}
+
+/* DEPRECATED BACKGROUND COLORS */
+
+.card.card--striped.card--background-striped-base-dark-x,
+.card.card--striped-aligned.card--background-striped-base-dark-x {
+  background: var(--background-striped-base-dark-x);
+}
+
+.card.card--striped.card--background-striped-base-light-x,
+.card.card--striped-aligned.card--background-striped-base-light-x {
+  background: var(--background-striped-base-light-xx);
+}
+
+.card.card--striped.card--background-striped-base-light-xx,
+.card.card--striped-aligned.card--background-striped-base-light-xx {
+  background: var(--background-striped-base-light-xx);
+}
+
+.card.card--striped.card--background-striped-primary-dark-xx,
+.card.card--striped-left.card--background-striped-primary-dark-xx {
+  background: var(--background-striped-primary-dark-xx);
+}
+
+.card.card--striped.card--background-striped-primary-dark-x,
+.card.card--striped-aligned.card--background-striped-primary-dark-x {
+  background: var(--background-striped-primary-dark-x);
+}
+
+.card.card--striped.card--background-striped-primary-light-xx,
+.card.card--striped-aligned.card--background-striped-primary-light-xx {
+  background: var(--background-striped-primary-light-xx);
+}
+
+.card.card--striped.card--background-striped-secondary-dark-xx,
+.card.card--striped-aligned.card--background-striped-secondary-dark-xx {
+  background: var(--background-striped-secondary-dark-xx);
+}
+
+.card.card--striped.card--background-striped-secondary,
+.card.card--striped-aligned.card--background-striped-secondary {
+  background: var(--background-striped-secondary);
+}
+
+.card.card--striped.card--background-striped-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-x {
+  background: var(--background-striped-accent-warm-dark-x);
+}
+
+.card.card--striped.card--background-striped-accent-warm-dark-xx,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-xx {
+  background: var(--background-striped-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-striped-accent-warm-dark-xxx,
+.card.card--striped-aligned.card--background-striped-accent-warm-dark-xxx {
+  background: var(--background-striped-accent-warm-dark-xxx);
+}
+
+.card.card--striped.card--background-solid-base-dark-x,
+.card.card--striped-aligned.card--background-solid-base-dark-x {
+  background: var(--background-base-dark-x);
+}
+
+.card.card--striped.card--background-solid-primary-dark-xx,
+.card.card--striped-aligned.card--background-solid-primary-dark-xx {
+  background: var(--background-solid-primary-dark-xx);
+}
+
+.card.card--striped.card--background-solid-primary-dark-x,
+.card.card--striped-aligned.card--background-solid-primary-dark-x {
+  background: var(--background-primary-dark-x);
+}
+
+.card.card--striped.card--background-solid-primary-light-xx,
+.card.card--striped-aligned.card--background-solid-primary-light-xx {
+  background: var(--background-solid-primary-light-xx);
+}
+
+.card.card--striped.card--background-solid-secondary-dark-xx,
+.card.card--striped-aligned.card--background-solid-secondary-dark-xx {
+  background: var(--background-secondary-dark-x);
+}
+
+.card.card--striped.card--background-solid-secondary,
+.card.card--striped-aligned.card--background-solid-secondary {
+  background: var(--background-secondary);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-x,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
+  background: var(--background-solid-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-xx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xx {
+  background: var(--background-solid-accent-warm-dark-xx);
+}
+
+.card.card--striped.card--background-solid-accent-warm-dark-xxx,
+.card.card--striped-aligned.card--background-solid-accent-warm-dark-xxx {
+  background: var(--background-solid-accent-warm-dark-xxx);
+}
+
+.card.card--background-base-light-xxx {
+  background: var(--color-base-light-xxx);
+}
+/* END */
+
+/* Button variants START*/
 .card--striped .card .button,
 .card.card--striped .button,
 .card--striped-aligned .card .button,
@@ -421,9 +648,9 @@
   color: var(--color);
 }
 
-.card .button.button--primary::after, 
-.card .button.button--primary:focus::after, 
-.card .button.button--text::after, 
+.card .button.button--primary::after,
+.card .button.button--primary:focus::after,
+.card .button.button--text::after,
 .card .button.button--text:focus::after {
   color: currentColor;
 }

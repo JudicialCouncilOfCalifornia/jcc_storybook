@@ -1,5 +1,6 @@
 .inline-form {
   --gap: 0;
+  --button-color: var(--button-fg);
   margin: 0 auto;
   border-radius: 2rem;
 }
@@ -9,7 +10,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: var(--corner-radius) ;
   background-color: var(--color-base-light-xx);
 }
 
@@ -23,7 +24,7 @@
 
 .inline-form input,
 .inline-form select {
-  color: var(--color);
+  color: var(--color-black) !important;
   background-color: var(--color-base-light-xx);
   border: 0;
   min-height: calc(var(--icon-size) * 1.26);
@@ -55,25 +56,27 @@
 
 .inline-form .form-item:first-child input,
 .inline-form .form-item:first-child select {
-  border-radius: 2rem 0 0 2rem;
+  border-radius: var(--corner-radius) 0 0 var(--corner-radius);
 }
 
 /* Submit buttons */
 .inline-form .form-item + .form-actions {
   margin-block-start: 0;
   display: flex;
+  padding-inline-end: var(--s-4);
 }
 
 .inline-form .form-actions input:is([type="submit"], .button),
 .inline-form .form-actions button {
-  --icon-size: var(--s1);
+  --icon-size: var(--s0);
+  --icon-color: var(--button-color);
   border-radius: 2rem;
-  border: 1px solid var(--accent-color);
-  background-color: var(--accent-color);
-  color: var(--color-white);
+  border: 1px solid var(--button-color) !important;
+  background-color: var(--button-color);
+  color: var(--color-white) !important;
   min-height: calc(var(--icon-size) * 1.26);
   max-height: calc(var(--icon-size) * 1.26);
-  padding: var(--s1);
+  padding: var(--s0);
   position: relative;
   line-height: 0;
 }
@@ -109,7 +112,7 @@
   inset-block-start: calc(var(--icon-size) / 1.9);
   inset-inline-start: calc(var(--icon-size) / 1.9);
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: var(--icon-color);
 }
 
 .inline-form .form-actions button .inline-form__submit-line {

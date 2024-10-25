@@ -33,7 +33,7 @@ h2 {
 
 h3 {
   font-size: var(--s2);
-  line-height: var(--s3); 
+  line-height: var(--s3);
 }
 
 h4 {
@@ -80,6 +80,10 @@ p + a {
 
 :where(p, h2, h3, h4, h5, h6) + p {
   margin-top: var(--s0);
+}
+
+p + :where(ul, ol, blockquote) {
+  margin-block-start: var(--s-3);
 }
 
 ul,

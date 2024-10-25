@@ -1,6 +1,10 @@
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'inline-form--' ~ variant : 'inline-form--default' %}
 
+{% set styles = [
+  submit_color ? '--button-fg: var(--' ~ submit_color ~ ');' : '',
+] %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
 {# Include variant classes form above. #}
@@ -9,6 +13,6 @@
   variant_class,
 ] %}
 
-<div class="{{ classes|join(' ') }}">
+<div class="{{ classes|join(' ') }}" style="{{ styles|join }}">
   {{ form }}
 </div>
