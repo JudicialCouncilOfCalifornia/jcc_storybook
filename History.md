@@ -1,4 +1,49 @@
 
+0.57.1 / 2024-10-25
+===================
+
+  * chore: Export libs.
+  * Removed NavTrigger.js file as its not needed
+  * Merge pull request #318 from JudicialCouncilOfCalifornia/deployment/20241101
+  * Merge branch 'COURTS-215-popular-links' into deployment/20241101
+  * [COURTS-215] -- updates.
+  * [COURTS-215] -- Added currentColor as default.
+  * Merge branch 'COURTS-215-popular-links' into deployment/20241101
+  * Merge pull request #320 from JudicialCouncilOfCalifornia/feature/COURTS-210-211--mega-hero-and-updated-card-theme
+  * [COURTS-210-211] -- Remove inline form test edits.
+  * [COURTS-215] -- changes.
+  * [Redesign Task] -- Fix section subcomponent top spacing appearance & clean auto-sizing heading.
+  * [COURTS-215] -- Changes to list.
+  * [Redesign Task] -- Fixed inline form input text color, section spacing, & auto-adjusting headings.
+  * [Redesign Task] -- Fixes for plain card horizontal handling and hero search text color.
+  * [Redesign Task] -- Adjust default heading color application.
+  * [Redesign Task] -- Adjust button, profile card hover, card, and deprecated colors.
+  * [Redesign Task] -- Button, profile card hover, card links, and deprecated colors.
+  * [Redesign Task] -- Protect card styling with section backgrounds.
+  * [Redesign Task] -- Adjust hero, hangover, cards, and section.
+  * [COURTS-210] -- grid/card widths on larger devices.
+  * [Redesign Task] -- Orig section CTA placement, card fixes, hover anim.
+  * [Redesign Task] -- Fix subsection spacing, inverse card link color, & mega hero content width.
+  * [Redesign Task] -- Fixes after section CTA placement plus secondary dark color.
+  * [Redesign Task] -- Mega hero, hangover, section, sprite & other tweaks.
+  * [COURTS-217] -- adjust hero hangover.
+  * [COURTS-211-214] -- section grid iOS fix & improved section color handling.
+  * [COURTS-214] -- section colors & bug fixes.
+  * [COURTS-211] -- media caption+citation adjust, overlay only supported for now.
+  * [COURTS-211] -- section integration bug fixes plus improvements.
+  * [COURTS-210-211] -- mega hero & updated card theme.
+  * [COURTS-215] -- Reverting changes.
+  * [COURTS-215] -- Updating if condition.
+  * [COURTS-215] -- Heading fix.
+  * [COURTS-215] -- Fixes for header.
+  * Merge branch 'master' into COURTS-215-popular-links
+  * [COURTS-215] -- CSS changes for list with links
+  * [COURTS-215] -- Some css updates.
+  * [COURTS-215] -- CSS Updates.
+  * [COURTS-215] -- CSS changes.
+  * [COURTS-215] -- Changed arrow, variant rename.
+  * [COURTS-215] -- Popular links.
+
 0.56.15 / 2024-10-21
 ===================
 
