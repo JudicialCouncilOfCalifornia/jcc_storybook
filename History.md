@@ -1,4 +1,10 @@
 
+0.57.2 / 2024-10-28
+===================
+
+  * chore: Export libs.
+  * [COURTS-210] -- Fix tabs not functioning on Drupal in 0.57.1
+
 0.57.1 / 2024-10-25
 ===================
 
