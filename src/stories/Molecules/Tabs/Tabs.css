@@ -193,3 +193,11 @@
 .tabs--alternate.tabs--as-accordion .tabs__tabpanel {
   margin-inline: var(--gap, 1.5rem);
 }
+
+.tabs__tabpanel details.stack > *:not(summary) + * {
+  margin-block-start: var(--gap, 1.5rem);
+}
+
+.tabs__tabpanel details.stack > summary + * {
+  margin-block-start: 0;
+}

@@ -9,7 +9,7 @@ function docReady(fn) {
 }
 
 docReady(function () {
-  'use strict';
+  // 'use strict';
 
   class Tabs {
 
