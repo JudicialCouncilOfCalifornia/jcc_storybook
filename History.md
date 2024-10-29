@@ -1,4 +1,10 @@
 
+0.57.3 / 2024-10-29
+===================
+
+  * chore: Export libs.
+  * [COURTS-210] -- Fixes to css oddities after redesign work.
+
 0.57.2 / 2024-10-28
 ===================
 
