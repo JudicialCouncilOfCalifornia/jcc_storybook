@@ -35,6 +35,10 @@
   align-self: center;
 }
 
+.header .header-search .header-search__form input {
+  --corner-radius: 5rem;
+}
+
 .header .header__secondary {
   margin-inline-start: auto;
   justify-content: flex-end;

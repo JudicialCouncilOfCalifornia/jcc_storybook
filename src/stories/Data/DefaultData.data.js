@@ -437,4 +437,9 @@ export let default_social_media_links_data = [
     url: "#",
     icon: "fa-twitter",
   },
+  {
+    text: "Flickr",
+    url: "#",
+    icon: "fa-flickr",
+  },
 ];

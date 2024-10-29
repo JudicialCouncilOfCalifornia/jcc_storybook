@@ -375,3 +375,7 @@
 .hangover .card.card--media-right img {
   border-radius: 0;
 }
+
+.hangover .hangover__top-hangover-content .card .card__text {
+  --color: var(--color-black);
+}

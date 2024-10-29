@@ -11,11 +11,11 @@
 }
 
 .section .section {
-  padding-block: 0;
+  padding: 0;
 }
 
 .section .section .section__content.box {
-  padding-block: 0;
+  padding: 0;
 }
 
 .section > * {
