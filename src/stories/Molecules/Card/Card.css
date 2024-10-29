@@ -320,20 +320,24 @@ a.card--clickable > .ext {
   color: var(--color);
   display: block;
   padding-inline: var(--s4);
-  padding: var(--s4);
   font-size: var(--s1);
   line-height: var(--s4);
   text-align: center;
   background: var(--background-striped-primary-dark-xx);
 }
 
-/* Striped left additional styling */
+.card--striped .card,
+.card.card--striped {
+  padding: var(--s4);
+}
+
 .card--striped-aligned .card,
 .card.card--striped-aligned {
-  padding-block: var(--s5);
+  padding: var(--s2);
+  padding-block: var(--s2);
 }
 .card--striped-aligned .card__heading {
-  --gap: var(--s2);
+  --gap: var(--s0);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -352,7 +356,7 @@ a.card--clickable > .ext {
 }
 
 .card--striped-aligned .card__heading .icon-wrapper {
-  width: 3.25rem;
+  width: 2.25rem;
   margin-inline-end: 0;
 }
 
