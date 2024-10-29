@@ -2,9 +2,9 @@
   --gap: var(--s2);
 }
 
-.cards .section__content {
+/* .cards .section__content {
   padding-inline: 0;
-}
+} */
 
 .cards .section__button {
   padding-inline-start: 0;

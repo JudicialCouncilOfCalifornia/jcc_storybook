@@ -244,7 +244,7 @@ li.section-nav__mobile__list__item + li.section-nav__mobile__list__item {
 .section-nav a.section-nav__mobile__button:hover,
 .section-nav button.section-nav__mobile__button:hover {
   background-color: var(--color-primary-light-x);
-  color: var(--color-white);
+  color: var(--color-white) !important;
 }
 
 .section-nav a.section-nav__mobile__button:hover .icon-wrapper,
