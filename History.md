@@ -1,4 +1,12 @@
 
+0.57.4 / 2024-10-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #324 from JudicialCouncilOfCalifornia/fix/find-my-court-feedback
+  * [fix/find-my-court-feedback] -- striped-aligned card css
+  * [COURTS-210] -- Fixes to css oddities after redesign work (continued).
+
 0.57.3 / 2024-10-29
 ===================
 
