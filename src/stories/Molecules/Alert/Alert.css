@@ -1,24 +1,27 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
-  --color: var(--color-black);
-  background-color: var(--color-primary-light-xx);
+  --color: var(--color-white);
   color: var(--color);
   padding-block: var(--s1);
 }
 
-.alert[data-alert-type="status"] {
+.alert[data-alert-type="info"] {
   --color: var(--color-black);
-  background-color: var(--color-secondary-light-xx);
+  background-color: var(--background-primary-light-xxx);
+}
+
+.alert[data-alert-type="status"] {
+  background-color: var(--background-secondary);
 }
 
 .alert[data-alert-type="warning"] {
-  background-color: var(--color-accent-warm-light-x);
+  background-color: var(--background-accent-warm-dark-x);
 }
 
 .alert[data-alert-type="error"] {
   --color: var(--color-white);
-  background-color: var(--color-primary-light-x);
+  background-color: var(--background-primary-light-x);
 }
 
 .alert > .container {
@@ -30,7 +33,6 @@
 
 .alert > .container > * {
   display: flex;
-  align-items: flex-start;
 }
 
 .alert .icon-wrapper {
@@ -42,6 +44,7 @@
 
 .alert__content {
   --max-width: 102ch;
+  flex: 1 0 auto;
   display: block;
   max-inline-size: var(--max-width);
 }
@@ -52,6 +55,19 @@
   margin-inline-start: 0;
 }
 
+.alert__content__inner {
+  flex: 1 0 auto;
+  margin-inline-start: var(--gap);
+}
+
+.alert__content__inner p:not(.alert__content__heading) {
+  font-size: var(--s-1);
+}
+
+.alert__content__inner a {
+  color: var(--color);
+}
+
 .alert__content-single > .alert__content__inner {
   margin-inline-start: var(--s-3);
   display: block;
@@ -59,10 +75,6 @@
 
 .alert__content-single .alert__content__heading {
   margin-inline-end: var(--s-5);
-}
-
-.alert__content-multiple .alert__content__heading {
-  margin-inline-start: var(--s2);
 }
 
 .alert__dismiss-button {
@@ -101,7 +113,6 @@
 }
 
 .section .alert[data-alert-type="status"] {
-  --color: var(--color-black);
   border-inline-start: var(--s-2) solid var(--color-secondary-light-xx);
   background-color: var(--color-secondary-light-xxx);
 }
@@ -112,7 +123,6 @@
 }
 
 .section .alert[data-alert-type="error"] {
-  --color: var(--color-black);
   border-inline-start: var(--s-2) solid var(--color-error);
   background-color: var(--color-error-light);
 }
