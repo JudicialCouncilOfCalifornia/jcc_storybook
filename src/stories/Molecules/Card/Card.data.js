@@ -132,7 +132,6 @@ export default {
   media_right: {
     variant: "media-right",
     clickable_card: false,
-    caption_overlay: true,
     background: null,
     aspect: [],
     media:
@@ -143,7 +142,6 @@ export default {
       citation: "This is citation for the media if provided",
       overlay: true,
     },
-    caption_in_image: true,    
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
     button_data: [
@@ -162,7 +160,6 @@ export default {
   media_top: {
     variant: "media-top",
     clickable_card: false,
-    caption_overlay: true,
     background: null,
     aspect: [],
     media:
@@ -173,7 +170,6 @@ export default {
       citation: "This is citation for the media if provided",
       overlay: true,
     },
-    caption_in_image: true,
     heading: "Heading For A Card",
     text: "<p>Lorem ipsum dolor sit amet consectetur adipiscing, elit penatibus dignissim placerat ante vulputate, blandit donec enim senectus ornare. Ac non lacus sollicitudin vulputate sociosqu.</p>",
     button_data: [

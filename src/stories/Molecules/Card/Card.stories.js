@@ -61,10 +61,6 @@ export default {
       description: "URL",
       table: { defaultValue: { summary: null } },
     },
-    caption_overlay: {
-      description: "Add caption overlay in card",
-      table: { defaultValue: { summary: false } },
-    },
     media: {
       description: "Image, Video",
       table: { defaultValue: { summary: null } },

@@ -6,7 +6,7 @@
   padding: var(--s-1) var(--s1);
   border: 2px solid var(--button-border);
   border-radius: var(--s-5);
-  color: var(--button-fg);
+  color: var(--dynamic-color, var(--button-fg));
   text-decoration: none;
   font-family: var(--font-primary);
   font-size: var(--s0);
@@ -14,7 +14,6 @@
   font-weight: 400;
   letter-spacing: 0.01rem;
   position: relative;
-  text-wrap: pretty;
 }
 
 .button:hover {
@@ -71,8 +70,8 @@
 .button.button--primary::after,
 .button.button--primary:focus::after,
 .button.button--text::after,
-.button.button--text:focus::after {  
-  background-color: var(--dynamic-color, currentColor);
+.button.button--text:focus::after {
+  background-color: currentColor;
 }
 .button.button--primary:hover::after,
 .button.button--text:hover::after
