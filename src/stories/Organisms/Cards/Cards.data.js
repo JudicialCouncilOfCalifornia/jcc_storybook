@@ -1,6 +1,8 @@
 import Card from "../../Molecules/Card/Card.twig";
 import {
   Default as CardDefault,
+  Bordered as CardBordered,
+  BorderedCenter as CardBorderedCenter,
   Striped as CardStriped,
   StripedAligned as CardStripedAligned,
   NoMedia as CardNoMedia,
@@ -52,6 +54,92 @@ export default {
       Card({
         has_section_heading: true,
         ...CardDefault.args
+      }),
+    ],
+    section_classes: ["cards"],
+
+  },
+  bordered: {
+    first_component: false,
+    variant: "default",
+    card_variant: "card--bordered",
+    sub_component_layout: "flex flex--60-40",
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+    },
+    heading: "Heading Example",
+    text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+    sub_component_data: [
+      Card({
+        has_section_heading: true,
+        ...CardBordered.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardBordered.args
+      }),
+    ],
+    section_classes: ["cards"],
+
+  },
+  bordered_center: {
+    first_component: false,
+    variant: "default",
+    card_variant: "card--bordered-center",
+    sub_component_layout: "flex flex--60-40",
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: false,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",
+    brow_data: {
+      variant: "default",
+      part_one: "Brow Example",
+      part_two: "",
+    },
+    heading: "Heading Example",
+    text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis arcu lacus, et facilisis orci facilisis ut.</p>",
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+    sub_component_data: [
+      Card({
+        has_section_heading: true,
+        ...CardBorderedCenter.args
+      }),
+      Card({
+        has_section_heading: true,
+        ...CardBorderedCenter.args
       }),
     ],
     section_classes: ["cards"],
