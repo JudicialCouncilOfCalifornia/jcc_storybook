@@ -1,4 +1,11 @@
 
+0.57.6 / 2024-10-31
+===================
+
+  * chore: Export libs.
+  * Merge pull request #326 from JudicialCouncilOfCalifornia/bugfix/cards-actions-and-inverse-colors
+  * [bugfix/cards-actions-and-inverse-colors bugfix/cards-actions-and-inverse-colors] -- Cards tuning & more inverse color conflicts
+
 0.57.5 / 2024-10-30
 ===================
 
