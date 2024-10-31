@@ -1,4 +1,11 @@
 
+0.57.5 / 2024-10-30
+===================
+
+  * chore: Export libs.
+  * Merge pull request #325 from JudicialCouncilOfCalifornia/bugfix/card-trial-fixes
+  * [bugfix/card-trial-fixes] -- Card bugs: button align, default card legacy colors, nested anchor handle.
+
 0.57.4 / 2024-10-29
 ===================
 
