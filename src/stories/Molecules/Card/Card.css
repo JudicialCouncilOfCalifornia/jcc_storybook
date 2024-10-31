@@ -36,7 +36,9 @@
 .card.card--media-left img,
 .card.card--media-left iframe,
 .card.card--media-right img,
-.card.card--media-right iframe {
+.card.card--media-right iframe,
+.card.card--media-top img,
+.card.card--media-top iframe {
   border-radius: var(--corner-radius);
 }
 
@@ -53,7 +55,8 @@
 
 .card--default:not(.bg-adjust) .caption-overlay .card__media-caption,
 .card.card--media-left .caption-overlay .card__media-caption,
-.card.card--media-right .caption-overlay .card__media-caption {
+.card.card--media-right .caption-overlay .card__media-caption,
+.card.card--media-top .caption-overlay .card__media-caption {
   border-bottom-left-radius: var(--corner-radius);
   border-bottom-right-radius: var(--corner-radius);
 }
@@ -125,12 +128,18 @@
   gap: var(--gap);
 }
 
-.card__text {
+.card:only-child .card__text,
+.card:only-child .card__text {
   flex: 1 0 70%;
+}
+
+.card__text,
+.card__media + .card__main .card__text {
+  flex: 1 0 80%;
   color: var(--color-black);
 }
 
-.card__buttons {
+.card .card__buttons {
   flex: 0 1 auto;
 }
 
@@ -240,6 +249,10 @@ a.card--clickable > .ext {
   gap: 0;
 }
 
+.card--bordered-center .card__buttons {
+  flex: auto;
+}
+
 /* Media Left */
 .card--media-left .card .switcher,
 .card.card--media-left .switcher {
@@ -253,6 +266,13 @@ a.card--clickable > .ext {
   --measure: 40rem;
   align-items: start;
   flex-direction: row-reverse;
+}
+
+/* Media Top */
+.card--media-top .card .switcher {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: var(--align-items, flex-start);
 }
 
 /* Overlay */
@@ -497,13 +517,19 @@ a.card--clickable > .ext {
   color: var(--color);
 }
 
-a.card--default.bg-adjust.card--clickable:hover:not(
+a.card--clickable:not(
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__text,
+a.card--clickable:hover:not(
   .card--background-base-light-xxx,
   .card--background-primary-light-xxx,
   .card--background-accent-warm-light-xxxx
 ) .card__heading_tag span {
-  --color: var(--color-white);
+  --color: var(--color-white) !important;
   border-color: var(--color);
+  color: var(--color);
 }
 
 a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
@@ -538,101 +564,121 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
 
 /* DEPRECATED BACKGROUND COLORS */
 
+.card.card--default.card--background-striped-base-dark-x,
 .card.card--striped.card--background-striped-base-dark-x,
 .card.card--striped-aligned.card--background-striped-base-dark-x {
   background: var(--background-striped-base-dark-x);
 }
 
+.card.card--default.card--background-striped-base-light-x,
 .card.card--striped.card--background-striped-base-light-x,
 .card.card--striped-aligned.card--background-striped-base-light-x {
   background: var(--background-striped-base-light-xx);
 }
 
+.card.card--default.card--background-striped-base-light-xx,
 .card.card--striped.card--background-striped-base-light-xx,
 .card.card--striped-aligned.card--background-striped-base-light-xx {
   background: var(--background-striped-base-light-xx);
 }
 
+.card.card--default.card--background-striped-primary-dark-xx,
 .card.card--striped.card--background-striped-primary-dark-xx,
 .card.card--striped-left.card--background-striped-primary-dark-xx {
   background: var(--background-striped-primary-dark-xx);
 }
 
+.card.card--default.card--background-striped-primary-dark-x,
 .card.card--striped.card--background-striped-primary-dark-x,
 .card.card--striped-aligned.card--background-striped-primary-dark-x {
   background: var(--background-striped-primary-dark-x);
 }
 
+.card.card--default.card--background-striped-primary-light-xx,
 .card.card--striped.card--background-striped-primary-light-xx,
 .card.card--striped-aligned.card--background-striped-primary-light-xx {
   background: var(--background-striped-primary-light-xx);
 }
 
+.card.card--default.card--background-striped-secondary-dark-xx,
 .card.card--striped.card--background-striped-secondary-dark-xx,
 .card.card--striped-aligned.card--background-striped-secondary-dark-xx {
   background: var(--background-striped-secondary-dark-xx);
 }
 
+.card.card--default.card--background-striped-secondary,
 .card.card--striped.card--background-striped-secondary,
 .card.card--striped-aligned.card--background-striped-secondary {
   background: var(--background-striped-secondary);
 }
 
+.card.card--default.card--background-striped-accent-warm-dark-x,
 .card.card--striped.card--background-striped-accent-warm-dark-x,
 .card.card--striped-aligned.card--background-striped-accent-warm-dark-x {
   background: var(--background-striped-accent-warm-dark-x);
 }
 
+.card.card--default.card--background-striped-accent-warm-dark-xx,
 .card.card--striped.card--background-striped-accent-warm-dark-xx,
 .card.card--striped-aligned.card--background-striped-accent-warm-dark-xx {
   background: var(--background-striped-accent-warm-dark-xx);
 }
 
+.card.card--default.card--background-striped-accent-warm-dark-xxx,
 .card.card--striped.card--background-striped-accent-warm-dark-xxx,
 .card.card--striped-aligned.card--background-striped-accent-warm-dark-xxx {
   background: var(--background-striped-accent-warm-dark-xxx);
 }
 
+.card.card--default.card--background-solid-base-dark-x,
 .card.card--striped.card--background-solid-base-dark-x,
 .card.card--striped-aligned.card--background-solid-base-dark-x {
   background: var(--background-base-dark-x);
 }
 
+.card.card--default.card--background-solid-primary-dark-xx,
 .card.card--striped.card--background-solid-primary-dark-xx,
 .card.card--striped-aligned.card--background-solid-primary-dark-xx {
   background: var(--background-solid-primary-dark-xx);
 }
 
+.card.card--default.card--background-solid-primary-dark-x,
 .card.card--striped.card--background-solid-primary-dark-x,
 .card.card--striped-aligned.card--background-solid-primary-dark-x {
   background: var(--background-primary-dark-x);
 }
 
+.card.card--default.card--background-solid-primary-light-xx,
 .card.card--striped.card--background-solid-primary-light-xx,
 .card.card--striped-aligned.card--background-solid-primary-light-xx {
   background: var(--background-solid-primary-light-xx);
 }
 
+.card.card--default.card--background-solid-secondary-dark-xx,
 .card.card--striped.card--background-solid-secondary-dark-xx,
 .card.card--striped-aligned.card--background-solid-secondary-dark-xx {
   background: var(--background-secondary-dark-x);
 }
 
+.card.card--default.card--background-solid-secondary,
 .card.card--striped.card--background-solid-secondary,
 .card.card--striped-aligned.card--background-solid-secondary {
   background: var(--background-secondary);
 }
 
+.card.card--default.card--background-solid-accent-warm-dark-x,
 .card.card--striped.card--background-solid-accent-warm-dark-x,
 .card.card--striped-aligned.card--background-solid-accent-warm-dark-x {
   background: var(--background-solid-accent-warm-dark-xx);
 }
 
+.card.card--default.card--background-solid-accent-warm-dark-xx,
 .card.card--striped.card--background-solid-accent-warm-dark-xx,
 .card.card--striped-aligned.card--background-solid-accent-warm-dark-xx {
   background: var(--background-solid-accent-warm-dark-xx);
 }
 
+.card.card--default.card--background-solid-accent-warm-dark-xxx,
 .card.card--striped.card--background-solid-accent-warm-dark-xxx,
 .card.card--striped-aligned.card--background-solid-accent-warm-dark-xxx {
   background: var(--background-solid-accent-warm-dark-xxx);

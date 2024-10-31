@@ -112,6 +112,9 @@ MediaLeft.args = data.media_left;
 export const MediaRight = Template.bind({});
 MediaRight.args = data.media_right;
 
+export const MediaTop = Template.bind({});
+MediaTop.args = data.media_top;
+
 export const Overlay = Template.bind({});
 Overlay.args = data.overlay;
 

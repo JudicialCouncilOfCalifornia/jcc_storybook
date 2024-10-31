@@ -154,6 +154,12 @@ const Template = ({ ...args }) => {
 export const Default = Template.bind({});
 Default.args = data.default;
 
+export const Bordered = Template.bind({});
+Bordered.args = data.bordered;
+
+export const BorderedCenter = Template.bind({});
+BorderedCenter.args = data.bordered_center;
+
 export const MediaLeft = Template.bind({});
 MediaLeft.args = data.media_left;
 

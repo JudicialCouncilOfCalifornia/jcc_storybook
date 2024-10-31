@@ -80,7 +80,11 @@
           <div class="card__body">
             {% if text is not empty %}
               <div class="card__text">
-                {{ text }}
+                {% if clickable_card %}
+                  {{ text|striptags('<p><em><strong><u><s><sup><sub><ol><li><ul>')|raw }}
+                {% else %}
+                  {{ text }}
+                {% endif %}
               </div>
             {% endif %}
             {% if tag == 'div' and button_data is not empty %}
