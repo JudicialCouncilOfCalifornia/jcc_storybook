@@ -154,14 +154,26 @@
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
 ) .section__button *  {
   --color: var(--color-white);
+  --hover-color: var(--color-white);
   --color-base: var(--color);
   --heading-color: var(--color);
   --accent-color: var(--color);
   --button-border: var(--color);
+  --dynamic-color: var(--color) !important;
+  --border-color: var(--color);
   color: var(--color);
 }
 
 /* Adjust default card with no background */
+.section.bg-adjust.cards:not(
+  [style*="--bg: var(--color-none);"],
+  [style*="--bg: var(--color-default);"],
+  [style*="--bg: var(--color-white);"],
+  [style*="--bg: var(--color-warm-dark-x);"],
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"]
+) .section__main .card:not(.bg-adjust) .card__inner *,
 .section.bg-adjust:not(
   [style*="--bg: var(--color-none);"],
   [style*="--bg: var(--color-default);"],
@@ -170,7 +182,7 @@
   [style*="--bg: var(--color-base-light-xxx);"],
   [style*="--bg: var(--color-primary-light-xxx);"],
   [style*="--bg: var(--color-accent-warm-light-xxxx);"]
-) .section__main .cards .card:not(.bg-adjust) .card__main * {
+) .section__main .cards .card:not(.bg-adjust) .card__inner * {
   --color: var(--color-white) !important;
 }
 

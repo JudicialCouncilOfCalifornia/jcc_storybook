@@ -1,4 +1,7 @@
 {% set variant_class = variant ? 'list--' ~ variant : null %}
+{% if withmenu %}
+  {% set variant_class = 'list--none' %}
+{% endif %}
 
 {% set classes = [
   'list',
@@ -12,34 +15,30 @@
 {% set container_classes = [
   'list__container',
   layout,
+  withmenu ? 'with_menu' : ''
 ] %}
 
 {% set item_classes = [
   'list__item',
   wider_span ? 'wide_span' : '',
-  withmenu ? 'with_menu' : ''
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-{% if heading %}
-    <{{h}} class="list-heading{% if withmenu %}__popular-links-heading{% endif %}">{{ heading }}</{{h}}>
-{% endif %}
-  <{{tag}} class="{{ container_classes|join(' ') }} {% if withmenu %} link-container {% endif %}" role="list">  
-   {% if withmenu %}
-    {% for item in items %}   
-    <li class="{{ item_classes|merge(['link-item'])|join(' ') }}">
-      {{item}}
-    </li>   
-    {% endfor %}
-  {% else %}
-   {% for item in items %}
+  {% if heading %}
+    <{{h}} class="list-heading">{{ heading }}</{{h}}>
+  {% endif %}
+  <{{tag}} class="{{ container_classes|join(' ') }}" role="list">
+    {% for item in items %}
       <li class="{{ item_classes|join(' ') }}">
         {% if item.label %}
           <span class="list__item-label">{{ item.label|title }}:</span>
         {% endif %}
-        {{ item.text }}
+        {% if item.text %}
+          {{ item.text }}
+        {% else %}
+          {{ item }}
+        {% endif %}
       </li>
     {% endfor %}
-    {% endif %} 
   </{{tag}}>
 </div>
