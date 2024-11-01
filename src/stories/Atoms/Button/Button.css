@@ -42,18 +42,6 @@
   border: 2px solid var(--color-accent-warm-dark-x);  
 }
 
-.button.button--text:hover::before,
-.button.button--text:focus::before, 
-.button.button--text:active::before{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: currentColor;
-}
-
 .button::after {
   margin-inline-start: var(--s-5);
   content: '';
@@ -171,7 +159,8 @@
 .button.button--text:focus
  {
   color: var(--color-red); 
-  outline: none;  
+  outline: none;
+  text-decoration: underline;
 }
 
 .button.button--text:active {
