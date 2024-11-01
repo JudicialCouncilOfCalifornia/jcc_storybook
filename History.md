@@ -1,10 +1,17 @@
 
+0.57.7 / 2024-11-01
+===================
+
+  * chore: Export libs.
+  * Merge pull request #327 from JudicialCouncilOfCalifornia/bugfix/clickable-card-text-color-regression
+  * [bugfix/clickable-card-text-color-regression] -- Fix clickable transparent card, card top align & popular menu link states.
+
 0.57.6 / 2024-10-31
 ===================
 
   * chore: Export libs.
   * Merge pull request #326 from JudicialCouncilOfCalifornia/bugfix/cards-actions-and-inverse-colors
-  * [bugfix/cards-actions-and-inverse-colors bugfix/cards-actions-and-inverse-colors] -- Cards tuning & more inverse color conflicts
+  * [bugfix/cards-actions-and-inverse-colors] -- Cards tuning & more inverse color conflicts
 
 0.57.5 / 2024-10-30
 ===================
