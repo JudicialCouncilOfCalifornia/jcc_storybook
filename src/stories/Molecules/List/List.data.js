@@ -110,14 +110,14 @@ export default {
             href: "#",
             variant: "text",
             aria_label: "More descriptive label for screen readers",
-            color: '#005EA2',           
+            color: 'var(--color-primary)',
       }),
       Button({
-        label: "This is an example of really long popular link This is an example of really long popular linkThis is an example of really long popular link",
+        label: "This is an example of really long popular link This is an example of really long popular link This is an example of really long popular link",
             href: "#",
             variant: "text",
             aria_label: "More descriptive label for screen readers",
-            color: '#005EA2',
+            color: 'var(--color-primary)',
       })
     ],
   },
