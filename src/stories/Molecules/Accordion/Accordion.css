@@ -91,6 +91,10 @@
   background-color: hsla(30, 98%, 99%, 0.7);
 }
 
+.section__main .accordion .body {
+  margin-block-start: 0;
+}
+
 /**
  * Accordion animation:
  * Fade in content on open, Fade out content on close.
