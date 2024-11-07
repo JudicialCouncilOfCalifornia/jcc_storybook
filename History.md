@@ -1,4 +1,11 @@
 
+0.57.8 / 2024-11-06
+===================
+
+  * chore: Export libs.
+  * Merge pull request #328 from JudicialCouncilOfCalifornia/feature/COURTS-283-accordions-spacing
+  * [COURTS-283] -- accordion spacing in main-section
+
 0.57.7 / 2024-11-01
 ===================
 
