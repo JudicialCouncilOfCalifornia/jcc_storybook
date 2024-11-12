@@ -44,7 +44,6 @@
 
 .alert__content {
   --max-width: 102ch;
-  flex: 1 0 auto;
   display: block;
   max-inline-size: var(--max-width);
 }
@@ -53,11 +52,6 @@
 .alert__content ol {
   list-style-position: outside;
   margin-inline-start: 0;
-}
-
-.alert__content__inner {
-  flex: 1 0 auto;
-  margin-inline-start: var(--gap);
 }
 
 .alert__content__inner p:not(.alert__content__heading) {
@@ -106,10 +100,15 @@
 }
 
 /* Alerts inside of a layout section paragraph. */
+.section .alert,
+.section .alert p,
+.section .alert .icon-wrapper {
+  color: var(--color-black);
+}
+
 .section .alert {
   border-inline-start: var(--s-2) solid var(--color-primary-light-xx);
   background-color: var(--color-primary-light-xxx);
-  color: var(--color);
 }
 
 .section .alert[data-alert-type="status"] {

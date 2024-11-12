@@ -4,4 +4,9 @@ export default {
     label: "Pill",
     url: "#",
   },
+  rectangle: {
+    variant: "rectangle",
+    label: "Pill",
+    url: "#",
+  },
 };

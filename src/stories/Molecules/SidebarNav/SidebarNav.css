@@ -316,7 +316,7 @@ button.sidebar-nav__button.is-active {
   box-shadow: none;;
 }
 
-.has-sidebar-navigation .section .container.stack > *, 
+.has-sidebar-navigation .section .container.stack > *,
 .has-sidebar-navigation .section .container.stack > .section__header,
 .has-sidebar-navigation .section .container.stack > .section__main,
 .has-sidebar-navigation .section .container.stack > .section__button {
@@ -326,7 +326,9 @@ button.sidebar-nav__button.is-active {
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > *, 
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__header,
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__main,
-.mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__button {
+.mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__button,
+.has-sidebar-navigation .section .container.stack > .section__main .section .section__main,
+.mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__main .section .section__main {
   padding-inline-start: unset;
 }
 
