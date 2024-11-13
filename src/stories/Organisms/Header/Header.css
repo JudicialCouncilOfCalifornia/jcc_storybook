@@ -66,12 +66,14 @@
   justify-content: right !important;
 }
 
-.header__secondary-nav > div {
+.header__secondary-nav > div,
+.header__secondary-nav > nav {
   display: flex;
   align-self: stretch;
 }
 
-.header__secondary-nav > div > ul {
+.header__secondary-nav > div > ul,
+.header__secondary-nav > nav > ul {
   align-self: center;
 }
 
