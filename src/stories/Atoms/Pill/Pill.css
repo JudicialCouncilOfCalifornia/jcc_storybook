@@ -12,3 +12,12 @@
   color: var(--color);
   text-decoration: none;
 }
+
+/* Variants */
+.pill--rectangle {
+  --background-color: var(--color-accent-warm-light-xx);
+  --color: var(--color-black);
+  border-radius: var(--corner-radius);
+  text-transform: uppercase;
+  font-weight: 800;
+}

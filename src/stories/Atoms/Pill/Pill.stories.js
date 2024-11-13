@@ -18,5 +18,8 @@ const Template = ({ ...args }) => {
 };
 
 export const Default = Template.bind({});
-
 Default.args = data.default;
+
+export const Rectangle = Template.bind({});
+Rectangle.args = data.rectangle;
+
