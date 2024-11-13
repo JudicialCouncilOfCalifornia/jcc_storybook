@@ -1,4 +1,16 @@
 
+0.57.9 / 2024-11-13
+===================
+
+  * chore: Export libs.
+  * [Fix/Style] -- Secondary nav in header alignment fix
+  * Merge pull request #331 from JudicialCouncilOfCalifornia/fix/fix-accessibility-for-navtrigger
+  * [Fix/Accessibility] -- Fix trigger wrapper and accessibility settings for the NavTrigger component
+  * Merge pull request #330 from JudicialCouncilOfCalifornia/fix/fix-accessibility-setups-on-nav-and-tab-components
+  * [Fix/Accessibility] -- Fix accessibility settings and setups to the navigation based components and tabs
+  * Merge pull request #329 from JudicialCouncilOfCalifornia/feature/COURTS-291--alert-adjustments
+  * [COURTS-291] -- alert fixes, pill updates, & unrelated sidebar nav fix
+
 0.57.8 / 2024-11-06
 ===================
 
