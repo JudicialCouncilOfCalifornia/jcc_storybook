@@ -12,7 +12,7 @@
 ] %}
 
 {% if display_demo %}<div class="nav-trigger__with-demo">{% endif %}
-  <label class="{{ classes|join(' ')}}">
+  <label class="{{ classes|join(' ')}}" aria-label="{{ label }}">
     {% if show_label and label %}
     <div class="nav-trigger__label" id="{{ nav_id }}--mobile">
       <span>{{ label }}</span>
