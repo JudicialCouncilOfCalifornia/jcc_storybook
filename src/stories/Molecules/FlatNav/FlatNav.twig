@@ -12,7 +12,7 @@
   has_label,
 ] %}
 
-<div class="{{ classes|join(' ') }}">
+<nav class="{{ classes|join(' ') }}">
 
   {% if show_label and label %}
   <div class="flat-nav__label" id="{{ nav_id }}">
@@ -20,7 +20,7 @@
   </div>
   {% endif %}
 
-  <ul class="stack flat-nav__group__list nav-level-1" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+  <ul class="stack flat-nav__group__list nav-level-1" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
     {% for i,link in links %}
       
       {% set parent = link.links is not empty ? true : false %}
@@ -57,4 +57,4 @@
     {% endfor %}
   </ul>
 
-</div>
+</nav>
