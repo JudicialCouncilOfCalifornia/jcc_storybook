@@ -51,13 +51,14 @@
 
       <details
         id='{{ panel_id }}'
-        role="tabpanel"
         tabindex="0"
         aria-labelledby='{{ tab_id }}'
         class="stack"
       >
         <summary><div class="tabs__label focus">{{ item.label }}</div></summary>
-        {{ item.content }}
+        <div role="tabpanel" class="tabs__tabpanel__inner">
+          {{ item.content }}
+        </div>
       </details>
     {% endfor %}
   </div>

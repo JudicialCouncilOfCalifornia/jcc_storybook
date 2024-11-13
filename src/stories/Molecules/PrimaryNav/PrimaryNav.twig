@@ -15,14 +15,14 @@
 ] %}
 
 <div class="{{ classes|join(' ') }}">
-  <div class="cluster detect-wrap detect-wrap--observed primary-nav__desktop--wrapper">
+  <nav class="cluster detect-wrap detect-wrap--observed primary-nav__desktop--wrapper">
     {% if show_label and label %}
     <div class="primary-nav__label" id="{{ nav_id }}">
       <span>{{ label }}</span>
     </div>
     {% endif %}
 
-    <ul class="primary-nav__desktop nav-level-1 reel no-bar" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+    <ul class="primary-nav__desktop nav-level-1 reel no-bar" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
       {% for i,link in links %}
         
         {% set parent = link.links is not empty ? true : false %}
@@ -69,7 +69,7 @@
         </li>
       {% endfor %}
     </ul>
-  </div>
+  </nav>
 
   {% if display_mobile_version %}
     <div class="primary-nav__mobile--wrapper">

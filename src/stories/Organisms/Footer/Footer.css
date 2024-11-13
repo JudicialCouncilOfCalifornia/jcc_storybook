@@ -107,6 +107,7 @@
 }
 
 .footer .footer__link .button {
+  --footer-link-color: #b04f00;
   font-size: var(--s-1);
   color: var(--footer-link-color);
 }
@@ -128,6 +129,7 @@
 
 .footer .footer__social .link .icon-wrapper {
   --icon-size: var(--s0);
+  --social-icon-color: #b04f00;
   height: var(--icon-size);
   width: var(--icon-size);
   color: var(--social-icon-color);

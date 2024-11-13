@@ -20,13 +20,13 @@
   variant != 'stacked' ? 'reel no-bar' : '',
 ] %}
 
-<div class="{{ classes|join(' ')|trim }}">
+<nav class="{{ classes|join(' ')|trim }}" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% else %} aria-label="Secondary navigation" {% endif %}>
   {% if show_label and label %}
     <div class="secondary-nav__label" id="{{ nav_id }}">
       <span>{{ label }}</span>
     </div>
   {% endif %}
-	<ul class="{{ list_classes|join(' ')|trim }}" role="navigation" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
+	<ul class="{{ list_classes|join(' ')|trim }}" >
 		{% for link in links %}
 			<li class="secondary-nav__list__item">
 				{% set link_class = link.is_current ? 'active' : '' %}
@@ -34,4 +34,4 @@
 			</li>
 		{% endfor %}
 	</ul>
-</div>
+</nav>
