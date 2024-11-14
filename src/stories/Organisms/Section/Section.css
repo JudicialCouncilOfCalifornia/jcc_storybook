@@ -101,6 +101,8 @@
 
 .section__main.flex--75-25 > *:nth-child(2) {
   flex-basis: calc(25% - var(--gap));
+  margin-block-start: 0;
+  margin-block-end: var(--s5);
 }
 
 .section__main.flex--70-30 > *:nth-child(1) {
@@ -109,6 +111,8 @@
 
 .section__main.flex--70-30 > *:nth-child(2) {
   flex-basis: calc(30% - var(--gap));
+  margin-block-start: 0;
+  margin-block-end: var(--s5);
 }
 
 .section__main.flex--60-40 > *:nth-child(1) {
@@ -117,6 +121,19 @@
 
 .section__main.flex--60-40 > *:nth-child(2) {
   flex-basis: calc(40% - var(--gap));
+  margin-block-start: 0;
+  margin-block-end: var(--s5);
+}
+
+.section__main.flex--70-30 > *:nth-child(2) .container .body,
+.section__main.flex--60-40 > *:nth-child(2) .container .body,
+.section__main.flex--75-25 > *:nth-child(2) .container .body {
+  margin-block-start: 0;
+}
+
+.section__main.grid > .body {
+  margin-block-start: 0;
+  margin-block-end: var(--s5);
 }
 
 .section__main .main-sidebar{
@@ -310,4 +327,11 @@
 /* Add missing bottom spacing when centered within section */
 .section__main.center .card--default.bg-adjust:not(:first-child) {
   margin-block-start: var(--gap);
+}
+
+.section .component_group > .container > div > div {
+  margin-block-end: var(--s5);
+}
+.section .component_group > .container > div > div:nth-last-child(1) {
+  margin-block-end: 0;
 }

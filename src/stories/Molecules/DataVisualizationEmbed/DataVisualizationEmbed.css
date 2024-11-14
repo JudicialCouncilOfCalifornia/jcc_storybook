@@ -5,6 +5,7 @@
 
 .data-visualization-embed {
   max-width: 100%;
+  margin-block-start: var(--gap, 1.5rem);
 }
 
 .data-visualization-embed .data-visualization-clip {
