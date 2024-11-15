@@ -1,4 +1,11 @@
 
+0.57.10 / 2024-11-14
+===================
+
+  * chore: Export libs.
+  * Merge pull request #332 from JudicialCouncilOfCalifornia/feature/COURTS-277-spacing-tuning
+  * [COURTS-277] -- css updates
+
 0.57.9 / 2024-11-13
 ===================
 
