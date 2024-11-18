@@ -82,7 +82,7 @@ export default {
     text: "",
     button_data: {
       label: "See all announcements",
-      href: "http://www.wikipedia.org",
+      href: "#",
       variant: "primary",
     },
     sub_component_data: [
