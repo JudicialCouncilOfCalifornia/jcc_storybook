@@ -512,12 +512,14 @@ a.card--clickable > .ext {
 
 /* Secondary */
 .card.card--default.card--background-secondary,
-.card.card--striped.card--background-secondary {
+.card.card--striped.card--background-secondary,
+.card.card--striped-aligned.card--background-secondary {
   background: var(--background-secondary);
 }
 
 .card.card--default.card--background-secondary-dark-x,
-.card.card--striped.card--background-secondary-dark-x {
+.card.card--striped.card--background-secondary-dark-x ,
+.card.card--striped-aligned.card--background-secondary-dark-x {
   background: var(--background-secondary-dark-x);
 }
 
