@@ -121,6 +121,16 @@
   line-height: var(--s3);
 }
 
+.card__brow-text {
+  font-size: var(--s-1);
+  color: var(--color-base-dark-xx);
+}
+
+.card-heading {
+  font-size: var(--s1);
+  color: var(--color-primary);
+}
+
 .card__body {
   display: flex;
   flex-wrap: wrap;

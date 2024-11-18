@@ -6,6 +6,7 @@ import {
   Striped as CardStriped,
   StripedAligned as CardStripedAligned,
   NoMedia as CardNoMedia,
+  MediaLink as MediaLink
 } from "../../Molecules/Card/Card.stories";
 
 // Random icon selector for Striped cards.
@@ -58,6 +59,47 @@ export default {
     ],
     section_classes: ["cards"],
 
+  },
+  media_link: {
+    first_component: false,
+    variant: "default",
+    card_variant: "default",
+    sub_component_layout: "grid",
+    // center, stack
+    align_items: false,
+    // center, switcher
+    measure: false,
+    // cluster, grid, reel, stack, switcher
+    gap: false,
+    // grid
+    grid_min_width: 20,
+    // with-sidebar
+    sidebar_direction: false,
+    // with-sidebar
+    sidebar_width: false,
+    background_image_url: "",    
+    heading: "Heading Example",
+    text: "",
+    button_data: {
+      label: "See all announcements",
+      href: "http://www.wikipedia.org",
+      variant: "primary",
+    },
+    sub_component_data: [
+      Card({        
+        ...MediaLink.args
+      }),
+      Card({        
+        ...MediaLink.args
+      }),
+      Card({        
+        ...MediaLink.args
+      }),
+      Card({        
+        ...MediaLink.args
+      }),
+    ],
+    section_classes: ["cards"],
   },
   bordered: {
     first_component: false,

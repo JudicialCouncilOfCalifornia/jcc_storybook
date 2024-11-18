@@ -84,12 +84,15 @@
     {% endif %}
     {% if heading or text or ( button_data[0].href and tag == 'div' ) %}
       <div class="card__main stack">
+        {% if brow_text is not empty %}         
+          <span class="card__brow-text">{{ brow_text }}</span> 
+        {% endif %}
         {% if heading is not empty %}
           <div class="card__heading">
             {% if icon_data and variant == 'card--striped-aligned' %}
               {% include "@atoms/Icon/Icon.twig" with icon_data %}
             {% endif %}
-            <{{h}} class="card__heading_tag">
+            <{{h}} class="{{ media_link ? 'card-heading' : 'card__heading_tag' }}">
               <span>{{ heading }}</span>
             </{{h}}>
           </div>
