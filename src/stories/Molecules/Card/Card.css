@@ -129,6 +129,7 @@
 .card-heading {
   font-size: var(--s1);
   color: var(--color-primary);
+  line-height: var(--s3);
 }
 
 .card__body {
@@ -748,3 +749,20 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   color: var(--color-brown);
 }
 /* Button varaints END*/
+
+.card--default.has-media-link {
+  background: var(--color-base-light-xx);
+}
+.card--default.has-media-link .card__inner {
+  background: var(--color-base-light-xx);
+  row-gap: var(--s0);
+}
+.card--default.has-media-link .card__inner.wrapping .card__main {
+  background: var(--color-base-light-xxx);
+}
+.card--default.has-media-link .card__heading {
+  margin-block-start: var(--s-1);
+}
+.card--default.has-media-link .card-heading {
+  font-weight: 700;
+}

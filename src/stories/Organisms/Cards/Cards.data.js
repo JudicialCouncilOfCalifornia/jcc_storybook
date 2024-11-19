@@ -87,16 +87,19 @@ export default {
     },
     sub_component_data: [
       Card({        
-        ...MediaLink.args
+        ...MediaLink.args,
+        heading: "Long heading for a card to test out line height, determine how it will wrap, and overall how it will display on the front end.",
       }),
       Card({        
-        ...MediaLink.args
+        ...MediaLink.args,
       }),
       Card({        
-        ...MediaLink.args
+        ...MediaLink.args,
+        heading: "Long heading for a card to test out line height and determine how it will wrap.",
       }),
       Card({        
-        ...MediaLink.args
+        ...MediaLink.args,
+        heading: "A Longer heading to test out double line.",
       }),
     ],
     section_classes: ["cards"],
