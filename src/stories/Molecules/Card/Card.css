@@ -757,7 +757,7 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   background: var(--color-base-light-xx);
   row-gap: var(--s0);
 }
-.card--default.has-media-link .card__inner.wrapping .card__main {
+.card--default.has-media-link .card__main {
   background: var(--color-base-light-xxx);
 }
 .card--default.has-media-link .card__heading {
