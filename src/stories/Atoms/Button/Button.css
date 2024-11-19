@@ -189,18 +189,3 @@
 .button.collapsed:hover span {
   display: inline-block;
 }
-
-.section--color-primary-dark-xx .button:not(.button--primary, .button--secondary),
-.section--color-primary-dark-xx-stripe .button:not(.button--primary, .button--secondary):visited {
-  color: var(--color-link-visited-light) !important;
-}
-
-.section--color-primary-dark-xx .button:not(.button--primary, .button--secondary):hover,
-.section--color-primary-dark-xx-stripe .button:not(.button--primary, .button--secondary):hover {
-  color: var(--color-white) !important;
-}
-
-.section--color-primary-dark-xx .button:not(.button--primary, .button--secondary):hover::after,
-.section--color-primary-dark-xx-stripe .button:not(.button--primary, .button--secondary):hover::after {
-  background-color: currentColor !important;
-}

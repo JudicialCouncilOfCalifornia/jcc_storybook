@@ -39,6 +39,7 @@ export default {
       control: { type: "select" },
       options: [
         "",
+        "white",
         "base-light-xxx",
         "base-dark-x",
         "base-dark-xxx",
@@ -49,6 +50,7 @@ export default {
         "primary-light-xxx",
         "primary-light-x",
         "primary-dark-x",
+        "primary-dark-xx",
         "secondary",
         "secondary-dark-x",
       ],

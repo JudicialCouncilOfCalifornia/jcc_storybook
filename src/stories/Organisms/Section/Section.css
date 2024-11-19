@@ -242,8 +242,8 @@
 /* DEPRECATED */
 
 .section--color-primary-dark-xx {
-  --bg: var(--color-primary-dark-x) !important;
-  --border: var(--border-primary-dark-x) !important;
+  --bg: var(--color-primary-dark-xx) !important;
+  --border: var(--border-primary-dark-xx) !important;
 }
 
 .section--color-primary-dark-xx-stripe {

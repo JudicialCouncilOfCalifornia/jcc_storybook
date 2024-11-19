@@ -32,6 +32,7 @@ export default {
         "primary-light-xxx",
         "primary-light-x",
         "primary-dark-x",
+        "primary-dark-xx",
         "secondary",
         "secondary-dark-xx",
       ],
