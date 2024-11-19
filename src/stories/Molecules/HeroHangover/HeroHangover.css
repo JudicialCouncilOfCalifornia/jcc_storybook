@@ -297,6 +297,10 @@
   padding-block-end: 0;
 }
 
+.hangover .hangover__top-hangover-content .card__text h3{
+  color: var(--color-accent-warm-dark-x);
+}
+
 .hangover--with-bottom .wrapping .hangover__top-hangover-content > *,
 .hangover--with-blurb .wrapping .hangover__top-hangover-content > * {
   margin-block-end: 0;
