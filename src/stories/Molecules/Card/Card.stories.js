@@ -120,3 +120,6 @@ Striped.args = data.striped;
 export const StripedAligned = Template.bind({});
 StripedAligned.args = data.striped_aligned;
 
+export const MediaLink = Template.bind({});
+MediaLink.args = data.media_link;
+

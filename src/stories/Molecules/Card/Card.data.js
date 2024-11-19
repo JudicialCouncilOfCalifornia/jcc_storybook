@@ -257,4 +257,22 @@ export default {
       },
     ],
   },
+  media_link: {
+    variant: "default",
+    clickable_card: true,
+    background: null,
+    aspect: [],   
+    media:
+      '<img src="https://picsum.photos/id/41/1280/720" />',   
+    heading: "Heading For A Card",  
+    media_link: true, 
+    button_data: [
+      {
+        label: "Button",
+        href: "http://www.google.com",
+        variant: "primary",
+      },
+    ],
+    brow_text: "May 22, 2014",    
+  },
 };

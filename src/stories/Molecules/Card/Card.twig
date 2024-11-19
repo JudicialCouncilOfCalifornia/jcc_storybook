@@ -9,6 +9,8 @@
 
 {% set tag = clickable_card or variant == 'card--striped' ? 'a' : 'div' %}
 
+{% set has_media_link_class = media_link ? 'has-media-link' : '' %}
+
 {% if button_data is not empty and button_data[0] is empty %}
   {% set button_data = [button_data] %}
 {% endif %}
@@ -61,6 +63,7 @@
   variant_background,
   variant_clickable,
   extra_padding,
+  has_media_link_class,
 ] %}
 
 <{{tag}} class="{{ classes|join(' ') }}"{% if styles %} style="{{ styles|join }}"{% endif %}{% if clickable_card and tag_href%} href="{{ tag_href }}"{% endif %}>
@@ -84,12 +87,15 @@
     {% endif %}
     {% if heading or text or ( button_data[0].href and tag == 'div' ) %}
       <div class="card__main stack">
+        {% if brow_text is not empty %}         
+          <span class="card__brow-text">{{ brow_text }}</span> 
+        {% endif %}
         {% if heading is not empty %}
           <div class="card__heading">
             {% if icon_data and variant == 'card--striped-aligned' %}
               {% include "@atoms/Icon/Icon.twig" with icon_data %}
             {% endif %}
-            <{{h}} class="card__heading_tag">
+            <{{h}} class="{{ media_link ? 'card-heading' : 'card__heading_tag' }}">
               <span>{{ heading }}</span>
             </{{h}}>
           </div>
