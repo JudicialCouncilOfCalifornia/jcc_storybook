@@ -67,7 +67,7 @@
 ] %}
 
 <{{tag}} class="{{ classes|join(' ') }}"{% if styles %} style="{{ styles|join }}"{% endif %}{% if clickable_card and tag_href%} href="{{ tag_href }}"{% endif %}>
-  <div class="card__inner detect-wrap {{ media_align == 'top' ? 'stack' : 'switcher' }}">
+  <div class="card__inner {{ media_align == 'top' ? 'stack' : 'switcher' }}">
     {% if icon_data and variant == 'card--striped' %}
       {% include "@atoms/Icon/Icon.twig" with icon_data %}
     {% elseif media %}
