@@ -1,4 +1,10 @@
 
+0.57.13 / 2024-11-19
+===================
+
+  * chore: Export libs.
+  * [Fix] -- removed snippet from circle-lini-information icon that was causing a php warning of page not found on each load.
+
 0.57.12 / 2024-11-19
 ===================
 
