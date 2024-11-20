@@ -78,8 +78,17 @@
   --color-secondary-light-xx: #4BD6A7;
   --color-secondary-light-xxx: #ceefe4;
 
-  --color-error: #df2626;
-  --color-error-light: #eec1c1;
+  /* Alert colors */
+  --color-info: #D9EAF8;
+  --color-info-dark: #3CBDE5;
+  --color-warning: #FCE2C5;
+  --color-warning-dark: var(--color-accent-warm-light-x);
+  --color-status: #CEEFE4;
+  --color-status-dark: var(--color-secondary);
+  --color-success: var(--color-status);
+  --color-success-dark: var(--color-status-dark);
+  --color-error: #EEC1C1;
+  --color-error-dark: #9C3938;
 
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
@@ -116,7 +125,7 @@
   --border-red: var(--color-brown);
   --border-brown: var(--color-red);
   /* Primary */
-  --border-primary-light-xxx: var(--color-primary-light-x);
+  --border-primary-light-xxx: #D9EAF8;
   --border-primary-light-x: var(--color-primary);
   --border-primary-dark-x: var(--color-primary-light-x);
   --border-primary-dark-xx: var(--color-primary-dark-x);

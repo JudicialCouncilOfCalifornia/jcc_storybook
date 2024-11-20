@@ -16,6 +16,8 @@ import { Default as TeaserListDefault } from "../../Organisms/TeaserPlusList/Tea
 import ViewResults from "../../Organisms/ViewResults/ViewResults.twig";
 import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewResults.stories";
 import { WithMenu as ListWithMenu } from "../../Molecules/List/List.stories";
+import Alert from "../../Molecules/Alert/Alert.twig";
+import { Default as AlertDefault } from "../../Molecules/Alert/Alert.stories";
 
 export default {
   default: {
@@ -93,6 +95,51 @@ export default {
     sub_component_data:
       '<div class=""><div class="box" style="background: var(--color-base-light-x)">Sub Component goes here.</div></div>',
     section_layout: "switcher",
+  },
+  alerts: {
+    sub_component_layout: 'stack',
+    sub_component_data: [
+      Alert({
+        variant: "default",
+        type: "info",
+        icon_data: {},
+        heading: "Information Message",
+        content: [
+          "<p>In Drupal this is an info message. See alert component for global message banner variant.</p>"
+        ],
+        dismissible: false,
+      }),
+      Alert({
+        variant: "default",
+        type: "warning",
+        icon_data: {},
+        heading: "Warning Message",
+        content: [
+          "<p>In Drupal this is a warning messages.</p>"
+        ],
+        dismissible: false,
+      }),
+      Alert({
+        variant: "default",
+        type: "status",
+        icon_data: {},
+        heading: "Status/Success Message",
+        content: [
+          "<p>In Drupal this is a status/success messages.</p>"
+        ],
+        dismissible: false,
+      }),
+      Alert({
+        variant: "default",
+        type: "error",
+        icon_data: {},
+        heading: "Error Message",
+        content: [
+          "<p>In Drupal this is a error messages.</p>"
+        ],
+        dismissible: false,
+      }),
+    ],
   },
   auto_adjusting_headings: {
     variant: "default",
