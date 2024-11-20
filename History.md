@@ -1,4 +1,11 @@
 
+0.57.12 / 2024-11-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #335 from JudicialCouncilOfCalifornia/feature/COURTS-271--adjust-bgcolor-options
+  * [COURTS-271] -- add white card bg & primary darkest card and section bg
+
 0.57.11 / 2024-11-19
 ===================
 
