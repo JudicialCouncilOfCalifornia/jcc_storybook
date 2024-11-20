@@ -92,13 +92,12 @@
   padding-block: var(--s-4);
   padding-inline: var(--s-1);
   background-color: rgba(0,0,0,0.5);
-  color: var(--color-white);
   box-sizing: border-box;
   z-index: 2;
 }
 
-.caption-overlay .card__media-citation {
-  color: var(--color-base-light-xx);
+.caption-overlay .card__media-caption span {
+  color: var(--color-white) !important;
 }
 
 .remote-video-colorbox-launch-modal{
@@ -447,6 +446,13 @@ a.card--clickable > .ext {
 
 
 /* BEGIN Background colors with striped backwards compatibility */
+/* White */
+.card.card--default.card--background-white,
+.card.card--striped.card--background-white,
+.card.card--striped-aligned.card--background-white {
+  background: var(--background-white);
+}
+
 /* Base */
 .card.card--default.card--background-base-light-xxx,
 .card.card--striped.card--background-base-light-xxx,
@@ -480,34 +486,40 @@ a.card--clickable > .ext {
 }
 
 .card.card--default.card--background-red,
-.card.card--striped.card--background-red ,
+.card.card--striped.card--background-red,
 .card.card--striped-aligned.card--background-red {
   background: var(--background-red);
 }
 
 .card.card--default.card--background-brown,
-.card.card--striped.card--background-brown ,
+.card.card--striped.card--background-brown,
 .card.card--striped-aligned.card--background-brown {
   background: var(--background-brown);
 }
 
 /* Primary */
 .card.card--default.card--background-primary-light-xxx,
-.card.card--striped.card--background-primary-light-xxx ,
+.card.card--striped.card--background-primary-light-xxx,
 .card.card--striped-aligned.card--background-primary-light-xxx {
   background: var(--background-primary-light-xxx);
 }
 
 .card.card--default.card--background-primary-light-x,
-.card.card--striped.card--background-primary-light-x ,
+.card.card--striped.card--background-primary-light-x,
 .card.card--striped-aligned.card--background-primary-light-x {
   background: var(--background-primary-light-x);
 }
 
 .card.card--default.card--background-primary-dark-x,
-.card.card--striped.card--background-primary-dark-x ,
+.card.card--striped.card--background-primary-dark-x,
 .card.card--striped-aligned.card--background-primary-dark-x {
   background: var(--background-primary-dark-x);
+}
+
+.card.card--default.card--background-primary-dark-xx,
+.card.card--striped.card--background-primary-dark-xx,
+.card.card--striped-aligned.card--background-primary-dark-xx {
+  background: var(--background-primary-dark-xx);
 }
 
 /* Secondary */
@@ -523,10 +535,32 @@ a.card--clickable > .ext {
   background: var(--background-secondary-dark-x);
 }
 
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading *,
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text *,
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__text a:visited,
-.card--default.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__buttons * {
+/* BEGIN Inverse color on darker background */
+
+.card--default.bg-adjust:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading *,
+.card--default.bg-adjust:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__text *,
+.card--default.bg-adjust:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__text a:visited,
+.card--default.bg-adjust:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__buttons * {
   --color: var(--color-white) !important;
   --heading-color: var(--color);
   --button-border: var(--color);
@@ -536,6 +570,7 @@ a.card--clickable > .ext {
 a.card--clickable:not(
   .card--bordered,
   .card--bordered-center,
+  .card--background-white,
   .card--background-base-light-xxx,
   .card--background-primary-light-xxx,
   .card--background-accent-warm-light-xxxx
@@ -543,6 +578,7 @@ a.card--clickable:not(
 a.card--clickable:hover:not(
   .card--bordered,
   .card--bordered-center,
+  .card--background-white,
   .card--background-base-light-xxx,
   .card--background-primary-light-xxx,
   .card--background-accent-warm-light-xxxx
@@ -552,16 +588,26 @@ a.card--clickable:hover:not(
   color: var(--color);
 }
 
-a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, .card--background-primary-light-xxx, .card--background-accent-warm-light-xxxx) .card__heading_tag::after {
+a.card--default.card--clickable.bg-adjust:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading_tag::after {
   background-color: var(--color-white);
 }
+/* END */
 
+.card--striped.card--background-white,
+.card--striped.card--background-white .card__heading > *,
 .card--striped.card--background-base-light-xxx,
 .card--striped.card--background-base-light-xxx .card__heading > *,
 .card--striped.card--background-primary-light-xxx,
 .card--striped.card--background-primary-light-xxx .card__heading > *,
 .card--striped.card--background-accent-warm-light-xxxx,
 .card--striped.card--background-accent-warm-light-xxxx .card__heading > *,
+.card--striped-aligned.card--background-white,
+.card--striped-aligned.card--background-white .card__heading > *,
 .card--striped-aligned.card--background-base-light-xxx,
 .card--striped-aligned.card--background-base-light-xxx .card__heading > *,
 .card--striped-aligned.card--background-primary-light-xxx,
@@ -572,9 +618,11 @@ a.card--default.card--clickable.bg-adjust:not(.card--background-base-light-xxx, 
   color: var(--color);
 }
 
+.card--striped.card--background-white .button,
 .card--striped.card--background-base-light-xxx .button,
 .card--striped.card--background-primary-light-xxx .button,
 .card--striped.card--background-accent-warm-light-xxxx .button,
+.card--striped-aligned.card--background-white .button,
 .card--striped-aligned.card--background-base-light-xxx .button,
 .card--striped-aligned.card--background-primary-light-xxx .button,
 .card--striped-aligned.card--background-accent-warm-light-xxxx .button {

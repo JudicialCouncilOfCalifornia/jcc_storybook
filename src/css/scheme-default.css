@@ -85,6 +85,8 @@
   --color-link-visited-light: #a01ba0;
 
   /* Backgrounds */
+  /* White */
+  --background-white: var(--color-white);
   /* Base */
   --background-base-light-xxx: var(--color-base-light-xxx);
   --background-base-dark-x: var(--color-base-dark-x);
@@ -98,6 +100,7 @@
   --background-primary-light-xxx: var(--color-primary-light-xxx);
   --background-primary-light-x: var(--color-primary-light-x);
   --background-primary-dark-x: var(--color-primary-dark-x);
+  --background-primary-dark-xx: var(--color-primary-dark-xx);
   /* Secondary */
   --background-secondary: var(--color-secondary);
   --background-secondary-dark-x: var(--color-secondary-dark-x);
@@ -116,6 +119,7 @@
   --border-primary-light-xxx: var(--color-primary-light-x);
   --border-primary-light-x: var(--color-primary);
   --border-primary-dark-x: var(--color-primary-light-x);
+  --border-primary-dark-xx: var(--color-primary-dark-x);
   /* Secondary */
   --border-secondary: var(--color-secondary-dark-x);
   --border-secondary-dark-x: var(--color-secondary-dark-xx);
