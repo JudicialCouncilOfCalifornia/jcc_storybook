@@ -1,4 +1,19 @@
 
+0.57.11 / 2024-11-19
+===================
+
+  * chore: Export libs.
+  * Merge pull request #334 from JudicialCouncilOfCalifornia/bugfix/COURTS-289--legacy-green-card
+  * Merge pull request #336 from JudicialCouncilOfCalifornia/feature/powerbi-hangover-0fix
+  * [powerby-hangoverfix] -- template and css update
+  * [COURTS-289] -- striped-align green card color missing
+  * Merge pull request #333 from JudicialCouncilOfCalifornia/COURTS-273-news-card-changes
+  * [COURTS-273] -- Fixed css after detectWrap cleanup
+  * [COURTS-273] -- Removed detectWrap class.
+  * [COURTS-273] -- Adjustments to MediaLink variant of Card
+  * [COURTS-273] -- card changes
+  * [COURTS-273] -- News card variant changes
+
 0.57.10 / 2024-11-14
 ===================
 
