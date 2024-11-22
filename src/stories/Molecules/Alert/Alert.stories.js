@@ -13,7 +13,7 @@ export default {
   argTypes: {
     type: {
       name: "Alert type",
-      options: ["info", "warning", "status", "error"],
+      options: ["info", "warning", "status", "success", "error"],
       control: { type: "select" },
     },
     dismissible: {

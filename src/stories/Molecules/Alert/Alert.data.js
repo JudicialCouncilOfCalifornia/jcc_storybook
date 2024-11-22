@@ -5,7 +5,7 @@ export default {
     icon_data: {},
     heading: 'Alert Message',
     content: [
-      "<p>In Drupal this is one continuous message using a single paragraph that will wrap. Additional content will break into a new line.</p><p><a href='/?path=/story/organisms-section--alerts'>See section/content alert banner variant</a></p>"
+      "<p>In Drupal this is one continuous message using a single paragraph that will wrap. Additional content will break into a new line. See section/content alert banner variant.</p><p><a href='#'>Link example for style testing</a></p>"
     ],
     dismissible: true,
   },
