@@ -105,7 +105,7 @@ export default {
         icon_data: {},
         heading: "Information Message",
         content: [
-          "<p>In Drupal this is an info message. See alert component for global message banner variant.</p>"
+          "<p>In Drupal this is an info message. <a href='/?path=/story/molecules-alert--default'>See global alert banner variant</a></p>"
         ],
         dismissible: false,
       }),

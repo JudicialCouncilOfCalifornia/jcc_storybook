@@ -5,7 +5,7 @@ export default {
     icon_data: {},
     heading: 'Alert Message',
     content: [
-      "<p>In Drupal this is a message. See section component for content variant.</p>"
+      "<p>In Drupal this is one continuous message using a single paragraph that will wrap. Additional content will break into a new line.</p><p><a href='/?path=/story/organisms-section--alerts'>See section/content alert banner variant</a></p>"
     ],
     dismissible: true,
   },
@@ -15,7 +15,7 @@ export default {
     icon_data: {},
     heading: "Alert Message Set",
     content: [
-      "<p>In Drupal this is an array of messages.</p>",
+      "<p>In Drupal this is an array of messages. <a href='/?path=/story/organisms-section--alerts'>See section/content alert variant</a></p>",
       "<p>This is another message.</p>",
       "<p>This is a third message.</p>"
     ],

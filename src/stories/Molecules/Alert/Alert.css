@@ -1,18 +1,21 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
-  --color: var(--color-black);
-  color: var(--color);
   padding-block: var(--s1);
   font-size: var(--s0);
+}
+
+.alert + .alert:not(:first-child) {
+  margin-block-start: var(--s0);
 }
 
 .alert[data-alert-type="info"] {
   background-color: var(--color-info);
 }
 
-.alert[data-alert-type="info"] .icon-wrapper svg {
-  color: var(--color-info-dark);
+.alert[data-alert-type="info"] .icon-wrapper * {
+  --color: var(--color-info-dark) !important;
+  color: var(--color) !important;
 }
 
 .alert[data-alert-type="status"],
@@ -20,25 +23,25 @@
   background-color: var(--color-success);
 }
 
-.alert[data-alert-type="status"] .icon-wrapper svg,
-.alert[data-alert-type="success"] .icon-wrapper svg {
-  color: var(--color-status-dark);
+.alert[data-alert-type="status"] .icon-wrapper *,
+.alert[data-alert-type="success"] .icon-wrapper * {
+  color: var(--color-status-dark) !important;
 }
 
 .alert[data-alert-type="warning"] {
   background-color: var(--color-warning);
 }
 
-.alert[data-alert-type="warning"] .icon-wrapper svg {
-  color: var(--color-warning-dark);
+.alert[data-alert-type="warning"] .icon-wrapper * {
+  color: var(--color-warning-dark) !important;
 }
 
 .alert[data-alert-type="error"] {
   background-color: var(--color-error);
 }
 
-.alert[data-alert-type="error"] .icon-wrapper svg {
-  color: var(--color-error-dark);
+.alert[data-alert-type="error"] .icon-wrapper * {
+  color: var(--color-error-dark) !important;
 }
 
 .alert > .container {
@@ -71,7 +74,7 @@
   margin-inline-start: 0;
 }
 
-.alert__content__inner p:not(.alert__content__heading) {
+.alert__content__inner {
   font-size: var(--s-1);
 }
 
@@ -80,7 +83,11 @@
 }
 
 .alert__content-single .alert__content__heading {
-  margin-inline-end: var(--s-5);
+  margin-inline-end: var(--s-12);
+}
+
+.alert__content__inner p:first-of-type {
+  display: inline;
 }
 
 .alert__dismiss-button {
@@ -112,14 +119,20 @@
 }
 
 /* Alerts inside of a layout section paragraph. */
-.section .alert,
-.section .alert p,
-.section .alert .icon-wrapper {
-  color: var(--color-black);
-}
-
 .section .alert {
   border-inline-start: var(--s-2) solid var(--color-info-dark);
+}
+
+.section .alert__content * {
+  color: var(--color-black) !important;
+}
+
+.section .alert__content a {
+  color: var(--color-primary-light-x) !important;
+}
+
+.section .alert__content a:visited {
+  color: var(--color-link-visited) !important;
 }
 
 .section .alert[data-alert-type="status"],
