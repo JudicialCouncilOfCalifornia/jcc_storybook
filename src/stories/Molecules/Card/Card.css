@@ -804,8 +804,7 @@ a.card--default.card--clickable.bg-adjust:not(
   background: var(--color-base-light-xx);
 }
 .card--default.has-media-link .card__inner {
-  background: var(--color-base-light-xx);
-  row-gap: var(--s0);
+  background: var(--color-base-light-xx);  
 }
 .card--default.has-media-link .card__main {
   background: var(--color-base-light-xxx);
