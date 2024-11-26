@@ -9,11 +9,11 @@ export default {
     ],
     dismissible: true,
   },
-  multiline: {
+  multiple: {
     variant: "default",
     type: "info",
     icon_data: {},
-    heading: "Alert Message Set",
+    heading: "Multiple Alert Messages",
     content: [
       "<p>In Drupal this is an array of messages. <a href='/?path=/story/organisms-section--alerts'>See section/content alert variant</a></p>",
       "<p>This is another message.</p>",

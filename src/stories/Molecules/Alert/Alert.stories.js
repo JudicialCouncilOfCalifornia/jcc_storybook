@@ -41,5 +41,5 @@ export const Default = Template.bind({});
 Default.args = data.default;
 
 // Bind the Default component variant for this component.
-export const Multiline = Template.bind({});
-Multiline.args = data.multiline;
+export const Multiple = Template.bind({});
+Multiple.args = data.multiple;
