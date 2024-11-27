@@ -1,7 +1,7 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
-  padding-block: var(--s1);
+  padding-block: var(--s-1);
   font-size: var(--s0);
 }
 
@@ -58,8 +58,7 @@
 .alert .icon-wrapper {
   inline-size: var(--s1);
   block-size: var(--s1);
-  min-inline-size: var(--s1);
-  margin-block-start: var(--s-9);
+  min-inline-size: var(--s1)
 }
 
 .alert__content__heading,
@@ -85,7 +84,7 @@
 
 .alert__content__inner {
   font-size: var(--s-1);
-  line-height: var(--s2);
+  line-height: var(--s1);
 }
 
 .alert__content__heading {
@@ -100,13 +99,13 @@
   margin-inline-end: var(--s-12);
 }
 
+.alert__content__inner p {
+  margin-block-start: var(--s-4);
+}
+
 .alert__content-multiple .alert__content__heading,
 .alert__content-multiple .alert__content__inner p:first-of-type {
   display: block;
-}
-
-.alert__content-multiple .alert__content__inner p:first-of-type {
-  margin-top: var(--s0);
 }
 
 .alert__content-multiple .alert__content__heading::after {
