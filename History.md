@@ -1,4 +1,17 @@
 
+0.57.14 / 2024-11-27
+===================
+
+  * chore: Export libs.
+  * Merge pull request #338 from JudicialCouncilOfCalifornia/feature/COURTS-294--alerts-update
+  * [COURTS-294] -- line height/paragraph spacing trim & darkest primary adjust
+  * Merge pull request #337 from JudicialCouncilOfCalifornia/COURTS-273-padding-fix
+  * [COURTS-273] -- Removed padding
+  * [COURTS-294] -- clarification fixes
+  * [COURTS-294] -- duplicate status icon for success state
+  * [COURTS-294] -- error icon, section bgcolor adjust, & single msg handling
+  * [COURTS-294] -- updating colors & improving examples
+
 0.57.13 / 2024-11-19
 ===================
 
