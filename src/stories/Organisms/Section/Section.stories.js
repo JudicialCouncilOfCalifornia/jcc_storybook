@@ -158,5 +158,8 @@ White.args = data.white;
 export const BGImage = Template.bind({});
 BGImage.args = data.bg_image;
 
+export const Alerts = Template.bind({});
+Alerts.args = data.alerts;
+
 export const AutoAdjustingHeadings = Template.bind({});
 AutoAdjustingHeadings.args = data.auto_adjusting_headings;

@@ -21,15 +21,15 @@
 
     <div class="alert__content {{ content_class }}">
       <div class="alert__content__inner">
+      {% if heading is not empty %}
+        <div class="alert__content__heading">{{ heading }}</div>
+      {% endif %}
       {% if content|length > 1 %}
-        {% if heading is not empty %}
-          <p class="alert__content__heading"><strong>{{ heading }}</strong></p>
-        {% endif %}
         {% for message in content %}
           {{ message }}
         {% endfor %}
       {% else %}
-        {% if heading is not empty %}<span class="alert__content__heading"><strong>{{ heading }}</strong></span>{% endif %} {{ content|first }}
+        {{ content|first }}
       {% endif %}
       </div>
     </div>

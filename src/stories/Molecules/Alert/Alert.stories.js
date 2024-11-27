@@ -13,7 +13,7 @@ export default {
   argTypes: {
     type: {
       name: "Alert type",
-      options: ["info", "warning", "status", "error"],
+      options: ["info", "warning", "status", "success", "error"],
       control: { type: "select" },
     },
     dismissible: {
@@ -39,3 +39,7 @@ const Template = ({ ...args }) => {
 // Bind the Default component variant for this component.
 export const Default = Template.bind({});
 Default.args = data.default;
+
+// Bind the Default component variant for this component.
+export const Multiple = Template.bind({});
+Multiple.args = data.multiple;

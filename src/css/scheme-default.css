@@ -64,7 +64,7 @@
   --color-accent-warm-light-xxx: #FCE2C5;
   --color-accent-warm-light-xxxx: #FEF2E4;
 
-  --color-primary-dark-xx: #1F303E;
+  --color-primary-dark-xxx: #1F303E;
   --color-primary-dark-x: #0B4778;
   --color-primary: #005EA2;
   --color-primary-light-x: #2378C3;
@@ -78,8 +78,17 @@
   --color-secondary-light-xx: #4BD6A7;
   --color-secondary-light-xxx: #ceefe4;
 
-  --color-error: #df2626;
-  --color-error-light: #eec1c1;
+  /* Alert colors */
+  --color-info: #D9EAF8;
+  --color-info-dark: #3CBDE5;
+  --color-warning: #FCE2C5;
+  --color-warning-dark: var(--color-accent-warm-light-x);
+  --color-status: #CEEFE4;
+  --color-status-dark: var(--color-secondary);
+  --color-success: var(--color-status);
+  --color-success-dark: var(--color-status-dark);
+  --color-error: #EEC1C1;
+  --color-error-dark: #9C3938;
 
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
@@ -100,7 +109,7 @@
   --background-primary-light-xxx: var(--color-primary-light-xxx);
   --background-primary-light-x: var(--color-primary-light-x);
   --background-primary-dark-x: var(--color-primary-dark-x);
-  --background-primary-dark-xx: var(--color-primary-dark-xx);
+  --background-primary-dark-xxx: var(--color-primary-dark-xxx);
   /* Secondary */
   --background-secondary: var(--color-secondary);
   --background-secondary-dark-x: var(--color-secondary-dark-x);
@@ -116,10 +125,10 @@
   --border-red: var(--color-brown);
   --border-brown: var(--color-red);
   /* Primary */
-  --border-primary-light-xxx: var(--color-primary-light-x);
+  --border-primary-light-xxx: #D9EAF8;
   --border-primary-light-x: var(--color-primary);
   --border-primary-dark-x: var(--color-primary-light-x);
-  --border-primary-dark-xx: var(--color-primary-dark-x);
+  --border-primary-dark-xxx: var(--color-primary-dark-x);
   /* Secondary */
   --border-secondary: var(--color-secondary-dark-x);
   --border-secondary-dark-x: var(--color-secondary-dark-xx);
@@ -137,7 +146,7 @@
   --background-striped-primary-light-xx: var(--color-primary-light-xx);
   --background-striped-base-dark-x: var(--color-base-dark-x);
   --background-striped-base-light-xx: var(--color-base-light-xx);
-  --background-solid-primary-dark-xx: var(--color-primary-dark-xx);
+  --background-solid-primary-dark-xx: var(--color-primary-dark-x);
   --background-solid-primary: var(--color-primary);
   --background-solid-primary-light-xx: var(--color-primary-light-xx);
   --background-solid-secondary-dark-x: var(--color-secondary-dark-x);

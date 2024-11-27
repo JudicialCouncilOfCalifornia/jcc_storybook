@@ -1,27 +1,47 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
-  --color: var(--color-white);
-  color: var(--color);
-  padding-block: var(--s1);
+  padding-block: var(--s-1);
+  font-size: var(--s0);
+}
+
+.alert + .alert:not(:first-child) {
+  margin-block-start: var(--gap);
 }
 
 .alert[data-alert-type="info"] {
-  --color: var(--color-black);
-  background-color: var(--background-primary-light-xxx);
+  background-color: var(--color-info);
 }
 
-.alert[data-alert-type="status"] {
-  background-color: var(--background-secondary);
+.alert[data-alert-type="info"] .icon-wrapper * {
+  --color: var(--color-info-dark) !important;
+  color: var(--color) !important;
+}
+
+.alert[data-alert-type="status"],
+.alert[data-alert-type="success"] {
+  background-color: var(--color-success);
+}
+
+.alert[data-alert-type="status"] .icon-wrapper *,
+.alert[data-alert-type="success"] .icon-wrapper * {
+  color: var(--color-status-dark) !important;
 }
 
 .alert[data-alert-type="warning"] {
-  background-color: var(--background-accent-warm-dark-x);
+  background-color: var(--color-warning);
+}
+
+.alert[data-alert-type="warning"] .icon-wrapper * {
+  color: var(--color-warning-dark) !important;
 }
 
 .alert[data-alert-type="error"] {
-  --color: var(--color-white);
-  background-color: var(--background-primary-light-x);
+  background-color: var(--color-error);
+}
+
+.alert[data-alert-type="error"] .icon-wrapper * {
+  color: var(--color-error-dark) !important;
 }
 
 .alert > .container {
@@ -38,8 +58,16 @@
 .alert .icon-wrapper {
   inline-size: var(--s1);
   block-size: var(--s1);
-  min-inline-size: var(--s1);
-  margin-block-start: var(--s-6);
+  min-inline-size: var(--s1)
+}
+
+.alert__content__heading,
+.alert__content__inner p:first-of-type {
+  display: inline;
+}
+
+.alert__content__heading::after {
+  content: ".";
 }
 
 .alert__content {
@@ -54,21 +82,34 @@
   margin-inline-start: 0;
 }
 
-.alert__content__inner p:not(.alert__content__heading) {
+.alert__content__inner {
   font-size: var(--s-1);
+  line-height: var(--s1);
 }
 
-.alert__content__inner a {
-  color: var(--color);
+.alert__content__heading {
+  font-weight: 600;
 }
 
 .alert__content-single > .alert__content__inner {
-  margin-inline-start: var(--s-3);
   display: block;
 }
 
 .alert__content-single .alert__content__heading {
-  margin-inline-end: var(--s-5);
+  margin-inline-end: var(--s-12);
+}
+
+.alert__content__inner p {
+  margin-block-start: var(--s-4);
+}
+
+.alert__content-multiple .alert__content__heading,
+.alert__content-multiple .alert__content__inner p:first-of-type {
+  display: block;
+}
+
+.alert__content-multiple .alert__content__heading::after {
+  content: "";
 }
 
 .alert__dismiss-button {
@@ -100,30 +141,42 @@
 }
 
 /* Alerts inside of a layout section paragraph. */
-.section .alert,
-.section .alert p,
-.section .alert .icon-wrapper {
-  color: var(--color-black);
-}
-
 .section .alert {
-  border-inline-start: var(--s-2) solid var(--color-primary-light-xx);
-  background-color: var(--color-primary-light-xxx);
+  border-inline-start: var(--s-2) solid var(--color-info-dark);
 }
 
-.section .alert[data-alert-type="status"] {
-  border-inline-start: var(--s-2) solid var(--color-secondary-light-xx);
-  background-color: var(--color-secondary-light-xxx);
+.section .alert__content * {
+  color: var(--color-black) !important;
+}
+
+.section .alert__content__heading,
+.section .alert__content__inner p:first-of-type {
+  display: block;
+}
+
+.section .alert__content__heading::after {
+  content: "";
+}
+
+.section .alert__content a {
+  color: var(--color-primary-light-x) !important;
+}
+
+.section .alert__content a:visited {
+  color: var(--color-link-visited) !important;
+}
+
+.section .alert[data-alert-type="status"],
+.section .alert[data-alert-type="success"] {
+  border-inline-start: var(--s-2) solid var(--color-status-dark);
 }
 
 .section .alert[data-alert-type="warning"] {
-  border-inline-start: var(--s-2) solid var(--color-accent-warm-light-x);
-  background-color: var(--color-accent-warm-light-xxx);
+  border-inline-start: var(--s-2) solid var(--color-warning-dark);
 }
 
 .section .alert[data-alert-type="error"] {
-  border-inline-start: var(--s-2) solid var(--color-error);
-  background-color: var(--color-error-light);
+  border-inline-start: var(--s-2) solid var(--color-error-dark);
 }
 
 .section__main .body + .alert.box.alert--default {
