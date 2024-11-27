@@ -189,14 +189,16 @@ a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__h
   color: var(--heading-color);
 }
 
-a.card--default.card--clickable .card__heading_tag span {
+a.card--default.card--clickable .card__heading_tag span,
+a.card--default.has-media-link .card-heading  span {
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
   border-color: transparent;
   transition: border-color var(--anim-slow);
 }
 
-a.card--default.card--clickable:hover .card__heading_tag span {
+a.card--default.card--clickable:hover .card__heading_tag span,
+a.card--default.has-media-link:hover .card-heading span {
   border-color: var(--heading-color);
   transition: all var(--anim-speed);
 }
