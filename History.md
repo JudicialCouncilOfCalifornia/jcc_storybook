@@ -1,4 +1,12 @@
 
+0.57.16 / 2024-12-02
+===================
+
+  * chore: Export libs.
+  * Merge pull request #340 from JudicialCouncilOfCalifornia/bugfix/COURTS-271--card-darkest-primary-missing
+  * [COURTS-271] -- bugs while shifting to primary-dark-xxx
+  * [COURTS-271] -- Fix to broken Hat background css variable
+
 0.57.15 / 2024-11-27
 ===================
 
