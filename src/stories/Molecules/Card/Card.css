@@ -182,6 +182,7 @@ a.card--default.card--clickable {
 }
 
 a.card--default.card--clickable .card__heading *,
+a.card--default.card--clickable.card--background-white .card__heading *,
 a.card--default.card--clickable.card--background-base-light-xxx .card__heading *,
 a.card--default.card--clickable.card--background-primary-light-xxx .card__heading *,
 a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__heading * {
@@ -518,10 +519,10 @@ a.card--clickable > .ext {
   background: var(--background-primary-dark-x);
 }
 
-.card.card--default.card--background-primary-dark-xx,
-.card.card--striped.card--background-primary-dark-xx,
-.card.card--striped-aligned.card--background-primary-dark-xx {
-  background: var(--background-primary-dark-xx);
+.card.card--default.card--background-primary-dark-xxx,
+.card.card--striped.card--background-primary-dark-xxx,
+.card.card--striped-aligned.card--background-primary-dark-xxx {
+  background: var(--background-primary-dark-xxx);
 }
 
 /* Secondary */
