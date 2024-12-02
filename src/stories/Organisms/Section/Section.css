@@ -176,7 +176,6 @@
   --heading-color: var(--color);
   --accent-color: var(--color);
   --button-border: var(--color);
-  --dynamic-color: var(--color) !important;
   --border-color: var(--color);
   color: var(--color);
 }

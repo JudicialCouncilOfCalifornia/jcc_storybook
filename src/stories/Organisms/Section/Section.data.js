@@ -18,6 +18,7 @@ import { Default as ViewResultsDefault } from "../../Organisms/ViewResults/ViewR
 import { WithMenu as ListWithMenu } from "../../Molecules/List/List.stories";
 import Alert from "../../Molecules/Alert/Alert.twig";
 import { Default as AlertDefault } from "../../Molecules/Alert/Alert.stories";
+import Button from "../../Atoms/Button/Button.twig";
 
 export default {
   default: {
@@ -189,4 +190,31 @@ export default {
       }),
     ],
   },
+  section_with_bg: {
+    variant: "default",
+    bg_tint: 'primary-dark-x',    
+    section_classes: ["custom"],
+    sub_component_layout: 'stack',
+    brow_data: {
+      variant: "heading",
+      part_one: "Brow Example",
+      part_two: "",
+    },
+    heading: "Section with bg",
+    text: "",
+    button_data: {
+      label: "Button",
+      href: "#",
+      variant: "primary",
+    },
+    sub_component_data: [         
+      Button({
+        variant: "primary",
+        size: "normal",
+        label: "Button",
+        href: "#",
+        aria_label: "More descriptive label for screen readers",
+      }),
+    ]
+  }  
 };
