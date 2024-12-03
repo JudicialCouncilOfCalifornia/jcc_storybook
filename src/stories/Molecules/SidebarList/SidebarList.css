@@ -55,6 +55,7 @@
   font-style: italic;
   font-size: var(--s0);
   font-weight: 400;
+  word-break: break-word;
 }
 
 .sidebar-list--default .sidebar-list__item__links {
