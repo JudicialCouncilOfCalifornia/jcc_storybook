@@ -163,3 +163,6 @@ Alerts.args = data.alerts;
 
 export const AutoAdjustingHeadings = Template.bind({});
 AutoAdjustingHeadings.args = data.auto_adjusting_headings;
+
+export const SectionWithBg = Template.bind({});
+SectionWithBg.args = data.section_with_bg;
