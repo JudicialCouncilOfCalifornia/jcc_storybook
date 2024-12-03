@@ -182,3 +182,8 @@
 .section__main .body + .alert.box.alert--default {
   margin-block: var(--s2);
 }
+
+/* For Drupal use only as stacking global element */
+.global-alerts .views-row:not(:first-child) {
+  margin-block-start: var(--s-3);
+}
