@@ -1,4 +1,15 @@
 
+0.57.17 / 2024-12-03
+===================
+
+  * chore: Export libs.
+  * Merge pull request #343 from JudicialCouncilOfCalifornia/COURTS-310-fix-wrap
+  * Merge pull request #342 from JudicialCouncilOfCalifornia/hotfix/alerts-drupal-spacing
+  * [COURTS-310] -- Sidebar wrap fix
+  * [hotfix/alerts-drupal-spacing] -- Custom alert spacing for Drupal global use
+  * Merge pull request #341 from JudicialCouncilOfCalifornia/COURTS-318-hover-state
+  * [COURTS-318] -- Fix for hover state.
+
 0.57.16 / 2024-12-02
 ===================
 
