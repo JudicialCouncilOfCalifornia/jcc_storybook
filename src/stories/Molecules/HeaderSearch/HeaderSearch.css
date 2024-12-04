@@ -177,6 +177,24 @@ button.header-search__icon {
   place-content: center;
 }
 
+button.header-search__icon:hover {
+  background-color: var(--color-red);
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-red);
+}
+
+button.header-search__icon:active {
+  border: 2px solid var(--color-brown);
+  color: var(--color-white);
+  background: var(--color-brown);
+}
+
+button.header-search__icon:focus {
+  outline: 2px solid var(--color-accent-warm-light-x);
+  outline-offset: 2px;
+  background: var(--color-accent-warm-dark-x);
+}
+
 button.header-search__icon * {
   grid-area: 1 / 1;
 }
