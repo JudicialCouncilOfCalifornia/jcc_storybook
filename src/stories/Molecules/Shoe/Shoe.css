@@ -1,6 +1,6 @@
 .shoe {
   --color: var(--color-white);
-  background: var(--color-primary-dark-xx);
+  background: var(--color-primary-dark-xxx);
 }
 
 .shoe .box {
