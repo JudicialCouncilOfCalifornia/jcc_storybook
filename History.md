@@ -1,4 +1,13 @@
 
+0.57.18 / 2024-12-05
+===================
+
+  * chore: Export libs.
+  * Merge pull request #345 from JudicialCouncilOfCalifornia/bugfix/phase2-issues
+  * [bugfix/phase2-issues] -- section headings handling, shoe background, & card heading spacing
+  * Merge pull request #344 from JudicialCouncilOfCalifornia/COURTS-318-las-buttonfix
+  * [COURTS-318] -- Search button hover fix
+
 0.57.17 / 2024-12-03
 ===================
 
