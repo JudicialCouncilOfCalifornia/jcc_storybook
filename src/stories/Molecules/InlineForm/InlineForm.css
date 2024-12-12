@@ -79,6 +79,7 @@
   padding: var(--s0);
   position: relative;
   line-height: 0;
+  transition: all var(--anim);
 }
 
 .inline-form .form-actions input:is([type="submit"], .button):hover,
