@@ -79,11 +79,29 @@
   padding: var(--s0);
   position: relative;
   line-height: 0;
+  transition: all var(--anim);
 }
 
 .inline-form .form-actions input:is([type="submit"], .button):hover,
 .inline-form .form-actions button:hover  {
   cursor: pointer;
+}
+
+.inline-form .form-actions button:hover,
+.inline-form .form-actions button:hover .inline-form__submit-circle {
+  background-color: var(--color-red);
+  color: var(--color-white) !important;  
+}
+
+.inline-form .form-actions button:active,
+.inline-form .form-actions button:active .inline-form__submit-circle {  
+  color: var(--color-white);
+  background: var(--color-brown);
+}
+
+.inline-form .form-actions button:focus,
+.inline-form .form-actions button:focus .inline-form__submit-circle {  
+  background: var(--color-accent-warm-dark-x);
 }
 
 .inline-form .form-actions button::after  {
