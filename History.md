@@ -1,4 +1,12 @@
 
+0.57.19 / 2024-12-13
+===================
+
+  * chore: Export libs.
+  * Merge pull request #346 from JudicialCouncilOfCalifornia/ui-fixes
+  * [ui-fixes] -- Added review comment
+  * [ui-fixes] -- Hover search results page
+
 0.57.18 / 2024-12-05
 ===================
 
