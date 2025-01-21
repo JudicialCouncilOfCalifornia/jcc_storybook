@@ -14,23 +14,31 @@
 <div class="{{ classes|join(' ') }}"> {# Use composable layout classes as needed. (stack, grid, center, etc.) #}
   {# Use BEM syntax for styling classes on sub-components. #}
   <div class="data-visualization-embed-desktop">
-    <div class="data-visualization-container" style="position:relative;padding-top:calc({{ height / width * 100}}% + 58px);">
-      <div class="data-visualization-clip">
-        <iframe id="iframe-content-{{ random(100) }}" src="{{ url }}" frameborder="0">
-          {{- 'Your browser does not support inline frames'|t -}}
-        </iframe>
-      </div>
-    </div>
-  </div>
-  {% if mobile_url %}
-    <div class="data-visualization-embed-responsive">
-      <div class="data-visualization-container" style="position:relative;padding-top:calc({{ mobile_height / mobile_width * 100}}% + 58px);">
+    {% if img_data %}
+     <img src="{{ img_data }}" alt="data-visualization" />
+    {% else %}
+      <div class="data-visualization-container" style="position:relative;padding-top:calc({{ height / width * 100}}% + 58px);">
         <div class="data-visualization-clip">
-          <iframe id="iframe-content-{{ random(101, 200) }}" src="{{ mobile_url }}" frameborder="0">
-            {{- 'Your browser does not support inline frames'|t -}}
+          <iframe id="iframe-content-{{ random(100) }}" src="{{ url }}" frameborder="0">
+              {{- 'Your browser does not support inline frames'|t -}}
           </iframe>
         </div>
       </div>
+    {% endif %}
+  </div>
+  {% if mobile_url %}
+    <div class="data-visualization-embed-responsive">
+      {% if mobile_img_data %}
+        <img src="{{ mobile_img_data }}" alt="data-visualization" />
+      {% else %}
+        <div class="data-visualization-container" style="position:relative;padding-top:calc({{ mobile_height / mobile_width * 100}}% + 58px);">
+          <div class="data-visualization-clip">
+            <iframe id="iframe-content-{{ random(101, 200) }}" src="{{ mobile_url }}" frameborder="0">
+                {{- 'Your browser does not support inline frames'|t -}}
+            </iframe>
+          </div>
+        </div>
+      {% endif %}
     </div>
   {% endif %}
 </div>
