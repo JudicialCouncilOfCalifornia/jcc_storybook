@@ -1,4 +1,10 @@
+0.57.20 / 2025-01-27
+===================
 
+  * chore: Export libs.
+  * Merge pull request #347 from data-visualization-edit
+  * [COURTS-350] -- templateupdate
+  
 0.57.19 / 2024-12-13
 ===================
 
