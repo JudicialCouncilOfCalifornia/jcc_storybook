@@ -26,7 +26,7 @@
       </div>
     {% endif %}
   </div>
-  {% if mobile_url %}
+  {% if mobile_url or mobile_img_data %}
     <div class="data-visualization-embed-responsive">
       {% if mobile_img_data %}
         <img src="{{ mobile_img_data }}" alt="data-visualization" />
