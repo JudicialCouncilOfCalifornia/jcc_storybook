@@ -1,3 +1,10 @@
+0.57.22 / 2025-01-29
+===================
+
+  * chore: Export libs.
+  * Merge pull request #350 from feature/COURTS-350-issue
+  * [COURTS-350] -- template update
+  
 0.57.21 / 2025-01-28
 ===================
 
