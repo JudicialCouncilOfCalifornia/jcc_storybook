@@ -59,3 +59,7 @@
   order: 2;
   margin-block-start: unset;
 }
+
+.body .body__content img.image__default {
+  height:auto;
+}
