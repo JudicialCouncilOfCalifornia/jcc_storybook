@@ -1,3 +1,12 @@
+0.57.21 / 2025-01-28
+===================
+
+  * chore: Export libs.
+  * Merge pull request #349 from fix/COURTS-364-powerbi-img-issue
+  * Merge pull request #348 from fix/datavisualization-mobile-fix
+  * [COURTS-350] -- template update
+  * [COURTS-364] -- added css
+
 0.57.20 / 2025-01-27
 ===================
 
