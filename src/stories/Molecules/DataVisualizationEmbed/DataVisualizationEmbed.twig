@@ -1,6 +1,6 @@
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'data-visualization-embed--' ~ variant : 'data-visualization-embed--default' %}
-{% set responsive_class = mobile_url ? 'responsive-enabled' : '' %}
+{% set responsive_class = mobile_url or mobile_img_data ? 'responsive-enabled' : '' %}
 
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
