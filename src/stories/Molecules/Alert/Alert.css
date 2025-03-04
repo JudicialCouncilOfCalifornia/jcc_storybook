@@ -67,7 +67,7 @@
 }
 
 .alert__content__heading::after {
-  content: ".";
+  content: "";
 }
 
 .alert__content {
