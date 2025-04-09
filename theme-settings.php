@@ -145,6 +145,13 @@ function jcc_storybook_form_system_theme_settings_alter(&$form, FormStateInterfa
     '#collapsed'  => TRUE,
   ];
 
+  $form['global']['hide_was_this_helpful'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Hide feedback widget'),
+    '#default_value' => theme_get_setting('hide_was_this_helpful'),
+    '#description'   => t("Hide 'Was this helpful' widget"),
+  ];
+
   $form['global']['hide_translation'] = [
     '#type'          => 'checkbox',
     '#title'         => t('Hide translation'),
@@ -152,25 +159,58 @@ function jcc_storybook_form_system_theme_settings_alter(&$form, FormStateInterfa
     '#description'   => t("Hide translation dropdown from header."),
   ];
 
-  // BEGIN: Special header body/feature.
-  $form['special'] = [
-    '#type' => 'details',
-    '#title' => t('Special'),
-    '#collapsed'  => TRUE,
+  $form['global']['show_google_translate'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Show Google translator'),
+    '#default_value' => theme_get_setting('show_google_translate'),
+    '#description'   => t("Show Google translation dropdown in header."),
   ];
-  $header_body_value = '';
-  $header_body_format = 'full_html';
-  $header_body = theme_get_setting('header_body');
-  if (isset($header_body)) {
-    $header_body_value = $header_body['value'];
-    $header_body_format = $header_body['format'];
+
+  // Block Web search engine indexing.
+  $bsefi_label = t('Block search engines from indexing');
+  $bsefi_desc = t('Prevents any content, node and media, from appearing in Web search results. The option does not prevent search engines from crawling this site.');
+  $bsefi_disabled = t('Not availabile when r4032login module is installed');
+  if (!\Drupal::service('module_handler')->moduleExists('r4032login')) {
+    $form['global']['block_search_engine_indexing'] = [
+      '#type'          => 'checkbox',
+      '#title'         => $bsefi_label,
+      '#default_value' => theme_get_setting('block_search_engine_indexing'),
+      '#description'   => $bsefi_desc,
+    ];
+  }
+  else {
+    $form['global']['block_search_engine_indexing'] = [
+      '#type'          => 'checkbox',
+      '#title'         => $bsefi_label,
+      '#default_value' => theme_get_setting('block_search_engine_indexing'),
+      '#description'   => '<p><strong>' . $bsefi_disabled . '</strong></p>' . $bsefi_desc . '</p>',
+      '#attributes'      => ['disabled' => 'disabled'],
+    ];
   }
 
-  $form['special']['header_body'] = [
-    '#type' => 'text_format',
-    '#title' => 'Homepage Header Body',
-    '#description' => t('For inserting special content or features into the homepage header area (e.g. Granicus live cast embed).'),
-    '#default_value' => $header_body_value,
-    '#format' => $header_body_format,
+  $form['global']['news_default_seal'] = [
+    '#type' => 'textfield',
+    '#title' => t('News Default Seal Path'),
+    '#default_value' => theme_get_setting('news_default_seal'),
+    '#description' => t('Enter the path to the default branch seal image(themes/custom/jcc_elevated/images/news-default-seal.svg).'),
+  ];
+
+  // BEGIN Edit no search results message.
+  $form['global']['no_search_results'] = [
+    '#type' => 'fieldset',
+    '#title' => t('No search results message'),
+    '#collapsed'  => TRUE,
+  ];
+  $form['global']['no_search_results']['no_search_results_heading'] = [
+    '#type'          => 'textfield',
+    '#title'         => t('Personalized heading'),
+    '#default_value' => theme_get_setting('no_search_results_heading'),
+  ];
+  $no_results_msg = theme_get_setting('no_search_results_message');
+  $form['global']['no_search_results']['no_search_results_message'] = [
+    '#type'          => 'text_format',
+    '#format'        => $no_results_msg ? $no_results_msg['format'] : 'snippet',
+    '#title'         => t('Personalized message'),
+    '#default_value' => $no_results_msg ? $no_results_msg['value'] : '',
   ];
 }
