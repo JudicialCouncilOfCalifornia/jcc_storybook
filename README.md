@@ -65,13 +65,14 @@ Must use Node 16.
   - Update `src/assest/icons.json`.
   - `npm run sprite`: Builds icons.svg sprite.
 
-## Exporting Scheme, & Lib for Production
+## Exporting Scheme & Lib and releasing for Production
 
 Must use Node 16.
 
   - `npm run scheme`: Generates theme scheme.
   - `npm run lib`: Processes CSS and JavaScript for production use.
   - Update `History.md` to specify production version for Composer use.
+  - Tag the release with `git tag X.XX.XX` which should auto-deploy the artifact to https://packagist.org/packages/judicialcouncil/jcc_storybook. You might need to `git push origin tag X.XX.XX` if the artifact does not appear.
 
 ## Projects using JCC Storybook
 
