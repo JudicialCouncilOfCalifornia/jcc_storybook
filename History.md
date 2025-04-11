@@ -1,3 +1,9 @@
+0.57.24 / 2025-04-11
+===================
+
+* Merge pull request #352 from feature/CJER-32--theme-settings-sync
+* [COURTS-32] -- Drupal theme settings updates
+
 0.57.23 / 2025-03-04
 ===================
 
