@@ -52,6 +52,7 @@ export default {
   with_wide_span: {
     variant: "none",
     wider_span: "true",
+    newline: true,
     items: [
       {
         label: "Sed ut",
