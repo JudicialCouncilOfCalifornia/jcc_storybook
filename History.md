@@ -1,3 +1,9 @@
+0.57.25 / 2025-06-10
+===================
+
+* Merge pull request #353 from list-newline
+* [JRN-79-surplus] -- List component update
+
 0.57.24 / 2025-04-11
 ===================
 
