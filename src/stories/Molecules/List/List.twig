@@ -31,10 +31,18 @@
     {% for item in items %}
       <li class="{{ item_classes|join(' ') }}">
         {% if item.label %}
-          <span class="list__item-label">{{ item.label|title }}:</span>
+          {% if newline %}
+            <div class="list__item-label">{{ item.label|title }}:</div>
+          {% else %}
+            <span class="list__item-label">{{ item.label|title }}:</span>
+          {% endif %}
         {% endif %}
         {% if item.text %}
-          {{ item.text }}
+          {% if newline %}
+            <div class="list__item-text">{{ item.text }}</div>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
         {% else %}
           {{ item }}
         {% endif %}
