@@ -6,7 +6,7 @@ This library uses algorithmic/intrinsic layout techniques and 13 "[Layout Primit
 
 Layout Primitives are composed into Atomic Components, that are used to build templates and pages.
 
-For more details about the methodologies used in this component library see: https://judicialcouncilofcalifornia.github.io/jcc_storybook/?path=/docs/documentation-intro--default
+For more details about the methodologies used in this component library see: https://judicialcouncilofcalifornia.github.io/jcc_storybook/master/docs/?path=/docs/documentation-intro--default
 
 
 External References:
