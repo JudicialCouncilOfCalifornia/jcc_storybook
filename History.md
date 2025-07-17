@@ -1,3 +1,9 @@
+0.57.26 / 2025-07-17
+===================
+
+* Merge pull request #355 from JRN-21-form-fields-update
+* [JRN-21-directory search block] -- directory search component
+
 0.57.25 / 2025-06-10
 ===================
 
