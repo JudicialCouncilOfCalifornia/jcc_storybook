@@ -16,6 +16,8 @@ export default {
     content:
       "<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do et dolore magna sed do et dolore Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do et dolore magna sed do et dolore aliqu aliqua...</p>",
     main_file: "#",
+    thumbnail: '<img src="https://picsum.photos/id/392/200/200" />',
+    is_new: false,
     button_data: {
       label: "Download pdf",
       href: "#",
