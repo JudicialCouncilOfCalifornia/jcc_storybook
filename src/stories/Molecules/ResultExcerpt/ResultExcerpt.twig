@@ -5,77 +5,90 @@
 
 {% set classes = [
   'result-excerpt',
-  'stack',
+  'switcher',
   variant_class,
 ] %}
 
 {% if item_classes is not empty %}
   {% set classes = classes|merge(item_classes) %}
 {% endif %}
-
 <div class="{{ classes|join(' ')}}">
-  <div class="result-excerpt__header">
-    {% if brow %}
-      <div class="result-excerpt__brow">
-        <div>
-          {% if brow.primary %}
-            <span class="result-excerpt__brow-primary">{{ brow.primary }}</span>
-          {% endif %}
-          {% if brow.secondary %}
-            <span class="result-excerpt__brow-secondary">{{ brow.secondary }}</span>
-          {% endif %}
-        </div>
-        {% if brow.notation %}
-          <div class="result-excerpt__brow-notation">{{ brow.notation }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-    {% if (title) or (button_data is not empty) %}
-      <div class="switcher detect-wrap detect-wrap--observed">
-        {% if title %}
-        <div class="result-excerpt__title">
-          <{{ h }} class="result-excerpt__heading">
-            {% if url %}
-              <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
-            {% else %}
-              <div>{{ title }}</div>
+  <div class="result-excerpt__left stack">
+    <div class="result-excerpt__header">
+      {% if brow %}
+        <div class="result-excerpt__brow">
+          <div>
+            {% if brow.primary %}
+              <span class="result-excerpt__brow-primary">{{ brow.primary }}</span>
             {% endif %}
-          </{{ h }}>
-        </div>
-        {% endif %}
-
-        {% if button_data %}
-          <div class="result-excerpt__button">
-            {% include "@atoms/Button/Button.twig" with button_data %}
+            {% if brow.secondary %}
+              <span class="result-excerpt__brow-secondary">{{ brow.secondary }}</span>
+            {% endif %}
           </div>
+          {% if brow.notation %}
+            <div class="result-excerpt__brow-notation">{{ brow.notation }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if (title) or (button_data is not empty) %}
+        <div class="switcher detect-wrap detect-wrap--observed">
+          {% if is_new %}
+            <div class="result-excerpt__is-new">
+              <div>NEW</div>
+            </div>
+          {% endif %}
+          {% if title %}
+          <div class="result-excerpt__title">
+            <{{ h }} class="result-excerpt__heading">
+              {% if url %}
+                <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
+              {% else %}
+                <div>{{ title }}</div>
+              {% endif %}
+            </{{ h }}>
+          </div>
+          {% endif %}
+
+          {% if button_data %}
+            <div class="result-excerpt__button">
+              {% include "@atoms/Button/Button.twig" with button_data %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if detail_list_data or pills or content %}
+      <div class="result-excerpt__content stack">
+        <div>{{ content }}</div>
+
+        {% if detail_list_data or pills %}
+          {% if detail_list_data %}
+            <ul class="detail-list detect-wrap detect-wrap--observed">
+              {% if  detail_list_data.label  %}
+                <li class="detail-list__label">
+                  {{ detail_list_data.label }}:
+                </li>
+              {% endif %}
+              {% for detail in detail_list_data.details %}
+                <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if pills %}
+          <div class="result-excerpt__pills">
+            {% include "@molecules/Pills/Pills.twig" with pills %}
+          </div>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
   </div>
-
-  {% if detail_list_data or pills or content %}
-    <div class="result-excerpt__content stack">
-      <div>{{ content }}</div>
-
-      {% if detail_list_data or pills %}
-        {% if detail_list_data %}
-          <ul class="detail-list detect-wrap detect-wrap--observed">
-            {% if  detail_list_data.label  %}
-              <li class="detail-list__label">
-                {{ detail_list_data.label }}:
-              </li>
-            {% endif %}
-            {% for detail in detail_list_data.details %}
-              <li>{{ detail }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% if pills %}
-        <div class="result-excerpt__pills">
-          {% include "@molecules/Pills/Pills.twig" with pills %}
-        </div>
-        {% endif %}
-      {% endif %}
+  {% if thumbnail %}
+    <div class="result-excerpt__right">
+      <div class="result-excerpt__thumbnail">
+        {{ thumbnail }}
+      </div>
     </div>
   {% endif %}
 </div>

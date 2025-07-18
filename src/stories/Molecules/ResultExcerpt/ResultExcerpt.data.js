@@ -16,6 +16,7 @@ export default {
     content:
       "<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do et dolore magna sed do et dolore Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do et dolore magna sed do et dolore aliqu aliqua...</p>",
     main_file: "#",
+    is_new: true,
     button_data: {
       label: "Download pdf",
       href: "#",

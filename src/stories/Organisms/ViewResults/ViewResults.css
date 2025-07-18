@@ -265,6 +265,124 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0 !important;
 }
 
+.views-exposed-form fieldset {
+   border: none;
+   padding: 0;
+   padding-block-end: var(--s3);
+   border-block-end: 1px solid var(--color-base-light-x);
+ }
+
+.views-exposed-form fieldset select,
+.views-exposed-form fieldset input{
+  border-color: var(--color-black);
+}
+
+.views-exposed-form fieldset legend{
+  padding-inline: 0;
+  padding-block-end: var(--s1);
+  font-weight: 600;
+  font-size: var(--s1);
+}
+
+.views-exposed-form fieldset legend span{
+  padding-inline: 0;
+  padding-block-end: 0;
+  margin-block-end: 0;
+  border-block-end: none;
+}
+
+.views-exposed-form fieldset .fieldset-wrapper {
+  margin-block-start: 0;
+}
+
+.views-exposed-form fieldset:last-child {
+  border-block-end: none;
+}
+
+.views-exposed-form fieldset.collapsible legend{
+  display: flex ;
+  justify-content: space-between;
+  gap: var(--s-2);
+  cursor: pointer;
+  align-items: center;
+  width: 100%;
+}
+
+.views-exposed-form fieldset.collapsible legend::-webkit-details-marker {
+  display: none;
+}
+
+.views-exposed-form fieldset.collapsible legend:hover {
+  background-color: var(--color-base-light-xxx);
+  color: var(--accent-color);
+}
+
+.views-exposed-form fieldset.collapsible legend::after{
+  height: var(--s1);
+  width: var(--s1);
+  font-size: var(--s3);
+  font-weight: bold;
+  line-height: 0;
+  color: var(--accent-color);
+  content: '\231F';
+  transform: rotate(45deg);
+  transition: all var(--anim-speed) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .views-exposed-form fieldset.collapsible legend::after {
+    transition: all 0 ease;
+    animation: none;
+  }
+}
+
+.views-exposed-form fieldset.collapsible[open] > legend::after {
+  transform:rotate(225deg);
+}
+
+.views-exposed-form fieldset.collapsible > .fieldset-wrapper {
+  display:none;
+}
+
+.views-exposed-form fieldset.collapsible[open] > .fieldset-wrapper {
+  display:block;
+}
+
+.views-exposed-form fieldset.collapsible > legend:hover {
+  background-color: var(--color-base-light-xxx);
+  color: var(--accent-color);
+}
+
+/**
+ * collapsible fieldsets animation:
+ * Fade in content on open, Fade out content on close.
+ */
+.views-exposed-form fieldset.collapsible[open] > legend ~ * {
+  animation: open var(--anim-speed);
+}
+
+.views-exposed-form fieldset.collapsible.closing > legend ~ * {
+  animation: close var(--anim-speed);
+}
+.views-exposed-form fieldset.collapsible > legend ~ * {
+  animation: close var(--anim-speed);
+}
+
+@keyframes open {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .views-exposed-form fieldset.collapsible[open] > legend ~ * {
+    animation: none;
+  }
+
+  .views-exposed-form fieldset.collapsible.closing > legend ~ * {
+    animation: none;
+  }
+}
+
 /* facilities, ITC listing */
 .view-results.facilities_listing.block_1, .view-results.past_proposals.block_1 {
   --sidebar-width: 46ch;
