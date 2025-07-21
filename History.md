@@ -1,3 +1,9 @@
+0.57.26 / 2025-07-21
+===================
+
+* Merge pull request #357 from feature/views-results
+* [feature/views-results] -- Views results and filters
+
 0.57.25 / 2025-06-10
 ===================
 
