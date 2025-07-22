@@ -80,7 +80,7 @@
   display: flex;
   flex-shrink: 1;
   flex-grow: 0;
-  align-items: flex-start;
+  align-items: center;
 }
 .result-excerpt__is-new div {
   padding-inline: var(--s-1);
@@ -118,6 +118,10 @@
   margin-block-start: var(--s1);
 }
 
+.result-excerpt__content.stack .result-excerpt__pills {
+  margin-block-start: var(--s-3);
+}
+
 /* Suggestion: move detail-list to "List" component. */
 .result-excerpt ul.detail-list {
   font-size: var(--s-1);
@@ -134,6 +138,7 @@
   flex-direction: row;
   list-style-type: disc;
   list-style-position: outside;
+  margin-block-start: var(--s-3);
 }
 
 .result-excerpt ul.detail-list li:first-child,
