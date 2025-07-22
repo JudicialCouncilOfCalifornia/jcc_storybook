@@ -455,7 +455,8 @@ a.card--clickable > .ext {
 /* White */
 .card.card--default.card--background-white,
 .card.card--striped.card--background-white,
-.card.card--striped-aligned.card--background-white {
+.card.card--striped-aligned.card--background-white
+.card.card--media-left.card--background-white {
   background: var(--background-white);
 }
 
