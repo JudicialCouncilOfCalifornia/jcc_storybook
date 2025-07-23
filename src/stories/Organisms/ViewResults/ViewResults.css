@@ -275,6 +275,7 @@ li.group-li + li.group-li > h2.list-label {
 .views-exposed-form fieldset select,
 .views-exposed-form fieldset input{
   border-color: var(--color-black);
+  margin-block-start: var(--s-3);
 }
 
 .views-exposed-form fieldset legend{
@@ -327,6 +328,10 @@ li.group-li + li.group-li > h2.list-label {
   content: '\231F';
   transform: rotate(45deg);
   transition: all var(--anim-speed) ease;
+}
+
+.views-exposed-form .placeholder-container.js-form-type-textfield label{
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -234,6 +234,28 @@ fieldset legend span {
   border-block-end: 2px solid var(--accent-color);
 }
 
+fieldset .form-item.js-form-type-checkbox{
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+fieldset .form-item.js-form-type-checkbox label{
+  margin-block-start: 0;
+}
+
+fieldset .form-item.js-form-type-checkbox input{
+  width: auto;
+  appearance: none;
+  padding: 8px;
+}
+fieldset .form-item.js-form-type-checkbox input:checked {
+  background-color: var(--accent-color);
+}
+
+
 /* Specific form styles */
 
 /* content-moderation-control */

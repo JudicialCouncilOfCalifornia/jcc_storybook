@@ -33,6 +33,7 @@ export default {
         title: 'This is a the title for a search result item.',
         content: 'This is where a rendered snippet of the return node is printed out. It can have the matching text highlighted. This is some more text, and this is some more content for display.',
         url: '#',
+        is_new: true,
       },
       {
         title: 'This is a the title for a search result item.',
