@@ -1,3 +1,8 @@
+0.57.31 / 2025-06-23
+=====================
+* Merge PR #359 from feature/results-excepts 
+* Merge PR #358 from JRN-21-card-background
+
 0.57.30 / 2025-07-21
 ===================
 
