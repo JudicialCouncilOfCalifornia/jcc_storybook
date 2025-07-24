@@ -1,9 +1,15 @@
-0.57.32 / 2025-06-23
+0.57.33 / 2025-07-24
+=====================
+
+* Merge PR #361 from feature/css-fix-form-filter
+* Merge PR #362 from  JRN-106-align-heading
+
+0.57.32 / 2025-07-23
 =====================
 
 * Merge PR #360 from feature/views-results-edits
 
-0.57.31 / 2025-06-23
+0.57.31 / 2025-07-23
 =====================
 * Merge PR #359 from feature/results-excepts 
 * Merge PR #358 from JRN-21-card-background
