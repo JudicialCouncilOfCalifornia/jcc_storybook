@@ -275,6 +275,9 @@ li.group-li + li.group-li > h2.list-label {
 .views-exposed-form fieldset select,
 .views-exposed-form fieldset input{
   border-color: var(--color-black);
+}
+
+.views-exposed-form fieldset select{
   margin-block-start: var(--s-3);
 }
 
