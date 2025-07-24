@@ -216,5 +216,30 @@ export default {
         aria_label: "More descriptive label for screen readers",
       }),
     ]
-  }  
+  } ,
+   section_with_links: {
+    variant: "default",
+    bg_tint: '',    
+    section_classes: ["custom"],
+    sub_component_layout: 'grid',
+    brow_data: {
+      variant: "heading",
+      part_one: "Brow Example",
+      part_two: "",
+    },
+    heading: "Section with bg",
+    text: "",
+    button_data: {},
+    sub_component_data: [         
+      List({
+        ...ListWithMenu.args
+      }),
+       List({
+        ...ListWithMenu.args
+      }),
+       List({
+        ...ListWithMenu.args
+      }),
+    ]
+  }   
 };

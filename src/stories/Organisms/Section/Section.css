@@ -84,6 +84,10 @@
   margin-block-start: var(--s5);
 }
 
+.section__main.grid div  + .list {
+  margin-block-start: 0;
+}
+
 .section__main.flex {
   display: flex;
   flex-wrap: wrap;
