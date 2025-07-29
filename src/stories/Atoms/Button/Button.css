@@ -189,3 +189,19 @@
 .button.collapsed:hover span {
   display: inline-block;
 }
+
+.button.full-width {
+  width: 100%;
+}
+
+.button.label-align--left {
+  text-align: left;
+}
+
+.button.label-align--center {
+  text-align: center;
+}
+
+.button.label-align--right {
+  text-align: right;
+}

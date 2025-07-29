@@ -2,6 +2,8 @@
 {% set variant_type = variant ? 'button--' ~ variant : 'button--primary' %}
 {% set variant_size = size ? 'button--' ~ size : 'button--normal' %}
 {% set variant_icon = icon ? 'icon--' ~ icon : 'icon--arrow' %}
+{% set variant_full_width = full_width ? 'full-width' : '' %}
+{% set variant_label_align = label_align ? 'label-align--' ~ label_align : '' %}
 {# TODO: Add touch device support for collapsed. #}
 {% set variant_collapsed = collapsed ? 'collapsed' : '' %}
 
@@ -13,6 +15,8 @@
   variant_type,
   variant_size,
   variant_icon,
+  variant_full_width,
+  variant_label_align,
   variant_collapsed,
   custom
 ] %}
