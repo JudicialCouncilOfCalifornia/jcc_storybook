@@ -158,7 +158,7 @@
 .button.button--text:hover,
 .button.button--text:focus
  {
-  color: var(--color-red); 
+  color: var(--color-red);
   outline: none;
   text-decoration: underline;
 }
@@ -205,3 +205,29 @@
 .button.label-align--right {
   text-align: right;
 }
+
+/* START Disabled state */
+.button.button--primary.disabled {
+  border: 2px solid var(--color-disabled-state);
+  background-color: transparent;
+}
+
+.button.button--secondary.disabled {
+  background-color: var(--color-disabled-state);
+  border: none;
+}
+
+.button.button--text.disabled {
+  text-decoration: none;
+}
+
+.button.button--primary.disabled,
+.button.button--text.disabled {
+  color: var(--color-disabled-state) !important;
+}
+
+.button.button--primary:active::after,
+.button.button--text:active::after {
+  background-color: var(--color-disabled-state);
+}
+/* END */

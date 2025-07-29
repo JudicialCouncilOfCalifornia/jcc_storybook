@@ -51,6 +51,11 @@ export default {
       control: { type: "radio" },
       options: [true, false],
     },
+    disabled: {
+      description: "Disable button.",
+      control: { type: "radio" },
+      options: [true, false],
+    },
   },
 };
 
