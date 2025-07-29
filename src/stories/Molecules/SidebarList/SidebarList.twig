@@ -11,47 +11,71 @@
   variant == 'secondary' ? 'stack__no-space' : '',
 ] %}
 <div class="{{ classes|join(' ') }}">
-  {% if variant == 'default' %}
-    <h3 class="sidebar-list__heading">{{ heading }}</h3>
+  {% if variant == 'default' and heading %}
+    <h2 class="sidebar-list__heading">{{ heading }}</h2>
   {% endif %}
   {% if data is not empty %}
-  <ul class="sidebar-list__list stack">
-    {% for item in data %}
-    <li class="sidebar-list__item">
-      {% if item.brow is not empty and variant == 'secondary' %}
-        <div class="sidebar-list__item__brow">{{ item.brow }}</div>
-      {% endif %}
-      {% if item.brow is not empty and variant == 'default' %}
-        <h4 class="sidebar-list__item__brow">{{ item.brow }}</h4>
-      {% endif %}
-      
-      {% if item.heading is not empty and variant != 'primary' %}
-        <h5 class="sidebar-list__item__heading">{{ item.heading }}</h5>
-      {% endif %}
-      {% if item.heading is not empty and variant == 'primary' %}
-        <h4 class="sidebar-list__item__heading">{{ item.heading }}</h4>
-      {% endif %}
-
-      {% if item.date_info is not empty %}
-        <h4 class="sidebar-list__item__date-info">{{ item.date_info }}</h4>
-      {% endif %}
-      {% if item.text is not empty %}
-        <div class="sidebar-list__item__text stack">{{ item.text }}</div>
-      {% endif %}
-      {% if item.links is not empty %}
-        {% if variant == 'default' %}
-          {% set classes = 'sidebar-list__item__link sidebar-list__item__link--default stack__xs-space'%}
-        {% else %}
-          {% set classes = 'button button--primary button--normal icon--arrow sidebar-list__item__link'%}
+    <div class="sidebar-list__list stack">
+      {% for item in data %}
+      <div class="sidebar-list__item">
+        {% if item.brow is not empty and variant != 'primary' %}
+          <div class="sidebar-list__item__brow">{{ item.brow }}</div>
         {% endif %}
-        <div class="sidebar-list__item__links stack">
-          {% for link in item.links %}
-            {{ link(link.title, link.url, {class: [classes]}) }}
-          {% endfor %}
-        </div>
+
+        {% if item.heading is not empty %}
+          {% set heading1 = heading ? 3 : 2 %}
+          <h{{ heading1 }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ heading1 }}>
+        {% endif %}
+
+        {% if item.date_info is not empty %}
+          <div class="sidebar-list__item__date-info">{{ item.date_info }}</div>
+        {% endif %}
+
+        {% if item.text is not empty %}
+          <div class="sidebar-list__item__text stack">{{ item.text }}</div>
+        {% endif %}
+
+        {% if item.links is not empty %}
+          {% if variant == 'default' %}
+            {% set classes = 'sidebar-list__item__link sidebar-list__item__link--default stack__xs-space'%}
+          {% else %}
+            {% set classes = 'button button--primary button--normal icon--arrow sidebar-list__item__link'%}
+          {% endif %}
+          <div class="sidebar-list__item__links stack">
+            {% for link in item.links %}
+              {{ link(link.title, link.url, {class: [classes]}) }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if variant == 'default' and subsection is not empty %}
+    <div class="sidebar-list__section">
+      {% if subsection.heading %}
+        {% set heading2 = heading ? 3 : 2 %}
+        <h{{ heading2 }} class="sidebar-list__heading">{{ subsection.heading }}</h{{ heading2 }}>
       {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+      <div class="sidebar-list__list stack">
+        {% for item in subsection.data %}
+          <div class="sidebar-list__item">
+            {% if item.brow is not empty %}
+              <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+            {% endif %}
+            {% if item.heading is not empty %}
+              {% set heading3 = heading2 ? heading2 + 1 : 2 %}
+              <h{{ heading3 }} class="sidebar-list__item__main">{{ item.heading }}</h{{ heading3 }}>
+            {% endif %}
+            {% if item.date_info is not empty %}
+              <div class="sidebar-list__item__date-info">{{ item.date_info }}</div>
+            {% endif %}
+            {% if item.text is not empty %}
+              <div class="sidebar-list__item__text stack">{{ item.text }}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   {% endif %}
 </div>

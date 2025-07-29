@@ -9,6 +9,8 @@ Different style rules apply to primary and secondary variants. Main heading for
 the component does not display for primary and secondary. Primary and secondary
 variants have different background colors and some text style differences.
 
+Includes "footer" subsection option for related information.
+
 <details>
   <summary>Inherited CSS Variables:</summary>
   - `--name`: description...
@@ -16,6 +18,7 @@ variants have different background colors and some text style differences.
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: "default", // default, primary, secondary
   heading: 'String - Heading for the whole component', // Does not display for primary/secondary
@@ -29,6 +32,21 @@ variants have different background colors and some text style differences.
     {
       '...repeat for additional items...'
     },
-  ]
+  ],
+  subsection: {
+    heading: "String - heading for subsection",
+    data: [
+      {
+        brow: "Any string or rendered text",
+        heading: "Any string or rendered text",
+        text: "Any string or rendered content",
+      },
+      {
+        '...repeat for additional items...'
+      },
+    ],
+    
+  }
   ```
+
 </details>

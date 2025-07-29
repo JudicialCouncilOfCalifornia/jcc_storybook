@@ -29,6 +29,18 @@ const date_three = {
   attributes: [],
 }
 
+const sub_one = {
+  brow: 'July 29, 2025',
+  heading: 'Alameda',
+  attributes: [],
+}
+
+const sub_two = {
+  brow: 'July 30, 2024',
+  heading: 'San Francisco',
+  attributes: [],
+}
+
 const primary_info = {
   heading: "How to Submit",
   text: '<p>The Judicial Council will only accept Proposals in an electronic format. Consultants must submit their Proposals with all required contents in two parts: the Consultant’s Statement of Qualifications (“SOQ”) and the Consultant’s Cost Proposal (“Cost Proposal”). SOQ and Cost Proposal files must be emailed no more than three (3) days in advance of the proposal due date to the following emails:</p>',
@@ -80,6 +92,22 @@ export default {
       date_two,
       date_three,
     ],
+  },
+  subsection: {
+    variant: "default",
+    heading: 'Important dates',
+    data: [
+      date_one,
+      date_two,
+      date_three,
+    ],
+    subsection: {
+      heading: 'Subsection Example',
+      data: [
+        sub_one,
+        sub_two,
+      ],
+    },
   },
   primary: {
     variant: "primary",

@@ -34,6 +34,17 @@ export default {
       control: { type: "select" },
       options: ["arrow-up", "thumbs-up"],
     },
+    full_width: {
+      description: "Full width if container allows.",
+      control: { type: "radio" },
+      options: [true, false],
+    },
+    label_align: {
+      description: "Button label alignment.",
+      table: { defaultValue: { summary: "normal" } },
+      control: { type: "select" },
+      options: ["left", "center", "right"],
+    },
     collapsed: {
       description: "Show label on hover.",
       table: { defaultValue: { summary: false } },
