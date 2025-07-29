@@ -5,7 +5,8 @@
 {% set variant_full_width = full_width ? 'full-width' : '' %}
 {% set variant_label_align = label_align ? 'label-align--' ~ label_align : '' %}
 {# TODO: Add touch device support for collapsed. #}
-{% set variant_collapsed = collapsed ? 'collapsed' : '' %}
+{% set variant_collapsed = collapsed and not disabled ? 'collapsed' : '' %}
+{% set variant_disabled = disabled ? 'disabled' : '' %}
 
 {# Create class array #}
 {# Include composable layout classes as needed. #}
@@ -17,16 +18,22 @@
   variant_icon,
   variant_full_width,
   variant_label_align,
+  variant_noaction,
   variant_collapsed,
+  variant_disabled,
   custom
 ] %}
 
 {% if collapsed %}
-  <a class="{{ classes|join(' ') }}" href="{{ href }}" aria-label="{{ aria_label }}">
+  <a class="{{ classes|join(' ') }}" aria-label="{{ aria_label }}" href="{{ href }}">
     <span>{{ label }}</span>
   </a>
-{% else %} 
- {{ link(label, href, {
+{% elseif disabled %}
+  <div class="{{ classes|join(' ') }}" aria-label="{{ aria_label }}" aria-disabled="true">
+    <span>{{ label }}</span>
+  </div>
+{% else %}
+  {{ link(label, href, {
     'class': classes,
     'aria_label': aria_label,
     'style': (color is defined and color is not empty) ? '--dynamic-color: ' ~ color : ''

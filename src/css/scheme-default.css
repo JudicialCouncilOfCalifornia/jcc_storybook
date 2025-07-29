@@ -93,6 +93,9 @@
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
 
+  /* Disabled state */
+  --color-disabled-state: #828282;
+
   /* Backgrounds */
   /* White */
   --background-white: var(--color-white);
