@@ -32,9 +32,9 @@
       <li class="{{ item_classes|join(' ') }}">
         {% if item.label %}
           {% if newline %}
-            <div class="list__item-label">{{ item.label|title }}:</div>
+            <div class="list__item-label">{{ item.label }}:</div>
           {% else %}
-            <span class="list__item-label">{{ item.label|title }}:</span>
+            <span class="list__item-label">{{ item.label }}:</span>
           {% endif %}
         {% endif %}
         {% if item.text %}
