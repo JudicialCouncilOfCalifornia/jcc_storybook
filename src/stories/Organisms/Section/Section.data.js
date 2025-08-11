@@ -228,16 +228,20 @@ export default {
       part_two: "",
     },
     heading: "Section with bg",
+    grid_min_width: 33,
     text: "",
     button_data: {},
     sub_component_data: [         
-      List({
+    List({
         ...ListWithMenu.args
       }),
        List({
         ...ListWithMenu.args
       }),
        List({
+        ...ListWithMenu.args
+      }),
+        List({
         ...ListWithMenu.args
       }),
     ]
