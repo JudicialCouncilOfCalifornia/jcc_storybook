@@ -10,6 +10,22 @@
   padding-block: var(--s0);
 }
 
+@media (min-width: 1024px) {
+  .section__content .grid.multiple {
+    display: grid;
+    grid-gap: var(--gap, var(--s0));
+  }
+
+  @supports (width: min(var(--grid-min-width, 20ch), 100%)) {
+  .section__content .grid.multiple {
+      grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
+    );
+    }
+  }
+}
+
 .section .section {
   padding: 0;
 }
