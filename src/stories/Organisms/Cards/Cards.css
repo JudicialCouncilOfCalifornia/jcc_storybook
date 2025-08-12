@@ -11,7 +11,8 @@
 }
 
 /* Enforce grid column width for multiple cards on larger devices. */
-@media (min-width: 1024px) {
+/* Moving this to Section to make it generic for all the components */
+/*@media (min-width: 1024px) {
   .cards .section__content .grid.multiple {
     display: grid;
     grid-gap: var(--gap, var(--s0));
@@ -25,7 +26,7 @@
     );
     }
   }
-}
+}*/
 
 /* Striped Cards */
 

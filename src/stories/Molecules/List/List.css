@@ -58,19 +58,3 @@
   font-family: var(--font-secondary);
   color: var(--dynamic-color, var(--color-primary));
 }
-
-@media (min-width: 1024px) {
-  .custom .section__content .grid.multiple {
-    display: grid;
-    grid-gap: var(--gap, var(--s0));
-  }
-
-  @supports (width: min(var(--grid-min-width, 20ch), 100%)) {
-    .custom .section__content .grid.multiple {
-      grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--grid-min-width, 20ch), 100%), 1fr)
-    );
-    }
-  }
-}
