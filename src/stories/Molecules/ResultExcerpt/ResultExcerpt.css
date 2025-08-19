@@ -4,6 +4,10 @@
   --gap: var(--s1);
 }
 
+.result-excerpt__header .switcher {
+  gap: var(--s-1);
+}
+
 .result-excerpt__brow {
   margin-block-end: var(--s0);
 }
@@ -84,7 +88,7 @@
 }
 .result-excerpt__is-new div {
   padding-inline: var(--s-1);
-  background-color: var(--color-secondary);
+  background-color: var(--color-base);
   color: white;
   border-radius: var(--s-9);
   font-size: var(--s-1);
@@ -115,7 +119,7 @@
 }
 
 .result-excerpt__content.stack > * + * {
-  margin-block-start: var(--s1);
+  margin-block-start: var(--s0);
 }
 
 .result-excerpt__content.stack .result-excerpt__pills {

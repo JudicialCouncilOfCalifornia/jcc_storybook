@@ -88,6 +88,7 @@ select[multiple] > * + * {
 .placeholder-container.js-form-type-email input:not(:placeholder-shown) ~ label,
 .placeholder-container.js-form-type-tel input:focus ~ label,
 .placeholder-container.js-form-type-tel input:not(:placeholder-shown) ~ label,
+.placeholder-container.js-form-type-password input:focus ~ label,
 .placeholder-container textarea:focus ~ label,
 .placeholder-container textarea:not(:placeholder-shown) ~ label {
   padding: .25rem .5rem;
@@ -101,12 +102,13 @@ select[multiple] > * + * {
 
 .placeholder-container.js-form-type-date label,
 .placeholder-container.js-form-type-email label,
+.placeholder-container.js-form-type-password label,
 .placeholder-container.js-form-type-textfield label,
 .placeholder-container.js-form-type-textarea label,
 .placeholder-container.js-form-type-tel label {
   color: var(--color-base-light-x);
   left: .5rem;
-  top: 0px;
+  top: 0;
   background-color: white;
   margin-block-start: var(--s0);
   pointer-events: none;
@@ -200,22 +202,42 @@ fieldset {
 }
 
 .form-radios input,
-.form-checkbox input,
-.form-checkboxes input {
-  width: auto;
-  appearance: none;
+input.form-checkbox {
+  width: 1rem;
+  height: 1rem;
   padding: 8px;
   border: 1px solid var(--color-black);
+  appearance: none;
 }
 
 .form-radios input:checked,
-.form-checkbox input:checked,
-.form-checkboxes input:checked {
+input.form-checkbox:checked {
+  border-color: var(--accent-color) !important;
   background-color: var(--accent-color);
 }
 
+.form-checkbox input,
+input.form-checkbox {
+  display: grid;
+  place-content: center;
+}
+
+input.form-checkbox::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  box-shadow: inset 1em 1em var(--color-white);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input.form-checkbox:checked::before {
+  transform: scale(1);
+}
+
 .form-radios input {
-  border-radius:50%;
+  border-radius: 50%;
 }
 
 .form-radio label,
@@ -234,27 +256,16 @@ fieldset legend span {
   border-block-end: 2px solid var(--accent-color);
 }
 
-fieldset .form-item.js-form-type-checkbox{
+fieldset .form-item.js-form-type-checkbox {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
   gap: var(--s-2);
 }
 
-fieldset .form-item.js-form-type-checkbox label{
+fieldset .form-item.js-form-type-checkbox label {
   margin-block-start: 0;
 }
-
-fieldset .form-item.js-form-type-checkbox input{
-  width: auto;
-  appearance: none;
-  padding: 8px;
-}
-fieldset .form-item.js-form-type-checkbox input:checked {
-  background-color: var(--accent-color);
-}
-
 
 /* Specific form styles */
 

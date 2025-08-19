@@ -19,12 +19,15 @@ docReady(function () {
     // Start our variables. We start assuming no child elements are wrapped.
     const top_of_firstchild = Math.floor(group.children[0].getBoundingClientRect().top);
     let wrapped = false;
-    
+
     for (let i = 1; i < group.children.length; i++) {
       const child = group.children[i];
-      // if any other children do not have the same top as the first child, then 
+      // If any other children do not have the same top as the first child, then
       // we know that the items are wrapping.
-      if (Math.floor(child.getBoundingClientRect().top) != top_of_firstchild) {
+      let top_of_child = Math.floor(child.getBoundingClientRect().top);
+      // QUICK FIX: Adjust to Firefox trivial top misalignment appearing for last child.
+      let top_difference = top_of_firstchild - top_of_child;
+      if (top_difference < 1) {
         child.classList.add("wrapped");
         wrapped = true;
       } else {
