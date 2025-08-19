@@ -174,11 +174,14 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: var(--s2);
 }
 
-.view-results__results .sidebar input:not(.button), 
-.view-results__results .sidebar textarea, 
+.view-results__results .sidebar input:not(.button):not([type="checkbox"]),
+.view-results__results .sidebar textarea,
 .view-results__results .sidebar select {
-  border: 1px solid var(--color-base-dark-x);
-  color: var(--color-base-dark-x);
+  border-width: 2px;
+}
+
+.view-results__results .sidebar select {
+  background-color: unset;
 }
 
 .view-results .form-actions {
@@ -203,7 +206,7 @@ li.group-li + li.group-li > h2.list-label {
   font-size: var(--s1);
   font-style: italic;
   line-height: normal;
-  margin-block-end: var(--s-3);
+  margin-block-end: var(--s0);
 }
 
 
@@ -265,45 +268,74 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0 !important;
 }
 
-.views-exposed-form fieldset {
+.views-exposed-form > .placeholder-container.form-item,
+.views-exposed-form > fieldset.form-item,
+.views-exposed-form > details {
    border: none;
    padding: 0;
    padding-block-end: var(--s3);
    border-block-end: 1px solid var(--color-base-light-x);
  }
 
-.views-exposed-form fieldset select,
-.views-exposed-form fieldset input{
+.views-exposed-form .placeholder-container.form-item select,
+.views-exposed-form .placeholder-container.form-item input {
   border-color: var(--color-black);
 }
 
-.views-exposed-form fieldset select{
-  margin-block-start: var(--s-3);
+.views-exposed-form .placeholder-container.form-item select {
+  margin-block-start: 0;
 }
 
-.views-exposed-form fieldset legend{
+.views-exposed-form details > .form-checkboxes {
+  margin-block-start: 0;
+}
+
+.views-exposed-form > .placeholder-container.form-item > label,
+.views-exposed-form > fieldset.form-item legend,
+.views-exposed-form > details summary {
   padding-inline: 0;
   padding-block-end: var(--s1);
   font-weight: 600;
   font-size: var(--s1);
 }
 
-.views-exposed-form fieldset legend span{
+/* Override default field+label order for elevated Drupal theme.  */
+.views-exposed-form .placeholder-container.form-item select,
+.views-exposed-form .placeholder-container.form-item input:not(.form-checkbox):not(.form-radio) {
+  order: 2;
+}
+
+/* Adjust text field filters */
+.views-exposed-form > .js-form-type-textfield > label {
+  position: relative !important;
+  left: unset !important;
+  padding: 0 !important;
+  padding-block-end: var(--s1) !important;
+  background: none !important;
+  color: unset !important;
+}
+
+.views-exposed-form > fieldset.form-item legend span {
   padding-inline: 0;
   padding-block-end: 0;
   margin-block-end: 0;
   border-block-end: none;
 }
 
-.views-exposed-form fieldset .fieldset-wrapper {
+.views-exposed-form fieldset.form-item .fieldset-wrapper {
   margin-block-start: 0;
 }
 
-.views-exposed-form fieldset:last-child {
+.views-exposed-form .placeholder-container.form-item:last-child {
   border-block-end: none;
 }
 
-.views-exposed-form fieldset.collapsible legend{
+.views-exposed-form fieldset .fieldset-wrapper .form-item label {
+  margin-block: 0 var(--s-3);
+}
+
+.views-exposed-form details summary,
+.views-exposed-form fieldset.collapsible legend {
   display: flex ;
   justify-content: space-between;
   gap: var(--s-2);
@@ -312,15 +344,13 @@ li.group-li + li.group-li > h2.list-label {
   width: 100%;
 }
 
-.views-exposed-form fieldset.collapsible legend::-webkit-details-marker {
-  display: none;
-}
-
+.views-exposed-form details summary:hover,
 .views-exposed-form fieldset.collapsible legend:hover {
   background-color: var(--color-base-light-xxx);
   color: var(--accent-color);
 }
 
+.views-exposed-form details summary::after,
 .views-exposed-form fieldset.collapsible legend::after{
   height: var(--s1);
   width: var(--s1);
@@ -333,27 +363,25 @@ li.group-li + li.group-li > h2.list-label {
   transition: all var(--anim-speed) ease;
 }
 
-.views-exposed-form .placeholder-container.js-form-type-textfield label{
-  display: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
+  .views-exposed-form details[open] summary::after,
   .views-exposed-form fieldset.collapsible legend::after {
     transition: all 0 ease;
     animation: none;
   }
 }
 
+.views-exposed-form details[open] summary::after,
 .views-exposed-form fieldset.collapsible[open] > legend::after {
   transform:rotate(225deg);
 }
 
 .views-exposed-form fieldset.collapsible > .fieldset-wrapper {
-  display:none;
+  display: none;
 }
 
 .views-exposed-form fieldset.collapsible[open] > .fieldset-wrapper {
-  display:block;
+  display: block;
 }
 
 .views-exposed-form fieldset.collapsible > legend:hover {

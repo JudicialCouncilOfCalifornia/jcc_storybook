@@ -60,6 +60,7 @@
 
     {% if detail_list_data or pills or content %}
       <div class="result-excerpt__content stack">
+        {# Always display this DIV to prevent incorrect UL wrapping #}
         <div>{{ content }}</div>
 
         {% if detail_list_data or pills %}
@@ -76,9 +77,9 @@
             </ul>
           {% endif %}
           {% if pills %}
-          <div class="result-excerpt__pills">
-            {% include "@molecules/Pills/Pills.twig" with pills %}
-          </div>
+            <div class="result-excerpt__pills">
+              {% include "@molecules/Pills/Pills.twig" with pills %}
+            </div>
           {% endif %}
         {% endif %}
       </div>
