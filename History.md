@@ -1,3 +1,10 @@
+0.57.38 / 2025-08-14
+=====================
+
+* Merge PR from CJER-67--adjust-view-exposed-filters
+* [CJER-67] -- adjust & clean-up for updated Drupal exposed filters support
+
+
 0.57.37 / 2025-08-14
 =====================
 
