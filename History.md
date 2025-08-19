@@ -1,4 +1,4 @@
-0.57.38 / 2025-08-14
+0.57.38 / 2025-08-19
 =====================
 
 * Merge PR from CJER-67--adjust-view-exposed-filters
