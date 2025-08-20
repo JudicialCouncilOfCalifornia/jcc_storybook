@@ -1,3 +1,10 @@
+0.57.39 / 2025-08-19
+=====================
+
+* Merge PR from CJER-67--detect-wrap
+* [CJER-67] -- correct detect wrap function bug found in 0.57.38
+
+
 0.57.38 / 2025-08-19
 =====================
 
