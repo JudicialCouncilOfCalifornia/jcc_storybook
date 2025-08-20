@@ -26,8 +26,9 @@ docReady(function () {
       // we know that the items are wrapping.
       let top_of_child = Math.floor(child.getBoundingClientRect().top);
       // QUICK FIX: Adjust to Firefox trivial top misalignment appearing for last child.
+      // Check if top difference is not larger than 1 or less than 0.
       let top_difference = top_of_firstchild - top_of_child;
-      if (top_difference < 1) {
+      if (top_difference > 1 || top_difference < 0) {
         child.classList.add("wrapped");
         wrapped = true;
       } else {
