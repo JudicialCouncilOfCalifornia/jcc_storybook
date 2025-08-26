@@ -10,6 +10,8 @@
 
 {% set footer_sidebar_class = footer_sidebar or items_per_page ? 'with-sidebar' : '' %}
 
+{% set no_results_msg = no_results_msg ? no_results_msg : 'No results found. Please try another search.'|t %}
+
 {# Create class array. #}
 {# Include composable layout classes as needed. (stack, grid, center, etc.) #}
 {# Include variant classes form above. #}
@@ -25,15 +27,29 @@
   view_display,
 ] %}
 
+{% set header_classes = [
+  'view-results__header',
+  form and form_in_sidebar ? 'with-sidebar' : '',
+  sidebar_direction_header,
+] %}
+
+{% set results_classes = [
+  'view-results__results',
+  sidebar or form_in_sidebar ? 'with-sidebar' : '',
+  sidebar_direction_results,
+  divider,
+] %}
+
 <div class="{{ classes|join(' ') }}">
 
   {% if has_header %}
-    <div class="view-results__header with-sidebar {{ sidebar_direction_header }}">
-      <div class="stack">
-        {% if header_sidebar %}
+    <div class="{{ header_classes|join(' ') }}">
+      {% if header_sidebar %}
+        <div class="stack">
           {{ header_sidebar }}
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
+
       <div class="stack">
         {% if form and not form_in_sidebar %}
           {{ form }}
@@ -45,7 +61,7 @@
       </div>
     </div>
   {% endif %}
-  <div class="view-results__results with-sidebar {{ sidebar_direction_results }} {{ divider }}">
+  <div class="{{ results_classes|join(' ') }}">
     {% if sidebar or form_in_sidebar %}
       <div class="stack sidebar">
         {% if form_in_sidebar %}
@@ -134,7 +150,7 @@
           {% if no_results_msg %}
             {{ no_results_msg }}
           {% else %}
-            <p>{{ 'No results found. Please try another search.'|t }}</p>
+            <p>{{ no_results_msg }}</p>
           {% endif %}
         </div>
       {% endif %}

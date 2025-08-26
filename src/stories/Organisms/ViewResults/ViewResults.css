@@ -11,24 +11,14 @@ li.group-li + li.group-li > h2.list-label {
 
 .view-results.view-results--search_results {
   --gap: var(--s2);
-  --sidebar-width:20ch;
-}
-
-.view-results > * + * {
-  border-block-start: 2px dotted var(--color-base-light-x);
-  padding-block-start: var(--s4);
-  margin-block-start: var(--s5);
-}
-
-.view-results__header {
-  padding-block-start: var(--s4);
+  --sidebar-width: 20ch;
 }
 
 .view-results__results {
-  margin-block-start: var(--s5);
+  margin-block-start: var(--s2);
 }
 
-.views-results_content-header{
+.views-results_content-header {
   font-size: var(--s-1);
   margin-block-end: var(--s-2);
 }
@@ -83,8 +73,8 @@ li.group-li + li.group-li > h2.list-label {
 .view-results__results .content > ul > li > ul,
 .view-results__results .content > ol > li > ol {
   list-style-type: none;
+  margin-block-start: 0;
   padding-inline: 0;
-  margin-block-start: var(--s2);
 }
 
 .view-results__results .content > ul > li + li,
@@ -209,23 +199,6 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-end: var(--s0);
 }
 
-
-/* Search page specific styling */
-.view-results .view-results__results.with-sidebar > .sidebar {
-  background-color: var(--color-base-light-xxx);
-  padding-block: var(--s3);
-  padding-inline: var(--s1);
-}
-
-.view-results.view-results--search_results .view-results__results.with-sidebar > .sidebar {
-  background-color: transparent;
-  padding: 0;
-}
-
-.view-results.view-results--search_results > * + * {
-  border-block-start: 2px dotted var(--color-base-light-x);
-}
-
 .views-view--news--news-list {
   margin-block-end: var(--s3);
 }
@@ -254,28 +227,11 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0 !important;
 }
 
-/* ===== One offs for specific views ====== */
-/* advisory bodies */
-.view-results.advisory_body_events .view-results__results .content > ol > li:first-child,
-.view-results.advisory_body_events .view-results__results .content > ul > li:first-child {
-  padding-block-start: 0 !important;
+.views-exposed-form > .placeholder-container.form-item > label,
+.views-exposed-form > fieldset.form-item legend,
+.views-exposed-form > details summary {
+  padding-block-end: var(--s1);
 }
-
-.view-results.advisory_body_events .view-results__results .content > ol,
-.view-results.advisory_body_events .view-results__results .content > ol > li:first-child > ol,
-.view-results.advisory_body_events .view-results__results .content > ul,
-.view-results.advisory_body_events .view-results__results .content > ul > li:first-child > ul {
-  margin-block-start: 0 !important;
-}
-
-.views-exposed-form > .placeholder-container.form-item,
-.views-exposed-form > fieldset.form-item,
-.views-exposed-form > details {
-   border: none;
-   padding: 0;
-   padding-block-end: var(--s3);
-   border-block-end: 1px solid var(--color-base-light-x);
- }
 
 .views-exposed-form .placeholder-container.form-item select,
 .views-exposed-form .placeholder-container.form-item input {
@@ -290,48 +246,10 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0;
 }
 
-.views-exposed-form > .placeholder-container.form-item > label,
-.views-exposed-form > fieldset.form-item legend,
-.views-exposed-form > details summary {
-  padding-inline: 0;
-  padding-block-end: var(--s1);
-  font-weight: 600;
-  font-size: var(--s1);
-}
-
 /* Override default field+label order for elevated Drupal theme.  */
 .views-exposed-form .placeholder-container.form-item select,
 .views-exposed-form .placeholder-container.form-item input:not(.form-checkbox):not(.form-radio) {
   order: 2;
-}
-
-/* Adjust text field filters */
-.views-exposed-form > .js-form-type-textfield > label {
-  position: relative !important;
-  left: unset !important;
-  padding: 0 !important;
-  padding-block-end: var(--s1) !important;
-  background: none !important;
-  color: unset !important;
-}
-
-.views-exposed-form > fieldset.form-item legend span {
-  padding-inline: 0;
-  padding-block-end: 0;
-  margin-block-end: 0;
-  border-block-end: none;
-}
-
-.views-exposed-form fieldset.form-item .fieldset-wrapper {
-  margin-block-start: 0;
-}
-
-.views-exposed-form .placeholder-container.form-item:last-child {
-  border-block-end: none;
-}
-
-.views-exposed-form fieldset .fieldset-wrapper .form-item label {
-  margin-block: 0 var(--s-3);
 }
 
 .views-exposed-form details summary,
@@ -419,10 +337,114 @@ li.group-li + li.group-li > h2.list-label {
   }
 }
 
-/* facilities, ITC listing */
+/* BEGIN - exposed filters in header */
+.view-results__header .views-exposed-form {
+  display: flex;
+  align-items: end;
+  inline-size: auto;
+}
+
+.view-results__header .views-exposed-form .form-item {
+  margin-block-start: 0;
+  margin-inline-end: var(--s1);
+}
+/* END - exposed filters in header */
+
+
+/* BEGIN - exposed filters in sidebar */
+.sidebar .views-exposed-form > .placeholder-container.form-item:not(.form-item-search),
+.sidebar .views-exposed-form > fieldset.form-item,
+.sidebar .views-exposed-form > details {
+  border: none;
+  padding: 0;
+  padding-block-end: var(--s3);
+  border-block-end: 1px solid var(--color-base-light-x);
+}
+
+.sidebar .views-exposed-form > .placeholder-container.form-item > label,
+.sidebar .views-exposed-form > fieldset.form-item legend,
+.sidebar .views-exposed-form > details summary {
+  padding-inline: 0;
+  padding-block-end: var(--s1);
+  font-weight: 600;
+}
+
+/* Adjust text field filters */
+.sidebar .views-exposed-form > .js-form-type-textfield > label {
+  position: relative !important;
+  left: unset !important;
+  padding: 0 !important;
+  padding-block-end: var(--s1) !important;
+  background: none !important;
+  color: unset !important;
+}
+
+.sidebar .views-exposed-form > fieldset.form-item legend span {
+  padding-inline: 0;
+  padding-block-end: 0;
+  margin-block-end: 0;
+  border-block-end: none;
+}
+
+.sidebar .views-exposed-form fieldset.form-item .fieldset-wrapper {
+  margin-block-start: 0;
+}
+
+.sidebar .views-exposed-form > div.form-item:last-child,
+.sidebar .views-exposed-form > fieldset.form-item:last-child,
+.sidebar .views-exposed-form > details:last-child {
+  border-block-end: none;
+}
+
+.sidebar .views-exposed-form fieldset .fieldset-wrapper .form-item label {
+  margin-block: 0 var(--s-3);
+}
+/* END - exposed filters in sidebar */
+
+/* ===== One offs for specific views ====== */
+/* BEGIN - Search page specific styling */
+.view-results .view-results__results.with-sidebar > .sidebar {
+  background-color: var(--color-base-light-xxx);
+  padding-block: var(--s3);
+  padding-inline: var(--s1);
+}
+
+.view-results.view-results--search_results .view-results__header {
+  padding-block-start: var(--s4);
+}
+
+
+.view-results.view-results--search_results .view-results__results.with-sidebar > .sidebar {
+  background-color: transparent;
+  padding: 0;
+}
+
+.view-results.view-results--search_results > * + * {
+  border-block-start: 2px dotted var(--color-base-light-x);
+  margin-block-start: var(--s5);
+  padding-block-start: var(--s4);
+}
+/* END - Search page specific styling */
+
+/* BEGIN - advisory bodies */
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child {
+  padding-block-start: 0 !important;
+}
+
+.view-results.advisory_body_events .view-results__results .content > ol,
+.view-results.advisory_body_events .view-results__results .content > ol > li:first-child > ol,
+.view-results.advisory_body_events .view-results__results .content > ul,
+.view-results.advisory_body_events .view-results__results .content > ul > li:first-child > ul {
+  margin-block-start: 0 !important;
+}
+/* BEGIN - advisory bodies */
+
+/* BEGIN - facilities, ITC listing */
 .view-results.facilities_listing.block_1, .view-results.past_proposals.block_1 {
   --sidebar-width: 46ch;
 }
 .view-results.facilities_listing.block_1 .view-results__results, .view-results.past_proposals.block_1 .view-results__results {
   --gap: 0;
 }
+/* END - facilities, ITC listing */

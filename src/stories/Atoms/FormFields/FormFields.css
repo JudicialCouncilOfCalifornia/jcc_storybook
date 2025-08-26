@@ -24,6 +24,7 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: var(--s-1);
+  margin-inline-end: var(--s1);
 }
 
 select::-ms-expand {
