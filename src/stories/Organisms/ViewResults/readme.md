@@ -6,6 +6,7 @@ ViewResults are the combined output for a view results page. It builds out the i
 
 <details>
   <summary>Twig Variables:</summary>
+
   ```
   variant: "default",
   view_name: // Machine name of the view,
@@ -37,5 +38,6 @@ ViewResults are the combined output for a view results page. It builds out the i
   footer: "Any rendered content or form elements",
   footer_sidebar: "Any rendered content or form elements. Appears in the sidebar to the main footer area.",
   sidebar_direction_footer: 'sidebar-row-reverse' or 'sidebar-row' to set which side the sidebar is on.,
+  no_results_msg: 'Generic message or custom supported',
   ```
 </details>
