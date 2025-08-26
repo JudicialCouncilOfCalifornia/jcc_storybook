@@ -1,3 +1,10 @@
+0.57.40 / 2025-08-26
+=====================
+
+* Merge PR from CJER-86--exposed-filter-label-options
+* [CJER-86] -- adjust for top-aligned filters/controls
+
+
 0.57.39 / 2025-08-19
 =====================
 
