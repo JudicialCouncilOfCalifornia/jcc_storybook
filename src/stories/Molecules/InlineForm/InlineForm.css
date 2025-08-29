@@ -63,6 +63,7 @@
 .inline-form .form-item + .form-actions {
   margin-block-start: 0;
   display: flex;
+  padding-block: var(--s-4);
   padding-inline-end: var(--s-4);
 }
 
