@@ -164,12 +164,6 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: var(--s2);
 }
 
-.view-results__results .sidebar input:not(.button):not([type="checkbox"]),
-.view-results__results .sidebar textarea,
-.view-results__results .sidebar select {
-  border-width: 2px;
-}
-
 .view-results__results .sidebar select {
   background-color: unset;
 }
@@ -231,6 +225,17 @@ li.group-li + li.group-li > h2.list-label {
 .views-exposed-form > fieldset.form-item legend,
 .views-exposed-form > details summary {
   padding-block-end: var(--s1);
+}
+
+.views-exposed-form > .placeholder-container.form-item > input:focus ~ label,
+.views-exposed-form > .placeholder-container.form-item > textarea:focus ~ label {
+  transform: none;
+}
+
+.views-exposed-form .placeholder-container.form-item input:not(.button):not([type="checkbox"]),
+.views-exposed-form .placeholder-container.form-item textarea,
+.views-exposed-form .placeholder-container.form-item select {
+  border-width: 2px;
 }
 
 .views-exposed-form .placeholder-container.form-item select,

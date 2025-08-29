@@ -20,6 +20,7 @@ select {
 
 select:not([multiple]) {
   background-origin: content-box;
+  background-color: var(--color-white);
   background-image: var(--chevron-down);
   background-repeat: no-repeat;
   background-position: right center;
@@ -55,9 +56,10 @@ select[multiple] > * + * {
 }
 
 .alt-select-style select {
-  background-image: none;
+  background-image: none !important;
   background-color: transparent;
   border: 0;
+  margin-inline-end: 0 !important;
   padding-block: var(--s-5);
   padding-inline-start: 0;
   padding-inline-end: var(--s1);
