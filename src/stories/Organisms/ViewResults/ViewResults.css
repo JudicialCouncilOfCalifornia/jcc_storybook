@@ -228,7 +228,8 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .views-exposed-form > .placeholder-container.form-item > input:focus ~ label,
-.views-exposed-form > .placeholder-container.form-item > textarea:focus ~ label {
+.views-exposed-form > .placeholder-container.form-item > textarea:focus ~ label,
+.views-exposed-form > .placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label {
   transform: none;
 }
 
@@ -249,6 +250,10 @@ li.group-li + li.group-li > h2.list-label {
 
 .views-exposed-form details > .form-checkboxes {
   margin-block-start: 0;
+}
+
+.views-exposed-form details > .form-checkboxes .form-checkboxes {
+  margin-block-start: var(--s0);
 }
 
 /* Override default field+label order for elevated Drupal theme.  */
@@ -296,7 +301,15 @@ li.group-li + li.group-li > h2.list-label {
 
 .views-exposed-form details[open] summary::after,
 .views-exposed-form fieldset.collapsible[open] > legend::after {
-  transform:rotate(225deg);
+  transform: rotate(225deg);
+  transform-origin: 80% 40%;
+}
+/* Expanded arrow positioning for Firefox. */
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) {
+  .views-exposed-form details[open] summary::after,
+  .views-exposed-form fieldset.collapsible[open] > legend::after {
+    transform-origin: 60% 40%;
+  }
 }
 
 .views-exposed-form fieldset.collapsible > .fieldset-wrapper {
