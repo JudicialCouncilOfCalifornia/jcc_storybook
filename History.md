@@ -1,3 +1,12 @@
+0.57.41 / 2025-09-09
+=====================
+
+* Merge PR from CJER-110--exposed-filters-adjustments
+* [CJER-110] -- checkbox group position and accordion arrow position for exposed filters
+* Merge PR from CJER-67--field-element-alignment
+* [CJER-67] -- items per page spacing bug, search icon spacing bug, & limit field label animation
+
+
 0.57.40 / 2025-08-26
 =====================
 
