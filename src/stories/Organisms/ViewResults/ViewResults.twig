@@ -73,7 +73,7 @@
         {% endif %}
       </div>
     {% endif %}
-    
+    {% if not custom_view %}
     <div class="stack content{% if variant == 'grouped_view' %} grouped-view{% endif %}">
 
       {% if rows -%}
@@ -153,8 +153,11 @@
             <p>{{ no_results_msg }}</p>
           {% endif %}
         </div>
-      {% endif %}
-    </div>
+     {% endif %}
+     </div>
+    {% else %}
+     {# Render custom component here#}  
+    {% endif %}  
   </div>
 
   {% if has_footer %}
