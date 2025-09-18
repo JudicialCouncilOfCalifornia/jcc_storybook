@@ -1,3 +1,10 @@
+0.57.42 / 2025-09-17
+=====================
+
+* Merge PR from fix/checkbox-input-alignment
+* [CJER-104] -- 2 cols layout issue
+
+
 0.57.41 / 2025-09-09
 =====================
 
