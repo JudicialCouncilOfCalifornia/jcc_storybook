@@ -10,6 +10,7 @@ ViewResults are the combined output for a view results page. It builds out the i
   ```
   variant: "default",
   view_name: // Machine name of the view,
+  custom_view: true if we need the default ResultExcerpt result view, false otherwise,
   view_display: // Machine name of the display,
   header: // "Any rendered content or rendered view attachment",
   header_sidebar: // "Any rendered content or rendered view attachment",
