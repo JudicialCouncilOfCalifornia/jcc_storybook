@@ -218,6 +218,7 @@ export default {
   },
   grouped_view: {
     variant: "grouped_view",
+    custom_view: false,
     no_top_margin: false,
     view_name: '',
     view_display: '',
