@@ -15,6 +15,8 @@
   'tabs__tabpanel',
 ] %}
 
+{% set random_id = random(1000) %}
+
 <div class="{{ classes|join(' ') }}" {% if open_on_load %}data-open-on-load="{{ open_on_load }}"{% endif %}>
 
   <div role="tablist" class="{{ tablist_classes|join(' ') }}">
@@ -32,7 +34,7 @@
       {% endif %}
 
       <button
-        id="{{ tab_id }}"
+        id="tabid-{{ random_id }}-{{ tab_id }}"
         class="{{ active_class }}"
         type="button"
         role="tab"
@@ -50,7 +52,7 @@
       {% set panel_id = item.id is not empty ? item.id : 'tabpanel-' ~ item.label|replace({' ':'-'})|lower %}
 
       <details
-        id='{{ panel_id }}'
+        id='tabid-{{ random_id }}-{{ panel_id }}'
         tabindex="0"
         aria-labelledby='{{ tab_id }}'
         class="stack"
