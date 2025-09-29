@@ -1,3 +1,9 @@
+0.57.44 / 2025-09-29
+=====================
+
+* Merge PR from fix/tab-id-dubplication
+* [COURTS-410] -- JRN Directory table
+
 0.57.43 / 2025-09-19
 =====================
 
