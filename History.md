@@ -1,3 +1,10 @@
+
+0.57.45 / 2025-10-07
+=====================
+* Merge PR from feature/CJER-136--datarange-filter-support
+* [CJER-136] -- date range filter support plus view results white space trims
+
+
 0.57.44 / 2025-09-29
 =====================
 
