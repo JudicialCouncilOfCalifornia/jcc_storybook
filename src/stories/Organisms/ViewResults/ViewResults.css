@@ -81,7 +81,7 @@ li.group-li + li.group-li > h2.list-label {
 .view-results__results .content > ol > li + li,
 .view-results__results .content > ul > li > ul > li + li,
 .view-results__results .content > ol > li > ol > li + li {
-  margin-block-start: var(--s4);
+  margin-block-start: var(--s2);
   padding-block-start: var(--s2);  
   border-block-start: 1px solid var(--color-base-light-x);  
 }
@@ -158,6 +158,10 @@ li.group-li + li.group-li > h2.list-label {
 
 .view-results__results .sidebar .form-item + .form-item {
   margin-block-start: var(--s0);
+}
+
+.view-results__results .sidebar .fieldset-wrapper .placeholder-container.form-item + .placeholder-container.form-item {
+  margin-block-start: 0;
 }
 
 .view-results__results .sidebar .form-item + .form-actions {
@@ -279,7 +283,7 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .views-exposed-form details summary::after,
-.views-exposed-form fieldset.collapsible legend::after{
+.views-exposed-form fieldset.collapsible legend::after {
   height: var(--s1);
   width: var(--s1);
   font-size: var(--s3);
@@ -371,6 +375,7 @@ li.group-li + li.group-li > h2.list-label {
 
 /* BEGIN - exposed filters in sidebar */
 .sidebar .views-exposed-form > .placeholder-container.form-item:not(.form-item-search),
+.sidebar .views-exposed-form > .form-wrapper fieldset.form-item,
 .sidebar .views-exposed-form > fieldset.form-item,
 .sidebar .views-exposed-form > details {
   border: none;
@@ -379,15 +384,8 @@ li.group-li + li.group-li > h2.list-label {
   border-block-end: 1px solid var(--color-base-light-x);
 }
 
-.sidebar .views-exposed-form > .placeholder-container.form-item > label,
-.sidebar .views-exposed-form > fieldset.form-item legend,
-.sidebar .views-exposed-form > details summary {
-  padding-inline: 0;
-  padding-block-end: var(--s1);
-  font-weight: 600;
-}
-
-/* Adjust text field filters */
+/* Override FormField CSS for specific filter headings */
+.sidebar .views-exposed-form > .form-wrapper .form-wrapper .fieldset-wrapper .placeholder-container label,
 .sidebar .views-exposed-form > .js-form-type-textfield > label {
   position: relative !important;
   left: unset !important;
@@ -395,8 +393,25 @@ li.group-li + li.group-li > h2.list-label {
   padding-block-end: var(--s1) !important;
   background: none !important;
   color: unset !important;
+  transform: unset !important;
 }
 
+/* Filter heading styling */
+.sidebar .views-exposed-form > .placeholder-container.form-item > label,
+.sidebar .views-exposed-form > .form-wrapper fieldset.form-item legend,
+.sidebar .views-exposed-form > fieldset.form-item legend,
+.sidebar .views-exposed-form > details summary {
+  padding-inline: 0;
+  font-weight: 600;
+}
+
+/* Filter subheading styling */
+.sidebar .views-exposed-form > .form-wrapper .form-wrapper .fieldset-wrapper .placeholder-container label {
+  margin-block-start: var(--s0);
+  margin-block-end: 0;
+}
+
+.sidebar .views-exposed-form > .form-wrapper fieldset.form-item legend span,
 .sidebar .views-exposed-form > fieldset.form-item legend span {
   padding-inline: 0;
   padding-block-end: 0;

@@ -264,11 +264,12 @@ fieldset .form-item.js-form-type-checkbox {
   flex-wrap: nowrap;
   justify-content: flex-start;
   gap: var(--s-2);
-  align-items: center;
+  align-items: baseline;
 }
 
 fieldset .form-item.js-form-type-checkbox label {
   margin-block-start: 0;
+  line-height: normal;
 }
 
 /* Specific form styles */
