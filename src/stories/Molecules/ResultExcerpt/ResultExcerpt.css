@@ -115,7 +115,7 @@
 }
 
 .result-excerpt__content {
-  margin-block-start: var(--s0);
+  margin-block-start: 0;
 }
 
 .result-excerpt__content.stack > * + * {

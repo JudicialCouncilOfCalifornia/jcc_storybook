@@ -61,7 +61,9 @@
     {% if detail_list_data or pills or content %}
       <div class="result-excerpt__content stack">
         {# Always display this DIV to prevent incorrect UL wrapping #}
-        <div>{{ content }}</div>
+        {% if content %}
+          <div>{{ content }}</div>
+        {% endif %}
 
         {% if detail_list_data or pills %}
           {% if detail_list_data %}
