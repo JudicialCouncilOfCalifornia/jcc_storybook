@@ -1,3 +1,8 @@
+0.57.46 / 2025-10-13
+=====================
+* Merge PR from bugfix/CJER-125--external-link-icon
+* [CJER-125] -- remove conflicting/confusing external icon overrides for Drupal
+
 
 0.57.45 / 2025-10-07
 =====================
