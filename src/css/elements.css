@@ -284,9 +284,3 @@ a.file-download::before {
   -webkit-mask: var(--fa-file-svg) no-repeat;
   mask: var(--fa-file-svg) no-repeat;
 }
-
-/* External links module css fix */
-svg.mailto {
-  width: 27px !important;
-  height: 17px !important;
-}
