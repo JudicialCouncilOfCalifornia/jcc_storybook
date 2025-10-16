@@ -317,7 +317,6 @@ button.sidebar-nav__button.is-active {
 }
 
 .has-sidebar-navigation .section .container.stack > *,
-.has-sidebar-navigation .section .container.stack > .section__header,
 .has-sidebar-navigation .section .container.stack > .section__main,
 .has-sidebar-navigation .section .container.stack > .section__button {
   padding-inline-start: calc(var(--sidebarnav-width) + 5ch);
@@ -328,6 +327,7 @@ button.sidebar-nav__button.is-active {
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__main,
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__button,
 .has-sidebar-navigation .section .container.stack > .section__main .section .section__main,
+.has-sidebar-navigation .section .container.stack > .section__header,
 .mobile-sidebar-nav .has-sidebar-navigation .section .container.stack > .section__main .section .section__main {
   padding-inline-start: unset;
 }
