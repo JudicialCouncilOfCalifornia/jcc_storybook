@@ -1,3 +1,8 @@
+0.57.47 / 2025-10-20
+=====================
+* Merge PR from JRN-149-heading-alignment
+* [JRN-149-heading-alignment] -- card heading alignment
+
 0.57.46 / 2025-10-13
 =====================
 * Merge PR from bugfix/CJER-125--external-link-icon
