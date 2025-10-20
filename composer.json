@@ -6,10 +6,10 @@
   "homepage": "https://jcc-storybook.netlify.app/?path=/docs/documentation-intro--default",
   "authors": [
     {
-      "name": "Calvin Tyndall",
-      "email": "calvin@chapterthreellc.com",
-      "homepage": "https://chapterthree.com",
-      "role": "Lead Developer"
+      "name": "JCC Web Services",
+      "email": "webdev@jud.ca.gov",
+      "homepage": "https://webservices.courts.ca.gov/",
+      "role": "Developer"
     }
   ],
   "support": {
