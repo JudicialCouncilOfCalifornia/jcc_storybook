@@ -225,15 +225,16 @@ li.group-li + li.group-li > h2.list-label {
   margin-block-start: 0 !important;
 }
 
-.views-exposed-form > .placeholder-container.form-item > label,
+.views-exposed-form > .placeholder-container.form-item > label {
+  padding-block-end: 0.5rem;
+}
+
 .views-exposed-form > fieldset.form-item legend,
 .views-exposed-form > details summary {
   padding-block-end: var(--s1);
 }
 
-.views-exposed-form > .placeholder-container.form-item > input:focus ~ label,
-.views-exposed-form > .placeholder-container.form-item > textarea:focus ~ label,
-.views-exposed-form > .placeholder-container.js-form-type-textfield input:not(:placeholder-shown) ~ label {
+.views-exposed-form > .placeholder-container.form-item > textarea:focus ~ label {
   transform: none;
 }
 
