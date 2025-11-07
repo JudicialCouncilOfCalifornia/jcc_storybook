@@ -1,3 +1,8 @@
+0.57.48 / 2025-11-07
+=====================
+* Merge PR from COURTS-422-fix
+* [COURTS-422-fix] -- left nav and card alignment fix
+
 0.57.47 / 2025-10-20
 =====================
 * Merge PR from JRN-149-heading-alignment
