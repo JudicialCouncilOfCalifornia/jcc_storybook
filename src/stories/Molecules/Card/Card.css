@@ -125,12 +125,6 @@
   color: var(--color-base-dark-xx);
 }
 
-.card-heading {
-  font-size: var(--s1);
-  color: var(--color-primary);
-  line-height: var(--s3);
-}
-
 .card__body {
   display: flex;
   flex-wrap: wrap;
@@ -181,17 +175,12 @@ a.card--default.card--clickable {
   text-decoration: none;
 }
 
-a.card--default.card--clickable .card__heading *,
-a.card--default.card--clickable.card--background-white .card__heading *,
-a.card--default.card--clickable.card--background-base-light-xxx .card__heading *,
-a.card--default.card--clickable.card--background-primary-light-xxx .card__heading *,
-a.card--default.card--clickable.card--background-accent-warm-light-xxxx .card__heading * {
-  --heading-color: var(--color-primary) !important;
-  color: var(--heading-color);
-}
-
 a.card--default.card--clickable .card__heading_tag span,
-a.card--default.has-media-link .card-heading  span {
+a.card--overlay.card--clickable .card__heading_tag span,
+a.card--striped.card--clickable .card__heading_tag span,
+a.card--striped-aligned.card--clickable .card__heading_tag span,
+a.card--bordered.card--clickable .card__heading_tag span,
+a.card--bordered-center.card--clickable .card__heading_tag span {
   border-bottom-width: 0.1rem;
   border-bottom-style: solid;
   border-color: transparent;
@@ -199,19 +188,27 @@ a.card--default.has-media-link .card-heading  span {
 }
 
 a.card--default.card--clickable:hover .card__heading_tag span,
-a.card--default.has-media-link:hover .card-heading span {
+a.card--overlay.card--clickable:hover .card__heading_tag span,
+a.card--striped.card--clickable:hover .card__heading_tag span,
+a.card--striped-aligned.card--clickable:hover .card__heading_tag span,
+a.card--bordered.card--clickable:hover .card__heading_tag span,
+a.card--bordered-center.card--clickable:hover .card__heading_tag span  {
   border-color: var(--heading-color);
   transition: all var(--anim-speed);
 }
 
-a.card--default.card--clickable .card__heading_tag::after {
+a.card--default.card--clickable .card__heading_tag::after,
+a.card--overlay.card--clickable .card__heading_tag::after,
+a.card--striped.card--clickable .card__heading_tag::after,
+a.card--striped-aligned.card--clickable .card__heading_tag::after,
+a.card--bordered.card--clickable .card__heading_tag::after,
+a.card--bordered-center.card--clickable .card__heading_tag::after {
   position: relative;
-  top: 0.08rem;
+  top: 0.15rem;
   margin-inline-start: var(--s-2);
   content: "";
   align-self: flex-end;
   display: inline-block;
-  vertical-align: -2px;
   width: var(--s2);
   height: var(--s2);
   background-size: contain;
@@ -600,6 +597,18 @@ a.card--default.card--clickable.bg-adjust:not(
   .card--background-base-light-xxx,
   .card--background-primary-light-xxx,
   .card--background-accent-warm-light-xxxx
+) .card__heading_tag::after,
+a.card--striped.card--clickable:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
+) .card__heading_tag::after,
+a.card--striped-aligned.card--clickable:not(
+  .card--background-white,
+  .card--background-base-light-xxx,
+  .card--background-primary-light-xxx,
+  .card--background-accent-warm-light-xxxx
 ) .card__heading_tag::after {
   background-color: var(--color-white);
 }
@@ -805,20 +814,29 @@ a.card--default.card--clickable.bg-adjust:not(
   border-color: var(--color-brown);
   color: var(--color-brown);
 }
-/* Button varaints END*/
+/* Button variants END*/
 
+/* BEGIN Media link variant */
 .card--default.has-media-link {
   background: var(--color-base-light-xx);
 }
-.card--default.has-media-link .card__inner {
-  background: var(--color-base-light-xx);  
-}
-.card--default.has-media-link .card__main {
-  background: var(--color-base-light-xxx);
-}
+
 .card--default.has-media-link .card__heading {
   margin-block-start: var(--s-1);
 }
-.card--default.has-media-link .card-heading {
-  font-weight: 700;
+
+a.card--default.has-media-link .card__heading_tag::after {
+  top: 0.14rem;
+  right: 0.2rem;
+  width: var(--s1);
+  height: var(--s1);
 }
+
+.card--default.has-media-link .card__heading_tag span {
+  --heading-color: var(--color-primary) !important;
+  font-size: var(--s1);
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: var(--s3);
+}
+/* END */
