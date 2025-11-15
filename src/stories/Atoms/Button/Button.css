@@ -42,7 +42,8 @@
   border: 2px solid var(--color-accent-warm-dark-x);  
 }
 
-.button::after {
+.button:not(.button--text)::after,
+.button--text span::after {
   margin-inline-start: var(--s-5);
   content: '';
   align-self: flex-end;
@@ -55,20 +56,26 @@
   background-color: currentColor;
 }
 
+.button.button--large:not(.button--text)::after,
+.button--text.button--large span::after {
+  margin-inline-start: var(--s-3);
+  width: 22px;
+  height: 22px;
+}
+
 .button.button--primary::after,
 .button.button--primary:focus::after,
-.button.button--text::after,
+.button.button--text span::after,
 .button.button--text:focus::after {
   background-color: currentColor;
 }
 .button.button--primary:hover::after,
-.button.button--text:hover::after
-{
+.button.button--text:hover::after {
   --hover-color: currentColor;
   background-color: var(--hover-color, var(--color-red));
 }
 .button.button--primary:active::after,
-.button.button--text:active::after {
+.button.button--text span:active::after {
   background-color: var(--color-brown);
 }
 
@@ -87,15 +94,16 @@
 .button--secondary:focus::after,
 .button--secondary:hover::after,
 .button--secondary:active::after,
-.button--text::after,
-.button--text:focus::after,
-.button--text:hover::after,
-.button--text:active::after {
+.button--text span::after,
+.button--text span:focus::after,
+.button--text span:hover::after,
+.button--text span:active::after {
   -webkit-mask: var(--arrow-svg) no-repeat;
   mask: var(--arrow-svg) no-repeat;
+  mask-size: 100% !important;
 }
 
-.button.button--text:focus::after{
+.button.button--text span:focus::after{
   background-color: currentColor;
 }
 
@@ -148,31 +156,46 @@
 }
 
 .button.button--text {
-  padding: 0;
+  padding: var(--s-6) 0 var(--s-3);
   border: 0;
   background: transparent;
   font-weight: 600;
   text-decoration: none;
+  line-height: 0;
 }
 
-.button.button--text:hover,
-.button.button--text:focus
- {
-  color: var(--color-red);
-  outline: none;
-  text-decoration: underline;
+.button.button--text.button--large {
+  padding-block-end: var(--s-2);
 }
 
 .button.button--text:active {
   color: var(--color-brown);
 }
 
-/* .button.button--text:focus {
-  padding: var(--s-1) var(--s1);
-  color: var(--color-accent-warm-dark-x);
-  border-radius: var(--s-5);
-  --button-border: 2px solid var(--color-accent-warm-light-xx);
-} */
+.button.button--text:focus {
+  padding-inline: var(--s-2);
+  border-radius: 0;
+}
+
+.button.button--text span {
+  margin: var(--s-6) var(--s-9);
+}
+
+.button.button--text span:hover,
+.button.button--text:focus span {
+  padding-block-end: var(--s-12);
+  border-bottom: 2px solid;
+}
+
+.button.button--text.button--large span:hover,
+.button.button--text.button--large:focus span {
+  padding-block-end: unset;
+}
+
+.button.button--text span:hover {
+  outline: none;
+  color: var(--color-red);
+}
 
 .button.collapsed::after {
   margin-inline-start: 0;
