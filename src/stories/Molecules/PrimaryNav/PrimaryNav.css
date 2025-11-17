@@ -219,10 +219,30 @@
 .primary-nav .primary-nav__group:has(ul.primary-nav__list--mega) .primary-nav__list {
   position: initial;
 }
-.primary-nav .primary-nav__group:has(ul.primary-nav__list--mega) .primary-nav__list {
+.primary-nav .primary-nav__group:has(ul.primary-nav__list--mega) .primary-nav__list__item {
   left: 0;
   right: 0;
   min-width: 100%;
+}
+
+.primary-nav .primary-nav__group:hover .primary-nav__list.primary-nav__list--mega{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, auto); 
+  gap: 0 1rem; 
+  min-width: 40vw;
+  max-width: 60vw;
+}
+
+.primary-nav__list--mega .primary-nav__list__item:nth-child(7n + 1) {
+  border-top: none !important;
+}
+
+.primary-nav__list--mega .primary-nav__list__item .primary-nav__link { 
+  word-wrap: break-word;
+  white-space: normal;
+  display: block;
+  line-height: 1.3;
 }
 
 .primary-nav ul.primary-nav__list {
