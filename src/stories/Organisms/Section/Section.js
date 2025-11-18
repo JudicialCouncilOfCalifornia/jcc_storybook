@@ -17,16 +17,20 @@ function adjustHeadings(subcomponents) {
       let headingTag = subcompHeading.tagName;
       let headingLevel = Number(headingTag.charAt(1));
       let headingClass = subcompHeading.className;
-      let newHeading = document.createElement('h' + (headingLevel + 1));
-      // Migrate classes.
-      if (headingClass) {
-        newHeading.classList.add(headingClass);
+      if (!headingClass.includes('heading-adjusted')){
+        let newHeading = document.createElement('h' + (headingLevel + 1));
+        newHeading.classList.add('heading-adjusted');
+
+        // Migrate classes.
+        if (headingClass) {
+          newHeading.classList.add(headingClass);
+        }
+        // Migrate text & replace original heading.
+        while(subcompHeading.firstChild) {
+          newHeading.appendChild(subcompHeading.firstChild);
+        }
+        subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);
       }
-      // Migrate text & replace original heading.
-      while(subcompHeading.firstChild) {
-        newHeading.appendChild(subcompHeading.firstChild);
-      }
-      subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);    
     });
   });
 }
