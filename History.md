@@ -1,3 +1,10 @@
+0.57.49 / 2025-11-19
+=====================
+* Merge PR from feature/ADA-4-heading-adjustments-bis
+* [feature/ADA-4-heading-adjustments-bis] 
+* Merge PR from JRN-189-3column-nav
+* [JRN-189-3column-nav] mega menu for JRN
+
 0.57.48 / 2025-11-07
 =====================
 * Merge PR from COURTS-422-fix
