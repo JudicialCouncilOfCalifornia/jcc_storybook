@@ -17,7 +17,7 @@ function adjustHeadings(subcomponents) {
       let headingTag = subcompHeading.tagName;
       let headingLevel = Number(headingTag.charAt(1));
       let headingClass = subcompHeading.className;
-      if (!headingClass.includes('heading-adjusted')){
+      if (!headingClass.includes('heading-adjusted')) {
         let newHeading = document.createElement('h' + (headingLevel + 1));
         newHeading.classList.add('heading-adjusted');
 
@@ -26,10 +26,11 @@ function adjustHeadings(subcomponents) {
           newHeading.classList.add(headingClass);
         }
         // Migrate text & replace original heading.
-        while(subcompHeading.firstChild) {
+        while (subcompHeading.firstChild) {
           newHeading.appendChild(subcompHeading.firstChild);
         }
         subcompHeading.parentNode.replaceChild(newHeading, subcompHeading);
+      }
     });
   });
 }
