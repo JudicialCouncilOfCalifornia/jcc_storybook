@@ -1,3 +1,8 @@
+0.57.50 / 2025-11-24
+=====================
+* Merge PR from feature/ADA-4-accordion-accessibility
+* [feature/ADA-4-accordion-accessibility] 
+
 0.57.49 / 2025-11-19
 =====================
 * Merge PR from feature/ADA-4-heading-adjustments-bis
