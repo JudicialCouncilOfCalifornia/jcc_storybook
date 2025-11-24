@@ -12,36 +12,57 @@ docReady(function () {
 
   // If reduced animation motion is preferred, set the speed to 0 (instant).
   const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const animation_speed = mediaQuery.matches ? 0 : 200; 
+  const animation_speed = mediaQuery.matches ? 0 : 200;
 
   const summaries = Array.from(document.querySelectorAll('details summary'));
   const accordions_items = Array.from(document.querySelectorAll('.accordion__items'));
   const expandallbtn = Array.from(document.querySelectorAll('.expand-all-btn.expand'));
   const closeallbtn = Array.from(document.querySelectorAll('.expand-all-btn.close'));
+
+  function expandAll(e, expandbtn) {
+    e.preventDefault();
+    expandbtn.setAttribute('aria-pressed', 'false');
+    const accordionContainer = e.target.closest('.accordion');
+    const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');
+    accordionItems.forEach((accordionItem, i) => {
+      accordionItem.closest('details').setAttribute('open', '');
+    })
+  };
+
+  function closeAll(e, closebtn) {
+    e.preventDefault();
+    closebtn.setAttribute('aria-pressed', 'false');
+    const accordionContainer = e.target.closest('.accordion');
+    const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');
+    accordionItems.forEach((accordionItem, i) => {
+      accordionItem.closest('details').removeAttribute('open', '');
+    })
+  };
+
   if (expandallbtn.length === closeallbtn.length) {
     expandallbtn.forEach((expandbtn, index) => {
       const closebtn = closeallbtn[index];
       if (!expandbtn.classList.contains('js-loaded')) {
         expandbtn.classList.add('js-loaded');
         closebtn.classList.add('js-loaded');
-        expandbtn.addEventListener('click', (e) => {
-          e.preventDefault();          
-          expandbtn.setAttribute('aria-pressed', 'false');
-          const accordionContainer = e.target.closest('.accordion');
-          const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');
-          accordionItems.forEach((accordionItem, i) => {            
-            accordionItem.closest('details').setAttribute('open', '');       
-          })
+        expandbtn.addEventListener('click', function(event) {
+          expandAll(event, expandbtn);
+        });
+        expandbtn.addEventListener('keydown', function(event) {
+          // Check if the pressed key is the Tab key
+          if (event.key === ' ' || event.code === 'Space') {
+            expandAll(event, expandbtn);
+          }
         });
 
-        closebtn.addEventListener('click', (e) => {
-          e.preventDefault();          
-          closebtn.setAttribute('aria-pressed', 'false');
-          const accordionContainer = e.target.closest('.accordion');
-          const accordionItems = accordionContainer.querySelectorAll('.accordion__items details');         
-          accordionItems.forEach((accordionItem, i) => {           
-            accordionItem.closest('details').removeAttribute('open', '');         
-          })          
+        closebtn.addEventListener('click', function(event) {
+          closeAll(event, closebtn);
+        });
+        closebtn.addEventListener('keydown', function(event) {
+          // Check if the pressed key is the Tab key
+          if (event.key === ' ' || event.code === 'Space') {
+            closeAll(event, closebtn);
+          }
         });
       }
     });
@@ -67,7 +88,7 @@ docReady(function () {
 
     if (!summary.classList.contains('js-accordion')) {
       summary.classList.add('js-accordion');
-    
+
       summary.addEventListener('click', (e) => {
         // Override the default open/close behavior. We are going to animate the
         // opening and closing of details items.
@@ -89,5 +110,5 @@ docReady(function () {
         }
       });
     }
-  });  
+  });
 });

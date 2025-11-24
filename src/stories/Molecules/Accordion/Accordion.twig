@@ -11,32 +11,32 @@
 
 <div class="{{ classes|join(' ') }}">
   <div class="stack">
-    
+
     {% if heading|render %}
       <h2 class="accordion__heading">{{ heading }}</h2>
     {% endif %}
-    
+
     {% if lead|render %}
       <div class="accordion__lead">{{ lead }}</div>
     {% endif %}
 
     {% if expand_button %}
       <div class="expand-btns">
-        <a class="expand-all-btn expand" aria-pressed="false" title="Toggle accordions">Expand all</a>
-        <a class="expand-all-btn close" aria-pressed="false" title="Toggle accordions">Close all</a>
+        <a class="expand-all-btn expand" aria-pressed="false" title="Toggle accordions" role="button" tabindex="0"> Expand all</a>
+        <a class="expand-all-btn close" aria-pressed="false" title="Toggle accordions" role="button" tabindex="0">Close all</a>
       </div>
     {% endif %}
     <div class="accordion__items" open_on_load="{{ open_on_load }}">
-    {% for item in items %}
-      <details {{ loop.index == 1 and open_first ? 'open' : '' }}>
-        <summary role="button">
-          <div class="accordion__label" id="{{ item.id is not empty ? item.id : 'accordion-item-' ~ loop.index }}">{{ item.label }}</div>
-        </summary>
-        <div class="box body">
-          {{ item.content }}
-        </div>
-      </details>
-    {% endfor %}
+      {% for item in items %}
+        <details {{ loop.index == 1 and open_first ? 'open' : '' }}>
+          <summary role="button">
+            <div class="accordion__label" id="{{ item.id is not empty ? item.id : 'accordion-item-' ~ loop.index }}">{{ item.label }}</div>
+          </summary>
+          <div class="box body">
+            {{ item.content }}
+          </div>
+        </details>
+      {% endfor %}
     </div>
 
   </div>
