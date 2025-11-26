@@ -1,3 +1,10 @@
+0.57.51 / 2025-11-26
+=====================
+* Merge PR from feature/ADA-5--older-card-variants-hover-state
+* [ADA-5] -- adds missing UX & accessibility states to all applicable card variant
+* Merge PR from feature/ADA-6--plain-text-button-states
+* [ADA-6] -- adds missing hover & focus details to plain text button
+
 0.57.50 / 2025-11-24
 =====================
 * Merge PR from feature/ADA-4-accordion-accessibility
