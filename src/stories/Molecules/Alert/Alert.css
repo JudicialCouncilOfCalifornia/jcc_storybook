@@ -39,6 +39,9 @@
 .alert[data-alert-type="error"] {
   background-color: var(--color-error);
 }
+.alert[data-alert-type="error"] a{
+  color: var(--color-black);
+}
 
 .alert[data-alert-type="error"] .icon-wrapper * {
   color: var(--color-error-dark) !important;

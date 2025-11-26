@@ -73,6 +73,10 @@
   color: var(--heading-color);
 }
 
+.hangover:not(.hangover--white):not(.hangover--base-light-xxx):not(.hangover--accent-warm-light-xxxx):not(.hangover--primary-light-xxx) .hangover__top .hangover__text a {
+  color: var(--color-primary-light-xxx);
+}
+
 .hangover__top-hangover-content {
   justify-content: center;
 }
