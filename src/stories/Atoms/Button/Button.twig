@@ -34,9 +34,10 @@
   </div>
 {% else %}
   {% if variant == 'text' %}
-    {% set label = '<span>' ~ label ~ '</span>' %}
+    {% set label %}
+      <span>{{ label }}</span>
+    {% endset %}
   {% endif %}
-
   {{ link(label, href, {
     'class': classes,
     'aria_label': aria_label,
