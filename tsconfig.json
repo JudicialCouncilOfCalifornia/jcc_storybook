@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "lib": ["es2022", "dom"],
+    "module": "Node16",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2022",
+    "types": ["cypress", "node"],
+    "skipLibCheck": true,
+    "moduleResolution": "Node16",
+    "noEmit": true
+  },
+  "files": [],
+  "references": [
+    { "path": "accessibility-code-checker" },
+    { "path": "custom-testing" },
+    { "path": "end-to-end-testing" },
+    { "path": "unit-testing" }
+  ],
+  "include": ["cypress.config.ts", "test/cypress.accordion.spec.ts", "test/cypress.section.spec.ts"]
+}
