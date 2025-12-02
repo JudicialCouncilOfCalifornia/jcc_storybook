@@ -1,3 +1,8 @@
+0.57.52 / 2025-01-02
+=====================
+* Merge PR from feature/ADA-8-hyperlink-color
+* [ADA-8] -- Accessibility: Hyperlinks in Alerts are not contrasted enough
+
 0.57.51 / 2025-11-26
 =====================
 * Merge PR from feature/ADA-5--older-card-variants-hover-state
