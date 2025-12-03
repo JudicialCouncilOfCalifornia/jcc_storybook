@@ -1,3 +1,7 @@
+0.57.54 / 2025-01-02
+=====================
+* Merge PR from feature/button-fixes
+
 0.57.53 / 2025-01-02
 =====================
 * Merge PR from feature/ADA-4-accordions-edits
