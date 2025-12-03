@@ -16,8 +16,8 @@
 .accordion .expand-btns .expand-all-btn {
   cursor: pointer;
   padding-inline: var(--s-2);
-  text-decoration: underline;
   font-size: 1rem;
+  color: var(--color-primary);
 }
 
 .accordion__items {
