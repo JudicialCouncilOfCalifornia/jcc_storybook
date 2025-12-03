@@ -41,6 +41,10 @@ li.group-li + li.group-li > h2.list-label {
   padding-right: var(--s-2);
 }
 
+.view-results.no-pager {
+  padding-block-end: var(--s6);
+}
+
 .view-results.no-top-margin .view-results__results{
   margin-block-start: 0;
   padding-block-start: 0;

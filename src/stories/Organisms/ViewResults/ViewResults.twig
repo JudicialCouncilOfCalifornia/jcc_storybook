@@ -8,6 +8,8 @@
 
 {% set divider = list_type_divider ? '' : 'no-divider' %}
 
+{% set no_pager = pager ? '' : 'no-pager' %}
+
 {% set footer_sidebar_class = footer_sidebar or items_per_page ? 'with-sidebar' : '' %}
 
 {% set no_results_msg = no_results_msg ? no_results_msg : 'No results found. Please try another search.'|t %}
@@ -18,6 +20,7 @@
 {% set classes = [
   'view-results',
   'container',
+  no_pager,
   variant_class,
   has_header ? 'has-header' : 'no-header',
   has_footer ? 'has-footer' : 'no-footer',
@@ -170,8 +173,11 @@
     {% endif %}
 
     {% if pager or footer %}
+
     <div class="stack">
-      {{ pager }}
+      {% if pager is not empty %}
+        {{ pager }}
+      {% endif %}
 
       {% if footer %}
         {{ footer }}
