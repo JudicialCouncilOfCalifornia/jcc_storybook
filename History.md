@@ -1,3 +1,10 @@
+0.57.53 / 2025-01-02
+=====================
+* Merge PR from feature/ADA-4-accordions-edits
+* [ADA-4] -- Accessibility: Accordions & Accordion Items
+* Merge PR from feature/ADA-45-empty-container
+* [ADA-45] -- Container element is empty - Siteimprove issue
+
 0.57.52 / 2025-01-02
 =====================
 * Merge PR from feature/ADA-8-hyperlink-color
