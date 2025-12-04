@@ -14,7 +14,9 @@
     <div class="container">
       <div class="cluster detect-wrap detect-wrap--observed">
         {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
-        {% include "@molecules/SecondaryNav/SecondaryNav.twig" with footer_upper_nav_data %}
+        {% if footer_upper_nav_data.links is not empty %}
+          {% include "@molecules/SecondaryNav/SecondaryNav.twig" with footer_upper_nav_data %}
+        {% endif %}
       </div>
     </div>
   </div>
