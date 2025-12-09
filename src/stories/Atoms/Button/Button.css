@@ -42,8 +42,7 @@
   border: 2px solid var(--color-accent-warm-dark-x);  
 }
 
-.button:not(.button--text)::after,
-.button--text span::after {
+.button::after {
   margin-inline-start: var(--s-5);
   content: '';
   align-self: flex-end;
@@ -56,16 +55,9 @@
   background-color: currentColor;
 }
 
-.button.button--large:not(.button--text)::after,
-.button--text.button--large span::after {
-  margin-inline-start: var(--s-3);
-  width: 22px;
-  height: 22px;
-}
-
 .button.button--primary::after,
 .button.button--primary:focus::after,
-.button.button--text span::after,
+.button.button--text::after,
 .button.button--text:focus::after {
   background-color: currentColor;
 }
@@ -75,7 +67,7 @@
   background-color: var(--hover-color, var(--color-red));
 }
 .button.button--primary:active::after,
-.button.button--text span:active::after {
+.button.button--text:active::after {
   background-color: var(--color-brown);
 }
 
@@ -94,16 +86,15 @@
 .button--secondary:focus::after,
 .button--secondary:hover::after,
 .button--secondary:active::after,
-.button--text span::after,
-.button--text span:focus::after,
-.button--text span:hover::after,
-.button--text span:active::after {
+.button--text::after,
+.button--text:focus::after,
+.button--text:hover::after,
+.button--text:active::after {
   -webkit-mask: var(--arrow-svg) no-repeat;
   mask: var(--arrow-svg) no-repeat;
-  mask-size: 100% !important;
 }
 
-.button.button--text span:focus::after{
+.button.button--text:focus::after {
   background-color: currentColor;
 }
 
@@ -128,6 +119,11 @@
 .button.button--large {
   font-size: var(--s2);
   padding: var(--s0) var(--s2);
+}
+
+.button.button--large::after {
+  width: 22px;
+  height: 22px;
 }
 
 /* Type */
@@ -163,6 +159,14 @@
   text-decoration: none;
 }
 
+.button.button--text:hover,
+.button.button--text:focus {
+  color: var(--color-red);
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.3em;
+}
+
 .button.button--text.button--large {
   padding-block-end: var(--s-2);
 }
@@ -172,28 +176,8 @@
 }
 
 .button.button--text:focus {
-  padding-inline: var(--s-2);
+  padding: 0 var(--s-2) var(--s-6);
   border-radius: 0;
-}
-
-.button.button--text span {
-  margin: var(--s-6) var(--s-9);
-}
-
-.button.button--text span:hover,
-.button.button--text:focus span {
-  padding-block-end: var(--s-12);
-  border-bottom: 2px solid;
-}
-
-.button.button--text.button--large span:hover,
-.button.button--text.button--large:focus span {
-  padding-block-end: unset;
-}
-
-.button.button--text span:hover {
-  outline: none;
-  color: var(--color-red);
 }
 
 .button.collapsed::after {
@@ -248,8 +232,8 @@
   color: var(--color-disabled-state) !important;
 }
 
-.button.button--primary:active::after,
-.button.button--text:active::after {
+.button.button--primary.disabled:active::after,
+.button.button--text.disabled:active::after {
   background-color: var(--color-disabled-state);
 }
 /* END */
