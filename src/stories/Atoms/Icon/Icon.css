@@ -11,6 +11,7 @@
 .icon--arrow:active::after {
   -webkit-mask: var(--arrow-svg) no-repeat;
   mask: var(--arrow-svg) no-repeat;
+  mask-size: contain;
 }
 
 .icon--arrow-up::after,

@@ -192,7 +192,13 @@ a.card--overlay.card--clickable:hover .card__heading_tag span,
 a.card--striped.card--clickable:hover .card__heading_tag span,
 a.card--striped-aligned.card--clickable:hover .card__heading_tag span,
 a.card--bordered.card--clickable:hover .card__heading_tag span,
-a.card--bordered-center.card--clickable:hover .card__heading_tag span  {
+a.card--bordered-center.card--clickable:hover .card__heading_tag span,
+a.card--default.card--clickable:focus .card__heading_tag span,
+a.card--overlay.card--clickable:focus .card__heading_tag span,
+a.card--striped.card--clickable:focus .card__heading_tag span,
+a.card--striped-aligned.card--clickable:focus .card__heading_tag span,
+a.card--bordered.card--clickable:focus .card__heading_tag span,
+a.card--bordered-center.card--clickable:focus .card__heading_tag span  {
   border-color: var(--heading-color);
   transition: all var(--anim-speed);
 }
