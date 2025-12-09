@@ -1,3 +1,8 @@
+0.57.56 / 2025-01-08
+=====================
+* Merge PR from bugfix/ADA-6--alternative-anchor-line-spacing
+* [ADA-6] -- refactor plain text button underline spacing plus other fixes
+
 0.57.55 / 2025-01-02
 =====================
 * Merge PR from feature/accordion-btns
