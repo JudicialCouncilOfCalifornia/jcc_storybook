@@ -1,3 +1,7 @@
+0.57.57 / 2025-01-09
+=====================
+* Merge PR from feature/accordion-button-fix
+
 0.57.56 / 2025-01-08
 =====================
 * Merge PR from bugfix/ADA-6--alternative-anchor-line-spacing
