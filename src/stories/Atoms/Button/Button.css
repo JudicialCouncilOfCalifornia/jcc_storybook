@@ -94,6 +94,12 @@
   mask: var(--arrow-svg) no-repeat;
 }
 
+.button--primary.no-arrow::after,
+.button--secondary.no-arrow::after,
+.button--text.no-arrow::after {
+  content: none;
+}
+
 .button.button--text:focus::after {
   background-color: currentColor;
 }
