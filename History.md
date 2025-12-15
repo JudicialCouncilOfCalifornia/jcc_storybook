@@ -1,3 +1,7 @@
+0.57.58 / 2025-12-15
+=====================
+* Merge PR from fix/herohamgover-button-color
+
 0.57.57 / 2025-01-09
 =====================
 * Merge PR from feature/accordion-button-fix
