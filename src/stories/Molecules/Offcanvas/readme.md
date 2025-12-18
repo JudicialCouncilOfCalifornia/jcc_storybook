@@ -23,10 +23,13 @@ Multiple content and third-party trigger support such as JCC Chatbot is TBD.
   close_aria_label: "Improved context for close action",
   trigger: {
     button: {
+      tag: "button",
       variant: "secondary or text if not primary default",
       label: "Open Canvas",
-      aria_label: "As needed context else the button label will be used",
+      aria_label: "As needed context",
       size: "small or large if not normal default",
+      icon: "Use icon from library else default arrow",
+      custom: "offcanvas__open-button required else custom classes",
     },
     custom: "Component or markup in place of the provided button"
   },
