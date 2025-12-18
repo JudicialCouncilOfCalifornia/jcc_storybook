@@ -1,25 +1,30 @@
+0.57.59 / 2025-12-18
+=====================
+* Merge PR from feature/ADA-7--button-aria-label-support
+* [ADA-7] -- missing button aria-label use & improve offcanvas button for ADA
+
 0.57.58 / 2025-12-15
 =====================
 * Merge PR from fix/herohamgover-button-color
 
-0.57.57 / 2025-01-09
+0.57.57 / 2025-12-09
 =====================
 * Merge PR from feature/accordion-button-fix
 
-0.57.56 / 2025-01-08
+0.57.56 / 2025-12-08
 =====================
 * Merge PR from bugfix/ADA-6--alternative-anchor-line-spacing
 * [ADA-6] -- refactor plain text button underline spacing plus other fixes
 
-0.57.55 / 2025-01-02
+0.57.55 / 2025-12-04
 =====================
 * Merge PR from feature/accordion-btns
 
-0.57.54 / 2025-01-02
+0.57.54 / 2025-12-03
 =====================
 * Merge PR from feature/button-fixes
 
-0.57.53 / 2025-01-02
+0.57.53 / 2025-12-03
 =====================
 * Merge PR from feature/ADA-4-accordions-edits
 * [ADA-4] -- Accessibility: Accordions & Accordion Items
