@@ -24,7 +24,9 @@
   custom
 ] %}
 
-{% if collapsed %}
+{% if tag == 'button' %}
+  <{{ tag }} class="{{ classes|join(' ') }}"{% if aria_label %} aria-label="{{ aria_label }}"{% endif %}>{{ label }}</{{ tag }}>
+{% elseif collapsed %}
   <a class="{{ classes|join(' ') }}" aria-label="{{ aria_label }}" href="{{ href }}">
     <span>{{ label }}</span>
   </a>

@@ -37,12 +37,13 @@
     <div class="offcanvas__triggers-container">
       {% if trigger.button %}
         {% include "@atoms/Button/Button.twig" with {
+          tag: trigger.button.tag ? trigger.button.tag : 'button',
           variant: trigger.button.variant,
           label: trigger.button.label,
-          aria_label: trigger.button.aria_label ? trigger.button.aria_label : trigger.button.label,
-          href: "javascript:void(0);",
+          aria_label: trigger.button.aria_label,
           size: trigger.button.size,
-          custom: "offcanvas__open-button",
+          icon: trigger.button.icon,
+          custom: trigger.button.custom ? trigger.button.custom : 'offcanvas__open-button',
         } %}
       {% elseif trigger.custom %}
         {{ trigger.custom }}

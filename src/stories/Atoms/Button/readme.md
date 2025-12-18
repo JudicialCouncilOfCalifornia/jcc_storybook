@@ -13,6 +13,7 @@ Button border, text and background colors can be inherited from ancestor compone
   <summary>Twig Variables:</summary>
 
 ```
+tag: 'To change from default anchor tag',
 variant: 'primary',
 size: 'normal',
 label: "Button",
@@ -21,8 +22,9 @@ aria_label: "More descriptive label for screen readers",
 icon: "Change CSS-provided icon if not using default arrow",
 full_width: "If supported, true or false to set width to match container",
 label_align: "Label alignment - left, center, right",
-collapsed: "true or false to show label on hover - no touch device support yet"
-disabled: "true or false to change button to disabled state"
+collapsed: "true or false to show label on hover - no touch device support yet",
+disabled: "true or false to change button to disabled state",
+custom: "Custom classes",
 ```
 
 Add the class `.button--no-icon` to remove the default icon output (arrow)
