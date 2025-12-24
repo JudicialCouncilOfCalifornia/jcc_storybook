@@ -1,3 +1,10 @@
+0.57.60 / 2025-12-24
+=====================
+* Merge PR from bugfix/ADA-72-Data-visualization-embed-image-alt-text
+* [ADA-7] -- Data visualization embed at text fix
+* Merge PR from bugfix/ADA-7--button-aria-label-corrections
+* [ADA-7] -- streamline/simplify card buttons
+
 0.57.59 / 2025-12-18
 =====================
 * Merge PR from feature/ADA-7--button-aria-label-support
