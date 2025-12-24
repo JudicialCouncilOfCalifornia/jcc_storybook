@@ -27,17 +27,17 @@
 {% if tag == 'button' %}
   <{{ tag }} class="{{ classes|join(' ') }}"{% if aria_label %} aria-label="{{ aria_label }}"{% endif %}>{{ label }}</{{ tag }}>
 {% elseif collapsed %}
-  <a class="{{ classes|join(' ') }}" aria-label="{{ aria_label }}" href="{{ href }}">
+  <a class="{{ classes|join(' ') }}"{% if aria_label %} aria-label="{{ aria_label }}"{% endif %} href="{{ href }}">
     <span>{{ label }}</span>
   </a>
 {% elseif disabled %}
-  <div class="{{ classes|join(' ') }}" aria-label="{{ aria_label }}" aria-disabled="true">
+  <div class="{{ classes|join(' ') }}"{% if aria_label %} aria-label="{{ aria_label }}"{% endif %} aria-disabled="true">
     <span>{{ label }}</span>
   </div>
 {% else %}
   {{ link(label, href, {
     'class': classes,
+    'style': (color is defined and color is not empty) ? '--dynamic-color: ' ~ color : NULl,
     'aria_label': aria_label,
-    'style': (color is defined and color is not empty) ? '--dynamic-color: ' ~ color : ''
   }) }}
 {% endif %}

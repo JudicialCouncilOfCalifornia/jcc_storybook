@@ -125,7 +125,11 @@
               <div class="card__buttons {{ button_class }}">
                 {% for item in button_data %}
                   {% if item.href %}
-                    {% include "@atoms/Button/Button.twig" with item %}
+                    {% include "@atoms/Button/Button.twig" with {
+                      label: item.label,
+                      href: item.href,
+                      aria_label: item.aria_label,
+                    } %}
                   {% endif %}
                 {% endfor %}
               </div>
