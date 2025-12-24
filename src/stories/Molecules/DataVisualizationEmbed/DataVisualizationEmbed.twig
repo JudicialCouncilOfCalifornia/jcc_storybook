@@ -15,7 +15,7 @@
   {# Use BEM syntax for styling classes on sub-components. #}
   <div class="data-visualization-embed-desktop">
     {% if img_data %}
-     <img src="{{ img_data }}" alt="data-visualization" />
+     <img src="{{ img_data }}" alt="{{ alt_text }}" />
     {% else %}
       <div class="data-visualization-container" style="position:relative;padding-top:calc({{ height / width * 100}}% + 58px);">
         <div class="data-visualization-clip">
@@ -29,7 +29,7 @@
   {% if mobile_url or mobile_img_data %}
     <div class="data-visualization-embed-responsive">
       {% if mobile_img_data %}
-        <img src="{{ mobile_img_data }}" alt="data-visualization" />
+        <img src="{{ mobile_img_data }}" alt="{{ mobile_alt_text|default(alt_text) }}" />
       {% else %}
         <div class="data-visualization-container" style="position:relative;padding-top:calc({{ mobile_height / mobile_width * 100}}% + 58px);">
           <div class="data-visualization-clip">
