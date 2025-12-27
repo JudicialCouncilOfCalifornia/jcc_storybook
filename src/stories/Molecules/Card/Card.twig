@@ -19,13 +19,13 @@
 
 {% set variant_background = background ? 'card--background-' ~ background ~ ' bg-adjust' : '' %}
 
-{% if clickable_card %}
+{% if clickable_card and button_data[0] %}
   {# Set HREF for clickable card, first value if multiple values. #}
   {% set tag_href = button_data[0] ? button_data[0].href : '' %}
   {% set click_attributes %}
     href="{{ tag_href }}"
-    {% if aria_label %}
-      aria_label="{{ aria_label }}"
+    {% if button_data[0].aria_label %}
+      aria-label="{{ button_data[0].aria_label }}"
     {% endif %}
   {% endset %}
 
