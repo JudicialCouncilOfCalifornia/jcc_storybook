@@ -1,3 +1,8 @@
+0.57.61 / 2025-12-26
+=====================
+* Merge PR from ADA-7--card-and-section-fixes
+* [ADA-7] -- ADA-7: clickable card regression & section more link support
+
 0.57.60 / 2025-12-24
 =====================
 * Merge PR from bugfix/ADA-72-Data-visualization-embed-image-alt-text
