@@ -354,3 +354,8 @@
 .section .component_group > .container > div > div:nth-last-child(1) {
   margin-block-end: 0;
 }
+
+.section table {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
