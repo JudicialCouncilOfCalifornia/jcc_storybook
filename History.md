@@ -1,3 +1,9 @@
+0.57.62 / 2026-01-08
+=====================
+* Merge PR from feature/ADA-15-tables
+* [ADA-15] -- ADA-15: Make Tables Accessible in Drupal
+
+
 0.57.61 / 2025-12-26
 =====================
 * Merge PR from ADA-7--card-and-section-fixes
