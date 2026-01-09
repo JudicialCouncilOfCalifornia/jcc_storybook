@@ -41,7 +41,7 @@
           <div class="result-excerpt__title">
             <{{ h }} class="result-excerpt__heading">
               {% if url %}
-                <a href="{{ url }}" arial_label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
+                <a href="{{ url }}" arial-label="{{ aria_label ? aria_label : 'View ' ~ title }}">{{ title }}</a>
               {% else %}
                 <div>{{ title }}</div>
               {% endif %}
