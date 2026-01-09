@@ -1,13 +1,17 @@
+0.57.63 / 2026-01-09
+=====================
+* Merge PR from bugfix/ADA-7--aria-syntax-corrections
+* [ADA-7] -- aria-labels that were not hyphenated 
+
 0.57.62 / 2026-01-08
 =====================
 * Merge PR from feature/ADA-15-tables
-* [ADA-15] -- ADA-15: Make Tables Accessible in Drupal
-
+* [ADA-15] -- Make Tables Accessible in Drupal
 
 0.57.61 / 2025-12-26
 =====================
-* Merge PR from ADA-7--card-and-section-fixes
-* [ADA-7] -- ADA-7: clickable card regression & section more link support
+* Merge PR from bugfix/ADA-7--card-and-section-fixes
+* [ADA-7] -- Clickable card regression & section more link support
 
 0.57.60 / 2025-12-24
 =====================
