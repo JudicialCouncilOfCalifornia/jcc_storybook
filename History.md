@@ -1,3 +1,10 @@
+0.57.64 / 2026-01-22
+=====================
+* Merge PR from feature/ADA-96-98-100
+* [ADA-96] -- Elevated: Card color contrast Green & Blue
+* [ADA-98] -- Elevated: Updating Orange color to pass contrast levels
+* [ADA-100] -- Elevated: Hyperlink Color contrast 
+
 0.57.63 / 2026-01-09
 =====================
 * Merge PR from bugfix/ADA-7--aria-syntax-corrections
