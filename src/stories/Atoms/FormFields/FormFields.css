@@ -109,7 +109,7 @@ select[multiple] > * + * {
 .placeholder-container.js-form-type-textfield label,
 .placeholder-container.js-form-type-textarea label,
 .placeholder-container.js-form-type-tel label {
-  color: var(--color-base-light-x);
+  color: var(--color-base-dark-x);
   left: .5rem;
   top: 0;
   background-color: white;
