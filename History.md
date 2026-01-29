@@ -1,3 +1,8 @@
+0.57.65 / 2026-01-29
+=====================
+* Merge PR from bugfix/ADA-99--field-label-color
+* [ADA-99] -- Darker field label color
+
 0.57.64 / 2026-01-22
 =====================
 * Merge PR from feature/ADA-96-98-100
