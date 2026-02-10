@@ -1,3 +1,8 @@
+0.57.66 / 2026-02-10
+=====================
+* Merge PR from bugfix/ADA-154--pagination-aria-label-mismatch
+* [ADA-154] -- Aria-label rather than title use in pagination
+
 0.57.65 / 2026-01-29
 =====================
 * Merge PR from bugfix/ADA-99--field-label-color
