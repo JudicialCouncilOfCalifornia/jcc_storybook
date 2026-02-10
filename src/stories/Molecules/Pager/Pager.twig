@@ -43,37 +43,39 @@
 {% if items %}
   <nav class="{{ classes|join(' ')|trim }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
     <ul class="pager__items js-pager__items cluster">
-      
-      <li class="pager__item">
-        <ul class="pager__items cluster" role="list">
 
-        {# Print first item if we are not on the first page. #}
-        {% if items.first %}
-          <li class="pager__item pager__item--first">
-            <a href="{{ items.first.href }}" aria-label="{{ 'Go to first page'|t }}">
-              {% include "@atoms/Icon/Icon.twig" with {
-                icon: "left_caret_double",
-              } %}
-              <span aria-hidden="true">{{ items.first.text|default('') }}</span>
-            </a>
-          </li>
-        {% endif %}
-      
-        {# Print previous item if we are not on the first page. #}
-        {% if items.previous %}
-          <li class="pager__item pager__item--previous">
-            <a href="{{ items.previous.href }}" aria-label="{{ 'Go to previous page'|t }}" rel="prev">
-              {% include "@atoms/Icon/Icon.twig" with {
-                icon: "left_caret",
-              } %}
-              <span aria-hidden="true">{{ items.previous.text|default('') }}</span>
-            </a>
-          </li>
-        {% endif %}
+      {% if (items.first or items.previous) %}
+        <li class="pager__item">
+          <ul class="pager__items cluster" role="list">
 
-        </ul>
-      </li>
-      
+          {# Print first item if we are not on the first page. #}
+          {% if items.first %}
+            <li class="pager__item pager__item--first">
+              <a href="{{ items.first.href }}" aria-label="{{ 'Go to first page'|t }}">
+                {% include "@atoms/Icon/Icon.twig" with {
+                  icon: "left_caret_double",
+                } %}
+                <span aria-hidden="true">{{ items.first.text|default('') }}</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {# Print previous item if we are not on the first page. #}
+          {% if items.previous %}
+            <li class="pager__item pager__item--previous">
+              <a href="{{ items.previous.href }}" aria-label="{{ 'Go to previous page'|t }}" rel="prev">
+                {% include "@atoms/Icon/Icon.twig" with {
+                  icon: "left_caret",
+                } %}
+                <span aria-hidden="true">{{ items.previous.text|default('') }}</span>
+              </a>
+            </li>
+          {% endif %}
+
+          </ul>
+        </li>
+      {% endif %}
+
       <li class="pager__item">
         <ul class="pager__items cluster">
 
