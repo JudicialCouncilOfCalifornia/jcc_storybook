@@ -2,6 +2,10 @@
 =====================
 * Merge PR from bugfix/ADA-154--pagination-aria-label-mismatch
 * [ADA-154] -- Aria-label rather than title use in pagination
+* Merge PR from fix/ADA-143-empty-containers
+* [ADA-143] -- Container element is empty - Siteimprove issue
+* Merge PR from fix/ADA-134-iframe-alt-text
+* [ADA-134] -- Inline frame missing a text alternative - Elevated
 
 0.57.65 / 2026-01-29
 =====================
