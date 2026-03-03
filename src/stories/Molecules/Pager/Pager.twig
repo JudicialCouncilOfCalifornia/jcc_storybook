@@ -88,21 +88,15 @@
         {% for key, item in items.pages %}
           <li class="pager__item{{ items.current == key and variant != "mini_pager" ? ' is-active' : '' }}">
             {% if items.current == key %}
-              {% set title = 'Current page'|t %}
+              {% set title = 'Current page @key'|t({'@key': key}) %}
             {% else %}
               {% set title = 'Go to page @key'|t({'@key': key}) %}
             {% endif %}
 
             {% if variant == "mini_pager" %}
-              <span class="sr-only">
-                {{ items.current == key ? 'Current page'|t : 'Page'|t }}
-              </span>
               {{- key -}}
             {% else %}
               <a href="{{ item.href }}" aria-label="{{ title }}">
-                <span class="sr-only">
-                  {{ items.current == key ? 'Current page'|t : 'Page'|t }}
-                </span>
                 {{- key -}}
               </a>
             {% endif %}
