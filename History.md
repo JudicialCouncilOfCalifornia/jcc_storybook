@@ -1,3 +1,11 @@
+0.57.67 / 2026-03-04
+=====================
+* Merge PR from bugfix/ADA-207--visible-elevated-pager-aria-mismatch
+* [ADA-207] -- Include page number to current pager & remove ineffective text
+* Merge PR from ada-143 and ada-134
+* [ADA-143] -- Missed empty container fixes
+* [ADA-134] -- Inline frame text alternative
+
 0.57.66 / 2026-02-10
 =====================
 * Merge PR from bugfix/ADA-154--pagination-aria-label-mismatch
