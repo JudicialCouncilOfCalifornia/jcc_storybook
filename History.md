@@ -1,3 +1,8 @@
+0.57.68 / 2026-03-05
+=====================
+* Merge PR from bugfix/ADA-213
+* [ADA-213] -- Data visualization component needs the previously deployed iframe fix that addressed "Inline frame missing a text alternative"
+
 0.57.67 / 2026-03-04
 =====================
 * Merge PR from bugfix/ADA-207--visible-elevated-pager-aria-mismatch
