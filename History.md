@@ -1,3 +1,8 @@
+0.57.69 / 2026-03-11
+=====================
+* Merge PR from bugfix/ADA-165
+* [ADA-165] -- Adding FOCUS to search fields
+
 0.57.68 / 2026-03-05
 =====================
 * Merge PR from bugfix/ADA-213
