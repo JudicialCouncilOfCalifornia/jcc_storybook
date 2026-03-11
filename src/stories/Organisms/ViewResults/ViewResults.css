@@ -241,6 +241,10 @@ li.group-li + li.group-li > h2.list-label {
   transform: none;
 }
 
+.views-exposed-form > .placeholder-container.form-item > input:focus{
+  border-color: var(--color-accent-warm-dark-x);
+}
+
 .views-exposed-form .placeholder-container.form-item input:not(.button):not([type="checkbox"]),
 .views-exposed-form .placeholder-container.form-item textarea,
 .views-exposed-form .placeholder-container.form-item select {
