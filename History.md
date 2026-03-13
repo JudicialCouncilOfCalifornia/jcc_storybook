@@ -1,6 +1,7 @@
-0.57.70 / 2026-03-13
+0.57.79 / 2026-03-13
 =====================
 * Merge PR from ADA-106-elevated-teaser-read-more-update
+* Bump to 0.57.79 due to typo that is not worth reverting in packagist.org
 * [ADA-106] -- Teaser read more update
 
 0.57.69 / 2026-03-11
