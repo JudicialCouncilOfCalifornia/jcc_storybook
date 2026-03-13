@@ -1,3 +1,8 @@
+0.57.70 / 2026-03-13
+=====================
+* Merge PR from ADA-106-elevated-teaser-read-more-update
+* [ADA-106] -- Teaser read more update
+
 0.57.69 / 2026-03-11
 =====================
 * Merge PR from bugfix/ADA-165
