@@ -40,7 +40,18 @@
   'pager',
 ] %}
 
-{% if items %}
+{# NEW: guard calculation (minimal logic, no loops) #}
+{% set has_pager_items =
+  items and (
+    items.pages
+    or items.first
+    or items.previous
+    or items.next
+    or items.last
+  )
+%}
+
+{% if has_pager_items %}
   <nav class="{{ classes|join(' ')|trim }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
     <ul class="pager__items js-pager__items cluster">
 
@@ -83,7 +94,7 @@
         {% if ellipses.previous %}
           <li class="pager__item pager__item--ellipsis">&hellip;</li>
         {% endif %}
-      
+
         {# Now generate the actual pager piece. #}
         {% for key, item in items.pages %}
           <li class="pager__item{{ items.current == key and variant != "mini_pager" ? ' is-active' : '' }}">
@@ -107,13 +118,13 @@
         {% if ellipses.next %}
           <li class="pager__item pager__item--ellipsis">&hellip;</li>
         {% endif %}
-      
+
         </ul>
       </li>
 
       <li class="pager__item">
         <ul class="pager__items cluster">
-      
+
         {# Print next item if we are not on the last page. #}
         {% if items.next %}
           <li class="pager__item pager__item--next">
@@ -125,7 +136,7 @@
             </a>
           </li>
         {% endif %}
-      
+
         {# Print last item if we are not on the last page. #}
         {% if items.last %}
           <li class="pager__item pager__item--last">
@@ -137,7 +148,7 @@
             </a>
           </li>
         {% endif %}
-        
+
         </ul>
       </li>
 
