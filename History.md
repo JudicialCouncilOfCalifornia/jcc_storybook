@@ -1,3 +1,14 @@
+0.57.80 / 2026-03-19
+=====================
+* Merge PR from feature/ADA-222-new-label-contrast
+* [ADA-222] -- Color contrast: Elevated: Courts.gov: RFP Page
+* Merge PR from bugfix/ADA-218--rfp-component-heading-color
+* [ADA-218] -- Color Contrast: Elevated: Courts.gov: RFP detail page
+* Merge PR from ADA-68-search-field-hidden-focus
+* [ADA-68] -- Search input is visually hidden but receives keyboard focus
+* Merge PR from feature/ADA-165-bis
+* [ADA-165] -- Adding FOCUS to search fields
+
 0.57.79 / 2026-03-13
 =====================
 * Merge PR from ADA-106-elevated-teaser-read-more-update
