@@ -241,8 +241,11 @@ li.group-li + li.group-li > h2.list-label {
   transform: none;
 }
 
-.views-exposed-form > .placeholder-container.form-item > input:focus{
+.views-exposed-form > .placeholder-container.form-item > input:focus,
+.views-exposed-form > .placeholder-container.form-item > select:focus{
   border-color: var(--color-accent-warm-dark-x);
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .views-exposed-form .placeholder-container.form-item input:not(.button):not([type="checkbox"]),
