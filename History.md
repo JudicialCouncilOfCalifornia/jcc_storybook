@@ -1,3 +1,8 @@
+0.57.81 / 2026-03-20
+=====================
+* Merge PR from bugfix/ADA-218--rfp-component-heading-color
+* [ADA-218] -- Adjust sidebar list variant heading color
+
 0.57.80 / 2026-03-19
 =====================
 * Merge PR from feature/ADA-222-new-label-contrast
