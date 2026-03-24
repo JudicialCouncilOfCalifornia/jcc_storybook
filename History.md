@@ -1,3 +1,8 @@
+0.57.83 / 2026-03-24
+=====================
+* Merge PR from feature/ADA-174--hero-hangover-h1-attribute-support
+* [ADA-174] -- Hero hangover optional H1 attributes support
+
 0.57.82 / 2026-03-24
 =====================
 * Corrupted lib rebuild
