@@ -1,3 +1,7 @@
+0.57.82 / 2026-03-24
+=====================
+* Corrupted lib rebuild
+
 0.57.81 / 2026-03-20
 =====================
 * Merge PR from bugfix/ADA-218--rfp-component-heading-color
