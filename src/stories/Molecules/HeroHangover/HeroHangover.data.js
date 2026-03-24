@@ -7,6 +7,7 @@ export default {
     background: null,
     brow: false,
     heading: "This is a Heading",
+    heading_attributes: "aria_label='More context for this is a heading'",
     text: "",
     hangover_content: "",
     bottom_content: "",
