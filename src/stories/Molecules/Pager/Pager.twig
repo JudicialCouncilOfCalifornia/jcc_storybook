@@ -40,7 +40,7 @@
   'pager',
 ] %}
 
-{# NEW: guard calculation (minimal logic, no loops) #}
+{# Guard calculations (minimal logic, no loops). #}
 {% set has_pager_items =
   items and (
     items.pages
@@ -51,106 +51,116 @@
   )
 %}
 
+{% set has_middle_pager_items =
+  ellipses.previous
+  or items.pages
+  or ellipses.next
+%}
+
 {% if has_pager_items %}
   <nav class="{{ classes|join(' ')|trim }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
     <ul class="pager__items js-pager__items cluster">
 
-      {% if (items.first or items.previous) %}
+      {% if items.first or items.previous %}
         <li class="pager__item">
           <ul class="pager__items cluster" role="list">
 
-          {# Print first item if we are not on the first page. #}
-          {% if items.first %}
-            <li class="pager__item pager__item--first">
-              <a href="{{ items.first.href }}" aria-label="{{ 'Go to first page'|t }}">
-                {% include "@atoms/Icon/Icon.twig" with {
-                  icon: "left_caret_double",
-                } %}
-                <span aria-hidden="true">{{ items.first.text|default('') }}</span>
-              </a>
-            </li>
-          {% endif %}
+            {# Print first item if we are not on the first page. #}
+            {% if items.first %}
+              <li class="pager__item pager__item--first">
+                <a href="{{ items.first.href }}" aria-label="{{ 'Go to first page'|t }}">
+                  {% include "@atoms/Icon/Icon.twig" with {
+                    icon: "left_caret_double",
+                  } %}
+                  <span aria-hidden="true">{{ items.first.text|default('') }}</span>
+                </a>
+              </li>
+            {% endif %}
 
-          {# Print previous item if we are not on the first page. #}
-          {% if items.previous %}
-            <li class="pager__item pager__item--previous">
-              <a href="{{ items.previous.href }}" aria-label="{{ 'Go to previous page'|t }}" rel="prev">
-                {% include "@atoms/Icon/Icon.twig" with {
-                  icon: "left_caret",
-                } %}
-                <span aria-hidden="true">{{ items.previous.text|default('') }}</span>
-              </a>
-            </li>
-          {% endif %}
+            {# Print previous item if we are not on the first page. #}
+            {% if items.previous %}
+              <li class="pager__item pager__item--previous">
+                <a href="{{ items.previous.href }}" aria-label="{{ 'Go to previous page'|t }}" rel="prev">
+                  {% include "@atoms/Icon/Icon.twig" with {
+                    icon: "left_caret",
+                  } %}
+                  <span aria-hidden="true">{{ items.previous.text|default('') }}</span>
+                </a>
+              </li>
+            {% endif %}
 
           </ul>
         </li>
       {% endif %}
 
-      <li class="pager__item">
-        <ul class="pager__items cluster">
+      {% if has_middle_pager_items %}
+        <li class="pager__item">
+          <ul class="pager__items cluster">
 
-        {# Add an ellipsis if there are further previous pages. #}
-        {% if ellipses.previous %}
-          <li class="pager__item pager__item--ellipsis">&hellip;</li>
-        {% endif %}
-
-        {# Now generate the actual pager piece. #}
-        {% for key, item in items.pages %}
-          <li class="pager__item{{ items.current == key and variant != "mini_pager" ? ' is-active' : '' }}">
-            {% if items.current == key %}
-              {% set title = 'Current page @key'|t({'@key': key}) %}
-            {% else %}
-              {% set title = 'Go to page @key'|t({'@key': key}) %}
+            {# Add an ellipsis if there are further previous pages. #}
+            {% if ellipses.previous %}
+              <li class="pager__item pager__item--ellipsis">&hellip;</li>
             {% endif %}
 
-            {% if variant == "mini_pager" %}
-              {{- key -}}
-            {% else %}
-              <a href="{{ item.href }}" aria-label="{{ title }}">
-                {{- key -}}
-              </a>
+            {# Now generate the actual pager piece. #}
+            {% for key, item in items.pages %}
+              <li class="pager__item{{ items.current == key and variant != "mini_pager" ? ' is-active' : '' }}">
+                {% if items.current == key %}
+                  {% set title = 'Current page @key'|t({'@key': key}) %}
+                {% else %}
+                  {% set title = 'Go to page @key'|t({'@key': key}) %}
+                {% endif %}
+
+                {% if variant == "mini_pager" %}
+                  {{- key -}}
+                {% else %}
+                  <a href="{{ item.href }}" aria-label="{{ title }}">
+                    {{- key -}}
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+
+            {# Add an ellipsis if there are further next pages. #}
+            {% if ellipses.next %}
+              <li class="pager__item pager__item--ellipsis">&hellip;</li>
             {% endif %}
-          </li>
-        {% endfor %}
 
-        {# Add an ellipsis if there are further next pages. #}
-        {% if ellipses.next %}
-          <li class="pager__item pager__item--ellipsis">&hellip;</li>
-        {% endif %}
+          </ul>
+        </li>
+      {% endif %}
 
-        </ul>
-      </li>
+      {% if items.next or items.last %}
+        <li class="pager__item">
+          <ul class="pager__items cluster">
 
-      <li class="pager__item">
-        <ul class="pager__items cluster">
+            {# Print next item if we are not on the last page. #}
+            {% if items.next %}
+              <li class="pager__item pager__item--next">
+                <a href="{{ items.next.href }}" aria-label="{{ 'Go to next page'|t }}" rel="next">
+                  <span aria-hidden="true">{{ items.next.text|default('') }}</span>
+                  {% include "@atoms/Icon/Icon.twig" with {
+                    icon: "right_caret",
+                  } %}
+                </a>
+              </li>
+            {% endif %}
 
-        {# Print next item if we are not on the last page. #}
-        {% if items.next %}
-          <li class="pager__item pager__item--next">
-            <a href="{{ items.next.href }}" aria-label="{{ 'Go to next page'|t }}" rel="next">
-              <span aria-hidden="true">{{ items.next.text|default('') }}</span>
-              {% include "@atoms/Icon/Icon.twig" with {
-                icon: "right_caret",
-              } %}
-            </a>
-          </li>
-        {% endif %}
+            {# Print last item if we are not on the last page. #}
+            {% if items.last %}
+              <li class="pager__item pager__item--last">
+                <a href="{{ items.last.href }}" aria-label="{{ 'Go to last page'|t }}">
+                  <span aria-hidden="true">{{ items.last.text|default('') }}</span>
+                  {% include "@atoms/Icon/Icon.twig" with {
+                    icon: "right_caret_double",
+                  } %}
+                </a>
+              </li>
+            {% endif %}
 
-        {# Print last item if we are not on the last page. #}
-        {% if items.last %}
-          <li class="pager__item pager__item--last">
-            <a href="{{ items.last.href }}" aria-label="{{ 'Go to last page'|t }}">
-              <span aria-hidden="true">{{ items.last.text|default('') }}</span>
-              {% include "@atoms/Icon/Icon.twig" with {
-                icon: "right_caret_double",
-              } %}
-            </a>
-          </li>
-        {% endif %}
-
-        </ul>
-      </li>
+          </ul>
+        </li>
+      {% endif %}
 
     </ul>
   </nav>
