@@ -29,7 +29,7 @@
 
 .list__item .attachment__new-label,
 .list__item .attachment__recent-updated-date {
-  color: var(--color-base);
+  color: var(--color-base-dark-x);
   font-size: var(--s-1);
   margin-inline-start: var(--s-4);
 }

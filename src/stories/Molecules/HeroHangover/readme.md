@@ -32,6 +32,7 @@ We can take it a bit further. I'm not too happy with the text overlay situation.
     part_two: "Part two",
   },
   heading: "This is a Heading",
+  heading_attributes: [optional use of heading attributes during integrations such as aria-label, etc.],
   text: "<p>The text in the top section.</p>",
   hangover_content: "The markup in the hangover section. A bordered-center Card
    can be used with one or all of its content items. Or anything else.",

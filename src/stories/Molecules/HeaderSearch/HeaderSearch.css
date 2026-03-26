@@ -303,6 +303,8 @@ button.header-search__icon .icon-wrapper {
   opacity: 0;
   width: 0;
   flex-grow: 0;
+  visibility: hidden;
+  overflow: hidden;
 }
 
 .search-toggle:has(input[type="checkbox"]) ~ .header__secondary-nav {
@@ -315,6 +317,7 @@ button.header-search__icon .icon-wrapper {
   opacity: 1;
   width: auto;
   flex-grow: 1;
+  visibility: visible;
 }
 
 button.header-search__icon:after {

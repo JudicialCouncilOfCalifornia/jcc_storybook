@@ -1,3 +1,28 @@
+0.57.83 / 2026-03-24
+=====================
+* Merge PR from feature/ADA-174--hero-hangover-h1-attribute-support
+* [ADA-174] -- Hero hangover optional H1 attributes support
+
+0.57.82 / 2026-03-24
+=====================
+* Corrupted lib rebuild
+
+0.57.81 / 2026-03-20
+=====================
+* Merge PR from bugfix/ADA-218--rfp-component-heading-color
+* [ADA-218] -- Adjust sidebar list variant heading color
+
+0.57.80 / 2026-03-19
+=====================
+* Merge PR from feature/ADA-222-new-label-contrast
+* [ADA-222] -- Color contrast: Elevated: Courts.gov: RFP Page
+* Merge PR from bugfix/ADA-218--rfp-component-heading-color
+* [ADA-218] -- Color Contrast: Elevated: Courts.gov: RFP detail page
+* Merge PR from ADA-68-search-field-hidden-focus
+* [ADA-68] -- Search input is visually hidden but receives keyboard focus
+* Merge PR from feature/ADA-165-bis
+* [ADA-165] -- Adding FOCUS to search fields
+
 0.57.79 / 2026-03-13
 =====================
 * Merge PR from ADA-106-elevated-teaser-read-more-update

@@ -117,7 +117,7 @@
 .sidebar-list--secondary .sidebar-list__item__brow {
   font-size: var(--s0);
   font-weight: 600;
-  color: var(--color-accent-warm-light-x);
+  color: #FFCA9E;
   text-transform: uppercase;
 }
 

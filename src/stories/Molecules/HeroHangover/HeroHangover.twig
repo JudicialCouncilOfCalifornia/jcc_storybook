@@ -7,13 +7,13 @@
 {% set bg_color = background ? background : 'base-dark-x' %}
 
 {% set variant_styles = [
-	'--bg: var(--color-' ~ bg_color ~ ');',
-	'--border: var(--border-' ~ bg_color ~ ');',
+  '--bg: var(--color-' ~ bg_color ~ ');',
+  '--border: var(--border-' ~ bg_color ~ ');',
 ] %}
 {% set box_styles = [] %}
 
 {% if hangover_offset %}
-	{% set variant_styles = variant_styles|merge([
+  {% set variant_styles = variant_styles|merge([
     '--hangover-offset: -' ~ hangover_offset ~ 'ch;'
   ]) %}
 {% endif %}
@@ -29,66 +29,66 @@
 ] %}
 
 {% set boxclasses = [
-	'with-sidebar',
-	'detect-wrap',
-	'detect-wrap--observed',
-	'container',
+  'with-sidebar',
+  'detect-wrap',
+  'detect-wrap--observed',
+  'container',
 ] %}
 
 {% set layoutclasses = [
-	'stack',
-	hangover_content or share ? 'min-width-layout' : '',
+  'stack',
+  hangover_content or share ? 'min-width-layout' : '',
 ] %}
 
 <div class="{{ classes|join(' ')|trim }}" style="{{ variant_styles|join(' ')|trim }}">
-	<div class="hangover__top">
-		<div class="box">
-			<div class="{{ boxclasses|join(' ')|trim }}">
-				{% if hangover_content is not empty or share is not empty %}
-					<div class="hangover__top-hangover-content">
+  <div class="hangover__top">
+    <div class="box">
+      <div class="{{ boxclasses|join(' ')|trim }}">
+        {% if hangover_content is not empty or share is not empty %}
+          <div class="hangover__top-hangover-content">
             {% if hangover_content %}
               {{ hangover_content }}
             {% elseif share %}
               {% include "@molecules/Share/Share.twig" with share %}
             {% endif %}
-					</div>
-				{% endif %}
-				<div class="hangover__top-content">
+          </div>
+        {% endif %}
+        <div class="hangover__top-content">
           <div class="{{ layoutclasses|join(' ')|trim }}">
-						<div class="stack">
+            <div class="stack">
               {% if brow.part_one is not empty or brow.part_two is not empty %}
                 <div class="hangover__top_content_wrapper {{ share ? 'cluster' : '' }}">
                   <div class="hangover__top-content-brow">
                     {% include "@atoms/Brow/Brow.twig" with brow %}
                   </div>
                 </div>
-							{% endif %}
-							{% if heading %}
-								<h1 class="hangover__title stack__sm-space">{{ heading }}</h1>
-							{% endif %}
-						</div>
-						{% if text %}
-							<div class="hangover__text">
-								{{ text }}
-							</div>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% if bottom_content is not empty %}
-		<div class="hangover__bottom">
-			<div class="box">
-				<div class="with-sidebar container">
-					{% if hangover_content is not empty %}
-						<div></div>
-					{% endif %}
-					<div class="hangover__bottom-content">
-						{{ bottom_content }}
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endif %}
+              {% endif %}
+              {% if heading %}
+                <h1 class="hangover__title stack__sm-space"{{ heading_attributes }}>{{ heading }}</h1>
+              {% endif %}
+            </div>
+            {% if text %}
+              <div class="hangover__text">
+                {{ text }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if bottom_content is not empty %}
+    <div class="hangover__bottom">
+      <div class="box">
+        <div class="with-sidebar container">
+          {% if hangover_content is not empty %}
+            <div></div>
+          {% endif %}
+          <div class="hangover__bottom-content">
+            {{ bottom_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </div>
