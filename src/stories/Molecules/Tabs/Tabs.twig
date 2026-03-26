@@ -17,6 +17,7 @@
 
 {% set random_id = random(1000) %}
 
+{% if items %}
 <div class="{{ classes|join(' ') }}" {% if open_on_load %}data-open-on-load="{{ open_on_load }}"{% endif %}>
 
   <div role="tablist" class="{{ tablist_classes|join(' ') }}">
@@ -66,3 +67,4 @@
   </div>
 
 </div>
+{% endif %}
