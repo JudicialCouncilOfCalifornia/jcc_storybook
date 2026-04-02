@@ -1,3 +1,8 @@
+0.57.84 / 2026-04-02
+=====================
+* Merge PR from bugfix/ada_282
+* [ADA-282] -- Prevent empty ul in the pager
+
 0.57.83 / 2026-03-24
 =====================
 * Merge PR from feature/ADA-174--hero-hangover-h1-attribute-support
