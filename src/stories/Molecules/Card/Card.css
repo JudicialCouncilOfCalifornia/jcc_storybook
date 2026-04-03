@@ -91,12 +91,13 @@
 .caption-overlay .card__media-caption {
   padding-block: var(--s-4);
   padding-inline: var(--s-1);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   box-sizing: border-box;
   z-index: 2;
 }
 
-.caption-overlay .card__media-caption span {
+.caption-overlay .card__media-caption span,
+.caption-overlay .card__media-citation {
   color: var(--color-white) !important;
 }
 
