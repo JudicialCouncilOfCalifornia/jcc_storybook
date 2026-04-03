@@ -96,8 +96,7 @@
   z-index: 2;
 }
 
-.caption-overlay .card__media-caption span,
-.caption-overlay .card__media-citation {
+.caption-overlay .card__media-caption span {
   color: var(--color-white) !important;
 }
 
