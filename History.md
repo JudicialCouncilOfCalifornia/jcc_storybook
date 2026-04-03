@@ -1,3 +1,8 @@
+0.57.85 / 2026-04-03
+=====================
+* Merge PR from bugfix/ada_363
+* [ADA-363] -- Captioning Color Contrast Issue
+
 0.57.84 / 2026-04-02
 =====================
 * Merge PR from bugfix/ada_282
