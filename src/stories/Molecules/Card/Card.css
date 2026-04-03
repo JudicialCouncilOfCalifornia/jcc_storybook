@@ -91,7 +91,7 @@
 .caption-overlay .card__media-caption {
   padding-block: var(--s-4);
   padding-inline: var(--s-1);
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   z-index: 2;
 }
