@@ -34,6 +34,7 @@
         </div>
         {% endif %}
 
+        {% if links is not empty %}
         <ul class="section-nav__desktop nav-level-1 reel no-bar" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% endif %}>
           {% for i,link in links %}
             
@@ -63,6 +64,8 @@
               {% if link.links is not empty %}
                 {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
                 {% set mega = link.links|length > 7 ? 'section-nav__list--mega' : '' %}
+
+                {% if link.links is not empty %}
                 <ul class="section-nav__list nav-level-2 {{ mega }}">
                   {% for link2 in link.links %}
                   <li class="section-nav__list__item">
@@ -77,10 +80,12 @@
                   </li>
                   {% endfor %}
                 </ul>
+                {% endif %}
               {% endif %}
             </li>
           {% endfor %}
         </ul>
+        {% endif %}
       </nav>
 
       {% if display_mobile_version %}
@@ -88,6 +93,7 @@
         
           {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
 
+          {% if mobile_links is not empty %}
           <ul class="section-nav__mobile nav-level-1 stack" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
             {% for i,link in mobile_links %}
               {% set parent = link.links is not empty ? true : false %}
@@ -104,7 +110,8 @@
                 
                 {% if link.links is not empty %}
                   {% set mega = link.links|length > 7 ? 'section-nav__mobile__item--mega' : '' %}
-                  <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
+                 {% if link.links is not empty %} 
+		  <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
                     {% for link2 in link.links %}
                       <li class="section-nav__mobile__list__item">
                         {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
@@ -112,11 +119,13 @@
                       </li>
                     {% endfor %}
                   </ul>
+		  {% endif %}
                 {% endif %}
 
             </li>
           {% endfor %}
           </ul>
+	  {% endif %}
         </nav>
       {% endif %}
     </div>
