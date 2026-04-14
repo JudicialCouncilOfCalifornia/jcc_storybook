@@ -1,3 +1,8 @@
+0.57.86 / 2026-04-14
+=====================
+* Merge PR from bugfix/ada_407
+* [ADA-407] -- Role=list - Utility Nav & Hat
+
 0.57.85 / 2026-04-03
 =====================
 * Merge PR from bugfix/ada_363
