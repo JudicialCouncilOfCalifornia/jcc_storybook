@@ -26,12 +26,14 @@
       <span>{{ label }}</span>
     </div>
   {% endif %}
-	<ul class="{{ list_classes|join(' ')|trim }}" >
-		{% for link in links %}
-			<li class="secondary-nav__list__item">
-				{% set link_class = link.is_current ? 'active' : '' %}
-				{{ link(link.text, link.url, { 'class': link_class }) }}
-			</li>
-		{% endfor %}
-	</ul>
+    {% if links is not empty %}
+      <ul class="{{ list_classes|join(' ')|trim }}" >
+          {% for link in links %}
+              <li class="secondary-nav__list__item">
+                  {% set link_class = link.is_current ? 'active' : '' %}
+                  {{ link(link.text, link.url, { 'class': link_class }) }}
+              </li>
+          {% endfor %}
+      </ul>
+    {% endif %}
 </nav>
