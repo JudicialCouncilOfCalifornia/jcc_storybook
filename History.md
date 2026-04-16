@@ -1,3 +1,8 @@
+0.57.87 / 2026-04-16
+=====================
+* Merge PR from bugfix/ada_407
+* [ADA-407] -- ADA fix for Utility Nav & Hat mobile variant
+
 0.57.86 / 2026-04-14
 =====================
 * Merge PR from bugfix/ada_407
