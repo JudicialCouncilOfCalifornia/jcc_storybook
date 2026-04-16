@@ -15,6 +15,7 @@
     {% include "@molecules/HeaderSearch/HeaderSearch.twig" with search_form %}
   {% endif %}
 
+  {% if primary_nav_data.links is not empty %}
   <ul class="stack mobile-nav__primary-nav__group-list nav-level-1" {% if primary_nav_data.show_label %} aria-labelledby="{{ nav_id }}" {% elseif primary_nav_data.label %} aria-label="{{ primary_nav_data.label }}" {% endif %}>
     {% for i,link in primary_nav_data.links %}
       {% set parent = link.links is not empty ? true : false %}
@@ -43,7 +44,9 @@
       </li>
     {% endfor %}
   </ul>
+  {% endif %}
 
+  {% if secondary_nav_data.links is not empty %}
   <ul class="stack mobile-nav__secondary-nav__list nav-level-1" {% if secondary_nav_data.show_label %} aria-labelledby="{{ nav_id }}" {% elseif secondary_nav_data.label %} aria-label="{{ secondary_nav_data.label }}" {% endif %}>
     {% for i,link in secondary_nav_data.links %}
     <li class="mobile-nav__secondary-nav__list__item">
@@ -51,5 +54,6 @@
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
 
 </nav>
