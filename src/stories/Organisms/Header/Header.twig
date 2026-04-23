@@ -17,9 +17,6 @@
         {% include "@atoms/SiteBranding/SiteBranding.twig" with site_branding_data %}
         {% if secondary_nav_data is not empty or translate or header_search_data %}
           <div class="header__secondary cluster detect-wrap detect-wrap--observed">
-            {% if header_search_data %}
-              {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
-            {% endif %}
             {% if translate %}
               <div class="header__secondary__translate">
               {% for feature in translate %}
@@ -31,6 +28,9 @@
               <div class="header__secondary-nav">
                 {% include "@molecules/SecondaryNav/SecondaryNav.twig" with secondary_nav_data %}
               </div>
+            {% endif %}
+            {% if header_search_data %}
+              {% include "@molecules/HeaderSearch/HeaderSearch.twig" with header_search_data %}
             {% endif %}
           </div>
         {% endif %}

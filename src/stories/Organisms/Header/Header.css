@@ -167,24 +167,13 @@
 }
 
 /* Hide the header lower if the header upper triggers */
-.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower,
-.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower * {
-  height: 0;
-  padding: 0;
-  max-height: 0;
-  min-height: 0;
-  visibility: hidden;
-  flex-wrap: wrap;
+.header .header__upper:has( > .container > .cluster.wrapping) ~ .header__lower {
+  display: none;
 }
 
 /* Hide the header upper if the header lower triggers */
-.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary,
-.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary * {
-  height: 0;
-  padding: 0;
-  max-height: 0;
-  min-height: 0;
-  visibility: hidden;
+.header:has(.header__lower .primary-nav .reel.overflowing) .header__upper .header__secondary {
+  display: none;
 }
 
 /* Hide mobile menu section by default */
