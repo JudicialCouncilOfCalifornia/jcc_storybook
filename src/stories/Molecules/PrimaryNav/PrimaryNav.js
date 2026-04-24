@@ -47,12 +47,8 @@ docReady(function () {
   // Submenu position management on mouseover.
   addEventListener('mouseover', (event) => {
     // Adjust non-mega submenu position if no space on its right.
-    let element = event.target;
-    if (
-      element instanceof HTMLButtonElement &&
-      element.classList.contains('primary-nav__mobile__button') &&
-      element.hasAttribute('aria-controls')
-    ) {
+    let element = event.target.closest('button.primary-nav__mobile__button[aria-controls]');
+    if (element) {
       let submenu = element.nextElementSibling;
 
       if (submenu && !submenu.classList.contains('primary-nav__mobile__item--mega')) {

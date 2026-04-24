@@ -26,7 +26,7 @@
       {% for i,link in links %}
         
         {% set parent = link.links is not empty ? true : false %}
-        {% set submenu_id = parent ? ((link.id is not empty ? link.id : (nav_id ~ '-submenu-' ~ loop.index))|clean_id) : '' %}
+        {% set submenu_id = parent ? (link.id ?? (nav_id ~ '-submenu-' ~ loop.index)) : '' %}
         {% set active_class = link.is_current ? 'is_active' : '' %}
         {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
         
@@ -94,7 +94,8 @@
           <li class="primary-nav__mobile__group">
 
             {% if parent %}
-              {% set mobile_submenu_id = nav_id ~ '-mobile-submenu-' ~ loop.index %}
+              {% set mobile_submenu_base = link.id ?? (nav_id ? nav_id ~ '-mobile-submenu-' ~ loop.index : 'primary-nav-mobile-submenu-' ~ loop.index) %}
+              {% set mobile_submenu_id = mobile_submenu_base|clean_id %}
               <button class="primary-nav__mobile__button button" type="button" aria-expanded="false" aria-controls="{{ mobile_submenu_id }}">
                 {{ link.text }}
                 {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
