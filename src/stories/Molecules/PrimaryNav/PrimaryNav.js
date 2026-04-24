@@ -17,6 +17,10 @@ docReady(function () {
     if (!trigger || !submenu) {
       return;
     }
+    const controlsId = trigger.getAttribute('aria-controls');
+    if (!controlsId || submenu.id !== controlsId) {
+      return;
+    }
 
     const setExpanded = (expanded) => {
       trigger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
@@ -40,7 +44,11 @@ docReady(function () {
   addEventListener('mouseover', (event) => {
     // Adjust non-mega submenu position if no space on its right.
     let element = event.target;
-    if (element.classList.contains('primary-nav__mobile__button')) {
+    if (
+      element instanceof HTMLButtonElement &&
+      element.classList.contains('primary-nav__mobile__button') &&
+      element.hasAttribute('aria-controls')
+    ) {
       let submenu = element.nextElementSibling;
 
       if (submenu && !submenu.classList.contains('primary-nav__mobile__item--mega')) {
@@ -61,7 +69,7 @@ docReady(function () {
   });
 
   // Toggle the sub menus.
-  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button'));
+  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile button.primary-nav__mobile__button[aria-controls]'));
   buttons.forEach(button => {
     if (!button.classList.contains('js-open')) {
       button.classList.add('js-open');
@@ -71,8 +79,8 @@ docReady(function () {
         submenu.hidden = true;
       }
 
-      button.addEventListener('pointerdown', (e) => {
-        const opened = document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button.open');
+      button.addEventListener('click', (e) => {
+        const opened = document.querySelectorAll('.primary-nav__mobile button.primary-nav__mobile__button[aria-controls].open');
 
         opened.forEach(item => {
           if (item && item !== e.currentTarget) {
