@@ -29,7 +29,11 @@ docReady(function () {
     setExpanded(false);
 
     group.addEventListener('mouseenter', () => setExpanded(true));
-    group.addEventListener('mouseleave', () => setExpanded(false));
+    group.addEventListener('mouseleave', () => {
+      if (!group.contains(document.activeElement)) {
+        setExpanded(false);
+      }
+    });
     group.addEventListener('focusin', () => setExpanded(true));
     group.addEventListener('focusout', () => {
       setTimeout(() => {

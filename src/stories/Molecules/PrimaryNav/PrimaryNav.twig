@@ -26,7 +26,7 @@
       {% for i,link in links %}
         
         {% set parent = link.links is not empty ? true : false %}
-        {% set submenu_id = parent ? (link.id ?? (nav_id ~ '-submenu-' ~ loop.index)) : '' %}
+        {% set submenu_id = parent ? ((link.id is not empty ? link.id : (nav_id ~ '-submenu-' ~ loop.index))|clean_id) : '' %}
         {% set active_class = link.is_current ? 'is_active' : '' %}
         {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
         
