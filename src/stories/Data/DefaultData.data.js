@@ -49,9 +49,9 @@ let form = `
 <form action='/search' class='header-search__form' role='search'>
   <label class='sr-only' for='header-search'>Search</label>
   <input id='header-search' type='search' name='search' placeholder='Search' />
-  <button class='header-search__icon' type='submit'>
+  <button class='header-search__icon' type='submit' aria-label='Search'>
   <div class="icon-wrapper icon-wrapper--fa-search">
-	<svg class="icon" aria-labelledby=""><use xlink:href="icons.svg#fa-search"></use></svg><span class='sr-only'>Search</span>
+	<svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="icons.svg#fa-search"></use></svg><span class='sr-only'>Search</span>
   </div>
   </button>
 </form>

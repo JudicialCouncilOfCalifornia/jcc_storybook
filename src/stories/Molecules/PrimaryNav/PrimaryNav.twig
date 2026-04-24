@@ -26,6 +26,7 @@
       {% for i,link in links %}
         
         {% set parent = link.links is not empty ? true : false %}
+        {% set submenu_id = parent ? (link.id ?? (nav_id ~ '-submenu-' ~ loop.index)) : '' %}
         {% set active_class = link.is_current ? 'is_active' : '' %}
         {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
         
@@ -40,9 +41,20 @@
           
           {% if parent %}
             {% if has_desktop_dropdown_overview_link %}
-              <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
+              <button
+                type="button"
+                class="{{ link_classes|join(' ')|trim }}"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="{{ submenu_id }}"
+              >{{ link.text }}</button>
             {% else %}
-              {{ link(link.text, link.url, {class: link_classes}) }}
+              {{ link(link.text, link.url, {
+                class: link_classes,
+                'aria-haspopup': 'true',
+                'aria-expanded': 'false',
+                'aria-controls': submenu_id
+              }) }}
             {% endif %}
           {% else %}
             {{ link(link.text, link.url, {class: link_classes}) }}
@@ -51,7 +63,7 @@
           {% if link.links is not empty %}
             {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
             {% set mega = link.links|length > 7 ? 'primary-nav__list--mega' : '' %}
-            <ul class="primary-nav__list nav-level-2 {{ mega }}">
+            <ul id="{{ submenu_id }}" class="primary-nav__list nav-level-2 {{ mega }}">
               {% for link_lv2 in link.links %}
               <li class="primary-nav__list__item">
                 {% set link_lv2_classes = [
@@ -82,7 +94,8 @@
           <li class="primary-nav__mobile__group">
 
             {% if parent %}
-              <button class="primary-nav__mobile__button button">
+              {% set mobile_submenu_id = nav_id ~ '-mobile-submenu-' ~ loop.index %}
+              <button class="primary-nav__mobile__button button" type="button" aria-expanded="false" aria-controls="{{ mobile_submenu_id }}">
                 {{ link.text }}
                 {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
               </button>
@@ -92,7 +105,7 @@
             
             {% if link.links is not empty %}
               {% set mega = link.links|length > 7 ? 'primary-nav__mobile__item--mega' : '' %}
-              <ul class="primary-nav__mobile__list nav-level-2 box {{ mega }}">
+              <ul id="{{ mobile_submenu_id }}" class="primary-nav__mobile__list nav-level-2 box {{ mega }}">
                 {% for link2 in link.links %}
                   <li class="primary-nav__mobile__list__item">
                     {% set overview_link_class = link2.is_overview_link ? 'primary-nav__mobile__link primary-nav__mobile__overview-link' : 'primary-nav__mobile__link' %}
