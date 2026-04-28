@@ -190,7 +190,7 @@ button.header-search__icon:active {
 }
 
 button.header-search__icon:focus {
-  outline: 2px solid var(--color-accent-warm-light-x);
+  outline: 2px solid var(--color-accent-warm-dark-x);
   outline-offset: 2px;
   background: var(--color-accent-warm-dark-x);
 }
@@ -253,7 +253,7 @@ button.header-search__icon .icon-wrapper {
 .search-toggle input:focus-visible {
   outline: 2px solid var(--icon-background);
   border-radius: 99999px;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 .search-toggle .icon-wrapper {
