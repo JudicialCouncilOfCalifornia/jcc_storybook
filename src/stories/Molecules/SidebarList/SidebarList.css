@@ -86,8 +86,7 @@
   display: none;
 }
 
-.sidebar-list--primary *:is(.sidebar-list__item__heading, .sidebar-list__item__date-info, .sidebar-list__item__text),
-.sidebar-list--primary *:is(.sidebar-list__item__heading, .sidebar-list__item__date-info, .sidebar-list__item__text) *:is(p,a) {
+.sidebar-list--primary p {
   font-weight: 300;
   color: var(--color-white);
   text-transform: none;
@@ -108,8 +107,7 @@
   display: none;
 }
 
-.sidebar-list--secondary *:is(.sidebar-list__item__heading, .sidebar-list__item__date-info, .sidebar-list__item__text),
-.sidebar-list--secondary *:is(.sidebar-list__item__heading, .sidebar-list__item__date-info, .sidebar-list__item__text) *:is(p,a) {
+.sidebar-list--secondary p {
   font-weight: 300;
   color: var(--color-white);
 }
