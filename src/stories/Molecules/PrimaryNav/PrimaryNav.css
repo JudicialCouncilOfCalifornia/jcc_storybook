@@ -200,7 +200,7 @@
 .primary-nav .primary-nav__group .icon-wrapper {
   width: var(--s-4);
   height: var(--s-4);
-  color: var(--color-base-light-x);
+  color: var(--color-base-dark-x);
 }
 
 .primary-nav .primary-nav__group:focus-within .icon-wrapper,
