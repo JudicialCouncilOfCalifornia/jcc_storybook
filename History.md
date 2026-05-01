@@ -1,3 +1,10 @@
+0.57.88 / 2026-05-1
+=====================
+* Merge PR from bugfix/ADA-245--field-focus-highlighting
+* [ADA-246] -- Fixed the order issue and adjusted the hidden behaviour
+* Merge PR from bugfix/ADA-245--field-focus-highlighting
+* [ADA-245] -- Heavier white outline for search button focus
+
 0.57.87 / 2026-04-16
 =====================
 * Merge PR from bugfix/ada_407
