@@ -1,3 +1,7 @@
+0.57.89 / 2026-05-6
+=====================
+* Re-generated assets. (Accordions issue)
+
 0.57.88 / 2026-05-1
 =====================
 * Merge PR from bugfix/ADA-245--field-focus-highlighting
