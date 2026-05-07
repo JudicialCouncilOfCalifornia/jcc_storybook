@@ -175,7 +175,10 @@ a.card--default.card--clickable {
   text-decoration: none;
 }
 
-a.card--default.card--clickable:focus {
+a.card--default.card--clickable:focus,
+a.card--overlay.card--clickable:focus,
+a.card--striped.card--clickable:focus,
+a.card--striped-aligned.card--clickable:focus {
   outline: 2px solid var(--focus-outline-color);
   outline-offset: 2px;
 }
