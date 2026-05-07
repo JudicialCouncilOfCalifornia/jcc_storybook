@@ -175,6 +175,11 @@ a.card--default.card--clickable {
   text-decoration: none;
 }
 
+a.card--default.card--clickable:focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
 a.card--default.card--clickable .card__heading_tag span,
 a.card--overlay.card--clickable .card__heading_tag span,
 a.card--striped.card--clickable .card__heading_tag span,

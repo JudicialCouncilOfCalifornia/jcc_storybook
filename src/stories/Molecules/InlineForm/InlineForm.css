@@ -40,7 +40,7 @@
   outline-offset: 0;
   outline-style: solid;
   outline-width: 2px;
-  outline-color: var(--accent-color);
+  outline-color: var(--focus-outline-color);
   z-index: 10;
 }
 
