@@ -190,9 +190,9 @@ button.header-search__icon:active {
 }
 
 button.header-search__icon:focus {
-  outline: 2px solid var(--color-accent-warm-dark-x);
+  outline: 2px solid var(--focus-outline-color);
   outline-offset: 2px;
-  background: var(--color-accent-warm-dark-x);
+  background: var(--focus-outline-color);
 }
 
 button.header-search__icon * {
