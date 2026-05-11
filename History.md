@@ -1,10 +1,17 @@
+0.57.90 / 2026-05-11
+=====================
+* Merge PR from bugfix/ADA-286--card-focus-outline
+* [ADA-268] -- Custom card focus outline
+* Merge PR from bugfix/ADA-294--sidebarlist-heading-misuse
+* [ADA-294] -- Replaced sidebar list improper headings and divs
+
 0.57.89 / 2026-05-6
 =====================
 * Re-generated assets. (Accordions issue)
 
 0.57.88 / 2026-05-1
 =====================
-* Merge PR from bugfix/ADA-245--field-focus-highlighting
+* Merge PR from bugfix/ADA-246
 * [ADA-246] -- Fixed the order issue and adjusted the hidden behaviour
 * Merge PR from bugfix/ADA-245--field-focus-highlighting
 * [ADA-245] -- Heavier white outline for search button focus
