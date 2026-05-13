@@ -63,3 +63,21 @@
   order: 2;
   margin-block-start: unset;
 }
+
+/* Overriding Layout primitive for aside in main sections */
+
+.body.with-sidebar{
+  --sidebar-direction: row;
+}
+
+.body.with-sidebar > aside {
+  flex-basis: var(--sidebar-width, 20ch);
+  flex-grow: 1;
+  min-inline-size: 0;
+}
+
+.body.with-sidebar > div.body__main {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}

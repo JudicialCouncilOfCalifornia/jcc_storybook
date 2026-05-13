@@ -359,3 +359,16 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+
+/* Overriding Layout primitive for aside in main sections */
+.section__main.with-sidebar > aside {
+  flex-basis: var(--sidebar-width, 20ch);
+  flex-grow: 1;
+  min-inline-size: 0;
+}
+
+.section__main.with-sidebar > main {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
