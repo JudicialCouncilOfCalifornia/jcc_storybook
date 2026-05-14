@@ -35,7 +35,8 @@
   margin-block-start: 0 !important;
 }
 
-.sidebar-list__item__heading {
+.sidebar-list__item__heading,
+.sidebar-list__item__emphasis {
   margin-block-start: 0.4rem;
   font-family: var(--font-secondary);
   font-size: var(--s1);
@@ -86,7 +87,7 @@
   display: none;
 }
 
-.sidebar-list--primary p {
+.sidebar-list--primary :not(.sidebar-list__item__links *) {
   font-weight: 300;
   color: var(--color-white);
   text-transform: none;
@@ -107,7 +108,7 @@
   display: none;
 }
 
-.sidebar-list--secondary p {
+.sidebar-list--secondary .sidebar-list__item :not(.sidebar-list__item__links *):not(.sidebar-list__item__brow) {
   font-weight: 300;
   color: var(--color-white);
 }

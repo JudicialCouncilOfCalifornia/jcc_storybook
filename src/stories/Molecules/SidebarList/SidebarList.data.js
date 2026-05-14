@@ -1,20 +1,20 @@
 
 const date_one = {
   brow: "Date Issued",
-  heading: 'January 1, 2024<br/><small>11:00 AM</small>',
+  emphasis: 'January 1, 2024<br/><small>11:00 AM</small>',
   attributes: [],
 }
 
 const date_two = {
   brow: "Questions and Answers",
-  heading: "March 20, 2024<br/><small>11:00 AM</small> <br/>to<br/>September 7, 2024<br/><small>3:00 PM</small>",
+  emphasis: "March 20, 2024<br/><small>11:00 AM</small> <br/>to<br/>September 7, 2024<br/><small>3:00 PM</small>",
   text: 'Questions regarding this RFP must be directed to solicitations@jud.ca.gov and must be received no later than September 7, 2022 by 3:00 p.m. Pacific Time',
   attributes: [],
 }
 
 const date_three = {
   brow: "Pre Conference",
-  heading: "May 23, 2024<br/>to<br/>May 30, 2024",
+  emphasis: "May 23, 2024<br/>to<br/>May 30, 2024",
   divider: '',
   links: [
     {
@@ -31,13 +31,13 @@ const date_three = {
 
 const sub_one = {
   brow: 'July 29, 2025',
-  heading: 'Alameda',
+  emphasis: 'Alameda',
   attributes: [],
 }
 
 const sub_two = {
   brow: 'July 30, 2024',
-  heading: 'San Francisco',
+  emphasis: 'San Francisco',
   attributes: [],
 }
 
@@ -59,14 +59,14 @@ const primary_info = {
 
 const secondary_info_one = {
   brow: "Submit via Mail",
-  heading: "1234 Main Street Hometown, CA 94551",
+  emphasis: "1234 Main Street Hometown, CA 94551",
   text: '<p>Allow 7 days for USPS mail delivery</p>',
   attributes: [],
 }
 
 const secondary_info_two = {
   brow: "Submit via Fax",
-  heading: "Fax to 555-1234",
+  emphasis: "Fax to 555-1234",
   text: '<p>Please include a cover letter.</p>',
   attributes: [],
 }

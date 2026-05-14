@@ -26,6 +26,7 @@ Includes "footer" subsection option for related information.
     {
       brow: "Any string or rendered text",
       heading: "Any string or rendered text",
+      emphasis: "When text needs to be emphasized but cannot be a heading due to ADA concerns (e.g. minimally descript values such as dates)",
       text: "Any string or rendered content",
       links: [array or link items],
     },
