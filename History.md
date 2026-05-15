@@ -1,3 +1,11 @@
+0.57.91 / 2026-05-14
+=====================
+* Merge PR from feature/ADA-299-255-aside-order
+* [ADA-299] -- Edited template + css to correct aside order
+* [ADA-255] -- Edited template + css to correct aside order
+* Merge PR from bugfix/ADA-294--revert-sidebar-list-fix
+* [ADA-294] -- Revert sidebar list fix & fix date info styling
+
 0.57.90 / 2026-05-11
 =====================
 * Merge PR from bugfix/ADA-286--card-focus-outline
