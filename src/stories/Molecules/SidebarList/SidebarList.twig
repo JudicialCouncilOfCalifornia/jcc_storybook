@@ -19,20 +19,20 @@
       {% for item in data %}
       <div class="sidebar-list__item">
         {% if item.brow is not empty and variant != 'primary' %}
-          <p class="sidebar-list__item__brow">{{ item.brow }}</p>
+          <div class="sidebar-list__item__brow">{{ item.brow }}</div>
         {% endif %}
 
         {% if item.heading is not empty %}
-          {# Intentionally not a heading element for ADA reasons #}
-          <p class="sidebar-list__item__heading">{{ item.heading }}</p>
+          {% set heading1 = heading ? 3 : 2 %}
+          <h{{ heading1 }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ heading1 }}>
         {% endif %}
 
-        {% if item.date_info is not empty %}
-          <p class="sidebar-list__item__date-info">{{ item.date_info }}</p>
+        {% if item.emphasis is not empty %}
+          <div class="sidebar-list__item__emphasis">{{ item.emphasis }}</div>
         {% endif %}
 
         {% if item.text is not empty %}
-          <p class="sidebar-list__item__text stack">{{ item.text }}</p>
+          <div class="sidebar-list__item__text stack">{{ item.text }}</div>
         {% endif %}
 
         {% if item.links is not empty %}
@@ -63,17 +63,17 @@
         {% for item in subsection.data %}
           <div class="sidebar-list__item">
             {% if item.brow is not empty %}
-              <p class="sidebar-list__item__brow">{{ item.brow }}</p>
+              <div class="sidebar-list__item__brow">{{ item.brow }}</div>
             {% endif %}
             {% if item.heading is not empty %}
-              {# Intentionally not a heading element for ADA reasons #}
-              <p class="sidebar-list__item__heading">{{ item.heading }}</p>
+              {% set heading3 = heading2 ? heading2 + 1 : 2 %}
+              <h{{ heading3 }} class="sidebar-list__item__main">{{ item.heading }}</h{{ heading3 }}>
             {% endif %}
-            {% if item.date_info is not empty %}
-              <p class="sidebar-list__item__date-info">{{ item.date_info }}</p>
+            {% if item.emphasis is not empty %}
+              <div class="sidebar-list__item__emphasis">{{ item.emphasis }}</div>
             {% endif %}
             {% if item.text is not empty %}
-              <p class="sidebar-list__item__text stack">{{ item.text }}</p>
+              <div class="sidebar-list__item__text stack">{{ item.text }}</div>
             {% endif %}
           </div>
         {% endfor %}
