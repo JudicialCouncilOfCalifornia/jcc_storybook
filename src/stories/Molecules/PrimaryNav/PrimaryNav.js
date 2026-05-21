@@ -9,6 +9,24 @@ function docReady(fn) {
 }
 
 docReady(function () {
+  const setExpandedState = (control, expanded) => {
+    if (!control) {
+      return;
+    }
+
+    control.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+    const controlledId = control.getAttribute('aria-controls');
+    if (!controlledId) {
+      return;
+    }
+
+    const submenu = document.getElementById(controlledId);
+    if (submenu) {
+      submenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+    }
+  };
+
   // Submenu position management on mouseover.
   addEventListener('mouseover', (event) => {
     // Adjust non-mega submenu position if no space on its right.
@@ -33,22 +51,56 @@ docReady(function () {
     }
   });
 
+  const desktopGroups = Array.from(document.querySelectorAll('.primary-nav__desktop .primary-nav__group'));
+  desktopGroups.forEach(group => {
+    const control = group.querySelector('.primary-nav__button[aria-controls]');
+    if (!control) {
+      return;
+    }
+
+    setExpandedState(control, false);
+
+    group.addEventListener('mouseenter', () => {
+      setExpandedState(control, true);
+    });
+
+    group.addEventListener('mouseleave', () => {
+      setExpandedState(control, false);
+    });
+
+    group.addEventListener('focusin', () => {
+      setExpandedState(control, true);
+    });
+
+    group.addEventListener('focusout', () => {
+      setTimeout(() => {
+        if (!group.contains(document.activeElement)) {
+          setExpandedState(control, false);
+        }
+      }, 0);
+    });
+  });
+
   // Toggle the sub menus.
-  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button'));
+  const buttons = Array.from(document.querySelectorAll('.primary-nav__mobile button.primary-nav__mobile__button[aria-controls]'));
   buttons.forEach(button => {
     if (!button.classList.contains('js-open')) {
       button.classList.add('js-open');
+      setExpandedState(button, button.classList.contains('open'));
 
       button.addEventListener('pointerdown', (e) => {
         const opened = document.querySelectorAll('.primary-nav__mobile .primary-nav__mobile__button.open');
 
         opened.forEach(item => {
-          if (item && item != e.target) {
+          if (item && item !== e.currentTarget) {
             item.classList.remove('open');
+            setExpandedState(item, false);
           }
         });
 
-        e.target.classList.toggle('open');
+        const expanded = !e.currentTarget.classList.contains('open');
+        e.currentTarget.classList.toggle('open');
+        setExpandedState(e.currentTarget, expanded);
       });
     }
   });
