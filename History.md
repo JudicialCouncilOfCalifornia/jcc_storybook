@@ -1,3 +1,10 @@
+0.57.92 / 2026-05-27
+=====================
+* Merge PR from feature/ADA-242-header-search-issues
+* [ADA-242] -- Courts.ca.gov - Header Search issues
+* Merge PR from feature/ADA-67-aria-in-primary-nav
+* [ADA-67] -- Expandable navigation links do not convey expand/collapse
+
 0.57.91 / 2026-05-14
 =====================
 * Merge PR from feature/ADA-299-255-aside-order
