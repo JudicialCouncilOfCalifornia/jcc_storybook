@@ -19,12 +19,17 @@
       {% for item in data %}
       <div class="sidebar-list__item">
         {% if item.brow is not empty and variant != 'primary' %}
-          <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+          {% set brow_heading = heading ? 3 : 2 %}
+          <h{{ brow_heading }} class="sidebar-list__item__brow">{{ item.brow }}</h{{ brow_heading }}>
         {% endif %}
 
         {% if item.heading is not empty %}
-          {% set heading1 = heading ? 3 : 2 %}
-          <h{{ heading1 }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ heading1 }}>
+          {% if brow_heading %}
+            {% set item_heading = brow_heading + 1 %}
+          {% else %}
+            {% set item_heading = heading ? 3 : 2 %}
+          {% endif %}
+          <h{{ item_heading }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ item_heading }}>
         {% endif %}
 
         {% if item.emphasis is not empty %}
