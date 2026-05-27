@@ -10,23 +10,42 @@ function docReady(fn) {
 
 docReady(function () {
   // Toggle the search form.
-  const searchIcons = document.querySelectorAll('.header-search__search-toggle');
+  const searchIcons = document.querySelectorAll('.header-search__search-toggle, .search-toggle');
+
+  const toggleSearchIcon = (icon, triggerTarget = null) => {
+    const actives = document.querySelectorAll('.header-search .search-icon.active, .header-search .header-search__search-toggle.active, .header-search .search-toggle.active');
+
+    actives.forEach(active => {
+      if (active && active !== triggerTarget && active !== icon) {
+        active.classList.remove('active');
+      }
+    });
+
+    icon.classList.toggle('active');
+  };
 
   searchIcons.forEach(icon => {
     if (!icon.classList.contains('js-active')) {
       icon.classList.add('js-active');
 
       icon.addEventListener('pointerdown', (e) => {
-        const actives = document.querySelectorAll('.header-search .search-icon.active');
+        toggleSearchIcon(icon, e.target);
+      });
 
-        actives.forEach(active => {
-          if (active && active != e.target) {
-            alert('oops');
-            active.classList.remove('active');
+      icon.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+
+          // search-toggle is a label+checkbox pattern, so manually mirror
+          // native activation for Enter.
+          const checkbox = icon.querySelector('input[type="checkbox"]');
+          if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
           }
-        });
 
-        icon.classList.toggle('active');
+          toggleSearchIcon(icon, e.target);
+        }
       });
     }
   });
