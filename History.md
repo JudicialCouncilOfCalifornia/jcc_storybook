@@ -1,3 +1,10 @@
+0.57.93 / 2026-05-28
+=====================
+* Merge PR from bugfix/ADA-452--sidebarlist-heading-corrections
+* [ADA-242] -- Sidebar list heading adjustments
+* Merge PR from feature/ADA-250-utility-hat-shoe-nav-hover
+* [ADA-67] -- On hover underline for hat, shoe, and utility links
+
 0.57.92 / 2026-05-27
 =====================
 * Merge PR from feature/ADA-242-header-search-issues

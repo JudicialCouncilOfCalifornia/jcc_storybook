@@ -70,7 +70,7 @@ Must use Node 16.
 Must use Node 16.
 
   - `npm run scheme`: Generates theme scheme.
-  - `npm run lib`: Processes CSS and JavaScript for production use.
+  - `npm run lib`: Processes CSS and JavaScript for production use. Review the name id for each Javascript file under /lib/js. If duplicate ids found, adjust the ids to be unique else revert the proccessed JavaScript and redo `npm run lib`.
   - Update `History.md` to specify production version for Composer use.
   - Tag the release with `git tag X.XX.XX` which should auto-deploy the artifact to https://packagist.org/packages/judicialcouncil/jcc_storybook. You might need to `git push origin tag X.XX.XX` if the artifact does not appear.
 
