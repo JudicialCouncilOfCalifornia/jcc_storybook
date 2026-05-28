@@ -33,3 +33,15 @@
 .hat svg.ext {
   display: none;
 }
+
+.hat .secondary-nav__list.reel {
+  overflow-y: visible;
+}
+
+.hat .secondary-nav > ul > li > a:hover,
+.hat .secondary-nav > ul > li > a:focus-visible {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 1;
+}
