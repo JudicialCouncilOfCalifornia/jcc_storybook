@@ -1,3 +1,8 @@
+0.57.94 / 2026-05-28
+=====================
+* Merge PR from feature/ADA-66-navigation-expand-controls
+* [ADA-66] -- Navigation menu submenus automatically expand on keyboard focus
+
 0.57.93 / 2026-05-28
 =====================
 * Merge PR from bugfix/ADA-452--sidebarlist-heading-corrections
