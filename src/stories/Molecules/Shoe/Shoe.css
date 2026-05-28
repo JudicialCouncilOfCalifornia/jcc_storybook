@@ -38,3 +38,15 @@
 .shoe > .box > .container > .wrapping .secondary-nav .secondary-nav__list {
   flex-direction: column;
 }
+
+.shoe .secondary-nav__list.reel {
+  overflow-y: visible;
+}
+
+.shoe .secondary-nav > ul > li > a:hover,
+.shoe .secondary-nav > ul > li > a:focus-visible {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  opacity: 1;
+}
