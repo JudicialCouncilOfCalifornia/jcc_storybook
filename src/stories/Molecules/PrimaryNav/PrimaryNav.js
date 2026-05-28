@@ -9,6 +9,33 @@ function docReady(fn) {
 }
 
 docReady(function () {
+  const closeDesktopSubmenu = (group, control) => {
+    if (!group || !control) {
+      return;
+    }
+    group.classList.remove('submenu-open');
+    setExpandedState(control, false);
+  };
+
+  const openDesktopSubmenu = (group, control) => {
+    if (!group || !control) {
+      return;
+    }
+    group.classList.add('submenu-open');
+    setExpandedState(control, true);
+  };
+
+  const closeAllDesktopSubmenus = (exceptGroup = null) => {
+    const groups = Array.from(document.querySelectorAll('.primary-nav__desktop .primary-nav__group.submenu-open'));
+    groups.forEach((group) => {
+      if (exceptGroup && group === exceptGroup) {
+        return;
+      }
+      const control = group.querySelector('.primary-nav__button[aria-controls]');
+      closeDesktopSubmenu(group, control);
+    });
+  };
+
   const setExpandedState = (control, expanded) => {
     if (!control) {
       return;
@@ -61,24 +88,56 @@ docReady(function () {
     setExpandedState(control, false);
 
     group.addEventListener('mouseenter', () => {
-      setExpandedState(control, true);
+      closeAllDesktopSubmenus(group);
+      openDesktopSubmenu(group, control);
     });
 
     group.addEventListener('mouseleave', () => {
-      setExpandedState(control, false);
+      closeDesktopSubmenu(group, control);
     });
 
-    group.addEventListener('focusin', () => {
-      setExpandedState(control, true);
+    control.addEventListener('click', (e) => {
+      e.preventDefault();
+      const willOpen = !group.classList.contains('submenu-open');
+      closeAllDesktopSubmenus(group);
+      if (willOpen) {
+        openDesktopSubmenu(group, control);
+      }
+      else {
+        closeDesktopSubmenu(group, control);
+      }
     });
 
-    group.addEventListener('focusout', () => {
-      setTimeout(() => {
-        if (!group.contains(document.activeElement)) {
-          setExpandedState(control, false);
-        }
-      }, 0);
+    control.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') {
+        return;
+      }
+
+      e.preventDefault();
+      const willOpen = !group.classList.contains('submenu-open');
+      closeAllDesktopSubmenus(group);
+      if (willOpen) {
+        openDesktopSubmenu(group, control);
+      }
+      else {
+        closeDesktopSubmenu(group, control);
+      }
     });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllDesktopSubmenus();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!(e.target instanceof Element)) {
+      return;
+    }
+    if (!e.target.closest('.primary-nav__desktop')) {
+      closeAllDesktopSubmenus();
+    }
   });
 
   // Toggle the sub menus.
