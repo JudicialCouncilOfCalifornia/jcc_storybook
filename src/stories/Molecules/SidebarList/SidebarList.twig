@@ -19,12 +19,17 @@
       {% for item in data %}
       <div class="sidebar-list__item">
         {% if item.brow is not empty and variant != 'primary' %}
-          <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+          {% set brow_heading = heading ? 3 : 2 %}
+          <h{{ brow_heading }} class="sidebar-list__item__brow">{{ item.brow }}</h{{ brow_heading }}>
         {% endif %}
 
         {% if item.heading is not empty %}
-          {% set heading1 = heading ? 3 : 2 %}
-          <h{{ heading1 }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ heading1 }}>
+          {% if brow_heading %}
+            {% set item_heading = brow_heading + 1 %}
+          {% else %}
+            {% set item_heading = heading ? 3 : 2 %}
+          {% endif %}
+          <h{{ item_heading }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ item_heading }}>
         {% endif %}
 
         {% if item.emphasis is not empty %}
@@ -52,26 +57,33 @@
     </div>
   {% endif %}
 
-  {# Subsection option #}
-  {% if variant == 'default' and subsection is not empty %}
+  {# Second section option #}
+  {% if variant == 'default' and section is not empty %}
     <div class="sidebar-list__section">
-      {% if subsection.heading %}
-        {% set heading2 = heading ? 3 : 2 %}
-        <h{{ heading2 }} class="sidebar-list__heading">{{ subsection.heading }}</h{{ heading2 }}>
+      {% if section.heading %}
+        <h2 class="sidebar-list__heading">{{ section.heading }}</h2>
       {% endif %}
       <div class="sidebar-list__list stack">
-        {% for item in subsection.data %}
+        {% for item in section.data %}
           <div class="sidebar-list__item">
             {% if item.brow is not empty %}
-              <div class="sidebar-list__item__brow">{{ item.brow }}</div>
+              {% set sect_brow_heading = heading ? 3 : 2 %}
+              <h{{ sect_brow_heading }} class="sidebar-list__item__brow">{{ item.brow }}</h{{ sect_brow_heading }}>
             {% endif %}
+
             {% if item.heading is not empty %}
-              {% set heading3 = heading2 ? heading2 + 1 : 2 %}
-              <h{{ heading3 }} class="sidebar-list__item__main">{{ item.heading }}</h{{ heading3 }}>
+              {% if sect_brow_heading %}
+                {% set sect_item_heading = sect_brow_heading + 1 %}
+              {% else %}
+                {% set sect_item_heading = section.heading ? 3 : 2 %}
+              {% endif %}
+              <h{{ sect_item_heading }} class="sidebar-list__item__heading">{{ item.heading }}</h{{ sect_item_heading }}>
             {% endif %}
+
             {% if item.emphasis is not empty %}
               <div class="sidebar-list__item__emphasis">{{ item.emphasis }}</div>
             {% endif %}
+            
             {% if item.text is not empty %}
               <div class="sidebar-list__item__text stack">{{ item.text }}</div>
             {% endif %}
