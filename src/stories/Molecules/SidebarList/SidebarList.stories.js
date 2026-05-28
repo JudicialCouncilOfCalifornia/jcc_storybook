@@ -30,8 +30,8 @@ export const Default = Template.bind({});
 // Data comes from the SidebarList.data.js file.
 Default.args = data.default;
 
-export const Subsection = Template.bind({});
-Subsection.args = data.subsection;
+export const SecondSection = Template.bind({});
+SecondSection.args = data.second_section;
 
 export const Primary = Template.bind({});
 Primary.args = data.primary;

@@ -93,7 +93,7 @@ export default {
       date_three,
     ],
   },
-  subsection: {
+  second_section: {
     variant: "default",
     heading: 'Important dates',
     data: [
@@ -101,8 +101,8 @@ export default {
       date_two,
       date_three,
     ],
-    subsection: {
-      heading: 'Subsection Example',
+    section: {
+      heading: 'Second Section Example',
       data: [
         sub_one,
         sub_two,
@@ -111,14 +111,12 @@ export default {
   },
   primary: {
     variant: "primary",
-    heading: 'This heading should not display',
     data: [
       primary_info,
     ],
   },
   secondary: {
     variant: "secondary",
-    heading: 'This heading should not display',
     data: [
       secondary_info_one,
       secondary_info_two,

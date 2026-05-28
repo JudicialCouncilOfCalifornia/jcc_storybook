@@ -9,7 +9,7 @@ Different style rules apply to primary and secondary variants. Main heading for
 the component does not display for primary and secondary. Primary and secondary
 variants have different background colors and some text style differences.
 
-Includes "footer" subsection option for related information.
+Includes second section option for related information.
 
 <details>
   <summary>Inherited CSS Variables:</summary>
@@ -34,8 +34,8 @@ Includes "footer" subsection option for related information.
       '...repeat for additional items...'
     },
   ],
-  subsection: {
-    heading: "String - heading for subsection",
+  section: {
+    heading: "String - heading for section",
     data: [
       {
         brow: "Any string or rendered text",

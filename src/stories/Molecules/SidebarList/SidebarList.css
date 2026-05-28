@@ -55,6 +55,11 @@
   border-top: 1px solid;
   border-color: var(--color-base-light-x);
 }
+
+.sidebar-list__section h2 {
+  font-size: var(--s2);
+  line-height: var(--s3);
+}
 /* END styles for ALL */
 /* -------------------------------------------------------------------------- */
 /* START Default styles */
