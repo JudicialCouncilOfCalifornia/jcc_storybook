@@ -48,10 +48,6 @@ docReady(function () {
       return;
     }
 
-    const submenu = document.getElementById(controlledId);
-    if (submenu) {
-      submenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
-    }
   };
 
   // Submenu position management on mouseover.
@@ -87,13 +83,10 @@ docReady(function () {
 
     setExpandedState(control, false);
 
+    // Close any intentionally-opened submenu when mouse enters a different group,
+    // so hover and explicit-open don't stack. CSS :hover handles visual display.
     group.addEventListener('mouseenter', () => {
       closeAllDesktopSubmenus(group);
-      openDesktopSubmenu(group, control);
-    });
-
-    group.addEventListener('mouseleave', () => {
-      closeDesktopSubmenu(group, control);
     });
 
     control.addEventListener('click', (e) => {

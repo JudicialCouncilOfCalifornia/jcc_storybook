@@ -2,6 +2,8 @@
   --icon-size: var(--s2);
   width: 100%;
   position: relative;
+  z-index: 20;
+  isolation: isolate;
   padding-block-end: var(--s-3);
   align-items: stretch;
   row-gap: 0;
@@ -25,6 +27,8 @@
 .primary-nav__desktop--wrapper {
   width: 100%;
   display: flex;
+  position: relative;
+  z-index: 30;
   justify-content: flex-end;
   align-items: stretch;
   gap: var(--s-1);
@@ -182,7 +186,7 @@
 .primary-nav .primary-nav__group .primary-nav__list {
   display: none;
   position: absolute;
-  z-index: 100;
+  z-index: 1200;
 }
 
 .primary-nav .primary-nav__group:has(.active),
