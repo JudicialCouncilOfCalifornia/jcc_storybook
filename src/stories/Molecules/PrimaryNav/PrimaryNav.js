@@ -42,12 +42,6 @@ docReady(function () {
     }
 
     control.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-
-    const controlledId = control.getAttribute('aria-controls');
-    if (!controlledId) {
-      return;
-    }
-
   };
 
   // Submenu position management on mouseover.
@@ -81,6 +75,8 @@ docReady(function () {
       return;
     }
 
+    const isButtonControl = control.tagName.toLowerCase() === 'button';
+
     setExpandedState(control, false);
 
     // Close any intentionally-opened submenu when mouse enters a different group,
@@ -89,7 +85,30 @@ docReady(function () {
       closeAllDesktopSubmenus(group);
     });
 
+    // Auto-expand submenu when keyboard tabbing into a parent item.
+    group.addEventListener('focusin', (e) => {
+      if (!(e.target instanceof Element) || !group.contains(e.target)) {
+        return;
+      }
+
+      closeAllDesktopSubmenus(group);
+      openDesktopSubmenu(group, control);
+    });
+
+    group.addEventListener('focusout', (e) => {
+      const nextFocused = e.relatedTarget;
+      if (nextFocused instanceof Node && group.contains(nextFocused)) {
+        return;
+      }
+
+      closeDesktopSubmenu(group, control);
+    });
+
     control.addEventListener('click', (e) => {
+      if (!isButtonControl) {
+        return;
+      }
+
       e.preventDefault();
       const willOpen = !group.classList.contains('submenu-open');
       closeAllDesktopSubmenus(group);
@@ -102,6 +121,10 @@ docReady(function () {
     });
 
     control.addEventListener('keydown', (e) => {
+      if (!isButtonControl) {
+        return;
+      }
+
       if (e.key !== 'Enter' && e.key !== ' ') {
         return;
       }
