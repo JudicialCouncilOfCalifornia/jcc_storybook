@@ -1,3 +1,8 @@
+0.57.95 / 2026-06-04
+=====================
+* Merge PR from faeture/ADA-79-main-menu-accessibilty
+* [ADA-79] -- Drop down list fields are not read out correctly on courts website
+
 0.57.94 / 2026-05-28
 =====================
 * Merge PR from feature/ADA-66-navigation-expand-controls
