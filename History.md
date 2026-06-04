@@ -1,3 +1,8 @@
+0.57.96 / 2026-06-04
+=====================
+* Merge PR from fix/main-menu-ADA-top-menu-not-clickable
+* [ADA-479] -- Main Nav Landing page links doesn't work on all Elevated Theme Sites
+
 0.57.95 / 2026-06-04
 =====================
 * Merge PR from faeture/ADA-79-main-menu-accessibilty
