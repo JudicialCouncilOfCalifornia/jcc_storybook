@@ -17,7 +17,9 @@
 
 <div class="{{ classes|join(' ') }}" data-alert-type="{{ type }}" data-alert-dismissible="{{ dismissible }}">
   <div class="container">
-    {% include "@atoms/Icon/Icon.twig" with icon_data %}
+    <span role="img" aria-label="{{ type }} alert">
+      {% include "@atoms/Icon/Icon.twig" with icon_data %}
+    </span>
 
     <div class="alert__content {{ content_class }}">
       <div class="alert__content__inner">
