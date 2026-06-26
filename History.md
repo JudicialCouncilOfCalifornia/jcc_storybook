@@ -1,3 +1,8 @@
+0.57.97 / 2026-06-26
+=====================
+* Merge PR from ADA-271-alert-icon-missing-accessible-label
+* [ADA-271] -- Alert icon: Misssing accessible label
+
 0.57.96 / 2026-06-04
 =====================
 * Merge PR from fix/main-menu-ADA-top-menu-not-clickable
