@@ -39,7 +39,8 @@
           {% for i,link in links %}
             
             {% set parent = link.links is not empty ? true : false %}
-            {% set active_class = link.is_current ? 'is_active' : '' %}
+            {% set is_current = link.is_current|default(link.active|default(false)) %}
+            {% set active_class = is_current ? 'is_active' : '' %}
             {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'section-nav__has-overview-link' : '' %}
             
             <li class="section-nav__group {{ parent_overview_link_class }}">
@@ -55,10 +56,10 @@
                 {% if has_desktop_dropdown_overview_link %}
                   <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
                 {% else %}
-                  {{ link(link.text, link.url, {class: link_classes}) }}
+                  {{ link(link.text, link.url, {class: link_classes, 'aria-current': is_current ? 'page' : null}) }}
                 {% endif %}
               {% else %}
-                {{ link(link.text, link.url, {class: link_classes}) }}
+                {{ link(link.text, link.url, {class: link_classes, 'aria-current': is_current ? 'page' : null}) }}
               {% endif %}
               
               {% if link.links is not empty %}
@@ -68,15 +69,16 @@
                 {% if link.links is not empty %}
                 <ul class="section-nav__list nav-level-2 {{ mega }}">
                   {% for link2 in link.links %}
+                  {% set link2_is_current = link2.is_current|default(link2.active|default(false)) %}
                   <li class="section-nav__list__item">
                     {% set link2_classes = [
                       'link',
                       'link-level-2',
-                      link2.is_current ? 'is_current' : '',
+                      link2_is_current ? 'is_current' : '',
                       (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
                     ] %}
                     {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null %}
-                    {{ link(link2.text, link2.url, {class: ['section-nav__link', overview_link_class]}) }}
+                    {{ link(link2.text, link2.url, {class: ['section-nav__link', overview_link_class], 'aria-current': link2_is_current ? 'page' : null}) }}
                   </li>
                   {% endfor %}
                 </ul>
@@ -97,6 +99,7 @@
           <ul class="section-nav__mobile nav-level-1 stack" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
             {% for i,link in mobile_links %}
               {% set parent = link.links is not empty ? true : false %}
+              {% set mobile_is_current = link.is_current|default(link.active|default(false)) %}
               <li class="section-nav__mobile__group">
 
                 {% if parent %}
@@ -105,7 +108,7 @@
                     {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
                   </button>
                 {% else %}
-                  {{ link(link.text, link.url, {class: ['section-nav__mobile__button link']}) }}
+                  {{ link(link.text, link.url, {class: ['section-nav__mobile__button link'], 'aria-current': mobile_is_current ? 'page' : null}) }}
                 {% endif %}
                 
                 {% if link.links is not empty %}
@@ -113,9 +116,10 @@
                  {% if link.links is not empty %} 
 		  <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
                     {% for link2 in link.links %}
+                      {% set mobile_link2_is_current = link2.is_current|default(link2.active|default(false)) %}
                       <li class="section-nav__mobile__list__item">
                         {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
-                        {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                        {{ link(link2.text, link2.url, {class: [overview_link_class], 'aria-current': mobile_link2_is_current ? 'page' : null}) }}
                       </li>
                     {% endfor %}
                   </ul>
