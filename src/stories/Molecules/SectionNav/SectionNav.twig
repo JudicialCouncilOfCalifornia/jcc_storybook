@@ -116,7 +116,7 @@
                  {% if link.links is not empty %} 
 		  <ul class="section-nav__mobile__list nav-level-2 box {{ mega }}">
                     {% for link2 in link.links %}
-                      {% set mobile_link2_is_current = link2.is_current|default(link2.active|default(false)) %}
+                      {% set mobile_link2_is_current = link2.is_current is defined ? link2.is_current : (link2.active|default(false)) %}
                       <li class="section-nav__mobile__list__item">
                         {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
                         {{ link(link2.text, link2.url, {class: [overview_link_class], 'aria-current': mobile_link2_is_current ? 'page' : null}) }}
