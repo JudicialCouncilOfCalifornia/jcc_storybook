@@ -1,3 +1,8 @@
+0.57.98 / 2026-07-10
+=====================
+* Merge PR from bugfix/ada-240--ada-302
+  * Changed the "Expand All" and "Close All" from anchor to button, etc.
+
 0.57.97 / 2026-06-26
 =====================
 * Merge PR from ADA-271-alert-icon-missing-accessible-label
@@ -146,12 +151,12 @@
 * Merge PR from feature/ADA-96-98-100
 * [ADA-96] -- Elevated: Card color contrast Green & Blue
 * [ADA-98] -- Elevated: Updating Orange color to pass contrast levels
-* [ADA-100] -- Elevated: Hyperlink Color contrast 
+* [ADA-100] -- Elevated: Hyperlink Color contrast
 
 0.57.63 / 2026-01-09
 =====================
 * Merge PR from bugfix/ADA-7--aria-syntax-corrections
-* [ADA-7] -- aria-labels that were not hyphenated 
+* [ADA-7] -- aria-labels that were not hyphenated
 
 0.57.62 / 2026-01-08
 =====================
@@ -218,12 +223,12 @@
 0.57.50 / 2025-11-24
 =====================
 * Merge PR from feature/ADA-4-accordion-accessibility
-* [feature/ADA-4-accordion-accessibility] 
+* [feature/ADA-4-accordion-accessibility]
 
 0.57.49 / 2025-11-19
 =====================
 * Merge PR from feature/ADA-4-heading-adjustments-bis
-* [feature/ADA-4-heading-adjustments-bis] 
+* [feature/ADA-4-heading-adjustments-bis]
 * Merge PR from JRN-189-3column-nav
 * [JRN-189-3column-nav] mega menu for JRN
 
@@ -301,7 +306,7 @@
 0.57.37 / 2025-08-14
 =====================
 
-* Merge PR from JRN-110-css-class-fix 
+* Merge PR from JRN-110-css-class-fix
 
 0.57.36 / 2025-08-12
 =====================
@@ -332,7 +337,7 @@
 
 0.57.31 / 2025-07-23
 =====================
-* Merge PR #359 from feature/results-excepts 
+* Merge PR #359 from feature/results-excepts
 * Merge PR #358 from JRN-21-card-background
 
 0.57.30 / 2025-07-21
@@ -378,7 +383,7 @@
 ===================
 
   * chore: Export libs.
-  * Merge pull request #351 from COURTS-377-alert-header 
+  * Merge pull request #351 from COURTS-377-alert-header
   * [COURTS-377] -- alert header fix
 
 0.57.22 / 2025-01-29
@@ -387,7 +392,7 @@
   * chore: Export libs.
   * Merge pull request #350 from feature/COURTS-350-issue
   * [COURTS-350] -- template update
-  
+
 0.57.21 / 2025-01-28
 ===================
 
@@ -403,7 +408,7 @@
   * chore: Export libs.
   * Merge pull request #347 from data-visualization-edit
   * [COURTS-350] -- templateupdate
-  
+
 0.57.19 / 2024-12-13
 ===================
 
