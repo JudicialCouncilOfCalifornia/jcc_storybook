@@ -9,10 +9,11 @@
 
 {% set classes = [
   'with-sidebar',
+  sidebar_content_right ? 'sidebar-content-right' : '',
   'sidebar-demo'
 ] %}
 
 <div class="{{ classes|join(' ') }}" style=" {{ styles|join }} ">
-	<div class='box'></div>
+	<div class="box"></div>
 	<div class="box"></div>
 </div>

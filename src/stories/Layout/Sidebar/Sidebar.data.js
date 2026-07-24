@@ -3,5 +3,6 @@ export default {
     space: "--s0",
     sidebar_width: "20ch",
     sidebar_direction: "row",
+    sidebar_content_right: false,
   },
 };

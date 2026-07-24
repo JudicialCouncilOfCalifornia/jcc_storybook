@@ -8,10 +8,9 @@
   --sidebar-width: 45ch;
   /* Column gap makes detectWrap.js confused. */
   gap: 0;
-  flex-direction: row-reverse;
 }
 
-.hangover.hangover--with-share  .with-sidebar {
+.hangover.hangover--with-share .with-sidebar {
   --sidebar-width: 25ch;
 }
 
@@ -79,6 +78,10 @@
 
 .hangover__top-hangover-content {
   justify-content: center;
+}
+
+.hangover__top-content.stacked-hangover-media {
+  order: 2;
 }
 
 .hangover .card.card--bordered-center {
@@ -317,14 +320,6 @@
 
 .hangover--hide-compact .wrapping .hangover__top-hangover-content > * {
   display: none;
-}
-
-.hangover--with-blurb .with-sidebar.wrapping .hangover__top-content{
-  order: 1;
-}
-
-.hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content {
-  order: 2;
 }
 
 .hangover--with-blurb .with-sidebar.wrapping .hangover__top-hangover-content > * {
