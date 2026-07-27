@@ -80,15 +80,15 @@
 
   /* Alert colors */
   --color-info: #D9EAF8;
-  --color-info-dark: #3CBDE5;
+  --color-info-dark: #2378C3;
   --color-warning: #FCE2C5;
-  --color-warning-dark: var(--color-accent-warm-light-x);
+  --color-warning-dark: #D35200;
   --color-status: #CEEFE4;
   --color-status-dark: var(--color-secondary);
   --color-success: var(--color-status);
   --color-success-dark: var(--color-status-dark);
   --color-error: #EEC1C1;
-  --color-error-dark: #9C3938;
+  --color-error-dark: var(--color-accent-warm-dark-xx);
 
   --color-link-visited: #660066;
   --color-link-visited-light: #a01ba0;
