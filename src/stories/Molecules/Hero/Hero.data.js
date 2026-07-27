@@ -52,8 +52,6 @@ export default {
     },
     navigation: [
       {
-        variant: "striped-aligned",
-        clickable_card: true,
         background: null,
         aspect: [],
         media: false,
@@ -72,8 +70,6 @@ export default {
         ],
       },
       {
-        variant: "striped-aligned",
-        clickable_card: true,
         background: null,
         aspect: [],
         media: false,
@@ -92,8 +88,6 @@ export default {
         ],
       },
       {
-        variant: "striped-aligned",
-        clickable_card: true,
         background: null,
         aspect: [],
         media: false,
@@ -112,8 +106,6 @@ export default {
         ],
       },
       {
-        variant: "striped-aligned",
-        clickable_card: true,
         background: null,
         aspect: [],
         media: false,

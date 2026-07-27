@@ -36,7 +36,13 @@
   {% if navigation %}
     <div class="hero__navigation cards grid">
       {% for item in navigation %}
-        {% include "@molecules/Card/Card.twig" with item %}
+        {% include "@molecules/Card/Card.twig" with {
+          variant: "striped-aligned",
+          clickable_card: true,
+          icon_data: item.icon_data,
+          heading: item.heading,
+          button_data: item.button_data,
+        } %}
       {% endfor %}
     </div>
   {% endif %}
