@@ -1,3 +1,13 @@
+0.57.99 / 2026-07-27
+=====================
+* Merge PR from bugfix/ADA-307--alert-icon-contrast
+  * Adjust alert icon colors
+* Merge PR from bugfix/ADA-309--hero-featured-links-headings
+  * Add card heading div tag variant
+* Merge PR from bugfix/ADA-314--hero-hangover-structure-order
+  * Add option to select right element as the sidebar
+  * Adjust main & hangover structure order
+
 0.57.98 / 2026-07-10
 =====================
 * Merge PR from bugfix/ada-240--ada-302
