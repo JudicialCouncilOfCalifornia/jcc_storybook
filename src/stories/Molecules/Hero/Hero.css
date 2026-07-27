@@ -8,6 +8,7 @@
   border-block-end: var(--border) solid var(--s0);
 }
 
+/* Text color handling when dark background */
 .hero:not(
   .hero--content-bg,
   [style*="--bg: var(--color-base-light-xxx);"],
@@ -28,6 +29,24 @@
 ) .card .card__body .button,
 .hero:not(.hero--content-bg) .hero__image:has(+ .hero__tint) ~ .hero__content .card * {
   color: var(--color-white);
+}
+
+/* Button color handling when dark background */
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body .button {
+  border-color: var(--color-white);
+}
+.hero:not(
+  .hero--content-bg,
+  [style*="--bg: var(--color-base-light-xxx);"],
+  [style*="--bg: var(--color-accent-warm-light-xxxx);"],
+  [style*="--bg: var(--color-primary-light-xxx);"]
+) .card .card__body .button:hover {
+  border-color: var(--color-accent);
 }
 
 .hero > * {
