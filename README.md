@@ -35,13 +35,11 @@ External References:
 
 ### Requirements
 
-  - Node 18 to run preview site
-  - Node 16 to export scheme & lib for production use
+  - Node 18 to run preview site & export scheme & lib for production use
 
 ### Installation
 
   - Clone this repo and cd to the directory
-  - `nvm use`: to use the specified version of Node. (If using nvm to manage node. You may need to install the appropriate version.)
   - `npm install`: to install the required development packages.
   - `npm run storybook`: to start storybook. It will open a new browser window.
 
@@ -59,15 +57,11 @@ For more information about how to develop components for this library, see the "
 
 ## Icons
 
-Must use Node 16.
-
   - Update `src/assets/icons` directory.
-  - Update `src/assest/icons.json`.
+  - Update `src/assets/icons.json`.
   - `npm run sprite`: Builds icons.svg sprite.
 
 ## Exporting Scheme & Lib and releasing for Production
-
-Must use Node 16.
 
   - `npm run scheme`: Generates theme scheme.
   - `npm run lib`: Processes CSS and JavaScript for production use. Review the name id for each Javascript file under /lib/js. If duplicate ids found, adjust the ids to be unique else revert the proccessed JavaScript and redo `npm run lib`.
@@ -81,6 +75,8 @@ Must use Node 16.
   - Language Access
   - Language Toolkit
   - Storefront
+  - CJER
+  - JRN
 
 ## Links
 * Project Page:   https://judicialcouncilofcalifornia.github.io/jcc_storybook/master/docs/?path=/docs/documentation-intro--default
