@@ -2,12 +2,6 @@ const path = require('path');
 
 module.exports = {
   stories: [
-    "../src/css/scheme-default.css",
-    "../src/css/layout-primitives.css",
-    "../src/css/elements.css",
-    "../src/stories/Atoms/FormFields/FormFields.css",
-    "../src/stories/Layout/Reel/Reel.js",
-    "../src/js/detectWrap.js",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   addons: [
@@ -16,7 +10,10 @@ module.exports = {
     "@storybook/addon-a11y",
     "storybook-addon-rtl-direction",
   ],
-  framework: "@storybook/html",
+  framework: {
+    name: "@storybook/html-webpack5",
+    options: {},
+  },
   staticDirs: ['../src/assets'],
 
   // Config Webpack
