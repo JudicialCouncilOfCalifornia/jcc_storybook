@@ -2,6 +2,7 @@ import readme from "./readme.md";
 import data from "./HeroHangover.data";
 import HeroHangover from "./HeroHangover.twig";
 import "./HeroHangover.css";
+import "./HeroHangover.js";
 
 export default {
   title: "Molecules/HeroHangover",

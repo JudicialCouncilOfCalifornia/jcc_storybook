@@ -19,6 +19,10 @@ export default {
       control: { type: "radio" },
       options: ["row", "row-reverse"],
     },
+    sidebar_content_right: {
+      description: "Use the second element as the sidebar.",
+      table: { defaultValue: { summary: false } },
+    },
   },
 };
 

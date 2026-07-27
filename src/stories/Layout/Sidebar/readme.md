@@ -21,6 +21,11 @@ When the available horizontal space is no longer enough to have the "sidebar" be
 </details>
 
 <details>
+  <summary>CSS Variants:</summary>
+  - `sidebar-content--right`: Sets the second element as the sidebar.
+</details>
+
+<details>
   <summary>Inherited CSS Variables:</summary>
   - `--gap`: *(--s0)* Sets the gap value between cluster items. Be sure to use the "Modal Scale" variables, `--s*`, though the default should be good for most cases.
   - `--sidebar-width`: *(20ch)* Sets the sidebar width.

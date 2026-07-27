@@ -30,6 +30,7 @@
 
 {% set boxclasses = [
   'with-sidebar',
+  'sidebar-content-right',
   'detect-wrap',
   'detect-wrap--observed',
   'container',
@@ -44,15 +45,6 @@
   <div class="hangover__top">
     <div class="box">
       <div class="{{ boxclasses|join(' ')|trim }}">
-        {% if hangover_content is not empty or share is not empty %}
-          <div class="hangover__top-hangover-content">
-            {% if hangover_content %}
-              {{ hangover_content }}
-            {% elseif share %}
-              {% include "@molecules/Share/Share.twig" with share %}
-            {% endif %}
-          </div>
-        {% endif %}
         <div class="hangover__top-content">
           <div class="{{ layoutclasses|join(' ')|trim }}">
             <div class="stack">
@@ -74,19 +66,28 @@
             {% endif %}
           </div>
         </div>
+        {% if hangover_content is not empty or share is not empty %}
+          <div class="hangover__top-hangover-content">
+            {% if hangover_content %}
+              {{ hangover_content }}
+            {% elseif share %}
+              {% include "@molecules/Share/Share.twig" with share %}
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
   {% if bottom_content is not empty %}
     <div class="hangover__bottom">
       <div class="box">
-        <div class="with-sidebar container">
-          {% if hangover_content is not empty %}
-            <div></div>
-          {% endif %}
+        <div class="with-sidebar sidebar-content--right container">
           <div class="hangover__bottom-content">
             {{ bottom_content }}
           </div>
+          {% if hangover_content is not empty %}
+            <div></div>
+          {% endif %}
         </div>
       </div>
     </div>
