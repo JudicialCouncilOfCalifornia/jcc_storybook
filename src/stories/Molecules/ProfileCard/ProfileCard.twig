@@ -1,5 +1,5 @@
-{# Card heading depends if a section heading exists or not. #}
-{% set h = has_section_heading ? 'h3' : 'h2' %}
+{# Allow callers to force a heading level (accessibility/outline control); otherwise fall back to section-heading logic. #}
+{% set h = heading_level|default(has_section_heading ? 'h3' : 'h2') %}
 
 {% set classes = [
   'profile-card',

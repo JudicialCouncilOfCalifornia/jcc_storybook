@@ -1,5 +1,5 @@
-{# Set heading tag based on if they're first component or not. #}
-{% set h = first_component ? 'h1' : 'h2' %}
+{# Allow callers to force a heading level (accessibility/outline control); otherwise fall back to first_component logic. #}
+{% set h = heading_level|default(first_component ? 'h1' : 'h2') %}
 
 {% set variant_bg_image = background_image_url is not empty ? 'section--with-bg-image' : '' %}
 
