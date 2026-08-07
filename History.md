@@ -1,3 +1,8 @@
+0.57.100 / 2026-08-07
+=====================
+* Merge PR from ADA-310-justice-page-heading-levels-incorrect
+  * Heading levels are incorrect
+  
 0.57.99 / 2026-07-27
 =====================
 * Merge PR from bugfix/ADA-307--alert-icon-contrast
