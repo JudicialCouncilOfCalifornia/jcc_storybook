@@ -1,3 +1,9 @@
+0.57.102 / 2026-08-18
+=====================
+* Merge PR from feature/ADA-552--updated-seal
+  * Increase logo container height
+  * Revert ADA-266
+
 0.57.101 / 2026-08-07
 =====================
 * Missing CSS production assets
