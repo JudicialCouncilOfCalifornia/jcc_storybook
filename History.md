@@ -1,3 +1,8 @@
+0.57.103 / 2026-08-20
+=====================
+* Merge PR from bugfix/hangover-hero-btm-txt-width
+  * Corrects right sidebar content classname
+
 0.57.102 / 2026-08-18
 =====================
 * Merge PR from feature/ADA-552--updated-seal
