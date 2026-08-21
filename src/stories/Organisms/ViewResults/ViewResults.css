@@ -33,6 +33,7 @@ li.group-li + li.group-li > h2.list-label {
 }
 
 .items-per-page select {
+  margin: 0;
   font-size: var(--s-1);
 }
 
