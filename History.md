@@ -1,3 +1,8 @@
+0.57.104 / 2026-08-21
+=====================
+* Merge PR from bugfix/ADA-574--number-items-filter-layout
+  * Corrects chevron icon placement for items per page select filter
+
 0.57.103 / 2026-08-20
 =====================
 * Merge PR from bugfix/hangover-hero-btm-txt-width
