@@ -1,4 +1,11 @@
-0.57.104 / 2026-08-21
+0.57.105 / 2026-08-27
+=====================
+* Merge PR from bugfix/ADA-571--section-nav-current-page
+  * Section Nav missing current page designation - Design discussion
+* Merge PR from bugfix/ADA-331--correct-card-label-tag
+  * Newsroom.courts.ca.gov - Jumps from h1 (page header) to h3 (JCC Cards)
+  
+  0.57.104 / 2026-08-21
 =====================
 * Merge PR from bugfix/ADA-574--number-items-filter-layout
   * Corrects chevron icon placement for items per page select filter
