@@ -180,6 +180,32 @@ export let default_primary_nav_sublinks_more_data = [
   }
 ];
 
+// Current sublink example.
+export let current_sublink_primary_nav_sublinks_more_data = [
+  {
+    text: "Navigation link 1",
+    url: "#",
+    is_overview_link: true,
+  },
+  {
+    text: "Navigation link 2",
+    url: "#",
+  },
+  {
+    is_current: true,
+    text: "Navigation link 3",
+    url: "#",
+  },
+  {
+    text: "Navigation link 4",
+    url: "#",
+  },
+  {
+    text: "Navigation link 5",
+    url: "#",
+  }
+];
+
 export let default_primary_nav_sublinks_mega_data = [
   {
     text: "Navigation link 1",
@@ -344,6 +370,70 @@ export let default_section_nav_links_data = [
   {
     text: "Justices",
     links: default_primary_nav_sublinks_more_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Rules, Forms & Filings",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Oral Argument Calendar",
+    links: default_primary_nav_sublinks_more_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Court Programs",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "News & Announcements",
+    links: default_primary_nav_sublinks_small_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "About",
+    links: default_primary_nav_sublinks_small_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+];
+
+//
+// Current sublink parent example for section links in SectionNav component
+export let current_sublink_section_nav_links_data = [
+  {
+    text: "Home",
+    id: "nav-section-one",
+    url: "#",
+    links: default_primary_nav_sublinks_data,
+    section_link: {
+      text: "Navigation link",
+      url: "#",
+    },
+  },
+  {
+    text: "Justices",
+    in_active_trail: true,
+    links: current_sublink_primary_nav_sublinks_more_data,
     section_link: {
       text: "Navigation link",
       url: "#",

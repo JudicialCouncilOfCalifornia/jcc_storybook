@@ -39,7 +39,6 @@
             {% for i,link in links %}
 
               {% set parent = link.links is not empty ? true : false %}
-              {% set active_class = link.is_current ? 'is_active' : '' %}
               {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'section-nav__has-overview-link' : '' %}
 
               <li class="section-nav__group {{ parent_overview_link_class }}">
@@ -48,17 +47,20 @@
                   'section-nav__button',
                   parent ? 'parent_link' : null,
                   has_desktop_dropdown_overview_link ? 'button' : null,
-                  active_class,
+                  link.is_current ? 'is-current' : '',
+                  link.in_active_trail ? 'in-active-trail' : '',
                 ] %}
+
+                {% set aria_current = link.is_current ? 'page' : null %}
 
                 {% if parent %}
                   {% if has_desktop_dropdown_overview_link %}
                     <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
                   {% else %}
-                    {{ link(link.text, link.url, {class: link_classes}) }}
+                    {{ link(link.text, link.url, {class: link_classes, 'aria-current': aria_current}) }}
                   {% endif %}
                 {% else %}
-                  {{ link(link.text, link.url, {class: link_classes}) }}
+                  {{ link(link.text, link.url, {class: link_classes, 'aria-current': aria_current}) }}
                 {% endif %}
 
                 {% if link.links is not empty %}
@@ -70,13 +72,12 @@
                       {% for link2 in link.links %}
                         <li class="section-nav__list__item">
                           {% set link2_classes = [
-                            'link',
-                            'link-level-2',
-                            link2.is_current ? 'is_current' : '',
-                            (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'link-level-2__has-overview-link' : null,
+                            'section-nav__link',
+                            (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null,
+                            link2.is_current ? 'is-current' : '',
                           ] %}
-                          {% set overview_link_class = (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null %}
-                          {{ link(link2.text, link2.url, {class: ['section-nav__link', overview_link_class]}) }}
+                          {% set aria_current = link2.is_current ? 'page' : null %}
+                          {{ link(link2.text, link2.url, {class: link2_classes, 'aria-current': aria_current}) }}
                         </li>
                       {% endfor %}
                     </ul>

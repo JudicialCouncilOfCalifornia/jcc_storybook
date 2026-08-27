@@ -329,10 +329,10 @@
   color: var(--color-base-dark-x);
 }
 
-.section-nav .section-nav__group:has(.section-nav__button.is_active):focus-within .icon-wrapper,
-.section-nav .section-nav__group:has(.section-nav__button.is_active):hover a.section-nav__button,
-.section-nav .section-nav__group:has(.section-nav__button.is_active):hover button.section-nav__button,
-.section-nav .section-nav__group:has(.section-nav__button.is_active):hover .icon-wrapper {
+.section-nav .section-nav__group:has(.section-nav__button.is-current):focus-within .icon-wrapper,
+.section-nav .section-nav__group:has(.section-nav__button.is-current):hover a.section-nav__button,
+.section-nav .section-nav__group:has(.section-nav__button.is-current):hover button.section-nav__button,
+.section-nav .section-nav__group:has(.section-nav__button.is-current):hover .icon-wrapper {
   color: var(--color-white);
 }
 
@@ -351,15 +351,18 @@
   display: flex;
 }
 
-.section-nav a.section-nav__button.is_active ,
-.section-nav button.section-nav__button.is_active{
+.section-nav a.section-nav__button.is-current,
+.section-nav a.section-nav__button.in-active-trail,
+.section-nav button.section-nav__button.is-current,
+.section-nav button.section-nav__button.in-active-trail {
   color: var(--color-white);
 }
 
-.section-nav .section-nav__group:has(a.section-nav__button.is_active),
-.section-nav .section-nav__group:has(button.section-nav__button.is_active) {
+.section-nav .section-nav__group:has(a.section-nav__button.is-current),
+.section-nav .section-nav__group:has(a.section-nav__button.in-active-trail),
+.section-nav .section-nav__group:has(button.section-nav__button.is-current),
+.section-nav .section-nav__group:has(button.section-nav__button.in-active-trail) {
   background-color: var(--color-primary-dark-x);
-  color: var(--color-white);
 }
 
 .section-nav .section-nav__group:has(a.section-nav__button):hover,
@@ -430,19 +433,13 @@
   padding: 0 var(--s0) 0 var(--s0);
 }
 
-.section-nav a.section-nav__button.in-active-trail,
-.section-nav a.section-nav__link.is-active {
+.section-nav a.section-nav__link.is-current {
   font-weight: 600;
   color: var(--accent-color);
 }
 
-.section-nav a.section-nav__button.is-active,
-.section-nav__wrapper .section-nav .section-nav__desktop li.section-nav__group:has( a.section-nav__button.is-active ) {
-  background-color: var(--color-primary-light-x);
-  color: white;
-}
-
-.section-nav > .section-nav__default.reel > .section-nav__group:hover a.section-nav__button:not(.is-active),
+.section-nav > .section-nav__default.reel > .section-nav__group:hover a.section-nav__button:not(.is-current),
+.section-nav > .section-nav__default.reel > .section-nav__group:hover a.section-nav__button:not(.in-active-trail),
 .section-nav > .section-nav__default.reel > .section-nav__group:hover a.section-nav__button.open {
   color: var(--color-white);
   background-color: var(--color-primary-light-x);
