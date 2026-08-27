@@ -55,7 +55,7 @@
 
                 {% if parent %}
                   {% if has_desktop_dropdown_overview_link %}
-                    <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
+                    <button class="{{ link_classes|join(' ')|trim }}"{% if aria_current %} aria-current="{{ aria_current }}"{% endif %}>{{ link.text }}</button>
                   {% else %}
                     {{ link(link.text, link.url, {class: link_classes, 'aria-current': aria_current}) }}
                   {% endif %}
