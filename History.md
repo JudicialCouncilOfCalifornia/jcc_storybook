@@ -1,3 +1,8 @@
+0.57.106 / 2026-08-29
+=====================
+* Merge PR from bugfix/ADA-571--primary-nav-adjustments
+  * Primary nav active trail correction
+
 0.57.105 / 2026-08-27
 =====================
 * Merge PR from bugfix/ADA-571--section-nav-current-page
