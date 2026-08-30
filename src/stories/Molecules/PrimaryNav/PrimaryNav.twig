@@ -27,18 +27,17 @@
       {% for i,link in links %}
         
         {% set parent = link.links is not empty ? true : false %}
-        {% set active_class = link.is_current ? 'is_active' : '' %}
         {% set aria_current = link.is_current ? 'page' : null %}
         {% set parent_overview_link_class = has_desktop_dropdown_overview_link ? 'primary-nav__has-overview-link' : '' %}
         {% set desktop_submenu_id = nav_base_id ~ '-desktop-submenu-' ~ i %}
         
         <li class="primary-nav__group {{ parent_overview_link_class }}">
-          
+
           {% set link_classes = [
             'primary-nav__button',
             parent ? 'parent_link' : null,
             has_desktop_dropdown_overview_link ? 'button' : null,
-            active_class,
+            link.in_active_trail ? 'in-active-trail' : null,
           ] %}
           
           {% if parent %}
@@ -47,8 +46,7 @@
                 class="{{ link_classes|join(' ')|trim }}"
                 aria-haspopup="true"
                 aria-expanded="false"
-                aria-controls="{{ desktop_submenu_id }}",
-                aria-current="{{ aria_current }}"
+                aria-controls="{{ desktop_submenu_id }}"
               >{{ link.text }}</button>
             {% else %}
               {{ link(link.text, link.url, {
@@ -72,7 +70,7 @@
                 {% set link_lv2_classes = [
                   'primary-nav__link',
                   'link',
-                  link_lv2.is_current ? 'is_current' : '',
+                  link_lv2.in_active_trail ? 'in-active-trail' : '',
                   (link_lv2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'primary-nav__link primary-nav__overview-link' : null,
                 ] %}
                 {% set aria_current = link_lv2.is_current ? 'page' : null %}
