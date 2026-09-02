@@ -75,6 +75,12 @@ export default {
       description: "A heading.",
       table: { defaultValue: { summary: null } },
     },
+    card_title_tag: {
+      description: "Override the rendered tag used for the card title.",
+      table: { defaultValue: { summary: "auto" } },
+      control: { type: "select" },
+      options: ["", "p", "div", "h1", "h2", "h3", "h4", "h5", "h6"],
+    },
     text: {
       description: "Lead Text.",
       table: { defaultValue: { summary: null } },
@@ -124,4 +130,7 @@ StripedAligned.args = data.striped_aligned;
 
 export const MediaLink = Template.bind({});
 MediaLink.args = data.media_link;
+
+export const HeadingTagOverride = Template.bind({});
+HeadingTagOverride.args = data.heading_tag_override;
 

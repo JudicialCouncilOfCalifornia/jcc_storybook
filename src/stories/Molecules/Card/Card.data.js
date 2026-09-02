@@ -275,4 +275,21 @@ export default {
     ],
     brow_text: "May 22, 2014",    
   },
+  heading_tag_override: {
+    variant: "default",
+    clickable_card: false,
+    background: null,
+    aspect: [],
+    media: false,
+    heading: "Card label rendered as paragraph",
+    card_title_tag: "p",
+    text: "<p>This card includes body content, but the title tag is explicitly overridden.</p>",
+    button_data: [
+      {
+        label: "Button",
+        href: "#",
+        variant: "primary",
+      },
+    ],
+  },
 };
