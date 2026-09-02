@@ -2,6 +2,8 @@
 
 {# Heading handling. #}
 {# Heading tag cannot be used if there is no card body content. #}
+{% set allowed_heading_tags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'] %}
+{% set requested_heading_tag = card_title_tag|default('')|lower %}
 {% set h = 'p' %}
 {% if first_component %}
   {# A card could provide the heading (h1) for a Hero in the first position. #}
@@ -9,6 +11,9 @@
 {% elseif text is not empty %}
   {# Card heading depends if a section heading exists or not. #}
   {% set h = has_section_heading ? 'h3' : 'h2' %}
+{% endif %}
+{% if requested_heading_tag in allowed_heading_tags %}
+  {% set h = requested_heading_tag %}
 {% endif %}
 
 {% set tag = clickable_card or variant == 'card--striped' ? 'a' : 'div' %}

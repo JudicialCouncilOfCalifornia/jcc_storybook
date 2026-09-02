@@ -42,6 +42,7 @@ The card variant type can be inherited which means you can set it on the element
     color: false,
   },
   heading: "Heading For A Card",
+  card_title_tag: "p", // Optional override for rendered heading tag.
   text: [markup],
   button_data: {
     label: "Button",

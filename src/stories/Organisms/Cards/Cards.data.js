@@ -50,6 +50,7 @@ export default {
     sub_component_data: [
       Card({
         has_section_heading: true,
+        card_title_tag: "p",
         ...CardDefault.args
       }),
       Card({
