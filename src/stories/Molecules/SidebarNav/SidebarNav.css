@@ -142,8 +142,8 @@ button.sidebar-nav__button:hover {
   color: var(--accent-color);
 }
 
-a.sidebar-nav__button.is-active,
-button.sidebar-nav__button.is-active {
+a.sidebar-nav__button.is-current,
+button.sidebar-nav__button.is-current {
   color: var(--accent-color);
   border-block-end: 0px solid var(--accent-color);
 }
