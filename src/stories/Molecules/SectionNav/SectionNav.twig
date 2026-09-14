@@ -57,10 +57,10 @@
                   {% if has_desktop_dropdown_overview_link %}
                     <button class="{{ link_classes|join(' ')|trim }}">{{ link.text }}</button>
                   {% else %}
-                    {{ link(link.text, link.url, {class: link_classes, 'aria-current': aria_current}) }}
+                    {{ link(link.text, link.url, {class: link_classes|join(' ')|trim, 'aria-current': aria_current}) }}
                   {% endif %}
                 {% else %}
-                  {{ link(link.text, link.url, {class: link_classes, 'aria-current': aria_current}) }}
+                  {{ link(link.text, link.url, {class: link_classes|join(' ')|trim, 'aria-current': aria_current}) }}
                 {% endif %}
 
                 {% if link.links is not empty %}
@@ -77,7 +77,7 @@
                             link2.is_current ? 'is-current' : '',
                           ] %}
                           {% set aria_current = link2.is_current ? 'page' : null %}
-                          {{ link(link2.text, link2.url, {class: link2_classes, 'aria-current': aria_current}) }}
+                          {{ link(link2.text, link2.url, {class: link2_classes|join(' ')|trim, 'aria-current': aria_current}) }}
                         </li>
                       {% endfor %}
                     </ul>

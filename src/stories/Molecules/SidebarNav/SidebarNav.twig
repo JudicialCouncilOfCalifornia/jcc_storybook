@@ -39,12 +39,21 @@
               {% set parent = link.links is not empty ? true : false %}
               <li>
                 {% set active_class = link.active ? 'is-active' : '' %}
+                {% set aria_current = link.active ? 'page' : null %}
+
+                {% set link_classes = [
+                  'sidebar-nav__button',
+                  link.is_current ? 'is-current' : '',
+                  link.in_active_trail ? 'in-active-trail' : '',
+                ] %}
+
+                {% set aria_current = link.is_current ? 'page' : null %}
                 
                 {% if parent %}
-                  {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }} 
+                  {{ link(link.title, link.url, {class: link_classes|join(' ')|trim, 'aria-current': aria_current}) }} 
                   {# <button class="sidebar-nav__button button {{ active_class }}">{{ link.title }}</button> #}
                 {% else %}
-                  {{ link(link.title, link.url, {class: ['sidebar-nav__button', active_class]}) }}
+                  {{ link(link.title, link.url, {class: link_classes|join(' ')|trim, 'aria-current': aria_current}) }}
                 {% endif %}
 
                 {% if link.links %}
