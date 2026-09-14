@@ -1,3 +1,8 @@
+0.57.107 / 2026-09-14
+=====================
+* Merge PR from bugfix/ADA-823--elevated-sidebar-nav-current-pg
+  * Siebar Nav missing current page designation
+
 0.57.106 / 2026-08-29
 =====================
 * Merge PR from bugfix/ADA-571--primary-nav-adjustments
@@ -8,7 +13,7 @@
 * Merge PR from bugfix/ADA-571--section-nav-current-page
   * Section Nav missing current page designation - Design discussion
 * Merge PR from bugfix/ADA-331--correct-card-label-tag
-  * Newsroom.courts.ca.gov - Jumps from h1 (page header) to h3 (JCC Cards)
+  * p tag for label if card has no content, not div
   
   0.57.104 / 2026-08-21
 =====================
