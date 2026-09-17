@@ -100,16 +100,6 @@
   color: var(--color-white) !important;
 }
 
-.remote-video-colorbox-launch-modal{
-  outline: none;
-}
-
-.remote-video-colorbox-launch-modal:focus img,
-.remote-video-colorbox-launch-modal:focus-within img,
-.remote-video-colorbox-launch-modal:focus-visible img{
-  outline: var(--border-color, var(--color-accent-warm-light-x)) auto var(--s-6);
-}
-
 .card .icon-wrapper {
   block-size: var(--s5);
 }
@@ -422,31 +412,6 @@ a.card--clickable > .ext {
 
 .card.extra-padding {
   padding: var(--s5) var(--s6);
-}
-
-/* BEGIN Colorbox lightbox missing UX */
-.remote-video-colorbox-launch-modal {
-  display: flex ;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.remote-video-colorbox-launch-modal:before {
-  position: absolute;
-  content: "\25B6";
-  transform: scale(5);
-  color: var(--color-white);
-  opacity: 0.4;
-}
-
-.remote-video-colorbox-launch-modal:hover::before {
-  transform: scale(6);
-}
-
-.remote-video-colorbox-launch-modal img {
-  width: 40rem;
-  height: auto;
 }
 
 .card h4.sidebar-label {
