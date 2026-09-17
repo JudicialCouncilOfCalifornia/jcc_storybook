@@ -1,3 +1,7 @@
+0.57.108 / 2026-09-17
+* Merge PR from bugfix/ADA-303--remote-video-colorbox-cleanout
+  * Let Drupal manage remote video colorbox css to avoid confusion
+
 0.57.107 / 2026-09-14
 =====================
 * Merge PR from bugfix/ADA-823--elevated-sidebar-nav-current-pg
