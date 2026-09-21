@@ -1,3 +1,7 @@
+0.57.109 / 2026-09-21
+* Merge PR from bugfix/ADA-303--video-embed-focus-card-layers
+  * Card media layering fix to ensure focus outline appearance
+
 0.57.108 / 2026-09-17
 * Merge PR from bugfix/ADA-303--remote-video-colorbox-cleanout
   * Let Drupal manage remote video colorbox css to avoid confusion
