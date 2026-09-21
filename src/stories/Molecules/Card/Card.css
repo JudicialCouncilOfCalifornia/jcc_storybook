@@ -42,6 +42,10 @@
   border-radius: var(--corner-radius);
 }
 
+.card__media {
+  z-index: 1;
+}
+
 .card__media .frame iframe {
   width: 100%;
   height: 100%;
