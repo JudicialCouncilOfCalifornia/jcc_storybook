@@ -266,7 +266,12 @@
 .primary-nav ul.primary-nav__list li.primary-nav__list__item a,
 .primary-nav ul.primary-nav__list li.primary-nav__list__item button {
   padding-block: var(--s-1);
-  padding-inline: 0;
+  padding-inline: var(--s-2);
+}
+
+.primary-nav button.primary-nav__button:focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 3px;
 }
 
 .primary-nav.primary-nav--has-label.wrapping {

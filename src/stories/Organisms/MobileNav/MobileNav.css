@@ -60,10 +60,15 @@ a.mobile-nav__primary-nav__button:hover,
 button.mobile-nav__primary-nav__button:focus,
 a.mobile-nav__primary-nav__button:focus-within {
   border: none;
-  /* outline: 2px solid var(--accent-color); */
-  outline: 0;
   border-radius: 0;
   color: var(--accent-color);
+}
+
+/* Inset the ring within the existing padding of full-width mobile rows. */
+.mobile-nav .mobile-nav__primary-nav__button:focus,
+.mobile-nav .mobile-nav__primary-nav__link:focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: -5px;
 }
 
 button.mobile-nav__primary-nav__button .icon-wrapper,

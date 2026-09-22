@@ -1,6 +1,7 @@
 /* Set default and inherited values. */
 .alert {
   --gap: var(--s-3);
+  --focus-outline-color: var(--color-accent-warm-dark-xx);
   padding-block: var(--s-1);
   font-size: var(--s0);
 }
