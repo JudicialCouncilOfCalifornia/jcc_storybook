@@ -59,6 +59,12 @@ a:focus-visible {
   outline: var(--border-color, var(--color-accent-warm-light-x)) auto var(--s-6);
 }
 
+/* Shared focus treatment for branding, navigation, and alert links. */
+:where(.site-branding, .global-branding, .secondary-nav, .primary-nav, .mobile-nav, .alert) a:focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 3px;
+}
+
 p {
   margin: 0;
   color: var(--color);
