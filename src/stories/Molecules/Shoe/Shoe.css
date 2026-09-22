@@ -1,5 +1,6 @@
 .shoe {
   --color: var(--color-white);
+  --focus-outline-color: var(--color-white);
   background: var(--color-primary-dark-xxx);
 }
 
@@ -40,7 +41,7 @@
 }
 
 .shoe .secondary-nav__list.reel {
-  overflow-y: visible;
+  overflow: visible;
 }
 
 .shoe .secondary-nav > ul > li > a:hover,
