@@ -36,10 +36,14 @@
   color: var(--dynamic-color, var(--color-red)) !important;
 }
 
-.button:focus {
-  outline: 2px solid var(--focus-outline-color);
+/* Dual-ring focus indicator: the gold outline passes on dark backgrounds and
+ * the blue ring passes on light ones, so focus stays visible on every variant. */
+.button:focus,
+.button:focus-visible {
+  outline: 3px solid var(--color-accent-warm-light-xx);
   outline-offset: 2px;
-  border: 2px solid var(--focus-outline-color);  
+  border: 2px solid var(--focus-outline-color);
+  box-shadow: 0 0 0 2px var(--color-primary);
 }
 
 .button::after {

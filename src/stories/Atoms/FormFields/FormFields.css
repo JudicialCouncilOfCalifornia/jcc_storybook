@@ -308,3 +308,19 @@ fieldset legend span.form-required::after {
 input[required="required"]:not([type="radio"]):not([type="checkbox"]) {
    border-left: 1px solid #df2626;
 }
+
+/* Webform multiple-value add/remove image buttons (Drupal only).
+ * Webform dims these to 40% opacity at rest, which fails contrast, and gives
+ * them no keyboard focus indicator of its own. Restore full opacity and use
+ * the same dual-ring focus indicator as .button. */
+.webform-multiple-table td.webform-multiple-table--operations input[type="image"] {
+  opacity: 1;
+}
+
+.webform-multiple-table td.webform-multiple-table--operations input[type="image"]:focus,
+.webform-multiple-table td.webform-multiple-table--operations input[type="image"]:focus-visible {
+  opacity: 1;
+  outline: 3px solid var(--color-accent-warm-light-xx);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
