@@ -31,12 +31,6 @@
   font-size: var(--s-1);
 }
 
-.secondary-nav > ul > li a:focus-visible {
-  padding-block: 2px;
-  outline-width: 2px;
-  outline-offset: -1px;
-}
-
 .secondary-nav > ul > li a:hover {
   opacity: .5;
 }

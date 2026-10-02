@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+/* Enclose the complete logo or label, including its block-level children. */
+.site-branding a {
+  display: block;
+}
+
 .site-branding__logo img {
   display: block;
   height: 4.25rem;
