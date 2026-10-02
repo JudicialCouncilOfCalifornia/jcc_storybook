@@ -1,4 +1,8 @@
-0.57.109 / 2026-09-21
+0.57.110 / 2026-10-02
+* Merge PR from feature/ADA-451-courts-default-focus-changes
+  * Courts.ca.gov - Default focus outline colors cont'd
+  
+  0.57.109 / 2026-09-21
 * Merge PR from bugfix/ADA-303--video-embed-focus-card-layers
   * Card media layering fix to ensure focus outline appearance
 
