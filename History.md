@@ -1,19 +1,29 @@
+0.57.111 / 2026-10-07
+=====================
+* Merge PR from feature/ADA-910-focus-update-secondary-side-navigation
+  * Section and sidebar nav focus improvements
+* Merge PR from feature/ADA-807--profile-bio-list-top-spacing
+  * Remove top spacing if list component is first profile bio text element
+
 0.57.110 / 2026-10-02
+=====================
 * Merge PR from feature/ADA-451-courts-default-focus-changes
   * Courts.ca.gov - Default focus outline colors cont'd
   
-  0.57.109 / 2026-09-21
+0.57.109 / 2026-09-21
+=====================
 * Merge PR from bugfix/ADA-303--video-embed-focus-card-layers
   * Card media layering fix to ensure focus outline appearance
 
 0.57.108 / 2026-09-17
+=====================
 * Merge PR from bugfix/ADA-303--remote-video-colorbox-cleanout
   * Let Drupal manage remote video colorbox css to avoid confusion
 
 0.57.107 / 2026-09-14
 =====================
 * Merge PR from bugfix/ADA-823--elevated-sidebar-nav-current-pg
-  * Siebar Nav missing current page designation
+  * Sidebar Nav missing current page designation
 
 0.57.106 / 2026-08-29
 =====================
