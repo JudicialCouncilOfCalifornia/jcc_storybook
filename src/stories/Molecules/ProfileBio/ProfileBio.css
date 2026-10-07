@@ -44,3 +44,7 @@
 .profile-bio__header.wrapping .profile-bio__heading {
   padding-block-end: 0;
 }
+
+.profile-bio__text .list:first-child {
+  margin-block-start: 0;
+}
