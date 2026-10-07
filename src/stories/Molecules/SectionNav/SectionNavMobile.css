@@ -277,3 +277,24 @@ li.section-nav__mobile__list__item + li.section-nav__mobile__list__item {
 .section-nav__mobile__overview-link {
   font-weight: 600;
 }
+
+.section-nav .section-nav__mobile :is(a, button):focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: -5px;
+}
+
+.section-nav .section-nav__mobile__button:focus:is(button, :hover, .is-active),
+.section-nav .section-nav__mobile__group:has(.is_active) > .section-nav__mobile__button:focus {
+  --focus-outline-color: var(--color-white);
+}
+
+.section-nav .nav-trigger:has(input:focus-visible) {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 3px;
+}
+
+.section-nav .nav-trigger:has(input:focus-visible)::before,
+.section-nav .nav-trigger:has(input:focus-visible)::after,
+.section-nav .nav-trigger input:focus-visible {
+  outline: none;
+}
