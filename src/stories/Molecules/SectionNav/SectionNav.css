@@ -253,7 +253,7 @@
   background: var(--color-white);
   box-shadow: 4px 4px 10px 2px #0003;
   padding-inline: var(--s1);
-  padding-block: 0
+  padding-block: 5px;
 }
 
 .section-nav ul.section-nav__list li.section-nav__list__item {
@@ -374,15 +374,6 @@
   border-inline-start: 0;
 }
 
-.section-nav > .section-nav__desktop.reel > .section-nav__group:focus .section-nav__button,
-.section-nav > .section-nav__desktop.reel > .section-nav__group:focus-within .section-nav__button {
-  outline: 0;
-}
-
-.section-nav > .section-nav__desktop.reel > .section-nav__group .section-nav__list .link a:focus {
-  outline: 2px solid var(--accent-color);
-}
-
 .section-nav .reel.overflowing + * {
   padding-block-start: var(--s-2);
   padding-block-end: var(--s-6);
@@ -449,4 +440,23 @@
 .section-nav .section-nav__list a.section-nav__overview-link, 
 .section-nav .section-nav__list button.section-nav__overview-link {
   font-family: var(--font-primary);
+}
+
+/* Keep the focus ring inside the navigation cell, clear of the text and borders. */
+.section-nav .section-nav__desktop > .section-nav__group:has(> :focus) {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: -5px;
+}
+
+.section-nav .section-nav__desktop > .section-nav__group:has(> :focus):is(:hover, :has(> .is-current, > .in-active-trail)) {
+  --focus-outline-color: var(--color-white);
+}
+
+.section-nav .section-nav__desktop > .section-nav__group > :is(a, button):focus {
+  outline: none;
+}
+
+.section-nav .section-nav__list :is(a, button):focus {
+  outline: 2px solid var(--color-accent-warm-dark-x);
+  outline-offset: 3px;
 }

@@ -362,3 +362,21 @@ body.sb-main-padded #root {
 .sidebar-nav .nav-trigger--label-direction--right .nav-trigger__label {
   left: calc(var(--navtrigger-height) + 2.5rem);
 }
+
+/* Match the shared navigation focus treatment, including nested links. */
+.sidebar-nav :is(a, button):focus {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 3px;
+}
+
+.sidebar-nav .nav-trigger:has(input:focus-visible)::before,
+.sidebar-nav .nav-trigger:has(input:focus-visible)::after,
+.sidebar-nav .nav-trigger input:focus-visible {
+  outline: none;
+}
+
+/* The mobile trigger touches the viewport edge; keep its ring inside. */
+.sidebar-nav .nav-trigger:has(input:focus-visible) {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: -5px;
+}
