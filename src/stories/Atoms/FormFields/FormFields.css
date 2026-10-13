@@ -85,12 +85,17 @@ select[multiple] > * + * {
   border-radius: 0;
 }
 
-.placeholder-container input:focus,
-.placeholder-container input:focus-visible,
+/*
+ * Text fields only: checkbox/radio keep their own focus ring below, and
+ * button-like inputs keep the Button/webform double ring. :where() keeps
+ * these exclusions at zero specificity so this rule stays (0,2,1).
+ */
+.placeholder-container input:where(:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="hidden"])):focus,
+.placeholder-container input:where(:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="hidden"])):focus-visible,
 .placeholder-container textarea:focus,
 .placeholder-container textarea:focus-visible {
   border-color: var(--accent-color);
-  outline:0;
+  outline: 0;
 }
 
 .placeholder-container.js-form-type-date input:focus ~ label,
