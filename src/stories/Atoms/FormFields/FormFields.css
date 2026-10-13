@@ -75,8 +75,13 @@ select[multiple] > * + * {
   border-radius: 0;
 }
 
-.placeholder-container input:focus,
-.placeholder-container input:focus-visible,
+/*
+ * Text fields only: checkbox/radio keep their own focus ring below, and
+ * button-like inputs keep the Button/webform double ring. :where() keeps
+ * these exclusions at zero specificity so this rule stays (0,2,1).
+ */
+.placeholder-container input:where(:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="hidden"])):focus,
+.placeholder-container input:where(:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="hidden"])):focus-visible,
 .placeholder-container textarea:focus,
 .placeholder-container textarea:focus-visible {
   border-color: var(--accent-color);
@@ -208,15 +213,32 @@ fieldset {
 input.form-checkbox {
   width: 1rem;
   height: 1rem;
-  padding: 8px;
+  flex: none;
+  padding: 0;
+  margin: 0;
   border: 1px solid var(--color-black);
   appearance: none;
+  -webkit-appearance: none;
 }
 
 .form-radios input:checked,
 input.form-checkbox:checked {
-  border-color: var(--accent-color) !important;
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
+}
+
+/*
+ * Focus ring for radios and checkboxes, keyboard users only.
+ *
+ * These controls are custom-drawn (appearance: none), which removes the
+ * browser's built-in focus ring. Without this rule there would be no
+ * visible cue at all when tabbing through them. Using :focus-visible
+ * keeps mouse clicks ring-free.
+ */
+.form-radios input:focus-visible,
+input.form-checkbox:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .form-checkbox input,
