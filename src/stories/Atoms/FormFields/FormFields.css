@@ -5,7 +5,17 @@ hr.divider {
   margin-block-end: var(--s1);
 }
 
-input,
+/*
+ * Generic text-control default. Button-like and hidden inputs are excluded
+ * (not overridden below) because no other stylesheet in the Drupal payload
+ * styles buttons: jcc_storybook/Button is not a defined library, so those
+ * attach_library() calls are no-ops and button inputs intentionally keep
+ * their native rendering. Checkbox/radio are excluded too: each :not()
+ * raises this selector's specificity, so their dedicated sizing rules below
+ * could never override it — exclusion keeps both sides independent of
+ * source order.
+ */
+input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
 textarea,
 select {
   border: 1px solid var(--color-base-light-x);
