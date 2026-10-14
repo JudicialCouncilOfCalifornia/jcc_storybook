@@ -352,3 +352,10 @@ input[required="required"]:not([type="radio"]):not([type="checkbox"]) {
 form.webform-submission-form input[type="image"]:enabled {
   opacity: 1;
 }
+
+/* Webform multiple-value image controls need both rings on focus. */
+form.webform-submission-form .webform-multiple-table td input[type="image"]:enabled:focus {
+  border-color: var(--focus-outline-color);
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
