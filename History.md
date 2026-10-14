@@ -1,3 +1,8 @@
+0.57.112 / 2026-10-14
+=====================
+* Merge PR from bugfix/ada-19--ada-749
+  * Form field focus outline improvements and fixes
+
 0.57.111 / 2026-10-07
 =====================
 * Merge PR from feature/ADA-910-focus-update-secondary-side-navigation
