@@ -10,12 +10,13 @@ hr.divider {
  * (not overridden below) because no other stylesheet in the Drupal payload
  * styles buttons: jcc_storybook/Button is not a defined library, so those
  * attach_library() calls are no-ops and button inputs intentionally keep
- * their native rendering. Checkbox/radio are excluded too: each :not()
- * raises this selector's specificity, so their dedicated sizing rules below
- * could never override it — exclusion keeps both sides independent of
- * source order.
+ * their native rendering. Checkbox/radio are excluded too. :where() keeps
+ * these exclusions at zero specificity so this rule stays (0,0,1): the
+ * cascade behaves exactly like the bare input selector, and every rule
+ * below that used to override it keeps winning independent of source
+ * order.
  */
-input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+input:where(:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"])),
 textarea,
 select {
   border: 1px solid var(--color-base-light-x);
@@ -339,4 +340,15 @@ fieldset legend span.form-required::after {
 
 input[required="required"]:not([type="radio"]):not([type="checkbox"]) {
    border-left: 1px solid #df2626;
+}
+
+/*
+ * ADA-749: resting contrast for the same controls. Webform dims these
+ * image buttons to opacity 0.4, rendering black icons at ~2.85:1 against
+ * white — below the 3:1 non-text contrast minimum. Restore full opacity
+ * for enabled controls only, so genuinely disabled buttons keep their
+ * dimmed affordance.
+ */
+form.webform-submission-form input[type="image"]:enabled {
+  opacity: 1;
 }
