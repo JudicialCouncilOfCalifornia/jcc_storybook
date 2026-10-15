@@ -95,6 +95,7 @@
           {% include "@atoms/NavTrigger/NavTrigger.twig" with nav_trigger_data %}
 
           {% if mobile_links is not empty %}
+          {{ dpm(mobile_links) }}
             <ul class="section-nav__mobile nav-level-1 stack" {% if show_label %} aria-labelledby="{{ nav_id }}--mobile" {% elseif label %} aria-label="{{ label }}" {% endif %}>
               {% for i,link in mobile_links %}
                 {% set parent = link.links is not empty ? true : false %}
@@ -106,7 +107,10 @@
                       {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
                     </button>
                   {% else %}
-                    {{ link(link.text, link.url, {class: ['section-nav__mobile__button link']}) }}
+                    {{ link(link.text, link.url, {
+                      class: ['section-nav__mobile__button link'],
+                      'aria-current': link.is_current ? 'page' : null
+                    }) }}
                   {% endif %}
 
                   {% if link.links is not empty %}
@@ -116,7 +120,10 @@
                         {% for link2 in link.links %}
                           <li class="section-nav__mobile__list__item">
                             {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
-                            {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                            {{ link(
+                              link2.text, link2.url, {class: [overview_link_class],
+                              'aria-current': link2.is_current ? 'page' : null}
+                            ) }}
                           </li>
                         {% endfor %}
                       </ul>
