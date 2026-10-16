@@ -228,3 +228,8 @@
 .header__mobile .nav-trigger.nav-trigger--has-label .nav-trigger__label {
   right: 3.5rem;
 }
+
+/* Hide the empty desktop landmark when its links move to the mobile menu. */
+.header:has(.header__lower .primary-nav .reel.overflowing) .primary-nav__desktop--wrapper {
+  visibility: hidden;
+}
