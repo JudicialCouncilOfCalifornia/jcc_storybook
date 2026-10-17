@@ -115,7 +115,7 @@
   border-radius : var(--corner-radius);
   margin-right: calc(var(--icon-height) * -1);
   background: var(--color-base-light-xx);
-  border-color: var(--color-base-light-xx);
+  border: 1px solid var(--color-base-dark-x);
   width: 100%;
   color: var(--color-black) !important;
 }
@@ -156,7 +156,6 @@
 .header-search--no-toggle .header-search__form input {
   width: 100%;
   background-color: white;
-  border: 0;
 }
 
 .header-search--no-toggle .header-search__form:focus-within input {
