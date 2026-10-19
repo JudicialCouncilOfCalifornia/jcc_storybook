@@ -27,7 +27,14 @@
             {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
           </button>
         {% else %}
-          {{ link(link.text, link.url, {class: ['link mobile-nav__button mobile-nav__primary-nav__button ']}) }}
+          {{ link(
+            link.text,
+            link.url,
+            {
+              class: ['link mobile-nav__button mobile-nav__primary-nav__button '],
+              'aria-current': link.is_current ? 'page' : null
+            }
+          ) }}
         {% endif %}
         
         {% if link.links is not empty %}
@@ -36,7 +43,14 @@
             {% for link2 in link.links %}
               <li class="mobile-nav__primary-nav__list__item">
                 {% set overview_link_class = link2.is_overview_link ? 'link mobile-nav__primary-nav__link mobile-nav__primary-nav__overview-link' : 'link mobile-nav__primary-nav__link' %}
-                {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                {{ link(
+                  link2.text,
+                  link2.url,
+                  {
+                    class: [overview_link_class],
+                    'aria-current': link2.is_current ? 'page' : null
+                  }
+                ) }}
               </li>
             {% endfor %}
           </ul>
@@ -50,7 +64,14 @@
   <ul class="stack mobile-nav__secondary-nav__list nav-level-1" {% if secondary_nav_data.label %} aria-label="{{ secondary_nav_data.label }}" {% endif %}>
     {% for i,link in secondary_nav_data.links %}
     <li class="mobile-nav__secondary-nav__list__item">
-      {{ link(link.text, link.url, {class: ['mobile-nav__secondary-nav__button link']}) }}
+      {{ link(
+        link.text,
+        link.url,
+        {
+          class: ['mobile-nav__secondary-nav__button link'],
+          'aria-current': link.is_current ? 'page' : null
+        }
+      ) }}
     </li>
     {% endfor %}
   </ul>

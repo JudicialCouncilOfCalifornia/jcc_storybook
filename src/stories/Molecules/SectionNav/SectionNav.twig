@@ -76,8 +76,14 @@
                             (link2.is_overview_link) and (has_desktop_dropdown_overview_link) ? 'section-nav__link section-nav__overview-link' : null,
                             link2.is_current ? 'is-current' : '',
                           ] %}
-                          {% set aria_current = link2.is_current ? 'page' : null %}
-                          {{ link(link2.text, link2.url, {class: link2_classes|join(' ')|trim, 'aria-current': aria_current}) }}
+                          {{ link(
+                            link2.text,
+                            link2.url,
+                            {
+                              class: link2_classes|join(' ')|trim,
+                              'aria-current': link2.is_current ? 'page' : null,
+                            }
+                          ) }}
                         </li>
                       {% endfor %}
                     </ul>
@@ -106,7 +112,14 @@
                       {% include "@atoms/Icon/Icon.twig" with {icon: 'fa-chevron-down'} %}
                     </button>
                   {% else %}
-                    {{ link(link.text, link.url, {class: ['section-nav__mobile__button link']}) }}
+                    {{ link(
+                      link.text,
+                      link.url,
+                      {
+                        class: ['section-nav__mobile__button link'],
+                        'aria-current': link.is_current ? 'page' : null,
+                      }
+                    ) }}
                   {% endif %}
 
                   {% if link.links is not empty %}
@@ -116,7 +129,14 @@
                         {% for link2 in link.links %}
                           <li class="section-nav__mobile__list__item">
                             {% set overview_link_class = link2.is_overview_link ? 'section-nav__mobile__link section-nav__mobile__overview-link' : 'section-nav__mobile__link' %}
-                            {{ link(link2.text, link2.url, {class: [overview_link_class]}) }}
+                            {{ link(
+                              link2.text,
+                              link2.url,
+                              {
+                                class: [overview_link_class],
+                                'aria-current': link2.is_current ? 'page' : null,
+                              }
+                            ) }}
                           </li>
                         {% endfor %}
                       </ul>

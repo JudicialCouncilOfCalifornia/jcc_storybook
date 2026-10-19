@@ -34,21 +34,26 @@ docReady(function () {
   });
 
   // Toggle the sub menus.
-  const buttons = Array.from(document.querySelectorAll('.section-nav__mobile .section-nav__mobile__button'));
+  const buttons = Array.from(document.querySelectorAll('.section-nav__mobile .button.section-nav__mobile__button'));
   buttons.forEach(button => {
     if (!button.classList.contains('js-open')) {
       button.classList.add('js-open');
 
       button.addEventListener('pointerdown', (e) => {
-        const opened = document.querySelectorAll('.section-nav__mobile .section-nav__mobile__button.open');
+        // Only show/hide only with touch or left mouse button.
+        let allowedInteraction = false;
+        if (e.pointerType === 'touch' || e.button === 0) {
+          allowedInteraction = true;
+        }
 
-        opened.forEach(item => {
-          if (item && item != e.target) {
-            item.classList.remove('open');
+        if (allowedInteraction) {
+          if (e.target.classList.contains('open')) {
+            e.target.classList.remove('open');
           }
-        });
-
-        e.target.classList.toggle('open');
+          else {
+            e.target.classList.add('open');
+          }
+        }
       });
     }
   });
