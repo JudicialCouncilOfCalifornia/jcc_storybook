@@ -1,7 +1,7 @@
 {# Set up variant classes. #}
 {% set variant_class = variant ? 'secondary-nav--' ~ variant : 'secondary-nav--default' %}
 {% set overflowing_variant_class = overflowing_variant is not empty ? 'secondary-nav--overflowing-' ~ overflowing_variant : '' %}
-{% set nav_id = label ? label|clean_id : '' %}
+{% set nav_id = label ? label|clean_id ~ '-' ~ random() : '' %}
 {% set has_label = show_label and label ? 'cluster secondary-nav--has-label ' : false %}
 
 {# Create class array. #}
@@ -20,7 +20,7 @@
   variant != 'stacked' ? 'reel no-bar' : '',
 ] %}
 
-<nav class="{{ classes|join(' ')|trim }}" {% if show_label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% else %} aria-label="Secondary navigation" {% endif %}>
+<nav class="{{ classes|join(' ')|trim }}" {% if show_label and label %} aria-labelledby="{{ nav_id }}" {% elseif label %} aria-label="{{ label }}" {% else %} aria-label="Secondary navigation" {% endif %}>
   {% if show_label and label %}
     <div class="secondary-nav__label" id="{{ nav_id }}">
       <span>{{ label }}</span>
