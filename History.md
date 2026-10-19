@@ -1,3 +1,11 @@
+0.57.113 / 2026-10-21
+=====================
+* Merge PR from feature/ADA-859-elevated-global-navigation-landmarks
+  * Correct navigation labels and hide inactive desktop landmark
+* Merge PR from bugfix/ADA-805--mobile-nav-aria-current
+  * Adds aria-current support for mobile nav
+  * Corrects mobile nav touch & clicks for links with no submenu 
+
 0.57.112 / 2026-10-14
 =====================
 * Merge PR from bugfix/ada-19--ada-749
