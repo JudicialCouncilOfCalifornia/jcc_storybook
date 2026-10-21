@@ -40,7 +40,7 @@
         type="button"
         role="tab"
         aria-selected="true"
-        aria-controls='{{ "tabpanel-" ~ item.label|replace({' ':'-'})|lower }}'
+        aria-controls='tabid-{{ random_id }}-{{ panel_id }}'
       >
         <div class="tabs__label focus">{{ item.label }}</div>
       </button>
