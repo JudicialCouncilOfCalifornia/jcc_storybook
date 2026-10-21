@@ -60,6 +60,9 @@
   max-height: 0;
   min-height: 0;
   visibility: hidden;
+  /* ".primary-nav ul" unsets the reel overflow, so the hidden links would
+     otherwise widen the page and cause horizontal scrolling on mobile. */
+  overflow: hidden;
 }
 
 .primary-nav .primary-nav__list a {

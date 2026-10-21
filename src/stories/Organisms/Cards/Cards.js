@@ -38,7 +38,8 @@ docReady(function () {
       let container = section.querySelector('.section__main');
 
       // Default variant adjustments.
-      if (cards && (container.classList.contains('with-sidebar') || container.classList.contains('flex'))) {
+      // Some card sections (e.g. without a sidebar) have no .section__main.
+      if (cards && container && (container.classList.contains('with-sidebar') || container.classList.contains('flex'))) {
         if ('ResizeObserver' in window) {
           new ResizeObserver(entries => {
             let isStacked = areCardsStacked(cards);
