@@ -89,6 +89,7 @@ docReady(function () {
           tab.setAttribute('aria-selected', 'true');
           tab.classList.add('active');
           tab.removeAttribute('tabindex');
+          tabpanel.tabIndex = 0;
           tabpanel.open = true;
         }
         // Otherwise, hide the tab content.
@@ -96,6 +97,9 @@ docReady(function () {
           tab.setAttribute('aria-selected', 'false');
           tab.classList.remove('active');
           tab.tabIndex = -1;
+          // No tabindex on inactive panels, so screen readers don't land on
+          // an empty, collapsed "details" group.
+          tabpanel.removeAttribute('tabindex');
           tabpanel.open = false;
         }
       });
