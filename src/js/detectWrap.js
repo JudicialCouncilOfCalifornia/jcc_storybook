@@ -16,6 +16,11 @@ docReady(function () {
     // Start by removing parent wrapping class if it exists.
     group.classList.remove("wrapping");
 
+    // Nothing to measure if the group has no children (e.g. an empty menu).
+    if (!group.children.length) {
+      return;
+    }
+
     // Start our variables. We start assuming no child elements are wrapped.
     const top_of_firstchild = Math.floor(group.children[0].getBoundingClientRect().top);
     let wrapped = false;
