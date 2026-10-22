@@ -1,3 +1,14 @@
+0.57.114 / 2026-10-22
+=====================
+* Merge PR from bugfix/ada-tabs-grouping-announced
+  * Courts.ca.gov - Legislation Committee - Unnecessary Group Semantics on Nested Wrapper Divs
+* Merge PR from feature/ADA-870-invalid-aria-controls-ID
+  * Courts.ca.gov - Legislation Committee - Invalid aria-controls ID References on Tab Component Buttons
+* Merge PR from bugfix/mobile-nav-overflow-and-cards-null-check
+  * Fix mobile nav overflow and cards null check
+* Merge PR from feature/drupal-11-compatibility
+  * Makes the theme installable and working on Drupal 11 while keeping the existing D8/D9/D10 constraints.
+
 0.57.113 / 2026-10-21
 =====================
 * Merge PR from feature/ADA-859-elevated-global-navigation-landmarks
