@@ -13,8 +13,30 @@ foreach (glob($includes_path) as $filename) {
 
 /**
  * Implements hook_library_info_build().
+ *
+ * Drupal 11 no longer invokes this hook for themes, see
+ * jcc_storybook_library_info_alter().
  */
 function jcc_storybook_library_info_build() {
+  return _jcc_storybook_story_libraries();
+}
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * Registers the story libraries on Drupal 11, where themes can still alter
+ * library definitions but hook_library_info_build() only runs for modules.
+ */
+function jcc_storybook_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'jcc_storybook') {
+    $libraries += _jcc_storybook_story_libraries();
+  }
+}
+
+/**
+ * Builds a library for each story CSS and JS file in lib/stories.
+ */
+function _jcc_storybook_story_libraries() {
   $extensions = ['css', 'js'];
   $directory = 'themes/contrib/jcc_storybook/lib/stories';
   $extensions = array_map('preg_quote', $extensions);
