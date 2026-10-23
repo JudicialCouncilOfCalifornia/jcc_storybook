@@ -1,6 +1,7 @@
 .header {
   position: relative;
-  z-index: 3;
+  /* Above page navigation (up to 100), below fixed/offcanvas overlays (9999+). */
+  z-index: 101;
 }
 
 .header > .container > * + * {
