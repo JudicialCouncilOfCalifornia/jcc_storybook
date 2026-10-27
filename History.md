@@ -1,3 +1,8 @@
+0.57.115 / 2026-10-27
+=====================
+* Merge PR from bugfix/ada-866
+  * Courts - Calendar - Focus Indicator Rendered Behind Calendar Widget for Dropdown Menu Item
+
 0.57.114 / 2026-10-22
 =====================
 * Merge PR from bugfix/ada-tabs-grouping-announced
