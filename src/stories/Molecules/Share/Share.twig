@@ -5,31 +5,46 @@
   variant_class,
 ] %}
 
+{% set has_print = print_url is not empty %}
+{% set has_download = download_url is not empty %}
+{% set item_count = (has_print ? 1 : 0) + (has_download ? 1 : 0) %}
+
+{% set print_label = 'Print' %}
+{% set download_label = 'Download' %}
+
+{% set print_content %}
+  <a class="cluster" href="{{ print_url }}" aria-label="{{ print_aria_label ? print_aria_label : print_label }}">
+    <div class="share__label">{{ print_label }}</div>
+    {% include "@atoms/Icon/Icon.twig" with {
+      icon: "print",
+      color: false,
+    } %}
+  </a>
+{% endset %}
+
+{% set download_content %}
+  <a class="cluster" href="{{ download_url }}" aria-label="{{ download_aria_label ? download_aria_label : download_label }}" download>
+    <div class="share__label">{{ download_label }}</div>
+    {% include "@atoms/Icon/Icon.twig" with {
+      icon: "download",
+      color: false,
+    } %}
+  </a>
+{% endset %}
+
 <div class="{{ classes|join(' ') }}">
-	<ul class="share__items cluster">
-    {% if print_url %}
-    <li class="share__item">
-      {% set print_label = 'Print' %}
-      <a class="cluster" href="{{ print_url }}" aria-label="{{ print_aria_label ? print_aria_label : print_label }}">
-        <div class="share__label">Print</div>
-        {% include "@atoms/Icon/Icon.twig" with {
-          icon: "print",
-          color: false,
-        } %}
-      </a>
-    </li>
-    {% endif %}
-    {% if download_url %}
-      <li class="share__item">
-        {% set download_label = 'Download' %}
-        <a class="cluster" href="{{ download_url }}" aria-label="{{ download_aria_label ? download_aria_label : download_label }}" download>
-          <div class="share__label">{{ download_label }}</div>
-          {% include "@atoms/Icon/Icon.twig" with {
-            icon: "download",
-            color: false,
-          } %}
-        </a>
-      </li>
-    {% endif %}
-	</ul>
+  {% if item_count > 1 %}
+    <ul class="share__items cluster">
+      {% if has_print %}<li class="share__item">{{ print_content }}</li>{% endif %}
+      {% if has_download %}<li class="share__item">{{ download_content }}</li>{% endif %}
+    </ul>
+  {% elseif has_print %}
+    <div class="share__items cluster">
+      <div class="share__item">{{ print_content }}</div>
+    </div>
+  {% elseif has_download %}
+    <div class="share__items cluster">
+      <div class="share__item">{{ download_content }}</div>
+    </div>
+  {% endif %}
 </div>
