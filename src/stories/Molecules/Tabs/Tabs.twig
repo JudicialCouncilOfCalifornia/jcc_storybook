@@ -47,6 +47,8 @@
     {% endfor %}
   </div>
 
+  <div class="tabs__announce sr-only" aria-live="polite" aria-atomic="true"></div>
+
   <div class="{{ tabpanel_classes|join(' ') }}">
     {% for item in items %}
       {% set tab_id = item.id is not empty ? item.id : 'tab-' ~ item.label|replace({' ':'-'})|lower %}

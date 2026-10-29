@@ -20,6 +20,7 @@ docReady(function () {
       this.lastTab = null;
       this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
       this.tabpanels = [];
+      this.liveRegion = this.tablistNode.closest('.tabs').querySelector('.tabs__announce');
 
       // Set our preset "Tab from url hash" selection variables.
       this.preselectedTab = null;
@@ -167,7 +168,24 @@ docReady(function () {
     }
 
     onClick(event) {
-      this.setSelectedTab(event.currentTarget);
+      let tab = event.currentTarget;
+      this.setSelectedTab(tab);
+      this.announceSelectedTab(tab);
+    }
+
+    announceSelectedTab(tab) {
+      if (!this.liveRegion) {
+        return;
+      }
+
+      let label = tab.querySelector('.tabs__label');
+      let tabName = label ? label.textContent.trim() : tab.textContent.trim();
+
+      // Clear first so repeated selections of the same tab still announce.
+      this.liveRegion.textContent = '';
+      window.setTimeout(() => {
+        this.liveRegion.textContent = tabName + ' tab selected';
+      }, 50);
     }
   }
 
