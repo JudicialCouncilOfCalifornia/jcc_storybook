@@ -121,7 +121,8 @@
 }
 
 .header-search .header-search__form input::placeholder {
-  color: var(--color-base);
+  color: var(--color-base-dark-x);
+  opacity: 1;
 }
 
 .header-search .header-search__form input:focus {
