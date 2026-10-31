@@ -174,7 +174,6 @@
 .footer.footer--alternate .flat-nav span.flat-nav__link:focus {
   color: var(--color-white);
   opacity: 1;
-  text-decoration: none;
 }
 
 .footer.footer--alternate .button.button--text:hover {
@@ -184,4 +183,11 @@
 .footer.footer--alternate .button.button--text:hover::after {
   background-color: var(--social-icon-color-hover);
   opacity: .7;
+}
+
+/* Keep footer navigation links distinguishable from non-interactive text. */
+.footer .secondary-nav > ul > li > a[href],
+.footer .flat-nav > ul.flat-nav__group__list > li.flat-nav__group__item > a.flat-nav__link[href],
+.footer .flat-nav a.flat-nav__link[href] {
+  text-decoration: underline;
 }

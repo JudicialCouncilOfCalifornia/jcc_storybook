@@ -44,6 +44,11 @@
   overflow: visible;
 }
 
+/* Keep bottom-bar links distinguishable from non-interactive text at rest. */
+.shoe .secondary-nav > ul > li > a[href] {
+  text-decoration: underline;
+}
+
 .shoe .secondary-nav > ul > li > a:hover,
 .shoe .secondary-nav > ul > li > a:focus-visible {
   color: var(--color-white);
