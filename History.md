@@ -1,3 +1,8 @@
+0.57.117 / 2026-10-31
+=====================
+* Merge PR from bugfix/ada-913
+  * Improve header search field border contrast on desktop and mobile
+
 0.57.116 / 2026-10-30
 =====================
 * Merge PR from feature/ADA-872-hangover-top-single-item-list-markup
