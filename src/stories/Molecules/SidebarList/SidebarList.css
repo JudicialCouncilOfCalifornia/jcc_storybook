@@ -102,6 +102,11 @@
   --button-fg: var(--color-white);
 }
 
+.sidebar-list--primary .button:focus{
+  outline: 2px solid #ffca9e;
+  border: 2px solid #ffca9e;
+}
+
 /* END Primary styles */
 /* -------------------------------------------------------------------------- */
 /* START Secondary styles */
@@ -132,5 +137,11 @@
 .sidebar-list--secondary .sidebar-list__item__link {
   --button-fg: var(--color-white);
 }
+
+.sidebar-list--secondary .button:focus{
+  outline: 2px solid #ffca9e;
+  border: 2px solid #ffca9e;
+}
+
 /* END Secondary styles */
 /* -------------------------------------------------------------------------- */
