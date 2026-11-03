@@ -249,6 +249,12 @@ li.group-li + li.group-li > h2.list-label {
   box-shadow: none !important;
 }
 
+/* Search fields can be borderless, so border color alone cannot show focus. */
+.view-results--search_results .views-exposed-form > .form-item-search > input:focus {
+  outline: 2px solid var(--focus-outline-color) !important;
+  outline-offset: 2px;
+}
+
 .views-exposed-form .placeholder-container.form-item input:not(.button):not([type="checkbox"]),
 .views-exposed-form .placeholder-container.form-item textarea,
 .views-exposed-form .placeholder-container.form-item select {
