@@ -1,3 +1,8 @@
+0.57.119 / 2026-11-05
+=====================
+* Merge PR from feature/ADA-885--card-media-anchor-focus
+  * Corrects card media focus outline
+
 0.57.118 / 2026-11-05
 =====================
 * Merge PR from feature/ADA-920-search-results-focus-indicator
