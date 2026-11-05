@@ -1,3 +1,10 @@
+0.57.118 / 2026-11-05
+=====================
+* Merge PR from feature/ADA-920-search-results-focus-indicator
+  * Add visible focus outline to search results input
+* Merge PR from bugfix/ADA-885--card-media-radius
+  * Corrects card media radius corner handling
+
 0.57.117 / 2026-10-31
 =====================
 * Merge PR from bugfix/ada-913
