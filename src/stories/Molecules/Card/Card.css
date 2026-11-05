@@ -52,6 +52,13 @@
   height: 100%;
 }
 
+/* Clickable media focus outline adjustment due to layout behaviors. */
+/* For cases such as lightbox focused viewing of the media. */
+.card .frame:has(a:focus) {
+  outline: 2px solid var(--focus-outline-color);
+  outline-offset: 2px;
+}
+
 .caption-overlay .card__media-caption-container {
   position: relative;
   display: flex;
