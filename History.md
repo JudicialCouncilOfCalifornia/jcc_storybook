@@ -1,3 +1,8 @@
+0.57.120 / 2026-11-10
+=====================
+* Merge PR from feature/ADA-914-focus-state-sidebar-links
+  * Courts.ca.gov-Insufficient contrast for focus indicator on "Submit Proposal".
+
 0.57.119 / 2026-11-05
 =====================
 * Merge PR from feature/ADA-885--card-media-anchor-focus
