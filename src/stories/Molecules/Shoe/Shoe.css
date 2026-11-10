@@ -44,19 +44,19 @@
   overflow: visible;
 }
 
-/* Keep branding and navigation links recognizable in every state. */
-.shoe a[href],
+/* Keep Shoe navigation links underlined at rest. */
 .shoe .secondary-nav > ul > li > a[href] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+/* Preserve the existing hover/focus styling. */
+.shoe .secondary-nav > ul > li > a:hover,
+.shoe .secondary-nav > ul > li > a:focus-visible {
   color: var(--color-white);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.25em;
   opacity: 1;
-}
-
-.shoe a[href]:hover,
-.shoe a[href]:focus-visible,
-.shoe .secondary-nav > ul > li > a[href]:hover,
-.shoe .secondary-nav > ul > li > a[href]:focus-visible {
-  text-decoration-thickness: 2px;
 }
