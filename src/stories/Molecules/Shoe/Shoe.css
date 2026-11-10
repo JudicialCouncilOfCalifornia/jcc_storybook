@@ -49,7 +49,7 @@
 .shoe .secondary-nav > ul > li > a[href] {
   color: var(--color-white);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
   text-underline-offset: 0.25em;
   opacity: 1;
 }
