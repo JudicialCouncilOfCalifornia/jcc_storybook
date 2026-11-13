@@ -44,10 +44,19 @@
   overflow: visible;
 }
 
-.shoe .secondary-nav > ul > li > a:hover,
-.shoe .secondary-nav > ul > li > a:focus-visible {
+/* Keep branding and navigation links recognizable in every state. */
+.shoe a[href],
+.shoe .secondary-nav > ul > li > a[href] {
   color: var(--color-white);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
   opacity: 1;
+}
+
+.shoe a[href]:hover,
+.shoe a[href]:focus-visible,
+.shoe .secondary-nav > ul > li > a[href]:hover,
+.shoe .secondary-nav > ul > li > a[href]:focus-visible {
+  text-decoration-thickness: 2px;
 }
