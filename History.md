@@ -1,3 +1,8 @@
+0.57.121 / 2026-11-13
+=====================
+* Merge PR from bugfix/ada-868
+  * Adds underline hat and shoe links.
+
 0.57.120 / 2026-11-10
 =====================
 * Merge PR from feature/ADA-914-focus-state-sidebar-links
@@ -26,8 +31,8 @@
   * Courts - Legislation Committee - Single-Item List Markup on Print Advisory Body Link
 * Merge PR from feature/ADA-873-missing-tab-name-on-sr
   * Courts - Legislation Committee - Missing Tab Name Announcement on Activation
-  
-  0.57.115 / 2026-10-27
+
+0.57.115 / 2026-10-27
 =====================
 * Merge PR from bugfix/ada-866
   * Courts - Calendar - Focus Indicator Rendered Behind Calendar Widget for Dropdown Menu Item
