@@ -15,6 +15,14 @@ function jcc_storybook_form_system_theme_settings_alter(&$form, FormStateInterfa
   if (isset($form_id)) {
     return;
   }
+  
+  $form['logo']['alt'] = [
+    '#type' => 'textfield',
+    '#title' => t("Logo Alternative Text"),
+    '#placeholder' => t("Judicial Branch of California logo"),
+    '#default_value' => theme_get_setting('alt'),
+    '#description' => t('Alternative text for logo.'),
+  ];
 
   $form['theme'] = [
     '#type' => 'details',
