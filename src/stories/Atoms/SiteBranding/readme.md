@@ -14,6 +14,7 @@ Example CSS:
 
   ```
   logo: logo,
+  logo_alt: "Describes the logo image, default is site logo",
   url: "/",
   label: "California Courts",
   sub_label: "Language Access",
