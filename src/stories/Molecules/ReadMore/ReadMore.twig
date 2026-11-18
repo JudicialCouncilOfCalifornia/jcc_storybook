@@ -10,17 +10,19 @@
   'cluster',
 ] %}
 
+{% set content_id = 'read-more-' ~ random() ~ '-content' %}
+
 <div class="{{ classes|join(' ') }}">
   <h3 class="read-more__heading">
     <div class="read-more__heading_text">{{ heading }}</div>
-    <button class="read-more__action">
-      <div class="read-more__action_label">More</div>
+    <button type="button" class="read-more__action" aria-expanded="false" aria-controls="{{ content_id }}">
+      <span class="read-more__action_label">More{% if heading %}<span class="sr-only"> {{ heading }}</span>{% endif %}</span>
       {% include "@atoms/Icon/Icon.twig" with {
         icon: "fa-chevron-down",
       } %}
     </button>
   </h3>
-  <div class="read-more__content">
+  <div id="{{ content_id }}" class="read-more__content">
     {{ content }}
   </div>
 </div>

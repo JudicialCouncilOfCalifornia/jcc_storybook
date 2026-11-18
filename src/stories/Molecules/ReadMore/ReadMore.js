@@ -21,14 +21,13 @@ docReady(function () {
         e.preventDefault();
 
         let readmoreheading = readmorebtn.closest('.read-more__heading');
-        let readmorebtntext = readmorebtn.children[0];
 
         if (readmoreheading.hasAttribute('expanded')) {
           readmoreheading.removeAttribute('expanded');
-          readmorebtntext.innerHTML = 'More';
+          readmorebtn.setAttribute('aria-expanded', 'false');
         } else {
           readmoreheading.setAttribute('expanded', 'true');
-          readmorebtntext.innerHTML = 'Less';
+          readmorebtn.setAttribute('aria-expanded', 'true');
         }
       });
     }
