@@ -1,3 +1,8 @@
+0.57.122 / 2026-11-18
+=====================
+* Merge PR from bugfix/ADA-946--logo-alt
+  * Logo alt needs to describe image
+
 0.57.121 / 2026-11-13
 =====================
 * Merge PR from bugfix/ada-868
