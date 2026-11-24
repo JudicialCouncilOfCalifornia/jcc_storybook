@@ -2,17 +2,14 @@
   <div class='site-branding__logo'>
     <a 
       href="{{ url|default('/') }}" 
-      title="{{ label }} {{ sub_label }}"
-      aria-label="Homepage: {{ label }} {{ sub_label }}"
     >
-      <img src='{{ logo }}' alt="{{ logo_alt|default('Site logo') }}"/>
+      <img src='{{ logo }}' alt="{{ logo_alt|default('Site logo') }} homepage"/>
     </a>
   </div>
   <div class="site-branding__labels">
     <a 
-      href="{{ url|default('/') }}" 
-      title="{{ label }} {{ sub_label }}"
-      aria-label="Homepage: {{ label }} {{ sub_label }}"
+      href="{{ url|default('/') }}"
+      aria-label="{{ label }} {{ sub_label }} homepage"
     >
       <div class="site-branding__label">
         {{ label }}
