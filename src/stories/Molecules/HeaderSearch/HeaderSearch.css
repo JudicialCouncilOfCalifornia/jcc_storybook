@@ -211,7 +211,6 @@ button.header-search__icon .icon-wrapper {
   --icon-size: var(--s3);
   flex-direction: row-reverse;
   position: relative;
-  order: 99;
   display: grid;
   place-content: center;
 }
