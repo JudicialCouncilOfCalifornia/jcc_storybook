@@ -1,3 +1,10 @@
+0.57.123 / 2026-11-24
+=====================
+* Merge PR from bugfix/ADA-945-appellate-search-focus-order
+  * Align Appellate search focus and visual order
+* Merge PR from bugfix/ADA-946--logo-link-aria-label
+  * Correct site branding aria-labels
+
 0.57.122 / 2026-11-18
 =====================
 * Merge PR from bugfix/ADA-946--logo-alt
