@@ -1,14 +1,11 @@
 .site-branding {
+  text-decoration: none;
+  color: var(--color) !important;
+}
+
+.site-branding__container {
   --gap: var(--s-3);
-}
-
-.site-branding.cluster {
-  align-items: center;
-}
-
-/* Enclose the complete logo or label, including its block-level children. */
-.site-branding a {
-  display: block;
+  align-items: center !important;
 }
 
 .site-branding__logo img {
@@ -18,11 +15,6 @@
 
 .site-branding__labels {
   line-height: var(--s2);
-}
-
-.site-branding__labels a {
-  text-decoration: none;
-  color: var(--color);
 }
 
 .site-branding__label {
